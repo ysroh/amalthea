@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ASCII"?>
+<contexts:Context xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:constraints="http://www.eclipse.org/papyrus/constraints/0.9" xmlns:contexts="http://www.eclipse.org/papyrus/properties/contexts/0.9" xmi:id="_3R5PcBL4EeeFmrJgn4qa2A" name="AMALTHEA">
+  <dependencies href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_69QJkKDJEeSZxfCXzZz3-w"/>
+  <tabs xmi:id="_4w6yMBL4EeeFmrJgn4qa2A" label="AMALTHEA" id="amalthea" priority="5">
+    <sections xmi:id="_4xD8IBL4EeeFmrJgn4qa2A" name="Single Runnable" sectionFile="ui/SingleRunnable.xwt">
+      <widget href="ui/SingleRunnable.xwt#/"/>
+    </sections>
+    <sections xmi:id="_4xEjMBL4EeeFmrJgn4qa2A" name="Multiple Runnable" sectionFile="ui/MultipleRunnable.xwt">
+      <widget href="ui/MultipleRunnable.xwt#/"/>
+    </sections>
+  </tabs>
+  <views xmi:id="_3R5PcRL4EeeFmrJgn4qa2A" name="Single Runnable" sections="_4xD8IBL4EeeFmrJgn4qa2A" automaticContext="true" datacontexts="_3R52hBL4EeeFmrJgn4qa2A">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_3R5PchL4EeeFmrJgn4qa2A" name="isSingleRunnable">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_3R5PcxL4EeeFmrJgn4qa2A" name="stereotypeName" value="AMALTHEA::Runnable"/>
+    </constraints>
+  </views>
+  <views xmi:id="_3R52gBL4EeeFmrJgn4qa2A" elementMultiplicity="-1" name="Multiple Runnable" sections="_4xEjMBL4EeeFmrJgn4qa2A" automaticContext="true" datacontexts="_3R52hBL4EeeFmrJgn4qa2A">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_3R52gRL4EeeFmrJgn4qa2A" name="isMultipleRunnable">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_3R52ghL4EeeFmrJgn4qa2A" name="stereotypeName" value="AMALTHEA::Runnable"/>
+    </constraints>
+  </views>
+  <dataContexts xmi:id="_3R52gxL4EeeFmrJgn4qa2A" name="AMALTHEA">
+    <elements xmi:id="_3R52hBL4EeeFmrJgn4qa2A" name="Runnable">
+      <properties xmi:id="_3R52hRL4EeeFmrJgn4qa2A" name="service" type="Boolean"/>
+      <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690yXqDJEeSZxfCXzZz3-w"/>
+    </elements>
+    <modelElementFactory href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@modelElementFactories.2"/>
+  </dataContexts>
+</contexts:Context>

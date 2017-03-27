@@ -42,6 +42,15 @@
             provider="Zeligsoft(2009) Ltd">
       </profile>
    </extension>
-
+   <extension
+         point="org.eclipse.papyrus.infra.newchild">
+      <menuCreationModel
+            model="newchildmenu/newChildMenu.creationmenumodel">
+      </menuCreationModel>
+   </extension>
+	<extension
+			point="org.eclipse.papyrus.infra.properties.contexts">
+		<context contextModel="properties/amalthea.ctx" isCustomizable="true"/>
+	</extension>
 
 </plugin>
