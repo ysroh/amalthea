@@ -52,5 +52,14 @@
 			point="org.eclipse.papyrus.infra.properties.contexts">
 		<context contextModel="properties/amalthea.ctx" isCustomizable="true"/>
 	</extension>
+ <extension
+       point="org.eclipse.papyrus.infra.ui.papyrusDiagram">
+    <diagramCategory
+          class="org.eclipse.papyrus.amalthea.ui.diagram.CreateAmaltheaModelCommand"
+          icon="icons/wizban/amalthea.png"
+          id="AMALTHEA"
+          label="AMALTHEA">
+    </diagramCategory>
+ </extension>
 
 </plugin>
