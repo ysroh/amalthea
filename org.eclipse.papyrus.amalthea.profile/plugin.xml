@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated amalthea -->
+      <package
+            uri="http://www.eclipse.org/papyrus/2017/amalthea"
+            class="AMALTHEA.AMALTHEAPackage"
+            genModel="umlProfile/amalthea.genmodel"/>
+   </extension>
+   <extension
+         point="org.eclipse.emf.ecore.uri_mapping">
+      <mapping
+            source="pathmap://AMALTHEA_PROFILE/"
+            target="platform:/plugin/org.eclipse.papyrus.amalthea.profile/umlProfile/">
+      </mapping>
+   </extension>
+   <extension
+         point="org.eclipse.uml2.uml.generated_package">
+      <profile
+            location="pathmap://AMALTHEA_PROFILE/amalthea.profile.uml#_mm5V8BLxEeeFmrJgn4qa2A"
+            uri="http://www.eclipse.org/papyrus/2017/amalthea">
+      </profile>
+   </extension>
+
+</plugin>

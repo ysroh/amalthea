@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/viewpoints/policy/style" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_modcMBLxEeeFmrJgn4qa2A" type="PapyrusUMLProfileDiagram" name="Profile Diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_sI7bIBLxEeeFmrJgn4qa2A" type="StereotypeComment">
+    <styles xmi:type="notation:TitleStyle" xmi:id="_sI7bIRLxEeeFmrJgn4qa2A"/>
+    <styles xmi:type="notation:EObjectValueStyle" xmi:id="_sI7bIxLxEeeFmrJgn4qa2A" name="BASE_ELEMENT">
+      <eObjectValue xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+    </styles>
+    <element xsi:nil="true"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sI7bIhLxEeeFmrJgn4qa2A" x="200"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_svcBgBLxEeeFmrJgn4qa2A" type="Stereotype_Shape">
+    <children xmi:type="notation:DecorationNode" xmi:id="_svdPoBLxEeeFmrJgn4qa2A" type="Stereotype_NameLabel"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_svd2sBLxEeeFmrJgn4qa2A" type="Stereotype_AttributeCompartment">
+      <children xmi:type="notation:Shape" xmi:id="_uMLsUBLxEeeFmrJgn4qa2A" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="amalthea.profile.uml#_uL_fEBLxEeeFmrJgn4qa2A"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_uMLsURLxEeeFmrJgn4qa2A"/>
+      </children>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_svd2sRLxEeeFmrJgn4qa2A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_svd2shLxEeeFmrJgn4qa2A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_svd2sxLxEeeFmrJgn4qa2A"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_svd2tBLxEeeFmrJgn4qa2A"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_svd2tRLxEeeFmrJgn4qa2A" type="Stereotype_OperationCompartment">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_svd2thLxEeeFmrJgn4qa2A"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_svd2txLxEeeFmrJgn4qa2A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_svd2uBLxEeeFmrJgn4qa2A"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_svd2uRLxEeeFmrJgn4qa2A"/>
+    </children>
+    <element xmi:type="uml:Stereotype" href="amalthea.profile.uml#_svWh8BLxEeeFmrJgn4qa2A"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_svcBgRLxEeeFmrJgn4qa2A" x="314" y="256"/>
+  </children>
+  <styles xmi:type="notation:StringValueStyle" xmi:id="_modcMRLxEeeFmrJgn4qa2A" name="diagram_compatibility_version" stringValue="1.2.0"/>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_modcMhLxEeeFmrJgn4qa2A"/>
+  <styles xmi:type="style:PapyrusViewStyle" xmi:id="_modcMxLxEeeFmrJgn4qa2A">
+    <owner xmi:type="uml:Profile" href="amalthea.profile.uml#_mm5V8BLxEeeFmrJgn4qa2A"/>
+  </styles>
+  <element xmi:type="uml:Profile" href="amalthea.profile.uml#_mm5V8BLxEeeFmrJgn4qa2A"/>
+</notation:Diagram>

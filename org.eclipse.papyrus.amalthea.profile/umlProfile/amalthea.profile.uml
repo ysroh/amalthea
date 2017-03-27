@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_mm5V8BLxEeeFmrJgn4qa2A" name="AMALTHEA" URI="http://www.eclipse.org/papyrus/2017/amalthea">
+  <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xDbmQBLxEeeFmrJgn4qa2A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <contents xmi:type="ecore:EPackage" xmi:id="_xDc0YBLxEeeFmrJgn4qa2A" name="AMALTHEA" nsURI="http:///schemas/AMALTHEA/_xDXU0BLxEeeFmrJgn4qa2A/0" nsPrefix="AMALTHEA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xDgewBLxEeeFmrJgn4qa2A" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xDgewRLxEeeFmrJgn4qa2A" key="Version" value="0.0.1"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xDgewhLxEeeFmrJgn4qa2A" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xDgewxLxEeeFmrJgn4qa2A" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xDgexBLxEeeFmrJgn4qa2A" key="Date" value="2017-03-27"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xDgexRLxEeeFmrJgn4qa2A" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_xDc0YRLxEeeFmrJgn4qa2A" name="Runnable">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xDc0YhLxEeeFmrJgn4qa2A" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_svWh8BLxEeeFmrJgn4qa2A"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_xDc0YxLxEeeFmrJgn4qa2A" name="base_Class" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_xDc0ZRLxEeeFmrJgn4qa2A" name="service" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+  </eAnnotations>
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_o4dv8BLxEeeFmrJgn4qa2A">
+    <importedPackage xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_svWh8BLxEeeFmrJgn4qa2A" name="Runnable">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_t2qvUBLxEeeFmrJgn4qa2A" name="base_Class" association="_t2md4BLxEeeFmrJgn4qa2A">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_uL_fEBLxEeeFmrJgn4qa2A" name="service">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_t2md4BLxEeeFmrJgn4qa2A" name="E_Runnable_Class1" memberEnd="_t2qIQBLxEeeFmrJgn4qa2A _t2qvUBLxEeeFmrJgn4qa2A">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_t2qIQBLxEeeFmrJgn4qa2A" name="extension_Runnable" type="_svWh8BLxEeeFmrJgn4qa2A" aggregation="composite" association="_t2md4BLxEeeFmrJgn4qa2A"/>
+  </packagedElement>
+</uml:Profile>
