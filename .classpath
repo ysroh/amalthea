@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="org.eclipse.papyrus.amalthea.core/src"/>
+	<classpathentry kind="src" path="org.eclipse.papyrus.amalthea.generator/src"/>
+	<classpathentry kind="src" path="org.eclipse.papyrus.amalthea.generator/xtend-gen"/>
+	<classpathentry kind="src" path="org.eclipse.papyrus.amalthea.profile/src"/>
+	<classpathentry kind="src" path="org.eclipse.papyrus.amalthea.profile/src-gen"/>
+	<classpathentry kind="src" path="org.eclipse.papyrus.amalthea.ui/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="org.eclipse.papyrus.amalthea.core/bin"/>
+</classpath>
