@@ -6,9 +6,20 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="service" ordered="false"
         lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ComponentsModel">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Model" ordered="false"
-        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Model"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentsModel" eSuperTypes="#//BaseObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Package" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BaseObject" abstract="true" eSuperTypes="#//IAnnotatable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IAnnotatable" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="customProperties" ordered="false"
+        upperBound="-1" eType="#//CustomProperty"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CustomProperty">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Property" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HWModel">
     <eStructuralFeatures xsi:type="ecore:EReference" name="base_Model" ordered="false"
@@ -34,37 +45,54 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="base_Model" ordered="false"
         lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Model"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Component" eSuperTypes="../../org.eclipse.papyrus.sysml14/resources/profile/sysml.ecore#//blocks/Block">
+  <eClassifiers xsi:type="ecore:EClass" name="Component" eSuperTypes="#//ReferableBaseObject ../../org.eclipse.papyrus.sysml14/resources/profile/sysml.ecore#//blocks/Block">
     <eStructuralFeatures xsi:type="ecore:EReference" name="base_Component" ordered="false"
         lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Component"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Composite" eSuperTypes="#//Component"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ComponentInstance">
+  <eClassifiers xsi:type="ecore:EClass" name="ReferableBaseObject" abstract="true"
+      eSuperTypes="#//IReferable #//IAnnotatable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IReferable" abstract="true">
+    <eOperations name="computeUniqueName" ordered="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_NamedElement" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//NamedElement"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uniqueName" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        volatile="true" transient="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Composite" eSuperTypes="#//Component #//ISystem"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ISystem" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connectors" ordered="false"
+        upperBound="-1" eType="#//Connector"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="groundedPorts" ordered="false"
+        upperBound="-1" eType="#//QualifiedPort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="componentInstances" ordered="false"
+        upperBound="-1" eType="#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="innerPorts" ordered="false"
+        lowerBound="1" eType="#//QualifiedPort" volatile="true" transient="true" derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Connector" eSuperTypes="#//BaseObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Connector" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Connector"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourcePort" ordered="false"
+        lowerBound="1" eType="#//QualifiedPort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetPort" ordered="false"
+        lowerBound="1" eType="#//QualifiedPort"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QualifiedPort" eSuperTypes="#//BaseObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_ConnectorEnd" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//ConnectorEnd"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instance" ordered="false"
+        lowerBound="1" eType="#//ComponentInstance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="port" ordered="false" lowerBound="1"
+        eType="#//Port"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentInstance" eSuperTypes="#//ReferableBaseObject">
     <eStructuralFeatures xsi:type="ecore:EReference" name="base_Property" ordered="false"
         lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Connector">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Connector" ordered="false"
-        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Connector"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="QualifiedPort">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="base_ConnectorEnd" ordered="false"
-        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//ConnectorEnd"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Port" abstract="true" eSuperTypes="#//IAnnotatable">
-    <eOperations name="computeUniqueName" ordered="false" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Port" abstract="true" eSuperTypes="#//ReferableBaseObject #//IAnnotatable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="base_Port" ordered="false"
         lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Port"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IAnnotatable" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="customProperties" ordered="false"
-        upperBound="-1" eType="#//CustomProperty" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CustomProperty">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" ordered="false" lowerBound="1"
-        eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" ordered="false"
-        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//ValueSpecification"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FInterfacePort" eSuperTypes="#//Port">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" ordered="false" lowerBound="1"
@@ -94,15 +122,17 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ComplexNode" abstract="true" eSuperTypes="../../org.eclipse.papyrus.sysml14/resources/profile/sysml.ecore#//blocks/Block">
     <eStructuralFeatures xsi:type="ecore:EReference" name="quartzes" ordered="false"
-        upperBound="-1" eType="#//Quartz" containment="true"/>
+        upperBound="-1" eType="#//Quartz"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="prescaler" ordered="false"
-        lowerBound="1" eType="#//Prescaler" containment="true"/>
+        lowerBound="1" eType="#//Prescaler"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="networks" ordered="false"
+        upperBound="-1" eType="#//Network"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Quartz" eSuperTypes="#//ComplexNode">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" ordered="false" lowerBound="1"
         eType="#//QType" defaultValueLiteral="_undefined_"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="frequency" ordered="false"
-        lowerBound="1" eType="#//Frequency" containment="true"/>
+        lowerBound="1" eType="#//Frequency"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="QType">
     <eLiterals name="_undefined_"/>
@@ -125,9 +155,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="quartz" ordered="false"
         lowerBound="1" eType="#//Quartz"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Bus" eSuperTypes="#//NetworkType ../../org.eclipse.papyrus.sysml14/resources/profile/sysml.ecore#//blocks/Block">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="busType" ordered="false"
-        lowerBound="1" eType="#//BusType" defaultValueLiteral="_undefined_"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Network" eSuperTypes="#//ComplexNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" ordered="false" lowerBound="1"
+        eType="#//NetworkType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NetworkType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="schedPolicy" ordered="false"
@@ -142,6 +172,10 @@
     <eLiterals name="_undefined_"/>
     <eLiterals name="RROBIN" value="1"/>
     <eLiterals name="PRIORITY" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Bus" eSuperTypes="#//NetworkType ../../org.eclipse.papyrus.sysml14/resources/profile/sysml.ecore#//blocks/Block">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="busType" ordered="false"
+        lowerBound="1" eType="#//BusType" defaultValueLiteral="_undefined_"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="BusType">
     <eLiterals name="_undefined_"/>
@@ -169,19 +203,19 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="systemType" ordered="false"
         lowerBound="1" eType="#//SystemType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ecus" ordered="false" upperBound="-1"
-        eType="#//ECU" containment="true"/>
+        eType="#//ECU"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ECU" eSuperTypes="#//ComplexNode">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ecuType" ordered="false"
         lowerBound="1" eType="#//ECUType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="microcontrollers" ordered="false"
-        upperBound="-1" eType="#//Microcontroller" containment="true"/>
+        upperBound="-1" eType="#//Microcontroller"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Microcontroller" eSuperTypes="#//ComplexNode">
     <eStructuralFeatures xsi:type="ecore:EReference" name="microcontrollerType" ordered="false"
         lowerBound="1" eType="#//MicrocontrollerType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="cores" ordered="false"
-        lowerBound="1" eType="#//Core" containment="true"/>
+        lowerBound="1" eType="#//Core"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="FrequencyUnit">
     <eLiterals name="_undefined_"/>
@@ -189,9 +223,5 @@
     <eLiterals name="kHz" value="2"/>
     <eLiterals name="MHz" value="3"/>
     <eLiterals name="GHz" value="4"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Network" eSuperTypes="#//ComplexNode">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="type" ordered="false" lowerBound="1"
-        eType="#//NetworkType"/>
   </eClassifiers>
 </ecore:EPackage>
