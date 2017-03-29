@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:AMALTHEA="http://www.eclipse.org/papyrus/2017/amalthea" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_MpYgwBTCEeeK69iqM3sHww" name="SampleAmaltheaComponentModel2">
+    <packagedElement xmi:type="uml:Package" xmi:id="_Q5nm4BTCEeeK69iqM3sHww" name="ComponentModel">
+      <packagedElement xmi:type="uml:Component" xmi:id="_WpkzUBTCEeeK69iqM3sHww" name="A">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_eENY4BTCEeeK69iqM3sHww" name="in_1" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_fgS8YBTCEeeK69iqM3sHww" name="out_1" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_g_EAcBTCEeeK69iqM3sHww" name="out_2" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Jao3YBTDEeeK69iqM3sHww" name="X" type="_ZV5PoBTCEeeK69iqM3sHww"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_UVhQkBTDEeeK69iqM3sHww" name="Y" type="_ZV5PoBTCEeeK69iqM3sHww"/>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_htpIQBTDEeeK69iqM3sHww" name="c1">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_httZsBTDEeeK69iqM3sHww" role="_eENY4BTCEeeK69iqM3sHww"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_httZsRTDEeeK69iqM3sHww" partWithPort="_Jao3YBTDEeeK69iqM3sHww" role="_tSikQBTCEeeK69iqM3sHww"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_2ypMEBTDEeeK69iqM3sHww" name="c2">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_2ypzIBTDEeeK69iqM3sHww" partWithPort="_Jao3YBTDEeeK69iqM3sHww" role="_v519sBTCEeeK69iqM3sHww"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_2yqaMBTDEeeK69iqM3sHww" role="_fgS8YBTCEeeK69iqM3sHww"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_pRgQYBTFEeeK69iqM3sHww" name="c3">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_pRg3cBTFEeeK69iqM3sHww" partWithPort="_Jao3YBTDEeeK69iqM3sHww" role="_v519sBTCEeeK69iqM3sHww"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_pRg3cRTFEeeK69iqM3sHww" partWithPort="_UVhQkBTDEeeK69iqM3sHww" role="_uomYQBTCEeeK69iqM3sHww"/>
+        </ownedConnector>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_AnKIMBTGEeeK69iqM3sHww" name="c4">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_AnKvQBTGEeeK69iqM3sHww" partWithPort="_UVhQkBTDEeeK69iqM3sHww" role="_v519sBTCEeeK69iqM3sHww"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_AnLWUBTGEeeK69iqM3sHww" role="_g_EAcBTCEeeK69iqM3sHww"/>
+        </ownedConnector>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Component" xmi:id="_ZV5PoBTCEeeK69iqM3sHww" name="B">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_tSikQBTCEeeK69iqM3sHww" name="in_2" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_uomYQBTCEeeK69iqM3sHww" name="in_3" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_v519sBTCEeeK69iqM3sHww" name="out_3" aggregation="composite"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_MvehsBTCEeeK69iqM3sHww">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_MvkoUBTCEeeK69iqM3sHww" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/2017/amalthea#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://AMALTHEA_PROFILE/amalthea.profile.uml#_mm5V8BLxEeeFmrJgn4qa2A"/>
+    </profileApplication>
+  </uml:Model>
+  <AMALTHEA:ComponentsModel xmi:id="_S9UkABTCEeeK69iqM3sHww" base_Package="_Q5nm4BTCEeeK69iqM3sHww"/>
+  <AMALTHEA:Component xmi:id="_aXeocBTCEeeK69iqM3sHww" base_NamedElement="_ZV5PoBTCEeeK69iqM3sHww" base_Class="_ZV5PoBTCEeeK69iqM3sHww" base_Component="_ZV5PoBTCEeeK69iqM3sHww"/>
+  <AMALTHEA:FInterfacePort xmi:id="_ko08cBTCEeeK69iqM3sHww" base_NamedElement="_eENY4BTCEeeK69iqM3sHww" base_Port="_eENY4BTCEeeK69iqM3sHww" kind="requires"/>
+  <AMALTHEA:FInterfacePort xmi:id="_m77AcBTCEeeK69iqM3sHww" base_NamedElement="_fgS8YBTCEeeK69iqM3sHww" base_Port="_fgS8YBTCEeeK69iqM3sHww" kind="provides"/>
+  <AMALTHEA:FInterfacePort xmi:id="_ok3UMBTCEeeK69iqM3sHww" base_NamedElement="_g_EAcBTCEeeK69iqM3sHww" base_Port="_g_EAcBTCEeeK69iqM3sHww" kind="provides"/>
+  <AMALTHEA:FInterfacePort xmi:id="_xCF_MBTCEeeK69iqM3sHww" base_NamedElement="_v519sBTCEeeK69iqM3sHww" base_Port="_v519sBTCEeeK69iqM3sHww" kind="provides"/>
+  <AMALTHEA:FInterfacePort xmi:id="_ygVe0BTCEeeK69iqM3sHww" base_NamedElement="_uomYQBTCEeeK69iqM3sHww" base_Port="_uomYQBTCEeeK69iqM3sHww" kind="requires"/>
+  <AMALTHEA:FInterfacePort xmi:id="_0KmoQBTCEeeK69iqM3sHww" base_NamedElement="_tSikQBTCEeeK69iqM3sHww" base_Port="_tSikQBTCEeeK69iqM3sHww" kind="requires"/>
+  <AMALTHEA:Composite xmi:id="__6AOoBTCEeeK69iqM3sHww" base_NamedElement="_WpkzUBTCEeeK69iqM3sHww" base_Class="_WpkzUBTCEeeK69iqM3sHww" base_Component="_WpkzUBTCEeeK69iqM3sHww" connectors="_i-LjEBTDEeeK69iqM3sHww _5zcqoBTDEeeK69iqM3sHww" componentInstances="_V6x-MBTDEeeK69iqM3sHww _YQwXEBTDEeeK69iqM3sHww"/>
+  <AMALTHEA:ComponentInstance xmi:id="_V6x-MBTDEeeK69iqM3sHww" base_NamedElement="_Jao3YBTDEeeK69iqM3sHww" base_Property="_Jao3YBTDEeeK69iqM3sHww"/>
+  <AMALTHEA:ComponentInstance xmi:id="_YQwXEBTDEeeK69iqM3sHww" base_NamedElement="_UVhQkBTDEeeK69iqM3sHww" base_Property="_UVhQkBTDEeeK69iqM3sHww"/>
+  <AMALTHEA:Connector xmi:id="_i-LjEBTDEeeK69iqM3sHww" base_Connector="_htpIQBTDEeeK69iqM3sHww" sourcePort="_uXTiABTEEeeK69iqM3sHww" targetPort="_1NDR0BTEEeeK69iqM3sHww"/>
+  <AMALTHEA:Connector xmi:id="_5zcqoBTDEeeK69iqM3sHww" base_Connector="_2ypMEBTDEeeK69iqM3sHww" sourcePort="_DhExEBTFEeeK69iqM3sHww" targetPort="_LtDUABTFEeeK69iqM3sHww"/>
+  <AMALTHEA:QualifiedPort xmi:id="_uXTiABTEEeeK69iqM3sHww" base_ConnectorEnd="_httZsBTDEeeK69iqM3sHww" port="_ko08cBTCEeeK69iqM3sHww"/>
+  <AMALTHEA:QualifiedPort xmi:id="_1NDR0BTEEeeK69iqM3sHww" base_ConnectorEnd="_httZsRTDEeeK69iqM3sHww" instance="_V6x-MBTDEeeK69iqM3sHww" port="_0KmoQBTCEeeK69iqM3sHww"/>
+  <AMALTHEA:QualifiedPort xmi:id="_DhExEBTFEeeK69iqM3sHww" base_ConnectorEnd="_2ypzIBTDEeeK69iqM3sHww" instance="_V6x-MBTDEeeK69iqM3sHww" port="_xCF_MBTCEeeK69iqM3sHww"/>
+  <AMALTHEA:QualifiedPort xmi:id="_LtDUABTFEeeK69iqM3sHww" base_ConnectorEnd="_2yqaMBTDEeeK69iqM3sHww" port="_m77AcBTCEeeK69iqM3sHww"/>
+  <AMALTHEA:Connector xmi:id="_r5ipoBTFEeeK69iqM3sHww" base_Connector="_pRgQYBTFEeeK69iqM3sHww" sourcePort="_wOhF0BTFEeeK69iqM3sHww" targetPort="_5rhy0BTFEeeK69iqM3sHww"/>
+  <AMALTHEA:QualifiedPort xmi:id="_wOhF0BTFEeeK69iqM3sHww" base_ConnectorEnd="_pRg3cBTFEeeK69iqM3sHww" instance="_V6x-MBTDEeeK69iqM3sHww" port="_xCF_MBTCEeeK69iqM3sHww"/>
+  <AMALTHEA:QualifiedPort xmi:id="_5rhy0BTFEeeK69iqM3sHww" base_ConnectorEnd="_pRg3cRTFEeeK69iqM3sHww" instance="_YQwXEBTDEeeK69iqM3sHww" port="_ygVe0BTCEeeK69iqM3sHww"/>
+  <AMALTHEA:Connector xmi:id="_C_ZK4BTGEeeK69iqM3sHww" base_Connector="_AnKIMBTGEeeK69iqM3sHww" sourcePort="_E15ZgBTGEeeK69iqM3sHww" targetPort="_KkmowBTGEeeK69iqM3sHww"/>
+  <AMALTHEA:QualifiedPort xmi:id="_E15ZgBTGEeeK69iqM3sHww" base_ConnectorEnd="_AnKvQBTGEeeK69iqM3sHww" instance="_YQwXEBTDEeeK69iqM3sHww" port="_xCF_MBTCEeeK69iqM3sHww"/>
+  <AMALTHEA:QualifiedPort xmi:id="_KkmowBTGEeeK69iqM3sHww" base_ConnectorEnd="_AnLWUBTGEeeK69iqM3sHww" port="_ok3UMBTCEeeK69iqM3sHww"/>
+</xmi:XMI>
