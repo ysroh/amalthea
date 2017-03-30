@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.AMALTHEAPackage;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.AbstractTime;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.BaseObject;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Bus;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.ComplexNode;
@@ -29,21 +30,32 @@ import org.eclipse.papyrus.amalthea.profile.AMALTHEA.HwSystem;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.IAnnotatable;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.IReferable;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.ISystem;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.InterruptController;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.InterruptSchedulingAlgorithm;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.MappingModel;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Microcontroller;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.MicrocontrollerType;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Network;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.NetworkType;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.OSEK;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.OSModel;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.OperatingSystem;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Port;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Prescaler;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.PriorityBased;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.QualifiedPort;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Quartz;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.ReferableBaseObject;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Scheduler;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.SchedulingHWUnit;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.SchedulingUnit;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.SoftwareModel;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.StimuliModel;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.SystemType;
 
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.TaskScheduler;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.TaskSchedulingAlgorithm;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Time;
 import org.eclipse.papyrus.sysml14.blocks.Block;
 
 /**
@@ -359,6 +371,106 @@ public class AMALTHEASwitch<T> extends Switch<T> {
 				T result = caseMicrocontroller(microcontroller);
 				if (result == null) result = caseComplexNode(microcontroller);
 				if (result == null) result = caseBlock(microcontroller);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AMALTHEAPackage.ABSTRACT_TIME: {
+				AbstractTime abstractTime = (AbstractTime)theEObject;
+				T result = caseAbstractTime(abstractTime);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AMALTHEAPackage.TIME: {
+				Time time = (Time)theEObject;
+				T result = caseTime(time);
+				if (result == null) result = caseAbstractTime(time);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AMALTHEAPackage.OPERATING_SYSTEM: {
+				OperatingSystem operatingSystem = (OperatingSystem)theEObject;
+				T result = caseOperatingSystem(operatingSystem);
+				if (result == null) result = caseBlock(operatingSystem);
+				if (result == null) result = caseBaseObject(operatingSystem);
+				if (result == null) result = caseIAnnotatable(operatingSystem);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AMALTHEAPackage.TASK_SCHEDULER: {
+				TaskScheduler taskScheduler = (TaskScheduler)theEObject;
+				T result = caseTaskScheduler(taskScheduler);
+				if (result == null) result = caseScheduler(taskScheduler);
+				if (result == null) result = caseReferableBaseObject(taskScheduler);
+				if (result == null) result = caseIReferable(taskScheduler);
+				if (result == null) result = caseIAnnotatable(taskScheduler);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AMALTHEAPackage.SCHEDULER: {
+				Scheduler scheduler = (Scheduler)theEObject;
+				T result = caseScheduler(scheduler);
+				if (result == null) result = caseReferableBaseObject(scheduler);
+				if (result == null) result = caseIReferable(scheduler);
+				if (result == null) result = caseIAnnotatable(scheduler);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AMALTHEAPackage.SCHEDULING_UNIT: {
+				SchedulingUnit schedulingUnit = (SchedulingUnit)theEObject;
+				T result = caseSchedulingUnit(schedulingUnit);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AMALTHEAPackage.TASK_SCHEDULING_ALGORITHM: {
+				TaskSchedulingAlgorithm taskSchedulingAlgorithm = (TaskSchedulingAlgorithm)theEObject;
+				T result = caseTaskSchedulingAlgorithm(taskSchedulingAlgorithm);
+				if (result == null) result = caseBaseObject(taskSchedulingAlgorithm);
+				if (result == null) result = caseIAnnotatable(taskSchedulingAlgorithm);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AMALTHEAPackage.INTERRUPT_CONTROLLER: {
+				InterruptController interruptController = (InterruptController)theEObject;
+				T result = caseInterruptController(interruptController);
+				if (result == null) result = caseScheduler(interruptController);
+				if (result == null) result = caseReferableBaseObject(interruptController);
+				if (result == null) result = caseIReferable(interruptController);
+				if (result == null) result = caseIAnnotatable(interruptController);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AMALTHEAPackage.INTERRUPT_SCHEDULING_ALGORITHM: {
+				InterruptSchedulingAlgorithm interruptSchedulingAlgorithm = (InterruptSchedulingAlgorithm)theEObject;
+				T result = caseInterruptSchedulingAlgorithm(interruptSchedulingAlgorithm);
+				if (result == null) result = caseBaseObject(interruptSchedulingAlgorithm);
+				if (result == null) result = caseIAnnotatable(interruptSchedulingAlgorithm);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AMALTHEAPackage.SCHEDULING_HW_UNIT: {
+				SchedulingHWUnit schedulingHWUnit = (SchedulingHWUnit)theEObject;
+				T result = caseSchedulingHWUnit(schedulingHWUnit);
+				if (result == null) result = caseBaseObject(schedulingHWUnit);
+				if (result == null) result = caseSchedulingUnit(schedulingHWUnit);
+				if (result == null) result = caseIAnnotatable(schedulingHWUnit);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AMALTHEAPackage.OSEK: {
+				OSEK osek = (OSEK)theEObject;
+				T result = caseOSEK(osek);
+				if (result == null) result = caseTaskSchedulingAlgorithm(osek);
+				if (result == null) result = caseBaseObject(osek);
+				if (result == null) result = caseIAnnotatable(osek);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case AMALTHEAPackage.PRIORITY_BASED: {
+				PriorityBased priorityBased = (PriorityBased)theEObject;
+				T result = casePriorityBased(priorityBased);
+				if (result == null) result = caseInterruptSchedulingAlgorithm(priorityBased);
+				if (result == null) result = caseBaseObject(priorityBased);
+				if (result == null) result = caseIAnnotatable(priorityBased);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -903,6 +1015,186 @@ public class AMALTHEASwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMicrocontroller(Microcontroller object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Abstract Time</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Abstract Time</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAbstractTime(AbstractTime object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Time</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Time</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTime(Time object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Operating System</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Operating System</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOperatingSystem(OperatingSystem object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Task Scheduler</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Task Scheduler</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTaskScheduler(TaskScheduler object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Scheduler</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Scheduler</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseScheduler(Scheduler object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Scheduling Unit</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Scheduling Unit</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSchedulingUnit(SchedulingUnit object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Task Scheduling Algorithm</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Task Scheduling Algorithm</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTaskSchedulingAlgorithm(TaskSchedulingAlgorithm object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Interrupt Controller</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Interrupt Controller</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInterruptController(InterruptController object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Interrupt Scheduling Algorithm</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Interrupt Scheduling Algorithm</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInterruptSchedulingAlgorithm(InterruptSchedulingAlgorithm object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Scheduling HW Unit</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Scheduling HW Unit</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSchedulingHWUnit(SchedulingHWUnit object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>OSEK</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>OSEK</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOSEK(OSEK object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Priority Based</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Priority Based</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePriorityBased(PriorityBased object) {
 		return null;
 	}
 

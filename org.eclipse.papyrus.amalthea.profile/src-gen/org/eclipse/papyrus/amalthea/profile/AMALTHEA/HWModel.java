@@ -4,8 +4,6 @@ package org.eclipse.papyrus.amalthea.profile.AMALTHEA;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.uml2.uml.Model;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>HW Model</b></em>'.
@@ -15,7 +13,7 @@ import org.eclipse.uml2.uml.Model;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.HWModel#getBase_Model <em>Base Model</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.HWModel#getBase_Package <em>Base Package</em>}</li>
  * </ul>
  *
  * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.AMALTHEAPackage#getHWModel()
@@ -24,29 +22,29 @@ import org.eclipse.uml2.uml.Model;
  */
 public interface HWModel extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Base Model</b></em>' reference.
+	 * Returns the value of the '<em><b>Base Package</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Base Model</em>' reference isn't clear,
+	 * If the meaning of the '<em>Base Package</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Base Model</em>' reference.
-	 * @see #setBase_Model(Model)
-	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.AMALTHEAPackage#getHWModel_Base_Model()
+	 * @return the value of the '<em>Base Package</em>' reference.
+	 * @see #setBase_Package(org.eclipse.uml2.uml.Package)
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.AMALTHEAPackage#getHWModel_Base_Package()
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	Model getBase_Model();
+	org.eclipse.uml2.uml.Package getBase_Package();
 
 	/**
-	 * Sets the value of the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.HWModel#getBase_Model <em>Base Model</em>}' reference.
+	 * Sets the value of the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.HWModel#getBase_Package <em>Base Package</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Base Model</em>' reference.
-	 * @see #getBase_Model()
+	 * @param value the new value of the '<em>Base Package</em>' reference.
+	 * @see #getBase_Package()
 	 * @generated
 	 */
-	void setBase_Model(Model value);
+	void setBase_Package(org.eclipse.uml2.uml.Package value);
 
 } // HWModel

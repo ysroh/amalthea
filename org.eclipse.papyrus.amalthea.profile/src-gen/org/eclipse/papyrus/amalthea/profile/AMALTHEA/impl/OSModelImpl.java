@@ -13,8 +13,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.AMALTHEAPackage;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.OSModel;
 
-import org.eclipse.uml2.uml.Model;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>OS Model</b></em>'.
@@ -23,22 +21,21 @@ import org.eclipse.uml2.uml.Model;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.OSModelImpl#getBase_Model <em>Base Model</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.OSModelImpl#getBase_Package <em>Base Package</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class OSModelImpl extends MinimalEObjectImpl.Container implements OSModel {
 	/**
-	 * The cached value of the '{@link #getBase_Model() <em>Base Model</em>}' reference.
+	 * The cached value of the '{@link #getBase_Package() <em>Base Package</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBase_Model()
+	 * @see #getBase_Package()
 	 * @generated
 	 * @ordered
 	 */
-	protected Model base_Model;
-
+	protected org.eclipse.uml2.uml.Package base_Package;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -63,16 +60,16 @@ public class OSModelImpl extends MinimalEObjectImpl.Container implements OSModel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Model getBase_Model() {
-		if (base_Model != null && base_Model.eIsProxy()) {
-			InternalEObject oldBase_Model = (InternalEObject)base_Model;
-			base_Model = (Model)eResolveProxy(oldBase_Model);
-			if (base_Model != oldBase_Model) {
+	public org.eclipse.uml2.uml.Package getBase_Package() {
+		if (base_Package != null && base_Package.eIsProxy()) {
+			InternalEObject oldBase_Package = (InternalEObject)base_Package;
+			base_Package = (org.eclipse.uml2.uml.Package)eResolveProxy(oldBase_Package);
+			if (base_Package != oldBase_Package) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AMALTHEAPackage.OS_MODEL__BASE_MODEL, oldBase_Model, base_Model));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AMALTHEAPackage.OS_MODEL__BASE_PACKAGE, oldBase_Package, base_Package));
 			}
 		}
-		return base_Model;
+		return base_Package;
 	}
 
 	/**
@@ -80,8 +77,8 @@ public class OSModelImpl extends MinimalEObjectImpl.Container implements OSModel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Model basicGetBase_Model() {
-		return base_Model;
+	public org.eclipse.uml2.uml.Package basicGetBase_Package() {
+		return base_Package;
 	}
 
 	/**
@@ -89,11 +86,11 @@ public class OSModelImpl extends MinimalEObjectImpl.Container implements OSModel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBase_Model(Model newBase_Model) {
-		Model oldBase_Model = base_Model;
-		base_Model = newBase_Model;
+	public void setBase_Package(org.eclipse.uml2.uml.Package newBase_Package) {
+		org.eclipse.uml2.uml.Package oldBase_Package = base_Package;
+		base_Package = newBase_Package;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AMALTHEAPackage.OS_MODEL__BASE_MODEL, oldBase_Model, base_Model));
+			eNotify(new ENotificationImpl(this, Notification.SET, AMALTHEAPackage.OS_MODEL__BASE_PACKAGE, oldBase_Package, base_Package));
 	}
 
 	/**
@@ -104,9 +101,9 @@ public class OSModelImpl extends MinimalEObjectImpl.Container implements OSModel
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case AMALTHEAPackage.OS_MODEL__BASE_MODEL:
-				if (resolve) return getBase_Model();
-				return basicGetBase_Model();
+			case AMALTHEAPackage.OS_MODEL__BASE_PACKAGE:
+				if (resolve) return getBase_Package();
+				return basicGetBase_Package();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -119,8 +116,8 @@ public class OSModelImpl extends MinimalEObjectImpl.Container implements OSModel
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case AMALTHEAPackage.OS_MODEL__BASE_MODEL:
-				setBase_Model((Model)newValue);
+			case AMALTHEAPackage.OS_MODEL__BASE_PACKAGE:
+				setBase_Package((org.eclipse.uml2.uml.Package)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -134,8 +131,8 @@ public class OSModelImpl extends MinimalEObjectImpl.Container implements OSModel
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case AMALTHEAPackage.OS_MODEL__BASE_MODEL:
-				setBase_Model((Model)null);
+			case AMALTHEAPackage.OS_MODEL__BASE_PACKAGE:
+				setBase_Package((org.eclipse.uml2.uml.Package)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -149,8 +146,8 @@ public class OSModelImpl extends MinimalEObjectImpl.Container implements OSModel
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case AMALTHEAPackage.OS_MODEL__BASE_MODEL:
-				return base_Model != null;
+			case AMALTHEAPackage.OS_MODEL__BASE_PACKAGE:
+				return base_Package != null;
 		}
 		return super.eIsSet(featureID);
 	}

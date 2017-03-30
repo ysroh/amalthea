@@ -65,6 +65,14 @@
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="AMALTHEA.ecore#//BusType/SPI"/>
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="AMALTHEA.ecore#//BusType/NA"/>
     </genEnums>
+    <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="AMALTHEA.ecore#//TimeUnit">
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="AMALTHEA.ecore#//TimeUnit/_undefined_"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="AMALTHEA.ecore#//TimeUnit/s"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="AMALTHEA.ecore#//TimeUnit/ms"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="AMALTHEA.ecore#//TimeUnit/us"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="AMALTHEA.ecore#//TimeUnit/ns"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="AMALTHEA.ecore#//TimeUnit/ps"/>
+    </genEnums>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="AMALTHEA.ecore#//Runnable">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute AMALTHEA.ecore#//Runnable/service"/>
     </genClasses>
@@ -84,28 +92,16 @@
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="AMALTHEA.ecore#//HWModel">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference AMALTHEA.ecore#//HWModel/base_Model"/>
+          propertySortChoices="true" ecoreFeature="ecore:EReference AMALTHEA.ecore#//HWModel/base_Package"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="AMALTHEA.ecore#//OSModel">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference AMALTHEA.ecore#//OSModel/base_Model"/>
+          propertySortChoices="true" ecoreFeature="ecore:EReference AMALTHEA.ecore#//OSModel/base_Package"/>
     </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="AMALTHEA.ecore#//MappingModel">
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference AMALTHEA.ecore#//MappingModel/base_Model"/>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="AMALTHEA.ecore#//StimuliModel">
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference AMALTHEA.ecore#//StimuliModel/base_Model"/>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="AMALTHEA.ecore#//SoftwareModel">
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference AMALTHEA.ecore#//SoftwareModel/base_Model"/>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="AMALTHEA.ecore#//ConstraintsModel">
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference AMALTHEA.ecore#//ConstraintsModel/base_Model"/>
-    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="AMALTHEA.ecore#//MappingModel"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="AMALTHEA.ecore#//StimuliModel"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="AMALTHEA.ecore#//SoftwareModel"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="AMALTHEA.ecore#//ConstraintsModel"/>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="AMALTHEA.ecore#//Component">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference AMALTHEA.ecore#//Component/base_Component"/>
@@ -237,5 +233,43 @@
       <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
           createChild="true" ecoreFeature="ecore:EReference AMALTHEA.ecore#//Microcontroller/cores"/>
     </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="AMALTHEA.ecore#//AbstractTime">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference AMALTHEA.ecore#//AbstractTime/base_Element"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute AMALTHEA.ecore#//AbstractTime/value"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute AMALTHEA.ecore#//AbstractTime/unit"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="AMALTHEA.ecore#//Time"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="AMALTHEA.ecore#//OperatingSystem">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference AMALTHEA.ecore#//OperatingSystem/taskSchedulers"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference AMALTHEA.ecore#//OperatingSystem/interruptControllers"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="AMALTHEA.ecore#//TaskScheduler">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference AMALTHEA.ecore#//TaskScheduler/taskSchedulingAlgorithm"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="AMALTHEA.ecore#//Scheduler">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute AMALTHEA.ecore#//Scheduler/scheduleUnitPriority"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference AMALTHEA.ecore#//Scheduler/schedulingUnit"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="AMALTHEA.ecore#//SchedulingUnit">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference AMALTHEA.ecore#//SchedulingUnit/base_Element"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="AMALTHEA.ecore#//TaskSchedulingAlgorithm"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="AMALTHEA.ecore#//InterruptController">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference AMALTHEA.ecore#//InterruptController/interruptSchedulingAlgorithm"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="AMALTHEA.ecore#//InterruptSchedulingAlgorithm"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="AMALTHEA.ecore#//SchedulingHWUnit">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference AMALTHEA.ecore#//SchedulingHWUnit/delay"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="AMALTHEA.ecore#//OSEK"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="AMALTHEA.ecore#//PriorityBased"/>
   </genPackages>
 </genmodel:GenModel>

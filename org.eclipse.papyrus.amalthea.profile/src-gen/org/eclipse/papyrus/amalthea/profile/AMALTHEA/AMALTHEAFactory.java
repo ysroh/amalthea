@@ -283,6 +283,69 @@ public interface AMALTHEAFactory extends EFactory {
 	Microcontroller createMicrocontroller();
 
 	/**
+	 * Returns a new object of class '<em>Time</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Time</em>'.
+	 * @generated
+	 */
+	Time createTime();
+
+	/**
+	 * Returns a new object of class '<em>Operating System</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Operating System</em>'.
+	 * @generated
+	 */
+	OperatingSystem createOperatingSystem();
+
+	/**
+	 * Returns a new object of class '<em>Task Scheduler</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Task Scheduler</em>'.
+	 * @generated
+	 */
+	TaskScheduler createTaskScheduler();
+
+	/**
+	 * Returns a new object of class '<em>Interrupt Controller</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Interrupt Controller</em>'.
+	 * @generated
+	 */
+	InterruptController createInterruptController();
+
+	/**
+	 * Returns a new object of class '<em>Scheduling HW Unit</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Scheduling HW Unit</em>'.
+	 * @generated
+	 */
+	SchedulingHWUnit createSchedulingHWUnit();
+
+	/**
+	 * Returns a new object of class '<em>OSEK</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>OSEK</em>'.
+	 * @generated
+	 */
+	OSEK createOSEK();
+
+	/**
+	 * Returns a new object of class '<em>Priority Based</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Priority Based</em>'.
+	 * @generated
+	 */
+	PriorityBased createPriorityBased();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

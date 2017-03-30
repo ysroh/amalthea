@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.AMALTHEAPackage;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.AbstractTime;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.BaseObject;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Bus;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.ComplexNode;
@@ -31,21 +32,32 @@ import org.eclipse.papyrus.amalthea.profile.AMALTHEA.HwSystem;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.IAnnotatable;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.IReferable;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.ISystem;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.InterruptController;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.InterruptSchedulingAlgorithm;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.MappingModel;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Microcontroller;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.MicrocontrollerType;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Network;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.NetworkType;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.OSEK;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.OSModel;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.OperatingSystem;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Port;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Prescaler;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.PriorityBased;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.QualifiedPort;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Quartz;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.ReferableBaseObject;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Scheduler;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.SchedulingHWUnit;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.SchedulingUnit;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.SoftwareModel;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.StimuliModel;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.SystemType;
 
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.TaskScheduler;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.TaskSchedulingAlgorithm;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Time;
 import org.eclipse.papyrus.sysml14.blocks.Block;
 
 /**
@@ -247,6 +259,54 @@ public class AMALTHEAAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseMicrocontroller(Microcontroller object) {
 				return createMicrocontrollerAdapter();
+			}
+			@Override
+			public Adapter caseAbstractTime(AbstractTime object) {
+				return createAbstractTimeAdapter();
+			}
+			@Override
+			public Adapter caseTime(Time object) {
+				return createTimeAdapter();
+			}
+			@Override
+			public Adapter caseOperatingSystem(OperatingSystem object) {
+				return createOperatingSystemAdapter();
+			}
+			@Override
+			public Adapter caseTaskScheduler(TaskScheduler object) {
+				return createTaskSchedulerAdapter();
+			}
+			@Override
+			public Adapter caseScheduler(Scheduler object) {
+				return createSchedulerAdapter();
+			}
+			@Override
+			public Adapter caseSchedulingUnit(SchedulingUnit object) {
+				return createSchedulingUnitAdapter();
+			}
+			@Override
+			public Adapter caseTaskSchedulingAlgorithm(TaskSchedulingAlgorithm object) {
+				return createTaskSchedulingAlgorithmAdapter();
+			}
+			@Override
+			public Adapter caseInterruptController(InterruptController object) {
+				return createInterruptControllerAdapter();
+			}
+			@Override
+			public Adapter caseInterruptSchedulingAlgorithm(InterruptSchedulingAlgorithm object) {
+				return createInterruptSchedulingAlgorithmAdapter();
+			}
+			@Override
+			public Adapter caseSchedulingHWUnit(SchedulingHWUnit object) {
+				return createSchedulingHWUnitAdapter();
+			}
+			@Override
+			public Adapter caseOSEK(OSEK object) {
+				return createOSEKAdapter();
+			}
+			@Override
+			public Adapter casePriorityBased(PriorityBased object) {
+				return createPriorityBasedAdapter();
 			}
 			@Override
 			public Adapter caseBlock(Block object) {
@@ -773,6 +833,174 @@ public class AMALTHEAAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMicrocontrollerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.AbstractTime <em>Abstract Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.AbstractTime
+	 * @generated
+	 */
+	public Adapter createAbstractTimeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.Time <em>Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.Time
+	 * @generated
+	 */
+	public Adapter createTimeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.OperatingSystem <em>Operating System</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.OperatingSystem
+	 * @generated
+	 */
+	public Adapter createOperatingSystemAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.TaskScheduler <em>Task Scheduler</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.TaskScheduler
+	 * @generated
+	 */
+	public Adapter createTaskSchedulerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.Scheduler <em>Scheduler</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.Scheduler
+	 * @generated
+	 */
+	public Adapter createSchedulerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.SchedulingUnit <em>Scheduling Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.SchedulingUnit
+	 * @generated
+	 */
+	public Adapter createSchedulingUnitAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.TaskSchedulingAlgorithm <em>Task Scheduling Algorithm</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.TaskSchedulingAlgorithm
+	 * @generated
+	 */
+	public Adapter createTaskSchedulingAlgorithmAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.InterruptController <em>Interrupt Controller</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.InterruptController
+	 * @generated
+	 */
+	public Adapter createInterruptControllerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.InterruptSchedulingAlgorithm <em>Interrupt Scheduling Algorithm</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.InterruptSchedulingAlgorithm
+	 * @generated
+	 */
+	public Adapter createInterruptSchedulingAlgorithmAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.SchedulingHWUnit <em>Scheduling HW Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.SchedulingHWUnit
+	 * @generated
+	 */
+	public Adapter createSchedulingHWUnitAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.OSEK <em>OSEK</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.OSEK
+	 * @generated
+	 */
+	public Adapter createOSEKAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.PriorityBased <em>Priority Based</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.PriorityBased
+	 * @generated
+	 */
+	public Adapter createPriorityBasedAdapter() {
 		return null;
 	}
 

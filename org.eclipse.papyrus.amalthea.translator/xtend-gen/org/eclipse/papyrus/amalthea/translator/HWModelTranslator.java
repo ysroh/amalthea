@@ -196,7 +196,7 @@ public class HWModelTranslator {
         }
         newElement_5.setType(_switchResult_1);
         Frequency _frequency = HWModelUtils.getQuartz(element).getFrequency();
-        org.eclipse.app4mc.amalthea.model.Frequency _translate_6 = this.commonTranslator.translate(((Element) _frequency));
+        EObject _translate_6 = this.commonTranslator.translate(((Element) _frequency));
         newElement_5.setFrequency(((org.eclipse.app4mc.amalthea.model.Frequency) _translate_6));
       }
     }

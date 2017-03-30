@@ -22,29 +22,17 @@
         lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HWModel">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Model" ordered="false"
-        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Model"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Package" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OSModel">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Model" ordered="false"
-        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Model"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Package" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Package"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MappingModel">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Model" ordered="false"
-        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Model"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="StimuliModel">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Model" ordered="false"
-        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Model"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SoftwareModel">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Model" ordered="false"
-        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Model"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ConstraintsModel">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Model" ordered="false"
-        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Model"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MappingModel"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StimuliModel"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SoftwareModel"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConstraintsModel"/>
   <eClassifiers xsi:type="ecore:EClass" name="Component" eSuperTypes="#//ReferableBaseObject ../../org.eclipse.papyrus.sysml14/resources/profile/sysml.ecore#//blocks/Block">
     <eStructuralFeatures xsi:type="ecore:EReference" name="base_Component" ordered="false"
         lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Component"/>
@@ -228,4 +216,56 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="cores" ordered="false"
         lowerBound="1" eType="#//Core"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractTime" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Element" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Element"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" ordered="false" lowerBound="1"
+        eType="#//TimeUnit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TimeUnit">
+    <eLiterals name="_undefined_"/>
+    <eLiterals name="s" value="1"/>
+    <eLiterals name="ms" value="2"/>
+    <eLiterals name="us" value="3"/>
+    <eLiterals name="ns" value="4"/>
+    <eLiterals name="ps" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Time" eSuperTypes="#//AbstractTime"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OperatingSystem" eSuperTypes="../../org.eclipse.papyrus.sysml14/resources/profile/sysml.ecore#//blocks/Block #//BaseObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="taskSchedulers" ordered="false"
+        upperBound="-1" eType="#//TaskScheduler"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interruptControllers" ordered="false"
+        upperBound="-1" eType="#//InterruptController"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskScheduler" eSuperTypes="#//Scheduler">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="taskSchedulingAlgorithm"
+        ordered="false" lowerBound="1" eType="#//TaskSchedulingAlgorithm"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Scheduler" abstract="true" eSuperTypes="#//ReferableBaseObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="scheduleUnitPriority" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="schedulingUnit" ordered="false"
+        lowerBound="1" eType="#//SchedulingUnit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SchedulingUnit" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Element" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Element"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskSchedulingAlgorithm" abstract="true"
+      eSuperTypes="#//BaseObject"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InterruptController" eSuperTypes="#//Scheduler">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interruptSchedulingAlgorithm"
+        ordered="false" lowerBound="1" eType="#//InterruptSchedulingAlgorithm"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterruptSchedulingAlgorithm" abstract="true"
+      eSuperTypes="#//BaseObject"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SchedulingHWUnit" eSuperTypes="#//BaseObject #//SchedulingUnit">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="delay" ordered="false"
+        lowerBound="1" eType="#//Time"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OSEK" eSuperTypes="#//TaskSchedulingAlgorithm"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PriorityBased" eSuperTypes="#//InterruptSchedulingAlgorithm"/>
 </ecore:EPackage>

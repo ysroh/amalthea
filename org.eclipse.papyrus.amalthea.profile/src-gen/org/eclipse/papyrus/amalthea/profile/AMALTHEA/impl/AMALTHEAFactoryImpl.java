@@ -32,20 +32,28 @@ import org.eclipse.papyrus.amalthea.profile.AMALTHEA.FrequencyUnit;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.HWModel;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.HwSystem;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.InterfaceKind;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.InterruptController;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.MappingModel;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Microcontroller;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.MicrocontrollerType;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Network;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.NetworkType;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.OSEK;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.OSModel;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.OperatingSystem;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Prescaler;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.PriorityBased;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.QType;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.QualifiedPort;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Quartz;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.SchedType;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.SchedulingHWUnit;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.SoftwareModel;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.StimuliModel;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.SystemType;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.TaskScheduler;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Time;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.TimeUnit;
 
 /**
  * <!-- begin-user-doc -->
@@ -120,6 +128,13 @@ public class AMALTHEAFactoryImpl extends EFactoryImpl implements AMALTHEAFactory
 			case AMALTHEAPackage.HW_SYSTEM: return createHwSystem();
 			case AMALTHEAPackage.ECU: return createECU();
 			case AMALTHEAPackage.MICROCONTROLLER: return createMicrocontroller();
+			case AMALTHEAPackage.TIME: return createTime();
+			case AMALTHEAPackage.OPERATING_SYSTEM: return createOperatingSystem();
+			case AMALTHEAPackage.TASK_SCHEDULER: return createTaskScheduler();
+			case AMALTHEAPackage.INTERRUPT_CONTROLLER: return createInterruptController();
+			case AMALTHEAPackage.SCHEDULING_HW_UNIT: return createSchedulingHWUnit();
+			case AMALTHEAPackage.OSEK: return createOSEK();
+			case AMALTHEAPackage.PRIORITY_BASED: return createPriorityBased();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -143,6 +158,8 @@ public class AMALTHEAFactoryImpl extends EFactoryImpl implements AMALTHEAFactory
 				return createSchedTypeFromString(eDataType, initialValue);
 			case AMALTHEAPackage.BUS_TYPE:
 				return createBusTypeFromString(eDataType, initialValue);
+			case AMALTHEAPackage.TIME_UNIT:
+				return createTimeUnitFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -166,6 +183,8 @@ public class AMALTHEAFactoryImpl extends EFactoryImpl implements AMALTHEAFactory
 				return convertSchedTypeToString(eDataType, instanceValue);
 			case AMALTHEAPackage.BUS_TYPE:
 				return convertBusTypeToString(eDataType, instanceValue);
+			case AMALTHEAPackage.TIME_UNIT:
+				return convertTimeUnitToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -466,6 +485,76 @@ public class AMALTHEAFactoryImpl extends EFactoryImpl implements AMALTHEAFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Time createTime() {
+		TimeImpl time = new TimeImpl();
+		return time;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OperatingSystem createOperatingSystem() {
+		OperatingSystemImpl operatingSystem = new OperatingSystemImpl();
+		return operatingSystem;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TaskScheduler createTaskScheduler() {
+		TaskSchedulerImpl taskScheduler = new TaskSchedulerImpl();
+		return taskScheduler;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public InterruptController createInterruptController() {
+		InterruptControllerImpl interruptController = new InterruptControllerImpl();
+		return interruptController;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SchedulingHWUnit createSchedulingHWUnit() {
+		SchedulingHWUnitImpl schedulingHWUnit = new SchedulingHWUnitImpl();
+		return schedulingHWUnit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OSEK createOSEK() {
+		OSEKImpl osek = new OSEKImpl();
+		return osek;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PriorityBased createPriorityBased() {
+		PriorityBasedImpl priorityBased = new PriorityBasedImpl();
+		return priorityBased;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public InterfaceKind createInterfaceKindFromString(EDataType eDataType, String initialValue) {
 		InterfaceKind result = InterfaceKind.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -538,6 +627,26 @@ public class AMALTHEAFactoryImpl extends EFactoryImpl implements AMALTHEAFactory
 	 * @generated
 	 */
 	public String convertBusTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TimeUnit createTimeUnitFromString(EDataType eDataType, String initialValue) {
+		TimeUnit result = TimeUnit.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertTimeUnitToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

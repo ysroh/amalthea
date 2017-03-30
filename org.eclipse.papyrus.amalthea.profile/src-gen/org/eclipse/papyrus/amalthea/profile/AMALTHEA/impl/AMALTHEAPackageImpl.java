@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.AMALTHEAFactory;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.AMALTHEAPackage;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.AbstractTime;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.BaseObject;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Bus;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.BusType;
@@ -36,23 +37,34 @@ import org.eclipse.papyrus.amalthea.profile.AMALTHEA.IAnnotatable;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.IReferable;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.ISystem;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.InterfaceKind;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.InterruptController;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.InterruptSchedulingAlgorithm;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.MappingModel;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Microcontroller;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.MicrocontrollerType;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Network;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.NetworkType;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.OSModel;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.OperatingSystem;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Port;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Prescaler;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.PriorityBased;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.QType;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.QualifiedPort;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Quartz;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.ReferableBaseObject;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.SchedType;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Scheduler;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.SchedulingHWUnit;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.SchedulingUnit;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.SoftwareModel;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.StimuliModel;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.SystemType;
 
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.TaskScheduler;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.TaskSchedulingAlgorithm;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Time;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.TimeUnit;
 import org.eclipse.papyrus.sysml14.blocks.BlocksPackage;
 
 import org.eclipse.papyrus.sysml14.sysmlPackage;
@@ -325,6 +337,90 @@ public class AMALTHEAPackageImpl extends EPackageImpl implements AMALTHEAPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass abstractTimeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass timeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass operatingSystemEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass taskSchedulerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass schedulerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass schedulingUnitEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass taskSchedulingAlgorithmEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass interruptControllerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass interruptSchedulingAlgorithmEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass schedulingHWUnitEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass osekEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass priorityBasedEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum interfaceKindEEnum = null;
 
 	/**
@@ -347,6 +443,13 @@ public class AMALTHEAPackageImpl extends EPackageImpl implements AMALTHEAPackage
 	 * @generated
 	 */
 	private EEnum busTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum timeUnitEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -523,7 +626,7 @@ public class AMALTHEAPackageImpl extends EPackageImpl implements AMALTHEAPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getHWModel_Base_Model() {
+	public EReference getHWModel_Base_Package() {
 		return (EReference)hwModelEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -541,7 +644,7 @@ public class AMALTHEAPackageImpl extends EPackageImpl implements AMALTHEAPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getOSModel_Base_Model() {
+	public EReference getOSModel_Base_Package() {
 		return (EReference)osModelEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -559,26 +662,8 @@ public class AMALTHEAPackageImpl extends EPackageImpl implements AMALTHEAPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMappingModel_Base_Model() {
-		return (EReference)mappingModelEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getStimuliModel() {
 		return stimuliModelEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getStimuliModel_Base_Model() {
-		return (EReference)stimuliModelEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -595,26 +680,8 @@ public class AMALTHEAPackageImpl extends EPackageImpl implements AMALTHEAPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSoftwareModel_Base_Model() {
-		return (EReference)softwareModelEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getConstraintsModel() {
 		return constraintsModelEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getConstraintsModel_Base_Model() {
-		return (EReference)constraintsModelEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1288,6 +1355,213 @@ public class AMALTHEAPackageImpl extends EPackageImpl implements AMALTHEAPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getAbstractTime() {
+		return abstractTimeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAbstractTime_Base_Element() {
+		return (EReference)abstractTimeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbstractTime_Value() {
+		return (EAttribute)abstractTimeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAbstractTime_Unit() {
+		return (EAttribute)abstractTimeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTime() {
+		return timeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOperatingSystem() {
+		return operatingSystemEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOperatingSystem_TaskSchedulers() {
+		return (EReference)operatingSystemEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOperatingSystem_InterruptControllers() {
+		return (EReference)operatingSystemEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTaskScheduler() {
+		return taskSchedulerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTaskScheduler_TaskSchedulingAlgorithm() {
+		return (EReference)taskSchedulerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getScheduler() {
+		return schedulerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getScheduler_ScheduleUnitPriority() {
+		return (EAttribute)schedulerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getScheduler_SchedulingUnit() {
+		return (EReference)schedulerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSchedulingUnit() {
+		return schedulingUnitEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSchedulingUnit_Base_Element() {
+		return (EReference)schedulingUnitEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTaskSchedulingAlgorithm() {
+		return taskSchedulingAlgorithmEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getInterruptController() {
+		return interruptControllerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInterruptController_InterruptSchedulingAlgorithm() {
+		return (EReference)interruptControllerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getInterruptSchedulingAlgorithm() {
+		return interruptSchedulingAlgorithmEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSchedulingHWUnit() {
+		return schedulingHWUnitEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSchedulingHWUnit_Delay() {
+		return (EReference)schedulingHWUnitEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOSEK() {
+		return osekEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPriorityBased() {
+		return priorityBasedEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getInterfaceKind() {
 		return interfaceKindEEnum;
 	}
@@ -1317,6 +1591,15 @@ public class AMALTHEAPackageImpl extends EPackageImpl implements AMALTHEAPackage
 	 */
 	public EEnum getBusType() {
 		return busTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getTimeUnit() {
+		return timeUnitEEnum;
 	}
 
 	/**
@@ -1372,22 +1655,18 @@ public class AMALTHEAPackageImpl extends EPackageImpl implements AMALTHEAPackage
 		createEReference(customPropertyEClass, CUSTOM_PROPERTY__BASE_PROPERTY);
 
 		hwModelEClass = createEClass(HW_MODEL);
-		createEReference(hwModelEClass, HW_MODEL__BASE_MODEL);
+		createEReference(hwModelEClass, HW_MODEL__BASE_PACKAGE);
 
 		osModelEClass = createEClass(OS_MODEL);
-		createEReference(osModelEClass, OS_MODEL__BASE_MODEL);
+		createEReference(osModelEClass, OS_MODEL__BASE_PACKAGE);
 
 		mappingModelEClass = createEClass(MAPPING_MODEL);
-		createEReference(mappingModelEClass, MAPPING_MODEL__BASE_MODEL);
 
 		stimuliModelEClass = createEClass(STIMULI_MODEL);
-		createEReference(stimuliModelEClass, STIMULI_MODEL__BASE_MODEL);
 
 		softwareModelEClass = createEClass(SOFTWARE_MODEL);
-		createEReference(softwareModelEClass, SOFTWARE_MODEL__BASE_MODEL);
 
 		constraintsModelEClass = createEClass(CONSTRAINTS_MODEL);
-		createEReference(constraintsModelEClass, CONSTRAINTS_MODEL__BASE_MODEL);
 
 		componentEClass = createEClass(COMPONENT);
 		createEReference(componentEClass, COMPONENT__BASE_COMPONENT);
@@ -1488,12 +1767,48 @@ public class AMALTHEAPackageImpl extends EPackageImpl implements AMALTHEAPackage
 		createEReference(microcontrollerEClass, MICROCONTROLLER__MICROCONTROLLER_TYPE);
 		createEReference(microcontrollerEClass, MICROCONTROLLER__CORES);
 
+		abstractTimeEClass = createEClass(ABSTRACT_TIME);
+		createEReference(abstractTimeEClass, ABSTRACT_TIME__BASE_ELEMENT);
+		createEAttribute(abstractTimeEClass, ABSTRACT_TIME__VALUE);
+		createEAttribute(abstractTimeEClass, ABSTRACT_TIME__UNIT);
+
+		timeEClass = createEClass(TIME);
+
+		operatingSystemEClass = createEClass(OPERATING_SYSTEM);
+		createEReference(operatingSystemEClass, OPERATING_SYSTEM__TASK_SCHEDULERS);
+		createEReference(operatingSystemEClass, OPERATING_SYSTEM__INTERRUPT_CONTROLLERS);
+
+		taskSchedulerEClass = createEClass(TASK_SCHEDULER);
+		createEReference(taskSchedulerEClass, TASK_SCHEDULER__TASK_SCHEDULING_ALGORITHM);
+
+		schedulerEClass = createEClass(SCHEDULER);
+		createEAttribute(schedulerEClass, SCHEDULER__SCHEDULE_UNIT_PRIORITY);
+		createEReference(schedulerEClass, SCHEDULER__SCHEDULING_UNIT);
+
+		schedulingUnitEClass = createEClass(SCHEDULING_UNIT);
+		createEReference(schedulingUnitEClass, SCHEDULING_UNIT__BASE_ELEMENT);
+
+		taskSchedulingAlgorithmEClass = createEClass(TASK_SCHEDULING_ALGORITHM);
+
+		interruptControllerEClass = createEClass(INTERRUPT_CONTROLLER);
+		createEReference(interruptControllerEClass, INTERRUPT_CONTROLLER__INTERRUPT_SCHEDULING_ALGORITHM);
+
+		interruptSchedulingAlgorithmEClass = createEClass(INTERRUPT_SCHEDULING_ALGORITHM);
+
+		schedulingHWUnitEClass = createEClass(SCHEDULING_HW_UNIT);
+		createEReference(schedulingHWUnitEClass, SCHEDULING_HW_UNIT__DELAY);
+
+		osekEClass = createEClass(OSEK);
+
+		priorityBasedEClass = createEClass(PRIORITY_BASED);
+
 		// Create enums
 		interfaceKindEEnum = createEEnum(INTERFACE_KIND);
 		qTypeEEnum = createEEnum(QTYPE);
 		frequencyUnitEEnum = createEEnum(FREQUENCY_UNIT);
 		schedTypeEEnum = createEEnum(SCHED_TYPE);
 		busTypeEEnum = createEEnum(BUS_TYPE);
+		timeUnitEEnum = createEEnum(TIME_UNIT);
 	}
 
 	/**
@@ -1551,6 +1866,18 @@ public class AMALTHEAPackageImpl extends EPackageImpl implements AMALTHEAPackage
 		hwSystemEClass.getESuperTypes().add(this.getComplexNode());
 		ecuEClass.getESuperTypes().add(this.getComplexNode());
 		microcontrollerEClass.getESuperTypes().add(this.getComplexNode());
+		timeEClass.getESuperTypes().add(this.getAbstractTime());
+		operatingSystemEClass.getESuperTypes().add(theBlocksPackage.getBlock());
+		operatingSystemEClass.getESuperTypes().add(this.getBaseObject());
+		taskSchedulerEClass.getESuperTypes().add(this.getScheduler());
+		schedulerEClass.getESuperTypes().add(this.getReferableBaseObject());
+		taskSchedulingAlgorithmEClass.getESuperTypes().add(this.getBaseObject());
+		interruptControllerEClass.getESuperTypes().add(this.getScheduler());
+		interruptSchedulingAlgorithmEClass.getESuperTypes().add(this.getBaseObject());
+		schedulingHWUnitEClass.getESuperTypes().add(this.getBaseObject());
+		schedulingHWUnitEClass.getESuperTypes().add(this.getSchedulingUnit());
+		osekEClass.getESuperTypes().add(this.getTaskSchedulingAlgorithm());
+		priorityBasedEClass.getESuperTypes().add(this.getInterruptSchedulingAlgorithm());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(runnableEClass, org.eclipse.papyrus.amalthea.profile.AMALTHEA.Runnable.class, "Runnable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1569,22 +1896,18 @@ public class AMALTHEAPackageImpl extends EPackageImpl implements AMALTHEAPackage
 		initEReference(getCustomProperty_Base_Property(), theUMLPackage.getProperty(), null, "base_Property", null, 1, 1, CustomProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(hwModelEClass, HWModel.class, "HWModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getHWModel_Base_Model(), theUMLPackage.getModel(), null, "base_Model", null, 1, 1, HWModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getHWModel_Base_Package(), theUMLPackage.getPackage(), null, "base_Package", null, 1, 1, HWModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(osModelEClass, OSModel.class, "OSModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOSModel_Base_Model(), theUMLPackage.getModel(), null, "base_Model", null, 1, 1, OSModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getOSModel_Base_Package(), theUMLPackage.getPackage(), null, "base_Package", null, 1, 1, OSModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(mappingModelEClass, MappingModel.class, "MappingModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMappingModel_Base_Model(), theUMLPackage.getModel(), null, "base_Model", null, 1, 1, MappingModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(stimuliModelEClass, StimuliModel.class, "StimuliModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getStimuliModel_Base_Model(), theUMLPackage.getModel(), null, "base_Model", null, 1, 1, StimuliModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(softwareModelEClass, SoftwareModel.class, "SoftwareModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSoftwareModel_Base_Model(), theUMLPackage.getModel(), null, "base_Model", null, 1, 1, SoftwareModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(constraintsModelEClass, ConstraintsModel.class, "ConstraintsModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getConstraintsModel_Base_Model(), theUMLPackage.getModel(), null, "base_Model", null, 1, 1, ConstraintsModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(componentEClass, Component.class, "Component", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getComponent_Base_Component(), theUMLPackage.getComponent(), null, "base_Component", null, 1, 1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -1687,6 +2010,41 @@ public class AMALTHEAPackageImpl extends EPackageImpl implements AMALTHEAPackage
 		initEReference(getMicrocontroller_MicrocontrollerType(), this.getMicrocontrollerType(), null, "microcontrollerType", null, 1, 1, Microcontroller.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getMicrocontroller_Cores(), this.getCore(), null, "cores", null, 1, 1, Microcontroller.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
+		initEClass(abstractTimeEClass, AbstractTime.class, "AbstractTime", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAbstractTime_Base_Element(), theUMLPackage.getElement(), null, "base_Element", null, 1, 1, AbstractTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAbstractTime_Value(), ecorePackage.getEInt(), "value", null, 1, 1, AbstractTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAbstractTime_Unit(), this.getTimeUnit(), "unit", null, 1, 1, AbstractTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(timeEClass, Time.class, "Time", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(operatingSystemEClass, OperatingSystem.class, "OperatingSystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getOperatingSystem_TaskSchedulers(), this.getTaskScheduler(), null, "taskSchedulers", null, 0, -1, OperatingSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getOperatingSystem_InterruptControllers(), this.getInterruptController(), null, "interruptControllers", null, 0, -1, OperatingSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(taskSchedulerEClass, TaskScheduler.class, "TaskScheduler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTaskScheduler_TaskSchedulingAlgorithm(), this.getTaskSchedulingAlgorithm(), null, "taskSchedulingAlgorithm", null, 1, 1, TaskScheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(schedulerEClass, Scheduler.class, "Scheduler", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getScheduler_ScheduleUnitPriority(), ecorePackage.getEInt(), "scheduleUnitPriority", "0", 1, 1, Scheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getScheduler_SchedulingUnit(), this.getSchedulingUnit(), null, "schedulingUnit", null, 1, 1, Scheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(schedulingUnitEClass, SchedulingUnit.class, "SchedulingUnit", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSchedulingUnit_Base_Element(), theUMLPackage.getElement(), null, "base_Element", null, 1, 1, SchedulingUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(taskSchedulingAlgorithmEClass, TaskSchedulingAlgorithm.class, "TaskSchedulingAlgorithm", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(interruptControllerEClass, InterruptController.class, "InterruptController", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getInterruptController_InterruptSchedulingAlgorithm(), this.getInterruptSchedulingAlgorithm(), null, "interruptSchedulingAlgorithm", null, 1, 1, InterruptController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(interruptSchedulingAlgorithmEClass, InterruptSchedulingAlgorithm.class, "InterruptSchedulingAlgorithm", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(schedulingHWUnitEClass, SchedulingHWUnit.class, "SchedulingHWUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSchedulingHWUnit_Delay(), this.getTime(), null, "delay", null, 1, 1, SchedulingHWUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(osekEClass, org.eclipse.papyrus.amalthea.profile.AMALTHEA.OSEK.class, "OSEK", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(priorityBasedEClass, PriorityBased.class, "PriorityBased", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		// Initialize enums and add enum literals
 		initEEnum(interfaceKindEEnum, InterfaceKind.class, "InterfaceKind");
 		addEEnumLiteral(interfaceKindEEnum, InterfaceKind._UNDEFINED_);
@@ -1719,6 +2077,14 @@ public class AMALTHEAPackageImpl extends EPackageImpl implements AMALTHEAPackage
 		addEEnumLiteral(busTypeEEnum, BusType.ETHERNET);
 		addEEnumLiteral(busTypeEEnum, BusType.SPI);
 		addEEnumLiteral(busTypeEEnum, BusType.NA);
+
+		initEEnum(timeUnitEEnum, TimeUnit.class, "TimeUnit");
+		addEEnumLiteral(timeUnitEEnum, TimeUnit._UNDEFINED_);
+		addEEnumLiteral(timeUnitEEnum, TimeUnit.S);
+		addEEnumLiteral(timeUnitEEnum, TimeUnit.MS);
+		addEEnumLiteral(timeUnitEEnum, TimeUnit.US);
+		addEEnumLiteral(timeUnitEEnum, TimeUnit.NS);
+		addEEnumLiteral(timeUnitEEnum, TimeUnit.PS);
 
 		// Create resource
 		createResource(eNS_URI);

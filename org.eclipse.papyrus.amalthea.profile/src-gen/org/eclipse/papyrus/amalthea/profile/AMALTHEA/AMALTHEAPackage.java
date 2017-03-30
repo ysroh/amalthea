@@ -274,13 +274,13 @@ public interface AMALTHEAPackage extends EPackage {
 	int HW_MODEL = 5;
 
 	/**
-	 * The feature id for the '<em><b>Base Model</b></em>' reference.
+	 * The feature id for the '<em><b>Base Package</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HW_MODEL__BASE_MODEL = 0;
+	int HW_MODEL__BASE_PACKAGE = 0;
 
 	/**
 	 * The number of structural features of the '<em>HW Model</em>' class.
@@ -311,13 +311,13 @@ public interface AMALTHEAPackage extends EPackage {
 	int OS_MODEL = 6;
 
 	/**
-	 * The feature id for the '<em><b>Base Model</b></em>' reference.
+	 * The feature id for the '<em><b>Base Package</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OS_MODEL__BASE_MODEL = 0;
+	int OS_MODEL__BASE_PACKAGE = 0;
 
 	/**
 	 * The number of structural features of the '<em>OS Model</em>' class.
@@ -348,22 +348,13 @@ public interface AMALTHEAPackage extends EPackage {
 	int MAPPING_MODEL = 7;
 
 	/**
-	 * The feature id for the '<em><b>Base Model</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MAPPING_MODEL__BASE_MODEL = 0;
-
-	/**
 	 * The number of structural features of the '<em>Mapping Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAPPING_MODEL_FEATURE_COUNT = 1;
+	int MAPPING_MODEL_FEATURE_COUNT = 0;
 
 	/**
 	 * The number of operations of the '<em>Mapping Model</em>' class.
@@ -385,22 +376,13 @@ public interface AMALTHEAPackage extends EPackage {
 	int STIMULI_MODEL = 8;
 
 	/**
-	 * The feature id for the '<em><b>Base Model</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STIMULI_MODEL__BASE_MODEL = 0;
-
-	/**
 	 * The number of structural features of the '<em>Stimuli Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STIMULI_MODEL_FEATURE_COUNT = 1;
+	int STIMULI_MODEL_FEATURE_COUNT = 0;
 
 	/**
 	 * The number of operations of the '<em>Stimuli Model</em>' class.
@@ -422,22 +404,13 @@ public interface AMALTHEAPackage extends EPackage {
 	int SOFTWARE_MODEL = 9;
 
 	/**
-	 * The feature id for the '<em><b>Base Model</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOFTWARE_MODEL__BASE_MODEL = 0;
-
-	/**
 	 * The number of structural features of the '<em>Software Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOFTWARE_MODEL_FEATURE_COUNT = 1;
+	int SOFTWARE_MODEL_FEATURE_COUNT = 0;
 
 	/**
 	 * The number of operations of the '<em>Software Model</em>' class.
@@ -459,22 +432,13 @@ public interface AMALTHEAPackage extends EPackage {
 	int CONSTRAINTS_MODEL = 10;
 
 	/**
-	 * The feature id for the '<em><b>Base Model</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRAINTS_MODEL__BASE_MODEL = 0;
-
-	/**
 	 * The number of structural features of the '<em>Constraints Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONSTRAINTS_MODEL_FEATURE_COUNT = 1;
+	int CONSTRAINTS_MODEL_FEATURE_COUNT = 0;
 
 	/**
 	 * The number of operations of the '<em>Constraints Model</em>' class.
@@ -2509,6 +2473,720 @@ public interface AMALTHEAPackage extends EPackage {
 	int MICROCONTROLLER_OPERATION_COUNT = COMPLEX_NODE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AbstractTimeImpl <em>Abstract Time</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AbstractTimeImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getAbstractTime()
+	 * @generated
+	 */
+	int ABSTRACT_TIME = 36;
+
+	/**
+	 * The feature id for the '<em><b>Base Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_TIME__BASE_ELEMENT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_TIME__VALUE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Unit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_TIME__UNIT = 2;
+
+	/**
+	 * The number of structural features of the '<em>Abstract Time</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_TIME_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Abstract Time</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_TIME_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.TimeImpl <em>Time</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.TimeImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getTime()
+	 * @generated
+	 */
+	int TIME = 37;
+
+	/**
+	 * The feature id for the '<em><b>Base Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME__BASE_ELEMENT = ABSTRACT_TIME__BASE_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME__VALUE = ABSTRACT_TIME__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Unit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME__UNIT = ABSTRACT_TIME__UNIT;
+
+	/**
+	 * The number of structural features of the '<em>Time</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_FEATURE_COUNT = ABSTRACT_TIME_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Time</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME_OPERATION_COUNT = ABSTRACT_TIME_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.OperatingSystemImpl <em>Operating System</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.OperatingSystemImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getOperatingSystem()
+	 * @generated
+	 */
+	int OPERATING_SYSTEM = 38;
+
+	/**
+	 * The feature id for the '<em><b>Base Class</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATING_SYSTEM__BASE_CLASS = BlocksPackage.BLOCK__BASE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Is Encapsulated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATING_SYSTEM__IS_ENCAPSULATED = BlocksPackage.BLOCK__IS_ENCAPSULATED;
+
+	/**
+	 * The feature id for the '<em><b>Custom Properties</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATING_SYSTEM__CUSTOM_PROPERTIES = BlocksPackage.BLOCK_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Task Schedulers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATING_SYSTEM__TASK_SCHEDULERS = BlocksPackage.BLOCK_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Interrupt Controllers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATING_SYSTEM__INTERRUPT_CONTROLLERS = BlocksPackage.BLOCK_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Operating System</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATING_SYSTEM_FEATURE_COUNT = BlocksPackage.BLOCK_FEATURE_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Get References</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATING_SYSTEM___GET_REFERENCES = BlocksPackage.BLOCK___GET_REFERENCES;
+
+	/**
+	 * The operation id for the '<em>Get Parts</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATING_SYSTEM___GET_PARTS = BlocksPackage.BLOCK___GET_PARTS;
+
+	/**
+	 * The operation id for the '<em>Get Flow Properties</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATING_SYSTEM___GET_FLOW_PROPERTIES = BlocksPackage.BLOCK___GET_FLOW_PROPERTIES;
+
+	/**
+	 * The number of operations of the '<em>Operating System</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATING_SYSTEM_OPERATION_COUNT = BlocksPackage.BLOCK_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.SchedulerImpl <em>Scheduler</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.SchedulerImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getScheduler()
+	 * @generated
+	 */
+	int SCHEDULER = 40;
+
+	/**
+	 * The feature id for the '<em><b>Base Named Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER__BASE_NAMED_ELEMENT = REFERABLE_BASE_OBJECT__BASE_NAMED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Unique Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER__UNIQUE_NAME = REFERABLE_BASE_OBJECT__UNIQUE_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Custom Properties</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER__CUSTOM_PROPERTIES = REFERABLE_BASE_OBJECT__CUSTOM_PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Schedule Unit Priority</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER__SCHEDULE_UNIT_PRIORITY = REFERABLE_BASE_OBJECT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Scheduling Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER__SCHEDULING_UNIT = REFERABLE_BASE_OBJECT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Scheduler</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER_FEATURE_COUNT = REFERABLE_BASE_OBJECT_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Compute Unique Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER___COMPUTE_UNIQUE_NAME = REFERABLE_BASE_OBJECT___COMPUTE_UNIQUE_NAME;
+
+	/**
+	 * The number of operations of the '<em>Scheduler</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULER_OPERATION_COUNT = REFERABLE_BASE_OBJECT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.TaskSchedulerImpl <em>Task Scheduler</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.TaskSchedulerImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getTaskScheduler()
+	 * @generated
+	 */
+	int TASK_SCHEDULER = 39;
+
+	/**
+	 * The feature id for the '<em><b>Base Named Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_SCHEDULER__BASE_NAMED_ELEMENT = SCHEDULER__BASE_NAMED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Unique Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_SCHEDULER__UNIQUE_NAME = SCHEDULER__UNIQUE_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Custom Properties</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_SCHEDULER__CUSTOM_PROPERTIES = SCHEDULER__CUSTOM_PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Schedule Unit Priority</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_SCHEDULER__SCHEDULE_UNIT_PRIORITY = SCHEDULER__SCHEDULE_UNIT_PRIORITY;
+
+	/**
+	 * The feature id for the '<em><b>Scheduling Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_SCHEDULER__SCHEDULING_UNIT = SCHEDULER__SCHEDULING_UNIT;
+
+	/**
+	 * The feature id for the '<em><b>Task Scheduling Algorithm</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_SCHEDULER__TASK_SCHEDULING_ALGORITHM = SCHEDULER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Task Scheduler</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_SCHEDULER_FEATURE_COUNT = SCHEDULER_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Compute Unique Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_SCHEDULER___COMPUTE_UNIQUE_NAME = SCHEDULER___COMPUTE_UNIQUE_NAME;
+
+	/**
+	 * The number of operations of the '<em>Task Scheduler</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_SCHEDULER_OPERATION_COUNT = SCHEDULER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.SchedulingUnitImpl <em>Scheduling Unit</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.SchedulingUnitImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getSchedulingUnit()
+	 * @generated
+	 */
+	int SCHEDULING_UNIT = 41;
+
+	/**
+	 * The feature id for the '<em><b>Base Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULING_UNIT__BASE_ELEMENT = 0;
+
+	/**
+	 * The number of structural features of the '<em>Scheduling Unit</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULING_UNIT_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Scheduling Unit</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULING_UNIT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.TaskSchedulingAlgorithmImpl <em>Task Scheduling Algorithm</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.TaskSchedulingAlgorithmImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getTaskSchedulingAlgorithm()
+	 * @generated
+	 */
+	int TASK_SCHEDULING_ALGORITHM = 42;
+
+	/**
+	 * The feature id for the '<em><b>Custom Properties</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_SCHEDULING_ALGORITHM__CUSTOM_PROPERTIES = BASE_OBJECT__CUSTOM_PROPERTIES;
+
+	/**
+	 * The number of structural features of the '<em>Task Scheduling Algorithm</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_SCHEDULING_ALGORITHM_FEATURE_COUNT = BASE_OBJECT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Task Scheduling Algorithm</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_SCHEDULING_ALGORITHM_OPERATION_COUNT = BASE_OBJECT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.InterruptControllerImpl <em>Interrupt Controller</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.InterruptControllerImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getInterruptController()
+	 * @generated
+	 */
+	int INTERRUPT_CONTROLLER = 43;
+
+	/**
+	 * The feature id for the '<em><b>Base Named Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERRUPT_CONTROLLER__BASE_NAMED_ELEMENT = SCHEDULER__BASE_NAMED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Unique Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERRUPT_CONTROLLER__UNIQUE_NAME = SCHEDULER__UNIQUE_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Custom Properties</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERRUPT_CONTROLLER__CUSTOM_PROPERTIES = SCHEDULER__CUSTOM_PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Schedule Unit Priority</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERRUPT_CONTROLLER__SCHEDULE_UNIT_PRIORITY = SCHEDULER__SCHEDULE_UNIT_PRIORITY;
+
+	/**
+	 * The feature id for the '<em><b>Scheduling Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERRUPT_CONTROLLER__SCHEDULING_UNIT = SCHEDULER__SCHEDULING_UNIT;
+
+	/**
+	 * The feature id for the '<em><b>Interrupt Scheduling Algorithm</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERRUPT_CONTROLLER__INTERRUPT_SCHEDULING_ALGORITHM = SCHEDULER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Interrupt Controller</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERRUPT_CONTROLLER_FEATURE_COUNT = SCHEDULER_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Compute Unique Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERRUPT_CONTROLLER___COMPUTE_UNIQUE_NAME = SCHEDULER___COMPUTE_UNIQUE_NAME;
+
+	/**
+	 * The number of operations of the '<em>Interrupt Controller</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERRUPT_CONTROLLER_OPERATION_COUNT = SCHEDULER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.InterruptSchedulingAlgorithmImpl <em>Interrupt Scheduling Algorithm</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.InterruptSchedulingAlgorithmImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getInterruptSchedulingAlgorithm()
+	 * @generated
+	 */
+	int INTERRUPT_SCHEDULING_ALGORITHM = 44;
+
+	/**
+	 * The feature id for the '<em><b>Custom Properties</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERRUPT_SCHEDULING_ALGORITHM__CUSTOM_PROPERTIES = BASE_OBJECT__CUSTOM_PROPERTIES;
+
+	/**
+	 * The number of structural features of the '<em>Interrupt Scheduling Algorithm</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERRUPT_SCHEDULING_ALGORITHM_FEATURE_COUNT = BASE_OBJECT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Interrupt Scheduling Algorithm</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERRUPT_SCHEDULING_ALGORITHM_OPERATION_COUNT = BASE_OBJECT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.SchedulingHWUnitImpl <em>Scheduling HW Unit</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.SchedulingHWUnitImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getSchedulingHWUnit()
+	 * @generated
+	 */
+	int SCHEDULING_HW_UNIT = 45;
+
+	/**
+	 * The feature id for the '<em><b>Custom Properties</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULING_HW_UNIT__CUSTOM_PROPERTIES = BASE_OBJECT__CUSTOM_PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Base Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULING_HW_UNIT__BASE_ELEMENT = BASE_OBJECT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Delay</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULING_HW_UNIT__DELAY = BASE_OBJECT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Scheduling HW Unit</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULING_HW_UNIT_FEATURE_COUNT = BASE_OBJECT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Scheduling HW Unit</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULING_HW_UNIT_OPERATION_COUNT = BASE_OBJECT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.OSEKImpl <em>OSEK</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.OSEKImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getOSEK()
+	 * @generated
+	 */
+	int OSEK = 46;
+
+	/**
+	 * The feature id for the '<em><b>Custom Properties</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OSEK__CUSTOM_PROPERTIES = TASK_SCHEDULING_ALGORITHM__CUSTOM_PROPERTIES;
+
+	/**
+	 * The number of structural features of the '<em>OSEK</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OSEK_FEATURE_COUNT = TASK_SCHEDULING_ALGORITHM_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>OSEK</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OSEK_OPERATION_COUNT = TASK_SCHEDULING_ALGORITHM_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.PriorityBasedImpl <em>Priority Based</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.PriorityBasedImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getPriorityBased()
+	 * @generated
+	 */
+	int PRIORITY_BASED = 47;
+
+	/**
+	 * The feature id for the '<em><b>Custom Properties</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIORITY_BASED__CUSTOM_PROPERTIES = INTERRUPT_SCHEDULING_ALGORITHM__CUSTOM_PROPERTIES;
+
+	/**
+	 * The number of structural features of the '<em>Priority Based</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIORITY_BASED_FEATURE_COUNT = INTERRUPT_SCHEDULING_ALGORITHM_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Priority Based</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIORITY_BASED_OPERATION_COUNT = INTERRUPT_SCHEDULING_ALGORITHM_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.InterfaceKind <em>Interface Kind</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2516,7 +3194,7 @@ public interface AMALTHEAPackage extends EPackage {
 	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getInterfaceKind()
 	 * @generated
 	 */
-	int INTERFACE_KIND = 36;
+	int INTERFACE_KIND = 48;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.QType <em>QType</em>}' enum.
@@ -2526,7 +3204,7 @@ public interface AMALTHEAPackage extends EPackage {
 	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getQType()
 	 * @generated
 	 */
-	int QTYPE = 37;
+	int QTYPE = 49;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.SchedType <em>Sched Type</em>}' enum.
@@ -2536,7 +3214,7 @@ public interface AMALTHEAPackage extends EPackage {
 	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getSchedType()
 	 * @generated
 	 */
-	int SCHED_TYPE = 39;
+	int SCHED_TYPE = 51;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.BusType <em>Bus Type</em>}' enum.
@@ -2546,7 +3224,17 @@ public interface AMALTHEAPackage extends EPackage {
 	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getBusType()
 	 * @generated
 	 */
-	int BUS_TYPE = 40;
+	int BUS_TYPE = 52;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.TimeUnit <em>Time Unit</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.TimeUnit
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getTimeUnit()
+	 * @generated
+	 */
+	int TIME_UNIT = 53;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.FrequencyUnit <em>Frequency Unit</em>}' enum.
@@ -2556,7 +3244,7 @@ public interface AMALTHEAPackage extends EPackage {
 	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getFrequencyUnit()
 	 * @generated
 	 */
-	int FREQUENCY_UNIT = 38;
+	int FREQUENCY_UNIT = 50;
 
 
 	/**
@@ -2675,15 +3363,15 @@ public interface AMALTHEAPackage extends EPackage {
 	EClass getHWModel();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.HWModel#getBase_Model <em>Base Model</em>}'.
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.HWModel#getBase_Package <em>Base Package</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Base Model</em>'.
-	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.HWModel#getBase_Model()
+	 * @return the meta object for the reference '<em>Base Package</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.HWModel#getBase_Package()
 	 * @see #getHWModel()
 	 * @generated
 	 */
-	EReference getHWModel_Base_Model();
+	EReference getHWModel_Base_Package();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.OSModel <em>OS Model</em>}'.
@@ -2696,15 +3384,15 @@ public interface AMALTHEAPackage extends EPackage {
 	EClass getOSModel();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.OSModel#getBase_Model <em>Base Model</em>}'.
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.OSModel#getBase_Package <em>Base Package</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Base Model</em>'.
-	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.OSModel#getBase_Model()
+	 * @return the meta object for the reference '<em>Base Package</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.OSModel#getBase_Package()
 	 * @see #getOSModel()
 	 * @generated
 	 */
-	EReference getOSModel_Base_Model();
+	EReference getOSModel_Base_Package();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.MappingModel <em>Mapping Model</em>}'.
@@ -2717,17 +3405,6 @@ public interface AMALTHEAPackage extends EPackage {
 	EClass getMappingModel();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.MappingModel#getBase_Model <em>Base Model</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Base Model</em>'.
-	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.MappingModel#getBase_Model()
-	 * @see #getMappingModel()
-	 * @generated
-	 */
-	EReference getMappingModel_Base_Model();
-
-	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.StimuliModel <em>Stimuli Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2736,17 +3413,6 @@ public interface AMALTHEAPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getStimuliModel();
-
-	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.StimuliModel#getBase_Model <em>Base Model</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Base Model</em>'.
-	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.StimuliModel#getBase_Model()
-	 * @see #getStimuliModel()
-	 * @generated
-	 */
-	EReference getStimuliModel_Base_Model();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.SoftwareModel <em>Software Model</em>}'.
@@ -2759,17 +3425,6 @@ public interface AMALTHEAPackage extends EPackage {
 	EClass getSoftwareModel();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.SoftwareModel#getBase_Model <em>Base Model</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Base Model</em>'.
-	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.SoftwareModel#getBase_Model()
-	 * @see #getSoftwareModel()
-	 * @generated
-	 */
-	EReference getSoftwareModel_Base_Model();
-
-	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.ConstraintsModel <em>Constraints Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2778,17 +3433,6 @@ public interface AMALTHEAPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getConstraintsModel();
-
-	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.ConstraintsModel#getBase_Model <em>Base Model</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Base Model</em>'.
-	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.ConstraintsModel#getBase_Model()
-	 * @see #getConstraintsModel()
-	 * @generated
-	 */
-	EReference getConstraintsModel_Base_Model();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.Component <em>Component</em>}'.
@@ -3578,6 +4222,247 @@ public interface AMALTHEAPackage extends EPackage {
 	EReference getMicrocontroller_Cores();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.AbstractTime <em>Abstract Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Abstract Time</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.AbstractTime
+	 * @generated
+	 */
+	EClass getAbstractTime();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.AbstractTime#getBase_Element <em>Base Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Base Element</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.AbstractTime#getBase_Element()
+	 * @see #getAbstractTime()
+	 * @generated
+	 */
+	EReference getAbstractTime_Base_Element();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.AbstractTime#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.AbstractTime#getValue()
+	 * @see #getAbstractTime()
+	 * @generated
+	 */
+	EAttribute getAbstractTime_Value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.AbstractTime#getUnit <em>Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Unit</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.AbstractTime#getUnit()
+	 * @see #getAbstractTime()
+	 * @generated
+	 */
+	EAttribute getAbstractTime_Unit();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.Time <em>Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Time</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.Time
+	 * @generated
+	 */
+	EClass getTime();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.OperatingSystem <em>Operating System</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Operating System</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.OperatingSystem
+	 * @generated
+	 */
+	EClass getOperatingSystem();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.OperatingSystem#getTaskSchedulers <em>Task Schedulers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Task Schedulers</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.OperatingSystem#getTaskSchedulers()
+	 * @see #getOperatingSystem()
+	 * @generated
+	 */
+	EReference getOperatingSystem_TaskSchedulers();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.OperatingSystem#getInterruptControllers <em>Interrupt Controllers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Interrupt Controllers</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.OperatingSystem#getInterruptControllers()
+	 * @see #getOperatingSystem()
+	 * @generated
+	 */
+	EReference getOperatingSystem_InterruptControllers();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.TaskScheduler <em>Task Scheduler</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Task Scheduler</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.TaskScheduler
+	 * @generated
+	 */
+	EClass getTaskScheduler();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.TaskScheduler#getTaskSchedulingAlgorithm <em>Task Scheduling Algorithm</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Task Scheduling Algorithm</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.TaskScheduler#getTaskSchedulingAlgorithm()
+	 * @see #getTaskScheduler()
+	 * @generated
+	 */
+	EReference getTaskScheduler_TaskSchedulingAlgorithm();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.Scheduler <em>Scheduler</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Scheduler</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.Scheduler
+	 * @generated
+	 */
+	EClass getScheduler();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.Scheduler#getScheduleUnitPriority <em>Schedule Unit Priority</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Schedule Unit Priority</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.Scheduler#getScheduleUnitPriority()
+	 * @see #getScheduler()
+	 * @generated
+	 */
+	EAttribute getScheduler_ScheduleUnitPriority();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.Scheduler#getSchedulingUnit <em>Scheduling Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Scheduling Unit</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.Scheduler#getSchedulingUnit()
+	 * @see #getScheduler()
+	 * @generated
+	 */
+	EReference getScheduler_SchedulingUnit();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.SchedulingUnit <em>Scheduling Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Scheduling Unit</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.SchedulingUnit
+	 * @generated
+	 */
+	EClass getSchedulingUnit();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.SchedulingUnit#getBase_Element <em>Base Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Base Element</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.SchedulingUnit#getBase_Element()
+	 * @see #getSchedulingUnit()
+	 * @generated
+	 */
+	EReference getSchedulingUnit_Base_Element();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.TaskSchedulingAlgorithm <em>Task Scheduling Algorithm</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Task Scheduling Algorithm</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.TaskSchedulingAlgorithm
+	 * @generated
+	 */
+	EClass getTaskSchedulingAlgorithm();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.InterruptController <em>Interrupt Controller</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Interrupt Controller</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.InterruptController
+	 * @generated
+	 */
+	EClass getInterruptController();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.InterruptController#getInterruptSchedulingAlgorithm <em>Interrupt Scheduling Algorithm</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Interrupt Scheduling Algorithm</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.InterruptController#getInterruptSchedulingAlgorithm()
+	 * @see #getInterruptController()
+	 * @generated
+	 */
+	EReference getInterruptController_InterruptSchedulingAlgorithm();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.InterruptSchedulingAlgorithm <em>Interrupt Scheduling Algorithm</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Interrupt Scheduling Algorithm</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.InterruptSchedulingAlgorithm
+	 * @generated
+	 */
+	EClass getInterruptSchedulingAlgorithm();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.SchedulingHWUnit <em>Scheduling HW Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Scheduling HW Unit</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.SchedulingHWUnit
+	 * @generated
+	 */
+	EClass getSchedulingHWUnit();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.SchedulingHWUnit#getDelay <em>Delay</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Delay</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.SchedulingHWUnit#getDelay()
+	 * @see #getSchedulingHWUnit()
+	 * @generated
+	 */
+	EReference getSchedulingHWUnit_Delay();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.OSEK <em>OSEK</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>OSEK</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.OSEK
+	 * @generated
+	 */
+	EClass getOSEK();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.PriorityBased <em>Priority Based</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Priority Based</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.PriorityBased
+	 * @generated
+	 */
+	EClass getPriorityBased();
+
+	/**
 	 * Returns the meta object for enum '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.InterfaceKind <em>Interface Kind</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3616,6 +4501,16 @@ public interface AMALTHEAPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getBusType();
+
+	/**
+	 * Returns the meta object for enum '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.TimeUnit <em>Time Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Time Unit</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.TimeUnit
+	 * @generated
+	 */
+	EEnum getTimeUnit();
 
 	/**
 	 * Returns the meta object for enum '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.FrequencyUnit <em>Frequency Unit</em>}'.
@@ -3751,12 +4646,12 @@ public interface AMALTHEAPackage extends EPackage {
 		EClass HW_MODEL = eINSTANCE.getHWModel();
 
 		/**
-		 * The meta object literal for the '<em><b>Base Model</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Base Package</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference HW_MODEL__BASE_MODEL = eINSTANCE.getHWModel_Base_Model();
+		EReference HW_MODEL__BASE_PACKAGE = eINSTANCE.getHWModel_Base_Package();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.OSModelImpl <em>OS Model</em>}' class.
@@ -3769,12 +4664,12 @@ public interface AMALTHEAPackage extends EPackage {
 		EClass OS_MODEL = eINSTANCE.getOSModel();
 
 		/**
-		 * The meta object literal for the '<em><b>Base Model</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Base Package</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference OS_MODEL__BASE_MODEL = eINSTANCE.getOSModel_Base_Model();
+		EReference OS_MODEL__BASE_PACKAGE = eINSTANCE.getOSModel_Base_Package();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.MappingModelImpl <em>Mapping Model</em>}' class.
@@ -3787,14 +4682,6 @@ public interface AMALTHEAPackage extends EPackage {
 		EClass MAPPING_MODEL = eINSTANCE.getMappingModel();
 
 		/**
-		 * The meta object literal for the '<em><b>Base Model</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MAPPING_MODEL__BASE_MODEL = eINSTANCE.getMappingModel_Base_Model();
-
-		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.StimuliModelImpl <em>Stimuli Model</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3803,14 +4690,6 @@ public interface AMALTHEAPackage extends EPackage {
 		 * @generated
 		 */
 		EClass STIMULI_MODEL = eINSTANCE.getStimuliModel();
-
-		/**
-		 * The meta object literal for the '<em><b>Base Model</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference STIMULI_MODEL__BASE_MODEL = eINSTANCE.getStimuliModel_Base_Model();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.SoftwareModelImpl <em>Software Model</em>}' class.
@@ -3823,14 +4702,6 @@ public interface AMALTHEAPackage extends EPackage {
 		EClass SOFTWARE_MODEL = eINSTANCE.getSoftwareModel();
 
 		/**
-		 * The meta object literal for the '<em><b>Base Model</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SOFTWARE_MODEL__BASE_MODEL = eINSTANCE.getSoftwareModel_Base_Model();
-
-		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.ConstraintsModelImpl <em>Constraints Model</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3839,14 +4710,6 @@ public interface AMALTHEAPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CONSTRAINTS_MODEL = eINSTANCE.getConstraintsModel();
-
-		/**
-		 * The meta object literal for the '<em><b>Base Model</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONSTRAINTS_MODEL__BASE_MODEL = eINSTANCE.getConstraintsModel_Base_Model();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.ComponentImpl <em>Component</em>}' class.
@@ -4491,6 +5354,214 @@ public interface AMALTHEAPackage extends EPackage {
 		EReference MICROCONTROLLER__CORES = eINSTANCE.getMicrocontroller_Cores();
 
 		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AbstractTimeImpl <em>Abstract Time</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AbstractTimeImpl
+		 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getAbstractTime()
+		 * @generated
+		 */
+		EClass ABSTRACT_TIME = eINSTANCE.getAbstractTime();
+
+		/**
+		 * The meta object literal for the '<em><b>Base Element</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABSTRACT_TIME__BASE_ELEMENT = eINSTANCE.getAbstractTime_Base_Element();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABSTRACT_TIME__VALUE = eINSTANCE.getAbstractTime_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Unit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABSTRACT_TIME__UNIT = eINSTANCE.getAbstractTime_Unit();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.TimeImpl <em>Time</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.TimeImpl
+		 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getTime()
+		 * @generated
+		 */
+		EClass TIME = eINSTANCE.getTime();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.OperatingSystemImpl <em>Operating System</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.OperatingSystemImpl
+		 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getOperatingSystem()
+		 * @generated
+		 */
+		EClass OPERATING_SYSTEM = eINSTANCE.getOperatingSystem();
+
+		/**
+		 * The meta object literal for the '<em><b>Task Schedulers</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OPERATING_SYSTEM__TASK_SCHEDULERS = eINSTANCE.getOperatingSystem_TaskSchedulers();
+
+		/**
+		 * The meta object literal for the '<em><b>Interrupt Controllers</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OPERATING_SYSTEM__INTERRUPT_CONTROLLERS = eINSTANCE.getOperatingSystem_InterruptControllers();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.TaskSchedulerImpl <em>Task Scheduler</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.TaskSchedulerImpl
+		 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getTaskScheduler()
+		 * @generated
+		 */
+		EClass TASK_SCHEDULER = eINSTANCE.getTaskScheduler();
+
+		/**
+		 * The meta object literal for the '<em><b>Task Scheduling Algorithm</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TASK_SCHEDULER__TASK_SCHEDULING_ALGORITHM = eINSTANCE.getTaskScheduler_TaskSchedulingAlgorithm();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.SchedulerImpl <em>Scheduler</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.SchedulerImpl
+		 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getScheduler()
+		 * @generated
+		 */
+		EClass SCHEDULER = eINSTANCE.getScheduler();
+
+		/**
+		 * The meta object literal for the '<em><b>Schedule Unit Priority</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SCHEDULER__SCHEDULE_UNIT_PRIORITY = eINSTANCE.getScheduler_ScheduleUnitPriority();
+
+		/**
+		 * The meta object literal for the '<em><b>Scheduling Unit</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SCHEDULER__SCHEDULING_UNIT = eINSTANCE.getScheduler_SchedulingUnit();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.SchedulingUnitImpl <em>Scheduling Unit</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.SchedulingUnitImpl
+		 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getSchedulingUnit()
+		 * @generated
+		 */
+		EClass SCHEDULING_UNIT = eINSTANCE.getSchedulingUnit();
+
+		/**
+		 * The meta object literal for the '<em><b>Base Element</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SCHEDULING_UNIT__BASE_ELEMENT = eINSTANCE.getSchedulingUnit_Base_Element();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.TaskSchedulingAlgorithmImpl <em>Task Scheduling Algorithm</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.TaskSchedulingAlgorithmImpl
+		 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getTaskSchedulingAlgorithm()
+		 * @generated
+		 */
+		EClass TASK_SCHEDULING_ALGORITHM = eINSTANCE.getTaskSchedulingAlgorithm();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.InterruptControllerImpl <em>Interrupt Controller</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.InterruptControllerImpl
+		 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getInterruptController()
+		 * @generated
+		 */
+		EClass INTERRUPT_CONTROLLER = eINSTANCE.getInterruptController();
+
+		/**
+		 * The meta object literal for the '<em><b>Interrupt Scheduling Algorithm</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INTERRUPT_CONTROLLER__INTERRUPT_SCHEDULING_ALGORITHM = eINSTANCE.getInterruptController_InterruptSchedulingAlgorithm();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.InterruptSchedulingAlgorithmImpl <em>Interrupt Scheduling Algorithm</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.InterruptSchedulingAlgorithmImpl
+		 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getInterruptSchedulingAlgorithm()
+		 * @generated
+		 */
+		EClass INTERRUPT_SCHEDULING_ALGORITHM = eINSTANCE.getInterruptSchedulingAlgorithm();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.SchedulingHWUnitImpl <em>Scheduling HW Unit</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.SchedulingHWUnitImpl
+		 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getSchedulingHWUnit()
+		 * @generated
+		 */
+		EClass SCHEDULING_HW_UNIT = eINSTANCE.getSchedulingHWUnit();
+
+		/**
+		 * The meta object literal for the '<em><b>Delay</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SCHEDULING_HW_UNIT__DELAY = eINSTANCE.getSchedulingHWUnit_Delay();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.OSEKImpl <em>OSEK</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.OSEKImpl
+		 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getOSEK()
+		 * @generated
+		 */
+		EClass OSEK = eINSTANCE.getOSEK();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.PriorityBasedImpl <em>Priority Based</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.PriorityBasedImpl
+		 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getPriorityBased()
+		 * @generated
+		 */
+		EClass PRIORITY_BASED = eINSTANCE.getPriorityBased();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.InterfaceKind <em>Interface Kind</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4529,6 +5600,16 @@ public interface AMALTHEAPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum BUS_TYPE = eINSTANCE.getBusType();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.TimeUnit <em>Time Unit</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.TimeUnit
+		 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getTimeUnit()
+		 * @generated
+		 */
+		EEnum TIME_UNIT = eINSTANCE.getTimeUnit();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.FrequencyUnit <em>Frequency Unit</em>}' enum.
