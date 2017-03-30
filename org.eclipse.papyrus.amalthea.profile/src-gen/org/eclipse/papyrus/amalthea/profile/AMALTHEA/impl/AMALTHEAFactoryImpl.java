@@ -137,12 +137,12 @@ public class AMALTHEAFactoryImpl extends EFactoryImpl implements AMALTHEAFactory
 				return createInterfaceKindFromString(eDataType, initialValue);
 			case AMALTHEAPackage.QTYPE:
 				return createQTypeFromString(eDataType, initialValue);
+			case AMALTHEAPackage.FREQUENCY_UNIT:
+				return createFrequencyUnitFromString(eDataType, initialValue);
 			case AMALTHEAPackage.SCHED_TYPE:
 				return createSchedTypeFromString(eDataType, initialValue);
 			case AMALTHEAPackage.BUS_TYPE:
 				return createBusTypeFromString(eDataType, initialValue);
-			case AMALTHEAPackage.FREQUENCY_UNIT:
-				return createFrequencyUnitFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -160,12 +160,12 @@ public class AMALTHEAFactoryImpl extends EFactoryImpl implements AMALTHEAFactory
 				return convertInterfaceKindToString(eDataType, instanceValue);
 			case AMALTHEAPackage.QTYPE:
 				return convertQTypeToString(eDataType, instanceValue);
+			case AMALTHEAPackage.FREQUENCY_UNIT:
+				return convertFrequencyUnitToString(eDataType, instanceValue);
 			case AMALTHEAPackage.SCHED_TYPE:
 				return convertSchedTypeToString(eDataType, instanceValue);
 			case AMALTHEAPackage.BUS_TYPE:
 				return convertBusTypeToString(eDataType, instanceValue);
-			case AMALTHEAPackage.FREQUENCY_UNIT:
-				return convertFrequencyUnitToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}

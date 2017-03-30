@@ -1009,8 +1009,17 @@ public class AMALTHEAPackageImpl extends EPackageImpl implements AMALTHEAPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFrequency_Base_DataType() {
-		return (EReference)frequencyEClass.getEStructuralFeatures().get(1);
+	public EAttribute getFrequency_Unit() {
+		return (EAttribute)frequencyEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFrequency_Base_Element() {
+		return (EReference)frequencyEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1036,17 +1045,8 @@ public class AMALTHEAPackageImpl extends EPackageImpl implements AMALTHEAPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPrescaler_Base_DataType() {
-		return (EReference)prescalerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getPrescaler_ClockRatio() {
-		return (EAttribute)prescalerEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)prescalerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1055,7 +1055,25 @@ public class AMALTHEAPackageImpl extends EPackageImpl implements AMALTHEAPackage
 	 * @generated
 	 */
 	public EReference getPrescaler_Quartz() {
+		return (EReference)prescalerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPrescaler_Base_Element() {
 		return (EReference)prescalerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPrescaler_Name() {
+		return (EAttribute)prescalerEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1428,13 +1446,15 @@ public class AMALTHEAPackageImpl extends EPackageImpl implements AMALTHEAPackage
 
 		frequencyEClass = createEClass(FREQUENCY);
 		createEAttribute(frequencyEClass, FREQUENCY__VALUE);
-		createEReference(frequencyEClass, FREQUENCY__BASE_DATA_TYPE);
+		createEAttribute(frequencyEClass, FREQUENCY__UNIT);
+		createEReference(frequencyEClass, FREQUENCY__BASE_ELEMENT);
 		createEOperation(frequencyEClass, FREQUENCY___TO_STRING);
 
 		prescalerEClass = createEClass(PRESCALER);
-		createEReference(prescalerEClass, PRESCALER__BASE_DATA_TYPE);
 		createEAttribute(prescalerEClass, PRESCALER__CLOCK_RATIO);
 		createEReference(prescalerEClass, PRESCALER__QUARTZ);
+		createEReference(prescalerEClass, PRESCALER__BASE_ELEMENT);
+		createEAttribute(prescalerEClass, PRESCALER__NAME);
 
 		networkEClass = createEClass(NETWORK);
 		createEReference(networkEClass, NETWORK__TYPE);
@@ -1471,9 +1491,9 @@ public class AMALTHEAPackageImpl extends EPackageImpl implements AMALTHEAPackage
 		// Create enums
 		interfaceKindEEnum = createEEnum(INTERFACE_KIND);
 		qTypeEEnum = createEEnum(QTYPE);
+		frequencyUnitEEnum = createEEnum(FREQUENCY_UNIT);
 		schedTypeEEnum = createEEnum(SCHED_TYPE);
 		busTypeEEnum = createEEnum(BUS_TYPE);
-		frequencyUnitEEnum = createEEnum(FREQUENCY_UNIT);
 	}
 
 	/**
@@ -1528,7 +1548,6 @@ public class AMALTHEAPackageImpl extends EPackageImpl implements AMALTHEAPackage
 		quartzEClass.getESuperTypes().add(this.getComplexNode());
 		networkEClass.getESuperTypes().add(this.getComplexNode());
 		busEClass.getESuperTypes().add(this.getNetworkType());
-		busEClass.getESuperTypes().add(theBlocksPackage.getBlock());
 		hwSystemEClass.getESuperTypes().add(this.getComplexNode());
 		ecuEClass.getESuperTypes().add(this.getComplexNode());
 		microcontrollerEClass.getESuperTypes().add(this.getComplexNode());
@@ -1625,14 +1644,16 @@ public class AMALTHEAPackageImpl extends EPackageImpl implements AMALTHEAPackage
 
 		initEClass(frequencyEClass, Frequency.class, "Frequency", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFrequency_Value(), theTypesPackage.getReal(), "value", null, 1, 1, Frequency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getFrequency_Base_DataType(), theUMLPackage.getDataType(), null, "base_DataType", null, 1, 1, Frequency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getFrequency_Unit(), this.getFrequencyUnit(), "unit", "_undefined_", 1, 1, Frequency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getFrequency_Base_Element(), theUMLPackage.getElement(), null, "base_Element", null, 1, 1, Frequency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEOperation(getFrequency__ToString(), theTypesPackage.getString(), "toString", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(prescalerEClass, Prescaler.class, "Prescaler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPrescaler_Base_DataType(), theUMLPackage.getDataType(), null, "base_DataType", null, 1, 1, Prescaler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getPrescaler_ClockRatio(), theTypesPackage.getReal(), "clockRatio", "0.0", 1, 1, Prescaler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getPrescaler_Quartz(), this.getQuartz(), null, "quartz", null, 1, 1, Prescaler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getPrescaler_Base_Element(), theUMLPackage.getElement(), null, "base_Element", null, 1, 1, Prescaler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getPrescaler_Name(), ecorePackage.getEString(), "name", null, 1, 1, Prescaler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(networkEClass, Network.class, "Network", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getNetwork_Type(), this.getNetworkType(), null, "type", null, 1, 1, Network.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -1677,6 +1698,13 @@ public class AMALTHEAPackageImpl extends EPackageImpl implements AMALTHEAPackage
 		addEEnumLiteral(qTypeEEnum, QType.DYNAMIC);
 		addEEnumLiteral(qTypeEEnum, QType.STATIC);
 
+		initEEnum(frequencyUnitEEnum, FrequencyUnit.class, "FrequencyUnit");
+		addEEnumLiteral(frequencyUnitEEnum, FrequencyUnit._UNDEFINED_);
+		addEEnumLiteral(frequencyUnitEEnum, FrequencyUnit.HZ);
+		addEEnumLiteral(frequencyUnitEEnum, FrequencyUnit.KHZ);
+		addEEnumLiteral(frequencyUnitEEnum, FrequencyUnit.MHZ);
+		addEEnumLiteral(frequencyUnitEEnum, FrequencyUnit.GHZ);
+
 		initEEnum(schedTypeEEnum, SchedType.class, "SchedType");
 		addEEnumLiteral(schedTypeEEnum, SchedType._UNDEFINED_);
 		addEEnumLiteral(schedTypeEEnum, SchedType.RROBIN);
@@ -1691,13 +1719,6 @@ public class AMALTHEAPackageImpl extends EPackageImpl implements AMALTHEAPackage
 		addEEnumLiteral(busTypeEEnum, BusType.ETHERNET);
 		addEEnumLiteral(busTypeEEnum, BusType.SPI);
 		addEEnumLiteral(busTypeEEnum, BusType.NA);
-
-		initEEnum(frequencyUnitEEnum, FrequencyUnit.class, "FrequencyUnit");
-		addEEnumLiteral(frequencyUnitEEnum, FrequencyUnit._UNDEFINED_);
-		addEEnumLiteral(frequencyUnitEEnum, FrequencyUnit.HZ);
-		addEEnumLiteral(frequencyUnitEEnum, FrequencyUnit.KHZ);
-		addEEnumLiteral(frequencyUnitEEnum, FrequencyUnit.MHZ);
-		addEEnumLiteral(frequencyUnitEEnum, FrequencyUnit.GHZ);
 
 		// Create resource
 		createResource(eNS_URI);

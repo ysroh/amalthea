@@ -317,7 +317,6 @@ public class AMALTHEASwitch<T> extends Switch<T> {
 				Bus bus = (Bus)theEObject;
 				T result = caseBus(bus);
 				if (result == null) result = caseNetworkType(bus);
-				if (result == null) result = caseBlock(bus);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

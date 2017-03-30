@@ -3,8 +3,7 @@
 package org.eclipse.papyrus.amalthea.profile.AMALTHEA;
 
 import org.eclipse.emf.ecore.EObject;
-
-import org.eclipse.uml2.uml.DataType;
+import org.eclipse.uml2.uml.Element;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,9 +14,10 @@ import org.eclipse.uml2.uml.DataType;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.Prescaler#getBase_DataType <em>Base Data Type</em>}</li>
  *   <li>{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.Prescaler#getClockRatio <em>Clock Ratio</em>}</li>
  *   <li>{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.Prescaler#getQuartz <em>Quartz</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.Prescaler#getBase_Element <em>Base Element</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.Prescaler#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.AMALTHEAPackage#getPrescaler()
@@ -25,32 +25,6 @@ import org.eclipse.uml2.uml.DataType;
  * @generated
  */
 public interface Prescaler extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Base Data Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Base Data Type</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Base Data Type</em>' reference.
-	 * @see #setBase_DataType(DataType)
-	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.AMALTHEAPackage#getPrescaler_Base_DataType()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	DataType getBase_DataType();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.Prescaler#getBase_DataType <em>Base Data Type</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Base Data Type</em>' reference.
-	 * @see #getBase_DataType()
-	 * @generated
-	 */
-	void setBase_DataType(DataType value);
-
 	/**
 	 * Returns the value of the '<em><b>Clock Ratio</b></em>' attribute.
 	 * The default value is <code>"0.0"</code>.
@@ -103,5 +77,57 @@ public interface Prescaler extends EObject {
 	 * @generated
 	 */
 	void setQuartz(Quartz value);
+
+	/**
+	 * Returns the value of the '<em><b>Base Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Base Element</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Base Element</em>' reference.
+	 * @see #setBase_Element(Element)
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.AMALTHEAPackage#getPrescaler_Base_Element()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	Element getBase_Element();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.Prescaler#getBase_Element <em>Base Element</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Base Element</em>' reference.
+	 * @see #getBase_Element()
+	 * @generated
+	 */
+	void setBase_Element(Element value);
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.AMALTHEAPackage#getPrescaler_Name()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.Prescaler#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 } // Prescaler

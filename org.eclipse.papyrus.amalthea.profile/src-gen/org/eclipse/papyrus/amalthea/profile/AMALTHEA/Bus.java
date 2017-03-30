@@ -2,8 +2,6 @@
  */
 package org.eclipse.papyrus.amalthea.profile.AMALTHEA;
 
-import org.eclipse.papyrus.sysml14.blocks.Block;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Bus</b></em>'.
@@ -20,7 +18,7 @@ import org.eclipse.papyrus.sysml14.blocks.Block;
  * @model
  * @generated
  */
-public interface Bus extends NetworkType, Block {
+public interface Bus extends NetworkType {
 	/**
 	 * Returns the value of the '<em><b>Bus Type</b></em>' attribute.
 	 * The default value is <code>"_undefined_"</code>.

@@ -17,7 +17,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.AMALTHEAPackage;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Frequency;
 
-import org.eclipse.uml2.uml.DataType;
+import org.eclipse.papyrus.amalthea.profile.AMALTHEA.FrequencyUnit;
+import org.eclipse.uml2.uml.Element;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,7 +29,8 @@ import org.eclipse.uml2.uml.DataType;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.FrequencyImpl#getValue <em>Value</em>}</li>
- *   <li>{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.FrequencyImpl#getBase_DataType <em>Base Data Type</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.FrequencyImpl#getUnit <em>Unit</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.FrequencyImpl#getBase_Element <em>Base Element</em>}</li>
  * </ul>
  *
  * @generated
@@ -55,14 +57,34 @@ public class FrequencyImpl extends MinimalEObjectImpl.Container implements Frequ
 	protected double value = VALUE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getBase_DataType() <em>Base Data Type</em>}' reference.
+	 * The default value of the '{@link #getUnit() <em>Unit</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBase_DataType()
+	 * @see #getUnit()
 	 * @generated
 	 * @ordered
 	 */
-	protected DataType base_DataType;
+	protected static final FrequencyUnit UNIT_EDEFAULT = FrequencyUnit._UNDEFINED_;
+
+	/**
+	 * The cached value of the '{@link #getUnit() <em>Unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUnit()
+	 * @generated
+	 * @ordered
+	 */
+	protected FrequencyUnit unit = UNIT_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getBase_Element() <em>Base Element</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBase_Element()
+	 * @generated
+	 * @ordered
+	 */
+	protected Element base_Element;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -109,16 +131,37 @@ public class FrequencyImpl extends MinimalEObjectImpl.Container implements Frequ
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataType getBase_DataType() {
-		if (base_DataType != null && base_DataType.eIsProxy()) {
-			InternalEObject oldBase_DataType = (InternalEObject)base_DataType;
-			base_DataType = (DataType)eResolveProxy(oldBase_DataType);
-			if (base_DataType != oldBase_DataType) {
+	public FrequencyUnit getUnit() {
+		return unit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUnit(FrequencyUnit newUnit) {
+		FrequencyUnit oldUnit = unit;
+		unit = newUnit == null ? UNIT_EDEFAULT : newUnit;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AMALTHEAPackage.FREQUENCY__UNIT, oldUnit, unit));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Element getBase_Element() {
+		if (base_Element != null && base_Element.eIsProxy()) {
+			InternalEObject oldBase_Element = (InternalEObject)base_Element;
+			base_Element = (Element)eResolveProxy(oldBase_Element);
+			if (base_Element != oldBase_Element) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AMALTHEAPackage.FREQUENCY__BASE_DATA_TYPE, oldBase_DataType, base_DataType));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AMALTHEAPackage.FREQUENCY__BASE_ELEMENT, oldBase_Element, base_Element));
 			}
 		}
-		return base_DataType;
+		return base_Element;
 	}
 
 	/**
@@ -126,8 +169,8 @@ public class FrequencyImpl extends MinimalEObjectImpl.Container implements Frequ
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataType basicGetBase_DataType() {
-		return base_DataType;
+	public Element basicGetBase_Element() {
+		return base_Element;
 	}
 
 	/**
@@ -135,11 +178,11 @@ public class FrequencyImpl extends MinimalEObjectImpl.Container implements Frequ
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBase_DataType(DataType newBase_DataType) {
-		DataType oldBase_DataType = base_DataType;
-		base_DataType = newBase_DataType;
+	public void setBase_Element(Element newBase_Element) {
+		Element oldBase_Element = base_Element;
+		base_Element = newBase_Element;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AMALTHEAPackage.FREQUENCY__BASE_DATA_TYPE, oldBase_DataType, base_DataType));
+			eNotify(new ENotificationImpl(this, Notification.SET, AMALTHEAPackage.FREQUENCY__BASE_ELEMENT, oldBase_Element, base_Element));
 	}
 
 	/**
@@ -163,9 +206,11 @@ public class FrequencyImpl extends MinimalEObjectImpl.Container implements Frequ
 		switch (featureID) {
 			case AMALTHEAPackage.FREQUENCY__VALUE:
 				return getValue();
-			case AMALTHEAPackage.FREQUENCY__BASE_DATA_TYPE:
-				if (resolve) return getBase_DataType();
-				return basicGetBase_DataType();
+			case AMALTHEAPackage.FREQUENCY__UNIT:
+				return getUnit();
+			case AMALTHEAPackage.FREQUENCY__BASE_ELEMENT:
+				if (resolve) return getBase_Element();
+				return basicGetBase_Element();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -181,8 +226,11 @@ public class FrequencyImpl extends MinimalEObjectImpl.Container implements Frequ
 			case AMALTHEAPackage.FREQUENCY__VALUE:
 				setValue((Double)newValue);
 				return;
-			case AMALTHEAPackage.FREQUENCY__BASE_DATA_TYPE:
-				setBase_DataType((DataType)newValue);
+			case AMALTHEAPackage.FREQUENCY__UNIT:
+				setUnit((FrequencyUnit)newValue);
+				return;
+			case AMALTHEAPackage.FREQUENCY__BASE_ELEMENT:
+				setBase_Element((Element)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -199,8 +247,11 @@ public class FrequencyImpl extends MinimalEObjectImpl.Container implements Frequ
 			case AMALTHEAPackage.FREQUENCY__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
-			case AMALTHEAPackage.FREQUENCY__BASE_DATA_TYPE:
-				setBase_DataType((DataType)null);
+			case AMALTHEAPackage.FREQUENCY__UNIT:
+				setUnit(UNIT_EDEFAULT);
+				return;
+			case AMALTHEAPackage.FREQUENCY__BASE_ELEMENT:
+				setBase_Element((Element)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -216,8 +267,10 @@ public class FrequencyImpl extends MinimalEObjectImpl.Container implements Frequ
 		switch (featureID) {
 			case AMALTHEAPackage.FREQUENCY__VALUE:
 				return value != VALUE_EDEFAULT;
-			case AMALTHEAPackage.FREQUENCY__BASE_DATA_TYPE:
-				return base_DataType != null;
+			case AMALTHEAPackage.FREQUENCY__UNIT:
+				return unit != UNIT_EDEFAULT;
+			case AMALTHEAPackage.FREQUENCY__BASE_ELEMENT:
+				return base_Element != null;
 		}
 		return super.eIsSet(featureID);
 	}

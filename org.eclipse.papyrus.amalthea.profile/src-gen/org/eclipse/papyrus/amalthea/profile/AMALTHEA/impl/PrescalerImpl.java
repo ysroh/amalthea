@@ -13,8 +13,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.AMALTHEAPackage;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Prescaler;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Quartz;
-
-import org.eclipse.uml2.uml.DataType;
+import org.eclipse.uml2.uml.Element;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,24 +23,15 @@ import org.eclipse.uml2.uml.DataType;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.PrescalerImpl#getBase_DataType <em>Base Data Type</em>}</li>
  *   <li>{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.PrescalerImpl#getClockRatio <em>Clock Ratio</em>}</li>
  *   <li>{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.PrescalerImpl#getQuartz <em>Quartz</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.PrescalerImpl#getBase_Element <em>Base Element</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.PrescalerImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class PrescalerImpl extends MinimalEObjectImpl.Container implements Prescaler {
-	/**
-	 * The cached value of the '{@link #getBase_DataType() <em>Base Data Type</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getBase_DataType()
-	 * @generated
-	 * @ordered
-	 */
-	protected DataType base_DataType;
-
 	/**
 	 * The default value of the '{@link #getClockRatio() <em>Clock Ratio</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -73,6 +63,36 @@ public class PrescalerImpl extends MinimalEObjectImpl.Container implements Presc
 	protected Quartz quartz;
 
 	/**
+	 * The cached value of the '{@link #getBase_Element() <em>Base Element</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBase_Element()
+	 * @generated
+	 * @ordered
+	 */
+	protected Element base_Element;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -89,44 +109,6 @@ public class PrescalerImpl extends MinimalEObjectImpl.Container implements Presc
 	@Override
 	protected EClass eStaticClass() {
 		return AMALTHEAPackage.Literals.PRESCALER;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DataType getBase_DataType() {
-		if (base_DataType != null && base_DataType.eIsProxy()) {
-			InternalEObject oldBase_DataType = (InternalEObject)base_DataType;
-			base_DataType = (DataType)eResolveProxy(oldBase_DataType);
-			if (base_DataType != oldBase_DataType) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AMALTHEAPackage.PRESCALER__BASE_DATA_TYPE, oldBase_DataType, base_DataType));
-			}
-		}
-		return base_DataType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DataType basicGetBase_DataType() {
-		return base_DataType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBase_DataType(DataType newBase_DataType) {
-		DataType oldBase_DataType = base_DataType;
-		base_DataType = newBase_DataType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, AMALTHEAPackage.PRESCALER__BASE_DATA_TYPE, oldBase_DataType, base_DataType));
 	}
 
 	/**
@@ -193,17 +175,78 @@ public class PrescalerImpl extends MinimalEObjectImpl.Container implements Presc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Element getBase_Element() {
+		if (base_Element != null && base_Element.eIsProxy()) {
+			InternalEObject oldBase_Element = (InternalEObject)base_Element;
+			base_Element = (Element)eResolveProxy(oldBase_Element);
+			if (base_Element != oldBase_Element) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, AMALTHEAPackage.PRESCALER__BASE_ELEMENT, oldBase_Element, base_Element));
+			}
+		}
+		return base_Element;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Element basicGetBase_Element() {
+		return base_Element;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBase_Element(Element newBase_Element) {
+		Element oldBase_Element = base_Element;
+		base_Element = newBase_Element;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AMALTHEAPackage.PRESCALER__BASE_ELEMENT, oldBase_Element, base_Element));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, AMALTHEAPackage.PRESCALER__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case AMALTHEAPackage.PRESCALER__BASE_DATA_TYPE:
-				if (resolve) return getBase_DataType();
-				return basicGetBase_DataType();
 			case AMALTHEAPackage.PRESCALER__CLOCK_RATIO:
 				return getClockRatio();
 			case AMALTHEAPackage.PRESCALER__QUARTZ:
 				if (resolve) return getQuartz();
 				return basicGetQuartz();
+			case AMALTHEAPackage.PRESCALER__BASE_ELEMENT:
+				if (resolve) return getBase_Element();
+				return basicGetBase_Element();
+			case AMALTHEAPackage.PRESCALER__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -216,14 +259,17 @@ public class PrescalerImpl extends MinimalEObjectImpl.Container implements Presc
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case AMALTHEAPackage.PRESCALER__BASE_DATA_TYPE:
-				setBase_DataType((DataType)newValue);
-				return;
 			case AMALTHEAPackage.PRESCALER__CLOCK_RATIO:
 				setClockRatio((Double)newValue);
 				return;
 			case AMALTHEAPackage.PRESCALER__QUARTZ:
 				setQuartz((Quartz)newValue);
+				return;
+			case AMALTHEAPackage.PRESCALER__BASE_ELEMENT:
+				setBase_Element((Element)newValue);
+				return;
+			case AMALTHEAPackage.PRESCALER__NAME:
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -237,14 +283,17 @@ public class PrescalerImpl extends MinimalEObjectImpl.Container implements Presc
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case AMALTHEAPackage.PRESCALER__BASE_DATA_TYPE:
-				setBase_DataType((DataType)null);
-				return;
 			case AMALTHEAPackage.PRESCALER__CLOCK_RATIO:
 				setClockRatio(CLOCK_RATIO_EDEFAULT);
 				return;
 			case AMALTHEAPackage.PRESCALER__QUARTZ:
 				setQuartz((Quartz)null);
+				return;
+			case AMALTHEAPackage.PRESCALER__BASE_ELEMENT:
+				setBase_Element((Element)null);
+				return;
+			case AMALTHEAPackage.PRESCALER__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -258,12 +307,14 @@ public class PrescalerImpl extends MinimalEObjectImpl.Container implements Presc
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case AMALTHEAPackage.PRESCALER__BASE_DATA_TYPE:
-				return base_DataType != null;
 			case AMALTHEAPackage.PRESCALER__CLOCK_RATIO:
 				return clockRatio != CLOCK_RATIO_EDEFAULT;
 			case AMALTHEAPackage.PRESCALER__QUARTZ:
 				return quartz != null;
+			case AMALTHEAPackage.PRESCALER__BASE_ELEMENT:
+				return base_Element != null;
+			case AMALTHEAPackage.PRESCALER__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -280,6 +331,8 @@ public class PrescalerImpl extends MinimalEObjectImpl.Container implements Presc
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (clockRatio: ");
 		result.append(clockRatio);
+		result.append(", name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

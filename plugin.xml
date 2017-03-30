@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="Papyrus Amalthea Translator Category"
+            id="org.eclipse.papyrus.amalthea.translator.ui.commands.category">
+      </category>
+      <command
+            name="Papyrus Amalthea Translator Command"
+            categoryId="org.eclipse.papyrus.amalthea.translator.ui.commands.category"
+            id="org.eclipse.papyrus.amalthea.translator.ui.commands.translatorCommand">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            commandId="org.eclipse.papyrus.amalthea.translator.ui.commands.translatorCommand"
+            class="org.eclipse.papyrus.amalthea.translator.ui.handlers.TranslatorPapyrusAmalthea2App4mcAmaltheaHandler">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="org.eclipse.papyrus.amalthea.translator.ui.commands.sampleCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.papyrus.views.modelexplorer.modelexplorer.popup">
+         <command
+               commandId="org.eclipse.papyrus.amalthea.translator.ui.commands.translatorCommand"
+               label="Translate Papyrus Amalthea model to APP4MC Amalthea model"
+               style="push"
+               tooltip="Translate Papyrus Amalthea model to APP4MC Amalthea model">
+         </command>
+      </menuContribution>
+   </extension>
+
+</plugin>

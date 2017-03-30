@@ -1707,13 +1707,22 @@ public interface AMALTHEAPackage extends EPackage {
 	int FREQUENCY__VALUE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Base Data Type</b></em>' reference.
+	 * The feature id for the '<em><b>Unit</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FREQUENCY__BASE_DATA_TYPE = 1;
+	int FREQUENCY__UNIT = 1;
+
+	/**
+	 * The feature id for the '<em><b>Base Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FREQUENCY__BASE_ELEMENT = 2;
 
 	/**
 	 * The number of structural features of the '<em>Frequency</em>' class.
@@ -1722,7 +1731,7 @@ public interface AMALTHEAPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FREQUENCY_FEATURE_COUNT = 2;
+	int FREQUENCY_FEATURE_COUNT = 3;
 
 	/**
 	 * The operation id for the '<em>To String</em>' operation.
@@ -1753,22 +1762,13 @@ public interface AMALTHEAPackage extends EPackage {
 	int PRESCALER = 26;
 
 	/**
-	 * The feature id for the '<em><b>Base Data Type</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESCALER__BASE_DATA_TYPE = 0;
-
-	/**
 	 * The feature id for the '<em><b>Clock Ratio</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCALER__CLOCK_RATIO = 1;
+	int PRESCALER__CLOCK_RATIO = 0;
 
 	/**
 	 * The feature id for the '<em><b>Quartz</b></em>' reference.
@@ -1777,7 +1777,25 @@ public interface AMALTHEAPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCALER__QUARTZ = 2;
+	int PRESCALER__QUARTZ = 1;
+
+	/**
+	 * The feature id for the '<em><b>Base Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCALER__BASE_ELEMENT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCALER__NAME = 3;
 
 	/**
 	 * The number of structural features of the '<em>Prescaler</em>' class.
@@ -1786,7 +1804,7 @@ public interface AMALTHEAPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCALER_FEATURE_COUNT = 3;
+	int PRESCALER_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Prescaler</em>' class.
@@ -1999,31 +2017,13 @@ public interface AMALTHEAPackage extends EPackage {
 	int BUS__BASE_DATA_TYPE = NETWORK_TYPE__BASE_DATA_TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Base Class</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BUS__BASE_CLASS = NETWORK_TYPE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Is Encapsulated</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BUS__IS_ENCAPSULATED = NETWORK_TYPE_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Bus Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUS__BUS_TYPE = NETWORK_TYPE_FEATURE_COUNT + 2;
+	int BUS__BUS_TYPE = NETWORK_TYPE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Bus</em>' class.
@@ -2032,34 +2032,7 @@ public interface AMALTHEAPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUS_FEATURE_COUNT = NETWORK_TYPE_FEATURE_COUNT + 3;
-
-	/**
-	 * The operation id for the '<em>Get References</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BUS___GET_REFERENCES = NETWORK_TYPE_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Parts</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BUS___GET_PARTS = NETWORK_TYPE_OPERATION_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Get Flow Properties</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BUS___GET_FLOW_PROPERTIES = NETWORK_TYPE_OPERATION_COUNT + 2;
+	int BUS_FEATURE_COUNT = NETWORK_TYPE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Bus</em>' class.
@@ -2068,7 +2041,7 @@ public interface AMALTHEAPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUS_OPERATION_COUNT = NETWORK_TYPE_OPERATION_COUNT + 3;
+	int BUS_OPERATION_COUNT = NETWORK_TYPE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.SystemTypeImpl <em>System Type</em>}' class.
@@ -2563,7 +2536,7 @@ public interface AMALTHEAPackage extends EPackage {
 	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getSchedType()
 	 * @generated
 	 */
-	int SCHED_TYPE = 38;
+	int SCHED_TYPE = 39;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.BusType <em>Bus Type</em>}' enum.
@@ -2573,7 +2546,7 @@ public interface AMALTHEAPackage extends EPackage {
 	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getBusType()
 	 * @generated
 	 */
-	int BUS_TYPE = 39;
+	int BUS_TYPE = 40;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.FrequencyUnit <em>Frequency Unit</em>}' enum.
@@ -2583,7 +2556,7 @@ public interface AMALTHEAPackage extends EPackage {
 	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.AMALTHEAPackageImpl#getFrequencyUnit()
 	 * @generated
 	 */
-	int FREQUENCY_UNIT = 40;
+	int FREQUENCY_UNIT = 38;
 
 
 	/**
@@ -3275,15 +3248,26 @@ public interface AMALTHEAPackage extends EPackage {
 	EAttribute getFrequency_Value();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.Frequency#getBase_DataType <em>Base Data Type</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.Frequency#getUnit <em>Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Base Data Type</em>'.
-	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.Frequency#getBase_DataType()
+	 * @return the meta object for the attribute '<em>Unit</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.Frequency#getUnit()
 	 * @see #getFrequency()
 	 * @generated
 	 */
-	EReference getFrequency_Base_DataType();
+	EAttribute getFrequency_Unit();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.Frequency#getBase_Element <em>Base Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Base Element</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.Frequency#getBase_Element()
+	 * @see #getFrequency()
+	 * @generated
+	 */
+	EReference getFrequency_Base_Element();
 
 	/**
 	 * Returns the meta object for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.Frequency#toString() <em>To String</em>}' operation.
@@ -3306,17 +3290,6 @@ public interface AMALTHEAPackage extends EPackage {
 	EClass getPrescaler();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.Prescaler#getBase_DataType <em>Base Data Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Base Data Type</em>'.
-	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.Prescaler#getBase_DataType()
-	 * @see #getPrescaler()
-	 * @generated
-	 */
-	EReference getPrescaler_Base_DataType();
-
-	/**
 	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.Prescaler#getClockRatio <em>Clock Ratio</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3337,6 +3310,28 @@ public interface AMALTHEAPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPrescaler_Quartz();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.Prescaler#getBase_Element <em>Base Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Base Element</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.Prescaler#getBase_Element()
+	 * @see #getPrescaler()
+	 * @generated
+	 */
+	EReference getPrescaler_Base_Element();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.Prescaler#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.AMALTHEA.Prescaler#getName()
+	 * @see #getPrescaler()
+	 * @generated
+	 */
+	EAttribute getPrescaler_Name();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.Network <em>Network</em>}'.
@@ -4228,12 +4223,20 @@ public interface AMALTHEAPackage extends EPackage {
 		EAttribute FREQUENCY__VALUE = eINSTANCE.getFrequency_Value();
 
 		/**
-		 * The meta object literal for the '<em><b>Base Data Type</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Unit</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FREQUENCY__BASE_DATA_TYPE = eINSTANCE.getFrequency_Base_DataType();
+		EAttribute FREQUENCY__UNIT = eINSTANCE.getFrequency_Unit();
+
+		/**
+		 * The meta object literal for the '<em><b>Base Element</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FREQUENCY__BASE_ELEMENT = eINSTANCE.getFrequency_Base_Element();
 
 		/**
 		 * The meta object literal for the '<em><b>To String</b></em>' operation.
@@ -4254,14 +4257,6 @@ public interface AMALTHEAPackage extends EPackage {
 		EClass PRESCALER = eINSTANCE.getPrescaler();
 
 		/**
-		 * The meta object literal for the '<em><b>Base Data Type</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PRESCALER__BASE_DATA_TYPE = eINSTANCE.getPrescaler_Base_DataType();
-
-		/**
 		 * The meta object literal for the '<em><b>Clock Ratio</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4276,6 +4271,22 @@ public interface AMALTHEAPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PRESCALER__QUARTZ = eINSTANCE.getPrescaler_Quartz();
+
+		/**
+		 * The meta object literal for the '<em><b>Base Element</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PRESCALER__BASE_ELEMENT = eINSTANCE.getPrescaler_Base_Element();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRESCALER__NAME = eINSTANCE.getPrescaler_Name();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.AMALTHEA.impl.NetworkImpl <em>Network</em>}' class.

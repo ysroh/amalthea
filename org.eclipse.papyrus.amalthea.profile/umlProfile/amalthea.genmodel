@@ -43,6 +43,13 @@
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="AMALTHEA.ecore#//QType/DYNAMIC"/>
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="AMALTHEA.ecore#//QType/STATIC"/>
     </genEnums>
+    <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="AMALTHEA.ecore#//FrequencyUnit">
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="AMALTHEA.ecore#//FrequencyUnit/_undefined_"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="AMALTHEA.ecore#//FrequencyUnit/Hz"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="AMALTHEA.ecore#//FrequencyUnit/kHz"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="AMALTHEA.ecore#//FrequencyUnit/MHz"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="AMALTHEA.ecore#//FrequencyUnit/GHz"/>
+    </genEnums>
     <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="AMALTHEA.ecore#//SchedType">
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="AMALTHEA.ecore#//SchedType/_undefined_"/>
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="AMALTHEA.ecore#//SchedType/RROBIN"/>
@@ -57,13 +64,6 @@
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="AMALTHEA.ecore#//BusType/ETHERNET"/>
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="AMALTHEA.ecore#//BusType/SPI"/>
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="AMALTHEA.ecore#//BusType/NA"/>
-    </genEnums>
-    <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="AMALTHEA.ecore#//FrequencyUnit">
-      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="AMALTHEA.ecore#//FrequencyUnit/_undefined_"/>
-      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="AMALTHEA.ecore#//FrequencyUnit/Hz"/>
-      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="AMALTHEA.ecore#//FrequencyUnit/kHz"/>
-      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="AMALTHEA.ecore#//FrequencyUnit/MHz"/>
-      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="AMALTHEA.ecore#//FrequencyUnit/GHz"/>
     </genEnums>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="AMALTHEA.ecore#//Runnable">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute AMALTHEA.ecore#//Runnable/service"/>
@@ -181,16 +181,18 @@
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="AMALTHEA.ecore#//Frequency">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute AMALTHEA.ecore#//Frequency/value"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute AMALTHEA.ecore#//Frequency/unit"/>
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference AMALTHEA.ecore#//Frequency/base_DataType"/>
+          propertySortChoices="true" ecoreFeature="ecore:EReference AMALTHEA.ecore#//Frequency/base_Element"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="AMALTHEA.ecore#//Frequency/toString"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="AMALTHEA.ecore#//Prescaler">
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference AMALTHEA.ecore#//Prescaler/base_DataType"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute AMALTHEA.ecore#//Prescaler/clockRatio"/>
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
           propertySortChoices="true" ecoreFeature="ecore:EReference AMALTHEA.ecore#//Prescaler/quartz"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference AMALTHEA.ecore#//Prescaler/base_Element"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute AMALTHEA.ecore#//Prescaler/name"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="AMALTHEA.ecore#//Network">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"

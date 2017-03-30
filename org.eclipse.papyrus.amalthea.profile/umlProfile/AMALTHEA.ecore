@@ -143,17 +143,28 @@
     <eOperations name="toString" ordered="false" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
         lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Real"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="base_DataType" ordered="false"
-        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//DataType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" ordered="false" lowerBound="1"
+        eType="#//FrequencyUnit" defaultValueLiteral="_undefined_"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Element" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Element"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="FrequencyUnit">
+    <eLiterals name="_undefined_"/>
+    <eLiterals name="Hz" value="1"/>
+    <eLiterals name="kHz" value="2"/>
+    <eLiterals name="MHz" value="3"/>
+    <eLiterals name="GHz" value="4"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Prescaler">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="base_DataType" ordered="false"
-        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//DataType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="clockRatio" ordered="false"
         lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Real"
         defaultValueLiteral="0.0"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="quartz" ordered="false"
         lowerBound="1" eType="#//Quartz"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_Element" ordered="false"
+        lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Element"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Network" eSuperTypes="#//ComplexNode">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" ordered="false" lowerBound="1"
@@ -173,7 +184,7 @@
     <eLiterals name="RROBIN" value="1"/>
     <eLiterals name="PRIORITY" value="2"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Bus" eSuperTypes="#//NetworkType ../../org.eclipse.papyrus.sysml14/resources/profile/sysml.ecore#//blocks/Block">
+  <eClassifiers xsi:type="ecore:EClass" name="Bus" eSuperTypes="#//NetworkType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="busType" ordered="false"
         lowerBound="1" eType="#//BusType" defaultValueLiteral="_undefined_"/>
   </eClassifiers>
@@ -216,12 +227,5 @@
         lowerBound="1" eType="#//MicrocontrollerType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="cores" ordered="false"
         lowerBound="1" eType="#//Core"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="FrequencyUnit">
-    <eLiterals name="_undefined_"/>
-    <eLiterals name="Hz" value="1"/>
-    <eLiterals name="kHz" value="2"/>
-    <eLiterals name="MHz" value="3"/>
-    <eLiterals name="GHz" value="4"/>
   </eClassifiers>
 </ecore:EPackage>
