@@ -62,7 +62,6 @@ public class OsFactoryImpl extends EFactoryImpl implements OsFactory {
 			case OsPackage.SCHEDULING_HW_UNIT: return createSchedulingHWUnit();
 			case OsPackage.OSEK: return createOSEK();
 			case OsPackage.PRIORITY_BASED: return createPriorityBased();
-			case OsPackage.OS_MODEL: return createOSModel();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -126,16 +125,6 @@ public class OsFactoryImpl extends EFactoryImpl implements OsFactory {
 	public PriorityBased createPriorityBased() {
 		PriorityBasedImpl priorityBased = new PriorityBasedImpl();
 		return priorityBased;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public OSModel createOSModel() {
-		OSModelImpl osModel = new OSModelImpl();
-		return osModel;
 	}
 
 	/**

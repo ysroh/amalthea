@@ -4,10 +4,10 @@ package org.eclipse.papyrus.amalthea.profile.amalthea.os.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.papyrus.amalthea.profile.amalthea.os.InterruptSchedulingAlgorithm;
 import org.eclipse.papyrus.amalthea.profile.amalthea.os.OsPackage;
+
+import org.eclipse.papyrus.sysml14.blocks.internal.impl.BlockImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,7 +16,7 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.os.OsPackage;
  *
  * @generated
  */
-public abstract class InterruptSchedulingAlgorithmImpl extends MinimalEObjectImpl.Container implements InterruptSchedulingAlgorithm {
+public abstract class InterruptSchedulingAlgorithmImpl extends BlockImpl implements InterruptSchedulingAlgorithm {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

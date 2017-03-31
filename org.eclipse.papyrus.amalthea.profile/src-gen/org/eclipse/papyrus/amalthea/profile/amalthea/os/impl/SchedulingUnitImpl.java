@@ -4,10 +4,10 @@ package org.eclipse.papyrus.amalthea.profile.amalthea.os.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.papyrus.amalthea.profile.amalthea.os.OsPackage;
 import org.eclipse.papyrus.amalthea.profile.amalthea.os.SchedulingUnit;
+
+import org.eclipse.papyrus.sysml14.blocks.internal.impl.BlockImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,7 +16,7 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.os.SchedulingUnit;
  *
  * @generated
  */
-public abstract class SchedulingUnitImpl extends MinimalEObjectImpl.Container implements SchedulingUnit {
+public abstract class SchedulingUnitImpl extends BlockImpl implements SchedulingUnit {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -2,13 +2,19 @@
  */
 package org.eclipse.papyrus.amalthea.profile.amalthea.components.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import org.eclipse.papyrus.amalthea.profile.amalthea.components.Component;
 import org.eclipse.papyrus.amalthea.profile.amalthea.components.ComponentsPackage;
@@ -40,14 +46,14 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 	protected org.eclipse.uml2.uml.Component base_Component;
 
 	/**
-	 * The cached value of the '{@link #getPorts() <em>Ports</em>}' reference.
+	 * The cached value of the '{@link #getPorts() <em>Ports</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPorts()
 	 * @generated
 	 * @ordered
 	 */
-	protected FInterfacePort ports;
+	protected EList<FInterfacePort> ports;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -111,37 +117,11 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FInterfacePort getPorts() {
-		if (ports != null && ports.eIsProxy()) {
-			InternalEObject oldPorts = (InternalEObject)ports;
-			ports = (FInterfacePort)eResolveProxy(oldPorts);
-			if (ports != oldPorts) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ComponentsPackage.COMPONENT__PORTS, oldPorts, ports));
-			}
+	public EList<FInterfacePort> getPorts() {
+		if (ports == null) {
+			ports = new EObjectResolvingEList<FInterfacePort>(FInterfacePort.class, this, ComponentsPackage.COMPONENT__PORTS);
 		}
 		return ports;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FInterfacePort basicGetPorts() {
-		return ports;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPorts(FInterfacePort newPorts) {
-		FInterfacePort oldPorts = ports;
-		ports = newPorts;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ComponentsPackage.COMPONENT__PORTS, oldPorts, ports));
 	}
 
 	/**
@@ -156,8 +136,7 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 				if (resolve) return getBase_Component();
 				return basicGetBase_Component();
 			case ComponentsPackage.COMPONENT__PORTS:
-				if (resolve) return getPorts();
-				return basicGetPorts();
+				return getPorts();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -167,6 +146,7 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -174,7 +154,8 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 				setBase_Component((org.eclipse.uml2.uml.Component)newValue);
 				return;
 			case ComponentsPackage.COMPONENT__PORTS:
-				setPorts((FInterfacePort)newValue);
+				getPorts().clear();
+				getPorts().addAll((Collection<? extends FInterfacePort>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -192,7 +173,7 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 				setBase_Component((org.eclipse.uml2.uml.Component)null);
 				return;
 			case ComponentsPackage.COMPONENT__PORTS:
-				setPorts((FInterfacePort)null);
+				getPorts().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -209,7 +190,7 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 			case ComponentsPackage.COMPONENT__BASE_COMPONENT:
 				return base_Component != null;
 			case ComponentsPackage.COMPONENT__PORTS:
-				return ports != null;
+				return ports != null && !ports.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

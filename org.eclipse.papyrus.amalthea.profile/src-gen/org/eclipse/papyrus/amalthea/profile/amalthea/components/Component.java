@@ -2,6 +2,8 @@
  */
 package org.eclipse.papyrus.amalthea.profile.amalthea.components;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -49,29 +51,19 @@ public interface Component extends EObject {
 	void setBase_Component(org.eclipse.uml2.uml.Component value);
 
 	/**
-	 * Returns the value of the '<em><b>Ports</b></em>' reference.
+	 * Returns the value of the '<em><b>Ports</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.papyrus.amalthea.profile.amalthea.components.FInterfacePort}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Ports</em>' reference isn't clear,
+	 * If the meaning of the '<em>Ports</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ports</em>' reference.
-	 * @see #setPorts(FInterfacePort)
+	 * @return the value of the '<em>Ports</em>' reference list.
 	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.ComponentsPackage#getComponent_Ports()
-	 * @model required="true" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
-	FInterfacePort getPorts();
-
-	/**
-	 * Sets the value of the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.Component#getPorts <em>Ports</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ports</em>' reference.
-	 * @see #getPorts()
-	 * @generated
-	 */
-	void setPorts(FInterfacePort value);
+	EList<FInterfacePort> getPorts();
 
 } // Component

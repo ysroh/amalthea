@@ -82,36 +82,32 @@ public class OsAdapterFactory extends AdapterFactoryImpl {
 				return createSchedulerAdapter();
 			}
 			@Override
-			public Adapter caseInterruptController(InterruptController object) {
-				return createInterruptControllerAdapter();
-			}
-			@Override
 			public Adapter caseSchedulingUnit(SchedulingUnit object) {
 				return createSchedulingUnitAdapter();
-			}
-			@Override
-			public Adapter caseSchedulingHWUnit(SchedulingHWUnit object) {
-				return createSchedulingHWUnitAdapter();
 			}
 			@Override
 			public Adapter caseTaskSchedulingAlgorithm(TaskSchedulingAlgorithm object) {
 				return createTaskSchedulingAlgorithmAdapter();
 			}
 			@Override
-			public Adapter caseOSEK(OSEK object) {
-				return createOSEKAdapter();
+			public Adapter caseInterruptController(InterruptController object) {
+				return createInterruptControllerAdapter();
 			}
 			@Override
 			public Adapter caseInterruptSchedulingAlgorithm(InterruptSchedulingAlgorithm object) {
 				return createInterruptSchedulingAlgorithmAdapter();
 			}
 			@Override
-			public Adapter casePriorityBased(PriorityBased object) {
-				return createPriorityBasedAdapter();
+			public Adapter caseSchedulingHWUnit(SchedulingHWUnit object) {
+				return createSchedulingHWUnitAdapter();
 			}
 			@Override
-			public Adapter caseOSModel(OSModel object) {
-				return createOSModelAdapter();
+			public Adapter caseOSEK(OSEK object) {
+				return createOSEKAdapter();
+			}
+			@Override
+			public Adapter casePriorityBased(PriorityBased object) {
+				return createPriorityBasedAdapter();
 			}
 			@Override
 			public Adapter caseBlock(Block object) {
@@ -180,20 +176,6 @@ public class OsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.os.InterruptController <em>Interrupt Controller</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.os.InterruptController
-	 * @generated
-	 */
-	public Adapter createInterruptControllerAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.os.SchedulingUnit <em>Scheduling Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -204,20 +186,6 @@ public class OsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSchedulingUnitAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.os.SchedulingHWUnit <em>Scheduling HW Unit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.os.SchedulingHWUnit
-	 * @generated
-	 */
-	public Adapter createSchedulingHWUnitAdapter() {
 		return null;
 	}
 
@@ -236,16 +204,16 @@ public class OsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.os.OSEK <em>OSEK</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.os.InterruptController <em>Interrupt Controller</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.os.OSEK
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.os.InterruptController
 	 * @generated
 	 */
-	public Adapter createOSEKAdapter() {
+	public Adapter createInterruptControllerAdapter() {
 		return null;
 	}
 
@@ -264,6 +232,34 @@ public class OsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.os.SchedulingHWUnit <em>Scheduling HW Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.os.SchedulingHWUnit
+	 * @generated
+	 */
+	public Adapter createSchedulingHWUnitAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.os.OSEK <em>OSEK</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.os.OSEK
+	 * @generated
+	 */
+	public Adapter createOSEKAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.os.PriorityBased <em>Priority Based</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -274,20 +270,6 @@ public class OsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPriorityBasedAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.os.OSModel <em>OS Model</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.os.OSModel
-	 * @generated
-	 */
-	public Adapter createOSModelAdapter() {
 		return null;
 	}
 

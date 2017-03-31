@@ -2,7 +2,7 @@
  */
 package org.eclipse.papyrus.amalthea.profile.amalthea.os;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.papyrus.sysml14.blocks.Block;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,5 +14,5 @@ import org.eclipse.emf.ecore.EObject;
  * @model abstract="true"
  * @generated
  */
-public interface TaskSchedulingAlgorithm extends EObject {
+public interface TaskSchedulingAlgorithm extends Block {
 } // TaskSchedulingAlgorithm

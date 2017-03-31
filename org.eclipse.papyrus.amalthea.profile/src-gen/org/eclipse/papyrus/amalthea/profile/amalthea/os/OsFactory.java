@@ -76,15 +76,6 @@ public interface OsFactory extends EFactory {
 	PriorityBased createPriorityBased();
 
 	/**
-	 * Returns a new object of class '<em>OS Model</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>OS Model</em>'.
-	 * @generated
-	 */
-	OSModel createOSModel();
-
-	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

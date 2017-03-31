@@ -5,6 +5,7 @@ package org.eclipse.papyrus.amalthea.profile.amalthea.os.impl;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
@@ -34,7 +35,6 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.mapping.impl.MappingPackage
 
 import org.eclipse.papyrus.amalthea.profile.amalthea.os.InterruptController;
 import org.eclipse.papyrus.amalthea.profile.amalthea.os.InterruptSchedulingAlgorithm;
-import org.eclipse.papyrus.amalthea.profile.amalthea.os.OSModel;
 import org.eclipse.papyrus.amalthea.profile.amalthea.os.OperatingSystem;
 import org.eclipse.papyrus.amalthea.profile.amalthea.os.OsFactory;
 import org.eclipse.papyrus.amalthea.profile.amalthea.os.OsPackage;
@@ -92,21 +92,7 @@ public class OsPackageImpl extends EPackageImpl implements OsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass interruptControllerEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass schedulingUnitEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass schedulingHWUnitEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -120,7 +106,7 @@ public class OsPackageImpl extends EPackageImpl implements OsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass osekEClass = null;
+	private EClass interruptControllerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -134,14 +120,21 @@ public class OsPackageImpl extends EPackageImpl implements OsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass priorityBasedEClass = null;
+	private EClass schedulingHWUnitEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass osModelEClass = null;
+	private EClass osekEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass priorityBasedEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -247,8 +240,35 @@ public class OsPackageImpl extends EPackageImpl implements OsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getOperatingSystem_Taskscheduler() {
+		return (EReference)operatingSystemEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOperatingSystem_Interruptcontroller() {
+		return (EReference)operatingSystemEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTaskScheduler() {
 		return taskSchedulerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTaskScheduler_Schedulingalgorithm() {
+		return (EReference)taskSchedulerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -274,8 +294,8 @@ public class OsPackageImpl extends EPackageImpl implements OsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getInterruptController() {
-		return interruptControllerEClass;
+	public EReference getScheduler_Schedulingunit() {
+		return (EReference)schedulerEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -292,15 +312,6 @@ public class OsPackageImpl extends EPackageImpl implements OsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSchedulingHWUnit() {
-		return schedulingHWUnitEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getTaskSchedulingAlgorithm() {
 		return taskSchedulingAlgorithmEClass;
 	}
@@ -310,8 +321,17 @@ public class OsPackageImpl extends EPackageImpl implements OsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getOSEK() {
-		return osekEClass;
+	public EClass getInterruptController() {
+		return interruptControllerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInterruptController_Schedulingalgorithm() {
+		return (EReference)interruptControllerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -328,8 +348,8 @@ public class OsPackageImpl extends EPackageImpl implements OsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPriorityBased() {
-		return priorityBasedEClass;
+	public EClass getSchedulingHWUnit() {
+		return schedulingHWUnitEClass;
 	}
 
 	/**
@@ -337,8 +357,17 @@ public class OsPackageImpl extends EPackageImpl implements OsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getOSModel() {
-		return osModelEClass;
+	public EClass getOSEK() {
+		return osekEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPriorityBased() {
+		return priorityBasedEClass;
 	}
 
 	/**
@@ -370,27 +399,30 @@ public class OsPackageImpl extends EPackageImpl implements OsPackage {
 
 		// Create classes and their features
 		operatingSystemEClass = createEClass(OPERATING_SYSTEM);
+		createEReference(operatingSystemEClass, OPERATING_SYSTEM__TASKSCHEDULER);
+		createEReference(operatingSystemEClass, OPERATING_SYSTEM__INTERRUPTCONTROLLER);
 
 		taskSchedulerEClass = createEClass(TASK_SCHEDULER);
+		createEReference(taskSchedulerEClass, TASK_SCHEDULER__SCHEDULINGALGORITHM);
 
 		schedulerEClass = createEClass(SCHEDULER);
 		createEAttribute(schedulerEClass, SCHEDULER__SCHEDULE_UNIT_PRIORITY);
-
-		interruptControllerEClass = createEClass(INTERRUPT_CONTROLLER);
+		createEReference(schedulerEClass, SCHEDULER__SCHEDULINGUNIT);
 
 		schedulingUnitEClass = createEClass(SCHEDULING_UNIT);
 
-		schedulingHWUnitEClass = createEClass(SCHEDULING_HW_UNIT);
-
 		taskSchedulingAlgorithmEClass = createEClass(TASK_SCHEDULING_ALGORITHM);
 
-		osekEClass = createEClass(OSEK);
+		interruptControllerEClass = createEClass(INTERRUPT_CONTROLLER);
+		createEReference(interruptControllerEClass, INTERRUPT_CONTROLLER__SCHEDULINGALGORITHM);
 
 		interruptSchedulingAlgorithmEClass = createEClass(INTERRUPT_SCHEDULING_ALGORITHM);
 
-		priorityBasedEClass = createEClass(PRIORITY_BASED);
+		schedulingHWUnitEClass = createEClass(SCHEDULING_HW_UNIT);
 
-		osModelEClass = createEClass(OS_MODEL);
+		osekEClass = createEClass(OSEK);
+
+		priorityBasedEClass = createEClass(PRIORITY_BASED);
 	}
 
 	/**
@@ -427,34 +459,41 @@ public class OsPackageImpl extends EPackageImpl implements OsPackage {
 		// Add supertypes to classes
 		operatingSystemEClass.getESuperTypes().add(theBlocksPackage.getBlock());
 		taskSchedulerEClass.getESuperTypes().add(this.getScheduler());
+		schedulerEClass.getESuperTypes().add(theBlocksPackage.getBlock());
+		schedulingUnitEClass.getESuperTypes().add(theBlocksPackage.getBlock());
+		taskSchedulingAlgorithmEClass.getESuperTypes().add(theBlocksPackage.getBlock());
 		interruptControllerEClass.getESuperTypes().add(this.getScheduler());
+		interruptSchedulingAlgorithmEClass.getESuperTypes().add(theBlocksPackage.getBlock());
 		schedulingHWUnitEClass.getESuperTypes().add(this.getSchedulingUnit());
 		osekEClass.getESuperTypes().add(this.getTaskSchedulingAlgorithm());
 		priorityBasedEClass.getESuperTypes().add(this.getInterruptSchedulingAlgorithm());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(operatingSystemEClass, OperatingSystem.class, "OperatingSystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getOperatingSystem_Taskscheduler(), this.getTaskScheduler(), null, "taskscheduler", null, 0, -1, OperatingSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getOperatingSystem_Interruptcontroller(), this.getInterruptController(), null, "interruptcontroller", null, 0, -1, OperatingSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(taskSchedulerEClass, TaskScheduler.class, "TaskScheduler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTaskScheduler_Schedulingalgorithm(), this.getTaskSchedulingAlgorithm(), null, "schedulingalgorithm", null, 0, 1, TaskScheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(schedulerEClass, Scheduler.class, "Scheduler", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getScheduler_ScheduleUnitPriority(), theTypesPackage.getInteger(), "scheduleUnitPriority", "0", 1, 1, Scheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(interruptControllerEClass, InterruptController.class, "InterruptController", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getScheduler_Schedulingunit(), this.getSchedulingUnit(), null, "schedulingunit", null, 0, -1, Scheduler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(schedulingUnitEClass, SchedulingUnit.class, "SchedulingUnit", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(schedulingHWUnitEClass, SchedulingHWUnit.class, "SchedulingHWUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(taskSchedulingAlgorithmEClass, TaskSchedulingAlgorithm.class, "TaskSchedulingAlgorithm", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(osekEClass, org.eclipse.papyrus.amalthea.profile.amalthea.os.OSEK.class, "OSEK", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(interruptControllerEClass, InterruptController.class, "InterruptController", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getInterruptController_Schedulingalgorithm(), this.getInterruptSchedulingAlgorithm(), null, "schedulingalgorithm", null, 0, 1, InterruptController.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(interruptSchedulingAlgorithmEClass, InterruptSchedulingAlgorithm.class, "InterruptSchedulingAlgorithm", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(priorityBasedEClass, PriorityBased.class, "PriorityBased", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(schedulingHWUnitEClass, SchedulingHWUnit.class, "SchedulingHWUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(osModelEClass, OSModel.class, "OSModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(osekEClass, org.eclipse.papyrus.amalthea.profile.amalthea.os.OSEK.class, "OSEK", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(priorityBasedEClass, PriorityBased.class, "PriorityBased", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create annotations
 		// http://www.eclipse.org/uml2/2.0.0/UML

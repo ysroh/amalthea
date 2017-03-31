@@ -156,19 +156,31 @@
     </nestedGenPackages>
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Os" basePackage="org.eclipse.papyrus.amalthea.profile.amalthea"
         disposableProviderFactory="true" ecorePackage="amalthea.ecore#//os">
-      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//os/OperatingSystem"/>
-      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//os/TaskScheduler"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//os/OperatingSystem">
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference amalthea.ecore#//os/OperatingSystem/taskscheduler"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference amalthea.ecore#//os/OperatingSystem/interruptcontroller"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//os/TaskScheduler">
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference amalthea.ecore#//os/TaskScheduler/schedulingalgorithm"/>
+      </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="amalthea.ecore#//os/Scheduler">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//os/Scheduler/scheduleUnitPriority"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference amalthea.ecore#//os/Scheduler/schedulingunit"/>
       </genClasses>
-      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//os/InterruptController"/>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="amalthea.ecore#//os/SchedulingUnit"/>
-      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//os/SchedulingHWUnit"/>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="amalthea.ecore#//os/TaskSchedulingAlgorithm"/>
-      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//os/OSEK"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//os/InterruptController">
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference amalthea.ecore#//os/InterruptController/schedulingalgorithm"/>
+      </genClasses>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="amalthea.ecore#//os/InterruptSchedulingAlgorithm"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//os/SchedulingHWUnit"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//os/OSEK"/>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//os/PriorityBased"/>
-      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//os/OSModel"/>
     </nestedGenPackages>
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Mapping" basePackage="org.eclipse.papyrus.amalthea.profile.amalthea"
         disposableProviderFactory="true" ecorePackage="amalthea.ecore#//mapping">

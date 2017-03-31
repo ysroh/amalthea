@@ -6,8 +6,8 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.EReference;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.papyrus.amalthea.profile.amalthea.AmaltheaPackage;
@@ -53,6 +53,7 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.impl.StimuliPackage
 import org.eclipse.papyrus.sysml14.sysmlPackage;
 
 import org.eclipse.uml2.types.TypesPackage;
+
 import org.eclipse.uml2.uml.UMLPackage;
 
 /**

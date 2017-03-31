@@ -78,7 +78,7 @@ public interface ComponentsPackage extends EPackage {
 	int COMPONENT__BASE_COMPONENT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Ports</b></em>' reference.
+	 * The feature id for the '<em><b>Ports</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -170,7 +170,7 @@ public interface ComponentsPackage extends EPackage {
 	int COMPOSITE__BASE_COMPONENT = COMPONENT__BASE_COMPONENT;
 
 	/**
-	 * The feature id for the '<em><b>Ports</b></em>' reference.
+	 * The feature id for the '<em><b>Ports</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -275,10 +275,10 @@ public interface ComponentsPackage extends EPackage {
 	EReference getComponent_Base_Component();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.Component#getPorts <em>Ports</em>}'.
+	 * Returns the meta object for the reference list '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.Component#getPorts <em>Ports</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Ports</em>'.
+	 * @return the meta object for the reference list '<em>Ports</em>'.
 	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.Component#getPorts()
 	 * @see #getComponent()
 	 * @generated
@@ -411,7 +411,7 @@ public interface ComponentsPackage extends EPackage {
 		EReference COMPONENT__BASE_COMPONENT = eINSTANCE.getComponent_Base_Component();
 
 		/**
-		 * The meta object literal for the '<em><b>Ports</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Ports</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

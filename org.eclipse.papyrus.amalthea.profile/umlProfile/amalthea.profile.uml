@@ -133,7 +133,10 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_nt2wYxZGEeeFzte_Mj5jqA" name="base_Component" association="_nt5MoBZGEeeFzte_Mj5jqA">
           <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Component"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_nt2wZBZGEeeFzte_Mj5jqA" name="ports" type="_nt3-gBZGEeeFzte_Mj5jqA" association="_nt5MphZGEeeFzte_Mj5jqA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_nt2wZBZGEeeFzte_Mj5jqA" name="ports" type="_nt3-gBZGEeeFzte_Mj5jqA" association="_nt5MphZGEeeFzte_Mj5jqA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dWl2EBZQEeeFzte_Mj5jqA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dWsjwBZQEeeFzte_Mj5jqA" value="*"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_nt3XcBZGEeeFzte_Mj5jqA" name="Composite">
         <generalization xmi:type="uml:Generalization" xmi:id="_nt3XcRZGEeeFzte_Mj5jqA" general="_nt2wYhZGEeeFzte_Mj5jqA"/>
@@ -287,36 +290,100 @@
       <elementImport xmi:type="uml:ElementImport" xmi:id="_oiFF1xZKEeeFzte_Mj5jqA">
         <importedElement xmi:type="uml:Stereotype" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Blocks.stereotype_packagedElement_Block"/>
       </elementImport>
+      <packagedElement xmi:type="uml:Association" xmi:id="_6GqIIBZQEeeFzte_Mj5jqA" memberEnd="_6GqvMRZQEeeFzte_Mj5jqA _6GqvMhZQEeeFzte_Mj5jqA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6GqIIRZQEeeFzte_Mj5jqA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6GqvMBZQEeeFzte_Mj5jqA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_6GqvMhZQEeeFzte_Mj5jqA" name="operatingsystem" type="_oiFF2BZKEeeFzte_Mj5jqA" association="_6GqIIBZQEeeFzte_Mj5jqA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_6frFEBZQEeeFzte_Mj5jqA" memberEnd="_6fsTMRZQEeeFzte_Mj5jqA _6fs6QBZQEeeFzte_Mj5jqA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6frsIBZQEeeFzte_Mj5jqA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6fsTMBZQEeeFzte_Mj5jqA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_6fs6QBZQEeeFzte_Mj5jqA" name="operatingsystem" type="_oiFF2BZKEeeFzte_Mj5jqA" association="_6frFEBZQEeeFzte_Mj5jqA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_sDD1EBZREeeFzte_Mj5jqA" memberEnd="_sDEcIRZREeeFzte_Mj5jqA _sDEcIhZREeeFzte_Mj5jqA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sDD1ERZREeeFzte_Mj5jqA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sDEcIBZREeeFzte_Mj5jqA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_sDEcIhZREeeFzte_Mj5jqA" name="scheduler" type="_oiFF3hZKEeeFzte_Mj5jqA" association="_sDD1EBZREeeFzte_Mj5jqA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_fOPCQBZSEeeFzte_Mj5jqA" memberEnd="_fOQQYBZSEeeFzte_Mj5jqA _fOQQYRZSEeeFzte_Mj5jqA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fOPpUBZSEeeFzte_Mj5jqA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fOPpURZSEeeFzte_Mj5jqA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_fOQQYRZSEeeFzte_Mj5jqA" name="taskscheduler" type="_oiFF2hZKEeeFzte_Mj5jqA" association="_fOPCQBZSEeeFzte_Mj5jqA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gtWroBZSEeeFzte_Mj5jqA" memberEnd="_gtXSshZSEeeFzte_Mj5jqA _gtXSsxZSEeeFzte_Mj5jqA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gtXSsBZSEeeFzte_Mj5jqA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gtXSsRZSEeeFzte_Mj5jqA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_gtXSsxZSEeeFzte_Mj5jqA" name="interruptcontroller" type="_oiFF3BZKEeeFzte_Mj5jqA" association="_gtWroBZSEeeFzte_Mj5jqA"/>
+      </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiFF2BZKEeeFzte_Mj5jqA" name="OperatingSystem">
         <generalization xmi:type="uml:Generalization" xmi:id="_oiFF2RZKEeeFzte_Mj5jqA">
           <general xmi:type="uml:Stereotype" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Blocks.stereotype_packagedElement_Block"/>
         </generalization>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_6GqvMRZQEeeFzte_Mj5jqA" name="taskscheduler" type="_oiFF2hZKEeeFzte_Mj5jqA" association="_6GqIIBZQEeeFzte_Mj5jqA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7vpfMBZQEeeFzte_Mj5jqA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7vr7cBZQEeeFzte_Mj5jqA" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_6fsTMRZQEeeFzte_Mj5jqA" name="interruptcontroller" type="_oiFF3BZKEeeFzte_Mj5jqA" association="_6frFEBZQEeeFzte_Mj5jqA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8ZshwBZQEeeFzte_Mj5jqA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8Zu-ABZQEeeFzte_Mj5jqA" value="*"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiFF2hZKEeeFzte_Mj5jqA" name="TaskScheduler">
         <generalization xmi:type="uml:Generalization" xmi:id="_oiFF2xZKEeeFzte_Mj5jqA" general="_oiFF3hZKEeeFzte_Mj5jqA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_fOQQYBZSEeeFzte_Mj5jqA" name="schedulingalgorithm" type="_oiFs4RZKEeeFzte_Mj5jqA" association="_fOPCQBZSEeeFzte_Mj5jqA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_f_uwoBZSEeeFzte_Mj5jqA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_f_xz8BZSEeeFzte_Mj5jqA" value="1"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiFF3BZKEeeFzte_Mj5jqA" name="InterruptController">
         <generalization xmi:type="uml:Generalization" xmi:id="_oiFF3RZKEeeFzte_Mj5jqA" general="_oiFF3hZKEeeFzte_Mj5jqA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_gtXSshZSEeeFzte_Mj5jqA" name="schedulingalgorithm" type="_oiFs5BZKEeeFzte_Mj5jqA" association="_gtWroBZSEeeFzte_Mj5jqA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_haNKkBZSEeeFzte_Mj5jqA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_haQN4BZSEeeFzte_Mj5jqA" value="1"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiFF3hZKEeeFzte_Mj5jqA" name="Scheduler" isAbstract="true">
+        <generalization xmi:type="uml:Generalization" xmi:id="_PGOyABZUEeeFzte_Mj5jqA">
+          <general xmi:type="uml:Stereotype" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Blocks.stereotype_packagedElement_Block"/>
+        </generalization>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_oiFF3xZKEeeFzte_Mj5jqA" name="scheduleUnitPriority">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_oiFF4BZKEeeFzte_Mj5jqA"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_sDEcIRZREeeFzte_Mj5jqA" name="schedulingunit" type="_oiFF4RZKEeeFzte_Mj5jqA" association="_sDD1EBZREeeFzte_Mj5jqA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_umVqIBZREeeFzte_Mj5jqA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_umZ7kBZREeeFzte_Mj5jqA" value="*"/>
+        </ownedAttribute>
       </packagedElement>
-      <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiFF4RZKEeeFzte_Mj5jqA" name="SchedulingUnit" isAbstract="true"/>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiFF4RZKEeeFzte_Mj5jqA" name="SchedulingUnit" isAbstract="true">
+        <generalization xmi:type="uml:Generalization" xmi:id="_Pn7J0BZUEeeFzte_Mj5jqA">
+          <general xmi:type="uml:Stereotype" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Blocks.stereotype_packagedElement_Block"/>
+        </generalization>
+      </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiFF4hZKEeeFzte_Mj5jqA" name="SchedulingHWUnit">
         <generalization xmi:type="uml:Generalization" xmi:id="_oiFs4BZKEeeFzte_Mj5jqA" general="_oiFF4RZKEeeFzte_Mj5jqA"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiFs4RZKEeeFzte_Mj5jqA" name="TaskSchedulingAlgorithm" isAbstract="true"/>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiFs4RZKEeeFzte_Mj5jqA" name="TaskSchedulingAlgorithm" isAbstract="true">
+        <generalization xmi:type="uml:Generalization" xmi:id="_Rt1tcBZUEeeFzte_Mj5jqA">
+          <general xmi:type="uml:Stereotype" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Blocks.stereotype_packagedElement_Block"/>
+        </generalization>
+      </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiFs4hZKEeeFzte_Mj5jqA" name="OSEK">
         <generalization xmi:type="uml:Generalization" xmi:id="_oiFs4xZKEeeFzte_Mj5jqA" general="_oiFs4RZKEeeFzte_Mj5jqA"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiFs5BZKEeeFzte_Mj5jqA" name="InterruptSchedulingAlgorithm" isAbstract="true"/>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiFs5BZKEeeFzte_Mj5jqA" name="InterruptSchedulingAlgorithm" isAbstract="true">
+        <generalization xmi:type="uml:Generalization" xmi:id="_SPAg0BZUEeeFzte_Mj5jqA">
+          <general xmi:type="uml:Stereotype" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Blocks.stereotype_packagedElement_Block"/>
+        </generalization>
+      </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiFs5RZKEeeFzte_Mj5jqA" name="PriorityBased">
         <generalization xmi:type="uml:Generalization" xmi:id="_oiFs5hZKEeeFzte_Mj5jqA" general="_oiFs5BZKEeeFzte_Mj5jqA"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiFs5xZKEeeFzte_Mj5jqA" name="OSModel"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_oiFs6BZKEeeFzte_Mj5jqA" name="MappingModel" URI="http://www.eclipse.org/papyrus/2017/Amalthea/Mapping">
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiFs6RZKEeeFzte_Mj5jqA" name="MappingModel"/>
