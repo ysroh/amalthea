@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.papyrus.amalthea.profile.amalthea.AmaltheaPackage;
@@ -52,6 +53,7 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.impl.StimuliPackage
 import org.eclipse.papyrus.sysml14.sysmlPackage;
 
 import org.eclipse.uml2.types.TypesPackage;
+import org.eclipse.uml2.uml.UMLPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -235,6 +237,15 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getAbstractTime_Base_DataType() {
+		return (EReference)abstractTimeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTime() {
 		return timeEClass;
 	}
@@ -291,6 +302,7 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		abstractTimeEClass = createEClass(ABSTRACT_TIME);
 		createEAttribute(abstractTimeEClass, ABSTRACT_TIME__VALUE);
 		createEAttribute(abstractTimeEClass, ABSTRACT_TIME__UNIT);
+		createEReference(abstractTimeEClass, ABSTRACT_TIME__BASE_DATA_TYPE);
 
 		timeEClass = createEClass(TIME);
 
@@ -325,6 +337,7 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 
 		// Obtain other dependent packages
 		TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
+		UMLPackage theUMLPackage = (UMLPackage)EPackage.Registry.INSTANCE.getEPackage(UMLPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -340,6 +353,7 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		initEClass(abstractTimeEClass, AbstractTime.class, "AbstractTime", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAbstractTime_Value(), theTypesPackage.getInteger(), "value", null, 1, 1, AbstractTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAbstractTime_Unit(), this.getTimeUnit(), "unit", null, 1, 1, AbstractTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getAbstractTime_Base_DataType(), theUMLPackage.getDataType(), null, "base_DataType", null, 1, 1, AbstractTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(timeEClass, Time.class, "Time", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

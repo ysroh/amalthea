@@ -65,6 +65,12 @@
       <importedPackage xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
     </packageImport>
     <packagedElement xmi:type="uml:Package" xmi:id="_oiGT8BZKEeeFzte_Mj5jqA" name="CommonModel" URI="http://www.eclipse.org/papyrus/2017/Amalthea/Common">
+      <elementImport xmi:type="uml:ElementImport" xmi:id="_IUWAwBZPEeeFzte_Mj5jqA">
+        <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#DataType"/>
+      </elementImport>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_ZzVAIBZPEeeFzte_Mj5jqA" name="E_AbstractTime_DataType1" memberEnd="_ZzWOQBZPEeeFzte_Mj5jqA _ZzW1UBZPEeeFzte_Mj5jqA">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_ZzWOQBZPEeeFzte_Mj5jqA" name="extension_AbstractTime" type="_oiGT8xZKEeeFzte_Mj5jqA" aggregation="composite" association="_ZzVAIBZPEeeFzte_Mj5jqA"/>
+      </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiGT8RZKEeeFzte_Mj5jqA" name="CustomProperty">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_oiGT8hZKEeeFzte_Mj5jqA" name="key">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
@@ -75,6 +81,9 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_oiGT9RZKEeeFzte_Mj5jqA" name="unit" type="_oiGT-BZKEeeFzte_Mj5jqA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_ZzW1UBZPEeeFzte_Mj5jqA" name="base_DataType" association="_ZzVAIBZPEeeFzte_Mj5jqA">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#DataType"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiGT9hZKEeeFzte_Mj5jqA" name="Time">
         <generalization xmi:type="uml:Generalization" xmi:id="_oiGT9xZKEeeFzte_Mj5jqA" general="_oiGT8xZKEeeFzte_Mj5jqA"/>

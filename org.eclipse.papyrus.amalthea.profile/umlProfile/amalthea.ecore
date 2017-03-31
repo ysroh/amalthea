@@ -20,6 +20,8 @@
           lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" ordered="false"
           lowerBound="1" eType="#//common/TimeUnit"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_DataType" ordered="false"
+          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//DataType"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EEnum" name="TimeUnit">
       <eLiterals name="_undefined_"/>

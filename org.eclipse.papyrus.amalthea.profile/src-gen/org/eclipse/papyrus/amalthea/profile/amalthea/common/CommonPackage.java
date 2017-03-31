@@ -6,6 +6,7 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
 
 /**
  * <!-- begin-user-doc -->
@@ -123,13 +124,22 @@ public interface CommonPackage extends EPackage {
 	int ABSTRACT_TIME__UNIT = 1;
 
 	/**
+	 * The feature id for the '<em><b>Base Data Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABSTRACT_TIME__BASE_DATA_TYPE = 2;
+
+	/**
 	 * The number of structural features of the '<em>Abstract Time</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_TIME_FEATURE_COUNT = 2;
+	int ABSTRACT_TIME_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Abstract Time</em>' class.
@@ -167,6 +177,15 @@ public interface CommonPackage extends EPackage {
 	 * @ordered
 	 */
 	int TIME__UNIT = ABSTRACT_TIME__UNIT;
+
+	/**
+	 * The feature id for the '<em><b>Base Data Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TIME__BASE_DATA_TYPE = ABSTRACT_TIME__BASE_DATA_TYPE;
 
 	/**
 	 * The number of structural features of the '<em>Time</em>' class.
@@ -279,6 +298,17 @@ public interface CommonPackage extends EPackage {
 	EAttribute getAbstractTime_Unit();
 
 	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.AbstractTime#getBase_DataType <em>Base Data Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Base Data Type</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.AbstractTime#getBase_DataType()
+	 * @see #getAbstractTime()
+	 * @generated
+	 */
+	EReference getAbstractTime_Base_DataType();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.Time <em>Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -374,6 +404,14 @@ public interface CommonPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ABSTRACT_TIME__UNIT = eINSTANCE.getAbstractTime_Unit();
+
+		/**
+		 * The meta object literal for the '<em><b>Base Data Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ABSTRACT_TIME__BASE_DATA_TYPE = eINSTANCE.getAbstractTime_Base_DataType();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.TimeImpl <em>Time</em>}' class.

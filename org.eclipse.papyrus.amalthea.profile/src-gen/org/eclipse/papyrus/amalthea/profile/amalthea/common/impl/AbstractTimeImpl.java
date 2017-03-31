@@ -6,12 +6,14 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.AbstractTime;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.CommonPackage;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.TimeUnit;
+import org.eclipse.uml2.uml.DataType;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,6 +25,7 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.common.TimeUnit;
  * <ul>
  *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.AbstractTimeImpl#getValue <em>Value</em>}</li>
  *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.AbstractTimeImpl#getUnit <em>Unit</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.AbstractTimeImpl#getBase_DataType <em>Base Data Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -67,6 +70,16 @@ public abstract class AbstractTimeImpl extends MinimalEObjectImpl.Container impl
 	 * @ordered
 	 */
 	protected TimeUnit unit = UNIT_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getBase_DataType() <em>Base Data Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBase_DataType()
+	 * @generated
+	 * @ordered
+	 */
+	protected DataType base_DataType;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -134,6 +147,44 @@ public abstract class AbstractTimeImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public DataType getBase_DataType() {
+		if (base_DataType != null && base_DataType.eIsProxy()) {
+			InternalEObject oldBase_DataType = (InternalEObject)base_DataType;
+			base_DataType = (DataType)eResolveProxy(oldBase_DataType);
+			if (base_DataType != oldBase_DataType) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CommonPackage.ABSTRACT_TIME__BASE_DATA_TYPE, oldBase_DataType, base_DataType));
+			}
+		}
+		return base_DataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DataType basicGetBase_DataType() {
+		return base_DataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBase_DataType(DataType newBase_DataType) {
+		DataType oldBase_DataType = base_DataType;
+		base_DataType = newBase_DataType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CommonPackage.ABSTRACT_TIME__BASE_DATA_TYPE, oldBase_DataType, base_DataType));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -141,6 +192,9 @@ public abstract class AbstractTimeImpl extends MinimalEObjectImpl.Container impl
 				return getValue();
 			case CommonPackage.ABSTRACT_TIME__UNIT:
 				return getUnit();
+			case CommonPackage.ABSTRACT_TIME__BASE_DATA_TYPE:
+				if (resolve) return getBase_DataType();
+				return basicGetBase_DataType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -158,6 +212,9 @@ public abstract class AbstractTimeImpl extends MinimalEObjectImpl.Container impl
 				return;
 			case CommonPackage.ABSTRACT_TIME__UNIT:
 				setUnit((TimeUnit)newValue);
+				return;
+			case CommonPackage.ABSTRACT_TIME__BASE_DATA_TYPE:
+				setBase_DataType((DataType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -177,6 +234,9 @@ public abstract class AbstractTimeImpl extends MinimalEObjectImpl.Container impl
 			case CommonPackage.ABSTRACT_TIME__UNIT:
 				setUnit(UNIT_EDEFAULT);
 				return;
+			case CommonPackage.ABSTRACT_TIME__BASE_DATA_TYPE:
+				setBase_DataType((DataType)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -193,6 +253,8 @@ public abstract class AbstractTimeImpl extends MinimalEObjectImpl.Container impl
 				return value != VALUE_EDEFAULT;
 			case CommonPackage.ABSTRACT_TIME__UNIT:
 				return unit != UNIT_EDEFAULT;
+			case CommonPackage.ABSTRACT_TIME__BASE_DATA_TYPE:
+				return base_DataType != null;
 		}
 		return super.eIsSet(featureID);
 	}
