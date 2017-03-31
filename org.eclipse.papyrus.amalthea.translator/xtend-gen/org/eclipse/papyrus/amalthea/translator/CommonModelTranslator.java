@@ -8,7 +8,7 @@ import org.eclipse.app4mc.amalthea.model.FrequencyUnit;
 import org.eclipse.app4mc.amalthea.model.Time;
 import org.eclipse.app4mc.amalthea.model.TimeUnit;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.papyrus.amalthea.util.CommonModelUtils;
+import org.eclipse.papyrus.amalthea.profile.utils.CommonModelUtils;
 import org.eclipse.uml2.uml.Element;
 import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 

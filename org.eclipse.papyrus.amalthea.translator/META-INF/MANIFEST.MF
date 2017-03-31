@@ -6,5 +6,4 @@ Bundle-Version: 0.0.1.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.eclipse.app4mc.amalthea.model;bundle-version="0.7.2",
  org.eclipse.papyrus.amalthea.profile;bundle-version="0.0.1",
- org.eclipse.papyrus.amalthea.util;bundle-version="0.0.1",
  org.eclipse.xtend.lib;bundle-version="2.11.0"

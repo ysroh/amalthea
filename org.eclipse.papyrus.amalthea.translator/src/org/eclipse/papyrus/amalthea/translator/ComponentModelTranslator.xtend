@@ -1,6 +1,6 @@
 package org.eclipse.papyrus.amalthea.translator
 
-import static extension org.eclipse.papyrus.amalthea.util.ComponentModelUtils.*
+import static extension org.eclipse.papyrus.amalthea.profile.utils.ComponentModelUtils.*
 import org.eclipse.app4mc.amalthea.model.AmaltheaFactory
 import org.eclipse.app4mc.amalthea.model.Port
 import org.eclipse.app4mc.amalthea.model.Composite

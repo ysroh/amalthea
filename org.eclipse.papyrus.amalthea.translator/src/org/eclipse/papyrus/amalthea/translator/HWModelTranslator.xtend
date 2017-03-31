@@ -1,6 +1,6 @@
 package org.eclipse.papyrus.amalthea.translator
 
-import static extension org.eclipse.papyrus.amalthea.util.HWModelUtils.*
+import static extension org.eclipse.papyrus.amalthea.profile.utils.HWModelUtils.*
 import org.eclipse.app4mc.amalthea.model.AmaltheaFactory
 import org.eclipse.app4mc.amalthea.model.HwSystem
 import org.eclipse.app4mc.amalthea.model.SystemType

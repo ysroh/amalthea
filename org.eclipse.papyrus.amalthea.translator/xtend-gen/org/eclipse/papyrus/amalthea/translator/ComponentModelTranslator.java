@@ -10,7 +10,7 @@ import org.eclipse.app4mc.amalthea.model.Composite;
 import org.eclipse.app4mc.amalthea.model.FInterfacePort;
 import org.eclipse.app4mc.amalthea.model.IAnnotatable;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.QualifiedPort;
-import org.eclipse.papyrus.amalthea.util.ComponentModelUtils;
+import org.eclipse.papyrus.amalthea.profile.utils.ComponentModelUtils;
 import org.eclipse.uml2.uml.Component;
 import org.eclipse.uml2.uml.ConnectableElement;
 import org.eclipse.uml2.uml.Connector;

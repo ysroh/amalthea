@@ -1,6 +1,6 @@
 package org.eclipse.papyrus.amalthea.translator
 
-import static extension org.eclipse.papyrus.amalthea.util.OSModelUtils.*
+import static extension org.eclipse.papyrus.amalthea.profile.utils.OSModelUtils.*
 import org.eclipse.app4mc.amalthea.model.AmaltheaFactory
 import org.eclipse.app4mc.amalthea.model.OperatingSystem
 import org.eclipse.app4mc.amalthea.model.TaskScheduler

@@ -1,4 +1,4 @@
-package org.eclipse.papyrus.amalthea.util;
+package org.eclipse.papyrus.amalthea.profile.utils;
 
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.TaskScheduler;
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.TaskSchedulingAlgorithm;

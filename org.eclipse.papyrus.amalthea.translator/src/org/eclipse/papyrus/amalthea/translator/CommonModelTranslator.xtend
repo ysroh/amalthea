@@ -1,6 +1,6 @@
 package org.eclipse.papyrus.amalthea.translator
 
-import static extension org.eclipse.papyrus.amalthea.util.CommonModelUtils.*
+import static extension org.eclipse.papyrus.amalthea.profile.utils.CommonModelUtils.*
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.FrequencyUnit
 import org.eclipse.papyrus.amalthea.profile.AMALTHEA.TimeUnit
 import org.eclipse.app4mc.amalthea.model.AmaltheaFactory
