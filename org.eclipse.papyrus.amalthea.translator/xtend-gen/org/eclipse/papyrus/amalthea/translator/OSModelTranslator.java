@@ -7,21 +7,11 @@ import org.eclipse.app4mc.amalthea.model.AmaltheaFactory;
 import org.eclipse.app4mc.amalthea.model.BaseObject;
 import org.eclipse.app4mc.amalthea.model.IAnnotatable;
 import org.eclipse.app4mc.amalthea.model.OperatingSystem;
-import org.eclipse.app4mc.amalthea.model.SchedulingHWUnit;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.papyrus.amalthea.profile.AMALTHEA.InterruptController;
-import org.eclipse.papyrus.amalthea.profile.AMALTHEA.InterruptSchedulingAlgorithm;
-import org.eclipse.papyrus.amalthea.profile.AMALTHEA.SchedulingUnit;
-import org.eclipse.papyrus.amalthea.profile.AMALTHEA.TaskScheduler;
-import org.eclipse.papyrus.amalthea.profile.AMALTHEA.TaskSchedulingAlgorithm;
-import org.eclipse.papyrus.amalthea.profile.AMALTHEA.Time;
 import org.eclipse.papyrus.amalthea.profile.utils.OSModelUtils;
 import org.eclipse.papyrus.amalthea.translator.CommonModelTranslator;
 import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.NamedElement;
 import org.eclipse.xtext.xbase.lib.CollectionLiterals;
-import org.eclipse.xtext.xbase.lib.Functions.Function1;
-import org.eclipse.xtext.xbase.lib.ListExtensions;
 
 /**
  * @author epp
@@ -54,35 +44,17 @@ public class OSModelTranslator {
   private final HashMap<ArrayList<?>, IAnnotatable> _createCache_translate = CollectionLiterals.newHashMap();
   
   private void _init_translate(final OperatingSystem it, final org.eclipse.uml2.uml.Class element) {
-    it.setName(element.getName());
-    boolean _matched = false;
-    boolean _isOperatingSystem = OSModelUtils.isOperatingSystem(element);
-    if (_isOperatingSystem) {
-      _matched=true;
-      final OperatingSystem newElement = ((OperatingSystem) it);
-      final Function1<TaskScheduler, NamedElement> _function = (TaskScheduler it_1) -> {
-        return ((NamedElement) it_1);
-      };
-      final Function1<NamedElement, IAnnotatable> _function_1 = (NamedElement it_1) -> {
-        return this.translate(it_1);
-      };
-      final Function1<IAnnotatable, org.eclipse.app4mc.amalthea.model.TaskScheduler> _function_2 = (IAnnotatable it_1) -> {
-        return ((org.eclipse.app4mc.amalthea.model.TaskScheduler) it_1);
-      };
-      newElement.getTaskSchedulers().addAll(
-        ListExtensions.<IAnnotatable, org.eclipse.app4mc.amalthea.model.TaskScheduler>map(ListExtensions.<NamedElement, IAnnotatable>map(ListExtensions.<TaskScheduler, NamedElement>map(OSModelUtils.getOperatingSystem(element).getTaskSchedulers(), _function), _function_1), _function_2));
-      final Function1<InterruptController, NamedElement> _function_3 = (InterruptController it_1) -> {
-        return ((NamedElement) it_1);
-      };
-      final Function1<NamedElement, IAnnotatable> _function_4 = (NamedElement it_1) -> {
-        return this.translate(it_1);
-      };
-      final Function1<IAnnotatable, org.eclipse.app4mc.amalthea.model.InterruptController> _function_5 = (IAnnotatable it_1) -> {
-        return ((org.eclipse.app4mc.amalthea.model.InterruptController) it_1);
-      };
-      newElement.getInterruptControllers().addAll(
-        ListExtensions.<IAnnotatable, org.eclipse.app4mc.amalthea.model.InterruptController>map(ListExtensions.<NamedElement, IAnnotatable>map(ListExtensions.<InterruptController, NamedElement>map(OSModelUtils.getOperatingSystem(element).getInterruptControllers(), _function_3), _function_4), _function_5));
-    }
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field getOperatingSystem is undefined for the type Class"
+      + "\nThe method or field getOperatingSystem is undefined for the type Class"
+      + "\ntaskSchedulers cannot be resolved"
+      + "\nmap cannot be resolved"
+      + "\nmap cannot be resolved"
+      + "\nmap cannot be resolved"
+      + "\ninterruptControllers cannot be resolved"
+      + "\nmap cannot be resolved"
+      + "\nmap cannot be resolved"
+      + "\nmap cannot be resolved");
   }
   
   protected IAnnotatable _translate(final NamedElement element) {
@@ -116,35 +88,19 @@ public class OSModelTranslator {
   private final HashMap<ArrayList<?>, IAnnotatable> _createCache_translate_1 = CollectionLiterals.newHashMap();
   
   private void _init_translate_1(final IAnnotatable it, final NamedElement element) {
-    boolean _matched = false;
-    boolean _isTaskScheduler = OSModelUtils.isTaskScheduler(element);
-    if (_isTaskScheduler) {
-      _matched=true;
-      final org.eclipse.app4mc.amalthea.model.TaskScheduler newElement = ((org.eclipse.app4mc.amalthea.model.TaskScheduler) it);
-      newElement.setName(element.getName());
-      newElement.setScheduleUnitPriority(OSModelUtils.getTaskScheduler(element).getScheduleUnitPriority());
-      SchedulingUnit _schedulingUnit = OSModelUtils.getTaskScheduler(element).getSchedulingUnit();
-      IAnnotatable _translate = this.translate(((Element) _schedulingUnit));
-      newElement.setSchedulingUnit(((org.eclipse.app4mc.amalthea.model.SchedulingUnit) _translate));
-      TaskSchedulingAlgorithm _taskSchedulingAlgorithm = OSModelUtils.getTaskScheduler(element).getTaskSchedulingAlgorithm();
-      IAnnotatable _translate_1 = this.translate(((Element) _taskSchedulingAlgorithm));
-      newElement.setSchedulingAlgorithm(((org.eclipse.app4mc.amalthea.model.TaskSchedulingAlgorithm) _translate_1));
-    }
-    if (!_matched) {
-      boolean _isInterruptController = OSModelUtils.isInterruptController(element);
-      if (_isInterruptController) {
-        _matched=true;
-        final org.eclipse.app4mc.amalthea.model.InterruptController newElement_1 = ((org.eclipse.app4mc.amalthea.model.InterruptController) it);
-        newElement_1.setName(element.getName());
-        newElement_1.setScheduleUnitPriority(OSModelUtils.getInterruptController(element).getScheduleUnitPriority());
-        SchedulingUnit _schedulingUnit_1 = OSModelUtils.getInterruptController(element).getSchedulingUnit();
-        IAnnotatable _translate_2 = this.translate(((Element) _schedulingUnit_1));
-        newElement_1.setSchedulingUnit(((org.eclipse.app4mc.amalthea.model.SchedulingUnit) _translate_2));
-        InterruptSchedulingAlgorithm _interruptSchedulingAlgorithm = OSModelUtils.getInterruptController(element).getInterruptSchedulingAlgorithm();
-        IAnnotatable _translate_3 = this.translate(((Element) _interruptSchedulingAlgorithm));
-        newElement_1.setSchedulingAlgorithm(((org.eclipse.app4mc.amalthea.model.InterruptSchedulingAlgorithm) _translate_3));
-      }
-    }
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field getTaskScheduler is undefined for the type NamedElement"
+      + "\nThe method or field getTaskScheduler is undefined for the type NamedElement"
+      + "\nThe method or field getTaskScheduler is undefined for the type NamedElement"
+      + "\nThe method or field getInterruptController is undefined for the type NamedElement"
+      + "\nThe method or field getInterruptController is undefined for the type NamedElement"
+      + "\nThe method or field getInterruptController is undefined for the type NamedElement"
+      + "\nscheduleUnitPriority cannot be resolved"
+      + "\nschedulingUnit cannot be resolved"
+      + "\ntaskSchedulingAlgorithm cannot be resolved"
+      + "\nscheduleUnitPriority cannot be resolved"
+      + "\nschedulingUnit cannot be resolved"
+      + "\ninterruptSchedulingAlgorithm cannot be resolved");
   }
   
   protected IAnnotatable _translate(final Element element) {
@@ -185,27 +141,9 @@ public class OSModelTranslator {
   private final HashMap<ArrayList<?>, IAnnotatable> _createCache_translate_2 = CollectionLiterals.newHashMap();
   
   private void _init_translate_2(final BaseObject it, final Element element) {
-    boolean _matched = false;
-    boolean _isSchedulingHWUnit = OSModelUtils.isSchedulingHWUnit(element);
-    if (_isSchedulingHWUnit) {
-      _matched=true;
-      final SchedulingHWUnit newElement = ((SchedulingHWUnit) it);
-      Time _delay = OSModelUtils.getSchedulingHWUnit(element).getDelay();
-      EObject _translate = this.commonTranslator.translate(((Element) _delay));
-      newElement.setDelay(((org.eclipse.app4mc.amalthea.model.Time) _translate));
-    }
-    if (!_matched) {
-      boolean _isOSEK = OSModelUtils.isOSEK(element);
-      if (_isOSEK) {
-        _matched=true;
-      }
-    }
-    if (!_matched) {
-      boolean _isPriorityBased = OSModelUtils.isPriorityBased(element);
-      if (_isPriorityBased) {
-        _matched=true;
-      }
-    }
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field getSchedulingHWUnit is undefined for the type Element"
+      + "\ndelay cannot be resolved");
   }
   
   public IAnnotatable translate(final Element element) {

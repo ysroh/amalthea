@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/uml2/2.2.0/GenModel"
+    modelDirectory="/org.eclipse.papyrus.amalthea.profile/src-gen"
+    modelPluginID="org.eclipse.papyrus.amalthea.profile" modelName="Amalthea" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.uml2.uml.ecore.importer" complianceLevel="8.0" copyrightFields="false"
+    usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../org.eclipse.papyrus.sysml14/resources/profile/SysML.profile.genmodel#//sysml14 ../../org.eclipse.uml2.types/model/Types.genmodel#//types ../../org.eclipse.uml2.uml/model/UML.genmodel#//uml"
+    operationReflection="true" importOrganizing="true">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.uml2.uml.ecore.importer">
+    <details key="OPPOSITE_ROLE_NAMES" value="IGNORE"/>
+    <details key="DUPLICATE_FEATURES" value="DISCARD"/>
+    <details key="ANNOTATION_DETAILS" value="PROCESS"/>
+    <details key="PROPERTY_DEFAULT_EXPRESSIONS" value="IGNORE"/>
+    <details key="DUPLICATE_FEATURE_INHERITANCE" value="DISCARD"/>
+    <details key="COMMENTS" value="PROCESS"/>
+    <details key="DERIVED_FEATURES" value="PROCESS"/>
+    <details key="SUPER_CLASS_ORDER" value="PROCESS"/>
+    <details key="DUPLICATE_OPERATION_INHERITANCE" value="DISCARD"/>
+    <details key="REDEFINING_OPERATIONS" value="REPORT"/>
+    <details key="INVARIANT_CONSTRAINTS" value="PROCESS"/>
+    <details key="UNION_PROPERTIES" value="REPORT"/>
+    <details key="DUPLICATE_OPERATIONS" value="DISCARD"/>
+    <details key="NON_API_INVARIANTS" value="IGNORE"/>
+    <details key="CAMEL_CASE_NAMES" value="IGNORE"/>
+    <details key="SUBSETTING_PROPERTIES" value="REPORT"/>
+    <details key="OPERATION_BODIES" value="IGNORE"/>
+    <details key="ECORE_TAGGED_VALUES" value="PROCESS"/>
+    <details key="UNTYPED_PROPERTIES" value="REPORT"/>
+    <details key="REDEFINING_PROPERTIES" value="REPORT"/>
+    <details key="INVOCATION_DELEGATES" value="IGNORE"/>
+    <details key="VALIDATION_DELEGATES" value="IGNORE"/>
+  </genAnnotations>
+  <foreignModel>amalthea.profile.uml</foreignModel>
+  <genPackages xsi:type="genmodel:GenPackage" prefix="Amalthea" basePackage="org.eclipse.papyrus.amalthea.profile"
+      disposableProviderFactory="true" ecorePackage="amalthea.ecore#/">
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//Dummy"/>
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Common" basePackage="org.eclipse.papyrus.amalthea.profile.amalthea"
+        disposableProviderFactory="true" ecorePackage="amalthea.ecore#//common">
+      <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="amalthea.ecore#//common/TimeUnit">
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//common/TimeUnit/_undefined_"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//common/TimeUnit/s"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//common/TimeUnit/ms"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//common/TimeUnit/us"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//common/TimeUnit/ns"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//common/TimeUnit/ps"/>
+      </genEnums>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//common/CustomProperty">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//common/CustomProperty/key"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="amalthea.ecore#//common/AbstractTime">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//common/AbstractTime/value"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//common/AbstractTime/unit"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//common/Time"/>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="amalthea.ecore#//common/IAnnotatable"/>
+    </nestedGenPackages>
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Components" basePackage="org.eclipse.papyrus.amalthea.profile.amalthea"
+        disposableProviderFactory="true" ecorePackage="amalthea.ecore#//components">
+      <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="amalthea.ecore#//components/InterfaceKind">
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//components/InterfaceKind/_undefined_"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//components/InterfaceKind/provides"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//components/InterfaceKind/requires"/>
+      </genEnums>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//components/Component">
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference amalthea.ecore#//components/Component/base_Component"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference amalthea.ecore#//components/Component/ports"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//components/FInterfacePort">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//components/FInterfacePort/kind"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference amalthea.ecore#//components/FInterfacePort/base_Port"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//components/Composite">
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference amalthea.ecore#//components/Composite/componentinstances"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//components/ComponentInstance">
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference amalthea.ecore#//components/ComponentInstance/base_Property"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Hardware" basePackage="org.eclipse.papyrus.amalthea.profile.amalthea"
+        disposableProviderFactory="true" ecorePackage="amalthea.ecore#//hardware">
+      <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="amalthea.ecore#//hardware/SchedType">
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//hardware/SchedType/_undefined_"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//hardware/SchedType/RROBIN"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//hardware/SchedType/PRIORITY"/>
+      </genEnums>
+      <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="amalthea.ecore#//hardware/BusType">
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//hardware/BusType/_undefined_"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//hardware/BusType/CAN"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//hardware/BusType/TTCAN"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//hardware/BusType/LIN"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//hardware/BusType/FLEXRAY"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//hardware/BusType/ETHERNET"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//hardware/BusType/SPI"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//hardware/BusType/NA"/>
+      </genEnums>
+      <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="amalthea.ecore#//hardware/QType">
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//hardware/QType/_undefined_"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//hardware/QType/DYNAMIC"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//hardware/QType/STATIC"/>
+      </genEnums>
+      <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="amalthea.ecore#//hardware/FrequencyUnit">
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//hardware/FrequencyUnit/_undefined_"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//hardware/FrequencyUnit/Hz"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//hardware/FrequencyUnit/kHz"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//hardware/FrequencyUnit/MHz"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//hardware/FrequencyUnit/GHz"/>
+      </genEnums>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//hardware/SystemType"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//hardware/ECUType"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//hardware/MicrocontrollerType"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//hardware/HwSystem"/>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="amalthea.ecore#//hardware/ComplexNode"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//hardware/ECU"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//hardware/Microcontroller"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//hardware/Network"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//hardware/NetworkType">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//hardware/NetworkType/schedPolicy"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//hardware/NetworkType/bitWidth"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//hardware/Core">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//hardware/Core/lockstepGroup"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//hardware/Bus">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//hardware/Bus/busType"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//hardware/Quartz">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//hardware/Quartz/type"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//hardware/Prescaler">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//hardware/Prescaler/clockRatio"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//hardware/Prescaler/name"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//hardware/Frequency">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//hardware/Frequency/value"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//hardware/Frequency/unit"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//hardware/HWModel"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//hardware/CoreType">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//hardware/CoreType/bitWidth"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//hardware/CoreType/instructionsPerCycle"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Software" basePackage="org.eclipse.papyrus.amalthea.profile.amalthea"
+        disposableProviderFactory="true" ecorePackage="amalthea.ecore#//software">
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//software/Runnable">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//software/Runnable/service"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//software/SoftwareModel"/>
+    </nestedGenPackages>
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Os" basePackage="org.eclipse.papyrus.amalthea.profile.amalthea"
+        disposableProviderFactory="true" ecorePackage="amalthea.ecore#//os">
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//os/OperatingSystem"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//os/TaskScheduler"/>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="amalthea.ecore#//os/Scheduler">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//os/Scheduler/scheduleUnitPriority"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//os/InterruptController"/>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="amalthea.ecore#//os/SchedulingUnit"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//os/SchedulingHWUnit"/>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="amalthea.ecore#//os/TaskSchedulingAlgorithm"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//os/OSEK"/>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="amalthea.ecore#//os/InterruptSchedulingAlgorithm"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//os/PriorityBased"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//os/OSModel"/>
+    </nestedGenPackages>
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Mapping" basePackage="org.eclipse.papyrus.amalthea.profile.amalthea"
+        disposableProviderFactory="true" ecorePackage="amalthea.ecore#//mapping">
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//mapping/MappingModel"/>
+    </nestedGenPackages>
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Stimuli" basePackage="org.eclipse.papyrus.amalthea.profile.amalthea"
+        disposableProviderFactory="true" ecorePackage="amalthea.ecore#//stimuli">
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//stimuli/Single"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//stimuli/StimuliModel"/>
+    </nestedGenPackages>
+    <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Constraints" basePackage="org.eclipse.papyrus.amalthea.profile.amalthea"
+        disposableProviderFactory="true" ecorePackage="amalthea.ecore#//constraints">
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//constraints/ConstraintsModel"/>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

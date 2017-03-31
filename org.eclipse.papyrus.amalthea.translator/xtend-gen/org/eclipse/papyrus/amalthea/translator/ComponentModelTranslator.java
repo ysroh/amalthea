@@ -1,15 +1,13 @@
 package org.eclipse.papyrus.amalthea.translator;
 
-import com.google.common.collect.Iterables;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import org.eclipse.app4mc.amalthea.model.AmaltheaFactory;
 import org.eclipse.app4mc.amalthea.model.ComponentInstance;
-import org.eclipse.app4mc.amalthea.model.Composite;
 import org.eclipse.app4mc.amalthea.model.FInterfacePort;
 import org.eclipse.app4mc.amalthea.model.IAnnotatable;
-import org.eclipse.papyrus.amalthea.profile.AMALTHEA.QualifiedPort;
+import org.eclipse.app4mc.amalthea.model.QualifiedPort;
 import org.eclipse.papyrus.amalthea.profile.utils.ComponentModelUtils;
 import org.eclipse.uml2.uml.Component;
 import org.eclipse.uml2.uml.ConnectableElement;
@@ -20,9 +18,6 @@ import org.eclipse.uml2.uml.Port;
 import org.eclipse.uml2.uml.Property;
 import org.eclipse.uml2.uml.Type;
 import org.eclipse.xtext.xbase.lib.CollectionLiterals;
-import org.eclipse.xtext.xbase.lib.Functions.Function1;
-import org.eclipse.xtext.xbase.lib.IterableExtensions;
-import org.eclipse.xtext.xbase.lib.ListExtensions;
 
 /**
  * @author epp
@@ -60,45 +55,13 @@ public class ComponentModelTranslator {
   private final HashMap<ArrayList<?>, IAnnotatable> _createCache_translate = CollectionLiterals.newHashMap();
   
   private void _init_translate(final org.eclipse.app4mc.amalthea.model.Component it, final Component element) {
-    it.setName(element.getName());
-    final Function1<Port, IAnnotatable> _function = (Port it_1) -> {
-      return this.translate(it_1);
-    };
-    final Function1<IAnnotatable, org.eclipse.app4mc.amalthea.model.Port> _function_1 = (IAnnotatable it_1) -> {
-      return ((org.eclipse.app4mc.amalthea.model.Port) it_1);
-    };
-    it.getPorts().addAll(ListExtensions.<IAnnotatable, org.eclipse.app4mc.amalthea.model.Port>map(ListExtensions.<Port, IAnnotatable>map(element.getOwnedPorts(), _function), _function_1));
-    boolean _isComposite = ComponentModelUtils.isComposite(element);
-    if (_isComposite) {
-      final Composite composite = ((Composite) it);
-      final Function1<Property, Boolean> _function_2 = (Property it_1) -> {
-        return Boolean.valueOf(ComponentModelUtils.isComponentInstance(it_1));
-      };
-      final Function1<Property, IAnnotatable> _function_3 = (Property it_1) -> {
-        return this.translate(it_1);
-      };
-      final Function1<IAnnotatable, ComponentInstance> _function_4 = (IAnnotatable it_1) -> {
-        return ((ComponentInstance) it_1);
-      };
-      Iterables.<ComponentInstance>addAll(composite.getComponentInstances(), IterableExtensions.<IAnnotatable, ComponentInstance>map(IterableExtensions.<Property, IAnnotatable>map(IterableExtensions.<Property>filter(element.getOwnedAttributes(), _function_2), _function_3), _function_4));
-      final Function1<Connector, IAnnotatable> _function_5 = (Connector it_1) -> {
-        return this.translate(it_1);
-      };
-      final Function1<IAnnotatable, org.eclipse.app4mc.amalthea.model.Connector> _function_6 = (IAnnotatable it_1) -> {
-        return ((org.eclipse.app4mc.amalthea.model.Connector) it_1);
-      };
-      composite.getConnectors().addAll(ListExtensions.<IAnnotatable, org.eclipse.app4mc.amalthea.model.Connector>map(ListExtensions.<Connector, IAnnotatable>map(element.getOwnedConnectors(), _function_5), _function_6));
-      final Function1<QualifiedPort, ConnectorEnd> _function_7 = (QualifiedPort it_1) -> {
-        return it_1.getBase_ConnectorEnd();
-      };
-      final Function1<ConnectorEnd, IAnnotatable> _function_8 = (ConnectorEnd it_1) -> {
-        return this.translate(it_1);
-      };
-      final Function1<IAnnotatable, org.eclipse.app4mc.amalthea.model.QualifiedPort> _function_9 = (IAnnotatable it_1) -> {
-        return ((org.eclipse.app4mc.amalthea.model.QualifiedPort) it_1);
-      };
-      composite.getGroundedPorts().addAll(ListExtensions.<IAnnotatable, org.eclipse.app4mc.amalthea.model.QualifiedPort>map(ListExtensions.<ConnectorEnd, IAnnotatable>map(ListExtensions.<QualifiedPort, ConnectorEnd>map(ComponentModelUtils.getComposite(element).getGroundedPorts(), _function_7), _function_8), _function_9));
-    }
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field getComposite is undefined for the type Component"
+      + "\nThe method or field base_ConnectorEnd is undefined"
+      + "\ngroundedPorts cannot be resolved"
+      + "\nmap cannot be resolved"
+      + "\nmap cannot be resolved"
+      + "\nmap cannot be resolved");
   }
   
   protected IAnnotatable _translate(final Port element) {
@@ -171,22 +134,18 @@ public class ComponentModelTranslator {
   private final HashMap<ArrayList<?>, IAnnotatable> _createCache_translate_3 = CollectionLiterals.newHashMap();
   
   private void _init_translate_3(final org.eclipse.app4mc.amalthea.model.Connector it, final Connector element) {
-    ConnectorEnd source = element.getEnds().get(0);
-    ConnectorEnd target = element.getEnds().get(1);
-    boolean _isConnector = ComponentModelUtils.isConnector(element);
-    if (_isConnector) {
-      source = ComponentModelUtils.getConnector(element).getSourcePort().getBase_ConnectorEnd();
-      target = ComponentModelUtils.getConnector(element).getTargetPort().getBase_ConnectorEnd();
-    }
-    IAnnotatable _translate = this.translate(source);
-    it.setSourcePort(((org.eclipse.app4mc.amalthea.model.QualifiedPort) _translate));
-    IAnnotatable _translate_1 = this.translate(target);
-    it.setTargetPort(((org.eclipse.app4mc.amalthea.model.QualifiedPort) _translate_1));
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field getConnector is undefined for the type Connector"
+      + "\nThe method or field getConnector is undefined for the type Connector"
+      + "\nsourcePort cannot be resolved"
+      + "\nbase_ConnectorEnd cannot be resolved"
+      + "\ntargetPort cannot be resolved"
+      + "\nbase_ConnectorEnd cannot be resolved");
   }
   
   protected IAnnotatable _translate(final ConnectorEnd element) {
     final ArrayList<?> _cacheKey = CollectionLiterals.newArrayList(element);
-    final org.eclipse.app4mc.amalthea.model.QualifiedPort _result;
+    final QualifiedPort _result;
     synchronized (_createCache_translate_4) {
       if (_createCache_translate_4.containsKey(_cacheKey)) {
         return _createCache_translate_4.get(_cacheKey);
@@ -200,7 +159,7 @@ public class ComponentModelTranslator {
   
   private final HashMap<ArrayList<?>, IAnnotatable> _createCache_translate_4 = CollectionLiterals.newHashMap();
   
-  private void _init_translate_4(final org.eclipse.app4mc.amalthea.model.QualifiedPort it, final ConnectorEnd element) {
+  private void _init_translate_4(final QualifiedPort it, final ConnectorEnd element) {
     IAnnotatable _translate = this.translate(element.getPartWithPort());
     it.setInstance(((ComponentInstance) _translate));
     ConnectableElement _role = element.getRole();

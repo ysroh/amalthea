@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="amalthea" nsURI="http://www.eclipse.org/papyrus/2017/Amalthea"
+    nsPrefix="Amalthea">
+  <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <details key="originalName" value="Amalthea"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Dummy"/>
+  <eSubpackages name="common" nsURI="http://www.eclipse.org/papyrus/2017/Amalthea/Common"
+      nsPrefix="Common">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="CommonModel"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="CustomProperty">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="AbstractTime" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" ordered="false"
+          lowerBound="1" eType="#//common/TimeUnit"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="TimeUnit">
+      <eLiterals name="_undefined_"/>
+      <eLiterals name="s" value="1"/>
+      <eLiterals name="ms" value="2"/>
+      <eLiterals name="us" value="3"/>
+      <eLiterals name="ns" value="4"/>
+      <eLiterals name="ps" value="5"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Time" eSuperTypes="#//common/AbstractTime"/>
+    <eClassifiers xsi:type="ecore:EClass" name="IAnnotatable" abstract="true"/>
+  </eSubpackages>
+  <eSubpackages name="components" nsURI="http://www.eclipse.org/papyrus/2017/Amalthea/Components"
+      nsPrefix="Components">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="ComponentsModel"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="Component">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Component" ordered="false"
+          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Component"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="ports" ordered="false"
+          lowerBound="1" eType="#//components/FInterfacePort"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="FInterfacePort">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" ordered="false"
+          lowerBound="1" eType="#//components/InterfaceKind" defaultValueLiteral="_undefined_"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Port" ordered="false"
+          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Port"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="InterfaceKind">
+      <eLiterals name="_undefined_"/>
+      <eLiterals name="provides" value="1"/>
+      <eLiterals name="requires" value="2"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Composite" eSuperTypes="#//components/Component">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="componentinstances" ordered="false"
+          upperBound="-1" eType="#//components/ComponentInstance"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ComponentInstance">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Property" ordered="false"
+          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="hardware" nsURI="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"
+      nsPrefix="Hardware">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="HWModel"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="SystemType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ECUType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="MicrocontrollerType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="HwSystem" eSuperTypes="#//hardware/ComplexNode"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ComplexNode" abstract="true" eSuperTypes="../../org.eclipse.papyrus.sysml14/resources/profile/sysml.ecore#//blocks/Block"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ECU" eSuperTypes="#//hardware/ComplexNode"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Microcontroller" eSuperTypes="#//hardware/ComplexNode"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Network" eSuperTypes="#//hardware/ComplexNode"/>
+    <eClassifiers xsi:type="ecore:EClass" name="NetworkType">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="schedPolicy" ordered="false"
+          lowerBound="1" eType="#//hardware/SchedType" defaultValueLiteral="_undefined_"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="bitWidth" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"
+          defaultValueLiteral="0"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="SchedType">
+      <eLiterals name="_undefined_"/>
+      <eLiterals name="RROBIN" value="1"/>
+      <eLiterals name="PRIORITY" value="2"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Core" eSuperTypes="#//hardware/ComplexNode">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="lockstepGroup" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"
+          defaultValueLiteral="0"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Bus" eSuperTypes="#//hardware/NetworkType">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="busType" ordered="false"
+          lowerBound="1" eType="#//hardware/BusType" defaultValueLiteral="_undefined_"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="BusType">
+      <eLiterals name="_undefined_"/>
+      <eLiterals name="CAN" value="1"/>
+      <eLiterals name="TTCAN" value="2"/>
+      <eLiterals name="LIN" value="3"/>
+      <eLiterals name="FLEXRAY" value="4"/>
+      <eLiterals name="ETHERNET" value="5"/>
+      <eLiterals name="SPI" value="6"/>
+      <eLiterals name="NA" value="7"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Quartz" eSuperTypes="#//hardware/ComplexNode">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" ordered="false"
+          lowerBound="1" eType="#//hardware/QType" defaultValueLiteral="_undefined_"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="QType">
+      <eLiterals name="_undefined_"/>
+      <eLiterals name="DYNAMIC" value="1"/>
+      <eLiterals name="STATIC" value="2"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Prescaler">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="clockRatio" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Real"
+          defaultValueLiteral="0.0"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false"
+          lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Frequency">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Real"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" ordered="false"
+          lowerBound="1" eType="#//hardware/FrequencyUnit" defaultValueLiteral="_undefined_"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="FrequencyUnit">
+      <eLiterals name="_undefined_"/>
+      <eLiterals name="Hz" value="1"/>
+      <eLiterals name="kHz" value="2"/>
+      <eLiterals name="MHz" value="3"/>
+      <eLiterals name="GHz" value="4"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="HWModel"/>
+    <eClassifiers xsi:type="ecore:EClass" name="CoreType">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="bitWidth" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"
+          defaultValueLiteral="0"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="instructionsPerCycle"
+          ordered="false" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"
+          defaultValueLiteral="0"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="software" nsURI="http://www.eclipse.org/papyrus/2017/Amalthea/Software"
+      nsPrefix="Software">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="SWModel"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="Runnable">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="service" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SoftwareModel"/>
+  </eSubpackages>
+  <eSubpackages name="os" nsURI="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem"
+      nsPrefix="Os">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="OSModel"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="OperatingSystem" eSuperTypes="../../org.eclipse.papyrus.sysml14/resources/profile/sysml.ecore#//blocks/Block"/>
+    <eClassifiers xsi:type="ecore:EClass" name="TaskScheduler" eSuperTypes="#//os/Scheduler"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Scheduler" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="scheduleUnitPriority"
+          ordered="false" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"
+          defaultValueLiteral="0"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="InterruptController" eSuperTypes="#//os/Scheduler"/>
+    <eClassifiers xsi:type="ecore:EClass" name="SchedulingUnit" abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="SchedulingHWUnit" eSuperTypes="#//os/SchedulingUnit"/>
+    <eClassifiers xsi:type="ecore:EClass" name="TaskSchedulingAlgorithm" abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="OSEK" eSuperTypes="#//os/TaskSchedulingAlgorithm"/>
+    <eClassifiers xsi:type="ecore:EClass" name="InterruptSchedulingAlgorithm" abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PriorityBased" eSuperTypes="#//os/InterruptSchedulingAlgorithm"/>
+    <eClassifiers xsi:type="ecore:EClass" name="OSModel"/>
+  </eSubpackages>
+  <eSubpackages name="mapping" nsURI="http://www.eclipse.org/papyrus/2017/Amalthea/Mapping"
+      nsPrefix="Mapping">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="MappingModel"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="MappingModel"/>
+  </eSubpackages>
+  <eSubpackages name="stimuli" nsURI="http://www.eclipse.org/papyrus/2017/Amalthea/Stimuli"
+      nsPrefix="Stimuli">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="StimuliModel"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="Single"/>
+    <eClassifiers xsi:type="ecore:EClass" name="StimuliModel"/>
+  </eSubpackages>
+  <eSubpackages name="constraints" nsURI="http://www.eclipse.org/papyrus/2017/Amalthea/Constraints"
+      nsPrefix="Constraints">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="ConstraintsModel"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="ConstraintsModel"/>
+  </eSubpackages>
+</ecore:EPackage>

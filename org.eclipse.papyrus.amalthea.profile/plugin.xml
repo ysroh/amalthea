@@ -6,11 +6,75 @@
 
 <plugin>
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated amalthea -->
+      <!-- @generated amalthea.profile -->
       <package
-            uri="http://www.eclipse.org/papyrus/2017/amalthea"
-            class="org.eclipse.papyrus.amalthea.profile.AMALTHEA.AMALTHEAPackage"
-            genModel="umlProfile/amalthea.genmodel"/>
+            uri="http://www.eclipse.org/papyrus/2017/Amalthea"
+            class="org.eclipse.papyrus.amalthea.profile.amalthea.AmaltheaPackage"
+            genModel="umlProfile/amalthea.profile.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated amalthea.profile -->
+      <package
+            uri="http://www.eclipse.org/papyrus/2017/Amalthea/Common"
+            class="org.eclipse.papyrus.amalthea.profile.amalthea.common.CommonPackage"
+            genModel="umlProfile/amalthea.profile.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated amalthea.profile -->
+      <package
+            uri="http://www.eclipse.org/papyrus/2017/Amalthea/Components"
+            class="org.eclipse.papyrus.amalthea.profile.amalthea.components.ComponentsPackage"
+            genModel="umlProfile/amalthea.profile.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated amalthea.profile -->
+      <package
+            uri="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"
+            class="org.eclipse.papyrus.amalthea.profile.amalthea.hardware.HardwarePackage"
+            genModel="umlProfile/amalthea.profile.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated amalthea.profile -->
+      <package
+            uri="http://www.eclipse.org/papyrus/2017/Amalthea/Software"
+            class="org.eclipse.papyrus.amalthea.profile.amalthea.software.SoftwarePackage"
+            genModel="umlProfile/amalthea.profile.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated amalthea.profile -->
+      <package
+            uri="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem"
+            class="org.eclipse.papyrus.amalthea.profile.amalthea.os.OsPackage"
+            genModel="umlProfile/amalthea.profile.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated amalthea.profile -->
+      <package
+            uri="http://www.eclipse.org/papyrus/2017/Amalthea/Mapping"
+            class="org.eclipse.papyrus.amalthea.profile.amalthea.mapping.MappingPackage"
+            genModel="umlProfile/amalthea.profile.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated amalthea.profile -->
+      <package
+            uri="http://www.eclipse.org/papyrus/2017/Amalthea/Stimuli"
+            class="org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.StimuliPackage"
+            genModel="umlProfile/amalthea.profile.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated amalthea.profile -->
+      <package
+            uri="http://www.eclipse.org/papyrus/2017/Amalthea/Constraints"
+            class="org.eclipse.papyrus.amalthea.profile.amalthea.constraints.ConstraintsPackage"
+            genModel="umlProfile/amalthea.profile.genmodel"/>
    </extension>
    <extension
          point="org.eclipse.emf.ecore.uri_mapping">
@@ -22,9 +86,8 @@
    <extension
          point="org.eclipse.uml2.uml.generated_package">
       <profile
-            location="pathmap://AMALTHEA_PROFILE/amalthea.profile.uml#_mm5V8BLxEeeFmrJgn4qa2A"
+            location="pathmap://AMALTHEA_PROFILE/amalthea.profile.uml#_PUCPMBYtEeeFzte_Mj5jqA"
             uri="http://www.eclipse.org/papyrus/2017/amalthea">
       </profile>
    </extension>
-
 </plugin>
