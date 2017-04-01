@@ -68,24 +68,6 @@ public class HardwareSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case HardwarePackage.SYSTEM_TYPE: {
-				SystemType systemType = (SystemType)theEObject;
-				T result = caseSystemType(systemType);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case HardwarePackage.ECU_TYPE: {
-				ECUType ecuType = (ECUType)theEObject;
-				T result = caseECUType(ecuType);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case HardwarePackage.MICROCONTROLLER_TYPE: {
-				MicrocontrollerType microcontrollerType = (MicrocontrollerType)theEObject;
-				T result = caseMicrocontrollerType(microcontrollerType);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case HardwarePackage.HW_SYSTEM: {
 				HwSystem hwSystem = (HwSystem)theEObject;
 				T result = caseHwSystem(hwSystem);
@@ -98,6 +80,35 @@ public class HardwareSwitch<T> extends Switch<T> {
 				ComplexNode complexNode = (ComplexNode)theEObject;
 				T result = caseComplexNode(complexNode);
 				if (result == null) result = caseBlock(complexNode);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case HardwarePackage.QUARTZ: {
+				Quartz quartz = (Quartz)theEObject;
+				T result = caseQuartz(quartz);
+				if (result == null) result = caseComplexNode(quartz);
+				if (result == null) result = caseBlock(quartz);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case HardwarePackage.PRESCALER: {
+				Prescaler prescaler = (Prescaler)theEObject;
+				T result = casePrescaler(prescaler);
+				if (result == null) result = caseBlock(prescaler);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case HardwarePackage.NETWORK: {
+				Network network = (Network)theEObject;
+				T result = caseNetwork(network);
+				if (result == null) result = caseComplexNode(network);
+				if (result == null) result = caseBlock(network);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case HardwarePackage.NETWORK_TYPE: {
+				NetworkType networkType = (NetworkType)theEObject;
+				T result = caseNetworkType(networkType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -117,25 +128,35 @@ public class HardwareSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case HardwarePackage.NETWORK: {
-				Network network = (Network)theEObject;
-				T result = caseNetwork(network);
-				if (result == null) result = caseComplexNode(network);
-				if (result == null) result = caseBlock(network);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case HardwarePackage.NETWORK_TYPE: {
-				NetworkType networkType = (NetworkType)theEObject;
-				T result = caseNetworkType(networkType);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case HardwarePackage.CORE: {
 				Core core = (Core)theEObject;
 				T result = caseCore(core);
 				if (result == null) result = caseComplexNode(core);
 				if (result == null) result = caseBlock(core);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case HardwarePackage.CORE_TYPE: {
+				CoreType coreType = (CoreType)theEObject;
+				T result = caseCoreType(coreType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case HardwarePackage.MICROCONTROLLER_TYPE: {
+				MicrocontrollerType microcontrollerType = (MicrocontrollerType)theEObject;
+				T result = caseMicrocontrollerType(microcontrollerType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case HardwarePackage.ECU_TYPE: {
+				ECUType ecuType = (ECUType)theEObject;
+				T result = caseECUType(ecuType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case HardwarePackage.SYSTEM_TYPE: {
+				SystemType systemType = (SystemType)theEObject;
+				T result = caseSystemType(systemType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -146,85 +167,14 @@ public class HardwareSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case HardwarePackage.QUARTZ: {
-				Quartz quartz = (Quartz)theEObject;
-				T result = caseQuartz(quartz);
-				if (result == null) result = caseComplexNode(quartz);
-				if (result == null) result = caseBlock(quartz);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case HardwarePackage.PRESCALER: {
-				Prescaler prescaler = (Prescaler)theEObject;
-				T result = casePrescaler(prescaler);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case HardwarePackage.FREQUENCY: {
 				Frequency frequency = (Frequency)theEObject;
 				T result = caseFrequency(frequency);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case HardwarePackage.HW_MODEL: {
-				HWModel hwModel = (HWModel)theEObject;
-				T result = caseHWModel(hwModel);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case HardwarePackage.CORE_TYPE: {
-				CoreType coreType = (CoreType)theEObject;
-				T result = caseCoreType(coreType);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			default: return defaultCase(theEObject);
 		}
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>System Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>System Type</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSystemType(SystemType object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>ECU Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>ECU Type</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseECUType(ECUType object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Microcontroller Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Microcontroller Type</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMicrocontrollerType(MicrocontrollerType object) {
-		return null;
 	}
 
 	/**
@@ -254,96 +204,6 @@ public class HardwareSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseComplexNode(ComplexNode object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>ECU</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>ECU</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseECU(ECU object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Microcontroller</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Microcontroller</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMicrocontroller(Microcontroller object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Network</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Network</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseNetwork(Network object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Network Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Network Type</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseNetworkType(NetworkType object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Core</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Core</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCore(Core object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Bus</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Bus</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseBus(Bus object) {
 		return null;
 	}
 
@@ -378,32 +238,77 @@ public class HardwareSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Frequency</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Network</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Frequency</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Network</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFrequency(Frequency object) {
+	public T caseNetwork(Network object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>HW Model</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Network Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>HW Model</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Network Type</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseHWModel(HWModel object) {
+	public T caseNetworkType(NetworkType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ECU</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ECU</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseECU(ECU object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Microcontroller</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Microcontroller</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMicrocontroller(Microcontroller object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Core</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Core</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCore(Core object) {
 		return null;
 	}
 
@@ -419,6 +324,81 @@ public class HardwareSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCoreType(CoreType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Microcontroller Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Microcontroller Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMicrocontrollerType(MicrocontrollerType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ECU Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ECU Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseECUType(ECUType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>System Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>System Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSystemType(SystemType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Bus</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Bus</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBus(Bus object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Frequency</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Frequency</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFrequency(Frequency object) {
 		return null;
 	}
 

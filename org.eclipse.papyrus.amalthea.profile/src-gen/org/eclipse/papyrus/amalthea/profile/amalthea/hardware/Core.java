@@ -13,6 +13,7 @@ package org.eclipse.papyrus.amalthea.profile.amalthea.hardware;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Core#getLockstepGroup <em>Lockstep Group</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Core#getCoretype <em>Coretype</em>}</li>
  * </ul>
  *
  * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.HardwarePackage#getCore()
@@ -46,5 +47,31 @@ public interface Core extends ComplexNode {
 	 * @generated
 	 */
 	void setLockstepGroup(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Coretype</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Coretype</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Coretype</em>' reference.
+	 * @see #setCoretype(CoreType)
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.HardwarePackage#getCore_Coretype()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	CoreType getCoretype();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Core#getCoretype <em>Coretype</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Coretype</em>' reference.
+	 * @see #getCoretype()
+	 * @generated
+	 */
+	void setCoretype(CoreType value);
 
 } // Core

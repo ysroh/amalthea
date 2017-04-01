@@ -6,6 +6,7 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
@@ -31,7 +32,6 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.CoreType;
 import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.ECUType;
 import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Frequency;
 import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.FrequencyUnit;
-import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.HWModel;
 import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.HardwareFactory;
 import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.HardwarePackage;
 import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.HwSystem;
@@ -69,6 +69,8 @@ import org.eclipse.papyrus.sysml14.sysmlPackage;
 
 import org.eclipse.uml2.types.TypesPackage;
 
+import org.eclipse.uml2.uml.UMLPackage;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model <b>Package</b>.
@@ -76,27 +78,6 @@ import org.eclipse.uml2.types.TypesPackage;
  * @generated
  */
 public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass systemTypeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass ecuTypeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass microcontrollerTypeEClass = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -110,48 +91,6 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 	 * @generated
 	 */
 	private EClass complexNodeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass ecuEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass microcontrollerEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass networkEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass networkTypeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass coreEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass busEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -172,14 +111,35 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass frequencyEClass = null;
+	private EClass networkEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass hwModelEClass = null;
+	private EClass networkTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ecuEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass microcontrollerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass coreEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -187,6 +147,48 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 	 * @generated
 	 */
 	private EClass coreTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass microcontrollerTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ecuTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass systemTypeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass busEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass frequencyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum qTypeEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -201,13 +203,6 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 	 * @generated
 	 */
 	private EEnum busTypeEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum qTypeEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -311,35 +306,26 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSystemType() {
-		return systemTypeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getECUType() {
-		return ecuTypeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getMicrocontrollerType() {
-		return microcontrollerTypeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getHwSystem() {
 		return hwSystemEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getHwSystem_Ecus() {
+		return (EReference)hwSystemEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getHwSystem_Systemtype() {
+		return (EReference)hwSystemEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -356,8 +342,8 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getECU() {
-		return ecuEClass;
+	public EReference getComplexNode_Quartzes() {
+		return (EReference)complexNodeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -365,8 +351,8 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getMicrocontroller() {
-		return microcontrollerEClass;
+	public EReference getComplexNode_Prescaler() {
+		return (EReference)complexNodeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -374,71 +360,8 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getNetwork() {
-		return networkEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getNetworkType() {
-		return networkTypeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getNetworkType_SchedPolicy() {
-		return (EAttribute)networkTypeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getNetworkType_BitWidth() {
-		return (EAttribute)networkTypeEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getCore() {
-		return coreEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCore_LockstepGroup() {
-		return (EAttribute)coreEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getBus() {
-		return busEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getBus_BusType() {
-		return (EAttribute)busEClass.getEStructuralFeatures().get(0);
+	public EReference getComplexNode_Networks() {
+		return (EReference)complexNodeEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -482,8 +405,8 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPrescaler_Name() {
-		return (EAttribute)prescalerEClass.getEStructuralFeatures().get(1);
+	public EClass getNetwork() {
+		return networkEClass;
 	}
 
 	/**
@@ -491,8 +414,8 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getFrequency() {
-		return frequencyEClass;
+	public EReference getNetwork_Networktype() {
+		return (EReference)networkEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -500,8 +423,8 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getFrequency_Value() {
-		return (EAttribute)frequencyEClass.getEStructuralFeatures().get(0);
+	public EClass getNetworkType() {
+		return networkTypeEClass;
 	}
 
 	/**
@@ -509,8 +432,8 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getFrequency_Unit() {
-		return (EAttribute)frequencyEClass.getEStructuralFeatures().get(1);
+	public EAttribute getNetworkType_SchedPolicy() {
+		return (EAttribute)networkTypeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -518,8 +441,98 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getHWModel() {
-		return hwModelEClass;
+	public EAttribute getNetworkType_BitWidth() {
+		return (EAttribute)networkTypeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getNetworkType_Base_DataType() {
+		return (EReference)networkTypeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getECU() {
+		return ecuEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getECU_Microcontrollers() {
+		return (EReference)ecuEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getECU_Ecutype() {
+		return (EReference)ecuEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMicrocontroller() {
+		return microcontrollerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMicrocontroller_Cores() {
+		return (EReference)microcontrollerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMicrocontroller_Microcontrollertype() {
+		return (EReference)microcontrollerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCore() {
+		return coreEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCore_LockstepGroup() {
+		return (EAttribute)coreEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCore_Coretype() {
+		return (EReference)coreEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -554,6 +567,123 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getCoreType_Base_DataType() {
+		return (EReference)coreTypeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMicrocontrollerType() {
+		return microcontrollerTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMicrocontrollerType_Base_DataType() {
+		return (EReference)microcontrollerTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getECUType() {
+		return ecuTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getECUType_Base_DataType() {
+		return (EReference)ecuTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSystemType() {
+		return systemTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSystemType_Base_DataType() {
+		return (EReference)systemTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBus() {
+		return busEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getBus_BusType() {
+		return (EAttribute)busEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFrequency() {
+		return frequencyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFrequency_Value() {
+		return (EAttribute)frequencyEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFrequency_Unit() {
+		return (EAttribute)frequencyEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getQType() {
+		return qTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getSchedType() {
 		return schedTypeEEnum;
 	}
@@ -565,15 +695,6 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 	 */
 	public EEnum getBusType() {
 		return busTypeEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EEnum getQType() {
-		return qTypeEEnum;
 	}
 
 	/**
@@ -613,53 +734,66 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 		isCreated = true;
 
 		// Create classes and their features
-		systemTypeEClass = createEClass(SYSTEM_TYPE);
-
-		ecuTypeEClass = createEClass(ECU_TYPE);
-
-		microcontrollerTypeEClass = createEClass(MICROCONTROLLER_TYPE);
-
 		hwSystemEClass = createEClass(HW_SYSTEM);
+		createEReference(hwSystemEClass, HW_SYSTEM__ECUS);
+		createEReference(hwSystemEClass, HW_SYSTEM__SYSTEMTYPE);
 
 		complexNodeEClass = createEClass(COMPLEX_NODE);
-
-		ecuEClass = createEClass(ECU);
-
-		microcontrollerEClass = createEClass(MICROCONTROLLER);
-
-		networkEClass = createEClass(NETWORK);
-
-		networkTypeEClass = createEClass(NETWORK_TYPE);
-		createEAttribute(networkTypeEClass, NETWORK_TYPE__SCHED_POLICY);
-		createEAttribute(networkTypeEClass, NETWORK_TYPE__BIT_WIDTH);
-
-		coreEClass = createEClass(CORE);
-		createEAttribute(coreEClass, CORE__LOCKSTEP_GROUP);
-
-		busEClass = createEClass(BUS);
-		createEAttribute(busEClass, BUS__BUS_TYPE);
+		createEReference(complexNodeEClass, COMPLEX_NODE__QUARTZES);
+		createEReference(complexNodeEClass, COMPLEX_NODE__PRESCALER);
+		createEReference(complexNodeEClass, COMPLEX_NODE__NETWORKS);
 
 		quartzEClass = createEClass(QUARTZ);
 		createEAttribute(quartzEClass, QUARTZ__TYPE);
 
 		prescalerEClass = createEClass(PRESCALER);
 		createEAttribute(prescalerEClass, PRESCALER__CLOCK_RATIO);
-		createEAttribute(prescalerEClass, PRESCALER__NAME);
+
+		networkEClass = createEClass(NETWORK);
+		createEReference(networkEClass, NETWORK__NETWORKTYPE);
+
+		networkTypeEClass = createEClass(NETWORK_TYPE);
+		createEAttribute(networkTypeEClass, NETWORK_TYPE__SCHED_POLICY);
+		createEAttribute(networkTypeEClass, NETWORK_TYPE__BIT_WIDTH);
+		createEReference(networkTypeEClass, NETWORK_TYPE__BASE_DATA_TYPE);
+
+		ecuEClass = createEClass(ECU);
+		createEReference(ecuEClass, ECU__MICROCONTROLLERS);
+		createEReference(ecuEClass, ECU__ECUTYPE);
+
+		microcontrollerEClass = createEClass(MICROCONTROLLER);
+		createEReference(microcontrollerEClass, MICROCONTROLLER__CORES);
+		createEReference(microcontrollerEClass, MICROCONTROLLER__MICROCONTROLLERTYPE);
+
+		coreEClass = createEClass(CORE);
+		createEAttribute(coreEClass, CORE__LOCKSTEP_GROUP);
+		createEReference(coreEClass, CORE__CORETYPE);
+
+		coreTypeEClass = createEClass(CORE_TYPE);
+		createEAttribute(coreTypeEClass, CORE_TYPE__BIT_WIDTH);
+		createEAttribute(coreTypeEClass, CORE_TYPE__INSTRUCTIONS_PER_CYCLE);
+		createEReference(coreTypeEClass, CORE_TYPE__BASE_DATA_TYPE);
+
+		microcontrollerTypeEClass = createEClass(MICROCONTROLLER_TYPE);
+		createEReference(microcontrollerTypeEClass, MICROCONTROLLER_TYPE__BASE_DATA_TYPE);
+
+		ecuTypeEClass = createEClass(ECU_TYPE);
+		createEReference(ecuTypeEClass, ECU_TYPE__BASE_DATA_TYPE);
+
+		systemTypeEClass = createEClass(SYSTEM_TYPE);
+		createEReference(systemTypeEClass, SYSTEM_TYPE__BASE_DATA_TYPE);
+
+		busEClass = createEClass(BUS);
+		createEAttribute(busEClass, BUS__BUS_TYPE);
 
 		frequencyEClass = createEClass(FREQUENCY);
 		createEAttribute(frequencyEClass, FREQUENCY__VALUE);
 		createEAttribute(frequencyEClass, FREQUENCY__UNIT);
 
-		hwModelEClass = createEClass(HW_MODEL);
-
-		coreTypeEClass = createEClass(CORE_TYPE);
-		createEAttribute(coreTypeEClass, CORE_TYPE__BIT_WIDTH);
-		createEAttribute(coreTypeEClass, CORE_TYPE__INSTRUCTIONS_PER_CYCLE);
-
 		// Create enums
+		qTypeEEnum = createEEnum(QTYPE);
 		schedTypeEEnum = createEEnum(SCHED_TYPE);
 		busTypeEEnum = createEEnum(BUS_TYPE);
-		qTypeEEnum = createEEnum(QTYPE);
 		frequencyUnitEEnum = createEEnum(FREQUENCY_UNIT);
 	}
 
@@ -689,6 +823,7 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 		// Obtain other dependent packages
 		BlocksPackage theBlocksPackage = (BlocksPackage)EPackage.Registry.INSTANCE.getEPackage(BlocksPackage.eNS_URI);
 		TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
+		UMLPackage theUMLPackage = (UMLPackage)EPackage.Registry.INSTANCE.getEPackage(UMLPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -697,58 +832,77 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 		// Add supertypes to classes
 		hwSystemEClass.getESuperTypes().add(this.getComplexNode());
 		complexNodeEClass.getESuperTypes().add(theBlocksPackage.getBlock());
+		quartzEClass.getESuperTypes().add(this.getComplexNode());
+		prescalerEClass.getESuperTypes().add(theBlocksPackage.getBlock());
+		networkEClass.getESuperTypes().add(this.getComplexNode());
 		ecuEClass.getESuperTypes().add(this.getComplexNode());
 		microcontrollerEClass.getESuperTypes().add(this.getComplexNode());
-		networkEClass.getESuperTypes().add(this.getComplexNode());
 		coreEClass.getESuperTypes().add(this.getComplexNode());
 		busEClass.getESuperTypes().add(this.getNetworkType());
-		quartzEClass.getESuperTypes().add(this.getComplexNode());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(systemTypeEClass, SystemType.class, "SystemType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(ecuTypeEClass, ECUType.class, "ECUType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(microcontrollerTypeEClass, MicrocontrollerType.class, "MicrocontrollerType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(hwSystemEClass, HwSystem.class, "HwSystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getHwSystem_Ecus(), this.getECU(), null, "ecus", null, 1, -1, HwSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getHwSystem_Systemtype(), this.getSystemType(), null, "systemtype", null, 0, 1, HwSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(complexNodeEClass, ComplexNode.class, "ComplexNode", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(ecuEClass, org.eclipse.papyrus.amalthea.profile.amalthea.hardware.ECU.class, "ECU", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(microcontrollerEClass, Microcontroller.class, "Microcontroller", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(networkEClass, Network.class, "Network", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(networkTypeEClass, NetworkType.class, "NetworkType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getNetworkType_SchedPolicy(), this.getSchedType(), "schedPolicy", "_undefined_", 1, 1, NetworkType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getNetworkType_BitWidth(), theTypesPackage.getInteger(), "bitWidth", "0", 1, 1, NetworkType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(coreEClass, Core.class, "Core", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCore_LockstepGroup(), theTypesPackage.getInteger(), "lockstepGroup", "0", 1, 1, Core.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(busEClass, Bus.class, "Bus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getBus_BusType(), this.getBusType(), "busType", "_undefined_", 1, 1, Bus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getComplexNode_Quartzes(), this.getQuartz(), null, "quartzes", null, 0, -1, ComplexNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getComplexNode_Prescaler(), this.getPrescaler(), null, "prescaler", null, 1, 1, ComplexNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getComplexNode_Networks(), this.getNetwork(), null, "networks", null, 0, -1, ComplexNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(quartzEClass, Quartz.class, "Quartz", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getQuartz_Type(), this.getQType(), "type", "_undefined_", 1, 1, Quartz.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(prescalerEClass, Prescaler.class, "Prescaler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPrescaler_ClockRatio(), theTypesPackage.getReal(), "clockRatio", "0.0", 1, 1, Prescaler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getPrescaler_Name(), ecorePackage.getEString(), "name", null, 1, 1, Prescaler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(networkEClass, Network.class, "Network", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getNetwork_Networktype(), this.getNetworkType(), null, "networktype", null, 1, 1, Network.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(networkTypeEClass, NetworkType.class, "NetworkType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getNetworkType_SchedPolicy(), this.getSchedType(), "schedPolicy", "_undefined_", 1, 1, NetworkType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getNetworkType_BitWidth(), theTypesPackage.getInteger(), "bitWidth", "0", 1, 1, NetworkType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getNetworkType_Base_DataType(), theUMLPackage.getDataType(), null, "base_DataType", null, 1, 1, NetworkType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(ecuEClass, org.eclipse.papyrus.amalthea.profile.amalthea.hardware.ECU.class, "ECU", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getECU_Microcontrollers(), this.getMicrocontroller(), null, "microcontrollers", null, 1, -1, org.eclipse.papyrus.amalthea.profile.amalthea.hardware.ECU.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getECU_Ecutype(), this.getECUType(), null, "ecutype", null, 0, 1, org.eclipse.papyrus.amalthea.profile.amalthea.hardware.ECU.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(microcontrollerEClass, Microcontroller.class, "Microcontroller", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMicrocontroller_Cores(), this.getCore(), null, "cores", null, 1, -1, Microcontroller.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getMicrocontroller_Microcontrollertype(), this.getMicrocontrollerType(), null, "microcontrollertype", null, 1, 1, Microcontroller.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(coreEClass, Core.class, "Core", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCore_LockstepGroup(), theTypesPackage.getInteger(), "lockstepGroup", "0", 1, 1, Core.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getCore_Coretype(), this.getCoreType(), null, "coretype", null, 1, 1, Core.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(coreTypeEClass, CoreType.class, "CoreType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCoreType_BitWidth(), theTypesPackage.getInteger(), "bitWidth", "0", 1, 1, CoreType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCoreType_InstructionsPerCycle(), theTypesPackage.getInteger(), "instructionsPerCycle", "0", 1, 1, CoreType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getCoreType_Base_DataType(), theUMLPackage.getDataType(), null, "base_DataType", null, 1, 1, CoreType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(microcontrollerTypeEClass, MicrocontrollerType.class, "MicrocontrollerType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMicrocontrollerType_Base_DataType(), theUMLPackage.getDataType(), null, "base_DataType", null, 1, 1, MicrocontrollerType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(ecuTypeEClass, ECUType.class, "ECUType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getECUType_Base_DataType(), theUMLPackage.getDataType(), null, "base_DataType", null, 1, 1, ECUType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(systemTypeEClass, SystemType.class, "SystemType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSystemType_Base_DataType(), theUMLPackage.getDataType(), null, "base_DataType", null, 1, 1, SystemType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(busEClass, Bus.class, "Bus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getBus_BusType(), this.getBusType(), "busType", "_undefined_", 1, 1, Bus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(frequencyEClass, Frequency.class, "Frequency", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFrequency_Value(), theTypesPackage.getReal(), "value", null, 1, 1, Frequency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getFrequency_Unit(), this.getFrequencyUnit(), "unit", "_undefined_", 1, 1, Frequency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(hwModelEClass, HWModel.class, "HWModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(coreTypeEClass, CoreType.class, "CoreType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCoreType_BitWidth(), theTypesPackage.getInteger(), "bitWidth", "0", 1, 1, CoreType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getCoreType_InstructionsPerCycle(), theTypesPackage.getInteger(), "instructionsPerCycle", "0", 1, 1, CoreType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
 		// Initialize enums and add enum literals
+		initEEnum(qTypeEEnum, QType.class, "QType");
+		addEEnumLiteral(qTypeEEnum, QType._UNDEFINED_);
+		addEEnumLiteral(qTypeEEnum, QType.DYNAMIC);
+		addEEnumLiteral(qTypeEEnum, QType.STATIC);
+
 		initEEnum(schedTypeEEnum, SchedType.class, "SchedType");
 		addEEnumLiteral(schedTypeEEnum, SchedType._UNDEFINED_);
 		addEEnumLiteral(schedTypeEEnum, SchedType.RROBIN);
@@ -763,11 +917,6 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 		addEEnumLiteral(busTypeEEnum, BusType.ETHERNET);
 		addEEnumLiteral(busTypeEEnum, BusType.SPI);
 		addEEnumLiteral(busTypeEEnum, BusType.NA);
-
-		initEEnum(qTypeEEnum, QType.class, "QType");
-		addEEnumLiteral(qTypeEEnum, QType._UNDEFINED_);
-		addEEnumLiteral(qTypeEEnum, QType.DYNAMIC);
-		addEEnumLiteral(qTypeEEnum, QType.STATIC);
 
 		initEEnum(frequencyUnitEEnum, FrequencyUnit.class, "FrequencyUnit");
 		addEEnumLiteral(frequencyUnitEEnum, FrequencyUnit._UNDEFINED_);

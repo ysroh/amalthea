@@ -5,10 +5,12 @@ package org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Core;
+import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.CoreType;
 import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.HardwarePackage;
 
 /**
@@ -20,6 +22,7 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.HardwarePackage;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.CoreImpl#getLockstepGroup <em>Lockstep Group</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.CoreImpl#getCoretype <em>Coretype</em>}</li>
  * </ul>
  *
  * @generated
@@ -44,6 +47,16 @@ public class CoreImpl extends ComplexNodeImpl implements Core {
 	 * @ordered
 	 */
 	protected int lockstepGroup = LOCKSTEP_GROUP_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getCoretype() <em>Coretype</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCoretype()
+	 * @generated
+	 * @ordered
+	 */
+	protected CoreType coretype;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -90,11 +103,52 @@ public class CoreImpl extends ComplexNodeImpl implements Core {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public CoreType getCoretype() {
+		if (coretype != null && coretype.eIsProxy()) {
+			InternalEObject oldCoretype = (InternalEObject)coretype;
+			coretype = (CoreType)eResolveProxy(oldCoretype);
+			if (coretype != oldCoretype) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, HardwarePackage.CORE__CORETYPE, oldCoretype, coretype));
+			}
+		}
+		return coretype;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CoreType basicGetCoretype() {
+		return coretype;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCoretype(CoreType newCoretype) {
+		CoreType oldCoretype = coretype;
+		coretype = newCoretype;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, HardwarePackage.CORE__CORETYPE, oldCoretype, coretype));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case HardwarePackage.CORE__LOCKSTEP_GROUP:
 				return getLockstepGroup();
+			case HardwarePackage.CORE__CORETYPE:
+				if (resolve) return getCoretype();
+				return basicGetCoretype();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -109,6 +163,9 @@ public class CoreImpl extends ComplexNodeImpl implements Core {
 		switch (featureID) {
 			case HardwarePackage.CORE__LOCKSTEP_GROUP:
 				setLockstepGroup((Integer)newValue);
+				return;
+			case HardwarePackage.CORE__CORETYPE:
+				setCoretype((CoreType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -125,6 +182,9 @@ public class CoreImpl extends ComplexNodeImpl implements Core {
 			case HardwarePackage.CORE__LOCKSTEP_GROUP:
 				setLockstepGroup(LOCKSTEP_GROUP_EDEFAULT);
 				return;
+			case HardwarePackage.CORE__CORETYPE:
+				setCoretype((CoreType)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -139,6 +199,8 @@ public class CoreImpl extends ComplexNodeImpl implements Core {
 		switch (featureID) {
 			case HardwarePackage.CORE__LOCKSTEP_GROUP:
 				return lockstepGroup != LOCKSTEP_GROUP_EDEFAULT;
+			case HardwarePackage.CORE__CORETYPE:
+				return coretype != null;
 		}
 		return super.eIsSet(featureID);
 	}

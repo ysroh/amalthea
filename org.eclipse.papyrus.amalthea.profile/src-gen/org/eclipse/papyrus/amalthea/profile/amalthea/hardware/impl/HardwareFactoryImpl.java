@@ -57,21 +57,20 @@ public class HardwareFactoryImpl extends EFactoryImpl implements HardwareFactory
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case HardwarePackage.SYSTEM_TYPE: return createSystemType();
-			case HardwarePackage.ECU_TYPE: return createECUType();
-			case HardwarePackage.MICROCONTROLLER_TYPE: return createMicrocontrollerType();
 			case HardwarePackage.HW_SYSTEM: return createHwSystem();
-			case HardwarePackage.ECU: return createECU();
-			case HardwarePackage.MICROCONTROLLER: return createMicrocontroller();
-			case HardwarePackage.NETWORK: return createNetwork();
-			case HardwarePackage.NETWORK_TYPE: return createNetworkType();
-			case HardwarePackage.CORE: return createCore();
-			case HardwarePackage.BUS: return createBus();
 			case HardwarePackage.QUARTZ: return createQuartz();
 			case HardwarePackage.PRESCALER: return createPrescaler();
-			case HardwarePackage.FREQUENCY: return createFrequency();
-			case HardwarePackage.HW_MODEL: return createHWModel();
+			case HardwarePackage.NETWORK: return createNetwork();
+			case HardwarePackage.NETWORK_TYPE: return createNetworkType();
+			case HardwarePackage.ECU: return createECU();
+			case HardwarePackage.MICROCONTROLLER: return createMicrocontroller();
+			case HardwarePackage.CORE: return createCore();
 			case HardwarePackage.CORE_TYPE: return createCoreType();
+			case HardwarePackage.MICROCONTROLLER_TYPE: return createMicrocontrollerType();
+			case HardwarePackage.ECU_TYPE: return createECUType();
+			case HardwarePackage.SYSTEM_TYPE: return createSystemType();
+			case HardwarePackage.BUS: return createBus();
+			case HardwarePackage.FREQUENCY: return createFrequency();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -85,12 +84,12 @@ public class HardwareFactoryImpl extends EFactoryImpl implements HardwareFactory
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
+			case HardwarePackage.QTYPE:
+				return createQTypeFromString(eDataType, initialValue);
 			case HardwarePackage.SCHED_TYPE:
 				return createSchedTypeFromString(eDataType, initialValue);
 			case HardwarePackage.BUS_TYPE:
 				return createBusTypeFromString(eDataType, initialValue);
-			case HardwarePackage.QTYPE:
-				return createQTypeFromString(eDataType, initialValue);
 			case HardwarePackage.FREQUENCY_UNIT:
 				return createFrequencyUnitFromString(eDataType, initialValue);
 			default:
@@ -106,12 +105,12 @@ public class HardwareFactoryImpl extends EFactoryImpl implements HardwareFactory
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
+			case HardwarePackage.QTYPE:
+				return convertQTypeToString(eDataType, instanceValue);
 			case HardwarePackage.SCHED_TYPE:
 				return convertSchedTypeToString(eDataType, instanceValue);
 			case HardwarePackage.BUS_TYPE:
 				return convertBusTypeToString(eDataType, instanceValue);
-			case HardwarePackage.QTYPE:
-				return convertQTypeToString(eDataType, instanceValue);
 			case HardwarePackage.FREQUENCY_UNIT:
 				return convertFrequencyUnitToString(eDataType, instanceValue);
 			default:
@@ -124,99 +123,9 @@ public class HardwareFactoryImpl extends EFactoryImpl implements HardwareFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SystemType createSystemType() {
-		SystemTypeImpl systemType = new SystemTypeImpl();
-		return systemType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ECUType createECUType() {
-		ECUTypeImpl ecuType = new ECUTypeImpl();
-		return ecuType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MicrocontrollerType createMicrocontrollerType() {
-		MicrocontrollerTypeImpl microcontrollerType = new MicrocontrollerTypeImpl();
-		return microcontrollerType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public HwSystem createHwSystem() {
 		HwSystemImpl hwSystem = new HwSystemImpl();
 		return hwSystem;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ECU createECU() {
-		ECUImpl ecu = new ECUImpl();
-		return ecu;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Microcontroller createMicrocontroller() {
-		MicrocontrollerImpl microcontroller = new MicrocontrollerImpl();
-		return microcontroller;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Network createNetwork() {
-		NetworkImpl network = new NetworkImpl();
-		return network;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NetworkType createNetworkType() {
-		NetworkTypeImpl networkType = new NetworkTypeImpl();
-		return networkType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Core createCore() {
-		CoreImpl core = new CoreImpl();
-		return core;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Bus createBus() {
-		BusImpl bus = new BusImpl();
-		return bus;
 	}
 
 	/**
@@ -244,9 +153,9 @@ public class HardwareFactoryImpl extends EFactoryImpl implements HardwareFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Frequency createFrequency() {
-		FrequencyImpl frequency = new FrequencyImpl();
-		return frequency;
+	public Network createNetwork() {
+		NetworkImpl network = new NetworkImpl();
+		return network;
 	}
 
 	/**
@@ -254,9 +163,39 @@ public class HardwareFactoryImpl extends EFactoryImpl implements HardwareFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public HWModel createHWModel() {
-		HWModelImpl hwModel = new HWModelImpl();
-		return hwModel;
+	public NetworkType createNetworkType() {
+		NetworkTypeImpl networkType = new NetworkTypeImpl();
+		return networkType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ECU createECU() {
+		ECUImpl ecu = new ECUImpl();
+		return ecu;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Microcontroller createMicrocontroller() {
+		MicrocontrollerImpl microcontroller = new MicrocontrollerImpl();
+		return microcontroller;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Core createCore() {
+		CoreImpl core = new CoreImpl();
+		return core;
 	}
 
 	/**
@@ -267,6 +206,76 @@ public class HardwareFactoryImpl extends EFactoryImpl implements HardwareFactory
 	public CoreType createCoreType() {
 		CoreTypeImpl coreType = new CoreTypeImpl();
 		return coreType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MicrocontrollerType createMicrocontrollerType() {
+		MicrocontrollerTypeImpl microcontrollerType = new MicrocontrollerTypeImpl();
+		return microcontrollerType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ECUType createECUType() {
+		ECUTypeImpl ecuType = new ECUTypeImpl();
+		return ecuType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SystemType createSystemType() {
+		SystemTypeImpl systemType = new SystemTypeImpl();
+		return systemType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Bus createBus() {
+		BusImpl bus = new BusImpl();
+		return bus;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Frequency createFrequency() {
+		FrequencyImpl frequency = new FrequencyImpl();
+		return frequency;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public QType createQTypeFromString(EDataType eDataType, String initialValue) {
+		QType result = QType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertQTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**
@@ -306,26 +315,6 @@ public class HardwareFactoryImpl extends EFactoryImpl implements HardwareFactory
 	 * @generated
 	 */
 	public String convertBusTypeToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public QType createQTypeFromString(EDataType eDataType, String initialValue) {
-		QType result = QType.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertQTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

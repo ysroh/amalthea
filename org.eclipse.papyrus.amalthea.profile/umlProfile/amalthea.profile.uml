@@ -174,20 +174,141 @@
       <elementImport xmi:type="uml:ElementImport" xmi:id="_oiEewRZKEeeFzte_Mj5jqA" alias="">
         <importedElement xmi:type="uml:Stereotype" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Blocks.stereotype_packagedElement_Block"/>
       </elementImport>
-      <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiEewhZKEeeFzte_Mj5jqA" name="SystemType"/>
-      <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiEewxZKEeeFzte_Mj5jqA" name="ECUType"/>
-      <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiEexBZKEeeFzte_Mj5jqA" name="MicrocontrollerType"/>
+      <elementImport xmi:type="uml:ElementImport" xmi:id="_CxQbIBbdEeeFzte_Mj5jqA" alias="">
+        <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#DataType"/>
+      </elementImport>
+      <packagedElement xmi:type="uml:Association" xmi:id="_rKAAgBbdEeeFzte_Mj5jqA" visibility="public" memberEnd="_rKBOoBbdEeeFzte_Mj5jqA _rKBOoRbdEeeFzte_Mj5jqA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rKAnkBbdEeeFzte_Mj5jqA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rKAnkRbdEeeFzte_Mj5jqA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_rKBOoRbdEeeFzte_Mj5jqA" name="hwsystem" type="_oiEexRZKEeeFzte_Mj5jqA" association="_rKAAgBbdEeeFzte_Mj5jqA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_22AUoBbdEeeFzte_Mj5jqA" memberEnd="_22A7shbdEeeFzte_Mj5jqA _22BiwBbdEeeFzte_Mj5jqA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_22A7sBbdEeeFzte_Mj5jqA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_22A7sRbdEeeFzte_Mj5jqA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_22BiwBbdEeeFzte_Mj5jqA" name="ecu" type="_oiEexxZKEeeFzte_Mj5jqA" association="_22AUoBbdEeeFzte_Mj5jqA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_5CFxsBbdEeeFzte_Mj5jqA" memberEnd="_5CG_0RbdEeeFzte_Mj5jqA _5CHm4BbdEeeFzte_Mj5jqA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5CGYwBbdEeeFzte_Mj5jqA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5CG_0BbdEeeFzte_Mj5jqA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_5CHm4BbdEeeFzte_Mj5jqA" name="microcontroller" type="_oiEeyRZKEeeFzte_Mj5jqA" association="_5CFxsBbdEeeFzte_Mj5jqA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Mbi5sBbeEeeFzte_Mj5jqA" memberEnd="_MbjgwRbeEeeFzte_Mj5jqA _MbjgwhbeEeeFzte_Mj5jqA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Mbi5sRbeEeeFzte_Mj5jqA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_MbjgwBbeEeeFzte_Mj5jqA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_MbjgwhbeEeeFzte_Mj5jqA" name="hwsystem" type="_oiEexRZKEeeFzte_Mj5jqA" association="_Mbi5sBbeEeeFzte_Mj5jqA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_PK0jYBbeEeeFzte_Mj5jqA" memberEnd="_PK0jYxbeEeeFzte_Mj5jqA _PK1KcBbeEeeFzte_Mj5jqA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PK0jYRbeEeeFzte_Mj5jqA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PK0jYhbeEeeFzte_Mj5jqA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_PK1KcBbeEeeFzte_Mj5jqA" name="ecu" type="_oiEexxZKEeeFzte_Mj5jqA" association="_PK0jYBbeEeeFzte_Mj5jqA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_HGPrUBcSEeeFzte_Mj5jqA" memberEnd="_HGQ5chcSEeeFzte_Mj5jqA _HGRggBcSEeeFzte_Mj5jqA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HGQ5cBcSEeeFzte_Mj5jqA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_HGQ5cRcSEeeFzte_Mj5jqA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_HGRggBcSEeeFzte_Mj5jqA" name="complexnode" type="_oiEe5xZKEeeFzte_Mj5jqA" association="_HGPrUBcSEeeFzte_Mj5jqA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_MUD0ABcSEeeFzte_Mj5jqA" memberEnd="_MUEbEhcSEeeFzte_Mj5jqA _MUEbExcSEeeFzte_Mj5jqA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_MUEbEBcSEeeFzte_Mj5jqA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_MUEbERcSEeeFzte_Mj5jqA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_MUEbExcSEeeFzte_Mj5jqA" name="complexnode" type="_oiEe5xZKEeeFzte_Mj5jqA" association="_MUD0ABcSEeeFzte_Mj5jqA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_PNgGUBcSEeeFzte_Mj5jqA" memberEnd="_PNgtYRcSEeeFzte_Mj5jqA _PNgtYhcSEeeFzte_Mj5jqA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PNgGURcSEeeFzte_Mj5jqA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PNgtYBcSEeeFzte_Mj5jqA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_PNgtYhcSEeeFzte_Mj5jqA" name="complexnode" type="_oiEe5xZKEeeFzte_Mj5jqA" association="_PNgGUBcSEeeFzte_Mj5jqA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_urLYsBcTEeeFzte_Mj5jqA" memberEnd="_urL_wRcTEeeFzte_Mj5jqA _urL_whcTEeeFzte_Mj5jqA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_urLYsRcTEeeFzte_Mj5jqA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_urL_wBcTEeeFzte_Mj5jqA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_urL_whcTEeeFzte_Mj5jqA" name="microcontroller" type="_oiEeyRZKEeeFzte_Mj5jqA" association="_urLYsBcTEeeFzte_Mj5jqA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_viFLgBcTEeeFzte_Mj5jqA" memberEnd="_viFykRcTEeeFzte_Mj5jqA _viFykhcTEeeFzte_Mj5jqA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_viFLgRcTEeeFzte_Mj5jqA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_viFykBcTEeeFzte_Mj5jqA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_viFykhcTEeeFzte_Mj5jqA" name="core" type="_oiEe0hZKEeeFzte_Mj5jqA" association="_viFLgBcTEeeFzte_Mj5jqA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_2UWwkBcTEeeFzte_Mj5jqA" memberEnd="_2UXXohcTEeeFzte_Mj5jqA _2UX-sBcTEeeFzte_Mj5jqA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2UXXoBcTEeeFzte_Mj5jqA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_2UXXoRcTEeeFzte_Mj5jqA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_2UX-sBcTEeeFzte_Mj5jqA" name="network" type="_oiEeyxZKEeeFzte_Mj5jqA" association="_2UWwkBcTEeeFzte_Mj5jqA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_jOQ-kBcVEeeFzte_Mj5jqA" name="E_SystemType_DataType1" memberEnd="_jORloBcVEeeFzte_Mj5jqA _jORloRcVEeeFzte_Mj5jqA">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_jORloBcVEeeFzte_Mj5jqA" name="extension_SystemType" type="_oiEewhZKEeeFzte_Mj5jqA" aggregation="composite" association="_jOQ-kBcVEeeFzte_Mj5jqA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_jma_4BcVEeeFzte_Mj5jqA" name="E_ECUType_DataType1" memberEnd="_jmbm8BcVEeeFzte_Mj5jqA _jmbm8RcVEeeFzte_Mj5jqA">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_jmbm8BcVEeeFzte_Mj5jqA" name="extension_ECUType" type="_oiEewxZKEeeFzte_Mj5jqA" aggregation="composite" association="_jma_4BcVEeeFzte_Mj5jqA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_kTFRkBcVEeeFzte_Mj5jqA" name="E_MicrocontrollerType_DataType1" memberEnd="_kTFRkRcVEeeFzte_Mj5jqA _kTFRkhcVEeeFzte_Mj5jqA">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_kTFRkRcVEeeFzte_Mj5jqA" name="extension_MicrocontrollerType" type="_oiEexBZKEeeFzte_Mj5jqA" aggregation="composite" association="_kTFRkBcVEeeFzte_Mj5jqA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_khVI8BcVEeeFzte_Mj5jqA" name="E_CoreType_DataType1" memberEnd="_khVI8RcVEeeFzte_Mj5jqA _khVwABcVEeeFzte_Mj5jqA">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_khVI8RcVEeeFzte_Mj5jqA" name="extension_CoreType" type="_oiFF0RZKEeeFzte_Mj5jqA" aggregation="composite" association="_khVI8BcVEeeFzte_Mj5jqA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_-3XokBcVEeeFzte_Mj5jqA" name="E_NetworkType_DataType1" memberEnd="_-3YPoBcVEeeFzte_Mj5jqA _-3YPoRcVEeeFzte_Mj5jqA">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_-3YPoBcVEeeFzte_Mj5jqA" name="extension_NetworkType" type="_oiEezRZKEeeFzte_Mj5jqA" aggregation="composite" association="_-3XokBcVEeeFzte_Mj5jqA"/>
+      </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiEexRZKEeeFzte_Mj5jqA" name="HwSystem">
         <generalization xmi:type="uml:Generalization" xmi:id="_oiEexhZKEeeFzte_Mj5jqA" general="_oiEe5xZKEeeFzte_Mj5jqA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_rKBOoBbdEeeFzte_Mj5jqA" name="ecus" type="_oiEexxZKEeeFzte_Mj5jqA" association="_rKAAgBbdEeeFzte_Mj5jqA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tjiDsBbdEeeFzte_Mj5jqA" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tjpYcBbdEeeFzte_Mj5jqA" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_MbjgwRbeEeeFzte_Mj5jqA" name="systemtype" type="_oiEewhZKEeeFzte_Mj5jqA" association="_Mbi5sBbeEeeFzte_Mj5jqA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NkcbcBbeEeeFzte_Mj5jqA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NkgF0BbeEeeFzte_Mj5jqA" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiEewhZKEeeFzte_Mj5jqA" name="SystemType">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_jORloRcVEeeFzte_Mj5jqA" name="base_DataType" association="_jOQ-kBcVEeeFzte_Mj5jqA">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#DataType"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiEexxZKEeeFzte_Mj5jqA" name="ECU">
         <generalization xmi:type="uml:Generalization" xmi:id="_oiEeyBZKEeeFzte_Mj5jqA" general="_oiEe5xZKEeeFzte_Mj5jqA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_22A7shbdEeeFzte_Mj5jqA" name="microcontrollers" type="_oiEeyRZKEeeFzte_Mj5jqA" association="_22AUoBbdEeeFzte_Mj5jqA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4PyyEBbdEeeFzte_Mj5jqA" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4P3DgBbdEeeFzte_Mj5jqA" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_PK0jYxbeEeeFzte_Mj5jqA" name="ecutype" type="_oiEewxZKEeeFzte_Mj5jqA" association="_PK0jYBbeEeeFzte_Mj5jqA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_P8bmgBbeEeeFzte_Mj5jqA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_P8fQ4BbeEeeFzte_Mj5jqA" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiEewxZKEeeFzte_Mj5jqA" name="ECUType">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_jmbm8RcVEeeFzte_Mj5jqA" name="base_DataType" association="_jma_4BcVEeeFzte_Mj5jqA">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#DataType"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiEeyRZKEeeFzte_Mj5jqA" name="Microcontroller">
         <generalization xmi:type="uml:Generalization" xmi:id="_oiEeyhZKEeeFzte_Mj5jqA" general="_oiEe5xZKEeeFzte_Mj5jqA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_5CG_0RbdEeeFzte_Mj5jqA" name="cores" type="_oiEe0hZKEeeFzte_Mj5jqA" association="_5CFxsBbdEeeFzte_Mj5jqA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6f3XQBbdEeeFzte_Mj5jqA" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6f9d4BbdEeeFzte_Mj5jqA" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_urL_wRcTEeeFzte_Mj5jqA" name="microcontrollertype" type="_oiEexBZKEeeFzte_Mj5jqA" association="_urLYsBcTEeeFzte_Mj5jqA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiEexBZKEeeFzte_Mj5jqA" name="MicrocontrollerType">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_kTFRkhcVEeeFzte_Mj5jqA" name="base_DataType" association="_kTFRkBcVEeeFzte_Mj5jqA">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#DataType"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiEeyxZKEeeFzte_Mj5jqA" name="Network">
         <generalization xmi:type="uml:Generalization" xmi:id="_oiEezBZKEeeFzte_Mj5jqA" general="_oiEe5xZKEeeFzte_Mj5jqA"/>
+        <generalization xmi:type="uml:Generalization" xmi:id="_L1f2cBcXEeeFzte_Mj5jqA">
+          <general xmi:type="uml:Stereotype" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Blocks.stereotype_packagedElement_Block"/>
+        </generalization>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_2UXXohcTEeeFzte_Mj5jqA" name="networktype" type="_oiEezRZKEeeFzte_Mj5jqA" association="_2UWwkBcTEeeFzte_Mj5jqA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiEezRZKEeeFzte_Mj5jqA" name="NetworkType">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_oiEezhZKEeeFzte_Mj5jqA" name="schedPolicy" type="_oiEe4xZKEeeFzte_Mj5jqA">
@@ -197,12 +318,29 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_oiEe0RZKEeeFzte_Mj5jqA"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_-3YPoRcVEeeFzte_Mj5jqA" name="base_DataType" association="_-3XokBcVEeeFzte_Mj5jqA">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#DataType"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiEe0hZKEeeFzte_Mj5jqA" name="Core">
         <generalization xmi:type="uml:Generalization" xmi:id="_oiEe0xZKEeeFzte_Mj5jqA" general="_oiEe5xZKEeeFzte_Mj5jqA"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_oiEe1BZKEeeFzte_Mj5jqA" name="lockstepGroup">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_oiEe1RZKEeeFzte_Mj5jqA"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_viFykRcTEeeFzte_Mj5jqA" name="coretype" type="_oiFF0RZKEeeFzte_Mj5jqA" association="_viFLgBcTEeeFzte_Mj5jqA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiFF0RZKEeeFzte_Mj5jqA" name="CoreType">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_oiFF0hZKEeeFzte_Mj5jqA" name="bitWidth">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_oiFF0xZKEeeFzte_Mj5jqA"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_oiFF1BZKEeeFzte_Mj5jqA" name="instructionsPerCycle">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_oiFF1RZKEeeFzte_Mj5jqA"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_khVwABcVEeeFzte_Mj5jqA" name="base_DataType" association="_khVI8BcVEeeFzte_Mj5jqA">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#DataType"/>
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiEe1hZKEeeFzte_Mj5jqA" name="Bus">
@@ -227,12 +365,24 @@
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_oiEe5hZKEeeFzte_Mj5jqA" name="PRIORITY"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiEe5xZKEeeFzte_Mj5jqA" name="ComplexNode" isAbstract="true">
-        <generalization xmi:type="uml:Generalization" xmi:id="_oiEe6BZKEeeFzte_Mj5jqA">
+        <generalization xmi:type="uml:Generalization" xmi:id="_GkwVkBcXEeeFzte_Mj5jqA">
           <general xmi:type="uml:Stereotype" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Blocks.stereotype_packagedElement_Block"/>
         </generalization>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_HGQ5chcSEeeFzte_Mj5jqA" name="quartzes" type="_oiEe6RZKEeeFzte_Mj5jqA" association="_HGPrUBcSEeeFzte_Mj5jqA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_J6kNEBcSEeeFzte_Mj5jqA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_J6pFkBcSEeeFzte_Mj5jqA" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_MUEbEhcSEeeFzte_Mj5jqA" name="prescaler" type="_oiEe8RZKEeeFzte_Mj5jqA" association="_MUD0ABcSEeeFzte_Mj5jqA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_PNgtYRcSEeeFzte_Mj5jqA" name="networks" type="_oiEeyxZKEeeFzte_Mj5jqA" association="_PNgGUBcSEeeFzte_Mj5jqA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QxuSIBcSEeeFzte_Mj5jqA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QxyjkBcSEeeFzte_Mj5jqA" value="*"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiEe6RZKEeeFzte_Mj5jqA" name="Quartz">
         <generalization xmi:type="uml:Generalization" xmi:id="_oiEe6hZKEeeFzte_Mj5jqA" general="_oiEe5xZKEeeFzte_Mj5jqA"/>
+        <generalization xmi:type="uml:Generalization" xmi:id="_MqwDcBcXEeeFzte_Mj5jqA">
+          <general xmi:type="uml:Stereotype" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Blocks.stereotype_packagedElement_Block"/>
+        </generalization>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_oiEe6xZKEeeFzte_Mj5jqA" name="type" type="_oiEe7RZKEeeFzte_Mj5jqA">
           <defaultValue xmi:type="uml:InstanceValue" xmi:id="_oiEe7BZKEeeFzte_Mj5jqA" type="_oiEe7RZKEeeFzte_Mj5jqA" instance="_oiEe7hZKEeeFzte_Mj5jqA"/>
         </ownedAttribute>
@@ -243,12 +393,12 @@
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_oiEe8BZKEeeFzte_Mj5jqA" name="STATIC"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiEe8RZKEeeFzte_Mj5jqA" name="Prescaler">
+        <generalization xmi:type="uml:Generalization" xmi:id="_Mbh7sBcXEeeFzte_Mj5jqA">
+          <general xmi:type="uml:Stereotype" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Blocks.stereotype_packagedElement_Block"/>
+        </generalization>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_oiEe8hZKEeeFzte_Mj5jqA" name="clockRatio">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
           <defaultValue xmi:type="uml:LiteralReal" xmi:id="_oiEe8xZKEeeFzte_Mj5jqA"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_oiEe9BZKEeeFzte_Mj5jqA" name="name">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiEe9RZKEeeFzte_Mj5jqA" name="Frequency">
@@ -265,17 +415,6 @@
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_oiEe_BZKEeeFzte_Mj5jqA" name="kHz"/>
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_oiEe_RZKEeeFzte_Mj5jqA" name="MHz"/>
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_oiEe_hZKEeeFzte_Mj5jqA" name="GHz"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiFF0BZKEeeFzte_Mj5jqA" name="HWModel"/>
-      <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiFF0RZKEeeFzte_Mj5jqA" name="CoreType">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_oiFF0hZKEeeFzte_Mj5jqA" name="bitWidth">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_oiFF0xZKEeeFzte_Mj5jqA"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_oiFF1BZKEeeFzte_Mj5jqA" name="instructionsPerCycle">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_oiFF1RZKEeeFzte_Mj5jqA"/>
-        </ownedAttribute>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_oiFs6hZKEeeFzte_Mj5jqA" name="SWModel" URI="http://www.eclipse.org/papyrus/2017/Amalthea/Software">

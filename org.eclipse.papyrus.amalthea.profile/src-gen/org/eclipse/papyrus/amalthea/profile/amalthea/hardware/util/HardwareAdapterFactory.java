@@ -70,48 +70,12 @@ public class HardwareAdapterFactory extends AdapterFactoryImpl {
 	protected HardwareSwitch<Adapter> modelSwitch =
 		new HardwareSwitch<Adapter>() {
 			@Override
-			public Adapter caseSystemType(SystemType object) {
-				return createSystemTypeAdapter();
-			}
-			@Override
-			public Adapter caseECUType(ECUType object) {
-				return createECUTypeAdapter();
-			}
-			@Override
-			public Adapter caseMicrocontrollerType(MicrocontrollerType object) {
-				return createMicrocontrollerTypeAdapter();
-			}
-			@Override
 			public Adapter caseHwSystem(HwSystem object) {
 				return createHwSystemAdapter();
 			}
 			@Override
 			public Adapter caseComplexNode(ComplexNode object) {
 				return createComplexNodeAdapter();
-			}
-			@Override
-			public Adapter caseECU(ECU object) {
-				return createECUAdapter();
-			}
-			@Override
-			public Adapter caseMicrocontroller(Microcontroller object) {
-				return createMicrocontrollerAdapter();
-			}
-			@Override
-			public Adapter caseNetwork(Network object) {
-				return createNetworkAdapter();
-			}
-			@Override
-			public Adapter caseNetworkType(NetworkType object) {
-				return createNetworkTypeAdapter();
-			}
-			@Override
-			public Adapter caseCore(Core object) {
-				return createCoreAdapter();
-			}
-			@Override
-			public Adapter caseBus(Bus object) {
-				return createBusAdapter();
 			}
 			@Override
 			public Adapter caseQuartz(Quartz object) {
@@ -122,16 +86,48 @@ public class HardwareAdapterFactory extends AdapterFactoryImpl {
 				return createPrescalerAdapter();
 			}
 			@Override
-			public Adapter caseFrequency(Frequency object) {
-				return createFrequencyAdapter();
+			public Adapter caseNetwork(Network object) {
+				return createNetworkAdapter();
 			}
 			@Override
-			public Adapter caseHWModel(HWModel object) {
-				return createHWModelAdapter();
+			public Adapter caseNetworkType(NetworkType object) {
+				return createNetworkTypeAdapter();
+			}
+			@Override
+			public Adapter caseECU(ECU object) {
+				return createECUAdapter();
+			}
+			@Override
+			public Adapter caseMicrocontroller(Microcontroller object) {
+				return createMicrocontrollerAdapter();
+			}
+			@Override
+			public Adapter caseCore(Core object) {
+				return createCoreAdapter();
 			}
 			@Override
 			public Adapter caseCoreType(CoreType object) {
 				return createCoreTypeAdapter();
+			}
+			@Override
+			public Adapter caseMicrocontrollerType(MicrocontrollerType object) {
+				return createMicrocontrollerTypeAdapter();
+			}
+			@Override
+			public Adapter caseECUType(ECUType object) {
+				return createECUTypeAdapter();
+			}
+			@Override
+			public Adapter caseSystemType(SystemType object) {
+				return createSystemTypeAdapter();
+			}
+			@Override
+			public Adapter caseBus(Bus object) {
+				return createBusAdapter();
+			}
+			@Override
+			public Adapter caseFrequency(Frequency object) {
+				return createFrequencyAdapter();
 			}
 			@Override
 			public Adapter caseBlock(Block object) {
@@ -158,48 +154,6 @@ public class HardwareAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.SystemType <em>System Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.SystemType
-	 * @generated
-	 */
-	public Adapter createSystemTypeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.ECUType <em>ECU Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.ECUType
-	 * @generated
-	 */
-	public Adapter createECUTypeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.MicrocontrollerType <em>Microcontroller Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.MicrocontrollerType
-	 * @generated
-	 */
-	public Adapter createMicrocontrollerTypeAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.HwSystem <em>Hw System</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -224,90 +178,6 @@ public class HardwareAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createComplexNodeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.ECU <em>ECU</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.ECU
-	 * @generated
-	 */
-	public Adapter createECUAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Microcontroller <em>Microcontroller</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Microcontroller
-	 * @generated
-	 */
-	public Adapter createMicrocontrollerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Network <em>Network</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Network
-	 * @generated
-	 */
-	public Adapter createNetworkAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.NetworkType <em>Network Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.NetworkType
-	 * @generated
-	 */
-	public Adapter createNetworkTypeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Core <em>Core</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Core
-	 * @generated
-	 */
-	public Adapter createCoreAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Bus <em>Bus</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Bus
-	 * @generated
-	 */
-	public Adapter createBusAdapter() {
 		return null;
 	}
 
@@ -340,30 +210,72 @@ public class HardwareAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Frequency <em>Frequency</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Network <em>Network</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Frequency
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Network
 	 * @generated
 	 */
-	public Adapter createFrequencyAdapter() {
+	public Adapter createNetworkAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.HWModel <em>HW Model</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.NetworkType <em>Network Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.HWModel
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.NetworkType
 	 * @generated
 	 */
-	public Adapter createHWModelAdapter() {
+	public Adapter createNetworkTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.ECU <em>ECU</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.ECU
+	 * @generated
+	 */
+	public Adapter createECUAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Microcontroller <em>Microcontroller</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Microcontroller
+	 * @generated
+	 */
+	public Adapter createMicrocontrollerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Core <em>Core</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Core
+	 * @generated
+	 */
+	public Adapter createCoreAdapter() {
 		return null;
 	}
 
@@ -378,6 +290,76 @@ public class HardwareAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCoreTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.MicrocontrollerType <em>Microcontroller Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.MicrocontrollerType
+	 * @generated
+	 */
+	public Adapter createMicrocontrollerTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.ECUType <em>ECU Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.ECUType
+	 * @generated
+	 */
+	public Adapter createECUTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.SystemType <em>System Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.SystemType
+	 * @generated
+	 */
+	public Adapter createSystemTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Bus <em>Bus</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Bus
+	 * @generated
+	 */
+	public Adapter createBusAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Frequency <em>Frequency</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Frequency
+	 * @generated
+	 */
+	public Adapter createFrequencyAdapter() {
 		return null;
 	}
 

@@ -22,33 +22,6 @@ public interface HardwareFactory extends EFactory {
 	HardwareFactory eINSTANCE = org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.HardwareFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>System Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>System Type</em>'.
-	 * @generated
-	 */
-	SystemType createSystemType();
-
-	/**
-	 * Returns a new object of class '<em>ECU Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>ECU Type</em>'.
-	 * @generated
-	 */
-	ECUType createECUType();
-
-	/**
-	 * Returns a new object of class '<em>Microcontroller Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Microcontroller Type</em>'.
-	 * @generated
-	 */
-	MicrocontrollerType createMicrocontrollerType();
-
-	/**
 	 * Returns a new object of class '<em>Hw System</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -56,60 +29,6 @@ public interface HardwareFactory extends EFactory {
 	 * @generated
 	 */
 	HwSystem createHwSystem();
-
-	/**
-	 * Returns a new object of class '<em>ECU</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>ECU</em>'.
-	 * @generated
-	 */
-	ECU createECU();
-
-	/**
-	 * Returns a new object of class '<em>Microcontroller</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Microcontroller</em>'.
-	 * @generated
-	 */
-	Microcontroller createMicrocontroller();
-
-	/**
-	 * Returns a new object of class '<em>Network</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Network</em>'.
-	 * @generated
-	 */
-	Network createNetwork();
-
-	/**
-	 * Returns a new object of class '<em>Network Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Network Type</em>'.
-	 * @generated
-	 */
-	NetworkType createNetworkType();
-
-	/**
-	 * Returns a new object of class '<em>Core</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Core</em>'.
-	 * @generated
-	 */
-	Core createCore();
-
-	/**
-	 * Returns a new object of class '<em>Bus</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Bus</em>'.
-	 * @generated
-	 */
-	Bus createBus();
 
 	/**
 	 * Returns a new object of class '<em>Quartz</em>'.
@@ -130,22 +49,49 @@ public interface HardwareFactory extends EFactory {
 	Prescaler createPrescaler();
 
 	/**
-	 * Returns a new object of class '<em>Frequency</em>'.
+	 * Returns a new object of class '<em>Network</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Frequency</em>'.
+	 * @return a new object of class '<em>Network</em>'.
 	 * @generated
 	 */
-	Frequency createFrequency();
+	Network createNetwork();
 
 	/**
-	 * Returns a new object of class '<em>HW Model</em>'.
+	 * Returns a new object of class '<em>Network Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>HW Model</em>'.
+	 * @return a new object of class '<em>Network Type</em>'.
 	 * @generated
 	 */
-	HWModel createHWModel();
+	NetworkType createNetworkType();
+
+	/**
+	 * Returns a new object of class '<em>ECU</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ECU</em>'.
+	 * @generated
+	 */
+	ECU createECU();
+
+	/**
+	 * Returns a new object of class '<em>Microcontroller</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Microcontroller</em>'.
+	 * @generated
+	 */
+	Microcontroller createMicrocontroller();
+
+	/**
+	 * Returns a new object of class '<em>Core</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Core</em>'.
+	 * @generated
+	 */
+	Core createCore();
 
 	/**
 	 * Returns a new object of class '<em>Core Type</em>'.
@@ -155,6 +101,51 @@ public interface HardwareFactory extends EFactory {
 	 * @generated
 	 */
 	CoreType createCoreType();
+
+	/**
+	 * Returns a new object of class '<em>Microcontroller Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Microcontroller Type</em>'.
+	 * @generated
+	 */
+	MicrocontrollerType createMicrocontrollerType();
+
+	/**
+	 * Returns a new object of class '<em>ECU Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ECU Type</em>'.
+	 * @generated
+	 */
+	ECUType createECUType();
+
+	/**
+	 * Returns a new object of class '<em>System Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>System Type</em>'.
+	 * @generated
+	 */
+	SystemType createSystemType();
+
+	/**
+	 * Returns a new object of class '<em>Bus</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Bus</em>'.
+	 * @generated
+	 */
+	Bus createBus();
+
+	/**
+	 * Returns a new object of class '<em>Frequency</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Frequency</em>'.
+	 * @generated
+	 */
+	Frequency createFrequency();
 
 	/**
 	 * Returns the package supported by this factory.
