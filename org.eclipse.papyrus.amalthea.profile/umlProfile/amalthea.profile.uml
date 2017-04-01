@@ -528,8 +528,44 @@
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiFs6RZKEeeFzte_Mj5jqA" name="MappingModel"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_oiD3sBZKEeeFzte_Mj5jqA" name="StimuliModel" URI="http://www.eclipse.org/papyrus/2017/Amalthea/Stimuli">
-      <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiD3sRZKEeeFzte_Mj5jqA" name="Single"/>
-      <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiD3shZKEeeFzte_Mj5jqA" name="StimuliModel"/>
+      <elementImport xmi:type="uml:ElementImport" xmi:id="_orQO4BcZEeeFzte_Mj5jqA">
+        <importedElement xmi:type="uml:Stereotype" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Blocks.stereotype_packagedElement_Block"/>
+      </elementImport>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Tf984BcZEeeFzte_Mj5jqA" memberEnd="_Tf-j8hcZEeeFzte_Mj5jqA _Tf_LABcZEeeFzte_Mj5jqA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Tf-j8BcZEeeFzte_Mj5jqA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Tf-j8RcZEeeFzte_Mj5jqA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_Tf_LABcZEeeFzte_Mj5jqA" name="single" type="_oiD3sRZKEeeFzte_Mj5jqA" association="_Tf984BcZEeeFzte_Mj5jqA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_YXGD4BcZEeeFzte_Mj5jqA" memberEnd="_YXGq8hcZEeeFzte_Mj5jqA _YXGq8xcZEeeFzte_Mj5jqA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_YXGq8BcZEeeFzte_Mj5jqA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_YXGq8RcZEeeFzte_Mj5jqA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_YXGq8xcZEeeFzte_Mj5jqA" name="periodic" type="_Izo9EBcZEeeFzte_Mj5jqA" association="_YXGD4BcZEeeFzte_Mj5jqA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_8tYgcBcZEeeFzte_Mj5jqA" memberEnd="_8tZHghcZEeeFzte_Mj5jqA _8tZHgxcZEeeFzte_Mj5jqA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8tZHgBcZEeeFzte_Mj5jqA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8tZHgRcZEeeFzte_Mj5jqA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_8tZHgxcZEeeFzte_Mj5jqA" name="periodic" type="_Izo9EBcZEeeFzte_Mj5jqA" association="_8tYgcBcZEeeFzte_Mj5jqA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiD3sRZKEeeFzte_Mj5jqA" name="Single">
+        <generalization xmi:type="uml:Generalization" xmi:id="_OyWXMBcZEeeFzte_Mj5jqA" general="_-NpOwBcYEeeFzte_Mj5jqA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Tf-j8hcZEeeFzte_Mj5jqA" name="activation" type="_oiGT9hZKEeeFzte_Mj5jqA" association="_Tf984BcZEeeFzte_Mj5jqA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_-NpOwBcYEeeFzte_Mj5jqA" name="Stimulus" isAbstract="true">
+        <generalization xmi:type="uml:Generalization" xmi:id="_q-s4MBcZEeeFzte_Mj5jqA">
+          <general xmi:type="uml:Stereotype" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Blocks.stereotype_packagedElement_Block"/>
+        </generalization>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_Izo9EBcZEeeFzte_Mj5jqA" name="Periodic">
+        <generalization xmi:type="uml:Generalization" xmi:id="_O8SWUBcZEeeFzte_Mj5jqA" general="_-NpOwBcYEeeFzte_Mj5jqA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_YXGq8hcZEeeFzte_Mj5jqA" name="recurrence" type="_oiGT9hZKEeeFzte_Mj5jqA" association="_YXGD4BcZEeeFzte_Mj5jqA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_8tZHghcZEeeFzte_Mj5jqA" name="offset" type="_oiGT9hZKEeeFzte_Mj5jqA" association="_8tYgcBcZEeeFzte_Mj5jqA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_M17t0BcZEeeFzte_Mj5jqA" name="Interprocess">
+        <generalization xmi:type="uml:Generalization" xmi:id="_PKGI0BcZEeeFzte_Mj5jqA" general="_-NpOwBcYEeeFzte_Mj5jqA"/>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_oiFs7hZKEeeFzte_Mj5jqA" name="ConstraintsModel" URI="http://www.eclipse.org/papyrus/2017/Amalthea/Constraints">
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiFs7xZKEeeFzte_Mj5jqA" name="ConstraintsModel"/>
