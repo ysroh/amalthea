@@ -45,7 +45,7 @@
    <extension
          point="org.eclipse.papyrus.infra.newchild">
       <menuCreationModel
-            model="newchildmenu/newChildMenu.creationmenumodel">
+            model="newchildmenu/Amalthea.creationmenumodel">
       </menuCreationModel>
    </extension>
 	<extension
