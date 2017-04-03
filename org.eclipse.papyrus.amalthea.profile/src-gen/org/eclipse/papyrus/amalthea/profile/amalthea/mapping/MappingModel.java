@@ -2,7 +2,7 @@
  */
 package org.eclipse.papyrus.amalthea.profile.amalthea.mapping;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.papyrus.sysml14.blocks.Block;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,5 +14,5 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface MappingModel extends EObject {
+public interface MappingModel extends Block {
 } // MappingModel

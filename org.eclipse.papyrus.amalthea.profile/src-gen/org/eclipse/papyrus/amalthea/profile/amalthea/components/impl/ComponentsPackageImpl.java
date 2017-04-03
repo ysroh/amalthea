@@ -2,9 +2,7 @@
  */
 package org.eclipse.papyrus.amalthea.profile.amalthea.components.impl;
 
-import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -22,7 +20,6 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.components.ComponentsFactor
 import org.eclipse.papyrus.amalthea.profile.amalthea.components.ComponentsPackage;
 import org.eclipse.papyrus.amalthea.profile.amalthea.components.Composite;
 import org.eclipse.papyrus.amalthea.profile.amalthea.components.FInterfacePort;
-import org.eclipse.papyrus.amalthea.profile.amalthea.components.InterfaceKind;
 
 import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.ConstraintsPackage;
 
@@ -66,14 +63,14 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass componentEClass = null;
+	private EClass fInterfacePortEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass fInterfacePortEClass = null;
+	private EClass componentEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -88,13 +85,6 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 	 * @generated
 	 */
 	private EClass componentInstanceEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum interfaceKindEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -191,6 +181,24 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getFInterfacePort() {
+		return fInterfacePortEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFInterfacePort_Base_Port() {
+		return (EReference)fInterfacePortEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getComponent() {
 		return componentEClass;
 	}
@@ -202,42 +210,6 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 	 */
 	public EReference getComponent_Base_Component() {
 		return (EReference)componentEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getComponent_Ports() {
-		return (EReference)componentEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getFInterfacePort() {
-		return fInterfacePortEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getFInterfacePort_Kind() {
-		return (EAttribute)fInterfacePortEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getFInterfacePort_Base_Port() {
-		return (EReference)fInterfacePortEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -281,15 +253,6 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getInterfaceKind() {
-		return interfaceKindEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public ComponentsFactory getComponentsFactory() {
 		return (ComponentsFactory)getEFactoryInstance();
 	}
@@ -313,22 +276,17 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 		isCreated = true;
 
 		// Create classes and their features
+		fInterfacePortEClass = createEClass(FINTERFACE_PORT);
+		createEReference(fInterfacePortEClass, FINTERFACE_PORT__BASE_PORT);
+
 		componentEClass = createEClass(COMPONENT);
 		createEReference(componentEClass, COMPONENT__BASE_COMPONENT);
-		createEReference(componentEClass, COMPONENT__PORTS);
-
-		fInterfacePortEClass = createEClass(FINTERFACE_PORT);
-		createEAttribute(fInterfacePortEClass, FINTERFACE_PORT__KIND);
-		createEReference(fInterfacePortEClass, FINTERFACE_PORT__BASE_PORT);
 
 		compositeEClass = createEClass(COMPOSITE);
 		createEReference(compositeEClass, COMPOSITE__COMPONENTINSTANCES);
 
 		componentInstanceEClass = createEClass(COMPONENT_INSTANCE);
 		createEReference(componentInstanceEClass, COMPONENT_INSTANCE__BASE_PROPERTY);
-
-		// Create enums
-		interfaceKindEEnum = createEEnum(INTERFACE_KIND);
 	}
 
 	/**
@@ -365,25 +323,17 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 		compositeEClass.getESuperTypes().add(this.getComponent());
 
 		// Initialize classes, features, and operations; add parameters
+		initEClass(fInterfacePortEClass, FInterfacePort.class, "FInterfacePort", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFInterfacePort_Base_Port(), theUMLPackage.getPort(), null, "base_Port", null, 1, 1, FInterfacePort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
 		initEClass(componentEClass, Component.class, "Component", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getComponent_Base_Component(), theUMLPackage.getComponent(), null, "base_Component", null, 1, 1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getComponent_Ports(), this.getFInterfacePort(), null, "ports", null, 0, -1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(fInterfacePortEClass, FInterfacePort.class, "FInterfacePort", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFInterfacePort_Kind(), this.getInterfaceKind(), "kind", "_undefined_", 1, 1, FInterfacePort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getFInterfacePort_Base_Port(), theUMLPackage.getPort(), null, "base_Port", null, 1, 1, FInterfacePort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(compositeEClass, Composite.class, "Composite", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getComposite_Componentinstances(), this.getComponentInstance(), null, "componentinstances", null, 0, -1, Composite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(componentInstanceEClass, ComponentInstance.class, "ComponentInstance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getComponentInstance_Base_Property(), theUMLPackage.getProperty(), null, "base_Property", null, 1, 1, ComponentInstance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		// Initialize enums and add enum literals
-		initEEnum(interfaceKindEEnum, InterfaceKind.class, "InterfaceKind");
-		addEEnumLiteral(interfaceKindEEnum, InterfaceKind._UNDEFINED_);
-		addEEnumLiteral(interfaceKindEEnum, InterfaceKind.PROVIDES);
-		addEEnumLiteral(interfaceKindEEnum, InterfaceKind.REQUIRES);
 
 		// Create annotations
 		// http://www.eclipse.org/uml2/2.0.0/UML

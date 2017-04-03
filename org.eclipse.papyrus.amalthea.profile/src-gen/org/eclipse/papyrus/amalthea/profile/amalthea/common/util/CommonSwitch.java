@@ -91,6 +91,50 @@ public class CommonSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case CommonPackage.INSTRUCTIONS: {
+				Instructions instructions = (Instructions)theEObject;
+				T result = caseInstructions(instructions);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CommonPackage.DEVIATION: {
+				Deviation deviation = (Deviation)theEObject;
+				T result = caseDeviation(deviation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CommonPackage.DISTRIBUTION: {
+				Distribution distribution = (Distribution)theEObject;
+				T result = caseDistribution(distribution);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CommonPackage.WEIBULL_ESTIMATORS: {
+				WeibullEstimators weibullEstimators = (WeibullEstimators)theEObject;
+				T result = caseWeibullEstimators(weibullEstimators);
+				if (result == null) result = caseDistribution(weibullEstimators);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CommonPackage.INSTRUCTIONS_DEVIATION: {
+				InstructionsDeviation instructionsDeviation = (InstructionsDeviation)theEObject;
+				T result = caseInstructionsDeviation(instructionsDeviation);
+				if (result == null) result = caseInstructions(instructionsDeviation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CommonPackage.COUNTER: {
+				Counter counter = (Counter)theEObject;
+				T result = caseCounter(counter);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CommonPackage.DATA_SIZE: {
+				DataSize dataSize = (DataSize)theEObject;
+				T result = caseDataSize(dataSize);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -152,6 +196,111 @@ public class CommonSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseIAnnotatable(IAnnotatable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Instructions</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Instructions</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInstructions(Instructions object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Deviation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Deviation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDeviation(Deviation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Distribution</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Distribution</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDistribution(Distribution object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Weibull Estimators</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Weibull Estimators</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseWeibullEstimators(WeibullEstimators object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Instructions Deviation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Instructions Deviation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInstructionsDeviation(InstructionsDeviation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Counter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Counter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCounter(Counter object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Data Size</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Data Size</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDataSize(DataSize object) {
 		return null;
 	}
 

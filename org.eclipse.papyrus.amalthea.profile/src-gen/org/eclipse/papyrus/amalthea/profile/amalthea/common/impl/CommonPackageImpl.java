@@ -15,10 +15,18 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.AmaltheaPackage;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.AbstractTime;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.CommonFactory;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.CommonPackage;
+import org.eclipse.papyrus.amalthea.profile.amalthea.common.Counter;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.CustomProperty;
+import org.eclipse.papyrus.amalthea.profile.amalthea.common.DataSize;
+import org.eclipse.papyrus.amalthea.profile.amalthea.common.DataUnit;
+import org.eclipse.papyrus.amalthea.profile.amalthea.common.Deviation;
+import org.eclipse.papyrus.amalthea.profile.amalthea.common.Distribution;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.IAnnotatable;
+import org.eclipse.papyrus.amalthea.profile.amalthea.common.Instructions;
+import org.eclipse.papyrus.amalthea.profile.amalthea.common.InstructionsDeviation;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.Time;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.TimeUnit;
+import org.eclipse.papyrus.amalthea.profile.amalthea.common.WeibullEstimators;
 
 import org.eclipse.papyrus.amalthea.profile.amalthea.components.ComponentsPackage;
 
@@ -96,7 +104,63 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass instructionsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass deviationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass distributionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass weibullEstimatorsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass instructionsDeviationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass counterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dataSizeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum timeUnitEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum dataUnitEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -211,6 +275,15 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getCustomProperty_Base_Property() {
+		return (EReference)customPropertyEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAbstractTime() {
 		return abstractTimeEClass;
 	}
@@ -265,8 +338,152 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getInstructions() {
+		return instructionsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDeviation() {
+		return deviationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDeviation_Distribution() {
+		return (EReference)deviationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDistribution() {
+		return distributionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getWeibullEstimators() {
+		return weibullEstimatorsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getWeibullEstimators_PRemainPromille() {
+		return (EAttribute)weibullEstimatorsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getWeibullEstimators_Mean() {
+		return (EAttribute)weibullEstimatorsEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getInstructionsDeviation() {
+		return instructionsDeviationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInstructionsDeviation_Deviation() {
+		return (EReference)instructionsDeviationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCounter() {
+		return counterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCounter_CounterOffset() {
+		return (EAttribute)counterEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCounter_CounterPrescaler() {
+		return (EAttribute)counterEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDataSize() {
+		return dataSizeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDataSize_Unit() {
+		return (EAttribute)dataSizeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDataSize_Value() {
+		return (EAttribute)dataSizeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getTimeUnit() {
 		return timeUnitEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getDataUnit() {
+		return dataUnitEEnum;
 	}
 
 	/**
@@ -299,6 +516,7 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		// Create classes and their features
 		customPropertyEClass = createEClass(CUSTOM_PROPERTY);
 		createEAttribute(customPropertyEClass, CUSTOM_PROPERTY__KEY);
+		createEReference(customPropertyEClass, CUSTOM_PROPERTY__BASE_PROPERTY);
 
 		abstractTimeEClass = createEClass(ABSTRACT_TIME);
 		createEAttribute(abstractTimeEClass, ABSTRACT_TIME__VALUE);
@@ -309,8 +527,31 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 
 		iAnnotatableEClass = createEClass(IANNOTATABLE);
 
+		instructionsEClass = createEClass(INSTRUCTIONS);
+
+		deviationEClass = createEClass(DEVIATION);
+		createEReference(deviationEClass, DEVIATION__DISTRIBUTION);
+
+		distributionEClass = createEClass(DISTRIBUTION);
+
+		weibullEstimatorsEClass = createEClass(WEIBULL_ESTIMATORS);
+		createEAttribute(weibullEstimatorsEClass, WEIBULL_ESTIMATORS__PREMAIN_PROMILLE);
+		createEAttribute(weibullEstimatorsEClass, WEIBULL_ESTIMATORS__MEAN);
+
+		instructionsDeviationEClass = createEClass(INSTRUCTIONS_DEVIATION);
+		createEReference(instructionsDeviationEClass, INSTRUCTIONS_DEVIATION__DEVIATION);
+
+		counterEClass = createEClass(COUNTER);
+		createEAttribute(counterEClass, COUNTER__COUNTER_OFFSET);
+		createEAttribute(counterEClass, COUNTER__COUNTER_PRESCALER);
+
+		dataSizeEClass = createEClass(DATA_SIZE);
+		createEAttribute(dataSizeEClass, DATA_SIZE__UNIT);
+		createEAttribute(dataSizeEClass, DATA_SIZE__VALUE);
+
 		// Create enums
 		timeUnitEEnum = createEEnum(TIME_UNIT);
+		dataUnitEEnum = createEEnum(DATA_UNIT);
 	}
 
 	/**
@@ -337,8 +578,8 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
 		UMLPackage theUMLPackage = (UMLPackage)EPackage.Registry.INSTANCE.getEPackage(UMLPackage.eNS_URI);
+		TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -346,10 +587,13 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 
 		// Add supertypes to classes
 		timeEClass.getESuperTypes().add(this.getAbstractTime());
+		weibullEstimatorsEClass.getESuperTypes().add(this.getDistribution());
+		instructionsDeviationEClass.getESuperTypes().add(this.getInstructions());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(customPropertyEClass, CustomProperty.class, "CustomProperty", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCustomProperty_Key(), ecorePackage.getEString(), "key", null, 1, 1, CustomProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getCustomProperty_Base_Property(), theUMLPackage.getProperty(), null, "base_Property", null, 1, 1, CustomProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(abstractTimeEClass, AbstractTime.class, "AbstractTime", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAbstractTime_Value(), theTypesPackage.getInteger(), "value", null, 1, 1, AbstractTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -360,6 +604,28 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 
 		initEClass(iAnnotatableEClass, IAnnotatable.class, "IAnnotatable", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(instructionsEClass, Instructions.class, "Instructions", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(deviationEClass, Deviation.class, "Deviation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDeviation_Distribution(), this.getDistribution(), null, "distribution", null, 1, 1, Deviation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(distributionEClass, Distribution.class, "Distribution", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(weibullEstimatorsEClass, WeibullEstimators.class, "WeibullEstimators", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getWeibullEstimators_PRemainPromille(), theTypesPackage.getReal(), "pRemainPromille", null, 1, 1, WeibullEstimators.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getWeibullEstimators_Mean(), theTypesPackage.getInteger(), "mean", null, 1, 1, WeibullEstimators.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(instructionsDeviationEClass, InstructionsDeviation.class, "InstructionsDeviation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getInstructionsDeviation_Deviation(), this.getDeviation(), null, "deviation", null, 0, 1, InstructionsDeviation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(counterEClass, Counter.class, "Counter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCounter_CounterOffset(), theTypesPackage.getInteger(), "counterOffset", null, 1, 1, Counter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCounter_CounterPrescaler(), theTypesPackage.getInteger(), "counterPrescaler", null, 1, 1, Counter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(dataSizeEClass, DataSize.class, "DataSize", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDataSize_Unit(), this.getDataUnit(), "unit", null, 1, 1, DataSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getDataSize_Value(), theTypesPackage.getInteger(), "value", null, 1, 1, DataSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(timeUnitEEnum, TimeUnit.class, "TimeUnit");
 		addEEnumLiteral(timeUnitEEnum, TimeUnit._UNDEFINED_);
@@ -368,6 +634,26 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		addEEnumLiteral(timeUnitEEnum, TimeUnit.US);
 		addEEnumLiteral(timeUnitEEnum, TimeUnit.NS);
 		addEEnumLiteral(timeUnitEEnum, TimeUnit.PS);
+
+		initEEnum(dataUnitEEnum, DataUnit.class, "DataUnit");
+		addEEnumLiteral(dataUnitEEnum, DataUnit.BIT);
+		addEEnumLiteral(dataUnitEEnum, DataUnit.KBIT);
+		addEEnumLiteral(dataUnitEEnum, DataUnit.MBIT);
+		addEEnumLiteral(dataUnitEEnum, DataUnit.GBIT);
+		addEEnumLiteral(dataUnitEEnum, DataUnit.TBIT);
+		addEEnumLiteral(dataUnitEEnum, DataUnit.KIBIT);
+		addEEnumLiteral(dataUnitEEnum, DataUnit.MIBIT);
+		addEEnumLiteral(dataUnitEEnum, DataUnit.GIBIT);
+		addEEnumLiteral(dataUnitEEnum, DataUnit.TIBIT);
+		addEEnumLiteral(dataUnitEEnum, DataUnit.BYTE);
+		addEEnumLiteral(dataUnitEEnum, DataUnit.KB);
+		addEEnumLiteral(dataUnitEEnum, DataUnit.MB);
+		addEEnumLiteral(dataUnitEEnum, DataUnit.GB);
+		addEEnumLiteral(dataUnitEEnum, DataUnit.TB);
+		addEEnumLiteral(dataUnitEEnum, DataUnit.KI_B);
+		addEEnumLiteral(dataUnitEEnum, DataUnit.MI_B);
+		addEEnumLiteral(dataUnitEEnum, DataUnit.GI_B);
+		addEEnumLiteral(dataUnitEEnum, DataUnit.TI_B);
 
 		// Create annotations
 		// http://www.eclipse.org/uml2/2.0.0/UML

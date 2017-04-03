@@ -84,6 +84,34 @@ public class CommonAdapterFactory extends AdapterFactoryImpl {
 				return createIAnnotatableAdapter();
 			}
 			@Override
+			public Adapter caseInstructions(Instructions object) {
+				return createInstructionsAdapter();
+			}
+			@Override
+			public Adapter caseDeviation(Deviation object) {
+				return createDeviationAdapter();
+			}
+			@Override
+			public Adapter caseDistribution(Distribution object) {
+				return createDistributionAdapter();
+			}
+			@Override
+			public Adapter caseWeibullEstimators(WeibullEstimators object) {
+				return createWeibullEstimatorsAdapter();
+			}
+			@Override
+			public Adapter caseInstructionsDeviation(InstructionsDeviation object) {
+				return createInstructionsDeviationAdapter();
+			}
+			@Override
+			public Adapter caseCounter(Counter object) {
+				return createCounterAdapter();
+			}
+			@Override
+			public Adapter caseDataSize(DataSize object) {
+				return createDataSizeAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -156,6 +184,104 @@ public class CommonAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createIAnnotatableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.Instructions <em>Instructions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.Instructions
+	 * @generated
+	 */
+	public Adapter createInstructionsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.Deviation <em>Deviation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.Deviation
+	 * @generated
+	 */
+	public Adapter createDeviationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.Distribution <em>Distribution</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.Distribution
+	 * @generated
+	 */
+	public Adapter createDistributionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.WeibullEstimators <em>Weibull Estimators</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.WeibullEstimators
+	 * @generated
+	 */
+	public Adapter createWeibullEstimatorsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.InstructionsDeviation <em>Instructions Deviation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.InstructionsDeviation
+	 * @generated
+	 */
+	public Adapter createInstructionsDeviationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.Counter <em>Counter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.Counter
+	 * @generated
+	 */
+	public Adapter createCounterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.DataSize <em>Data Size</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.DataSize
+	 * @generated
+	 */
+	public Adapter createDataSizeAdapter() {
 		return null;
 	}
 

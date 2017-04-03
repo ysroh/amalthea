@@ -43,6 +43,8 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.StimuliPackage;
 
 import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.impl.StimuliPackageImpl;
 
+import org.eclipse.papyrus.sysml14.blocks.BlocksPackage;
+
 import org.eclipse.papyrus.sysml14.sysmlPackage;
 
 /**
@@ -212,11 +214,15 @@ public class MappingPackageImpl extends EPackageImpl implements MappingPackage {
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		BlocksPackage theBlocksPackage = (BlocksPackage)EPackage.Registry.INSTANCE.getEPackage(BlocksPackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		mappingModelEClass.getESuperTypes().add(theBlocksPackage.getBlock());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(mappingModelEClass, MappingModel.class, "MappingModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

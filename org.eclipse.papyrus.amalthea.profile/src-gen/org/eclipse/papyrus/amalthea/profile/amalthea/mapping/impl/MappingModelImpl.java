@@ -4,10 +4,10 @@ package org.eclipse.papyrus.amalthea.profile.amalthea.mapping.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.papyrus.amalthea.profile.amalthea.mapping.MappingModel;
 import org.eclipse.papyrus.amalthea.profile.amalthea.mapping.MappingPackage;
+
+import org.eclipse.papyrus.sysml14.blocks.internal.impl.BlockImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,7 +16,7 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.mapping.MappingPackage;
  *
  * @generated
  */
-public class MappingModelImpl extends MinimalEObjectImpl.Container implements MappingModel {
+public class MappingModelImpl extends BlockImpl implements MappingModel {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

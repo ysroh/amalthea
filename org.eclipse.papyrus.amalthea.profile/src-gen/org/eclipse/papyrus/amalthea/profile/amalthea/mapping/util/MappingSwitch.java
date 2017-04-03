@@ -9,6 +9,8 @@ import org.eclipse.emf.ecore.util.Switch;
 
 import org.eclipse.papyrus.amalthea.profile.amalthea.mapping.*;
 
+import org.eclipse.papyrus.sysml14.blocks.Block;
+
 /**
  * <!-- begin-user-doc -->
  * The <b>Switch</b> for the model's inheritance hierarchy.
@@ -69,6 +71,7 @@ public class MappingSwitch<T> extends Switch<T> {
 			case MappingPackage.MAPPING_MODEL: {
 				MappingModel mappingModel = (MappingModel)theEObject;
 				T result = caseMappingModel(mappingModel);
+				if (result == null) result = caseBlock(mappingModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -88,6 +91,21 @@ public class MappingSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMappingModel(MappingModel object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Block</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Block</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBlock(Block object) {
 		return null;
 	}
 

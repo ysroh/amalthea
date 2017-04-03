@@ -31,13 +31,22 @@ public interface StimuliFactory extends EFactory {
 	Single createSingle();
 
 	/**
-	 * Returns a new object of class '<em>Model</em>'.
+	 * Returns a new object of class '<em>Periodic</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Model</em>'.
+	 * @return a new object of class '<em>Periodic</em>'.
 	 * @generated
 	 */
-	StimuliModel createStimuliModel();
+	Periodic createPeriodic();
+
+	/**
+	 * Returns a new object of class '<em>Interprocess</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Interprocess</em>'.
+	 * @generated
+	 */
+	Interprocess createInterprocess();
 
 	/**
 	 * Returns the package supported by this factory.

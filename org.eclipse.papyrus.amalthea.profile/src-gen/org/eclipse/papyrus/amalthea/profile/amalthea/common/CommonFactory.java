@@ -40,6 +40,51 @@ public interface CommonFactory extends EFactory {
 	Time createTime();
 
 	/**
+	 * Returns a new object of class '<em>Deviation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Deviation</em>'.
+	 * @generated
+	 */
+	Deviation createDeviation();
+
+	/**
+	 * Returns a new object of class '<em>Weibull Estimators</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Weibull Estimators</em>'.
+	 * @generated
+	 */
+	WeibullEstimators createWeibullEstimators();
+
+	/**
+	 * Returns a new object of class '<em>Instructions Deviation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Instructions Deviation</em>'.
+	 * @generated
+	 */
+	InstructionsDeviation createInstructionsDeviation();
+
+	/**
+	 * Returns a new object of class '<em>Counter</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Counter</em>'.
+	 * @generated
+	 */
+	Counter createCounter();
+
+	/**
+	 * Returns a new object of class '<em>Data Size</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Data Size</em>'.
+	 * @generated
+	 */
+	DataSize createDataSize();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

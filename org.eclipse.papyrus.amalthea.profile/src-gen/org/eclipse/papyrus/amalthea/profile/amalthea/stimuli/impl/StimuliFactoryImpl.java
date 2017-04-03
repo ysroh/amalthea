@@ -57,7 +57,8 @@ public class StimuliFactoryImpl extends EFactoryImpl implements StimuliFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case StimuliPackage.SINGLE: return createSingle();
-			case StimuliPackage.STIMULI_MODEL: return createStimuliModel();
+			case StimuliPackage.PERIODIC: return createPeriodic();
+			case StimuliPackage.INTERPROCESS: return createInterprocess();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -78,9 +79,19 @@ public class StimuliFactoryImpl extends EFactoryImpl implements StimuliFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public StimuliModel createStimuliModel() {
-		StimuliModelImpl stimuliModel = new StimuliModelImpl();
-		return stimuliModel;
+	public Periodic createPeriodic() {
+		PeriodicImpl periodic = new PeriodicImpl();
+		return periodic;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Interprocess createInterprocess() {
+		InterprocessImpl interprocess = new InterprocessImpl();
+		return interprocess;
 	}
 
 	/**

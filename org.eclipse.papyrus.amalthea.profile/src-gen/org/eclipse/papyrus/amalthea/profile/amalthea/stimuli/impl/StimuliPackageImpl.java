@@ -4,6 +4,7 @@ package org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
@@ -39,10 +40,14 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.software.SoftwarePackage;
 
 import org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.SoftwarePackageImpl;
 
+import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Interprocess;
+import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Periodic;
 import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Single;
 import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.StimuliFactory;
-import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.StimuliModel;
 import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.StimuliPackage;
+import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Stimulus;
+
+import org.eclipse.papyrus.sysml14.blocks.BlocksPackage;
 
 import org.eclipse.papyrus.sysml14.sysmlPackage;
 
@@ -65,7 +70,21 @@ public class StimuliPackageImpl extends EPackageImpl implements StimuliPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass stimuliModelEClass = null;
+	private EClass stimulusEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass periodicEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass interprocessEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -171,8 +190,53 @@ public class StimuliPackageImpl extends EPackageImpl implements StimuliPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getStimuliModel() {
-		return stimuliModelEClass;
+	public EReference getSingle_Activation() {
+		return (EReference)singleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStimulus() {
+		return stimulusEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPeriodic() {
+		return periodicEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPeriodic_Recurrence() {
+		return (EReference)periodicEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPeriodic_Offset() {
+		return (EReference)periodicEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getInterprocess() {
+		return interprocessEClass;
 	}
 
 	/**
@@ -204,8 +268,15 @@ public class StimuliPackageImpl extends EPackageImpl implements StimuliPackage {
 
 		// Create classes and their features
 		singleEClass = createEClass(SINGLE);
+		createEReference(singleEClass, SINGLE__ACTIVATION);
 
-		stimuliModelEClass = createEClass(STIMULI_MODEL);
+		stimulusEClass = createEClass(STIMULUS);
+
+		periodicEClass = createEClass(PERIODIC);
+		createEReference(periodicEClass, PERIODIC__RECURRENCE);
+		createEReference(periodicEClass, PERIODIC__OFFSET);
+
+		interprocessEClass = createEClass(INTERPROCESS);
 	}
 
 	/**
@@ -231,16 +302,31 @@ public class StimuliPackageImpl extends EPackageImpl implements StimuliPackage {
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		CommonPackage theCommonPackage = (CommonPackage)EPackage.Registry.INSTANCE.getEPackage(CommonPackage.eNS_URI);
+		BlocksPackage theBlocksPackage = (BlocksPackage)EPackage.Registry.INSTANCE.getEPackage(BlocksPackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		singleEClass.getESuperTypes().add(this.getStimulus());
+		stimulusEClass.getESuperTypes().add(theBlocksPackage.getBlock());
+		periodicEClass.getESuperTypes().add(this.getStimulus());
+		interprocessEClass.getESuperTypes().add(this.getStimulus());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(singleEClass, Single.class, "Single", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSingle_Activation(), theCommonPackage.getTime(), null, "activation", null, 1, 1, Single.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(stimuliModelEClass, StimuliModel.class, "StimuliModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(stimulusEClass, Stimulus.class, "Stimulus", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(periodicEClass, Periodic.class, "Periodic", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPeriodic_Recurrence(), theCommonPackage.getTime(), null, "recurrence", null, 1, 1, Periodic.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getPeriodic_Offset(), theCommonPackage.getTime(), null, "offset", null, 1, 1, Periodic.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(interprocessEClass, Interprocess.class, "Interprocess", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create annotations
 		// http://www.eclipse.org/uml2/2.0.0/UML

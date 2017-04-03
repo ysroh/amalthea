@@ -22,15 +22,6 @@ public interface ComponentsFactory extends EFactory {
 	ComponentsFactory eINSTANCE = org.eclipse.papyrus.amalthea.profile.amalthea.components.impl.ComponentsFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Component</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Component</em>'.
-	 * @generated
-	 */
-	Component createComponent();
-
-	/**
 	 * Returns a new object of class '<em>FInterface Port</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -38,6 +29,15 @@ public interface ComponentsFactory extends EFactory {
 	 * @generated
 	 */
 	FInterfacePort createFInterfacePort();
+
+	/**
+	 * Returns a new object of class '<em>Component</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Component</em>'.
+	 * @generated
+	 */
+	Component createComponent();
 
 	/**
 	 * Returns a new object of class '<em>Composite</em>'.

@@ -11,6 +11,8 @@ import org.eclipse.emf.ecore.EObject;
 
 import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.*;
 
+import org.eclipse.papyrus.sysml14.blocks.Block;
+
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
@@ -72,8 +74,20 @@ public class StimuliAdapterFactory extends AdapterFactoryImpl {
 				return createSingleAdapter();
 			}
 			@Override
-			public Adapter caseStimuliModel(StimuliModel object) {
-				return createStimuliModelAdapter();
+			public Adapter caseStimulus(Stimulus object) {
+				return createStimulusAdapter();
+			}
+			@Override
+			public Adapter casePeriodic(Periodic object) {
+				return createPeriodicAdapter();
+			}
+			@Override
+			public Adapter caseInterprocess(Interprocess object) {
+				return createInterprocessAdapter();
+			}
+			@Override
+			public Adapter caseBlock(Block object) {
+				return createBlockAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -110,16 +124,58 @@ public class StimuliAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.StimuliModel <em>Model</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Stimulus <em>Stimulus</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.StimuliModel
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Stimulus
 	 * @generated
 	 */
-	public Adapter createStimuliModelAdapter() {
+	public Adapter createStimulusAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Periodic <em>Periodic</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Periodic
+	 * @generated
+	 */
+	public Adapter createPeriodicAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Interprocess <em>Interprocess</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Interprocess
+	 * @generated
+	 */
+	public Adapter createInterprocessAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.sysml14.blocks.Block <em>Block</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.sysml14.blocks.Block
+	 * @generated
+	 */
+	public Adapter createBlockAdapter() {
 		return null;
 	}
 

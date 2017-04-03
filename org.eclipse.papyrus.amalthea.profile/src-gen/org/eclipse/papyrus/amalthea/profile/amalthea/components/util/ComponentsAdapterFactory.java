@@ -68,12 +68,12 @@ public class ComponentsAdapterFactory extends AdapterFactoryImpl {
 	protected ComponentsSwitch<Adapter> modelSwitch =
 		new ComponentsSwitch<Adapter>() {
 			@Override
-			public Adapter caseComponent(Component object) {
-				return createComponentAdapter();
-			}
-			@Override
 			public Adapter caseFInterfacePort(FInterfacePort object) {
 				return createFInterfacePortAdapter();
+			}
+			@Override
+			public Adapter caseComponent(Component object) {
+				return createComponentAdapter();
 			}
 			@Override
 			public Adapter caseComposite(Composite object) {
@@ -104,20 +104,6 @@ public class ComponentsAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.Component <em>Component</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.Component
-	 * @generated
-	 */
-	public Adapter createComponentAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.FInterfacePort <em>FInterface Port</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -128,6 +114,20 @@ public class ComponentsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFInterfacePortAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.Component <em>Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.Component
+	 * @generated
+	 */
+	public Adapter createComponentAdapter() {
 		return null;
 	}
 

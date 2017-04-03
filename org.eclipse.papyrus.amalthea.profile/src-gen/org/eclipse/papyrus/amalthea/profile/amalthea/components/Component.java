@@ -2,8 +2,6 @@
  */
 package org.eclipse.papyrus.amalthea.profile.amalthea.components;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,7 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.Component#getBase_Component <em>Base Component</em>}</li>
- *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.Component#getPorts <em>Ports</em>}</li>
  * </ul>
  *
  * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.ComponentsPackage#getComponent()
@@ -49,21 +46,5 @@ public interface Component extends EObject {
 	 * @generated
 	 */
 	void setBase_Component(org.eclipse.uml2.uml.Component value);
-
-	/**
-	 * Returns the value of the '<em><b>Ports</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.papyrus.amalthea.profile.amalthea.components.FInterfacePort}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Ports</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ports</em>' reference list.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.ComponentsPackage#getComponent_Ports()
-	 * @model ordered="false"
-	 * @generated
-	 */
-	EList<FInterfacePort> getPorts();
 
 } // Component

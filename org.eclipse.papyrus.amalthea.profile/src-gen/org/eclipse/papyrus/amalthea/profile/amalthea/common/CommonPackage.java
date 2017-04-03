@@ -78,13 +78,22 @@ public interface CommonPackage extends EPackage {
 	int CUSTOM_PROPERTY__KEY = 0;
 
 	/**
+	 * The feature id for the '<em><b>Base Property</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOM_PROPERTY__BASE_PROPERTY = 1;
+
+	/**
 	 * The number of structural features of the '<em>Custom Property</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CUSTOM_PROPERTY_FEATURE_COUNT = 1;
+	int CUSTOM_PROPERTY_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Custom Property</em>' class.
@@ -234,6 +243,274 @@ public interface CommonPackage extends EPackage {
 	int IANNOTATABLE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.InstructionsImpl <em>Instructions</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.InstructionsImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CommonPackageImpl#getInstructions()
+	 * @generated
+	 */
+	int INSTRUCTIONS = 4;
+
+	/**
+	 * The number of structural features of the '<em>Instructions</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTIONS_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Instructions</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTIONS_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.DeviationImpl <em>Deviation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.DeviationImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CommonPackageImpl#getDeviation()
+	 * @generated
+	 */
+	int DEVIATION = 5;
+
+	/**
+	 * The feature id for the '<em><b>Distribution</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVIATION__DISTRIBUTION = 0;
+
+	/**
+	 * The number of structural features of the '<em>Deviation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVIATION_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Deviation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVIATION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.DistributionImpl <em>Distribution</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.DistributionImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CommonPackageImpl#getDistribution()
+	 * @generated
+	 */
+	int DISTRIBUTION = 6;
+
+	/**
+	 * The number of structural features of the '<em>Distribution</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISTRIBUTION_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Distribution</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISTRIBUTION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.WeibullEstimatorsImpl <em>Weibull Estimators</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.WeibullEstimatorsImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CommonPackageImpl#getWeibullEstimators()
+	 * @generated
+	 */
+	int WEIBULL_ESTIMATORS = 7;
+
+	/**
+	 * The feature id for the '<em><b>PRemain Promille</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEIBULL_ESTIMATORS__PREMAIN_PROMILLE = DISTRIBUTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Mean</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEIBULL_ESTIMATORS__MEAN = DISTRIBUTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Weibull Estimators</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEIBULL_ESTIMATORS_FEATURE_COUNT = DISTRIBUTION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Weibull Estimators</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEIBULL_ESTIMATORS_OPERATION_COUNT = DISTRIBUTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.InstructionsDeviationImpl <em>Instructions Deviation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.InstructionsDeviationImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CommonPackageImpl#getInstructionsDeviation()
+	 * @generated
+	 */
+	int INSTRUCTIONS_DEVIATION = 8;
+
+	/**
+	 * The feature id for the '<em><b>Deviation</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTIONS_DEVIATION__DEVIATION = INSTRUCTIONS_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Instructions Deviation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTIONS_DEVIATION_FEATURE_COUNT = INSTRUCTIONS_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Instructions Deviation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTIONS_DEVIATION_OPERATION_COUNT = INSTRUCTIONS_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CounterImpl <em>Counter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CounterImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CommonPackageImpl#getCounter()
+	 * @generated
+	 */
+	int COUNTER = 9;
+
+	/**
+	 * The feature id for the '<em><b>Counter Offset</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTER__COUNTER_OFFSET = 0;
+
+	/**
+	 * The feature id for the '<em><b>Counter Prescaler</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTER__COUNTER_PRESCALER = 1;
+
+	/**
+	 * The number of structural features of the '<em>Counter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTER_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Counter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTER_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.DataSizeImpl <em>Data Size</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.DataSizeImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CommonPackageImpl#getDataSize()
+	 * @generated
+	 */
+	int DATA_SIZE = 10;
+
+	/**
+	 * The feature id for the '<em><b>Unit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_SIZE__UNIT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_SIZE__VALUE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Data Size</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_SIZE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Data Size</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_SIZE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.TimeUnit <em>Time Unit</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -241,7 +518,17 @@ public interface CommonPackage extends EPackage {
 	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CommonPackageImpl#getTimeUnit()
 	 * @generated
 	 */
-	int TIME_UNIT = 4;
+	int TIME_UNIT = 11;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.DataUnit <em>Data Unit</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.DataUnit
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CommonPackageImpl#getDataUnit()
+	 * @generated
+	 */
+	int DATA_UNIT = 12;
 
 
 	/**
@@ -264,6 +551,17 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCustomProperty_Key();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.CustomProperty#getBase_Property <em>Base Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Base Property</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.CustomProperty#getBase_Property()
+	 * @see #getCustomProperty()
+	 * @generated
+	 */
+	EReference getCustomProperty_Base_Property();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.AbstractTime <em>Abstract Time</em>}'.
@@ -329,6 +627,164 @@ public interface CommonPackage extends EPackage {
 	EClass getIAnnotatable();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.Instructions <em>Instructions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Instructions</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.Instructions
+	 * @generated
+	 */
+	EClass getInstructions();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.Deviation <em>Deviation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Deviation</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.Deviation
+	 * @generated
+	 */
+	EClass getDeviation();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.Deviation#getDistribution <em>Distribution</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Distribution</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.Deviation#getDistribution()
+	 * @see #getDeviation()
+	 * @generated
+	 */
+	EReference getDeviation_Distribution();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.Distribution <em>Distribution</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Distribution</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.Distribution
+	 * @generated
+	 */
+	EClass getDistribution();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.WeibullEstimators <em>Weibull Estimators</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Weibull Estimators</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.WeibullEstimators
+	 * @generated
+	 */
+	EClass getWeibullEstimators();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.WeibullEstimators#getPRemainPromille <em>PRemain Promille</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>PRemain Promille</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.WeibullEstimators#getPRemainPromille()
+	 * @see #getWeibullEstimators()
+	 * @generated
+	 */
+	EAttribute getWeibullEstimators_PRemainPromille();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.WeibullEstimators#getMean <em>Mean</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Mean</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.WeibullEstimators#getMean()
+	 * @see #getWeibullEstimators()
+	 * @generated
+	 */
+	EAttribute getWeibullEstimators_Mean();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.InstructionsDeviation <em>Instructions Deviation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Instructions Deviation</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.InstructionsDeviation
+	 * @generated
+	 */
+	EClass getInstructionsDeviation();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.InstructionsDeviation#getDeviation <em>Deviation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Deviation</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.InstructionsDeviation#getDeviation()
+	 * @see #getInstructionsDeviation()
+	 * @generated
+	 */
+	EReference getInstructionsDeviation_Deviation();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.Counter <em>Counter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Counter</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.Counter
+	 * @generated
+	 */
+	EClass getCounter();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.Counter#getCounterOffset <em>Counter Offset</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Counter Offset</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.Counter#getCounterOffset()
+	 * @see #getCounter()
+	 * @generated
+	 */
+	EAttribute getCounter_CounterOffset();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.Counter#getCounterPrescaler <em>Counter Prescaler</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Counter Prescaler</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.Counter#getCounterPrescaler()
+	 * @see #getCounter()
+	 * @generated
+	 */
+	EAttribute getCounter_CounterPrescaler();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.DataSize <em>Data Size</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Data Size</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.DataSize
+	 * @generated
+	 */
+	EClass getDataSize();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.DataSize#getUnit <em>Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Unit</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.DataSize#getUnit()
+	 * @see #getDataSize()
+	 * @generated
+	 */
+	EAttribute getDataSize_Unit();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.DataSize#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.DataSize#getValue()
+	 * @see #getDataSize()
+	 * @generated
+	 */
+	EAttribute getDataSize_Value();
+
+	/**
 	 * Returns the meta object for enum '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.TimeUnit <em>Time Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -337,6 +793,16 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getTimeUnit();
+
+	/**
+	 * Returns the meta object for enum '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.DataUnit <em>Data Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Data Unit</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.DataUnit
+	 * @generated
+	 */
+	EEnum getDataUnit();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -378,6 +844,14 @@ public interface CommonPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CUSTOM_PROPERTY__KEY = eINSTANCE.getCustomProperty_Key();
+
+		/**
+		 * The meta object literal for the '<em><b>Base Property</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CUSTOM_PROPERTY__BASE_PROPERTY = eINSTANCE.getCustomProperty_Base_Property();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.AbstractTimeImpl <em>Abstract Time</em>}' class.
@@ -434,6 +908,140 @@ public interface CommonPackage extends EPackage {
 		EClass IANNOTATABLE = eINSTANCE.getIAnnotatable();
 
 		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.InstructionsImpl <em>Instructions</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.InstructionsImpl
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CommonPackageImpl#getInstructions()
+		 * @generated
+		 */
+		EClass INSTRUCTIONS = eINSTANCE.getInstructions();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.DeviationImpl <em>Deviation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.DeviationImpl
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CommonPackageImpl#getDeviation()
+		 * @generated
+		 */
+		EClass DEVIATION = eINSTANCE.getDeviation();
+
+		/**
+		 * The meta object literal for the '<em><b>Distribution</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DEVIATION__DISTRIBUTION = eINSTANCE.getDeviation_Distribution();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.DistributionImpl <em>Distribution</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.DistributionImpl
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CommonPackageImpl#getDistribution()
+		 * @generated
+		 */
+		EClass DISTRIBUTION = eINSTANCE.getDistribution();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.WeibullEstimatorsImpl <em>Weibull Estimators</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.WeibullEstimatorsImpl
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CommonPackageImpl#getWeibullEstimators()
+		 * @generated
+		 */
+		EClass WEIBULL_ESTIMATORS = eINSTANCE.getWeibullEstimators();
+
+		/**
+		 * The meta object literal for the '<em><b>PRemain Promille</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEIBULL_ESTIMATORS__PREMAIN_PROMILLE = eINSTANCE.getWeibullEstimators_PRemainPromille();
+
+		/**
+		 * The meta object literal for the '<em><b>Mean</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WEIBULL_ESTIMATORS__MEAN = eINSTANCE.getWeibullEstimators_Mean();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.InstructionsDeviationImpl <em>Instructions Deviation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.InstructionsDeviationImpl
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CommonPackageImpl#getInstructionsDeviation()
+		 * @generated
+		 */
+		EClass INSTRUCTIONS_DEVIATION = eINSTANCE.getInstructionsDeviation();
+
+		/**
+		 * The meta object literal for the '<em><b>Deviation</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INSTRUCTIONS_DEVIATION__DEVIATION = eINSTANCE.getInstructionsDeviation_Deviation();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CounterImpl <em>Counter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CounterImpl
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CommonPackageImpl#getCounter()
+		 * @generated
+		 */
+		EClass COUNTER = eINSTANCE.getCounter();
+
+		/**
+		 * The meta object literal for the '<em><b>Counter Offset</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COUNTER__COUNTER_OFFSET = eINSTANCE.getCounter_CounterOffset();
+
+		/**
+		 * The meta object literal for the '<em><b>Counter Prescaler</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COUNTER__COUNTER_PRESCALER = eINSTANCE.getCounter_CounterPrescaler();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.DataSizeImpl <em>Data Size</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.DataSizeImpl
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CommonPackageImpl#getDataSize()
+		 * @generated
+		 */
+		EClass DATA_SIZE = eINSTANCE.getDataSize();
+
+		/**
+		 * The meta object literal for the '<em><b>Unit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DATA_SIZE__UNIT = eINSTANCE.getDataSize_Unit();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DATA_SIZE__VALUE = eINSTANCE.getDataSize_Value();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.TimeUnit <em>Time Unit</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -442,6 +1050,16 @@ public interface CommonPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum TIME_UNIT = eINSTANCE.getTimeUnit();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.DataUnit <em>Data Unit</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.DataUnit
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CommonPackageImpl#getDataUnit()
+		 * @generated
+		 */
+		EEnum DATA_UNIT = eINSTANCE.getDataUnit();
 
 	}
 

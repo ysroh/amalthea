@@ -9,6 +9,8 @@ import org.eclipse.emf.ecore.util.Switch;
 
 import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.*;
 
+import org.eclipse.papyrus.sysml14.blocks.Block;
+
 /**
  * <!-- begin-user-doc -->
  * The <b>Switch</b> for the model's inheritance hierarchy.
@@ -69,12 +71,31 @@ public class StimuliSwitch<T> extends Switch<T> {
 			case StimuliPackage.SINGLE: {
 				Single single = (Single)theEObject;
 				T result = caseSingle(single);
+				if (result == null) result = caseStimulus(single);
+				if (result == null) result = caseBlock(single);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case StimuliPackage.STIMULI_MODEL: {
-				StimuliModel stimuliModel = (StimuliModel)theEObject;
-				T result = caseStimuliModel(stimuliModel);
+			case StimuliPackage.STIMULUS: {
+				Stimulus stimulus = (Stimulus)theEObject;
+				T result = caseStimulus(stimulus);
+				if (result == null) result = caseBlock(stimulus);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case StimuliPackage.PERIODIC: {
+				Periodic periodic = (Periodic)theEObject;
+				T result = casePeriodic(periodic);
+				if (result == null) result = caseStimulus(periodic);
+				if (result == null) result = caseBlock(periodic);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case StimuliPackage.INTERPROCESS: {
+				Interprocess interprocess = (Interprocess)theEObject;
+				T result = caseInterprocess(interprocess);
+				if (result == null) result = caseStimulus(interprocess);
+				if (result == null) result = caseBlock(interprocess);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -98,17 +119,62 @@ public class StimuliSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Model</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Stimulus</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Model</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Stimulus</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseStimuliModel(StimuliModel object) {
+	public T caseStimulus(Stimulus object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Periodic</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Periodic</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePeriodic(Periodic object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Interprocess</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Interprocess</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInterprocess(Interprocess object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Block</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Block</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBlock(Block object) {
 		return null;
 	}
 

@@ -5,6 +5,8 @@ package org.eclipse.papyrus.amalthea.profile.amalthea.mapping;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 
+import org.eclipse.papyrus.sysml14.blocks.BlocksPackage;
+
 /**
  * <!-- begin-user-doc -->
  * The <b>Package</b> for the model.
@@ -66,13 +68,58 @@ public interface MappingPackage extends EPackage {
 	int MAPPING_MODEL = 0;
 
 	/**
+	 * The feature id for the '<em><b>Base Class</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPING_MODEL__BASE_CLASS = BlocksPackage.BLOCK__BASE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Is Encapsulated</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPING_MODEL__IS_ENCAPSULATED = BlocksPackage.BLOCK__IS_ENCAPSULATED;
+
+	/**
 	 * The number of structural features of the '<em>Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAPPING_MODEL_FEATURE_COUNT = 0;
+	int MAPPING_MODEL_FEATURE_COUNT = BlocksPackage.BLOCK_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get References</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPING_MODEL___GET_REFERENCES = BlocksPackage.BLOCK___GET_REFERENCES;
+
+	/**
+	 * The operation id for the '<em>Get Parts</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPING_MODEL___GET_PARTS = BlocksPackage.BLOCK___GET_PARTS;
+
+	/**
+	 * The operation id for the '<em>Get Flow Properties</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAPPING_MODEL___GET_FLOW_PROPERTIES = BlocksPackage.BLOCK___GET_FLOW_PROPERTIES;
 
 	/**
 	 * The number of operations of the '<em>Model</em>' class.
@@ -81,7 +128,7 @@ public interface MappingPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAPPING_MODEL_OPERATION_COUNT = 0;
+	int MAPPING_MODEL_OPERATION_COUNT = BlocksPackage.BLOCK_OPERATION_COUNT + 0;
 
 
 	/**

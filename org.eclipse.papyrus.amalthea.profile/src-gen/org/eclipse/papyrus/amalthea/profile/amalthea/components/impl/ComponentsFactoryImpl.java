@@ -3,7 +3,6 @@
 package org.eclipse.papyrus.amalthea.profile.amalthea.components.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -57,8 +56,8 @@ public class ComponentsFactoryImpl extends EFactoryImpl implements ComponentsFac
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case ComponentsPackage.COMPONENT: return createComponent();
 			case ComponentsPackage.FINTERFACE_PORT: return createFInterfacePort();
+			case ComponentsPackage.COMPONENT: return createComponent();
 			case ComponentsPackage.COMPOSITE: return createComposite();
 			case ComponentsPackage.COMPONENT_INSTANCE: return createComponentInstance();
 			default:
@@ -71,29 +70,9 @@ public class ComponentsFactoryImpl extends EFactoryImpl implements ComponentsFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Object createFromString(EDataType eDataType, String initialValue) {
-		switch (eDataType.getClassifierID()) {
-			case ComponentsPackage.INTERFACE_KIND:
-				return createInterfaceKindFromString(eDataType, initialValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String convertToString(EDataType eDataType, Object instanceValue) {
-		switch (eDataType.getClassifierID()) {
-			case ComponentsPackage.INTERFACE_KIND:
-				return convertInterfaceKindToString(eDataType, instanceValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-		}
+	public FInterfacePort createFInterfacePort() {
+		FInterfacePortImpl fInterfacePort = new FInterfacePortImpl();
+		return fInterfacePort;
 	}
 
 	/**
@@ -104,16 +83,6 @@ public class ComponentsFactoryImpl extends EFactoryImpl implements ComponentsFac
 	public Component createComponent() {
 		ComponentImpl component = new ComponentImpl();
 		return component;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FInterfacePort createFInterfacePort() {
-		FInterfacePortImpl fInterfacePort = new FInterfacePortImpl();
-		return fInterfacePort;
 	}
 
 	/**
@@ -134,26 +103,6 @@ public class ComponentsFactoryImpl extends EFactoryImpl implements ComponentsFac
 	public ComponentInstance createComponentInstance() {
 		ComponentInstanceImpl componentInstance = new ComponentInstanceImpl();
 		return componentInstance;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public InterfaceKind createInterfaceKindFromString(EDataType eDataType, String initialValue) {
-		InterfaceKind result = InterfaceKind.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertInterfaceKindToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

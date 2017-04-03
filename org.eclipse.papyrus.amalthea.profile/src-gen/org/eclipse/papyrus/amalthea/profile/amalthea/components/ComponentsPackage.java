@@ -2,9 +2,7 @@
  */
 package org.eclipse.papyrus.amalthea.profile.amalthea.components;
 
-import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -59,6 +57,43 @@ public interface ComponentsPackage extends EPackage {
 	ComponentsPackage eINSTANCE = org.eclipse.papyrus.amalthea.profile.amalthea.components.impl.ComponentsPackageImpl.init();
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.impl.FInterfacePortImpl <em>FInterface Port</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.impl.FInterfacePortImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.impl.ComponentsPackageImpl#getFInterfacePort()
+	 * @generated
+	 */
+	int FINTERFACE_PORT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Base Port</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINTERFACE_PORT__BASE_PORT = 0;
+
+	/**
+	 * The number of structural features of the '<em>FInterface Port</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINTERFACE_PORT_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>FInterface Port</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINTERFACE_PORT_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.impl.ComponentImpl <em>Component</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -66,7 +101,7 @@ public interface ComponentsPackage extends EPackage {
 	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.impl.ComponentsPackageImpl#getComponent()
 	 * @generated
 	 */
-	int COMPONENT = 0;
+	int COMPONENT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Base Component</b></em>' reference.
@@ -78,22 +113,13 @@ public interface ComponentsPackage extends EPackage {
 	int COMPONENT__BASE_COMPONENT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Ports</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPONENT__PORTS = 1;
-
-	/**
 	 * The number of structural features of the '<em>Component</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_FEATURE_COUNT = 2;
+	int COMPONENT_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Component</em>' class.
@@ -103,52 +129,6 @@ public interface ComponentsPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPONENT_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.impl.FInterfacePortImpl <em>FInterface Port</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.impl.FInterfacePortImpl
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.impl.ComponentsPackageImpl#getFInterfacePort()
-	 * @generated
-	 */
-	int FINTERFACE_PORT = 1;
-
-	/**
-	 * The feature id for the '<em><b>Kind</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FINTERFACE_PORT__KIND = 0;
-
-	/**
-	 * The feature id for the '<em><b>Base Port</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FINTERFACE_PORT__BASE_PORT = 1;
-
-	/**
-	 * The number of structural features of the '<em>FInterface Port</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FINTERFACE_PORT_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>FInterface Port</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FINTERFACE_PORT_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.impl.CompositeImpl <em>Composite</em>}' class.
@@ -168,15 +148,6 @@ public interface ComponentsPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPOSITE__BASE_COMPONENT = COMPONENT__BASE_COMPONENT;
-
-	/**
-	 * The feature id for the '<em><b>Ports</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITE__PORTS = COMPONENT__PORTS;
 
 	/**
 	 * The feature id for the '<em><b>Componentinstances</b></em>' reference list.
@@ -242,16 +213,27 @@ public interface ComponentsPackage extends EPackage {
 	 */
 	int COMPONENT_INSTANCE_OPERATION_COUNT = 0;
 
+
 	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.InterfaceKind <em>Interface Kind</em>}' enum.
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.FInterfacePort <em>FInterface Port</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.InterfaceKind
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.impl.ComponentsPackageImpl#getInterfaceKind()
+	 * @return the meta object for class '<em>FInterface Port</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.FInterfacePort
 	 * @generated
 	 */
-	int INTERFACE_KIND = 4;
+	EClass getFInterfacePort();
 
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.FInterfacePort#getBase_Port <em>Base Port</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Base Port</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.FInterfacePort#getBase_Port()
+	 * @see #getFInterfacePort()
+	 * @generated
+	 */
+	EReference getFInterfacePort_Base_Port();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.Component <em>Component</em>}'.
@@ -273,49 +255,6 @@ public interface ComponentsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getComponent_Base_Component();
-
-	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.Component#getPorts <em>Ports</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Ports</em>'.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.Component#getPorts()
-	 * @see #getComponent()
-	 * @generated
-	 */
-	EReference getComponent_Ports();
-
-	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.FInterfacePort <em>FInterface Port</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>FInterface Port</em>'.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.FInterfacePort
-	 * @generated
-	 */
-	EClass getFInterfacePort();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.FInterfacePort#getKind <em>Kind</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Kind</em>'.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.FInterfacePort#getKind()
-	 * @see #getFInterfacePort()
-	 * @generated
-	 */
-	EAttribute getFInterfacePort_Kind();
-
-	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.FInterfacePort#getBase_Port <em>Base Port</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Base Port</em>'.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.FInterfacePort#getBase_Port()
-	 * @see #getFInterfacePort()
-	 * @generated
-	 */
-	EReference getFInterfacePort_Base_Port();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.Composite <em>Composite</em>}'.
@@ -360,16 +299,6 @@ public interface ComponentsPackage extends EPackage {
 	EReference getComponentInstance_Base_Property();
 
 	/**
-	 * Returns the meta object for enum '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.InterfaceKind <em>Interface Kind</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Interface Kind</em>'.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.InterfaceKind
-	 * @generated
-	 */
-	EEnum getInterfaceKind();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -393,6 +322,24 @@ public interface ComponentsPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.impl.FInterfacePortImpl <em>FInterface Port</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.impl.FInterfacePortImpl
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.impl.ComponentsPackageImpl#getFInterfacePort()
+		 * @generated
+		 */
+		EClass FINTERFACE_PORT = eINSTANCE.getFInterfacePort();
+
+		/**
+		 * The meta object literal for the '<em><b>Base Port</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FINTERFACE_PORT__BASE_PORT = eINSTANCE.getFInterfacePort_Base_Port();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.impl.ComponentImpl <em>Component</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -409,40 +356,6 @@ public interface ComponentsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference COMPONENT__BASE_COMPONENT = eINSTANCE.getComponent_Base_Component();
-
-		/**
-		 * The meta object literal for the '<em><b>Ports</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COMPONENT__PORTS = eINSTANCE.getComponent_Ports();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.impl.FInterfacePortImpl <em>FInterface Port</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.impl.FInterfacePortImpl
-		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.impl.ComponentsPackageImpl#getFInterfacePort()
-		 * @generated
-		 */
-		EClass FINTERFACE_PORT = eINSTANCE.getFInterfacePort();
-
-		/**
-		 * The meta object literal for the '<em><b>Kind</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FINTERFACE_PORT__KIND = eINSTANCE.getFInterfacePort_Kind();
-
-		/**
-		 * The meta object literal for the '<em><b>Base Port</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FINTERFACE_PORT__BASE_PORT = eINSTANCE.getFInterfacePort_Base_Port();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.impl.CompositeImpl <em>Composite</em>}' class.
@@ -479,16 +392,6 @@ public interface ComponentsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference COMPONENT_INSTANCE__BASE_PROPERTY = eINSTANCE.getComponentInstance_Base_Property();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.InterfaceKind <em>Interface Kind</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.InterfaceKind
-		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.impl.ComponentsPackageImpl#getInterfaceKind()
-		 * @generated
-		 */
-		EEnum INTERFACE_KIND = eINSTANCE.getInterfaceKind();
 
 	}
 
