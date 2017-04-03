@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="ASCII"?>
 <ElementCreationMenuModel:Folder xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ElementCreationMenuModel="http://www.eclipse.org/papyrus/infra/newchild/elementcreationmenumodel" xmlns:filters="http://www.eclipse.org/Papyrus/2014/common/filters" xmlns:umlfilters="http://www.eclipse.org/Papyrus/2014/uml/filters" label="New AMALTHEA Child">
   <filter xsi:type="filters:CompoundFilter" filter="//@filter/@ownedFilter.0">
-    <ownedFilter xsi:type="umlfilters:ProfileApplied" name="isAMALTHEAApplied" profileQualifiedName="AMALTHEA" profileURI="pathmap://AMALTHEA_PROFILE/amalthea.profile.uml#_mm5V8BLxEeeFmrJgn4qa2A"/>
+    <ownedFilter xsi:type="umlfilters:ProfileApplied" name="isAmaltheaApplied" profileQualifiedName="Amalthea" profileURI="pathmap://AMALTHEA_PROFILE/amalthea.profile.uml#_PUCPMBYtEeeFzte_Mj5jqA"/>
   </filter>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Runnabe" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Runnable"/>
+  <menu xsi:type="ElementCreationMenuModel:Folder" label="SwModel">
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Runnabe" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Runnable" role=""/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="LabelAccess" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.LabelAccess"/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Time" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Time"/>
+  </menu>
 </ElementCreationMenuModel:Folder>
