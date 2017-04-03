@@ -10,6 +10,6 @@
 		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:EnumCombo input="{Binding}" property="amalthea:hardware:Quartz:type"></ppe:EnumCombo>
+		<ppe:EnumCombo input="{Binding}" property="Amalthea:HWModel:Quartz:type"></ppe:EnumCombo>
 	</Composite>
 </Composite>

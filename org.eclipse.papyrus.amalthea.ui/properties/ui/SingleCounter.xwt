@@ -8,11 +8,11 @@
 	</Composite.layout>
 	<Composite>
 		<Composite.layout>
-			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
+			<ppel:PropertiesLayout numColumns="2"></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:StringEditor input="{Binding}"
-			property="amalthea:common:Counter:counterOffset"></ppe:StringEditor>
-		<ppe:StringEditor input="{Binding}"
-			property="amalthea:common:Counter:counterPrescaler"></ppe:StringEditor>
+		<ppe:IntegerEditor input="{Binding}"
+			property="Amalthea:CommonModel:Counter:counterOffset"></ppe:IntegerEditor>
+		<ppe:IntegerEditor input="{Binding}"
+			property="Amalthea:CommonModel:Counter:counterPrescaler"></ppe:IntegerEditor>
 	</Composite>
 </Composite>

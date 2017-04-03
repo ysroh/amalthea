@@ -8,22 +8,16 @@
 	</Composite.layout>
 	<Composite>
 		<Composite.layout>
-			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
+			<ppel:PropertiesLayout numColumns="2"></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:StringEditor input="{Binding}"
-			property="amalthea:common:AbstractTime:value"></ppe:StringEditor>
+		<ppe:IntegerEditor input="{Binding}"
+			property="Amalthea:CommonModel:AbstractTime:value"></ppe:IntegerEditor>
 	</Composite>
 	<Composite>
 		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:EnumCombo input="{Binding}" property="amalthea:common:AbstractTime:unit"></ppe:EnumCombo>
-	</Composite>
-	<Composite>
-		<Composite.layout>
-			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
-		</Composite.layout>
-		<ppe:ReferenceDialog input="{Binding}"
-			property="amalthea:common:AbstractTime:base_DataType"></ppe:ReferenceDialog>
+		<ppe:EnumCombo input="{Binding}"
+			property="Amalthea:CommonModel:AbstractTime:unit"></ppe:EnumCombo>
 	</Composite>
 </Composite>

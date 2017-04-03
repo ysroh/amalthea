@@ -8,23 +8,30 @@
 	</Composite.layout>
 	<Composite>
 		<Composite.layout>
-			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
+			<ppel:PropertiesLayout></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:StringEditor input="{Binding}"
-			property="amalthea:os:Scheduler:scheduleUnitPriority"></ppe:StringEditor>
+		<ppe:StringEditor property="UML:NamedElement:name"
+			input="{Binding}"></ppe:StringEditor>
+	</Composite>
+	<Composite>
+		<Composite.layout>
+			<ppel:PropertiesLayout numColumns="2"></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:IntegerEditor input="{Binding}"
+			property="Amalthea:OSModel:Scheduler:scheduleUnitPriority"></ppe:IntegerEditor>
 	</Composite>
 	<Composite>
 		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
 		<ppe:ReferenceDialog input="{Binding}"
-			property="amalthea:os:InterruptController:schedulingalgorithm"></ppe:ReferenceDialog>
+			property="Amalthea:OSModel:InterruptController:schedulingalgorithm"></ppe:ReferenceDialog>
 	</Composite>
 	<Composite>
 		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
 		<ppe:MultiReference input="{Binding}"
-			property="amalthea:os:Scheduler:schedulingunit"></ppe:MultiReference>
+			property="Amalthea:OSModel:Scheduler:schedulingunit"></ppe:MultiReference>
 	</Composite>
 </Composite>

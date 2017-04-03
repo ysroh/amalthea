@@ -8,18 +8,18 @@
 	</Composite.layout>
 	<Composite>
 		<Composite.layout>
-			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
+			<ppel:PropertiesLayout></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:StringEditor input="{Binding}"
-			property="amalthea:hardware:CoreType:bitWidth"></ppe:StringEditor>
-		<ppe:StringEditor input="{Binding}"
-			property="amalthea:hardware:CoreType:instructionsPerCycle"></ppe:StringEditor>
+		<ppe:StringEditor property="UML:NamedElement:name"
+			input="{Binding}"></ppe:StringEditor>
 	</Composite>
 	<Composite>
 		<Composite.layout>
-			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
+			<ppel:PropertiesLayout numColumns="2"></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:ReferenceDialog input="{Binding}"
-			property="amalthea:hardware:CoreType:base_DataType"></ppe:ReferenceDialog>
+		<ppe:IntegerEditor input="{Binding}"
+			property="Amalthea:HWModel:CoreType:bitWidth"></ppe:IntegerEditor>
+		<ppe:IntegerEditor input="{Binding}"
+			property="Amalthea:HWModel:CoreType:instructionsPerCycle"></ppe:IntegerEditor>
 	</Composite>
 </Composite>

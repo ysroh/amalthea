@@ -496,12 +496,6 @@ operations of CallSequence Class&#xD;
       <elementImport xmi:type="uml:ElementImport" xmi:id="_-9b6YBiAEeeoWfBb-FGkXQ">
         <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
       </elementImport>
-      <packagedElement xmi:type="uml:Association" xmi:id="_uxrAABfIEeeFzte_Mj5jqA" memberEnd="_uxrnERfIEeeFzte_Mj5jqA _uxrnEhfIEeeFzte_Mj5jqA">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uxrAARfIEeeFzte_Mj5jqA" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uxrnEBfIEeeFzte_Mj5jqA" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_uxrnEhfIEeeFzte_Mj5jqA" name="callgraph" type="_Hr10ABfIEeeFzte_Mj5jqA" association="_uxrAABfIEeeFzte_Mj5jqA"/>
-      </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_JBqXcBfIEeeFzte_Mj5jqA" memberEnd="_JBq-gRfIEeeFzte_Mj5jqA _JBq-ghfIEeeFzte_Mj5jqA">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JBqXcRfIEeeFzte_Mj5jqA" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JBq-gBfIEeeFzte_Mj5jqA" key="nature" value="UML_Nature"/>
@@ -513,6 +507,12 @@ operations of CallSequence Class&#xD;
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cZta4RhwEeeoWfBb-FGkXQ" key="nature" value="UML_Nature"/>
         </eAnnotations>
         <ownedEnd xmi:type="uml:Property" xmi:id="_cZuB8RhwEeeoWfBb-FGkXQ" name="runnableinstructions" type="_XWHlMBhwEeeoWfBb-FGkXQ" association="_cZsMwBhwEeeoWfBb-FGkXQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_IjGXoBiCEeeoWfBb-FGkXQ" memberEnd="_IjHlwRiCEeeoWfBb-FGkXQ _IjHlwhiCEeeoWfBb-FGkXQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_IjG-sBiCEeeoWfBb-FGkXQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_IjHlwBiCEeeoWfBb-FGkXQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_IjHlwhiCEeeoWfBb-FGkXQ" name="callsequenceitem" type="_6NBB8BfIEeeFzte_Mj5jqA" association="_IjGXoBiCEeeoWfBb-FGkXQ"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Extension" xmi:id="_cnhGABhzEeeoWfBb-FGkXQ" name="E_CallSequenceItem_Operation1" memberEnd="_cnhtEBhzEeeoWfBb-FGkXQ _cniUIBhzEeeoWfBb-FGkXQ">
         <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_cnhtEBhzEeeoWfBb-FGkXQ" name="extension_CallSequenceItem" type="_6NBB8BfIEeeFzte_Mj5jqA" aggregation="composite" association="_cnhGABhzEeeoWfBb-FGkXQ"/>
@@ -590,12 +590,12 @@ operations of CallSequence Class&#xD;
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_Hr10ABfIEeeFzte_Mj5jqA" name="CallGraph">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_uxrnERfIEeeFzte_Mj5jqA" name="graphentries" type="_sQrp8BfIEeeFzte_Mj5jqA" association="_uxrAABfIEeeFzte_Mj5jqA">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_v0xbwBfIEeeFzte_Mj5jqA"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_v02UQBfIEeeFzte_Mj5jqA" value="*"/>
-        </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_DnwUcBiBEeeoWfBb-FGkXQ" name="base_Class" association="_DnvGUBiBEeeoWfBb-FGkXQ">
           <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_y29uchiZEeeoWfBb-FGkXQ" name="graphentries" type="_sQrp8BfIEeeFzte_Mj5jqA" association="_y29HYBiZEeeoWfBb-FGkXQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7ZKZABiZEeeoWfBb-FGkXQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7ZUKABiZEeeoWfBb-FGkXQ" value="*"/>
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_sQrp8BfIEeeFzte_Mj5jqA" name="GraphEntry" isAbstract="true">
@@ -637,11 +637,11 @@ operations of CallSequence Class&#xD;
         <generalization xmi:type="uml:Generalization" xmi:id="_Z-ZPABhwEeeoWfBb-FGkXQ" general="_bLeR8BfHEeeFzte_Mj5jqA"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_cZuB8BhwEeeoWfBb-FGkXQ" name="default" type="_N08mYBhvEeeoWfBb-FGkXQ" association="_cZsMwBhwEeeoWfBb-FGkXQ"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_IjGXoBiCEeeoWfBb-FGkXQ" memberEnd="_IjHlwRiCEeeoWfBb-FGkXQ _IjHlwhiCEeeoWfBb-FGkXQ">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_IjG-sBiCEeeoWfBb-FGkXQ" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_IjHlwBiCEeeoWfBb-FGkXQ" key="nature" value="UML_Nature"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_y29HYBiZEeeoWfBb-FGkXQ" memberEnd="_y29uchiZEeeoWfBb-FGkXQ _y29ucxiZEeeoWfBb-FGkXQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_y29ucBiZEeeoWfBb-FGkXQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_y29ucRiZEeeoWfBb-FGkXQ" key="nature" value="UML_Nature"/>
         </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_IjHlwhiCEeeoWfBb-FGkXQ" name="callsequenceitem" type="_6NBB8BfIEeeFzte_Mj5jqA" association="_IjGXoBiCEeeoWfBb-FGkXQ"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_y29ucxiZEeeoWfBb-FGkXQ" name="callgraph" type="_Hr10ABfIEeeFzte_Mj5jqA" association="_y29HYBiZEeeoWfBb-FGkXQ"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_oiFF1hZKEeeFzte_Mj5jqA" name="OSModel" URI="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem">

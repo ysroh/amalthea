@@ -8,22 +8,29 @@
 	</Composite.layout>
 	<Composite>
 		<Composite.layout>
+			<ppel:PropertiesLayout></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:StringEditor property="UML:NamedElement:name"
+			input="{Binding}"></ppe:StringEditor>
+	</Composite>
+	<Composite>
+		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
 		<ppe:ReferenceDialog input="{Binding}"
-			property="amalthea:hardware:Microcontroller:microcontrollertype"></ppe:ReferenceDialog>
+			property="Amalthea:HWModel:Microcontroller:microcontrollertype"></ppe:ReferenceDialog>
 		<ppe:ReferenceDialog input="{Binding}"
-			property="amalthea:hardware:ComplexNode:prescaler"></ppe:ReferenceDialog>
+			property="Amalthea:HWModel:ComplexNode:prescaler"></ppe:ReferenceDialog>
 	</Composite>
 	<Composite>
 		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
 		<ppe:MultiReference input="{Binding}"
-			property="amalthea:hardware:Microcontroller:cores"></ppe:MultiReference>
+			property="Amalthea:HWModel:Microcontroller:cores"></ppe:MultiReference>
 		<ppe:MultiReference input="{Binding}"
-			property="amalthea:hardware:ComplexNode:quartzes"></ppe:MultiReference>
+			property="Amalthea:HWModel:ComplexNode:quartzes"></ppe:MultiReference>
 		<ppe:MultiReference input="{Binding}"
-			property="amalthea:hardware:ComplexNode:networks"></ppe:MultiReference>
+			property="Amalthea:HWModel:ComplexNode:networks"></ppe:MultiReference>
 	</Composite>
 </Composite>

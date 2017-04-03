@@ -8,16 +8,23 @@
 	</Composite.layout>
 	<Composite>
 		<Composite.layout>
-			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
+			<ppel:PropertiesLayout></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:StringEditor input="{Binding}"
-			property="amalthea:software:AbstractProcess:priority"></ppe:StringEditor>
+		<ppe:StringEditor property="UML:NamedElement:name"
+			input="{Binding}"></ppe:StringEditor>
+	</Composite>
+	<Composite>
+		<Composite.layout>
+			<ppel:PropertiesLayout numColumns="2"></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:IntegerEditor input="{Binding}"
+			property="Amalthea:SWModel:AbstractProcess:priority"></ppe:IntegerEditor>
 	</Composite>
 	<Composite>
 		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
 		<ppe:ReferenceDialog input="{Binding}"
-			property="amalthea:software:Process:callgraph"></ppe:ReferenceDialog>
+			property="Amalthea:SWModel:Process:callgraph"></ppe:ReferenceDialog>
 	</Composite>
 </Composite>

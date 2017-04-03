@@ -11,6 +11,6 @@
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
 		<ppe:ReferenceDialog input="{Binding}"
-			property="amalthea:stimuli:Single:activation"></ppe:ReferenceDialog>
+			property="Amalthea:StimuliModel:Single:activation"></ppe:ReferenceDialog>
 	</Composite>
 </Composite>

@@ -8,9 +8,16 @@
 	</Composite.layout>
 	<Composite>
 		<Composite.layout>
+			<ppel:PropertiesLayout numColumns="2"></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:BooleanRadio input="{Binding}"
+			property="Amalthea:SWModel:LabelAccess:isBuffered"></ppe:BooleanRadio>
+	</Composite>
+	<Composite>
+		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
 		<ppe:EnumCombo input="{Binding}"
-			property="amalthea:software:LabelAccess:access"></ppe:EnumCombo>
+			property="Amalthea:SWModel:LabelAccess:access"></ppe:EnumCombo>
 	</Composite>
 </Composite>

@@ -11,8 +11,8 @@
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
 		<ppe:ReferenceDialog input="{Binding}"
-			property="amalthea:stimuli:Periodic:recurrence"></ppe:ReferenceDialog>
+			property="Amalthea:StimuliModel:Periodic:recurrence"></ppe:ReferenceDialog>
 		<ppe:ReferenceDialog input="{Binding}"
-			property="amalthea:stimuli:Periodic:offset"></ppe:ReferenceDialog>
+			property="Amalthea:StimuliModel:Periodic:offset"></ppe:ReferenceDialog>
 	</Composite>
 </Composite>

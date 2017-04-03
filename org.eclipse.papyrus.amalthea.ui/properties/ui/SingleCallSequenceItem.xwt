@@ -11,8 +11,6 @@
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
 		<ppe:ReferenceDialog input="{Binding}"
-			property="amalthea:software:CallSequenceItem:base_Operation"></ppe:ReferenceDialog>
-		<ppe:ReferenceDialog input="{Binding}"
-			property="amalthea:software:CallSequenceItem:counter"></ppe:ReferenceDialog>
+			property="Amalthea:SWModel:CallSequenceItem:counter"></ppe:ReferenceDialog>
 	</Composite>
 </Composite>

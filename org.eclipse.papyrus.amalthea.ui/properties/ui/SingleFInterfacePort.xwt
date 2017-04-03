@@ -8,9 +8,9 @@
 	</Composite.layout>
 	<Composite>
 		<Composite.layout>
-			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
+			<ppel:PropertiesLayout></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:ReferenceDialog input="{Binding}"
-			property="amalthea:components:FInterfacePort:base_Port"></ppe:ReferenceDialog>
+		<ppe:StringEditor property="UML:NamedElement:name"
+			input="{Binding}"></ppe:StringEditor>
 	</Composite>
 </Composite>

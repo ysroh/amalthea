@@ -8,11 +8,18 @@
 	</Composite.layout>
 	<Composite>
 		<Composite.layout>
+			<ppel:PropertiesLayout></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:StringEditor property="UML:NamedElement:name"
+			input="{Binding}"></ppe:StringEditor>
+	</Composite>
+	<Composite>
+		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
 		<ppe:MultiReference input="{Binding}"
-			property="amalthea:os:OperatingSystem:taskscheduler"></ppe:MultiReference>
+			property="Amalthea:OSModel:OperatingSystem:taskscheduler"></ppe:MultiReference>
 		<ppe:MultiReference input="{Binding}"
-			property="amalthea:os:OperatingSystem:interruptcontroller"></ppe:MultiReference>
+			property="Amalthea:OSModel:OperatingSystem:interruptcontroller"></ppe:MultiReference>
 	</Composite>
 </Composite>

@@ -8,8 +8,16 @@
 	</Composite.layout>
 	<Composite>
 		<Composite.layout>
+			<ppel:PropertiesLayout numColumns="2"></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:IntegerEditor input="{Binding}"
+			property="Amalthea:CommonModel:DataSize:value"></ppe:IntegerEditor>
+	</Composite>
+	<Composite>
+		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:EnumCombo input="{Binding}" property="amalthea:common:DataSize:unit"></ppe:EnumCombo>
+		<ppe:EnumCombo input="{Binding}"
+			property="Amalthea:CommonModel:DataSize:unit"></ppe:EnumCombo>
 	</Composite>
 </Composite>

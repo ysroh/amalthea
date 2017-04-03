@@ -10,13 +10,13 @@
 		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:StringEditor input="{Binding}"
-			property="amalthea:hardware:Frequency:value"></ppe:StringEditor>
+		<ppe:EnumCombo input="{Binding}" property="Amalthea:HWModel:Frequency:unit"></ppe:EnumCombo>
 	</Composite>
 	<Composite>
 		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:EnumCombo input="{Binding}" property="amalthea:hardware:Frequency:unit"></ppe:EnumCombo>
+		<ppe:DoubleEditor input="{Binding}"
+			property="Amalthea:HWModel:Frequency:value"></ppe:DoubleEditor>
 	</Composite>
 </Composite>

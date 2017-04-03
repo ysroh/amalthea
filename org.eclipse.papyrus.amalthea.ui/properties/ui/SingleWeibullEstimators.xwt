@@ -8,11 +8,23 @@
 	</Composite.layout>
 	<Composite>
 		<Composite.layout>
+			<ppel:PropertiesLayout></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:StringEditor property="UML:NamedElement:name"
+			input="{Binding}"></ppe:StringEditor>
+	</Composite>
+	<Composite>
+		<Composite.layout>
+			<ppel:PropertiesLayout numColumns="2"></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:IntegerEditor input="{Binding}"
+			property="Amalthea:CommonModel:WeibullEstimators:mean"></ppe:IntegerEditor>
+	</Composite>
+	<Composite>
+		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:StringEditor input="{Binding}"
-			property="amalthea:common:WeibullEstimators:pRemainPromille"></ppe:StringEditor>
-		<ppe:StringEditor input="{Binding}"
-			property="amalthea:common:WeibullEstimators:mean"></ppe:StringEditor>
+		<ppe:DoubleEditor input="{Binding}"
+			property="Amalthea:CommonModel:WeibullEstimators:pRemainPromille"></ppe:DoubleEditor>
 	</Composite>
 </Composite>
