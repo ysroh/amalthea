@@ -11,8 +11,13 @@
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
 		<ppe:StringEditor input="{Binding}"
-			property="amalthea:software:Runnable:callback"></ppe:StringEditor>
-		<ppe:StringEditor input="{Binding}"
-			property="amalthea:software:Runnable:service"></ppe:StringEditor>
+			property="amalthea:os:Scheduler:scheduleUnitPriority"></ppe:StringEditor>
+	</Composite>
+	<Composite>
+		<Composite.layout>
+			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:MultiReference input="{Binding}"
+			property="amalthea:os:Scheduler:schedulingunit"></ppe:MultiReference>
 	</Composite>
 </Composite>

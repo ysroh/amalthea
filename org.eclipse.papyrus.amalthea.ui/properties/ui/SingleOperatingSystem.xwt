@@ -10,9 +10,9 @@
 		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:StringEditor input="{Binding}"
-			property="amalthea:software:Runnable:callback"></ppe:StringEditor>
-		<ppe:StringEditor input="{Binding}"
-			property="amalthea:software:Runnable:service"></ppe:StringEditor>
+		<ppe:MultiReference input="{Binding}"
+			property="amalthea:os:OperatingSystem:taskscheduler"></ppe:MultiReference>
+		<ppe:MultiReference input="{Binding}"
+			property="amalthea:os:OperatingSystem:interruptcontroller"></ppe:MultiReference>
 	</Composite>
 </Composite>

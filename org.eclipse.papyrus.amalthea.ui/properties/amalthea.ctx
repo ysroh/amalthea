@@ -1,31 +1,1461 @@
 <?xml version="1.0" encoding="ASCII"?>
-<contexts:Context xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:constraints="http://www.eclipse.org/papyrus/constraints/0.9" xmlns:contexts="http://www.eclipse.org/papyrus/properties/contexts/0.9" xmi:id="_3R5PcBL4EeeFmrJgn4qa2A" name="AMALTHEA">
-  <dependencies href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_69QJkKDJEeSZxfCXzZz3-w"/>
-  <tabs xmi:id="_4w6yMBL4EeeFmrJgn4qa2A" label="AMALTHEA" id="amalthea" priority="5">
-    <sections xmi:id="_4xD8IBL4EeeFmrJgn4qa2A" name="Single Runnable" sectionFile="ui/SingleRunnable.xwt">
+<contexts:Context xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:constraints="http://www.eclipse.org/papyrus/constraints/0.9" xmlns:contexts="http://www.eclipse.org/papyrus/properties/contexts/0.9" xmi:id="_TgraUBiUEeeoWfBb-FGkXQ" name="amalthea">
+  <tabs xmi:id="_VeoUwBiUEeeoWfBb-FGkXQ" label="AMALTHEA" id="amalthea" priority="100">
+    <sections xmi:id="_VeoUwRiUEeeoWfBb-FGkXQ" name="Single Dummy" sectionFile="ui/SingleDummy.xwt">
+      <widget href="ui/SingleDummy.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VeoUwhiUEeeoWfBb-FGkXQ" name="Multiple Dummy" sectionFile="ui/MultipleDummy.xwt">
+      <widget href="ui/MultipleDummy.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Veo70BiUEeeoWfBb-FGkXQ" name="Single CustomProperty" sectionFile="ui/SingleCustomProperty.xwt">
+      <widget href="ui/SingleCustomProperty.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Veo70RiUEeeoWfBb-FGkXQ" name="Multiple CustomProperty" sectionFile="ui/MultipleCustomProperty.xwt">
+      <widget href="ui/MultipleCustomProperty.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Veo70hiUEeeoWfBb-FGkXQ" name="Single AbstractTime" sectionFile="ui/SingleAbstractTime.xwt">
+      <widget href="ui/SingleAbstractTime.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Veo70xiUEeeoWfBb-FGkXQ" name="Multiple AbstractTime" sectionFile="ui/MultipleAbstractTime.xwt">
+      <widget href="ui/MultipleAbstractTime.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Veo71BiUEeeoWfBb-FGkXQ" name="Single Time" sectionFile="ui/SingleTime.xwt">
+      <widget href="ui/SingleTime.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Veo71RiUEeeoWfBb-FGkXQ" name="Multiple Time" sectionFile="ui/MultipleTime.xwt">
+      <widget href="ui/MultipleTime.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Vepi4BiUEeeoWfBb-FGkXQ" name="Single IAnnotatable" sectionFile="ui/SingleIAnnotatable.xwt">
+      <widget href="ui/SingleIAnnotatable.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Vepi4RiUEeeoWfBb-FGkXQ" name="Multiple IAnnotatable" sectionFile="ui/MultipleIAnnotatable.xwt">
+      <widget href="ui/MultipleIAnnotatable.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Vepi4hiUEeeoWfBb-FGkXQ" name="Single Instructions" sectionFile="ui/SingleInstructions.xwt">
+      <widget href="ui/SingleInstructions.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Vepi4xiUEeeoWfBb-FGkXQ" name="Multiple Instructions" sectionFile="ui/MultipleInstructions.xwt">
+      <widget href="ui/MultipleInstructions.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Vepi5BiUEeeoWfBb-FGkXQ" name="Single Deviation" sectionFile="ui/SingleDeviation.xwt">
+      <widget href="ui/SingleDeviation.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Vepi5RiUEeeoWfBb-FGkXQ" name="Multiple Deviation" sectionFile="ui/MultipleDeviation.xwt">
+      <widget href="ui/MultipleDeviation.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Vepi5hiUEeeoWfBb-FGkXQ" name="Single Distribution" sectionFile="ui/SingleDistribution.xwt">
+      <widget href="ui/SingleDistribution.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Vepi5xiUEeeoWfBb-FGkXQ" name="Multiple Distribution" sectionFile="ui/MultipleDistribution.xwt">
+      <widget href="ui/MultipleDistribution.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Vepi6BiUEeeoWfBb-FGkXQ" name="Single WeibullEstimators" sectionFile="ui/SingleWeibullEstimators.xwt">
+      <widget href="ui/SingleWeibullEstimators.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VeqJ8BiUEeeoWfBb-FGkXQ" name="Multiple WeibullEstimators" sectionFile="ui/MultipleWeibullEstimators.xwt">
+      <widget href="ui/MultipleWeibullEstimators.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VeqJ8RiUEeeoWfBb-FGkXQ" name="Single InstructionsDeviation" sectionFile="ui/SingleInstructionsDeviation.xwt">
+      <widget href="ui/SingleInstructionsDeviation.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VeqJ8hiUEeeoWfBb-FGkXQ" name="Multiple InstructionsDeviation" sectionFile="ui/MultipleInstructionsDeviation.xwt">
+      <widget href="ui/MultipleInstructionsDeviation.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VeqJ8xiUEeeoWfBb-FGkXQ" name="Single Counter" sectionFile="ui/SingleCounter.xwt">
+      <widget href="ui/SingleCounter.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VeqJ9BiUEeeoWfBb-FGkXQ" name="Multiple Counter" sectionFile="ui/MultipleCounter.xwt">
+      <widget href="ui/MultipleCounter.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VeqJ9RiUEeeoWfBb-FGkXQ" name="Single DataSize" sectionFile="ui/SingleDataSize.xwt">
+      <widget href="ui/SingleDataSize.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VeqJ9hiUEeeoWfBb-FGkXQ" name="Multiple DataSize" sectionFile="ui/MultipleDataSize.xwt">
+      <widget href="ui/MultipleDataSize.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VeqJ9xiUEeeoWfBb-FGkXQ" name="Single FInterfacePort" sectionFile="ui/SingleFInterfacePort.xwt">
+      <widget href="ui/SingleFInterfacePort.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VeqJ-BiUEeeoWfBb-FGkXQ" name="Multiple FInterfacePort" sectionFile="ui/MultipleFInterfacePort.xwt">
+      <widget href="ui/MultipleFInterfacePort.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VeqxABiUEeeoWfBb-FGkXQ" name="Single Component" sectionFile="ui/SingleComponent.xwt">
+      <widget href="ui/SingleComponent.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VeqxARiUEeeoWfBb-FGkXQ" name="Multiple Component" sectionFile="ui/MultipleComponent.xwt">
+      <widget href="ui/MultipleComponent.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VeqxAhiUEeeoWfBb-FGkXQ" name="Single Composite" sectionFile="ui/SingleComposite.xwt">
+      <widget href="ui/SingleComposite.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VeqxAxiUEeeoWfBb-FGkXQ" name="Multiple Composite" sectionFile="ui/MultipleComposite.xwt">
+      <widget href="ui/MultipleComposite.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VeqxBBiUEeeoWfBb-FGkXQ" name="Single ComponentInstance" sectionFile="ui/SingleComponentInstance.xwt">
+      <widget href="ui/SingleComponentInstance.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VeqxBRiUEeeoWfBb-FGkXQ" name="Multiple ComponentInstance" sectionFile="ui/MultipleComponentInstance.xwt">
+      <widget href="ui/MultipleComponentInstance.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VeqxBhiUEeeoWfBb-FGkXQ" name="Single ComplexNode" sectionFile="ui/SingleComplexNode.xwt">
+      <widget href="ui/SingleComplexNode.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VeqxBxiUEeeoWfBb-FGkXQ" name="Multiple ComplexNode" sectionFile="ui/MultipleComplexNode.xwt">
+      <widget href="ui/MultipleComplexNode.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VeqxCBiUEeeoWfBb-FGkXQ" name="Single HwSystem" sectionFile="ui/SingleHwSystem.xwt">
+      <widget href="ui/SingleHwSystem.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VerYEBiUEeeoWfBb-FGkXQ" name="Multiple HwSystem" sectionFile="ui/MultipleHwSystem.xwt">
+      <widget href="ui/MultipleHwSystem.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VerYERiUEeeoWfBb-FGkXQ" name="Single Quartz" sectionFile="ui/SingleQuartz.xwt">
+      <widget href="ui/SingleQuartz.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VerYEhiUEeeoWfBb-FGkXQ" name="Multiple Quartz" sectionFile="ui/MultipleQuartz.xwt">
+      <widget href="ui/MultipleQuartz.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VerYExiUEeeoWfBb-FGkXQ" name="Single Prescaler" sectionFile="ui/SinglePrescaler.xwt">
+      <widget href="ui/SinglePrescaler.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VerYFBiUEeeoWfBb-FGkXQ" name="Multiple Prescaler" sectionFile="ui/MultiplePrescaler.xwt">
+      <widget href="ui/MultiplePrescaler.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VerYFRiUEeeoWfBb-FGkXQ" name="Single Network" sectionFile="ui/SingleNetwork.xwt">
+      <widget href="ui/SingleNetwork.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VerYFhiUEeeoWfBb-FGkXQ" name="Multiple Network" sectionFile="ui/MultipleNetwork.xwt">
+      <widget href="ui/MultipleNetwork.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VerYFxiUEeeoWfBb-FGkXQ" name="Single NetworkType" sectionFile="ui/SingleNetworkType.xwt">
+      <widget href="ui/SingleNetworkType.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Ver_IBiUEeeoWfBb-FGkXQ" name="Multiple NetworkType" sectionFile="ui/MultipleNetworkType.xwt">
+      <widget href="ui/MultipleNetworkType.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Ver_IRiUEeeoWfBb-FGkXQ" name="Single ECU" sectionFile="ui/SingleECU.xwt">
+      <widget href="ui/SingleECU.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Ver_IhiUEeeoWfBb-FGkXQ" name="Multiple ECU" sectionFile="ui/MultipleECU.xwt">
+      <widget href="ui/MultipleECU.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Ver_IxiUEeeoWfBb-FGkXQ" name="Single Microcontroller" sectionFile="ui/SingleMicrocontroller.xwt">
+      <widget href="ui/SingleMicrocontroller.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Ver_JBiUEeeoWfBb-FGkXQ" name="Multiple Microcontroller" sectionFile="ui/MultipleMicrocontroller.xwt">
+      <widget href="ui/MultipleMicrocontroller.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VesmMBiUEeeoWfBb-FGkXQ" name="Single Core" sectionFile="ui/SingleCore.xwt">
+      <widget href="ui/SingleCore.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VesmMRiUEeeoWfBb-FGkXQ" name="Multiple Core" sectionFile="ui/MultipleCore.xwt">
+      <widget href="ui/MultipleCore.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VesmMhiUEeeoWfBb-FGkXQ" name="Single CoreType" sectionFile="ui/SingleCoreType.xwt">
+      <widget href="ui/SingleCoreType.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VesmMxiUEeeoWfBb-FGkXQ" name="Multiple CoreType" sectionFile="ui/MultipleCoreType.xwt">
+      <widget href="ui/MultipleCoreType.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VesmNBiUEeeoWfBb-FGkXQ" name="Single MicrocontrollerType" sectionFile="ui/SingleMicrocontrollerType.xwt">
+      <widget href="ui/SingleMicrocontrollerType.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VesmNRiUEeeoWfBb-FGkXQ" name="Multiple MicrocontrollerType" sectionFile="ui/MultipleMicrocontrollerType.xwt">
+      <widget href="ui/MultipleMicrocontrollerType.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VesmNhiUEeeoWfBb-FGkXQ" name="Single ECUType" sectionFile="ui/SingleECUType.xwt">
+      <widget href="ui/SingleECUType.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VesmNxiUEeeoWfBb-FGkXQ" name="Multiple ECUType" sectionFile="ui/MultipleECUType.xwt">
+      <widget href="ui/MultipleECUType.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VesmOBiUEeeoWfBb-FGkXQ" name="Single SystemType" sectionFile="ui/SingleSystemType.xwt">
+      <widget href="ui/SingleSystemType.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VesmORiUEeeoWfBb-FGkXQ" name="Multiple SystemType" sectionFile="ui/MultipleSystemType.xwt">
+      <widget href="ui/MultipleSystemType.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VetNQBiUEeeoWfBb-FGkXQ" name="Single Bus" sectionFile="ui/SingleBus.xwt">
+      <widget href="ui/SingleBus.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VetNQRiUEeeoWfBb-FGkXQ" name="Multiple Bus" sectionFile="ui/MultipleBus.xwt">
+      <widget href="ui/MultipleBus.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VetNQhiUEeeoWfBb-FGkXQ" name="Single Frequency" sectionFile="ui/SingleFrequency.xwt">
+      <widget href="ui/SingleFrequency.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VetNQxiUEeeoWfBb-FGkXQ" name="Multiple Frequency" sectionFile="ui/MultipleFrequency.xwt">
+      <widget href="ui/MultipleFrequency.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VetNRBiUEeeoWfBb-FGkXQ" name="Single RunnableItem" sectionFile="ui/SingleRunnableItem.xwt">
+      <widget href="ui/SingleRunnableItem.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VetNRRiUEeeoWfBb-FGkXQ" name="Multiple RunnableItem" sectionFile="ui/MultipleRunnableItem.xwt">
+      <widget href="ui/MultipleRunnableItem.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VetNRhiUEeeoWfBb-FGkXQ" name="Single CallSequenceItem" sectionFile="ui/SingleCallSequenceItem.xwt">
+      <widget href="ui/SingleCallSequenceItem.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VetNRxiUEeeoWfBb-FGkXQ" name="Multiple CallSequenceItem" sectionFile="ui/MultipleCallSequenceItem.xwt">
+      <widget href="ui/MultipleCallSequenceItem.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Vet0UBiUEeeoWfBb-FGkXQ" name="Single AbstractElementMemoryInformation" sectionFile="ui/SingleAbstractElementMemoryInformation.xwt">
+      <widget href="ui/SingleAbstractElementMemoryInformation.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Vet0URiUEeeoWfBb-FGkXQ" name="Multiple AbstractElementMemoryInformation" sectionFile="ui/MultipleAbstractElementMemoryInformation.xwt">
+      <widget href="ui/MultipleAbstractElementMemoryInformation.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Vet0UhiUEeeoWfBb-FGkXQ" name="Single AbstractProcess" sectionFile="ui/SingleAbstractProcess.xwt">
+      <widget href="ui/SingleAbstractProcess.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Vet0UxiUEeeoWfBb-FGkXQ" name="Multiple AbstractProcess" sectionFile="ui/MultipleAbstractProcess.xwt">
+      <widget href="ui/MultipleAbstractProcess.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Vet0VBiUEeeoWfBb-FGkXQ" name="Single Process" sectionFile="ui/SingleProcess.xwt">
+      <widget href="ui/SingleProcess.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Vet0VRiUEeeoWfBb-FGkXQ" name="Multiple Process" sectionFile="ui/MultipleProcess.xwt">
+      <widget href="ui/MultipleProcess.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Vet0VhiUEeeoWfBb-FGkXQ" name="Single CallGraph" sectionFile="ui/SingleCallGraph.xwt">
+      <widget href="ui/SingleCallGraph.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Vet0VxiUEeeoWfBb-FGkXQ" name="Multiple CallGraph" sectionFile="ui/MultipleCallGraph.xwt">
+      <widget href="ui/MultipleCallGraph.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Vet0WBiUEeeoWfBb-FGkXQ" name="Single GraphEntry" sectionFile="ui/SingleGraphEntry.xwt">
+      <widget href="ui/SingleGraphEntry.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Vet0WRiUEeeoWfBb-FGkXQ" name="Multiple GraphEntry" sectionFile="ui/MultipleGraphEntry.xwt">
+      <widget href="ui/MultipleGraphEntry.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VeubYBiUEeeoWfBb-FGkXQ" name="Single Task" sectionFile="ui/SingleTask.xwt">
+      <widget href="ui/SingleTask.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VeubYRiUEeeoWfBb-FGkXQ" name="Multiple Task" sectionFile="ui/MultipleTask.xwt">
+      <widget href="ui/MultipleTask.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VeubYhiUEeeoWfBb-FGkXQ" name="Single ISR" sectionFile="ui/SingleISR.xwt">
+      <widget href="ui/SingleISR.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VeubYxiUEeeoWfBb-FGkXQ" name="Multiple ISR" sectionFile="ui/MultipleISR.xwt">
+      <widget href="ui/MultipleISR.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VeubZBiUEeeoWfBb-FGkXQ" name="Single Label" sectionFile="ui/SingleLabel.xwt">
+      <widget href="ui/SingleLabel.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VeubZRiUEeeoWfBb-FGkXQ" name="Multiple Label" sectionFile="ui/MultipleLabel.xwt">
+      <widget href="ui/MultipleLabel.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VeubZhiUEeeoWfBb-FGkXQ" name="Single Runnable" sectionFile="ui/SingleRunnable.xwt">
       <widget href="ui/SingleRunnable.xwt#/"/>
     </sections>
-    <sections xmi:id="_4xEjMBL4EeeFmrJgn4qa2A" name="Multiple Runnable" sectionFile="ui/MultipleRunnable.xwt">
+    <sections xmi:id="_VevCcBiUEeeoWfBb-FGkXQ" name="Multiple Runnable" sectionFile="ui/MultipleRunnable.xwt">
       <widget href="ui/MultipleRunnable.xwt#/"/>
     </sections>
+    <sections xmi:id="_VevCcRiUEeeoWfBb-FGkXQ" name="Single CallSequence" sectionFile="ui/SingleCallSequence.xwt">
+      <widget href="ui/SingleCallSequence.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VevCchiUEeeoWfBb-FGkXQ" name="Multiple CallSequence" sectionFile="ui/MultipleCallSequence.xwt">
+      <widget href="ui/MultipleCallSequence.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VevCcxiUEeeoWfBb-FGkXQ" name="Single InterProcessActivation" sectionFile="ui/SingleInterProcessActivation.xwt">
+      <widget href="ui/SingleInterProcessActivation.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VevCdBiUEeeoWfBb-FGkXQ" name="Multiple InterProcessActivation" sectionFile="ui/MultipleInterProcessActivation.xwt">
+      <widget href="ui/MultipleInterProcessActivation.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VevCdRiUEeeoWfBb-FGkXQ" name="Single TaskRunnableCall" sectionFile="ui/SingleTaskRunnableCall.xwt">
+      <widget href="ui/SingleTaskRunnableCall.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VevCdhiUEeeoWfBb-FGkXQ" name="Multiple TaskRunnableCall" sectionFile="ui/MultipleTaskRunnableCall.xwt">
+      <widget href="ui/MultipleTaskRunnableCall.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VevCdxiUEeeoWfBb-FGkXQ" name="Single LabelAccess" sectionFile="ui/SingleLabelAccess.xwt">
+      <widget href="ui/SingleLabelAccess.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VevCeBiUEeeoWfBb-FGkXQ" name="Multiple LabelAccess" sectionFile="ui/MultipleLabelAccess.xwt">
+      <widget href="ui/MultipleLabelAccess.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VevpgBiUEeeoWfBb-FGkXQ" name="Single RunnableInstructions" sectionFile="ui/SingleRunnableInstructions.xwt">
+      <widget href="ui/SingleRunnableInstructions.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VevpgRiUEeeoWfBb-FGkXQ" name="Multiple RunnableInstructions" sectionFile="ui/MultipleRunnableInstructions.xwt">
+      <widget href="ui/MultipleRunnableInstructions.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VevpghiUEeeoWfBb-FGkXQ" name="Single OperatingSystem" sectionFile="ui/SingleOperatingSystem.xwt">
+      <widget href="ui/SingleOperatingSystem.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VevpgxiUEeeoWfBb-FGkXQ" name="Multiple OperatingSystem" sectionFile="ui/MultipleOperatingSystem.xwt">
+      <widget href="ui/MultipleOperatingSystem.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VevphBiUEeeoWfBb-FGkXQ" name="Single Scheduler" sectionFile="ui/SingleScheduler.xwt">
+      <widget href="ui/SingleScheduler.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VevphRiUEeeoWfBb-FGkXQ" name="Multiple Scheduler" sectionFile="ui/MultipleScheduler.xwt">
+      <widget href="ui/MultipleScheduler.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VevphhiUEeeoWfBb-FGkXQ" name="Single TaskScheduler" sectionFile="ui/SingleTaskScheduler.xwt">
+      <widget href="ui/SingleTaskScheduler.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VevphxiUEeeoWfBb-FGkXQ" name="Multiple TaskScheduler" sectionFile="ui/MultipleTaskScheduler.xwt">
+      <widget href="ui/MultipleTaskScheduler.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VewQkBiUEeeoWfBb-FGkXQ" name="Single SchedulingUnit" sectionFile="ui/SingleSchedulingUnit.xwt">
+      <widget href="ui/SingleSchedulingUnit.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VewQkRiUEeeoWfBb-FGkXQ" name="Multiple SchedulingUnit" sectionFile="ui/MultipleSchedulingUnit.xwt">
+      <widget href="ui/MultipleSchedulingUnit.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VewQkhiUEeeoWfBb-FGkXQ" name="Single TaskSchedulingAlgorithm" sectionFile="ui/SingleTaskSchedulingAlgorithm.xwt">
+      <widget href="ui/SingleTaskSchedulingAlgorithm.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VewQkxiUEeeoWfBb-FGkXQ" name="Multiple TaskSchedulingAlgorithm" sectionFile="ui/MultipleTaskSchedulingAlgorithm.xwt">
+      <widget href="ui/MultipleTaskSchedulingAlgorithm.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VewQlBiUEeeoWfBb-FGkXQ" name="Single InterruptController" sectionFile="ui/SingleInterruptController.xwt">
+      <widget href="ui/SingleInterruptController.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Vew3oBiUEeeoWfBb-FGkXQ" name="Multiple InterruptController" sectionFile="ui/MultipleInterruptController.xwt">
+      <widget href="ui/MultipleInterruptController.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Vew3oRiUEeeoWfBb-FGkXQ" name="Single InterruptSchedulingAlgorithm" sectionFile="ui/SingleInterruptSchedulingAlgorithm.xwt">
+      <widget href="ui/SingleInterruptSchedulingAlgorithm.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Vew3ohiUEeeoWfBb-FGkXQ" name="Multiple InterruptSchedulingAlgorithm" sectionFile="ui/MultipleInterruptSchedulingAlgorithm.xwt">
+      <widget href="ui/MultipleInterruptSchedulingAlgorithm.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Vew3oxiUEeeoWfBb-FGkXQ" name="Single SchedulingHWUnit" sectionFile="ui/SingleSchedulingHWUnit.xwt">
+      <widget href="ui/SingleSchedulingHWUnit.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Vew3pBiUEeeoWfBb-FGkXQ" name="Multiple SchedulingHWUnit" sectionFile="ui/MultipleSchedulingHWUnit.xwt">
+      <widget href="ui/MultipleSchedulingHWUnit.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Vew3pRiUEeeoWfBb-FGkXQ" name="Single OSEK" sectionFile="ui/SingleOSEK.xwt">
+      <widget href="ui/SingleOSEK.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Vew3phiUEeeoWfBb-FGkXQ" name="Multiple OSEK" sectionFile="ui/MultipleOSEK.xwt">
+      <widget href="ui/MultipleOSEK.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Vew3pxiUEeeoWfBb-FGkXQ" name="Single PriorityBased" sectionFile="ui/SinglePriorityBased.xwt">
+      <widget href="ui/SinglePriorityBased.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Vew3qBiUEeeoWfBb-FGkXQ" name="Multiple PriorityBased" sectionFile="ui/MultiplePriorityBased.xwt">
+      <widget href="ui/MultiplePriorityBased.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Vew3qRiUEeeoWfBb-FGkXQ" name="Single MappingModel" sectionFile="ui/SingleMappingModel.xwt">
+      <widget href="ui/SingleMappingModel.xwt#/"/>
+    </sections>
+    <sections xmi:id="_Vew3qhiUEeeoWfBb-FGkXQ" name="Multiple MappingModel" sectionFile="ui/MultipleMappingModel.xwt">
+      <widget href="ui/MultipleMappingModel.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VexesBiUEeeoWfBb-FGkXQ" name="Single Stimulus" sectionFile="ui/SingleStimulus.xwt">
+      <widget href="ui/SingleStimulus.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VexesRiUEeeoWfBb-FGkXQ" name="Multiple Stimulus" sectionFile="ui/MultipleStimulus.xwt">
+      <widget href="ui/MultipleStimulus.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VexeshiUEeeoWfBb-FGkXQ" name="Single Single" sectionFile="ui/SingleSingle.xwt">
+      <widget href="ui/SingleSingle.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VexesxiUEeeoWfBb-FGkXQ" name="Multiple Single" sectionFile="ui/MultipleSingle.xwt">
+      <widget href="ui/MultipleSingle.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VexetBiUEeeoWfBb-FGkXQ" name="Single Periodic" sectionFile="ui/SinglePeriodic.xwt">
+      <widget href="ui/SinglePeriodic.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VexetRiUEeeoWfBb-FGkXQ" name="Multiple Periodic" sectionFile="ui/MultiplePeriodic.xwt">
+      <widget href="ui/MultiplePeriodic.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VeyFwBiUEeeoWfBb-FGkXQ" name="Single Interprocess" sectionFile="ui/SingleInterprocess.xwt">
+      <widget href="ui/SingleInterprocess.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VeyFwRiUEeeoWfBb-FGkXQ" name="Multiple Interprocess" sectionFile="ui/MultipleInterprocess.xwt">
+      <widget href="ui/MultipleInterprocess.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VeyFwhiUEeeoWfBb-FGkXQ" name="Single ConstraintsModel" sectionFile="ui/SingleConstraintsModel.xwt">
+      <widget href="ui/SingleConstraintsModel.xwt#/"/>
+    </sections>
+    <sections xmi:id="_VeyFwxiUEeeoWfBb-FGkXQ" name="Multiple ConstraintsModel" sectionFile="ui/MultipleConstraintsModel.xwt">
+      <widget href="ui/MultipleConstraintsModel.xwt#/"/>
+    </sections>
   </tabs>
-  <views xmi:id="_3R5PcRL4EeeFmrJgn4qa2A" name="Single Runnable" sections="_4xD8IBL4EeeFmrJgn4qa2A" automaticContext="true" datacontexts="_3R52hBL4EeeFmrJgn4qa2A">
-    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_3R5PchL4EeeFmrJgn4qa2A" name="isSingleRunnable">
-      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
-      <properties xsi:type="constraints:ValueProperty" xmi:id="_3R5PcxL4EeeFmrJgn4qa2A" name="stereotypeName" value="AMALTHEA::Runnable"/>
+  <views xmi:id="_TgraURiUEeeoWfBb-FGkXQ" name="Single Dummy" sections="_VeoUwRiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsChRiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgraUhiUEeeoWfBb-FGkXQ" name="isSingleDummy">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgraUxiUEeeoWfBb-FGkXQ" name="className" value="Dummy"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgraVBiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea"/>
     </constraints>
   </views>
-  <views xmi:id="_3R52gBL4EeeFmrJgn4qa2A" elementMultiplicity="-1" name="Multiple Runnable" sections="_4xEjMBL4EeeFmrJgn4qa2A" automaticContext="true" datacontexts="_3R52hBL4EeeFmrJgn4qa2A">
-    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_3R52gRL4EeeFmrJgn4qa2A" name="isMultipleRunnable">
-      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
-      <properties xsi:type="constraints:ValueProperty" xmi:id="_3R52ghL4EeeFmrJgn4qa2A" name="stereotypeName" value="AMALTHEA::Runnable"/>
+  <views xmi:id="_TgraVRiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple Dummy" sections="_VeoUwhiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsChRiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgraVhiUEeeoWfBb-FGkXQ" name="isMultipleDummy">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgraVxiUEeeoWfBb-FGkXQ" name="className" value="Dummy"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgraWBiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea"/>
     </constraints>
   </views>
-  <dataContexts xmi:id="_3R52gxL4EeeFmrJgn4qa2A" name="AMALTHEA">
-    <elements xmi:id="_3R52hBL4EeeFmrJgn4qa2A" name="Runnable">
-      <properties xmi:id="_3R52hRL4EeeFmrJgn4qa2A" name="service" type="Boolean"/>
-      <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690yXqDJEeSZxfCXzZz3-w"/>
+  <views xmi:id="_TgraWRiUEeeoWfBb-FGkXQ" name="Single CustomProperty" sections="_Veo70BiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsChxiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgraWhiUEeeoWfBb-FGkXQ" name="isSingleCustomProperty">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgraWxiUEeeoWfBb-FGkXQ" name="className" value="CustomProperty"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgraXBiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Common"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgraXRiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple CustomProperty" sections="_Veo70RiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsChxiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgraXhiUEeeoWfBb-FGkXQ" name="isMultipleCustomProperty">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgraXxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Common"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgraYBiUEeeoWfBb-FGkXQ" name="className" value="CustomProperty"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgraYRiUEeeoWfBb-FGkXQ" name="Single AbstractTime" sections="_Veo70hiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCihiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgraYhiUEeeoWfBb-FGkXQ" name="isSingleAbstractTime">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgraYxiUEeeoWfBb-FGkXQ" name="className" value="AbstractTime"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgraZBiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Common"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgraZRiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple AbstractTime" sections="_Veo70xiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCihiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgraZhiUEeeoWfBb-FGkXQ" name="isMultipleAbstractTime">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgraZxiUEeeoWfBb-FGkXQ" name="className" value="AbstractTime"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgraaBiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Common"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgraaRiUEeeoWfBb-FGkXQ" name="Single Time" sections="_Veo71BiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCjhiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgraahiUEeeoWfBb-FGkXQ" name="isSingleTime">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgraaxiUEeeoWfBb-FGkXQ" name="className" value="Time"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrabBiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Common"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgrabRiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple Time" sections="_Veo71RiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCjhiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgrabhiUEeeoWfBb-FGkXQ" name="isMultipleTime">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrabxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Common"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgracBiUEeeoWfBb-FGkXQ" name="className" value="Time"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgracRiUEeeoWfBb-FGkXQ" name="Single IAnnotatable" sections="_Vepi4BiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCjxiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgrachiUEeeoWfBb-FGkXQ" name="isSingleIAnnotatable">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgracxiUEeeoWfBb-FGkXQ" name="className" value="IAnnotatable"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgradBiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Common"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgradRiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple IAnnotatable" sections="_Vepi4RiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCjxiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgradhiUEeeoWfBb-FGkXQ" name="isMultipleIAnnotatable">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgradxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Common"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgraeBiUEeeoWfBb-FGkXQ" name="className" value="IAnnotatable"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgraeRiUEeeoWfBb-FGkXQ" name="Single Instructions" sections="_Vepi4hiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCkBiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgraehiUEeeoWfBb-FGkXQ" name="isSingleInstructions">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgraexiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Common"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrafBiUEeeoWfBb-FGkXQ" name="className" value="Instructions"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgrafRiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple Instructions" sections="_Vepi4xiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCkBiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgrafhiUEeeoWfBb-FGkXQ" name="isMultipleInstructions">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrafxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Common"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgragBiUEeeoWfBb-FGkXQ" name="className" value="Instructions"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgragRiUEeeoWfBb-FGkXQ" name="Single Deviation" sections="_Vepi5BiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCkRiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgraghiUEeeoWfBb-FGkXQ" name="isSingleDeviation">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgragxiUEeeoWfBb-FGkXQ" name="className" value="Deviation"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrahBiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Common"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgrahRiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple Deviation" sections="_Vepi5RiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCkRiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgrahhiUEeeoWfBb-FGkXQ" name="isMultipleDeviation">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrahxiUEeeoWfBb-FGkXQ" name="className" value="Deviation"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgraiBiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Common"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgraiRiUEeeoWfBb-FGkXQ" name="Single Distribution" sections="_Vepi5hiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCkxiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgraihiUEeeoWfBb-FGkXQ" name="isSingleDistribution">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgraixiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Common"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrajBiUEeeoWfBb-FGkXQ" name="className" value="Distribution"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgrajRiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple Distribution" sections="_Vepi5xiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCkxiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgrajhiUEeeoWfBb-FGkXQ" name="isMultipleDistribution">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrajxiUEeeoWfBb-FGkXQ" name="className" value="Distribution"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrakBiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Common"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgrakRiUEeeoWfBb-FGkXQ" name="Single WeibullEstimators" sections="_Vepi6BiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsClBiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgrakhiUEeeoWfBb-FGkXQ" name="isSingleWeibullEstimators">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrakxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Common"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgralBiUEeeoWfBb-FGkXQ" name="className" value="WeibullEstimators"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgralRiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple WeibullEstimators" sections="_VeqJ8BiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsClBiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgralhiUEeeoWfBb-FGkXQ" name="isMultipleWeibullEstimators">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgralxiUEeeoWfBb-FGkXQ" name="className" value="WeibullEstimators"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgramBiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Common"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgramRiUEeeoWfBb-FGkXQ" name="Single InstructionsDeviation" sections="_VeqJ8RiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsClxiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgramhiUEeeoWfBb-FGkXQ" name="isSingleInstructionsDeviation">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgramxiUEeeoWfBb-FGkXQ" name="className" value="InstructionsDeviation"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgranBiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Common"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgranRiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple InstructionsDeviation" sections="_VeqJ8hiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsClxiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgranhiUEeeoWfBb-FGkXQ" name="isMultipleInstructionsDeviation">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgranxiUEeeoWfBb-FGkXQ" name="className" value="InstructionsDeviation"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgraoBiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Common"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgraoRiUEeeoWfBb-FGkXQ" name="Single Counter" sections="_VeqJ8xiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCmRiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgraohiUEeeoWfBb-FGkXQ" name="isSingleCounter">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgraoxiUEeeoWfBb-FGkXQ" name="className" value="Counter"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrapBiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Common"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgrapRiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple Counter" sections="_VeqJ9BiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCmRiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgraphiUEeeoWfBb-FGkXQ" name="isMultipleCounter">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrapxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Common"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgraqBiUEeeoWfBb-FGkXQ" name="className" value="Counter"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgraqRiUEeeoWfBb-FGkXQ" name="Single DataSize" sections="_VeqJ9RiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCnBiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgraqhiUEeeoWfBb-FGkXQ" name="isSingleDataSize">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgraqxiUEeeoWfBb-FGkXQ" name="className" value="DataSize"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrarBiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Common"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgrarRiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple DataSize" sections="_VeqJ9hiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCnBiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgrarhiUEeeoWfBb-FGkXQ" name="isMultipleDataSize">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrarxiUEeeoWfBb-FGkXQ" name="className" value="DataSize"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrasBiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Common"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgrasRiUEeeoWfBb-FGkXQ" name="Single FInterfacePort" sections="_VeqJ9xiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCoBiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgrashiUEeeoWfBb-FGkXQ" name="isSingleFInterfacePort">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrasxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Components"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgratBiUEeeoWfBb-FGkXQ" name="className" value="FInterfacePort"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgratRiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple FInterfacePort" sections="_VeqJ-BiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCoBiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgrathiUEeeoWfBb-FGkXQ" name="isMultipleFInterfacePort">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgratxiUEeeoWfBb-FGkXQ" name="className" value="FInterfacePort"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrauBiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Components"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgrauRiUEeeoWfBb-FGkXQ" name="Single Component" sections="_VeqxABiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCohiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgrauhiUEeeoWfBb-FGkXQ" name="isSingleComponent">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrauxiUEeeoWfBb-FGkXQ" name="className" value="Component"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgravBiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Components"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgravRiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple Component" sections="_VeqxARiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCohiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgravhiUEeeoWfBb-FGkXQ" name="isMultipleComponent">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgravxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Components"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrawBiUEeeoWfBb-FGkXQ" name="className" value="Component"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgrawRiUEeeoWfBb-FGkXQ" name="Single Composite" sections="_VeqxAhiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCpBiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgrawhiUEeeoWfBb-FGkXQ" name="isSingleComposite">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrawxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Components"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgraxBiUEeeoWfBb-FGkXQ" name="className" value="Composite"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgraxRiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple Composite" sections="_VeqxAxiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCpBiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgraxhiUEeeoWfBb-FGkXQ" name="isMultipleComposite">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgraxxiUEeeoWfBb-FGkXQ" name="className" value="Composite"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrayBiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Components"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgrayRiUEeeoWfBb-FGkXQ" name="Single ComponentInstance" sections="_VeqxBBiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCphiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgrayhiUEeeoWfBb-FGkXQ" name="isSingleComponentInstance">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrayxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Components"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrazBiUEeeoWfBb-FGkXQ" name="className" value="ComponentInstance"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgrazRiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple ComponentInstance" sections="_VeqxBRiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCphiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgrazhiUEeeoWfBb-FGkXQ" name="isMultipleComponentInstance">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrazxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Components"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_Tgra0BiUEeeoWfBb-FGkXQ" name="className" value="ComponentInstance"/>
+    </constraints>
+  </views>
+  <views xmi:id="_Tgra0RiUEeeoWfBb-FGkXQ" name="Single ComplexNode" sections="_VeqxBhiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCrBiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_Tgra0hiUEeeoWfBb-FGkXQ" name="isSingleComplexNode">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_Tgra0xiUEeeoWfBb-FGkXQ" name="className" value="ComplexNode"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_Tgra1BiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"/>
+    </constraints>
+  </views>
+  <views xmi:id="_Tgra1RiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple ComplexNode" sections="_VeqxBxiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCrBiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_Tgra1hiUEeeoWfBb-FGkXQ" name="isMultipleComplexNode">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_Tgra1xiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_Tgra2BiUEeeoWfBb-FGkXQ" name="className" value="ComplexNode"/>
+    </constraints>
+  </views>
+  <views xmi:id="_Tgra2RiUEeeoWfBb-FGkXQ" name="Single HwSystem" sections="_VeqxCBiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCqRiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_Tgra2hiUEeeoWfBb-FGkXQ" name="isSingleHwSystem">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_Tgra2xiUEeeoWfBb-FGkXQ" name="className" value="HwSystem"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_Tgra3BiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"/>
+    </constraints>
+  </views>
+  <views xmi:id="_Tgra3RiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple HwSystem" sections="_VerYEBiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCqRiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_Tgra3hiUEeeoWfBb-FGkXQ" name="isMultipleHwSystem">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_Tgra3xiUEeeoWfBb-FGkXQ" name="className" value="HwSystem"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_Tgra4BiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"/>
+    </constraints>
+  </views>
+  <views xmi:id="_Tgra4RiUEeeoWfBb-FGkXQ" name="Single Quartz" sections="_VerYERiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCsBiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_Tgra4hiUEeeoWfBb-FGkXQ" name="isSingleQuartz">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_Tgra4xiUEeeoWfBb-FGkXQ" name="className" value="Quartz"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_Tgra5BiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"/>
+    </constraints>
+  </views>
+  <views xmi:id="_Tgra5RiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple Quartz" sections="_VerYEhiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCsBiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_Tgra5hiUEeeoWfBb-FGkXQ" name="isMultipleQuartz">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_Tgra5xiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_Tgra6BiUEeeoWfBb-FGkXQ" name="className" value="Quartz"/>
+    </constraints>
+  </views>
+  <views xmi:id="_Tgra6RiUEeeoWfBb-FGkXQ" name="Single Prescaler" sections="_VerYExiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCshiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_Tgra6hiUEeeoWfBb-FGkXQ" name="isSinglePrescaler">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_Tgra6xiUEeeoWfBb-FGkXQ" name="className" value="Prescaler"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_Tgra7BiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"/>
+    </constraints>
+  </views>
+  <views xmi:id="_Tgra7RiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple Prescaler" sections="_VerYFBiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCshiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_Tgra7hiUEeeoWfBb-FGkXQ" name="isMultiplePrescaler">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_Tgra7xiUEeeoWfBb-FGkXQ" name="className" value="Prescaler"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_Tgra8BiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"/>
+    </constraints>
+  </views>
+  <views xmi:id="_Tgra8RiUEeeoWfBb-FGkXQ" name="Single Network" sections="_VerYFRiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCtBiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_Tgra8hiUEeeoWfBb-FGkXQ" name="isSingleNetwork">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_Tgra8xiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_Tgra9BiUEeeoWfBb-FGkXQ" name="className" value="Network"/>
+    </constraints>
+  </views>
+  <views xmi:id="_Tgra9RiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple Network" sections="_VerYFhiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCtBiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_Tgra9hiUEeeoWfBb-FGkXQ" name="isMultipleNetwork">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_Tgra9xiUEeeoWfBb-FGkXQ" name="className" value="Network"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_Tgra-BiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"/>
+    </constraints>
+  </views>
+  <views xmi:id="_Tgra-RiUEeeoWfBb-FGkXQ" name="Single NetworkType" sections="_VerYFxiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCthiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_Tgra-hiUEeeoWfBb-FGkXQ" name="isSingleNetworkType">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_Tgra-xiUEeeoWfBb-FGkXQ" name="className" value="NetworkType"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_Tgra_BiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"/>
+    </constraints>
+  </views>
+  <views xmi:id="_Tgra_RiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple NetworkType" sections="_Ver_IBiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCthiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_Tgra_hiUEeeoWfBb-FGkXQ" name="isMultipleNetworkType">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_Tgra_xiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrbABiUEeeoWfBb-FGkXQ" name="className" value="NetworkType"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgrbARiUEeeoWfBb-FGkXQ" name="Single ECU" sections="_Ver_IRiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCuhiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgrbAhiUEeeoWfBb-FGkXQ" name="isSingleECU">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrbAxiUEeeoWfBb-FGkXQ" name="className" value="ECU"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrbBBiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgrbBRiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple ECU" sections="_Ver_IhiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCuhiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgrbBhiUEeeoWfBb-FGkXQ" name="isMultipleECU">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrbBxiUEeeoWfBb-FGkXQ" name="className" value="ECU"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrbCBiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgrbCRiUEeeoWfBb-FGkXQ" name="Single Microcontroller" sections="_Ver_IxiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCvRiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgrbChiUEeeoWfBb-FGkXQ" name="isSingleMicrocontroller">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrbCxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrbDBiUEeeoWfBb-FGkXQ" name="className" value="Microcontroller"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgrbDRiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple Microcontroller" sections="_Ver_JBiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCvRiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgrbDhiUEeeoWfBb-FGkXQ" name="isMultipleMicrocontroller">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrbDxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrbEBiUEeeoWfBb-FGkXQ" name="className" value="Microcontroller"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgrbERiUEeeoWfBb-FGkXQ" name="Single Core" sections="_VesmMBiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCwBiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgrbEhiUEeeoWfBb-FGkXQ" name="isSingleCore">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrbExiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrbFBiUEeeoWfBb-FGkXQ" name="className" value="Core"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgrbFRiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple Core" sections="_VesmMRiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCwBiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgrbFhiUEeeoWfBb-FGkXQ" name="isMultipleCore">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrbFxiUEeeoWfBb-FGkXQ" name="className" value="Core"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrbGBiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgrbGRiUEeeoWfBb-FGkXQ" name="Single CoreType" sections="_VesmMhiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCwxiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgrbGhiUEeeoWfBb-FGkXQ" name="isSingleCoreType">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrbGxiUEeeoWfBb-FGkXQ" name="className" value="CoreType"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrbHBiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgrbHRiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple CoreType" sections="_VesmMxiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCwxiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgrbHhiUEeeoWfBb-FGkXQ" name="isMultipleCoreType">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrbHxiUEeeoWfBb-FGkXQ" name="className" value="CoreType"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrbIBiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgrbIRiUEeeoWfBb-FGkXQ" name="Single MicrocontrollerType" sections="_VesmNBiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCxxiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgrbIhiUEeeoWfBb-FGkXQ" name="isSingleMicrocontrollerType">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrbIxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgrbJBiUEeeoWfBb-FGkXQ" name="className" value="MicrocontrollerType"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsBYBiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple MicrocontrollerType" sections="_VesmNRiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCxxiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsBYRiUEeeoWfBb-FGkXQ" name="isMultipleMicrocontrollerType">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBYhiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBYxiUEeeoWfBb-FGkXQ" name="className" value="MicrocontrollerType"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsBZBiUEeeoWfBb-FGkXQ" name="Single ECUType" sections="_VesmNhiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCyRiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsBZRiUEeeoWfBb-FGkXQ" name="isSingleECUType">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBZhiUEeeoWfBb-FGkXQ" name="className" value="ECUType"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBZxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsBaBiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple ECUType" sections="_VesmNxiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCyRiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsBaRiUEeeoWfBb-FGkXQ" name="isMultipleECUType">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBahiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBaxiUEeeoWfBb-FGkXQ" name="className" value="ECUType"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsBbBiUEeeoWfBb-FGkXQ" name="Single SystemType" sections="_VesmOBiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCyxiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsBbRiUEeeoWfBb-FGkXQ" name="isSingleSystemType">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBbhiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBbxiUEeeoWfBb-FGkXQ" name="className" value="SystemType"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsBcBiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple SystemType" sections="_VesmORiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCyxiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsBcRiUEeeoWfBb-FGkXQ" name="isMultipleSystemType">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBchiUEeeoWfBb-FGkXQ" name="className" value="SystemType"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBcxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsBdBiUEeeoWfBb-FGkXQ" name="Single Bus" sections="_VetNQBiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCzRiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsBdRiUEeeoWfBb-FGkXQ" name="isSingleBus">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBdhiUEeeoWfBb-FGkXQ" name="className" value="Bus"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBdxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsBeBiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple Bus" sections="_VetNQRiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCzRiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsBeRiUEeeoWfBb-FGkXQ" name="isMultipleBus">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBehiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBexiUEeeoWfBb-FGkXQ" name="className" value="Bus"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsBfBiUEeeoWfBb-FGkXQ" name="Single Frequency" sections="_VetNQhiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCzxiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsBfRiUEeeoWfBb-FGkXQ" name="isSingleFrequency">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBfhiUEeeoWfBb-FGkXQ" name="className" value="Frequency"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBfxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsBgBiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple Frequency" sections="_VetNQxiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsCzxiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsBgRiUEeeoWfBb-FGkXQ" name="isMultipleFrequency">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBghiUEeeoWfBb-FGkXQ" name="className" value="Frequency"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBgxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsBhBiUEeeoWfBb-FGkXQ" name="Single RunnableItem" sections="_VetNRBiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC0xiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsBhRiUEeeoWfBb-FGkXQ" name="isSingleRunnableItem">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBhhiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBhxiUEeeoWfBb-FGkXQ" name="className" value="RunnableItem"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsBiBiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple RunnableItem" sections="_VetNRRiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC0xiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsBiRiUEeeoWfBb-FGkXQ" name="isMultipleRunnableItem">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBihiUEeeoWfBb-FGkXQ" name="className" value="RunnableItem"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBixiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsBjBiUEeeoWfBb-FGkXQ" name="Single CallSequenceItem" sections="_VetNRhiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC1RiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsBjRiUEeeoWfBb-FGkXQ" name="isSingleCallSequenceItem">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBjhiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBjxiUEeeoWfBb-FGkXQ" name="className" value="CallSequenceItem"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsBkBiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple CallSequenceItem" sections="_VetNRxiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC1RiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsBkRiUEeeoWfBb-FGkXQ" name="isMultipleCallSequenceItem">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBkhiUEeeoWfBb-FGkXQ" name="className" value="CallSequenceItem"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBkxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsBlBiUEeeoWfBb-FGkXQ" name="Single AbstractElementMemoryInformation" sections="_Vet0UBiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC2BiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsBlRiUEeeoWfBb-FGkXQ" name="isSingleAbstractElementMemoryInformation">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBlhiUEeeoWfBb-FGkXQ" name="className" value="AbstractElementMemoryInformation"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBlxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsBmBiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple AbstractElementMemoryInformation" sections="_Vet0URiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC2BiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsBmRiUEeeoWfBb-FGkXQ" name="isMultipleAbstractElementMemoryInformation">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBmhiUEeeoWfBb-FGkXQ" name="className" value="AbstractElementMemoryInformation"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBmxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsBnBiUEeeoWfBb-FGkXQ" name="Single AbstractProcess" sections="_Vet0UhiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC2RiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsBnRiUEeeoWfBb-FGkXQ" name="isSingleAbstractProcess">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBnhiUEeeoWfBb-FGkXQ" name="className" value="AbstractProcess"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBnxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsBoBiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple AbstractProcess" sections="_Vet0UxiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC2RiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsBoRiUEeeoWfBb-FGkXQ" name="isMultipleAbstractProcess">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBohiUEeeoWfBb-FGkXQ" name="className" value="AbstractProcess"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBoxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsBpBiUEeeoWfBb-FGkXQ" name="Single Process" sections="_Vet0VBiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC2xiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsBpRiUEeeoWfBb-FGkXQ" name="isSingleProcess">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBphiUEeeoWfBb-FGkXQ" name="className" value="Process"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBpxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsBqBiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple Process" sections="_Vet0VRiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC2xiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsBqRiUEeeoWfBb-FGkXQ" name="isMultipleProcess">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBqhiUEeeoWfBb-FGkXQ" name="className" value="Process"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBqxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsBrBiUEeeoWfBb-FGkXQ" name="Single CallGraph" sections="_Vet0VhiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC3RiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsBrRiUEeeoWfBb-FGkXQ" name="isSingleCallGraph">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBrhiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBrxiUEeeoWfBb-FGkXQ" name="className" value="CallGraph"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsBsBiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple CallGraph" sections="_Vet0VxiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC3RiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsBsRiUEeeoWfBb-FGkXQ" name="isMultipleCallGraph">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBshiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBsxiUEeeoWfBb-FGkXQ" name="className" value="CallGraph"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsBtBiUEeeoWfBb-FGkXQ" name="Single GraphEntry" sections="_Vet0WBiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC4BiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsBtRiUEeeoWfBb-FGkXQ" name="isSingleGraphEntry">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBthiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBtxiUEeeoWfBb-FGkXQ" name="className" value="GraphEntry"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsBuBiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple GraphEntry" sections="_Vet0WRiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC4BiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsBuRiUEeeoWfBb-FGkXQ" name="isMultipleGraphEntry">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBuhiUEeeoWfBb-FGkXQ" name="className" value="GraphEntry"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBuxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsBvBiUEeeoWfBb-FGkXQ" name="Single Task" sections="_VeubYBiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC4hiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsBvRiUEeeoWfBb-FGkXQ" name="isSingleTask">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBvhiUEeeoWfBb-FGkXQ" name="className" value="Task"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBvxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsBwBiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple Task" sections="_VeubYRiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC4hiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsBwRiUEeeoWfBb-FGkXQ" name="isMultipleTask">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBwhiUEeeoWfBb-FGkXQ" name="className" value="Task"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBwxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsBxBiUEeeoWfBb-FGkXQ" name="Single ISR" sections="_VeubYhiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC5RiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsBxRiUEeeoWfBb-FGkXQ" name="isSingleISR">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBxhiUEeeoWfBb-FGkXQ" name="className" value="ISR"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBxxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsByBiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple ISR" sections="_VeubYxiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC5RiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsByRiUEeeoWfBb-FGkXQ" name="isMultipleISR">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsByhiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsByxiUEeeoWfBb-FGkXQ" name="className" value="ISR"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsBzBiUEeeoWfBb-FGkXQ" name="Single Label" sections="_VeubZBiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC5hiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsBzRiUEeeoWfBb-FGkXQ" name="isSingleLabel">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBzhiUEeeoWfBb-FGkXQ" name="className" value="Label"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsBzxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsB0BiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple Label" sections="_VeubZRiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC5hiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsB0RiUEeeoWfBb-FGkXQ" name="isMultipleLabel">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsB0hiUEeeoWfBb-FGkXQ" name="className" value="Label"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsB0xiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsB1BiUEeeoWfBb-FGkXQ" name="Single Runnable" sections="_VeubZhiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC6xiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsB1RiUEeeoWfBb-FGkXQ" name="isSingleRunnable">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsB1hiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsB1xiUEeeoWfBb-FGkXQ" name="className" value="Runnable"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsB2BiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple Runnable" sections="_VevCcBiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC6xiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsB2RiUEeeoWfBb-FGkXQ" name="isMultipleRunnable">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsB2hiUEeeoWfBb-FGkXQ" name="className" value="Runnable"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsB2xiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsB3BiUEeeoWfBb-FGkXQ" name="Single CallSequence" sections="_VevCcRiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC7hiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsB3RiUEeeoWfBb-FGkXQ" name="isSingleCallSequence">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsB3hiUEeeoWfBb-FGkXQ" name="className" value="CallSequence"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsB3xiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsB4BiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple CallSequence" sections="_VevCchiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC7hiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsB4RiUEeeoWfBb-FGkXQ" name="isMultipleCallSequence">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsB4hiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsB4xiUEeeoWfBb-FGkXQ" name="className" value="CallSequence"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsB5BiUEeeoWfBb-FGkXQ" name="Single InterProcessActivation" sections="_VevCcxiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC7xiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsB5RiUEeeoWfBb-FGkXQ" name="isSingleInterProcessActivation">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsB5hiUEeeoWfBb-FGkXQ" name="className" value="InterProcessActivation"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsB5xiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsB6BiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple InterProcessActivation" sections="_VevCdBiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC7xiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsB6RiUEeeoWfBb-FGkXQ" name="isMultipleInterProcessActivation">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsB6hiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsB6xiUEeeoWfBb-FGkXQ" name="className" value="InterProcessActivation"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsB7BiUEeeoWfBb-FGkXQ" name="Single TaskRunnableCall" sections="_VevCdRiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC8BiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsB7RiUEeeoWfBb-FGkXQ" name="isSingleTaskRunnableCall">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsB7hiUEeeoWfBb-FGkXQ" name="className" value="TaskRunnableCall"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsB7xiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsB8BiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple TaskRunnableCall" sections="_VevCdhiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC8BiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsB8RiUEeeoWfBb-FGkXQ" name="isMultipleTaskRunnableCall">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsB8hiUEeeoWfBb-FGkXQ" name="className" value="TaskRunnableCall"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsB8xiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsB9BiUEeeoWfBb-FGkXQ" name="Single LabelAccess" sections="_VevCdxiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC8RiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsB9RiUEeeoWfBb-FGkXQ" name="isSingleLabelAccess">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsB9hiUEeeoWfBb-FGkXQ" name="className" value="LabelAccess"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsB9xiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsB-BiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple LabelAccess" sections="_VevCeBiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC8RiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsB-RiUEeeoWfBb-FGkXQ" name="isMultipleLabelAccess">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsB-hiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsB-xiUEeeoWfBb-FGkXQ" name="className" value="LabelAccess"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsB_BiUEeeoWfBb-FGkXQ" name="Single RunnableInstructions" sections="_VevpgBiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC9BiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsB_RiUEeeoWfBb-FGkXQ" name="isSingleRunnableInstructions">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsB_hiUEeeoWfBb-FGkXQ" name="className" value="RunnableInstructions"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsB_xiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCABiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple RunnableInstructions" sections="_VevpgRiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC9BiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCARiUEeeoWfBb-FGkXQ" name="isMultipleRunnableInstructions">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCAhiUEeeoWfBb-FGkXQ" name="className" value="RunnableInstructions"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCAxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Software"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCBBiUEeeoWfBb-FGkXQ" name="Single OperatingSystem" sections="_VevpghiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC9xiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCBRiUEeeoWfBb-FGkXQ" name="isSingleOperatingSystem">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCBhiUEeeoWfBb-FGkXQ" name="className" value="OperatingSystem"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCBxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCCBiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple OperatingSystem" sections="_VevpgxiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC9xiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCCRiUEeeoWfBb-FGkXQ" name="isMultipleOperatingSystem">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCChiUEeeoWfBb-FGkXQ" name="className" value="OperatingSystem"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCCxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCDBiUEeeoWfBb-FGkXQ" name="Single Scheduler" sections="_VevphBiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC_BiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCDRiUEeeoWfBb-FGkXQ" name="isSingleScheduler">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCDhiUEeeoWfBb-FGkXQ" name="className" value="Scheduler"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCDxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCEBiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple Scheduler" sections="_VevphRiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC_BiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCERiUEeeoWfBb-FGkXQ" name="isMultipleScheduler">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCEhiUEeeoWfBb-FGkXQ" name="className" value="Scheduler"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCExiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCFBiUEeeoWfBb-FGkXQ" name="Single TaskScheduler" sections="_VevphhiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC-hiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCFRiUEeeoWfBb-FGkXQ" name="isSingleTaskScheduler">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCFhiUEeeoWfBb-FGkXQ" name="className" value="TaskScheduler"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCFxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCGBiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple TaskScheduler" sections="_VevphxiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC-hiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCGRiUEeeoWfBb-FGkXQ" name="isMultipleTaskScheduler">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCGhiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCGxiUEeeoWfBb-FGkXQ" name="className" value="TaskScheduler"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCHBiUEeeoWfBb-FGkXQ" name="Single SchedulingUnit" sections="_VewQkBiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC_xiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCHRiUEeeoWfBb-FGkXQ" name="isSingleSchedulingUnit">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCHhiUEeeoWfBb-FGkXQ" name="className" value="SchedulingUnit"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCHxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCIBiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple SchedulingUnit" sections="_VewQkRiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsC_xiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCIRiUEeeoWfBb-FGkXQ" name="isMultipleSchedulingUnit">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCIhiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCIxiUEeeoWfBb-FGkXQ" name="className" value="SchedulingUnit"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCJBiUEeeoWfBb-FGkXQ" name="Single TaskSchedulingAlgorithm" sections="_VewQkhiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsDABiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCJRiUEeeoWfBb-FGkXQ" name="isSingleTaskSchedulingAlgorithm">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCJhiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCJxiUEeeoWfBb-FGkXQ" name="className" value="TaskSchedulingAlgorithm"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCKBiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple TaskSchedulingAlgorithm" sections="_VewQkxiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsDABiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCKRiUEeeoWfBb-FGkXQ" name="isMultipleTaskSchedulingAlgorithm">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCKhiUEeeoWfBb-FGkXQ" name="className" value="TaskSchedulingAlgorithm"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCKxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCLBiUEeeoWfBb-FGkXQ" name="Single InterruptController" sections="_VewQlBiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsDARiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCLRiUEeeoWfBb-FGkXQ" name="isSingleInterruptController">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCLhiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCLxiUEeeoWfBb-FGkXQ" name="className" value="InterruptController"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCMBiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple InterruptController" sections="_Vew3oBiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsDARiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCMRiUEeeoWfBb-FGkXQ" name="isMultipleInterruptController">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCMhiUEeeoWfBb-FGkXQ" name="className" value="InterruptController"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCMxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCNBiUEeeoWfBb-FGkXQ" name="Single InterruptSchedulingAlgorithm" sections="_Vew3oRiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsDAxiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCNRiUEeeoWfBb-FGkXQ" name="isSingleInterruptSchedulingAlgorithm">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCNhiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCNxiUEeeoWfBb-FGkXQ" name="className" value="InterruptSchedulingAlgorithm"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCOBiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple InterruptSchedulingAlgorithm" sections="_Vew3ohiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsDAxiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCORiUEeeoWfBb-FGkXQ" name="isMultipleInterruptSchedulingAlgorithm">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCOhiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCOxiUEeeoWfBb-FGkXQ" name="className" value="InterruptSchedulingAlgorithm"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCPBiUEeeoWfBb-FGkXQ" name="Single SchedulingHWUnit" sections="_Vew3oxiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsDBBiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCPRiUEeeoWfBb-FGkXQ" name="isSingleSchedulingHWUnit">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCPhiUEeeoWfBb-FGkXQ" name="className" value="SchedulingHWUnit"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCPxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCQBiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple SchedulingHWUnit" sections="_Vew3pBiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsDBBiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCQRiUEeeoWfBb-FGkXQ" name="isMultipleSchedulingHWUnit">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCQhiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCQxiUEeeoWfBb-FGkXQ" name="className" value="SchedulingHWUnit"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCRBiUEeeoWfBb-FGkXQ" name="Single OSEK" sections="_Vew3pRiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsDBRiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCRRiUEeeoWfBb-FGkXQ" name="isSingleOSEK">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCRhiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCRxiUEeeoWfBb-FGkXQ" name="className" value="OSEK"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCSBiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple OSEK" sections="_Vew3phiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsDBRiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCSRiUEeeoWfBb-FGkXQ" name="isMultipleOSEK">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCShiUEeeoWfBb-FGkXQ" name="className" value="OSEK"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCSxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCTBiUEeeoWfBb-FGkXQ" name="Single PriorityBased" sections="_Vew3pxiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsDBhiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCTRiUEeeoWfBb-FGkXQ" name="isSinglePriorityBased">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCThiUEeeoWfBb-FGkXQ" name="className" value="PriorityBased"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCTxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCUBiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple PriorityBased" sections="_Vew3qBiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsDBhiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCURiUEeeoWfBb-FGkXQ" name="isMultiplePriorityBased">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCUhiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCUxiUEeeoWfBb-FGkXQ" name="className" value="PriorityBased"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCVBiUEeeoWfBb-FGkXQ" name="Single MappingModel" sections="_Vew3qRiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsDCBiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCVRiUEeeoWfBb-FGkXQ" name="isSingleMappingModel">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCVhiUEeeoWfBb-FGkXQ" name="className" value="MappingModel"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCVxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Mapping"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCWBiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple MappingModel" sections="_Vew3qhiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsDCBiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCWRiUEeeoWfBb-FGkXQ" name="isMultipleMappingModel">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCWhiUEeeoWfBb-FGkXQ" name="className" value="MappingModel"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCWxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Mapping"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCXBiUEeeoWfBb-FGkXQ" name="Single Stimulus" sections="_VexesBiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsDDBiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCXRiUEeeoWfBb-FGkXQ" name="isSingleStimulus">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCXhiUEeeoWfBb-FGkXQ" name="className" value="Stimulus"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCXxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Stimuli"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCYBiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple Stimulus" sections="_VexesRiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsDDBiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCYRiUEeeoWfBb-FGkXQ" name="isMultipleStimulus">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCYhiUEeeoWfBb-FGkXQ" name="className" value="Stimulus"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCYxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Stimuli"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCZBiUEeeoWfBb-FGkXQ" name="Single Single" sections="_VexeshiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsDChiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCZRiUEeeoWfBb-FGkXQ" name="isSingleSingle">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCZhiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Stimuli"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCZxiUEeeoWfBb-FGkXQ" name="className" value="Single"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCaBiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple Single" sections="_VexesxiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsDChiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCaRiUEeeoWfBb-FGkXQ" name="isMultipleSingle">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCahiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Stimuli"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCaxiUEeeoWfBb-FGkXQ" name="className" value="Single"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCbBiUEeeoWfBb-FGkXQ" name="Single Periodic" sections="_VexetBiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsDDRiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCbRiUEeeoWfBb-FGkXQ" name="isSinglePeriodic">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCbhiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Stimuli"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCbxiUEeeoWfBb-FGkXQ" name="className" value="Periodic"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCcBiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple Periodic" sections="_VexetRiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsDDRiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCcRiUEeeoWfBb-FGkXQ" name="isMultiplePeriodic">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCchiUEeeoWfBb-FGkXQ" name="className" value="Periodic"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCcxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Stimuli"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCdBiUEeeoWfBb-FGkXQ" name="Single Interprocess" sections="_VeyFwBiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsDEBiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCdRiUEeeoWfBb-FGkXQ" name="isSingleInterprocess">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCdhiUEeeoWfBb-FGkXQ" name="className" value="Interprocess"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCdxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Stimuli"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCeBiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple Interprocess" sections="_VeyFwRiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsDEBiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCeRiUEeeoWfBb-FGkXQ" name="isMultipleInterprocess">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCehiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Stimuli"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCexiUEeeoWfBb-FGkXQ" name="className" value="Interprocess"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCfBiUEeeoWfBb-FGkXQ" name="Single ConstraintsModel" sections="_VeyFwhiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsDEhiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCfRiUEeeoWfBb-FGkXQ" name="isSingleConstraintsModel">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCfhiUEeeoWfBb-FGkXQ" name="className" value="ConstraintsModel"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCfxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Constraints"/>
+    </constraints>
+  </views>
+  <views xmi:id="_TgsCgBiUEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple ConstraintsModel" sections="_VeyFwxiUEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_TgsDEhiUEeeoWfBb-FGkXQ">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_TgsCgRiUEeeoWfBb-FGkXQ" name="isMultipleConstraintsModel">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@constraintTypes.0"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCghiUEeeoWfBb-FGkXQ" name="className" value="ConstraintsModel"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_TgsCgxiUEeeoWfBb-FGkXQ" name="nsUri" value="http://www.eclipse.org/papyrus/2017/Amalthea/Constraints"/>
+    </constraints>
+  </views>
+  <dataContexts xmi:id="_TgsChBiUEeeoWfBb-FGkXQ" name="amalthea" label="amalthea">
+    <elements xmi:id="_TgsChRiUEeeoWfBb-FGkXQ" name="Dummy"/>
+    <elements xsi:type="contexts:DataContextPackage" xmi:id="_TgsChhiUEeeoWfBb-FGkXQ" name="common">
+      <elements xmi:id="_TgsChxiUEeeoWfBb-FGkXQ" name="CustomProperty">
+        <properties xmi:id="_TgsCiBiUEeeoWfBb-FGkXQ" name="key"/>
+        <properties xmi:id="_TgsCiRiUEeeoWfBb-FGkXQ" name="base_Property" type="Reference"/>
+      </elements>
+      <elements xmi:id="_TgsCihiUEeeoWfBb-FGkXQ" name="AbstractTime">
+        <properties xmi:id="_TgsCixiUEeeoWfBb-FGkXQ" name="value"/>
+        <properties xmi:id="_TgsCjBiUEeeoWfBb-FGkXQ" name="unit" type="Enumeration"/>
+        <properties xmi:id="_TgsCjRiUEeeoWfBb-FGkXQ" name="base_DataType" type="Reference"/>
+      </elements>
+      <elements xmi:id="_TgsCjhiUEeeoWfBb-FGkXQ" name="Time" supertypes="_TgsCihiUEeeoWfBb-FGkXQ"/>
+      <elements xmi:id="_TgsCjxiUEeeoWfBb-FGkXQ" name="IAnnotatable"/>
+      <elements xmi:id="_TgsCkBiUEeeoWfBb-FGkXQ" name="Instructions"/>
+      <elements xmi:id="_TgsCkRiUEeeoWfBb-FGkXQ" name="Deviation">
+        <properties xmi:id="_TgsCkhiUEeeoWfBb-FGkXQ" name="distribution" type="Reference"/>
+      </elements>
+      <elements xmi:id="_TgsCkxiUEeeoWfBb-FGkXQ" name="Distribution"/>
+      <elements xmi:id="_TgsClBiUEeeoWfBb-FGkXQ" name="WeibullEstimators" supertypes="_TgsCkxiUEeeoWfBb-FGkXQ">
+        <properties xmi:id="_TgsClRiUEeeoWfBb-FGkXQ" name="pRemainPromille"/>
+        <properties xmi:id="_TgsClhiUEeeoWfBb-FGkXQ" name="mean"/>
+      </elements>
+      <elements xmi:id="_TgsClxiUEeeoWfBb-FGkXQ" name="InstructionsDeviation" supertypes="_TgsCkBiUEeeoWfBb-FGkXQ">
+        <properties xmi:id="_TgsCmBiUEeeoWfBb-FGkXQ" name="deviation" type="Reference"/>
+      </elements>
+      <elements xmi:id="_TgsCmRiUEeeoWfBb-FGkXQ" name="Counter">
+        <properties xmi:id="_TgsCmhiUEeeoWfBb-FGkXQ" name="counterOffset"/>
+        <properties xmi:id="_TgsCmxiUEeeoWfBb-FGkXQ" name="counterPrescaler"/>
+      </elements>
+      <elements xmi:id="_TgsCnBiUEeeoWfBb-FGkXQ" name="DataSize">
+        <properties xmi:id="_TgsCnRiUEeeoWfBb-FGkXQ" name="unit" type="Enumeration"/>
+        <properties xmi:id="_TgsCnhiUEeeoWfBb-FGkXQ" name="value"/>
+      </elements>
     </elements>
-    <modelElementFactory href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@modelElementFactories.2"/>
+    <elements xsi:type="contexts:DataContextPackage" xmi:id="_TgsCnxiUEeeoWfBb-FGkXQ" name="components">
+      <elements xmi:id="_TgsCoBiUEeeoWfBb-FGkXQ" name="FInterfacePort">
+        <properties xmi:id="_TgsCoRiUEeeoWfBb-FGkXQ" name="base_Port" type="Reference"/>
+      </elements>
+      <elements xmi:id="_TgsCohiUEeeoWfBb-FGkXQ" name="Component">
+        <properties xmi:id="_TgsCoxiUEeeoWfBb-FGkXQ" name="base_Component" type="Reference"/>
+      </elements>
+      <elements xmi:id="_TgsCpBiUEeeoWfBb-FGkXQ" name="Composite" supertypes="_TgsCohiUEeeoWfBb-FGkXQ">
+        <properties xmi:id="_TgsCpRiUEeeoWfBb-FGkXQ" name="componentinstances" type="Reference" multiplicity="-1"/>
+      </elements>
+      <elements xmi:id="_TgsCphiUEeeoWfBb-FGkXQ" name="ComponentInstance">
+        <properties xmi:id="_TgsCpxiUEeeoWfBb-FGkXQ" name="base_Property" type="Reference"/>
+      </elements>
+    </elements>
+    <elements xsi:type="contexts:DataContextPackage" xmi:id="_TgsCqBiUEeeoWfBb-FGkXQ" name="hardware">
+      <elements xmi:id="_TgsCqRiUEeeoWfBb-FGkXQ" name="HwSystem" supertypes="_TgsCrBiUEeeoWfBb-FGkXQ">
+        <properties xmi:id="_TgsCqhiUEeeoWfBb-FGkXQ" name="ecus" type="Reference" multiplicity="-1"/>
+        <properties xmi:id="_TgsCqxiUEeeoWfBb-FGkXQ" name="systemtype" type="Reference"/>
+      </elements>
+      <elements xmi:id="_TgsCrBiUEeeoWfBb-FGkXQ" name="ComplexNode">
+        <properties xmi:id="_TgsCrRiUEeeoWfBb-FGkXQ" name="quartzes" type="Reference" multiplicity="-1"/>
+        <properties xmi:id="_TgsCrhiUEeeoWfBb-FGkXQ" name="prescaler" type="Reference"/>
+        <properties xmi:id="_TgsCrxiUEeeoWfBb-FGkXQ" name="networks" type="Reference" multiplicity="-1"/>
+      </elements>
+      <elements xmi:id="_TgsCsBiUEeeoWfBb-FGkXQ" name="Quartz" supertypes="_TgsCrBiUEeeoWfBb-FGkXQ">
+        <properties xmi:id="_TgsCsRiUEeeoWfBb-FGkXQ" name="type" type="Enumeration"/>
+      </elements>
+      <elements xmi:id="_TgsCshiUEeeoWfBb-FGkXQ" name="Prescaler">
+        <properties xmi:id="_TgsCsxiUEeeoWfBb-FGkXQ" name="clockRatio"/>
+      </elements>
+      <elements xmi:id="_TgsCtBiUEeeoWfBb-FGkXQ" name="Network" supertypes="_TgsCrBiUEeeoWfBb-FGkXQ">
+        <properties xmi:id="_TgsCtRiUEeeoWfBb-FGkXQ" name="networktype" type="Reference"/>
+      </elements>
+      <elements xmi:id="_TgsCthiUEeeoWfBb-FGkXQ" name="NetworkType">
+        <properties xmi:id="_TgsCtxiUEeeoWfBb-FGkXQ" name="schedPolicy" type="Enumeration"/>
+        <properties xmi:id="_TgsCuBiUEeeoWfBb-FGkXQ" name="bitWidth"/>
+        <properties xmi:id="_TgsCuRiUEeeoWfBb-FGkXQ" name="base_DataType" type="Reference"/>
+      </elements>
+      <elements xmi:id="_TgsCuhiUEeeoWfBb-FGkXQ" name="ECU" supertypes="_TgsCrBiUEeeoWfBb-FGkXQ">
+        <properties xmi:id="_TgsCuxiUEeeoWfBb-FGkXQ" name="microcontrollers" type="Reference" multiplicity="-1"/>
+        <properties xmi:id="_TgsCvBiUEeeoWfBb-FGkXQ" name="ecutype" type="Reference"/>
+      </elements>
+      <elements xmi:id="_TgsCvRiUEeeoWfBb-FGkXQ" name="Microcontroller" supertypes="_TgsCrBiUEeeoWfBb-FGkXQ">
+        <properties xmi:id="_TgsCvhiUEeeoWfBb-FGkXQ" name="cores" type="Reference" multiplicity="-1"/>
+        <properties xmi:id="_TgsCvxiUEeeoWfBb-FGkXQ" name="microcontrollertype" type="Reference"/>
+      </elements>
+      <elements xmi:id="_TgsCwBiUEeeoWfBb-FGkXQ" name="Core" supertypes="_TgsCrBiUEeeoWfBb-FGkXQ">
+        <properties xmi:id="_TgsCwRiUEeeoWfBb-FGkXQ" name="lockstepGroup"/>
+        <properties xmi:id="_TgsCwhiUEeeoWfBb-FGkXQ" name="coretype" type="Reference"/>
+      </elements>
+      <elements xmi:id="_TgsCwxiUEeeoWfBb-FGkXQ" name="CoreType">
+        <properties xmi:id="_TgsCxBiUEeeoWfBb-FGkXQ" name="bitWidth"/>
+        <properties xmi:id="_TgsCxRiUEeeoWfBb-FGkXQ" name="instructionsPerCycle"/>
+        <properties xmi:id="_TgsCxhiUEeeoWfBb-FGkXQ" name="base_DataType" type="Reference"/>
+      </elements>
+      <elements xmi:id="_TgsCxxiUEeeoWfBb-FGkXQ" name="MicrocontrollerType">
+        <properties xmi:id="_TgsCyBiUEeeoWfBb-FGkXQ" name="base_DataType" type="Reference"/>
+      </elements>
+      <elements xmi:id="_TgsCyRiUEeeoWfBb-FGkXQ" name="ECUType">
+        <properties xmi:id="_TgsCyhiUEeeoWfBb-FGkXQ" name="base_DataType" type="Reference"/>
+      </elements>
+      <elements xmi:id="_TgsCyxiUEeeoWfBb-FGkXQ" name="SystemType">
+        <properties xmi:id="_TgsCzBiUEeeoWfBb-FGkXQ" name="base_DataType" type="Reference"/>
+      </elements>
+      <elements xmi:id="_TgsCzRiUEeeoWfBb-FGkXQ" name="Bus" supertypes="_TgsCthiUEeeoWfBb-FGkXQ">
+        <properties xmi:id="_TgsCzhiUEeeoWfBb-FGkXQ" name="busType" type="Enumeration"/>
+      </elements>
+      <elements xmi:id="_TgsCzxiUEeeoWfBb-FGkXQ" name="Frequency">
+        <properties xmi:id="_TgsC0BiUEeeoWfBb-FGkXQ" name="value"/>
+        <properties xmi:id="_TgsC0RiUEeeoWfBb-FGkXQ" name="unit" type="Enumeration"/>
+      </elements>
+    </elements>
+    <elements xsi:type="contexts:DataContextPackage" xmi:id="_TgsC0hiUEeeoWfBb-FGkXQ" name="software">
+      <elements xmi:id="_TgsC0xiUEeeoWfBb-FGkXQ" name="RunnableItem">
+        <properties xmi:id="_TgsC1BiUEeeoWfBb-FGkXQ" name="base_Operation" type="Reference"/>
+      </elements>
+      <elements xmi:id="_TgsC1RiUEeeoWfBb-FGkXQ" name="CallSequenceItem">
+        <properties xmi:id="_TgsC1hiUEeeoWfBb-FGkXQ" name="base_Operation" type="Reference"/>
+        <properties xmi:id="_TgsC1xiUEeeoWfBb-FGkXQ" name="counter" type="Reference"/>
+      </elements>
+      <elements xmi:id="_TgsC2BiUEeeoWfBb-FGkXQ" name="AbstractElementMemoryInformation"/>
+      <elements xmi:id="_TgsC2RiUEeeoWfBb-FGkXQ" name="AbstractProcess" supertypes="_TgsC2BiUEeeoWfBb-FGkXQ">
+        <properties xmi:id="_TgsC2hiUEeeoWfBb-FGkXQ" name="priority"/>
+      </elements>
+      <elements xmi:id="_TgsC2xiUEeeoWfBb-FGkXQ" name="Process" supertypes="_TgsC2RiUEeeoWfBb-FGkXQ">
+        <properties xmi:id="_TgsC3BiUEeeoWfBb-FGkXQ" name="callgraph" type="Reference"/>
+      </elements>
+      <elements xmi:id="_TgsC3RiUEeeoWfBb-FGkXQ" name="CallGraph">
+        <properties xmi:id="_TgsC3hiUEeeoWfBb-FGkXQ" name="graphentries" type="Reference" multiplicity="-1"/>
+        <properties xmi:id="_TgsC3xiUEeeoWfBb-FGkXQ" name="base_Class" type="Reference"/>
+      </elements>
+      <elements xmi:id="_TgsC4BiUEeeoWfBb-FGkXQ" name="GraphEntry">
+        <properties xmi:id="_TgsC4RiUEeeoWfBb-FGkXQ" name="base_Class" type="Reference"/>
+      </elements>
+      <elements xmi:id="_TgsC4hiUEeeoWfBb-FGkXQ" name="Task" supertypes="_TgsC2xiUEeeoWfBb-FGkXQ">
+        <properties xmi:id="_TgsC4xiUEeeoWfBb-FGkXQ" name="preemption" type="Enumeration"/>
+        <properties xmi:id="_TgsC5BiUEeeoWfBb-FGkXQ" name="multipleTaskActivationLimit"/>
+      </elements>
+      <elements xmi:id="_TgsC5RiUEeeoWfBb-FGkXQ" name="ISR" supertypes="_TgsC2xiUEeeoWfBb-FGkXQ"/>
+      <elements xmi:id="_TgsC5hiUEeeoWfBb-FGkXQ" name="Label" supertypes="_TgsC2BiUEeeoWfBb-FGkXQ">
+        <properties xmi:id="_TgsC5xiUEeeoWfBb-FGkXQ" name="constant"/>
+        <properties xmi:id="_TgsC6BiUEeeoWfBb-FGkXQ" name="bVolatile"/>
+        <properties xmi:id="_TgsC6RiUEeeoWfBb-FGkXQ" name="buffered"/>
+        <properties xmi:id="_TgsC6hiUEeeoWfBb-FGkXQ" name="numberBits"/>
+      </elements>
+      <elements xmi:id="_TgsC6xiUEeeoWfBb-FGkXQ" name="Runnable" supertypes="_TgsC2BiUEeeoWfBb-FGkXQ">
+        <properties xmi:id="_TgsC7BiUEeeoWfBb-FGkXQ" name="callback"/>
+        <properties xmi:id="_TgsC7RiUEeeoWfBb-FGkXQ" name="service"/>
+      </elements>
+      <elements xmi:id="_TgsC7hiUEeeoWfBb-FGkXQ" name="CallSequence" supertypes="_TgsC4BiUEeeoWfBb-FGkXQ"/>
+      <elements xmi:id="_TgsC7xiUEeeoWfBb-FGkXQ" name="InterProcessActivation" supertypes="_TgsC1RiUEeeoWfBb-FGkXQ"/>
+      <elements xmi:id="_TgsC8BiUEeeoWfBb-FGkXQ" name="TaskRunnableCall" supertypes="_TgsC1RiUEeeoWfBb-FGkXQ"/>
+      <elements xmi:id="_TgsC8RiUEeeoWfBb-FGkXQ" name="LabelAccess" supertypes="_TgsC0xiUEeeoWfBb-FGkXQ">
+        <properties xmi:id="_TgsC8hiUEeeoWfBb-FGkXQ" name="isBuffered"/>
+        <properties xmi:id="_TgsC8xiUEeeoWfBb-FGkXQ" name="access" type="Enumeration"/>
+      </elements>
+      <elements xmi:id="_TgsC9BiUEeeoWfBb-FGkXQ" name="RunnableInstructions" supertypes="_TgsC0xiUEeeoWfBb-FGkXQ">
+        <properties xmi:id="_TgsC9RiUEeeoWfBb-FGkXQ" name="default" type="Reference"/>
+      </elements>
+    </elements>
+    <elements xsi:type="contexts:DataContextPackage" xmi:id="_TgsC9hiUEeeoWfBb-FGkXQ" name="os">
+      <elements xmi:id="_TgsC9xiUEeeoWfBb-FGkXQ" name="OperatingSystem">
+        <properties xmi:id="_TgsC-BiUEeeoWfBb-FGkXQ" name="taskscheduler" type="Reference" multiplicity="-1"/>
+        <properties xmi:id="_TgsC-RiUEeeoWfBb-FGkXQ" name="interruptcontroller" type="Reference" multiplicity="-1"/>
+      </elements>
+      <elements xmi:id="_TgsC-hiUEeeoWfBb-FGkXQ" name="TaskScheduler" supertypes="_TgsC_BiUEeeoWfBb-FGkXQ">
+        <properties xmi:id="_TgsC-xiUEeeoWfBb-FGkXQ" name="schedulingalgorithm" type="Reference"/>
+      </elements>
+      <elements xmi:id="_TgsC_BiUEeeoWfBb-FGkXQ" name="Scheduler">
+        <properties xmi:id="_TgsC_RiUEeeoWfBb-FGkXQ" name="scheduleUnitPriority"/>
+        <properties xmi:id="_TgsC_hiUEeeoWfBb-FGkXQ" name="schedulingunit" type="Reference" multiplicity="-1"/>
+      </elements>
+      <elements xmi:id="_TgsC_xiUEeeoWfBb-FGkXQ" name="SchedulingUnit"/>
+      <elements xmi:id="_TgsDABiUEeeoWfBb-FGkXQ" name="TaskSchedulingAlgorithm"/>
+      <elements xmi:id="_TgsDARiUEeeoWfBb-FGkXQ" name="InterruptController" supertypes="_TgsC_BiUEeeoWfBb-FGkXQ">
+        <properties xmi:id="_TgsDAhiUEeeoWfBb-FGkXQ" name="schedulingalgorithm" type="Reference"/>
+      </elements>
+      <elements xmi:id="_TgsDAxiUEeeoWfBb-FGkXQ" name="InterruptSchedulingAlgorithm"/>
+      <elements xmi:id="_TgsDBBiUEeeoWfBb-FGkXQ" name="SchedulingHWUnit" supertypes="_TgsC_xiUEeeoWfBb-FGkXQ"/>
+      <elements xmi:id="_TgsDBRiUEeeoWfBb-FGkXQ" name="OSEK" supertypes="_TgsDABiUEeeoWfBb-FGkXQ"/>
+      <elements xmi:id="_TgsDBhiUEeeoWfBb-FGkXQ" name="PriorityBased" supertypes="_TgsDAxiUEeeoWfBb-FGkXQ"/>
+    </elements>
+    <elements xsi:type="contexts:DataContextPackage" xmi:id="_TgsDBxiUEeeoWfBb-FGkXQ" name="mapping">
+      <elements xmi:id="_TgsDCBiUEeeoWfBb-FGkXQ" name="MappingModel"/>
+    </elements>
+    <elements xsi:type="contexts:DataContextPackage" xmi:id="_TgsDCRiUEeeoWfBb-FGkXQ" name="stimuli">
+      <elements xmi:id="_TgsDChiUEeeoWfBb-FGkXQ" name="Single" supertypes="_TgsDDBiUEeeoWfBb-FGkXQ">
+        <properties xmi:id="_TgsDCxiUEeeoWfBb-FGkXQ" name="activation" type="Reference"/>
+      </elements>
+      <elements xmi:id="_TgsDDBiUEeeoWfBb-FGkXQ" name="Stimulus"/>
+      <elements xmi:id="_TgsDDRiUEeeoWfBb-FGkXQ" name="Periodic" supertypes="_TgsDDBiUEeeoWfBb-FGkXQ">
+        <properties xmi:id="_TgsDDhiUEeeoWfBb-FGkXQ" name="recurrence" type="Reference"/>
+        <properties xmi:id="_TgsDDxiUEeeoWfBb-FGkXQ" name="offset" type="Reference"/>
+      </elements>
+      <elements xmi:id="_TgsDEBiUEeeoWfBb-FGkXQ" name="Interprocess" supertypes="_TgsDDBiUEeeoWfBb-FGkXQ"/>
+    </elements>
+    <elements xsi:type="contexts:DataContextPackage" xmi:id="_TgsDERiUEeeoWfBb-FGkXQ" name="constraints">
+      <elements xmi:id="_TgsDEhiUEeeoWfBb-FGkXQ" name="ConstraintsModel"/>
+    </elements>
+    <modelElementFactory href="ppe:/environment/org.eclipse.papyrus.infra.properties.ui/model/Environment.xmi#//@modelElementFactories.0"/>
   </dataContexts>
 </contexts:Context>

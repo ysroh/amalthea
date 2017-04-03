@@ -11,8 +11,8 @@
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
 		<ppe:StringEditor input="{Binding}"
-			property="amalthea:software:Runnable:callback"></ppe:StringEditor>
+			property="amalthea:common:WeibullEstimators:pRemainPromille"></ppe:StringEditor>
 		<ppe:StringEditor input="{Binding}"
-			property="amalthea:software:Runnable:service"></ppe:StringEditor>
+			property="amalthea:common:WeibullEstimators:mean"></ppe:StringEditor>
 	</Composite>
 </Composite>

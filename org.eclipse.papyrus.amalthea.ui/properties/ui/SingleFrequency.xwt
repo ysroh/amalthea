@@ -11,8 +11,12 @@
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
 		<ppe:StringEditor input="{Binding}"
-			property="amalthea:software:Runnable:callback"></ppe:StringEditor>
-		<ppe:StringEditor input="{Binding}"
-			property="amalthea:software:Runnable:service"></ppe:StringEditor>
+			property="amalthea:hardware:Frequency:value"></ppe:StringEditor>
+	</Composite>
+	<Composite>
+		<Composite.layout>
+			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:EnumCombo input="{Binding}" property="amalthea:hardware:Frequency:unit"></ppe:EnumCombo>
 	</Composite>
 </Composite>

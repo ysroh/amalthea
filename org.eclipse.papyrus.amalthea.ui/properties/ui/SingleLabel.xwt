@@ -11,8 +11,12 @@
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
 		<ppe:StringEditor input="{Binding}"
-			property="amalthea:software:Runnable:callback"></ppe:StringEditor>
+			property="amalthea:software:Label:constant"></ppe:StringEditor>
 		<ppe:StringEditor input="{Binding}"
-			property="amalthea:software:Runnable:service"></ppe:StringEditor>
+			property="amalthea:software:Label:bVolatile"></ppe:StringEditor>
+		<ppe:StringEditor input="{Binding}"
+			property="amalthea:software:Label:buffered"></ppe:StringEditor>
+		<ppe:StringEditor input="{Binding}"
+			property="amalthea:software:Label:numberBits"></ppe:StringEditor>
 	</Composite>
 </Composite>

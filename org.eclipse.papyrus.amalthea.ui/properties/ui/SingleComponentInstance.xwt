@@ -10,9 +10,7 @@
 		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:StringEditor input="{Binding}"
-			property="amalthea:software:Runnable:callback"></ppe:StringEditor>
-		<ppe:StringEditor input="{Binding}"
-			property="amalthea:software:Runnable:service"></ppe:StringEditor>
+		<ppe:ReferenceDialog input="{Binding}"
+			property="amalthea:components:ComponentInstance:base_Property"></ppe:ReferenceDialog>
 	</Composite>
 </Composite>

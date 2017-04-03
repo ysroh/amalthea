@@ -11,8 +11,15 @@
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
 		<ppe:StringEditor input="{Binding}"
-			property="amalthea:software:Runnable:callback"></ppe:StringEditor>
+			property="amalthea:hardware:CoreType:bitWidth"></ppe:StringEditor>
 		<ppe:StringEditor input="{Binding}"
-			property="amalthea:software:Runnable:service"></ppe:StringEditor>
+			property="amalthea:hardware:CoreType:instructionsPerCycle"></ppe:StringEditor>
+	</Composite>
+	<Composite>
+		<Composite.layout>
+			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:ReferenceDialog input="{Binding}"
+			property="amalthea:hardware:CoreType:base_DataType"></ppe:ReferenceDialog>
 	</Composite>
 </Composite>

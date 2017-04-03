@@ -10,9 +10,7 @@
 		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:StringEditor input="{Binding}"
-			property="amalthea:software:Runnable:callback"></ppe:StringEditor>
-		<ppe:StringEditor input="{Binding}"
-			property="amalthea:software:Runnable:service"></ppe:StringEditor>
+		<ppe:EnumCombo input="{Binding}"
+			property="amalthea:hardware:NetworkType:schedPolicy"></ppe:EnumCombo>
 	</Composite>
 </Composite>
