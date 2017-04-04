@@ -28,23 +28,13 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.software.SoftwarePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.CallGraphImpl#getGraphentries <em>Graphentries</em>}</li>
  *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.CallGraphImpl#getBase_Class <em>Base Class</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.CallGraphImpl#getGraphentries <em>Graphentries</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class CallGraphImpl extends MinimalEObjectImpl.Container implements CallGraph {
-	/**
-	 * The cached value of the '{@link #getGraphentries() <em>Graphentries</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getGraphentries()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<GraphEntry> graphentries;
-
 	/**
 	 * The cached value of the '{@link #getBase_Class() <em>Base Class</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -54,6 +44,16 @@ public class CallGraphImpl extends MinimalEObjectImpl.Container implements CallG
 	 * @ordered
 	 */
 	protected org.eclipse.uml2.uml.Class base_Class;
+
+	/**
+	 * The cached value of the '{@link #getGraphentries() <em>Graphentries</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGraphentries()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<GraphEntry> graphentries;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -132,11 +132,11 @@ public class CallGraphImpl extends MinimalEObjectImpl.Container implements CallG
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case SoftwarePackage.CALL_GRAPH__GRAPHENTRIES:
-				return getGraphentries();
 			case SoftwarePackage.CALL_GRAPH__BASE_CLASS:
 				if (resolve) return getBase_Class();
 				return basicGetBase_Class();
+			case SoftwarePackage.CALL_GRAPH__GRAPHENTRIES:
+				return getGraphentries();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -150,12 +150,12 @@ public class CallGraphImpl extends MinimalEObjectImpl.Container implements CallG
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case SoftwarePackage.CALL_GRAPH__BASE_CLASS:
+				setBase_Class((org.eclipse.uml2.uml.Class)newValue);
+				return;
 			case SoftwarePackage.CALL_GRAPH__GRAPHENTRIES:
 				getGraphentries().clear();
 				getGraphentries().addAll((Collection<? extends GraphEntry>)newValue);
-				return;
-			case SoftwarePackage.CALL_GRAPH__BASE_CLASS:
-				setBase_Class((org.eclipse.uml2.uml.Class)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -169,11 +169,11 @@ public class CallGraphImpl extends MinimalEObjectImpl.Container implements CallG
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case SoftwarePackage.CALL_GRAPH__GRAPHENTRIES:
-				getGraphentries().clear();
-				return;
 			case SoftwarePackage.CALL_GRAPH__BASE_CLASS:
 				setBase_Class((org.eclipse.uml2.uml.Class)null);
+				return;
+			case SoftwarePackage.CALL_GRAPH__GRAPHENTRIES:
+				getGraphentries().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -187,10 +187,10 @@ public class CallGraphImpl extends MinimalEObjectImpl.Container implements CallG
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case SoftwarePackage.CALL_GRAPH__GRAPHENTRIES:
-				return graphentries != null && !graphentries.isEmpty();
 			case SoftwarePackage.CALL_GRAPH__BASE_CLASS:
 				return base_Class != null;
+			case SoftwarePackage.CALL_GRAPH__GRAPHENTRIES:
+				return graphentries != null && !graphentries.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

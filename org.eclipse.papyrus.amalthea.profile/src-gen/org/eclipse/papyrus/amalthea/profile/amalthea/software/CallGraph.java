@@ -15,8 +15,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.CallGraph#getGraphentries <em>Graphentries</em>}</li>
  *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.CallGraph#getBase_Class <em>Base Class</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.CallGraph#getGraphentries <em>Graphentries</em>}</li>
  * </ul>
  *
  * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.SoftwarePackage#getCallGraph()
@@ -35,7 +35,7 @@ public interface CallGraph extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Graphentries</em>' reference list.
 	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.SoftwarePackage#getCallGraph_Graphentries()
-	 * @model ordered="false"
+	 * @model required="true" ordered="false"
 	 * @generated
 	 */
 	EList<GraphEntry> getGraphentries();

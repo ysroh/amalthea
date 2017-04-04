@@ -3,9 +3,22 @@
   <filter xsi:type="filters:CompoundFilter" filter="//@filter/@ownedFilter.0">
     <ownedFilter xsi:type="umlfilters:ProfileApplied" name="isAmaltheaApplied" profileQualifiedName="Amalthea" profileURI="pathmap://AMALTHEA_PROFILE/amalthea.profile.uml#_PUCPMBYtEeeFzte_Mj5jqA"/>
   </filter>
-  <menu xsi:type="ElementCreationMenuModel:Folder" label="SwModel">
-    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Runnabe" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Runnable" role=""/>
-    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="LabelAccess" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.LabelAccess"/>
+  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Runnabe" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Runnable" role=""/>
+  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Label" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Label" role=""/>
+  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Task" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Task" role=""/>
+  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="ISR" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.ISR" role=""/>
+  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="RunnableInstructions" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.RunnableInstructions" role=""/>
+  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="LabelAccess" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.LabelAccess"/>
+  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="CallGraph" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.CallGraph" role=""/>
+  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="CallSequence" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.CallSequence" role=""/>
+  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="TaskRunnableCall" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.TaskRunnableCall" role=""/>
+  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="InterProcessActivation" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.InterProcessActivation" role=""/>
+  <menu xsi:type="ElementCreationMenuModel:Folder" label="Common">
     <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Time" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Time"/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Counter" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Counter"/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="DataSize" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.DataSize"/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="InstructionsDeviation" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.InstructionsDeviation"/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Deviation" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Deviation"/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="WeibullEstimators" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.WeibullEstimators"/>
   </menu>
 </ElementCreationMenuModel:Folder>

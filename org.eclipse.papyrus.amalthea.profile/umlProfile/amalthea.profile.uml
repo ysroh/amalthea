@@ -68,6 +68,9 @@
       <elementImport xmi:type="uml:ElementImport" xmi:id="_j4RYABiNEeeoWfBb-FGkXQ">
         <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
       </elementImport>
+      <elementImport xmi:type="uml:ElementImport" xmi:id="_BskD8BlOEeeUscFGj19tvQ">
+        <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+      </elementImport>
       <packagedElement xmi:type="uml:Extension" xmi:id="_ZzVAIBZPEeeFzte_Mj5jqA" name="E_AbstractTime_DataType1" memberEnd="_ZzWOQBZPEeeFzte_Mj5jqA _ZzW1UBZPEeeFzte_Mj5jqA">
         <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_ZzWOQBZPEeeFzte_Mj5jqA" name="extension_AbstractTime" type="_oiGT8xZKEeeFzte_Mj5jqA" aggregation="composite" association="_ZzVAIBZPEeeFzte_Mj5jqA"/>
       </packagedElement>
@@ -112,9 +115,16 @@
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_oiGT_hZKEeeFzte_Mj5jqA" name="ps"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiGT_xZKEeeFzte_Mj5jqA" name="IAnnotatable" isAbstract="true"/>
-      <packagedElement xmi:type="uml:Stereotype" xmi:id="_N08mYBhvEeeoWfBb-FGkXQ" name="Instructions" isAbstract="true"/>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_N08mYBhvEeeoWfBb-FGkXQ" name="Instructions" isAbstract="true">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_IapskBlOEeeUscFGj19tvQ" name="base_Class" association="_IahJsBlOEeeUscFGj19tvQ">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+        </ownedAttribute>
+      </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_N090gBhvEeeoWfBb-FGkXQ" name="Deviation">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_nM-loRhvEeeoWfBb-FGkXQ" name="distribution" type="_tx0ysBhvEeeoWfBb-FGkXQ" association="_nM9XgBhvEeeoWfBb-FGkXQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_J6Xy4RlOEeeUscFGj19tvQ" name="base_Class" association="_J6XL0BlOEeeUscFGj19tvQ">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_N0-bkBhvEeeoWfBb-FGkXQ" name="WeibullEstimators">
         <generalization xmi:type="uml:Generalization" xmi:id="_yRajcBhvEeeoWfBb-FGkXQ" general="_tx0ysBhvEeeoWfBb-FGkXQ"/>
@@ -132,7 +142,11 @@
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZLJpoBhvEeeoWfBb-FGkXQ" value="1"/>
         </ownedAttribute>
       </packagedElement>
-      <packagedElement xmi:type="uml:Stereotype" xmi:id="_tx0ysBhvEeeoWfBb-FGkXQ" name="Distribution" isAbstract="true"/>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_tx0ysBhvEeeoWfBb-FGkXQ" name="Distribution" isAbstract="true">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_K9omsBlOEeeUscFGj19tvQ" name="base_Class" association="_K9mKcBlOEeeUscFGj19tvQ">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+        </ownedAttribute>
+      </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_SDLvIBh0EeeoWfBb-FGkXQ" name="Counter">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_SDLvIRh0EeeoWfBb-FGkXQ" name="counterOffset">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
@@ -140,11 +154,17 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_SDLvIhh0EeeoWfBb-FGkXQ" name="counterPrescaler">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_OQBkgBlOEeeUscFGj19tvQ" name="base_DataType" association="_OQAWYBlOEeeUscFGj19tvQ">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#DataType"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_RxrLkBh4EeeoWfBb-FGkXQ" name="DataSize">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_Iq9CMBh5EeeoWfBb-FGkXQ" name="unit" type="_ZNyX0Bh4EeeoWfBb-FGkXQ"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_MjL4ABh5EeeoWfBb-FGkXQ" name="value">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_38UqMBlTEeeUscFGj19tvQ" name="base_DataType" association="_38TcEBlTEeeUscFGj19tvQ">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#DataType"/>
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Enumeration" xmi:id="_ZNyX0Bh4EeeoWfBb-FGkXQ" name="DataUnit">
@@ -169,6 +189,21 @@
       </packagedElement>
       <packagedElement xmi:type="uml:Extension" xmi:id="_p-K_QBiNEeeoWfBb-FGkXQ" name="E_CustomProperty_Property1" memberEnd="_p-LmUBiNEeeoWfBb-FGkXQ _p-MNYBiNEeeoWfBb-FGkXQ">
         <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_p-LmUBiNEeeoWfBb-FGkXQ" name="extension_CustomProperty" type="_oiGT8RZKEeeFzte_Mj5jqA" aggregation="composite" association="_p-K_QBiNEeeoWfBb-FGkXQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_IahJsBlOEeeUscFGj19tvQ" name="E_Instructions_Class1" memberEnd="_IapFgBlOEeeUscFGj19tvQ _IapskBlOEeeUscFGj19tvQ">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_IapFgBlOEeeUscFGj19tvQ" name="extension_Instructions" type="_N08mYBhvEeeoWfBb-FGkXQ" aggregation="composite" association="_IahJsBlOEeeUscFGj19tvQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_J6XL0BlOEeeUscFGj19tvQ" name="E_Deviation_Class1" memberEnd="_J6Xy4BlOEeeUscFGj19tvQ _J6Xy4RlOEeeUscFGj19tvQ">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_J6Xy4BlOEeeUscFGj19tvQ" name="extension_Deviation" type="_N090gBhvEeeoWfBb-FGkXQ" aggregation="composite" association="_J6XL0BlOEeeUscFGj19tvQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_K9mKcBlOEeeUscFGj19tvQ" name="E_Distribution_Class1" memberEnd="_K9n_oBlOEeeUscFGj19tvQ _K9omsBlOEeeUscFGj19tvQ">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_K9n_oBlOEeeUscFGj19tvQ" name="extension_Distribution" type="_tx0ysBhvEeeoWfBb-FGkXQ" aggregation="composite" association="_K9mKcBlOEeeUscFGj19tvQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_OQAWYBlOEeeUscFGj19tvQ" name="E_Counter_DataType1" memberEnd="_OQA9cBlOEeeUscFGj19tvQ _OQBkgBlOEeeUscFGj19tvQ">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_OQA9cBlOEeeUscFGj19tvQ" name="extension_Counter" type="_SDLvIBh0EeeoWfBb-FGkXQ" aggregation="composite" association="_OQAWYBlOEeeUscFGj19tvQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_38TcEBlTEeeUscFGj19tvQ" name="E_DataSize_DataType1" memberEnd="_38UDIBlTEeeUscFGj19tvQ _38UqMBlTEeeUscFGj19tvQ">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_38UDIBlTEeeUscFGj19tvQ" name="extension_DataSize" type="_RxrLkBh4EeeoWfBb-FGkXQ" aggregation="composite" association="_38TcEBlTEeeUscFGj19tvQ"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_ijTT4BZCEeeFzte_Mj5jqA" name="ComponentsModel" URI="http://www.eclipse.org/papyrus/2017/Amalthea/Components">
@@ -620,6 +655,7 @@ operations of CallSequence Class&#xD;
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_LeZqMBfJEeeFzte_Mj5jqA" name="TaskRunnableCall">
         <generalization xmi:type="uml:Generalization" xmi:id="_N9zr4BfJEeeFzte_Mj5jqA" general="_6NBB8BfIEeeFzte_Mj5jqA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_krMCoBlREeeUscFGj19tvQ" name="runnable" type="_HnTPEBfEEeeFzte_Mj5jqA" association="_krHKIBlREeeUscFGj19tvQ"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_nRB8QBfMEeeFzte_Mj5jqA" name="LabelAccess">
         <generalization xmi:type="uml:Generalization" xmi:id="_AJOk4BfNEeeFzte_Mj5jqA" general="_bLeR8BfHEeeFzte_Mj5jqA"/>
@@ -642,6 +678,12 @@ operations of CallSequence Class&#xD;
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_y29ucRiZEeeoWfBb-FGkXQ" key="nature" value="UML_Nature"/>
         </eAnnotations>
         <ownedEnd xmi:type="uml:Property" xmi:id="_y29ucxiZEeeoWfBb-FGkXQ" name="callgraph" type="_Hr10ABfIEeeFzte_Mj5jqA" association="_y29HYBiZEeeoWfBb-FGkXQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_krHKIBlREeeUscFGj19tvQ" memberEnd="_krMCoBlREeeUscFGj19tvQ _krMCoRlREeeUscFGj19tvQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_krKNcBlREeeUscFGj19tvQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_krKNcRlREeeUscFGj19tvQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_krMCoRlREeeUscFGj19tvQ" name="taskrunnablecall" type="_LeZqMBfJEeeFzte_Mj5jqA" association="_krHKIBlREeeUscFGj19tvQ"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_oiFF1hZKEeeFzte_Mj5jqA" name="OSModel" URI="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem">

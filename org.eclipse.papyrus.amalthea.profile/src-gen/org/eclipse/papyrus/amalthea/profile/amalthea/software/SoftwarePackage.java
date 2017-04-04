@@ -400,22 +400,22 @@ public interface SoftwarePackage extends EPackage {
 	int CALL_GRAPH = 5;
 
 	/**
-	 * The feature id for the '<em><b>Graphentries</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALL_GRAPH__GRAPHENTRIES = 0;
-
-	/**
 	 * The feature id for the '<em><b>Base Class</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CALL_GRAPH__BASE_CLASS = 1;
+	int CALL_GRAPH__BASE_CLASS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Graphentries</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALL_GRAPH__GRAPHENTRIES = 1;
 
 	/**
 	 * The number of structural features of the '<em>Call Graph</em>' class.
@@ -984,13 +984,22 @@ public interface SoftwarePackage extends EPackage {
 	int TASK_RUNNABLE_CALL__COUNTER = CALL_SEQUENCE_ITEM__COUNTER;
 
 	/**
+	 * The feature id for the '<em><b>Runnable</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_RUNNABLE_CALL__RUNNABLE = CALL_SEQUENCE_ITEM_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Task Runnable Call</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TASK_RUNNABLE_CALL_FEATURE_COUNT = CALL_SEQUENCE_ITEM_FEATURE_COUNT + 0;
+	int TASK_RUNNABLE_CALL_FEATURE_COUNT = CALL_SEQUENCE_ITEM_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Task Runnable Call</em>' class.
@@ -1440,6 +1449,17 @@ public interface SoftwarePackage extends EPackage {
 	EClass getTaskRunnableCall();
 
 	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.TaskRunnableCall#getRunnable <em>Runnable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Runnable</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.TaskRunnableCall#getRunnable()
+	 * @see #getTaskRunnableCall()
+	 * @generated
+	 */
+	EReference getTaskRunnableCall_Runnable();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.LabelAccess <em>Label Access</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1802,6 +1822,14 @@ public interface SoftwarePackage extends EPackage {
 		 * @generated
 		 */
 		EClass TASK_RUNNABLE_CALL = eINSTANCE.getTaskRunnableCall();
+
+		/**
+		 * The meta object literal for the '<em><b>Runnable</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TASK_RUNNABLE_CALL__RUNNABLE = eINSTANCE.getTaskRunnableCall_Runnable();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.LabelAccessImpl <em>Label Access</em>}' class.

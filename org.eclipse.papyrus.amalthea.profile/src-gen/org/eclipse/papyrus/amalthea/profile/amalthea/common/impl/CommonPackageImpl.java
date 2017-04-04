@@ -347,6 +347,15 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getInstructions_Base_Class() {
+		return (EReference)instructionsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDeviation() {
 		return deviationEClass;
 	}
@@ -365,8 +374,26 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getDeviation_Base_Class() {
+		return (EReference)deviationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDistribution() {
 		return distributionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDistribution_Base_Class() {
+		return (EReference)distributionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -446,6 +473,15 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getCounter_Base_DataType() {
+		return (EReference)counterEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDataSize() {
 		return dataSizeEClass;
 	}
@@ -466,6 +502,15 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 */
 	public EAttribute getDataSize_Value() {
 		return (EAttribute)dataSizeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDataSize_Base_DataType() {
+		return (EReference)dataSizeEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -528,11 +573,14 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		iAnnotatableEClass = createEClass(IANNOTATABLE);
 
 		instructionsEClass = createEClass(INSTRUCTIONS);
+		createEReference(instructionsEClass, INSTRUCTIONS__BASE_CLASS);
 
 		deviationEClass = createEClass(DEVIATION);
 		createEReference(deviationEClass, DEVIATION__DISTRIBUTION);
+		createEReference(deviationEClass, DEVIATION__BASE_CLASS);
 
 		distributionEClass = createEClass(DISTRIBUTION);
+		createEReference(distributionEClass, DISTRIBUTION__BASE_CLASS);
 
 		weibullEstimatorsEClass = createEClass(WEIBULL_ESTIMATORS);
 		createEAttribute(weibullEstimatorsEClass, WEIBULL_ESTIMATORS__PREMAIN_PROMILLE);
@@ -544,10 +592,12 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		counterEClass = createEClass(COUNTER);
 		createEAttribute(counterEClass, COUNTER__COUNTER_OFFSET);
 		createEAttribute(counterEClass, COUNTER__COUNTER_PRESCALER);
+		createEReference(counterEClass, COUNTER__BASE_DATA_TYPE);
 
 		dataSizeEClass = createEClass(DATA_SIZE);
 		createEAttribute(dataSizeEClass, DATA_SIZE__UNIT);
 		createEAttribute(dataSizeEClass, DATA_SIZE__VALUE);
+		createEReference(dataSizeEClass, DATA_SIZE__BASE_DATA_TYPE);
 
 		// Create enums
 		timeUnitEEnum = createEEnum(TIME_UNIT);
@@ -605,11 +655,14 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		initEClass(iAnnotatableEClass, IAnnotatable.class, "IAnnotatable", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(instructionsEClass, Instructions.class, "Instructions", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getInstructions_Base_Class(), theUMLPackage.getClass_(), null, "base_Class", null, 1, 1, Instructions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(deviationEClass, Deviation.class, "Deviation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDeviation_Distribution(), this.getDistribution(), null, "distribution", null, 1, 1, Deviation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getDeviation_Base_Class(), theUMLPackage.getClass_(), null, "base_Class", null, 1, 1, Deviation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(distributionEClass, Distribution.class, "Distribution", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDistribution_Base_Class(), theUMLPackage.getClass_(), null, "base_Class", null, 1, 1, Distribution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(weibullEstimatorsEClass, WeibullEstimators.class, "WeibullEstimators", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getWeibullEstimators_PRemainPromille(), theTypesPackage.getReal(), "pRemainPromille", null, 1, 1, WeibullEstimators.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -621,10 +674,12 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		initEClass(counterEClass, Counter.class, "Counter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCounter_CounterOffset(), theTypesPackage.getInteger(), "counterOffset", null, 1, 1, Counter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getCounter_CounterPrescaler(), theTypesPackage.getInteger(), "counterPrescaler", null, 1, 1, Counter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getCounter_Base_DataType(), theUMLPackage.getDataType(), null, "base_DataType", null, 1, 1, Counter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(dataSizeEClass, DataSize.class, "DataSize", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDataSize_Unit(), this.getDataUnit(), "unit", null, 1, 1, DataSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getDataSize_Value(), theTypesPackage.getInteger(), "value", null, 1, 1, DataSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getDataSize_Base_DataType(), theUMLPackage.getDataType(), null, "base_DataType", null, 1, 1, DataSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(timeUnitEEnum, TimeUnit.class, "TimeUnit");

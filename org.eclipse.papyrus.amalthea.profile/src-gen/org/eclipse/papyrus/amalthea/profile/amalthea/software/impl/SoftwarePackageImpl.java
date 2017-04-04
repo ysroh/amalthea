@@ -396,7 +396,7 @@ public class SoftwarePackageImpl extends EPackageImpl implements SoftwarePackage
 	 * @generated
 	 */
 	public EReference getCallGraph_Graphentries() {
-		return (EReference)callGraphEClass.getEStructuralFeatures().get(0);
+		return (EReference)callGraphEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -405,7 +405,7 @@ public class SoftwarePackageImpl extends EPackageImpl implements SoftwarePackage
 	 * @generated
 	 */
 	public EReference getCallGraph_Base_Class() {
-		return (EReference)callGraphEClass.getEStructuralFeatures().get(1);
+		return (EReference)callGraphEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -566,6 +566,15 @@ public class SoftwarePackageImpl extends EPackageImpl implements SoftwarePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getTaskRunnableCall_Runnable() {
+		return (EReference)taskRunnableCallEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getLabelAccess() {
 		return labelAccessEClass;
 	}
@@ -668,8 +677,8 @@ public class SoftwarePackageImpl extends EPackageImpl implements SoftwarePackage
 		createEReference(processEClass, PROCESS__CALLGRAPH);
 
 		callGraphEClass = createEClass(CALL_GRAPH);
-		createEReference(callGraphEClass, CALL_GRAPH__GRAPHENTRIES);
 		createEReference(callGraphEClass, CALL_GRAPH__BASE_CLASS);
+		createEReference(callGraphEClass, CALL_GRAPH__GRAPHENTRIES);
 
 		graphEntryEClass = createEClass(GRAPH_ENTRY);
 		createEReference(graphEntryEClass, GRAPH_ENTRY__BASE_CLASS);
@@ -695,6 +704,7 @@ public class SoftwarePackageImpl extends EPackageImpl implements SoftwarePackage
 		interProcessActivationEClass = createEClass(INTER_PROCESS_ACTIVATION);
 
 		taskRunnableCallEClass = createEClass(TASK_RUNNABLE_CALL);
+		createEReference(taskRunnableCallEClass, TASK_RUNNABLE_CALL__RUNNABLE);
 
 		labelAccessEClass = createEClass(LABEL_ACCESS);
 		createEAttribute(labelAccessEClass, LABEL_ACCESS__IS_BUFFERED);
@@ -772,8 +782,8 @@ public class SoftwarePackageImpl extends EPackageImpl implements SoftwarePackage
 		initEReference(getProcess_Callgraph(), this.getCallGraph(), null, "callgraph", null, 0, 1, org.eclipse.papyrus.amalthea.profile.amalthea.software.Process.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(callGraphEClass, CallGraph.class, "CallGraph", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCallGraph_Graphentries(), this.getGraphEntry(), null, "graphentries", null, 0, -1, CallGraph.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getCallGraph_Base_Class(), theUMLPackage.getClass_(), null, "base_Class", null, 1, 1, CallGraph.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getCallGraph_Graphentries(), this.getGraphEntry(), null, "graphentries", null, 1, -1, CallGraph.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(graphEntryEClass, GraphEntry.class, "GraphEntry", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGraphEntry_Base_Class(), theUMLPackage.getClass_(), null, "base_Class", null, 1, 1, GraphEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -799,6 +809,7 @@ public class SoftwarePackageImpl extends EPackageImpl implements SoftwarePackage
 		initEClass(interProcessActivationEClass, InterProcessActivation.class, "InterProcessActivation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(taskRunnableCallEClass, TaskRunnableCall.class, "TaskRunnableCall", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTaskRunnableCall_Runnable(), this.getRunnable(), null, "runnable", null, 1, 1, TaskRunnableCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(labelAccessEClass, LabelAccess.class, "LabelAccess", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLabelAccess_IsBuffered(), theTypesPackage.getBoolean(), "isBuffered", null, 1, 1, LabelAccess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

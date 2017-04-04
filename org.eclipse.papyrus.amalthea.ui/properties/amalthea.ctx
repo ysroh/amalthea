@@ -947,7 +947,9 @@
       <elements xmi:id="_2VpHmBiXEeeoWfBb-FGkXQ" name="AbstractProcess" supertypes="_2VpHnhiXEeeoWfBb-FGkXQ">
         <properties xmi:id="_2VpHmRiXEeeoWfBb-FGkXQ" name="priority" type="Integer"/>
       </elements>
-      <elements xmi:id="_2VpHmhiXEeeoWfBb-FGkXQ" name="TaskRunnableCall" supertypes="_2VpHnxiXEeeoWfBb-FGkXQ"/>
+      <elements xmi:id="_2VpHmhiXEeeoWfBb-FGkXQ" name="TaskRunnableCall" supertypes="_2VpHnxiXEeeoWfBb-FGkXQ">
+        <properties xmi:id="_V0hKgBlrEeeUscFGj19tvQ" name="runnable" type="Reference"/>
+      </elements>
       <elements xmi:id="_2VpHmxiXEeeoWfBb-FGkXQ" name="CallSequence" supertypes="_2VpHhhiXEeeoWfBb-FGkXQ"/>
       <elements xmi:id="_2VpHnBiXEeeoWfBb-FGkXQ" name="RunnableInstructions" supertypes="_2VpHjhiXEeeoWfBb-FGkXQ">
         <properties xmi:id="_2VpHnRiXEeeoWfBb-FGkXQ" name="default" type="Reference"/>

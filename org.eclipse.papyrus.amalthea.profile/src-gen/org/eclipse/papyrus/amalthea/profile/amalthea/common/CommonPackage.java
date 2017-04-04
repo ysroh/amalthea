@@ -253,13 +253,22 @@ public interface CommonPackage extends EPackage {
 	int INSTRUCTIONS = 4;
 
 	/**
+	 * The feature id for the '<em><b>Base Class</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTIONS__BASE_CLASS = 0;
+
+	/**
 	 * The number of structural features of the '<em>Instructions</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INSTRUCTIONS_FEATURE_COUNT = 0;
+	int INSTRUCTIONS_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Instructions</em>' class.
@@ -290,13 +299,22 @@ public interface CommonPackage extends EPackage {
 	int DEVIATION__DISTRIBUTION = 0;
 
 	/**
+	 * The feature id for the '<em><b>Base Class</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEVIATION__BASE_CLASS = 1;
+
+	/**
 	 * The number of structural features of the '<em>Deviation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DEVIATION_FEATURE_COUNT = 1;
+	int DEVIATION_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Deviation</em>' class.
@@ -318,13 +336,22 @@ public interface CommonPackage extends EPackage {
 	int DISTRIBUTION = 6;
 
 	/**
+	 * The feature id for the '<em><b>Base Class</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISTRIBUTION__BASE_CLASS = 0;
+
+	/**
 	 * The number of structural features of the '<em>Distribution</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DISTRIBUTION_FEATURE_COUNT = 0;
+	int DISTRIBUTION_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Distribution</em>' class.
@@ -344,6 +371,15 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 */
 	int WEIBULL_ESTIMATORS = 7;
+
+	/**
+	 * The feature id for the '<em><b>Base Class</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WEIBULL_ESTIMATORS__BASE_CLASS = DISTRIBUTION__BASE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>PRemain Promille</b></em>' attribute.
@@ -390,6 +426,15 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 */
 	int INSTRUCTIONS_DEVIATION = 8;
+
+	/**
+	 * The feature id for the '<em><b>Base Class</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTIONS_DEVIATION__BASE_CLASS = INSTRUCTIONS__BASE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Deviation</b></em>' reference.
@@ -447,13 +492,22 @@ public interface CommonPackage extends EPackage {
 	int COUNTER__COUNTER_PRESCALER = 1;
 
 	/**
+	 * The feature id for the '<em><b>Base Data Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTER__BASE_DATA_TYPE = 2;
+
+	/**
 	 * The number of structural features of the '<em>Counter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COUNTER_FEATURE_COUNT = 2;
+	int COUNTER_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Counter</em>' class.
@@ -493,13 +547,22 @@ public interface CommonPackage extends EPackage {
 	int DATA_SIZE__VALUE = 1;
 
 	/**
+	 * The feature id for the '<em><b>Base Data Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_SIZE__BASE_DATA_TYPE = 2;
+
+	/**
 	 * The number of structural features of the '<em>Data Size</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_SIZE_FEATURE_COUNT = 2;
+	int DATA_SIZE_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Data Size</em>' class.
@@ -637,6 +700,17 @@ public interface CommonPackage extends EPackage {
 	EClass getInstructions();
 
 	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.Instructions#getBase_Class <em>Base Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Base Class</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.Instructions#getBase_Class()
+	 * @see #getInstructions()
+	 * @generated
+	 */
+	EReference getInstructions_Base_Class();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.Deviation <em>Deviation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -658,6 +732,17 @@ public interface CommonPackage extends EPackage {
 	EReference getDeviation_Distribution();
 
 	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.Deviation#getBase_Class <em>Base Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Base Class</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.Deviation#getBase_Class()
+	 * @see #getDeviation()
+	 * @generated
+	 */
+	EReference getDeviation_Base_Class();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.Distribution <em>Distribution</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -666,6 +751,17 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getDistribution();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.Distribution#getBase_Class <em>Base Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Base Class</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.Distribution#getBase_Class()
+	 * @see #getDistribution()
+	 * @generated
+	 */
+	EReference getDistribution_Base_Class();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.WeibullEstimators <em>Weibull Estimators</em>}'.
@@ -753,6 +849,17 @@ public interface CommonPackage extends EPackage {
 	EAttribute getCounter_CounterPrescaler();
 
 	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.Counter#getBase_DataType <em>Base Data Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Base Data Type</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.Counter#getBase_DataType()
+	 * @see #getCounter()
+	 * @generated
+	 */
+	EReference getCounter_Base_DataType();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.DataSize <em>Data Size</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -783,6 +890,17 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getDataSize_Value();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.DataSize#getBase_DataType <em>Base Data Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Base Data Type</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.DataSize#getBase_DataType()
+	 * @see #getDataSize()
+	 * @generated
+	 */
+	EReference getDataSize_Base_DataType();
 
 	/**
 	 * Returns the meta object for enum '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.TimeUnit <em>Time Unit</em>}'.
@@ -918,6 +1036,14 @@ public interface CommonPackage extends EPackage {
 		EClass INSTRUCTIONS = eINSTANCE.getInstructions();
 
 		/**
+		 * The meta object literal for the '<em><b>Base Class</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INSTRUCTIONS__BASE_CLASS = eINSTANCE.getInstructions_Base_Class();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.DeviationImpl <em>Deviation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -936,6 +1062,14 @@ public interface CommonPackage extends EPackage {
 		EReference DEVIATION__DISTRIBUTION = eINSTANCE.getDeviation_Distribution();
 
 		/**
+		 * The meta object literal for the '<em><b>Base Class</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DEVIATION__BASE_CLASS = eINSTANCE.getDeviation_Base_Class();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.DistributionImpl <em>Distribution</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -944,6 +1078,14 @@ public interface CommonPackage extends EPackage {
 		 * @generated
 		 */
 		EClass DISTRIBUTION = eINSTANCE.getDistribution();
+
+		/**
+		 * The meta object literal for the '<em><b>Base Class</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DISTRIBUTION__BASE_CLASS = eINSTANCE.getDistribution_Base_Class();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.WeibullEstimatorsImpl <em>Weibull Estimators</em>}' class.
@@ -1016,6 +1158,14 @@ public interface CommonPackage extends EPackage {
 		EAttribute COUNTER__COUNTER_PRESCALER = eINSTANCE.getCounter_CounterPrescaler();
 
 		/**
+		 * The meta object literal for the '<em><b>Base Data Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COUNTER__BASE_DATA_TYPE = eINSTANCE.getCounter_Base_DataType();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.DataSizeImpl <em>Data Size</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1040,6 +1190,14 @@ public interface CommonPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute DATA_SIZE__VALUE = eINSTANCE.getDataSize_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Base Data Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DATA_SIZE__BASE_DATA_TYPE = eINSTANCE.getDataSize_Base_DataType();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.TimeUnit <em>Time Unit</em>}' enum.

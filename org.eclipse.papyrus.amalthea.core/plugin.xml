@@ -5,7 +5,14 @@
          point="org.eclipse.papyrus.infra.types.core.elementTypeSetConfiguration">
       <elementTypeSet
             clientContextID="org.eclipse.papyrus.infra.services.edit.TypeContext"
-            path="elementtypes/amalthea.elementtypeconfigurations">
+            path="elementtypes/commonModel.elementtypeconfigurations">
+      </elementTypeSet>
+   </extension>
+   <extension
+         point="org.eclipse.papyrus.infra.types.core.elementTypeSetConfiguration">
+      <elementTypeSet
+            clientContextID="org.eclipse.papyrus.infra.services.edit.TypeContext"
+            path="elementtypes/softwareModel.elementtypeconfigurations">
       </elementTypeSet>
    </extension>
 

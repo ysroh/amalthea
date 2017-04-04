@@ -35,12 +35,20 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Time" eSuperTypes="#//common/AbstractTime"/>
     <eClassifiers xsi:type="ecore:EClass" name="IAnnotatable" abstract="true"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Instructions" abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Instructions" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Deviation">
       <eStructuralFeatures xsi:type="ecore:EReference" name="distribution" ordered="false"
           lowerBound="1" eType="#//common/Distribution"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Distribution" abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Distribution" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="WeibullEstimators" eSuperTypes="#//common/Distribution">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="pRemainPromille" ordered="false"
           lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Real"/>
@@ -56,12 +64,16 @@
           lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="counterPrescaler" ordered="false"
           lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_DataType" ordered="false"
+          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//DataType"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="DataSize">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" ordered="false"
           lowerBound="1" eType="#//common/DataUnit"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
           lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_DataType" ordered="false"
+          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//DataType"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EEnum" name="DataUnit">
       <eLiterals name="bit"/>
@@ -261,10 +273,10 @@
           eType="#//software/CallGraph"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="CallGraph">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="graphentries" ordered="false"
-          upperBound="-1" eType="#//software/GraphEntry"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
           lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="graphentries" ordered="false"
+          lowerBound="1" upperBound="-1" eType="#//software/GraphEntry"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="GraphEntry" abstract="true">
       <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
@@ -301,7 +313,10 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="CallSequence" eSuperTypes="#//software/GraphEntry"/>
     <eClassifiers xsi:type="ecore:EClass" name="InterProcessActivation" eSuperTypes="#//software/CallSequenceItem"/>
-    <eClassifiers xsi:type="ecore:EClass" name="TaskRunnableCall" eSuperTypes="#//software/CallSequenceItem"/>
+    <eClassifiers xsi:type="ecore:EClass" name="TaskRunnableCall" eSuperTypes="#//software/CallSequenceItem">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="runnable" ordered="false"
+          lowerBound="1" eType="#//software/Runnable"/>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="LabelAccess" eSuperTypes="#//software/RunnableItem">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="isBuffered" ordered="false"
           lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>

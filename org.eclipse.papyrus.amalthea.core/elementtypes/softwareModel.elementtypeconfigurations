@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="ASCII"?>
+<elementtypesconfigurations:ElementTypeSetConfiguration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:applystereotypeadvice="http://www.eclipse.org/papyrus/uml/types/applystereotypeadvice/1.1" xmlns:elementtypesconfigurations="http://www.eclipse.org/papyrus/infra/elementtypesconfigurations/1.1" xmlns:invariantcontainerrule="http://www.eclipse.org/papyrus/emf/types/invariantcontainerrule/1.1" xmlns:invariantstereotyperule="http://www.eclipse.org/papyrus/uml/types/invariantstereotyperule/1.1" xmlns:rulebased="http://www.eclipse.org/papyrus/infra/types/rulebased/1.1" xmi:id="_ubJcsKeUEeSUR5jX0TaAcA" identifier="org.eclipse.papyrus.amalthea.software.elementTypeSet" name="Amalthea Software" metamodelNsURI="http://www.eclipse.org/uml2/5.0.0/UML">
+  <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.Runnable" name="Runnable">
+    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
+    <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
+    <editHelperAdviceConfiguration xsi:type="elementtypesconfigurations:EditHelperAdviceConfiguration" description="Advice for Runnable" editHelperAdviceClassName="org.eclipse.papyrus.amalthea.core.types.advice.RunnableEditHelperAdvice"/>
+    <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
+      <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::SWModel::Runnable" requiredProfile="Amalthea"/>
+      <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+        <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
+        <permissions containerType="org.eclipse.papyrus.uml.Classifier"/>
+      </composedRules>
+    </ruleConfiguration>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.Label" name="Label">
+    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
+    <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
+    <editHelperAdviceConfiguration xsi:type="elementtypesconfigurations:EditHelperAdviceConfiguration" description="Advice for Runnable" editHelperAdviceClassName="org.eclipse.papyrus.amalthea.core.types.advice.RunnableEditHelperAdvice"/>
+    <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
+      <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::SWModel::Runnable" requiredProfile="Amalthea"/>
+      <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+        <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
+        <permissions containerType="org.eclipse.papyrus.uml.Classifier"/>
+      </composedRules>
+    </ruleConfiguration>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.Task" name="Task">
+    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
+    <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
+    <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
+      <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::SWModel::Task" requiredProfile="Amalthea"/>
+      <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+        <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
+        <permissions containerType="org.eclipse.papyrus.uml.Classifier"/>
+      </composedRules>
+    </ruleConfiguration>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.ISR" name="ISR">
+    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
+    <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
+    <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
+      <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::SWModel::ISR" requiredProfile="Amalthea"/>
+      <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+        <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
+        <permissions containerType="org.eclipse.papyrus.uml.Classifier"/>
+      </composedRules>
+    </ruleConfiguration>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.LabelAccess" name="LabelAccess">
+    <specializedTypesID>org.eclipse.papyrus.uml.Operation</specializedTypesID>
+    <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
+      <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::SWModel::LabelAccess" requiredProfile="Amalthea"/>
+      <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+        <permissions containerType="org.eclipse.papyrus.amalthea.core.Runnable" permitted="true"/>
+      </composedRules>
+    </ruleConfiguration>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.RunnableInstructions" name="RunnableInstructions">
+    <specializedTypesID>org.eclipse.papyrus.uml.Operation</specializedTypesID>
+    <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
+      <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::SWModel::RunnableInstructions" requiredProfile="Amalthea"/>
+      <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+        <permissions containerType="org.eclipse.papyrus.amalthea.core.Runnable" permitted="true"/>
+      </composedRules>
+    </ruleConfiguration>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.CallGraph" name="CallGraph">
+    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
+    <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
+    <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
+      <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::SWModel::CallGraph" requiredProfile="Amalthea"/>
+      <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+        <permissions containerType="org.eclipse.papyrus.amalthea.core.Task" permitted="true"/>
+        <permissions containerType="org.eclipse.papyrus.amalthea.core.ISR"/>
+      </composedRules>
+    </ruleConfiguration>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.CallSequence" name="CallSequence">
+    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
+    <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
+    <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
+      <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::SWModel::CallSequence" requiredProfile="Amalthea"/>
+      <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+        <permissions containerType="org.eclipse.papyrus.amalthea.core.CallGraph" permitted="true"/>
+      </composedRules>
+    </ruleConfiguration>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.InterProcessActivation" name="InterProcessActivation">
+    <specializedTypesID>org.eclipse.papyrus.uml.Operation</specializedTypesID>
+    <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
+      <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::SWModel::InterProcessActivation" requiredProfile="Amalthea"/>
+      <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+        <permissions containerType="org.eclipse.papyrus.amalthea.core.CallSequence" permitted="true"/>
+      </composedRules>
+    </ruleConfiguration>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.TaskRunnableCall" name="TaskRunnableCall">
+    <specializedTypesID>org.eclipse.papyrus.uml.Operation</specializedTypesID>
+    <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
+      <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::SWModel::TaskRunnableCall" requiredProfile="Amalthea"/>
+      <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+        <permissions containerType="org.eclipse.papyrus.amalthea.core.CallSequence" permitted="true"/>
+      </composedRules>
+    </ruleConfiguration>
+  </elementTypeConfigurations>
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.runnable" target="//@elementTypeConfigurations.0">
+    <stereotypesToApply stereotypeQualifiedName="Amalthea::SWModel::Runnable">
+      <requiredProfiles>Amalthea</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.labelaccess" target="//@elementTypeConfigurations.4">
+    <stereotypesToApply stereotypeQualifiedName="Amalthea::SWModel::LabelAccess">
+      <requiredProfiles>Amalthea</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.label" target="//@elementTypeConfigurations.1">
+    <stereotypesToApply stereotypeQualifiedName="Amalthea::SWModel::Label">
+      <requiredProfiles>Amalthea</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.task" target="//@elementTypeConfigurations.2">
+    <stereotypesToApply stereotypeQualifiedName="Amalthea::SWModel::Task">
+      <requiredProfiles>Amalthea</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.isr" target="//@elementTypeConfigurations.3">
+    <stereotypesToApply stereotypeQualifiedName="Amalthea::SWModel::ISR">
+      <requiredProfiles>Amalthea</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.runnableInstructions" target="//@elementTypeConfigurations.5">
+    <stereotypesToApply stereotypeQualifiedName="Amalthea::SWModel::RunnableInstructions">
+      <requiredProfiles>Amalthea</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.callgraph" description="" target="//@elementTypeConfigurations.6">
+    <stereotypesToApply stereotypeQualifiedName="Amalthea::SWModel::CallGraph">
+      <requiredProfiles>Amalthea</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.callSequence" target="//@elementTypeConfigurations.7">
+    <stereotypesToApply stereotypeQualifiedName="Amalthea::SWModel::CallSequence">
+      <requiredProfiles>Amalthea</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.interprocessActivation" target="//@elementTypeConfigurations.8">
+    <stereotypesToApply stereotypeQualifiedName="Amalthea::SWModel::InterprocessActivation">
+      <requiredProfiles>Amalthea</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.taskRunnableCall" target="//@elementTypeConfigurations.9">
+    <stereotypesToApply stereotypeQualifiedName="Amalthea::SWModel::TaskRunnableCall">
+      <requiredProfiles>Amalthea</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+</elementtypesconfigurations:ElementTypeSetConfiguration>
