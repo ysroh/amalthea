@@ -525,18 +525,6 @@
       <properties xsi:type="constraints:ValueProperty" xmi:id="_2VogHhiXEeeoWfBb-FGkXQ" name="stereotypeName" value="Amalthea::HWModel::CoreType"/>
     </constraints>
   </views>
-  <views xmi:id="_2VogHxiXEeeoWfBb-FGkXQ" name="Single NetworkType" sections="_3BjKdBiXEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_2VpHyBiXEeeoWfBb-FGkXQ">
-    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_2VogIBiXEeeoWfBb-FGkXQ" name="isSingleNetworkType">
-      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
-      <properties xsi:type="constraints:ValueProperty" xmi:id="_2VogIRiXEeeoWfBb-FGkXQ" name="stereotypeName" value="Amalthea::HWModel::NetworkType"/>
-    </constraints>
-  </views>
-  <views xmi:id="_2VogIhiXEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple NetworkType" sections="_3BjxgBiXEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_2VpHyBiXEeeoWfBb-FGkXQ">
-    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_2VogIxiXEeeoWfBb-FGkXQ" name="isMultipleNetworkType">
-      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
-      <properties xsi:type="constraints:ValueProperty" xmi:id="_2VogJBiXEeeoWfBb-FGkXQ" name="stereotypeName" value="Amalthea::HWModel::NetworkType"/>
-    </constraints>
-  </views>
   <views xmi:id="_2VogJRiXEeeoWfBb-FGkXQ" name="Single Quartz" sections="_3BjxgRiXEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_2VpHsxiXEeeoWfBb-FGkXQ">
     <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_2VogJhiXEeeoWfBb-FGkXQ" name="isSingleQuartz">
       <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
