@@ -86,7 +86,8 @@ public class ComponentModelTranslator {
   private final HashMap<ArrayList<?>, IAnnotatable> _createCache_translate_1 = CollectionLiterals.newHashMap();
   
   private void _init_translate_1(final FInterfacePort it, final Port element) {
-    it.setName(element.getName());
+    String _name = element.getName();
+    it.setName(_name);
   }
   
   protected IAnnotatable _translate(final Property element) {
@@ -111,7 +112,8 @@ public class ComponentModelTranslator {
   private final HashMap<ArrayList<?>, IAnnotatable> _createCache_translate_2 = CollectionLiterals.newHashMap();
   
   private void _init_translate_2(final ComponentInstance it, final Property element) {
-    it.setName(element.getName());
+    String _name = element.getName();
+    it.setName(_name);
     Type _type = element.getType();
     IAnnotatable _translate = this.translate(((Component) _type));
     it.setType(((org.eclipse.app4mc.amalthea.model.Component) _translate));
@@ -160,7 +162,8 @@ public class ComponentModelTranslator {
   private final HashMap<ArrayList<?>, IAnnotatable> _createCache_translate_4 = CollectionLiterals.newHashMap();
   
   private void _init_translate_4(final QualifiedPort it, final ConnectorEnd element) {
-    IAnnotatable _translate = this.translate(element.getPartWithPort());
+    Property _partWithPort = element.getPartWithPort();
+    IAnnotatable _translate = this.translate(_partWithPort);
     it.setInstance(((ComponentInstance) _translate));
     ConnectableElement _role = element.getRole();
     IAnnotatable _translate_1 = this.translate(((Port) _role));
