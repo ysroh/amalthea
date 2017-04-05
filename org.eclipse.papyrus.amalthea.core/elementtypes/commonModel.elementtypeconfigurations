@@ -39,7 +39,8 @@
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::CommonModel::Deviation" requiredProfile="Amalthea"/>
       <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-        <permissions containerType="org.eclipse.papyrus.amalthea.core.InstructionsDeviation" permitted="true"/>
+        <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
+        <permissions containerType="org.eclipse.papyrus.uml.Classifier"/>
       </composedRules>
     </ruleConfiguration>
   </elementTypeConfigurations>
@@ -49,7 +50,8 @@
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::CommonModel::WeibullEstimators" requiredProfile="Amalthea"/>
       <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-        <permissions containerType="org.eclipse.papyrus.amalthea.core.Deviation" permitted="true"/>
+        <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
+        <permissions containerType="org.eclipse.papyrus.uml.Classifier"/>
       </composedRules>
     </ruleConfiguration>
   </elementTypeConfigurations>
@@ -63,6 +65,10 @@
         <permissions containerType="org.eclipse.papyrus.uml.Classifier"/>
       </composedRules>
     </ruleConfiguration>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.Package" name="Package">
+    <specializedTypesID>org.eclipse.papyrus.uml.Package</specializedTypesID>
+    <editHelperAdviceConfiguration xsi:type="elementtypesconfigurations:EditHelperAdviceConfiguration" editHelperAdviceClassName="org.eclipse.papyrus.amalthea.core.types.advice.PackageEditHelperAdvice"/>
   </elementTypeConfigurations>
   <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.labelaccess" target="//@elementTypeConfigurations.0">
     <stereotypesToApply stereotypeQualifiedName="Amalthea::CommonModel::Time">
