@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Common="http://www.eclipse.org/papyrus/2017/Amalthea/Common" xmlns:Hardware="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware" xmlns:Software="http://www.eclipse.org/papyrus/2017/Amalthea/Software" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/2017/Amalthea/Common http://www.eclipse.org/papyrus/2017/Amalthea#//common http://www.eclipse.org/papyrus/2017/Amalthea/Hardware http://www.eclipse.org/papyrus/2017/Amalthea#//hardware http://www.eclipse.org/papyrus/2017/Amalthea/Software http://www.eclipse.org/papyrus/2017/Amalthea#//software">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Common="http://www.eclipse.org/papyrus/2017/Amalthea/Common" xmlns:Components="http://www.eclipse.org/papyrus/2017/Amalthea/Components" xmlns:Hardware="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware" xmlns:Software="http://www.eclipse.org/papyrus/2017/Amalthea/Software" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/2017/Amalthea/Common http://www.eclipse.org/papyrus/2017/Amalthea#//common http://www.eclipse.org/papyrus/2017/Amalthea/Components http://www.eclipse.org/papyrus/2017/Amalthea#//components http://www.eclipse.org/papyrus/2017/Amalthea/Hardware http://www.eclipse.org/papyrus/2017/Amalthea#//hardware http://www.eclipse.org/papyrus/2017/Amalthea/Software http://www.eclipse.org/papyrus/2017/Amalthea#//software">
   <uml:Model xmi:id="_sn_awBlJEeeJSpRxOK4Ihg" name="Model">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_s9iM8BlJEeeJSpRxOK4Ihg">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -48,6 +48,22 @@
         <packagedElement xmi:type="uml:Class" xmi:id="_s3FfgBlxEee-6MSnlR2QQg" name="Quartz"/>
         <packagedElement xmi:type="uml:Class" xmi:id="_3D3ckBlxEee-6MSnlR2QQg" name="Prescaler"/>
         <packagedElement xmi:type="uml:DataType" xmi:id="_4nBRYBlxEee-6MSnlR2QQg" name="Bus"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_VaekgBoIEeeKG9RrP5zdwg" name="Component">
+      <packagedElement xmi:type="uml:Class" xmi:id="_uVV0sBoKEeeJPLl4VhaJvg" name="Component1">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_x2EJcBoKEeeJPLl4VhaJvg" name="Port1" visibility="public" aggregation="composite"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_weLwgBoKEeeJPLl4VhaJvg" name="Component2">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_zFWnEBoKEeeJPLl4VhaJvg" name="Port1" visibility="public" aggregation="composite"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_1CNVUBoKEeeJPLl4VhaJvg" name="Composite">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_3mlWkBoKEeeJPLl4VhaJvg" name="component1" type="_uVV0sBoKEeeJPLl4VhaJvg"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_3816cBoKEeeJPLl4VhaJvg" name="component2" type="_weLwgBoKEeeJPLl4VhaJvg"/>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_6rvwsBoKEeeJPLl4VhaJvg" name="Connector1">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_6r13UBoKEeeJPLl4VhaJvg" partWithPort="_3mlWkBoKEeeJPLl4VhaJvg" role="_x2EJcBoKEeeJPLl4VhaJvg"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_6r13URoKEeeJPLl4VhaJvg" partWithPort="_3816cBoKEeeJPLl4VhaJvg" role="_zFWnEBoKEeeJPLl4VhaJvg"/>
+        </ownedConnector>
       </packagedElement>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_syezgBlJEeeJSpRxOK4Ihg">
@@ -142,4 +158,9 @@
   <Hardware:Quartz xmi:id="_s3knsBlxEee-6MSnlR2QQg" base_Class="_s3FfgBlxEee-6MSnlR2QQg"/>
   <Hardware:Prescaler xmi:id="_3EGGEBlxEee-6MSnlR2QQg" base_Class="_3D3ckBlxEee-6MSnlR2QQg"/>
   <Hardware:Bus xmi:id="_4nUMUBlxEee-6MSnlR2QQg" base_DataType="_4nBRYBlxEee-6MSnlR2QQg"/>
+  <Components:Component xmi:id="_uV2yEBoKEeeJPLl4VhaJvg" base_Class="_uVV0sBoKEeeJPLl4VhaJvg"/>
+  <Components:Component xmi:id="_wefSgBoKEeeJPLl4VhaJvg" base_Class="_weLwgBoKEeeJPLl4VhaJvg"/>
+  <Components:FInterfacePort xmi:id="_x2g1YBoKEeeJPLl4VhaJvg" base_Port="_x2EJcBoKEeeJPLl4VhaJvg"/>
+  <Components:FInterfacePort xmi:id="_zFpiABoKEeeJPLl4VhaJvg" base_Port="_zFWnEBoKEeeJPLl4VhaJvg"/>
+  <Components:Composite xmi:id="_1CWfQBoKEeeJPLl4VhaJvg" base_Class="_1CNVUBoKEeeJPLl4VhaJvg"/>
 </xmi:XMI>

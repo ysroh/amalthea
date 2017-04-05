@@ -120,7 +120,7 @@
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//components/Component">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-            propertySortChoices="true" ecoreFeature="ecore:EReference amalthea.ecore#//components/Component/base_Component"/>
+            propertySortChoices="true" ecoreFeature="ecore:EReference amalthea.ecore#//components/Component/base_Class"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//components/Composite">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"

@@ -104,13 +104,13 @@ public interface ComponentsPackage extends EPackage {
 	int COMPONENT = 1;
 
 	/**
-	 * The feature id for the '<em><b>Base Component</b></em>' reference.
+	 * The feature id for the '<em><b>Base Class</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT__BASE_COMPONENT = 0;
+	int COMPONENT__BASE_CLASS = 0;
 
 	/**
 	 * The number of structural features of the '<em>Component</em>' class.
@@ -141,13 +141,13 @@ public interface ComponentsPackage extends EPackage {
 	int COMPOSITE = 2;
 
 	/**
-	 * The feature id for the '<em><b>Base Component</b></em>' reference.
+	 * The feature id for the '<em><b>Base Class</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE__BASE_COMPONENT = COMPONENT__BASE_COMPONENT;
+	int COMPOSITE__BASE_CLASS = COMPONENT__BASE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Componentinstances</b></em>' reference list.
@@ -246,15 +246,15 @@ public interface ComponentsPackage extends EPackage {
 	EClass getComponent();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.Component#getBase_Component <em>Base Component</em>}'.
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.Component#getBase_Class <em>Base Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Base Component</em>'.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.Component#getBase_Component()
+	 * @return the meta object for the reference '<em>Base Class</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.Component#getBase_Class()
 	 * @see #getComponent()
 	 * @generated
 	 */
-	EReference getComponent_Base_Component();
+	EReference getComponent_Base_Class();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.Composite <em>Composite</em>}'.
@@ -350,12 +350,12 @@ public interface ComponentsPackage extends EPackage {
 		EClass COMPONENT = eINSTANCE.getComponent();
 
 		/**
-		 * The meta object literal for the '<em><b>Base Component</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Base Class</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference COMPONENT__BASE_COMPONENT = eINSTANCE.getComponent_Base_Component();
+		EReference COMPONENT__BASE_CLASS = eINSTANCE.getComponent_Base_Class();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.impl.CompositeImpl <em>Composite</em>}' class.

@@ -109,8 +109,8 @@
           lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Port"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Component">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Component" ordered="false"
-          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Component"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Composite" eSuperTypes="#//components/Component">
       <eStructuralFeatures xsi:type="ecore:EReference" name="componentinstances" ordered="false"

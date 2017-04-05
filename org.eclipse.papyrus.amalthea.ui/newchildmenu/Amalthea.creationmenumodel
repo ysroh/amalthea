@@ -26,6 +26,11 @@
   <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Quartz" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Quartz" role=""/>
   <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Prescaler" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Prescaler" role=""/>
   <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Bus" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Bus" role=""/>
+  <menu xsi:type="ElementCreationMenuModel:Separator"/>
+  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Component" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Component"/>
+  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Composite" icon="" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Composite"/>
+  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="ComponentInstance" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.ComponentInstance"/>
+  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="FInterfacePort" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.FInterfacePort"/>
   <menu xsi:type="ElementCreationMenuModel:Folder" label="Common">
     <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Time" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Time"/>
     <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Counter" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Counter"/>

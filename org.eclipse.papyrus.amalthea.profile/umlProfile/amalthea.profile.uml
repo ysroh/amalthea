@@ -223,14 +223,14 @@ of UML port&#xD;
       <elementImport xmi:type="uml:ElementImport" xmi:id="_jlKqcBZLEeeFzte_Mj5jqA">
         <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Property"/>
       </elementImport>
+      <elementImport xmi:type="uml:ElementImport" xmi:id="_Jm594BoKEeemOqGrpy978g">
+        <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+      </elementImport>
       <packagedElement xmi:type="uml:Association" xmi:id="_nt5MohZGEeeFzte_Mj5jqA" memberEnd="_nt3XchZGEeeFzte_Mj5jqA _nt5MpRZGEeeFzte_Mj5jqA">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_nt5MoxZGEeeFzte_Mj5jqA" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_nt5MpBZGEeeFzte_Mj5jqA" key="nature" value="UML_Nature"/>
         </eAnnotations>
         <ownedEnd xmi:type="uml:Property" xmi:id="_nt5MpRZGEeeFzte_Mj5jqA" name="composite" type="_nt3XcBZGEeeFzte_Mj5jqA" association="_nt5MohZGEeeFzte_Mj5jqA"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Extension" xmi:id="_nt5MoBZGEeeFzte_Mj5jqA" name="E_Component_Component1" memberEnd="_nt5MoRZGEeeFzte_Mj5jqA _nt2wYxZGEeeFzte_Mj5jqA">
-        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_nt5MoRZGEeeFzte_Mj5jqA" name="extension_Component" type="_nt2wYhZGEeeFzte_Mj5jqA" aggregation="composite" association="_nt5MoBZGEeeFzte_Mj5jqA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Extension" xmi:id="_nt5zsBZGEeeFzte_Mj5jqA" name="E_FInterfacePort_Port1" memberEnd="_nt5zsRZGEeeFzte_Mj5jqA _nt3-gxZGEeeFzte_Mj5jqA">
         <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_nt5zsRZGEeeFzte_Mj5jqA" name="extension_FInterfacePort" type="_nt3-gBZGEeeFzte_Mj5jqA" aggregation="composite" association="_nt5zsBZGEeeFzte_Mj5jqA"/>
@@ -238,9 +238,12 @@ of UML port&#xD;
       <packagedElement xmi:type="uml:Extension" xmi:id="_sC99MBZLEeeFzte_Mj5jqA" name="E_ComponentInstance_Property1" memberEnd="_sC_LUBZLEeeFzte_Mj5jqA _sC_LURZLEeeFzte_Mj5jqA">
         <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_sC_LUBZLEeeFzte_Mj5jqA" name="extension_ComponentInstance" type="_nt3XdRZGEeeFzte_Mj5jqA" aggregation="composite" association="_sC99MBZLEeeFzte_Mj5jqA"/>
       </packagedElement>
+      <packagedElement xmi:type="uml:Extension" xmi:id="_OBZMMBoKEeemOqGrpy978g" name="E_Component_Class1" memberEnd="_OBiWIBoKEeemOqGrpy978g _OBiWIRoKEeemOqGrpy978g">
+        <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_OBiWIBoKEeemOqGrpy978g" name="extension_Component" type="_nt2wYhZGEeeFzte_Mj5jqA" aggregation="composite" association="_OBZMMBoKEeemOqGrpy978g"/>
+      </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_nt2wYhZGEeeFzte_Mj5jqA" name="Component">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_nt2wYxZGEeeFzte_Mj5jqA" name="base_Component" association="_nt5MoBZGEeeFzte_Mj5jqA">
-          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Component"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_OBiWIRoKEeemOqGrpy978g" name="base_Class" association="_OBZMMBoKEeemOqGrpy978g">
+          <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_nt3XcBZGEeeFzte_Mj5jqA" name="Composite">

@@ -22,5 +22,12 @@
             path="elementtypes/hardwareModel.elementtypeconfigurations">
       </elementTypeSet>
    </extension>
+   <extension
+         point="org.eclipse.papyrus.infra.types.core.elementTypeSetConfiguration">
+      <elementTypeSet
+            clientContextID="org.eclipse.papyrus.infra.services.edit.TypeContext"
+            path="elementtypes/component.elementtypeconfigurations">
+      </elementTypeSet>
+   </extension>
 
 </plugin>
