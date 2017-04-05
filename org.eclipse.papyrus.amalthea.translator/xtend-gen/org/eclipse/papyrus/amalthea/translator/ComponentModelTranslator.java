@@ -8,7 +8,6 @@ import org.eclipse.app4mc.amalthea.model.ComponentInstance;
 import org.eclipse.app4mc.amalthea.model.FInterfacePort;
 import org.eclipse.app4mc.amalthea.model.IAnnotatable;
 import org.eclipse.app4mc.amalthea.model.QualifiedPort;
-import org.eclipse.papyrus.amalthea.profile.utils.ComponentModelUtils;
 import org.eclipse.uml2.uml.Component;
 import org.eclipse.uml2.uml.ConnectableElement;
 import org.eclipse.uml2.uml.Connector;
@@ -25,37 +24,17 @@ import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 @SuppressWarnings("all")
 public class ComponentModelTranslator {
   protected IAnnotatable _translate(final Component element) {
-    final ArrayList<?> _cacheKey = CollectionLiterals.newArrayList(element);
-    final org.eclipse.app4mc.amalthea.model.Component _result;
-    synchronized (_createCache_translate) {
-      if (_createCache_translate.containsKey(_cacheKey)) {
-        return _createCache_translate.get(_cacheKey);
-      }
-      org.eclipse.app4mc.amalthea.model.Component _switchResult = null;
-      boolean _matched = false;
-      boolean _isComposite = ComponentModelUtils.isComposite(element);
-      if (_isComposite) {
-        _matched=true;
-        _switchResult = AmaltheaFactory.eINSTANCE.createComposite();
-      }
-      if (!_matched) {
-        boolean _isComponent = ComponentModelUtils.isComponent(element);
-        if (_isComponent) {
-          _matched=true;
-          _switchResult = AmaltheaFactory.eINSTANCE.createComponent();
-        }
-      }
-      _result = _switchResult;
-      _createCache_translate.put(_cacheKey, _result);
-    }
-    _init_translate(_result, element);
-    return _result;
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field isComposite is undefined for the type Component"
+      + "\nThe method or field isComponent is undefined for the type Component");
   }
   
   private final HashMap<ArrayList<?>, IAnnotatable> _createCache_translate = CollectionLiterals.newHashMap();
   
   private void _init_translate(final org.eclipse.app4mc.amalthea.model.Component it, final Component element) {
     throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field isComposite is undefined for the type Component"
+      + "\nThe method or field isComponentInstance is undefined"
       + "\nThe method or field getComposite is undefined for the type Component"
       + "\nThe method or field base_ConnectorEnd is undefined"
       + "\ngroundedPorts cannot be resolved"
@@ -65,22 +44,8 @@ public class ComponentModelTranslator {
   }
   
   protected IAnnotatable _translate(final Port element) {
-    final ArrayList<?> _cacheKey = CollectionLiterals.newArrayList(element);
-    final FInterfacePort _result;
-    synchronized (_createCache_translate_1) {
-      if (_createCache_translate_1.containsKey(_cacheKey)) {
-        return _createCache_translate_1.get(_cacheKey);
-      }
-      FInterfacePort _xifexpression = null;
-      boolean _isFInterfacePort = ComponentModelUtils.isFInterfacePort(element);
-      if (_isFInterfacePort) {
-        _xifexpression = AmaltheaFactory.eINSTANCE.createFInterfacePort();
-      }
-      _result = _xifexpression;
-      _createCache_translate_1.put(_cacheKey, _result);
-    }
-    _init_translate_1(_result, element);
-    return _result;
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field isFInterfacePort is undefined for the type Port");
   }
   
   private final HashMap<ArrayList<?>, IAnnotatable> _createCache_translate_1 = CollectionLiterals.newHashMap();
@@ -91,22 +56,8 @@ public class ComponentModelTranslator {
   }
   
   protected IAnnotatable _translate(final Property element) {
-    final ArrayList<?> _cacheKey = CollectionLiterals.newArrayList(element);
-    final ComponentInstance _result;
-    synchronized (_createCache_translate_2) {
-      if (_createCache_translate_2.containsKey(_cacheKey)) {
-        return _createCache_translate_2.get(_cacheKey);
-      }
-      ComponentInstance _xifexpression = null;
-      boolean _isComponentInstance = ComponentModelUtils.isComponentInstance(element);
-      if (_isComponentInstance) {
-        _xifexpression = AmaltheaFactory.eINSTANCE.createComponentInstance();
-      }
-      _result = _xifexpression;
-      _createCache_translate_2.put(_cacheKey, _result);
-    }
-    _init_translate_2(_result, element);
-    return _result;
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field isComponentInstance is undefined for the type Property");
   }
   
   private final HashMap<ArrayList<?>, IAnnotatable> _createCache_translate_2 = CollectionLiterals.newHashMap();
@@ -137,6 +88,7 @@ public class ComponentModelTranslator {
   
   private void _init_translate_3(final org.eclipse.app4mc.amalthea.model.Connector it, final Connector element) {
     throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field isConnector is undefined for the type Connector"
       + "\nThe method or field getConnector is undefined for the type Connector"
       + "\nThe method or field getConnector is undefined for the type Connector"
       + "\nsourcePort cannot be resolved"

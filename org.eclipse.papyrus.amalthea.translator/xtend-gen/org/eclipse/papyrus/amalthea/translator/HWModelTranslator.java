@@ -3,12 +3,10 @@ package org.eclipse.papyrus.amalthea.translator;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-import org.eclipse.app4mc.amalthea.model.AmaltheaFactory;
 import org.eclipse.app4mc.amalthea.model.ComplexNode;
 import org.eclipse.app4mc.amalthea.model.HardwareTypeDescription;
 import org.eclipse.app4mc.amalthea.model.Prescaler;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.papyrus.amalthea.profile.utils.HWModelUtils;
 import org.eclipse.papyrus.amalthea.translator.CommonModelTranslator;
 import org.eclipse.uml2.uml.DataType;
 import org.eclipse.uml2.uml.Element;
@@ -22,59 +20,13 @@ public class HWModelTranslator {
   private final CommonModelTranslator commonTranslator = new CommonModelTranslator();
   
   protected EObject _translate(final org.eclipse.uml2.uml.Class element) {
-    final ArrayList<?> _cacheKey = CollectionLiterals.newArrayList(element);
-    final ComplexNode _result;
-    synchronized (_createCache_translate) {
-      if (_createCache_translate.containsKey(_cacheKey)) {
-        return _createCache_translate.get(_cacheKey);
-      }
-      ComplexNode _switchResult = null;
-      boolean _matched = false;
-      boolean _isHwSystem = HWModelUtils.isHwSystem(element);
-      if (_isHwSystem) {
-        _matched=true;
-        _switchResult = AmaltheaFactory.eINSTANCE.createHwSystem();
-      }
-      if (!_matched) {
-        boolean _isECU = HWModelUtils.isECU(element);
-        if (_isECU) {
-          _matched=true;
-          _switchResult = AmaltheaFactory.eINSTANCE.createECU();
-        }
-      }
-      if (!_matched) {
-        boolean _isMicrocontroller = HWModelUtils.isMicrocontroller(element);
-        if (_isMicrocontroller) {
-          _matched=true;
-          _switchResult = AmaltheaFactory.eINSTANCE.createMicrocontroller();
-        }
-      }
-      if (!_matched) {
-        boolean _isCore = HWModelUtils.isCore(element);
-        if (_isCore) {
-          _matched=true;
-          _switchResult = AmaltheaFactory.eINSTANCE.createCore();
-        }
-      }
-      if (!_matched) {
-        boolean _isNetwork = HWModelUtils.isNetwork(element);
-        if (_isNetwork) {
-          _matched=true;
-          _switchResult = AmaltheaFactory.eINSTANCE.createNetwork();
-        }
-      }
-      if (!_matched) {
-        boolean _isQuartz = HWModelUtils.isQuartz(element);
-        if (_isQuartz) {
-          _matched=true;
-          _switchResult = AmaltheaFactory.eINSTANCE.createQuartz();
-        }
-      }
-      _result = _switchResult;
-      _createCache_translate.put(_cacheKey, _result);
-    }
-    _init_translate(_result, element);
-    return _result;
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field isHwSystem is undefined for the type Class"
+      + "\nThe method or field isECU is undefined for the type Class"
+      + "\nThe method or field isMicrocontroller is undefined for the type Class"
+      + "\nThe method or field isCore is undefined for the type Class"
+      + "\nThe method or field isNetwork is undefined for the type Class"
+      + "\nThe method or field isQuartz is undefined for the type Class");
   }
   
   private final HashMap<ArrayList<?>, EObject> _createCache_translate = CollectionLiterals.newHashMap();
@@ -84,11 +36,17 @@ public class HWModelTranslator {
       + "\nThe method or field getComplexNode is undefined for the type Class"
       + "\nThe method or field base_Class is undefined"
       + "\nThe method or field base_Class is undefined"
+      + "\nThe method or field isHwSystem is undefined for the type Class"
       + "\nThe method or field getHwSystem is undefined for the type Class"
+      + "\nThe method or field isECU is undefined for the type Class"
       + "\nThe method or field getECU is undefined for the type Class"
+      + "\nThe method or field isMicrocontroller is undefined for the type Class"
       + "\nThe method or field getMicrocontroller is undefined for the type Class"
+      + "\nThe method or field isCore is undefined for the type Class"
       + "\nThe method or field getCore is undefined for the type Class"
+      + "\nThe method or field isNetwork is undefined for the type Class"
       + "\nThe method or field getNetwork is undefined for the type Class"
+      + "\nThe method or field isQuartz is undefined for the type Class"
       + "\nThe method or field getQuartz is undefined for the type Class"
       + "\nThe method or field DYNAMIC is undefined"
       + "\nThe method or field STATIC is undefined"
@@ -112,71 +70,28 @@ public class HWModelTranslator {
   }
   
   protected EObject _translate(final DataType element) {
-    final ArrayList<?> _cacheKey = CollectionLiterals.newArrayList(element);
-    final HardwareTypeDescription _result;
-    synchronized (_createCache_translate_1) {
-      if (_createCache_translate_1.containsKey(_cacheKey)) {
-        return _createCache_translate_1.get(_cacheKey);
-      }
-      HardwareTypeDescription _switchResult = null;
-      boolean _matched = false;
-      boolean _isSystemType = HWModelUtils.isSystemType(element);
-      if (_isSystemType) {
-        _matched=true;
-        _switchResult = AmaltheaFactory.eINSTANCE.createSystemType();
-      }
-      if (!_matched) {
-        boolean _isECUType = HWModelUtils.isECUType(element);
-        if (_isECUType) {
-          _matched=true;
-          _switchResult = AmaltheaFactory.eINSTANCE.createECUType();
-        }
-      }
-      if (!_matched) {
-        boolean _isMicrocontrollerType = HWModelUtils.isMicrocontrollerType(element);
-        if (_isMicrocontrollerType) {
-          _matched=true;
-          _switchResult = AmaltheaFactory.eINSTANCE.createMicrocontrollerType();
-        }
-      }
-      if (!_matched) {
-        boolean _isCoreType = HWModelUtils.isCoreType(element);
-        if (_isCoreType) {
-          _matched=true;
-          _switchResult = AmaltheaFactory.eINSTANCE.createCoreType();
-        }
-      }
-      if (!_matched) {
-        boolean _isNetworkType = HWModelUtils.isNetworkType(element);
-        if (_isNetworkType) {
-          _matched=true;
-          _switchResult = AmaltheaFactory.eINSTANCE.createNetworkType();
-        }
-      }
-      if (!_matched) {
-        boolean _isBus = HWModelUtils.isBus(element);
-        if (_isBus) {
-          _matched=true;
-          _switchResult = AmaltheaFactory.eINSTANCE.createBus();
-        }
-      }
-      _result = _switchResult;
-      _createCache_translate_1.put(_cacheKey, _result);
-    }
-    _init_translate_1(_result, element);
-    return _result;
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field isSystemType is undefined for the type DataType"
+      + "\nThe method or field isECUType is undefined for the type DataType"
+      + "\nThe method or field isMicrocontrollerType is undefined for the type DataType"
+      + "\nThe method or field isCoreType is undefined for the type DataType"
+      + "\nThe method or field isNetworkType is undefined for the type DataType"
+      + "\nThe method or field isBus is undefined for the type DataType");
   }
   
   private final HashMap<ArrayList<?>, EObject> _createCache_translate_1 = CollectionLiterals.newHashMap();
   
   private void _init_translate_1(final HardwareTypeDescription it, final DataType element) {
     throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field isCoreType is undefined for the type DataType"
       + "\nThe method or field getCoreType is undefined for the type DataType"
       + "\nThe method or field getCoreType is undefined for the type DataType"
+      + "\nThe method or field isNetworkType is undefined for the type DataType"
       + "\nThe method or field getNetworkType is undefined for the type DataType"
       + "\nThe method or field getNetworkType is undefined for the type DataType"
       + "\nThe method or field RROBIN is undefined"
       + "\nThe method or field PRIORITY is undefined"
+      + "\nThe method or field isBus is undefined for the type DataType"
       + "\nThe method or field getBus is undefined for the type DataType"
       + "\nThe method or field getBus is undefined for the type DataType"
       + "\nThe method or field RROBIN is undefined"
@@ -199,30 +114,15 @@ public class HWModelTranslator {
   }
   
   protected EObject _translate(final Element element) {
-    final ArrayList<?> _cacheKey = CollectionLiterals.newArrayList(element);
-    final Prescaler _result;
-    synchronized (_createCache_translate_2) {
-      if (_createCache_translate_2.containsKey(_cacheKey)) {
-        return _createCache_translate_2.get(_cacheKey);
-      }
-      Prescaler _switchResult = null;
-      boolean _matched = false;
-      boolean _isPrescaler = HWModelUtils.isPrescaler(element);
-      if (_isPrescaler) {
-        _matched=true;
-        _switchResult = AmaltheaFactory.eINSTANCE.createPrescaler();
-      }
-      _result = _switchResult;
-      _createCache_translate_2.put(_cacheKey, _result);
-    }
-    _init_translate_2(_result, element);
-    return _result;
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field isPrescaler is undefined for the type Element");
   }
   
   private final HashMap<ArrayList<?>, EObject> _createCache_translate_2 = CollectionLiterals.newHashMap();
   
   private void _init_translate_2(final Prescaler it, final Element element) {
     throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field isPrescaler is undefined for the type Element"
       + "\nThe method or field getPrescaler is undefined for the type Element"
       + "\nname cannot be resolved"
       + "\nclockRatio cannot be resolved"
