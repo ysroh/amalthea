@@ -13,7 +13,8 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.papyrus.infra.newchild,
  org.eclipse.papyrus.infra.properties,
  org.eclipse.papyrus.infra.ui,
- org.eclipse.papyrus.uml.diagram.common;bundle-version="2.0.1"
+ org.eclipse.papyrus.uml.diagram.common;bundle-version="2.0.1",
+ org.eclipse.papyrus.amalthea.generator;bundle-version="0.0.1"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: org.eclipse.papyrus.amalthea.ui.Activator
