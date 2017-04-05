@@ -69,9 +69,13 @@
     <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::SWModel::CallGraph" requiredProfile="Amalthea"/>
-      <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-        <permissions containerType="org.eclipse.papyrus.amalthea.core.Task" permitted="true"/>
-        <permissions containerType="org.eclipse.papyrus.amalthea.core.ISR" permitted="true"/>
+      <composedRules xsi:type="rulebased:OrRuleConfiguration">
+        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+          <permissions containerType="org.eclipse.papyrus.amalthea.core.ISR" permitted="true"/>
+        </composedRules>
+        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+          <permissions containerType="org.eclipse.papyrus.amalthea.core.Task" permitted="true"/>
+        </composedRules>
       </composedRules>
     </ruleConfiguration>
   </elementTypeConfigurations>

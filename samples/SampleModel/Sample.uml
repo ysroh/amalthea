@@ -30,7 +30,9 @@
           </nestedClassifier>
         </nestedClassifier>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_0eYsQBlqEeejtol6_8-5AQ" name="ISR"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_0eYsQBlqEeejtol6_8-5AQ" name="ISR">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_iQPBEBorEeeHnKL4kRFmcQ" name="Class1"/>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_rRvHwBlwEee0OoUHlvEwbA" name="Hardware">
       <packagedElement xmi:type="uml:Class" xmi:id="_vtEqoBlwEee0OoUHlvEwbA" name="HwSystem">
@@ -188,4 +190,5 @@
   <Stimuli:Periodic xmi:id="_TBhvIBoTEeezT5371WBdsw" base_Class="_TBFDMBoTEeezT5371WBdsw" recurrence="_XuzWkBoTEeezT5371WBdsw" offset="_XuzWkBoTEeezT5371WBdsw"/>
   <Stimuli:Interprocess xmi:id="_UUw4oBoTEeezT5371WBdsw" base_Class="_UUa6YBoTEeezT5371WBdsw" counter="_jE7tIBlqEeejtol6_8-5AQ"/>
   <Common:Time xmi:id="_XuzWkBoTEeezT5371WBdsw" base_DataType="_XuplkBoTEeezT5371WBdsw"/>
+  <Software:CallGraph xmi:id="_iQ1eABorEeeHnKL4kRFmcQ" base_Class="_iQPBEBorEeeHnKL4kRFmcQ"/>
 </xmi:XMI>

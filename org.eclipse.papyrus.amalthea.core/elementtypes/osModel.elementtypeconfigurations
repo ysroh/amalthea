@@ -51,6 +51,21 @@
       </composedRules>
     </ruleConfiguration>
   </elementTypeConfigurations>
+  <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.SchedulingHWUnit" name="SchedulingHWUnit">
+    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
+    <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
+    <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
+      <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::OSModel::SchedulingHWUnit" requiredProfile="Amalthea"/>
+      <composedRules xsi:type="rulebased:OrRuleConfiguration">
+        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+          <permissions containerType="org.eclipse.papyrus.amalthea.core.TaskScheduler" permitted="true"/>
+        </composedRules>
+        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+          <permissions containerType="org.eclipse.papyrus.amalthea.core.InterruptController" permitted="true"/>
+        </composedRules>
+      </composedRules>
+    </ruleConfiguration>
+  </elementTypeConfigurations>
   <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.operatingSystem" target="//@elementTypeConfigurations.0">
     <stereotypesToApply stereotypeQualifiedName="Amalthea::OSModel::OperatingSystem">
       <requiredProfiles>Amalthea</requiredProfiles>
@@ -68,6 +83,11 @@
   </adviceBindingsConfigurations>
   <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.osek" target="//@elementTypeConfigurations.3">
     <stereotypesToApply stereotypeQualifiedName="Amalthea::OSModel::OSEK">
+      <requiredProfiles>Amalthea</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.osek" target="//@elementTypeConfigurations.5">
+    <stereotypesToApply stereotypeQualifiedName="Amalthea::OSModel::SchedulingHWUnit">
       <requiredProfiles>Amalthea</requiredProfiles>
     </stereotypesToApply>
   </adviceBindingsConfigurations>

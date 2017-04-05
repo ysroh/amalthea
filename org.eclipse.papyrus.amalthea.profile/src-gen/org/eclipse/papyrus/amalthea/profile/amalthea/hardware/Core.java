@@ -59,7 +59,7 @@ public interface Core extends ComplexNode {
 	 * @return the value of the '<em>Coretype</em>' reference.
 	 * @see #setCoretype(CoreType)
 	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.HardwarePackage#getCore_Coretype()
-	 * @model required="true" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
 	CoreType getCoretype();

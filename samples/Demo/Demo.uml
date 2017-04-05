@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Allocations="http://www.eclipse.org/papyrus/sysml/1.4/SysML/Allocations" xmlns:Common="http://www.eclipse.org/papyrus/2017/Amalthea/Common" xmlns:Components="http://www.eclipse.org/papyrus/2017/Amalthea/Components" xmlns:Hardware="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware" xmlns:Os="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem" xmlns:Software="http://www.eclipse.org/papyrus/2017/Amalthea/Software" xmlns:Stimuli="http://www.eclipse.org/papyrus/2017/Amalthea/Stimuli" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/sysml/1.4/SysML/Allocations http://www.eclipse.org/papyrus/sysml/1.4/SysML#//allocations http://www.eclipse.org/papyrus/2017/Amalthea/Common http://www.eclipse.org/papyrus/2017/Amalthea#//common http://www.eclipse.org/papyrus/2017/Amalthea/Components http://www.eclipse.org/papyrus/2017/Amalthea#//components http://www.eclipse.org/papyrus/2017/Amalthea/Hardware http://www.eclipse.org/papyrus/2017/Amalthea#//hardware http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem http://www.eclipse.org/papyrus/2017/Amalthea#//os http://www.eclipse.org/papyrus/2017/Amalthea/Software http://www.eclipse.org/papyrus/2017/Amalthea#//software http://www.eclipse.org/papyrus/2017/Amalthea/Stimuli http://www.eclipse.org/papyrus/2017/Amalthea#//stimuli">
+  <uml:Model xmi:id="_8Ab4cBoaEee60cQ75oPnTA" name="Demo">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_8JlNYBoaEee60cQ75oPnTA">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_8J6kkBoaEee60cQ75oPnTA">
+      <importedPackage xmi:type="uml:Package" href="pathmap://SysML14_LIBRARIES/SysML-Standard-Library.uml#SysML.package_packagedElement_Libraries"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_ia0V4BoqEeeK7PsAypm8Bw" name="Package"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_BtkaYBobEee60cQ75oPnTA" name="Common">
+      <packagedElement xmi:type="uml:Package" xmi:id="_1ayn4BofEeezHIvV1tGdjg" name="Weibull">
+        <packagedElement xmi:type="uml:Class" xmi:id="_DUXbQBoqEeeK7PsAypm8Bw" name="WeibullEstimators"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_DVJeYBoqEeeK7PsAypm8Bw" name="Deviation"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_DVxJcBoqEeeK7PsAypm8Bw" name="InstructionsDeviation"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_-myxgBosEeevi--Z4zF9bA" name="Counter"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_KoZ6gBozEeey-4lblVK-ag" name="Time"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_XftkIBozEeey-4lblVK-ag" name="Timer10MSOffset"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_bAI98BozEeey-4lblVK-ag" name="Timer10MSRecurrence"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_xtNLwBozEeey-4lblVK-ag" name="Component">
+      <packagedElement xmi:type="uml:Class" xmi:id="_xtNLwRozEeey-4lblVK-ag" name="Component1">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_xtNLwhozEeey-4lblVK-ag" name="Port1" visibility="public" aggregation="composite"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_xtNLwxozEeey-4lblVK-ag" name="Component2">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_xtNLxBozEeey-4lblVK-ag" name="Port1" visibility="public" aggregation="composite"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_xtNLxRozEeey-4lblVK-ag" name="Composite">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_xtNLxhozEeey-4lblVK-ag" name="component1" type="_xtNLwRozEeey-4lblVK-ag"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_xtNLxxozEeey-4lblVK-ag" name="component2" type="_xtNLwxozEeey-4lblVK-ag"/>
+        <ownedConnector xmi:type="uml:Connector" xmi:id="_xtNLyBozEeey-4lblVK-ag" name="Connector1">
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_xtNLyRozEeey-4lblVK-ag" partWithPort="_xtNLxhozEeey-4lblVK-ag" role="_xtNLwhozEeey-4lblVK-ag"/>
+          <end xmi:type="uml:ConnectorEnd" xmi:id="_xtNLyhozEeey-4lblVK-ag" partWithPort="_xtNLxxozEeey-4lblVK-ag" role="_xtNLxBozEeey-4lblVK-ag"/>
+        </ownedConnector>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Fg8lYBobEee60cQ75oPnTA" name="Software">
+      <packagedElement xmi:type="uml:Package" xmi:id="_InPn8BobEee60cQ75oPnTA" name="Runnables">
+        <packagedElement xmi:type="uml:Class" xmi:id="_TtKMcBobEee60cQ75oPnTA" name="ABSCalculation">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Xv63QBobEee60cQ75oPnTA" name="VotedDecelerationRate"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_hGPGYBobEee60cQ75oPnTA" name="RunnableInstructions"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_dkL-IBoqEeeK7PsAypm8Bw" name="Labels">
+        <packagedElement xmi:type="uml:Class" xmi:id="_QFWacBoqEeeK7PsAypm8Bw" name="ABSActivation"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_gkxaQBoqEeeK7PsAypm8Bw" name="Tasks">
+        <packagedElement xmi:type="uml:Class" xmi:id="_lAdicBoqEeeK7PsAypm8Bw" name="Task">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_0aQsEBosEeevi--Z4zF9bA" name="CallGraph">
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_1meAgBosEeevi--Z4zF9bA" name="CallSequence">
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_2a5uIBosEeevi--Z4zF9bA" name="Operation1"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_Y-34gBotEeevi--Z4zF9bA" name="InterProcessActivation"/>
+            </nestedClassifier>
+          </nestedClassifier>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_gmMPMBotEeevi--Z4zF9bA" name="Hardware">
+      <packagedElement xmi:type="uml:Class" xmi:id="_jjcDcBotEeevi--Z4zF9bA" name="DemoSystem">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_lybqkBotEeevi--Z4zF9bA" name="ECU">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_nZERMBotEeevi--Z4zF9bA" name="Processor">
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_o3fXABotEeevi--Z4zF9bA" name="Core">
+              <nestedClassifier xmi:type="uml:Class" xmi:id="_utD74BowEeeeW9cngqHTXg" name="CorePrescaler"/>
+            </nestedClassifier>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_xs4jABowEeeeW9cngqHTXg" name="ECUQuartz"/>
+        </nestedClassifier>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_3Rv5wBowEeeeW9cngqHTXg" name="CoreType"/>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_2LEBsBo0Eeey-4lblVK-ag" name="Allocate1" client="_o3fXABotEeevi--Z4zF9bA" supplier="_JgeUABoxEeeeW9cngqHTXg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_AAoVcBoxEeeeW9cngqHTXg" name="OperatingSystem">
+      <packagedElement xmi:type="uml:Class" xmi:id="_HxHPMBoxEeeeW9cngqHTXg" name="OS">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_JgeUABoxEeeeW9cngqHTXg" name="TaskSchedulerCore">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_HmaJIBozEeey-4lblVK-ag" name="SchedulingHwUnit"/>
+        </nestedClassifier>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_zU6T8Bo0Eeey-4lblVK-ag" name="Allocate1" client="_JgeUABoxEeeeW9cngqHTXg" supplier="_lAdicBoqEeeK7PsAypm8Bw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_CZ_ZgBoxEeeeW9cngqHTXg" name="Stimuli">
+      <packagedElement xmi:type="uml:Class" xmi:id="_SpqbMBozEeey-4lblVK-ag" name="Timer_10MS"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_FVPCoBoxEeeeW9cngqHTXg" name="Mapping"/>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_8DgakBoaEee60cQ75oPnTA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8DksABoaEee60cQ75oPnTA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_8JZnMBoaEee60cQ75oPnTA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8JaOQBoaEee60cQ75oPnTA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//activities"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Activities"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_8JfGwBoaEee60cQ75oPnTA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8Jft0BoaEee60cQ75oPnTA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//allocations"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Allocations"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_8JgU4BoaEee60cQ75oPnTA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8JgU4RoaEee60cQ75oPnTA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//blocks"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Blocks"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_8Jg78BoaEee60cQ75oPnTA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8Jg78RoaEee60cQ75oPnTA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//constraintblocks"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ConstraintBlocks"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_8Jg78hoaEee60cQ75oPnTA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8JhjABoaEee60cQ75oPnTA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//deprecatedelements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_DeprecatedElements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_8JhjARoaEee60cQ75oPnTA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8JiKEBoaEee60cQ75oPnTA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//modelelements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_ModelElements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_8JiKERoaEee60cQ75oPnTA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8JiKEhoaEee60cQ75oPnTA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//portsandflows"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Ports_u0026Flows"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_8JixIBoaEee60cQ75oPnTA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8JixIRoaEee60cQ75oPnTA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.4/SysML#//requirements"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://SysML14_PROFILES/SysML.profile.uml#SysML.package_packagedElement_Requirements"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_8JjYMBoaEee60cQ75oPnTA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8JjYMRoaEee60cQ75oPnTA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_8MXboBoaEee60cQ75oPnTA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8MXboRoaEee60cQ75oPnTA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/2017/Amalthea#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://AMALTHEA_PROFILE/amalthea.profile.uml#_PUCPMBYtEeeFzte_Mj5jqA"/>
+    </profileApplication>
+  </uml:Model>
+  <Software:Runnable xmi:id="_TthY0BobEee60cQ75oPnTA" base_Class="_TtKMcBobEee60cQ75oPnTA"/>
+  <Software:LabelAccess xmi:id="_XwZYYBobEee60cQ75oPnTA" base_Operation="_Xv63QBobEee60cQ75oPnTA" access="read"/>
+  <Software:RunnableInstructions xmi:id="_hGiBUBobEee60cQ75oPnTA" base_Operation="_hGPGYBobEee60cQ75oPnTA" default="_DWHHsBoqEeeK7PsAypm8Bw"/>
+  <Common:WeibullEstimators xmi:id="_DUqWMBoqEeeK7PsAypm8Bw" base_Class="_DUXbQBoqEeeK7PsAypm8Bw"/>
+  <Common:Deviation xmi:id="_DVUdgBoqEeeK7PsAypm8Bw" distribution="_DUqWMBoqEeeK7PsAypm8Bw" base_Class="_DVJeYBoqEeeK7PsAypm8Bw"/>
+  <Common:InstructionsDeviation xmi:id="_DWHHsBoqEeeK7PsAypm8Bw" base_Class="_DVxJcBoqEeeK7PsAypm8Bw" deviation="_DVUdgBoqEeeK7PsAypm8Bw"/>
+  <Software:Label xmi:id="_QFpVYBoqEeeK7PsAypm8Bw" base_Class="_QFWacBoqEeeK7PsAypm8Bw"/>
+  <Software:Task xmi:id="_lAnTcBoqEeeK7PsAypm8Bw" base_Class="_lAdicBoqEeeK7PsAypm8Bw" preemption="preemptive"/>
+  <Software:CallGraph xmi:id="_0aumIBosEeevi--Z4zF9bA" base_Class="_0aQsEBosEeevi--Z4zF9bA"/>
+  <Software:CallSequence xmi:id="_1mw7cBosEeevi--Z4zF9bA" base_Class="_1meAgBosEeevi--Z4zF9bA"/>
+  <Software:TaskRunnableCall xmi:id="_2bQ6gBosEeevi--Z4zF9bA" base_Operation="_2a5uIBosEeevi--Z4zF9bA" counter="_-nGTgBosEeevi--Z4zF9bA" runnable="_TthY0BobEee60cQ75oPnTA"/>
+  <Common:Counter xmi:id="_-nGTgBosEeevi--Z4zF9bA" base_DataType="_-myxgBosEeevi--Z4zF9bA"/>
+  <Hardware:HwSystem xmi:id="_jj4vYBotEeevi--Z4zF9bA" base_Class="_jjcDcBotEeevi--Z4zF9bA"/>
+  <Hardware:ECU xmi:id="_lyulgBotEeevi--Z4zF9bA" base_Class="_lybqkBotEeevi--Z4zF9bA"/>
+  <Hardware:Microcontroller xmi:id="_nZtKYBotEeevi--Z4zF9bA" base_Class="_nZERMBotEeevi--Z4zF9bA"/>
+  <Hardware:Core xmi:id="_o3yR8BotEeevi--Z4zF9bA" base_Class="_o3fXABotEeevi--Z4zF9bA" coretype="_3SDbwBowEeeeW9cngqHTXg"/>
+  <Hardware:Prescaler xmi:id="_uuA-IBowEeeeW9cngqHTXg" base_Class="_utD74BowEeeeW9cngqHTXg"/>
+  <Hardware:Quartz xmi:id="_xtMFABowEeeeW9cngqHTXg" base_Class="_xs4jABowEeeeW9cngqHTXg"/>
+  <Hardware:CoreType xmi:id="_3SDbwBowEeeeW9cngqHTXg" base_DataType="_3Rv5wBowEeeeW9cngqHTXg"/>
+  <Os:OperatingSystem xmi:id="_HxaKIBoxEeeeW9cngqHTXg" base_Class="_HxHPMBoxEeeeW9cngqHTXg"/>
+  <Os:TaskScheduler xmi:id="_Jg5KwBoxEeeeW9cngqHTXg" base_Class="_JgeUABoxEeeeW9cngqHTXg"/>
+  <Os:SchedulingHWUnit xmi:id="_Hng8YBozEeey-4lblVK-ag" base_Class="_HmaJIBozEeey-4lblVK-ag" time="_Ko2mcBozEeey-4lblVK-ag"/>
+  <Common:Time xmi:id="_Ko2mcBozEeey-4lblVK-ag" base_DataType="_KoZ6gBozEeey-4lblVK-ag"/>
+  <Stimuli:Periodic xmi:id="_Sp99MBozEeey-4lblVK-ag" base_Class="_SpqbMBozEeey-4lblVK-ag" recurrence="_bASH4BozEeey-4lblVK-ag" offset="_Xf3VIBozEeey-4lblVK-ag"/>
+  <Common:Time xmi:id="_Xf3VIBozEeey-4lblVK-ag" unit="ms" base_DataType="_XftkIBozEeey-4lblVK-ag"/>
+  <Common:Time xmi:id="_bASH4BozEeey-4lblVK-ag" value="10" unit="ms" base_DataType="_bAI98BozEeey-4lblVK-ag"/>
+  <Components:Component xmi:id="_262VUBozEeey-4lblVK-ag" base_Class="_xtNLwRozEeey-4lblVK-ag"/>
+  <Components:Component xmi:id="_3vxLIBozEeey-4lblVK-ag" base_Class="_xtNLwxozEeey-4lblVK-ag"/>
+  <Components:Composite xmi:id="_4h5ysBozEeey-4lblVK-ag" base_Class="_xtNLxRozEeey-4lblVK-ag"/>
+  <Components:FInterfacePort xmi:id="_5xxfIBozEeey-4lblVK-ag" base_Port="_xtNLwhozEeey-4lblVK-ag"/>
+  <Components:FInterfacePort xmi:id="_7KiB0BozEeey-4lblVK-ag" base_Port="_xtNLxBozEeey-4lblVK-ag"/>
+  <Allocations:Allocate xmi:id="_zVHvUBo0Eeey-4lblVK-ag" base_DirectedRelationship="_zU6T8Bo0Eeey-4lblVK-ag" base_Abstraction="_zU6T8Bo0Eeey-4lblVK-ag"/>
+  <Allocations:Allocate xmi:id="_2LZ_8Bo0Eeey-4lblVK-ag" base_DirectedRelationship="_2LEBsBo0Eeey-4lblVK-ag" base_Abstraction="_2LEBsBo0Eeey-4lblVK-ag"/>
+</xmi:XMI>

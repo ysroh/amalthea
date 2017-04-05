@@ -10,7 +10,13 @@
 		<Composite.layout>
 			<ppel:PropertiesLayout></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:StringEditor property="UML:NamedElement:name"
-			input="{Binding}"></ppe:StringEditor>
+		<ppe:StringEditor input="{Binding}" property="UML:NamedElement:name"></ppe:StringEditor>
+	</Composite>
+	<Composite>
+		<Composite.layout>
+			<ppel:PropertiesLayout></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:ReferenceDialog input="{Binding}"
+			property="Amalthea:OSModel:SchedulingHWUnit:time"></ppe:ReferenceDialog>
 	</Composite>
 </Composite>

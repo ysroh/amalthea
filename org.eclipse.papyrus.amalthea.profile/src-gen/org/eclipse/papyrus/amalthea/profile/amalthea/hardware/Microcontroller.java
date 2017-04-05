@@ -49,7 +49,7 @@ public interface Microcontroller extends ComplexNode {
 	 * @return the value of the '<em>Microcontrollertype</em>' reference.
 	 * @see #setMicrocontrollertype(MicrocontrollerType)
 	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.HardwarePackage#getMicrocontroller_Microcontrollertype()
-	 * @model required="true" ordered="false"
+	 * @model ordered="false"
 	 * @generated
 	 */
 	MicrocontrollerType getMicrocontrollertype();

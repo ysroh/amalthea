@@ -390,7 +390,10 @@ of UML port&#xD;
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6f3XQBbdEeeFzte_Mj5jqA" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6f9d4BbdEeeFzte_Mj5jqA" value="*"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_urL_wRcTEeeFzte_Mj5jqA" name="microcontrollertype" type="_oiEexBZKEeeFzte_Mj5jqA" association="_urLYsBcTEeeFzte_Mj5jqA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_urL_wRcTEeeFzte_Mj5jqA" name="microcontrollertype" type="_oiEexBZKEeeFzte_Mj5jqA" association="_urLYsBcTEeeFzte_Mj5jqA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cmzzEBouEeemOqGrpy978g"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cm9kEBouEeemOqGrpy978g" value="1"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiEexBZKEeeFzte_Mj5jqA" name="MicrocontrollerType">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_kTFRkhcVEeeFzte_Mj5jqA" name="base_DataType" association="_kTFRkBcVEeeFzte_Mj5jqA">
@@ -422,7 +425,10 @@ of UML port&#xD;
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_oiEe1RZKEeeFzte_Mj5jqA"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_viFykRcTEeeFzte_Mj5jqA" name="coretype" type="_oiFF0RZKEeeFzte_Mj5jqA" association="_viFLgBcTEeeFzte_Mj5jqA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_viFykRcTEeeFzte_Mj5jqA" name="coretype" type="_oiFF0RZKEeeFzte_Mj5jqA" association="_viFLgBcTEeeFzte_Mj5jqA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dXfCEBouEeemOqGrpy978g"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dXfCERouEeemOqGrpy978g" value="1"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiFF0RZKEeeFzte_Mj5jqA" name="CoreType">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_oiFF0hZKEeeFzte_Mj5jqA" name="bitWidth">
@@ -770,6 +776,10 @@ operations of CallSequence Class&#xD;
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiFF4hZKEeeFzte_Mj5jqA" name="SchedulingHWUnit">
         <generalization xmi:type="uml:Generalization" xmi:id="_oiFs4BZKEeeFzte_Mj5jqA" general="_oiFF4RZKEeeFzte_Mj5jqA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_l2kxcxoyEeemOqGrpy978g" name="time" type="_oiGT9hZKEeeFzte_Mj5jqA" association="_l2kxcBoyEeemOqGrpy978g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_m3rCEBoyEeemOqGrpy978g"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_m3rCERoyEeemOqGrpy978g" value="1"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiFs4RZKEeeFzte_Mj5jqA" name="TaskSchedulingAlgorithm" isAbstract="true">
         <generalization xmi:type="uml:Generalization" xmi:id="_Rt1tcBZUEeeFzte_Mj5jqA">
@@ -786,6 +796,12 @@ operations of CallSequence Class&#xD;
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiFs5RZKEeeFzte_Mj5jqA" name="PriorityBased">
         <generalization xmi:type="uml:Generalization" xmi:id="_oiFs5hZKEeeFzte_Mj5jqA" general="_oiFs5BZKEeeFzte_Mj5jqA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_l2kxcBoyEeemOqGrpy978g" memberEnd="_l2kxcxoyEeemOqGrpy978g _l2uicBoyEeemOqGrpy978g">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_l2kxcRoyEeemOqGrpy978g" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_l2kxchoyEeemOqGrpy978g" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_l2uicBoyEeemOqGrpy978g" name="schedulinghwunit" type="_oiFF4hZKEeeFzte_Mj5jqA" association="_l2kxcBoyEeemOqGrpy978g"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_oiFs6BZKEeeFzte_Mj5jqA" name="MappingModel" URI="http://www.eclipse.org/papyrus/2017/Amalthea/Mapping">

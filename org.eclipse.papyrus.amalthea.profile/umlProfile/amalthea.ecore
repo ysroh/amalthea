@@ -182,14 +182,14 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="cores" ordered="false"
           lowerBound="1" upperBound="-1" eType="#//hardware/Core"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="microcontrollertype"
-          ordered="false" lowerBound="1" eType="#//hardware/MicrocontrollerType"/>
+          ordered="false" eType="#//hardware/MicrocontrollerType"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Core" eSuperTypes="#//hardware/ComplexNode">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="lockstepGroup" ordered="false"
           lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"
           defaultValueLiteral="0"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="coretype" ordered="false"
-          lowerBound="1" eType="#//hardware/CoreType"/>
+          eType="#//hardware/CoreType"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="CoreType">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="bitWidth" ordered="false"
@@ -364,7 +364,10 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="InterruptSchedulingAlgorithm" abstract="true"
         eSuperTypes="../../org.eclipse.papyrus.sysml14/resources/profile/sysml.ecore#//blocks/Block"/>
-    <eClassifiers xsi:type="ecore:EClass" name="SchedulingHWUnit" eSuperTypes="#//os/SchedulingUnit"/>
+    <eClassifiers xsi:type="ecore:EClass" name="SchedulingHWUnit" eSuperTypes="#//os/SchedulingUnit">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="time" ordered="false"
+          eType="#//common/Time"/>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="OSEK" eSuperTypes="#//os/TaskSchedulingAlgorithm"/>
     <eClassifiers xsi:type="ecore:EClass" name="PriorityBased" eSuperTypes="#//os/InterruptSchedulingAlgorithm"/>
   </eSubpackages>

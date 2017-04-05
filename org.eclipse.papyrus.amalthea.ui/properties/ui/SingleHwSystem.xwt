@@ -10,8 +10,7 @@
 		<Composite.layout>
 			<ppel:PropertiesLayout></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:StringEditor property="UML:NamedElement:name"
-			input="{Binding}"></ppe:StringEditor>
+		<ppe:StringEditor input="{Binding}" property="UML:NamedElement:name"></ppe:StringEditor>
 	</Composite>
 	<Composite>
 		<Composite.layout>
@@ -19,18 +18,5 @@
 		</Composite.layout>
 		<ppe:ReferenceDialog input="{Binding}"
 			property="Amalthea:HWModel:HwSystem:systemtype"></ppe:ReferenceDialog>
-		<ppe:ReferenceDialog input="{Binding}"
-			property="Amalthea:HWModel:ComplexNode:prescaler"></ppe:ReferenceDialog>
-	</Composite>
-	<Composite>
-		<Composite.layout>
-			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
-		</Composite.layout>
-		<ppe:MultiReference input="{Binding}"
-			property="Amalthea:HWModel:HwSystem:ecus"></ppe:MultiReference>
-		<ppe:MultiReference input="{Binding}"
-			property="Amalthea:HWModel:ComplexNode:quartzes"></ppe:MultiReference>
-		<ppe:MultiReference input="{Binding}"
-			property="Amalthea:HWModel:ComplexNode:networks"></ppe:MultiReference>
 	</Composite>
 </Composite>

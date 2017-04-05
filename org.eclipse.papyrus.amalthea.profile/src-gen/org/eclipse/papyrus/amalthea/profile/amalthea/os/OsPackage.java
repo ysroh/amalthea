@@ -689,13 +689,22 @@ public interface OsPackage extends EPackage {
 	int SCHEDULING_HW_UNIT__IS_ENCAPSULATED = SCHEDULING_UNIT__IS_ENCAPSULATED;
 
 	/**
+	 * The feature id for the '<em><b>Time</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEDULING_HW_UNIT__TIME = SCHEDULING_UNIT_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Scheduling HW Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULING_HW_UNIT_FEATURE_COUNT = SCHEDULING_UNIT_FEATURE_COUNT + 0;
+	int SCHEDULING_HW_UNIT_FEATURE_COUNT = SCHEDULING_UNIT_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Get References</em>' operation.
@@ -1027,6 +1036,17 @@ public interface OsPackage extends EPackage {
 	EClass getSchedulingHWUnit();
 
 	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.amalthea.os.SchedulingHWUnit#getTime <em>Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Time</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.os.SchedulingHWUnit#getTime()
+	 * @see #getSchedulingHWUnit()
+	 * @generated
+	 */
+	EReference getSchedulingHWUnit_Time();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.os.OSEK <em>OSEK</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1196,6 +1216,14 @@ public interface OsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass SCHEDULING_HW_UNIT = eINSTANCE.getSchedulingHWUnit();
+
+		/**
+		 * The meta object literal for the '<em><b>Time</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SCHEDULING_HW_UNIT__TIME = eINSTANCE.getSchedulingHWUnit_Time();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.os.impl.OSEKImpl <em>OSEK</em>}' class.

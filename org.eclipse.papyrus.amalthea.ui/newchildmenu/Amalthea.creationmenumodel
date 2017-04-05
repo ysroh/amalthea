@@ -31,6 +31,7 @@
   <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="OperatingSystem" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.OperatingSystem"/>
   <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="TaskScheduler" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.TaskScheduler"/>
   <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="InterruptController" icon="" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.InterruptController"/>
+  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="SchedulingHWUnit" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.SchedulingHWUnit"/>
   <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="OSEK" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.OSEK"/>
   <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="PriorityBased" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.PriorityBased"/>
   <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Single" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Single"/>

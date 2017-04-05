@@ -10,14 +10,6 @@
 		<Composite.layout>
 			<ppel:PropertiesLayout></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:StringEditor property="UML:NamedElement:name"
-			input="{Binding}"></ppe:StringEditor>
-	</Composite>
-	<Composite>
-		<Composite.layout>
-			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
-		</Composite.layout>
-		<ppe:MultiReference input="{Binding}"
-			property="Amalthea:SWModel:CallGraph:graphentries"></ppe:MultiReference>
+		<ppe:StringEditor input="{Binding}" property="UML:NamedElement:name"></ppe:StringEditor>
 	</Composite>
 </Composite>
