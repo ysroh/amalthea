@@ -391,7 +391,10 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="offset" ordered="false"
           lowerBound="1" eType="#//common/Time"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Interprocess" eSuperTypes="#//stimuli/Stimulus"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Interprocess" eSuperTypes="#//stimuli/Stimulus">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="counter" ordered="false"
+          lowerBound="1" eType="#//common/Counter"/>
+    </eClassifiers>
   </eSubpackages>
   <eSubpackages name="constraints" nsURI="http://www.eclipse.org/papyrus/2017/Amalthea/Constraints"
       nsPrefix="Constraints">

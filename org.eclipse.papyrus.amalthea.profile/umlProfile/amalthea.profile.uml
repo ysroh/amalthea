@@ -836,6 +836,13 @@ operations of CallSequence Class&#xD;
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_M17t0BcZEeeFzte_Mj5jqA" name="Interprocess">
         <generalization xmi:type="uml:Generalization" xmi:id="_PKGI0BcZEeeFzte_Mj5jqA" general="_-NpOwBcYEeeFzte_Mj5jqA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qdH24xoTEeemOqGrpy978g" name="counter" type="_SDLvIBh0EeeoWfBb-FGkXQ" association="_qdH24BoTEeemOqGrpy978g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_qdH24BoTEeemOqGrpy978g" memberEnd="_qdH24xoTEeemOqGrpy978g _qdH25BoTEeemOqGrpy978g">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qdH24RoTEeemOqGrpy978g" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qdH24hoTEeemOqGrpy978g" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_qdH25BoTEeemOqGrpy978g" name="interprocess" type="_M17t0BcZEeeFzte_Mj5jqA" association="_qdH24BoTEeemOqGrpy978g"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_oiFs7hZKEeeFzte_Mj5jqA" name="ConstraintsModel" URI="http://www.eclipse.org/papyrus/2017/Amalthea/Constraints">

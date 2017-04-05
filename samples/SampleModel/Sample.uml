@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Common="http://www.eclipse.org/papyrus/2017/Amalthea/Common" xmlns:Components="http://www.eclipse.org/papyrus/2017/Amalthea/Components" xmlns:Hardware="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware" xmlns:Os="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem" xmlns:Software="http://www.eclipse.org/papyrus/2017/Amalthea/Software" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/2017/Amalthea/Common http://www.eclipse.org/papyrus/2017/Amalthea#//common http://www.eclipse.org/papyrus/2017/Amalthea/Components http://www.eclipse.org/papyrus/2017/Amalthea#//components http://www.eclipse.org/papyrus/2017/Amalthea/Hardware http://www.eclipse.org/papyrus/2017/Amalthea#//hardware http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem http://www.eclipse.org/papyrus/2017/Amalthea#//os http://www.eclipse.org/papyrus/2017/Amalthea/Software http://www.eclipse.org/papyrus/2017/Amalthea#//software">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Common="http://www.eclipse.org/papyrus/2017/Amalthea/Common" xmlns:Components="http://www.eclipse.org/papyrus/2017/Amalthea/Components" xmlns:Hardware="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware" xmlns:Os="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem" xmlns:Software="http://www.eclipse.org/papyrus/2017/Amalthea/Software" xmlns:Stimuli="http://www.eclipse.org/papyrus/2017/Amalthea/Stimuli" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/2017/Amalthea/Common http://www.eclipse.org/papyrus/2017/Amalthea#//common http://www.eclipse.org/papyrus/2017/Amalthea/Components http://www.eclipse.org/papyrus/2017/Amalthea#//components http://www.eclipse.org/papyrus/2017/Amalthea/Hardware http://www.eclipse.org/papyrus/2017/Amalthea#//hardware http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem http://www.eclipse.org/papyrus/2017/Amalthea#//os http://www.eclipse.org/papyrus/2017/Amalthea/Software http://www.eclipse.org/papyrus/2017/Amalthea#//software http://www.eclipse.org/papyrus/2017/Amalthea/Stimuli http://www.eclipse.org/papyrus/2017/Amalthea#//stimuli">
   <uml:Model xmi:id="_sn_awBlJEeeJSpRxOK4Ihg" name="Model">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_s9iM8BlJEeeJSpRxOK4Ihg">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -14,6 +14,7 @@
           <nestedClassifier xmi:type="uml:Class" xmi:id="_BSSckBlrEeejtol6_8-5AQ" name="Class1"/>
         </nestedClassifier>
       </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_XuplkBoTEeezT5371WBdsw" name="Time"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_ZIu_MBlpEeeGJZ-IY5zMtA" name="Software">
       <packagedElement xmi:type="uml:Class" xmi:id="_ascNoBlpEeeGJZ-IY5zMtA" name="Class1">
@@ -75,6 +76,11 @@
           <nestedClassifier xmi:type="uml:Class" xmi:id="_gJRlUBoPEeeGa9KNsE_jaA" name="Class1"/>
         </nestedClassifier>
       </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_mdd_4BoSEee8wNuDQAOplw" name="Stimuli">
+      <packagedElement xmi:type="uml:Class" xmi:id="_RpnhABoTEeezT5371WBdsw" name="Single"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_TBFDMBoTEeezT5371WBdsw" name="Periodic"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_UUa6YBoTEeezT5371WBdsw" name="Interprocess"/>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_syezgBlJEeeJSpRxOK4Ihg">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_syn9cBlJEeeJSpRxOK4Ihg" source="http://www.eclipse.org/uml2/2.0.0/UML">
@@ -178,4 +184,8 @@
   <Os:InterruptController xmi:id="_QJDqABoPEeeGa9KNsE_jaA" base_Class="_QIWfYBoPEeeGa9KNsE_jaA"/>
   <Os:OSEK xmi:id="_VoDCQBoPEeeGa9KNsE_jaA" base_Class="_VnqAsBoPEeeGa9KNsE_jaA"/>
   <Os:PriorityBased xmi:id="_hfXOgBoPEeeGa9KNsE_jaA" base_Class="_gJRlUBoPEeeGa9KNsE_jaA"/>
+  <Stimuli:Single xmi:id="_RqPzIBoTEeezT5371WBdsw" base_Class="_RpnhABoTEeezT5371WBdsw" activation="_XuzWkBoTEeezT5371WBdsw"/>
+  <Stimuli:Periodic xmi:id="_TBhvIBoTEeezT5371WBdsw" base_Class="_TBFDMBoTEeezT5371WBdsw" recurrence="_XuzWkBoTEeezT5371WBdsw" offset="_XuzWkBoTEeezT5371WBdsw"/>
+  <Stimuli:Interprocess xmi:id="_UUw4oBoTEeezT5371WBdsw" base_Class="_UUa6YBoTEeezT5371WBdsw" counter="_jE7tIBlqEeejtol6_8-5AQ"/>
+  <Common:Time xmi:id="_XuzWkBoTEeezT5371WBdsw" base_DataType="_XuplkBoTEeezT5371WBdsw"/>
 </xmi:XMI>

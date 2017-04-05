@@ -244,6 +244,15 @@ public class StimuliPackageImpl extends EPackageImpl implements StimuliPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getInterprocess_Counter() {
+		return (EReference)interprocessEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public StimuliFactory getStimuliFactory() {
 		return (StimuliFactory)getEFactoryInstance();
 	}
@@ -277,6 +286,7 @@ public class StimuliPackageImpl extends EPackageImpl implements StimuliPackage {
 		createEReference(periodicEClass, PERIODIC__OFFSET);
 
 		interprocessEClass = createEClass(INTERPROCESS);
+		createEReference(interprocessEClass, INTERPROCESS__COUNTER);
 	}
 
 	/**
@@ -327,6 +337,7 @@ public class StimuliPackageImpl extends EPackageImpl implements StimuliPackage {
 		initEReference(getPeriodic_Offset(), theCommonPackage.getTime(), null, "offset", null, 1, 1, Periodic.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(interprocessEClass, Interprocess.class, "Interprocess", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getInterprocess_Counter(), theCommonPackage.getCounter(), null, "counter", null, 1, 1, Interprocess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		// Create annotations
 		// http://www.eclipse.org/uml2/2.0.0/UML

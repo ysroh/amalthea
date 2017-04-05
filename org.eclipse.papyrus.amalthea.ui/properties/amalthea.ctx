@@ -380,11 +380,20 @@
     <sections xmi:id="_3BqfMxiXEeeoWfBb-FGkXQ" name="Multiple MappingModel" sectionFile="ui/MultipleMappingModel.xwt">
       <widget href="ui/MultipleMappingModel.xwt#/"/>
     </sections>
+    <sections xmi:id="_Fa7hIBoUEeemOqGrpy978g" name="SingleInterprocess" sectionFile="ui/SingleInterprocess.xwt">
+      <widget href="ui/SingleInterprocess.xwt#/"/>
+    </sections>
   </tabs>
   <views xmi:id="_2VofsxiXEeeoWfBb-FGkXQ" name="Single Single" sections="_3BfgFBiXEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_2VpHphiXEeeoWfBb-FGkXQ">
     <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_2VoftBiXEeeoWfBb-FGkXQ" name="isSingleSingle">
       <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
       <properties xsi:type="constraints:ValueProperty" xmi:id="_2VoftRiXEeeoWfBb-FGkXQ" name="stereotypeName" value="Amalthea::StimuliModel::Single"/>
+    </constraints>
+  </views>
+  <views xmi:id="_7beOYBoTEeemOqGrpy978g" name="Single Interprocess" sections="_Fa7hIBoUEeemOqGrpy978g">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_n30zIBoUEeemOqGrpy978g" name="isSingleInterprocess">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_yJkIsBoUEeemOqGrpy978g" name="stereotypeName" value="Amalthea::StimuliModel::Interprocess"/>
     </constraints>
   </views>
   <views xmi:id="_2VofthiXEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple Single" sections="_3BfgFRiXEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_2VpHphiXEeeoWfBb-FGkXQ">
@@ -965,7 +974,9 @@
         <properties xmi:id="_2VpHqRiXEeeoWfBb-FGkXQ" name="recurrence" type="Reference"/>
         <properties xmi:id="_2VpHqhiXEeeoWfBb-FGkXQ" name="offset" type="Reference"/>
       </elements>
-      <elements xmi:id="_2VpHqxiXEeeoWfBb-FGkXQ" name="Interprocess" supertypes="_2VpHrBiXEeeoWfBb-FGkXQ"/>
+      <elements xmi:id="_2VpHqxiXEeeoWfBb-FGkXQ" name="Interprocess" supertypes="_2VpHrBiXEeeoWfBb-FGkXQ">
+        <properties xmi:id="_Ws9poBoUEeemOqGrpy978g" name="counter" type="Reference"/>
+      </elements>
       <elements xmi:id="_2VpHrBiXEeeoWfBb-FGkXQ" name="Stimulus">
         <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690yXqDJEeSZxfCXzZz3-w"/>
       </elements>

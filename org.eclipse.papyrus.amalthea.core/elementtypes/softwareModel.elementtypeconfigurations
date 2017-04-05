@@ -71,7 +71,7 @@
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::SWModel::CallGraph" requiredProfile="Amalthea"/>
       <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
         <permissions containerType="org.eclipse.papyrus.amalthea.core.Task" permitted="true"/>
-        <permissions containerType="org.eclipse.papyrus.amalthea.core.ISR"/>
+        <permissions containerType="org.eclipse.papyrus.amalthea.core.ISR" permitted="true"/>
       </composedRules>
     </ruleConfiguration>
   </elementTypeConfigurations>

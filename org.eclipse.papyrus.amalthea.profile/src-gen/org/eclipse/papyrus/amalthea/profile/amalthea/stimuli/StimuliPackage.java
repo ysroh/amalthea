@@ -333,13 +333,22 @@ public interface StimuliPackage extends EPackage {
 	int INTERPROCESS__IS_ENCAPSULATED = STIMULUS__IS_ENCAPSULATED;
 
 	/**
+	 * The feature id for the '<em><b>Counter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERPROCESS__COUNTER = STIMULUS_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Interprocess</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERPROCESS_FEATURE_COUNT = STIMULUS_FEATURE_COUNT + 0;
+	int INTERPROCESS_FEATURE_COUNT = STIMULUS_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Get References</em>' operation.
@@ -452,6 +461,17 @@ public interface StimuliPackage extends EPackage {
 	EClass getInterprocess();
 
 	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Interprocess#getCounter <em>Counter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Counter</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Interprocess#getCounter()
+	 * @see #getInterprocess()
+	 * @generated
+	 */
+	EReference getInterprocess_Counter();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -537,6 +557,14 @@ public interface StimuliPackage extends EPackage {
 		 * @generated
 		 */
 		EClass INTERPROCESS = eINSTANCE.getInterprocess();
+
+		/**
+		 * The meta object literal for the '<em><b>Counter</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INTERPROCESS__COUNTER = eINSTANCE.getInterprocess_Counter();
 
 	}
 

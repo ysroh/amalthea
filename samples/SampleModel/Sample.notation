@@ -47,16 +47,16 @@
         </children>
         <children xmi:type="notation:Shape" xmi:id="_5WaVcBoKEeeJPLl4VhaJvg" type="Port_Shape">
           <children xmi:type="notation:DecorationNode" xmi:id="_5WaVchoKEeeJPLl4VhaJvg" type="Port_NameLabel">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_5WaVcxoKEeeJPLl4VhaJvg" x="25" y="3"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_5WaVcxoKEeeJPLl4VhaJvg" x="19" y="-20"/>
           </children>
           <children xmi:type="notation:DecorationNode" xmi:id="_5WaVdBoKEeeJPLl4VhaJvg" type="Port_StereotypeLabel">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_5WaVdRoKEeeJPLl4VhaJvg" x="25" y="-10"/>
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_5WaVdRoKEeeJPLl4VhaJvg" x="-22" y="-35"/>
           </children>
           <element xmi:type="uml:Port" href="Sample.uml#_zFWnEBoKEeeJPLl4VhaJvg"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5WaVcRoKEeeJPLl4VhaJvg" x="50" y="-10" width="20" height="20"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5WaVcRoKEeeJPLl4VhaJvg" x="75" y="-10" width="20" height="20"/>
         </children>
         <element xmi:type="uml:Property" href="Sample.uml#_3816cBoKEeeJPLl4VhaJvg"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3816choKEeeJPLl4VhaJvg" x="220" y="168"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3816choKEeeJPLl4VhaJvg" x="340" y="174"/>
       </children>
       <children xmi:type="notation:Shape" xmi:id="_45dTsxoKEeeJPLl4VhaJvg" type="StereotypeComment">
         <styles xmi:type="notation:TitleStyle" xmi:id="_45dTtBoKEeeJPLl4VhaJvg"/>
@@ -78,7 +78,7 @@
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_26wyZxoKEeeJPLl4VhaJvg"/>
     </children>
     <element xmi:type="uml:Class" href="Sample.uml#_1CNVUBoKEeeJPLl4VhaJvg"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_26wyYRoKEeeJPLl4VhaJvg" x="40" y="40" width="500" height="250"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_26wyYRoKEeeJPLl4VhaJvg" x="39" y="30" width="590" height="326"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_2-HBWRoKEeeJPLl4VhaJvg" type="StereotypeComment">
     <styles xmi:type="notation:TitleStyle" xmi:id="_2-HBWhoKEeeJPLl4VhaJvg"/>
@@ -126,13 +126,15 @@
   </edges>
   <edges xmi:type="notation:Connector" xmi:id="_6sEg0BoKEeeJPLl4VhaJvg" type="Connector_Edge" source="_45KYwBoKEeeJPLl4VhaJvg" target="_5WaVcBoKEeeJPLl4VhaJvg">
     <children xmi:type="notation:DecorationNode" xmi:id="_6sEg0xoKEeeJPLl4VhaJvg" type="Connector_StereotypeLabel">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_6sEg1BoKEeeJPLl4VhaJvg" y="60"/>
+      <styles xmi:type="notation:BooleanValueStyle" xmi:id="_Qae7wBoQEeeGa9KNsE_jaA" name="IS_UPDATED_POSITION" booleanValue="true"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_6sEg1BoKEeeJPLl4VhaJvg" y="59"/>
     </children>
     <children xmi:type="notation:DecorationNode" xmi:id="_6sEg1RoKEeeJPLl4VhaJvg" type="Connector_NameLabel">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_6sEg1hoKEeeJPLl4VhaJvg" y="-20"/>
+      <styles xmi:type="notation:BooleanValueStyle" xmi:id="_Qax2sBoQEeeGa9KNsE_jaA" name="IS_UPDATED_POSITION" booleanValue="true"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_6sEg1hoKEeeJPLl4VhaJvg" x="1" y="-17"/>
     </children>
     <styles xmi:type="notation:FontStyle" xmi:id="_6sEg0RoKEeeJPLl4VhaJvg"/>
     <element xmi:type="uml:Connector" href="Sample.uml#_6rvwsBoKEeeJPLl4VhaJvg"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_6sEg0hoKEeeJPLl4VhaJvg" points="[249, 124, -643984, -643984]$[326, 240, -643984, -643984]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_6sEg0hoKEeeJPLl4VhaJvg" points="[248, 114, -643984, -643984]$[325, 230, -643984, -643984]"/>
   </edges>
 </notation:Diagram>
