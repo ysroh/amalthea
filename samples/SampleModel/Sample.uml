@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Common="http://www.eclipse.org/papyrus/2017/Amalthea/Common" xmlns:Components="http://www.eclipse.org/papyrus/2017/Amalthea/Components" xmlns:Hardware="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware" xmlns:Software="http://www.eclipse.org/papyrus/2017/Amalthea/Software" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/2017/Amalthea/Common http://www.eclipse.org/papyrus/2017/Amalthea#//common http://www.eclipse.org/papyrus/2017/Amalthea/Components http://www.eclipse.org/papyrus/2017/Amalthea#//components http://www.eclipse.org/papyrus/2017/Amalthea/Hardware http://www.eclipse.org/papyrus/2017/Amalthea#//hardware http://www.eclipse.org/papyrus/2017/Amalthea/Software http://www.eclipse.org/papyrus/2017/Amalthea#//software">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Common="http://www.eclipse.org/papyrus/2017/Amalthea/Common" xmlns:Components="http://www.eclipse.org/papyrus/2017/Amalthea/Components" xmlns:Hardware="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware" xmlns:Os="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem" xmlns:Software="http://www.eclipse.org/papyrus/2017/Amalthea/Software" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/2017/Amalthea/Common http://www.eclipse.org/papyrus/2017/Amalthea#//common http://www.eclipse.org/papyrus/2017/Amalthea/Components http://www.eclipse.org/papyrus/2017/Amalthea#//components http://www.eclipse.org/papyrus/2017/Amalthea/Hardware http://www.eclipse.org/papyrus/2017/Amalthea#//hardware http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem http://www.eclipse.org/papyrus/2017/Amalthea#//os http://www.eclipse.org/papyrus/2017/Amalthea/Software http://www.eclipse.org/papyrus/2017/Amalthea#//software">
   <uml:Model xmi:id="_sn_awBlJEeeJSpRxOK4Ihg" name="Model">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_s9iM8BlJEeeJSpRxOK4Ihg">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -64,6 +64,16 @@
           <end xmi:type="uml:ConnectorEnd" xmi:id="_6r13UBoKEeeJPLl4VhaJvg" partWithPort="_3mlWkBoKEeeJPLl4VhaJvg" role="_x2EJcBoKEeeJPLl4VhaJvg"/>
           <end xmi:type="uml:ConnectorEnd" xmi:id="_6r13URoKEeeJPLl4VhaJvg" partWithPort="_3816cBoKEeeJPLl4VhaJvg" role="_zFWnEBoKEeeJPLl4VhaJvg"/>
         </ownedConnector>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_MiJDIBoOEeeZ8riaxnVi9g" name="OS">
+      <packagedElement xmi:type="uml:Class" xmi:id="_scs7QBoOEeeZK7k8Di2dhg" name="OS">
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_vrQh8BoOEeeZK7k8Di2dhg" name="TaskController">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_VnqAsBoPEeeGa9KNsE_jaA" name="OSEK"/>
+        </nestedClassifier>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_QIWfYBoPEeeGa9KNsE_jaA" name="InterruptController">
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_gJRlUBoPEeeGa9KNsE_jaA" name="Class1"/>
+        </nestedClassifier>
       </packagedElement>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_syezgBlJEeeJSpRxOK4Ihg">
@@ -163,4 +173,9 @@
   <Components:FInterfacePort xmi:id="_x2g1YBoKEeeJPLl4VhaJvg" base_Port="_x2EJcBoKEeeJPLl4VhaJvg"/>
   <Components:FInterfacePort xmi:id="_zFpiABoKEeeJPLl4VhaJvg" base_Port="_zFWnEBoKEeeJPLl4VhaJvg"/>
   <Components:Composite xmi:id="_1CWfQBoKEeeJPLl4VhaJvg" base_Class="_1CNVUBoKEeeJPLl4VhaJvg"/>
+  <Os:OperatingSystem xmi:id="_sdTYMBoOEeeZK7k8Di2dhg" base_Class="_scs7QBoOEeeZK7k8Di2dhg"/>
+  <Os:TaskScheduler xmi:id="_vr2-4BoOEeeZK7k8Di2dhg" base_Class="_vrQh8BoOEeeZK7k8Di2dhg"/>
+  <Os:InterruptController xmi:id="_QJDqABoPEeeGa9KNsE_jaA" base_Class="_QIWfYBoPEeeGa9KNsE_jaA"/>
+  <Os:OSEK xmi:id="_VoDCQBoPEeeGa9KNsE_jaA" base_Class="_VnqAsBoPEeeGa9KNsE_jaA"/>
+  <Os:PriorityBased xmi:id="_hfXOgBoPEeeGa9KNsE_jaA" base_Class="_gJRlUBoPEeeGa9KNsE_jaA"/>
 </xmi:XMI>

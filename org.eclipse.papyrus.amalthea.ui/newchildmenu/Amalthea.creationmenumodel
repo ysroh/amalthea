@@ -29,7 +29,6 @@
   <menu xsi:type="ElementCreationMenuModel:Separator"/>
   <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Component" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Component"/>
   <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Composite" icon="" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Composite"/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="ComponentInstance" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.ComponentInstance"/>
   <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="FInterfacePort" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.FInterfacePort"/>
   <menu xsi:type="ElementCreationMenuModel:Folder" label="Common">
     <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Time" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Time"/>
@@ -39,4 +38,10 @@
     <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Deviation" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Deviation"/>
     <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="WeibullEstimators" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.WeibullEstimators"/>
   </menu>
+  <menu xsi:type="ElementCreationMenuModel:Separator"/>
+  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="OperatingSystem" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.OperatingSystem"/>
+  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="TaskScheduler" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.TaskScheduler"/>
+  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="InterruptController" icon="" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.InterruptController"/>
+  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="OSEK" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.OSEK"/>
+  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="PriorityBased" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.PriorityBased"/>
 </ElementCreationMenuModel:Folder>

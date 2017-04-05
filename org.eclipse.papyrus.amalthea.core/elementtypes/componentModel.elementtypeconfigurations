@@ -22,16 +22,6 @@
       </composedRules>
     </ruleConfiguration>
   </elementTypeConfigurations>
-  <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.ComponentInstance" name="ComponentInstance">
-    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
-    <specializedTypesID>org.eclipse.papyrus.uml.Property</specializedTypesID>
-    <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
-      <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::ComponentsModel::ComponentInstance" requiredProfile="Amalthea"/>
-      <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-        <permissions containerType="org.eclipse.papyrus.amalthea.core.Composite" permitted="true"/>
-      </composedRules>
-    </ruleConfiguration>
-  </elementTypeConfigurations>
   <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.FInterfacePort" name="FInterfacePort">
     <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
     <specializedTypesID>org.eclipse.papyrus.uml.Port</specializedTypesID>
@@ -52,12 +42,12 @@
       <requiredProfiles>Amalthea</requiredProfiles>
     </stereotypesToApply>
   </adviceBindingsConfigurations>
-  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.componentInstance" target="//@elementTypeConfigurations.2">
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.componentInstance">
     <stereotypesToApply stereotypeQualifiedName="Amalthea::ComponentsModel::ComponentInstance">
       <requiredProfiles>Amalthea</requiredProfiles>
     </stereotypesToApply>
   </adviceBindingsConfigurations>
-  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.finterfacePort" target="//@elementTypeConfigurations.3">
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.finterfacePort" target="//@elementTypeConfigurations.2">
     <stereotypesToApply stereotypeQualifiedName="Amalthea::ComponentsModel::FInterfacePort">
       <requiredProfiles>Amalthea</requiredProfiles>
     </stereotypesToApply>
