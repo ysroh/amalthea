@@ -1447,7 +1447,7 @@
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_sDJ7tBZREeeFzte_Mj5jqA" type="Association_TargetRoleLabel">
         <styles xmi:type="notation:BooleanValueStyle" xmi:id="_stIFwBZREeeFzte_Mj5jqA" name="IS_UPDATED_POSITION" booleanValue="true"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_sDJ7tRZREeeFzte_Mj5jqA" x="-21" y="-19"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_sDJ7tRZREeeFzte_Mj5jqA" x="-57" y="-5"/>
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_sDJ7thZREeeFzte_Mj5jqA" type="Association_SourceRoleLabel">
         <styles xmi:type="notation:BooleanValueStyle" xmi:id="_stM-QBZREeeFzte_Mj5jqA" name="IS_UPDATED_POSITION" booleanValue="true"/>

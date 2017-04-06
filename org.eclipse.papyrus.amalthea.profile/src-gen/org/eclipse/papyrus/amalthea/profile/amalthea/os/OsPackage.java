@@ -188,7 +188,7 @@ public interface OsPackage extends EPackage {
 	int SCHEDULER__SCHEDULE_UNIT_PRIORITY = BlocksPackage.BLOCK_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Schedulingunit</b></em>' reference list.
+	 * The feature id for the '<em><b>Schedulingunit</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -279,7 +279,7 @@ public interface OsPackage extends EPackage {
 	int TASK_SCHEDULER__SCHEDULE_UNIT_PRIORITY = SCHEDULER__SCHEDULE_UNIT_PRIORITY;
 
 	/**
-	 * The feature id for the '<em><b>Schedulingunit</b></em>' reference list.
+	 * The feature id for the '<em><b>Schedulingunit</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -525,7 +525,7 @@ public interface OsPackage extends EPackage {
 	int INTERRUPT_CONTROLLER__SCHEDULE_UNIT_PRIORITY = SCHEDULER__SCHEDULE_UNIT_PRIORITY;
 
 	/**
-	 * The feature id for the '<em><b>Schedulingunit</b></em>' reference list.
+	 * The feature id for the '<em><b>Schedulingunit</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -964,10 +964,10 @@ public interface OsPackage extends EPackage {
 	EAttribute getScheduler_ScheduleUnitPriority();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.papyrus.amalthea.profile.amalthea.os.Scheduler#getSchedulingunit <em>Schedulingunit</em>}'.
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.amalthea.os.Scheduler#getSchedulingunit <em>Schedulingunit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Schedulingunit</em>'.
+	 * @return the meta object for the reference '<em>Schedulingunit</em>'.
 	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.os.Scheduler#getSchedulingunit()
 	 * @see #getScheduler()
 	 * @generated
@@ -1152,7 +1152,7 @@ public interface OsPackage extends EPackage {
 		EAttribute SCHEDULER__SCHEDULE_UNIT_PRIORITY = eINSTANCE.getScheduler_ScheduleUnitPriority();
 
 		/**
-		 * The meta object literal for the '<em><b>Schedulingunit</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Schedulingunit</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

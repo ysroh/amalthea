@@ -2,18 +2,11 @@
  */
 package org.eclipse.papyrus.amalthea.profile.amalthea.os.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
 import org.eclipse.papyrus.amalthea.profile.amalthea.os.OsPackage;
 import org.eclipse.papyrus.amalthea.profile.amalthea.os.Scheduler;
 import org.eclipse.papyrus.amalthea.profile.amalthea.os.SchedulingUnit;
@@ -56,14 +49,14 @@ public abstract class SchedulerImpl extends BlockImpl implements Scheduler {
 	protected int scheduleUnitPriority = SCHEDULE_UNIT_PRIORITY_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getSchedulingunit() <em>Schedulingunit</em>}' reference list.
+	 * The cached value of the '{@link #getSchedulingunit() <em>Schedulingunit</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSchedulingunit()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<SchedulingUnit> schedulingunit;
+	protected SchedulingUnit schedulingunit;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -110,11 +103,37 @@ public abstract class SchedulerImpl extends BlockImpl implements Scheduler {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<SchedulingUnit> getSchedulingunit() {
-		if (schedulingunit == null) {
-			schedulingunit = new EObjectResolvingEList<SchedulingUnit>(SchedulingUnit.class, this, OsPackage.SCHEDULER__SCHEDULINGUNIT);
+	public SchedulingUnit getSchedulingunit() {
+		if (schedulingunit != null && schedulingunit.eIsProxy()) {
+			InternalEObject oldSchedulingunit = (InternalEObject)schedulingunit;
+			schedulingunit = (SchedulingUnit)eResolveProxy(oldSchedulingunit);
+			if (schedulingunit != oldSchedulingunit) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, OsPackage.SCHEDULER__SCHEDULINGUNIT, oldSchedulingunit, schedulingunit));
+			}
 		}
 		return schedulingunit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SchedulingUnit basicGetSchedulingunit() {
+		return schedulingunit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSchedulingunit(SchedulingUnit newSchedulingunit) {
+		SchedulingUnit oldSchedulingunit = schedulingunit;
+		schedulingunit = newSchedulingunit;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OsPackage.SCHEDULER__SCHEDULINGUNIT, oldSchedulingunit, schedulingunit));
 	}
 
 	/**
@@ -128,7 +147,8 @@ public abstract class SchedulerImpl extends BlockImpl implements Scheduler {
 			case OsPackage.SCHEDULER__SCHEDULE_UNIT_PRIORITY:
 				return getScheduleUnitPriority();
 			case OsPackage.SCHEDULER__SCHEDULINGUNIT:
-				return getSchedulingunit();
+				if (resolve) return getSchedulingunit();
+				return basicGetSchedulingunit();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -146,8 +166,7 @@ public abstract class SchedulerImpl extends BlockImpl implements Scheduler {
 				setScheduleUnitPriority((Integer)newValue);
 				return;
 			case OsPackage.SCHEDULER__SCHEDULINGUNIT:
-				getSchedulingunit().clear();
-				getSchedulingunit().addAll((Collection<? extends SchedulingUnit>)newValue);
+				setSchedulingunit((SchedulingUnit)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -165,7 +184,7 @@ public abstract class SchedulerImpl extends BlockImpl implements Scheduler {
 				setScheduleUnitPriority(SCHEDULE_UNIT_PRIORITY_EDEFAULT);
 				return;
 			case OsPackage.SCHEDULER__SCHEDULINGUNIT:
-				getSchedulingunit().clear();
+				setSchedulingunit((SchedulingUnit)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -182,7 +201,7 @@ public abstract class SchedulerImpl extends BlockImpl implements Scheduler {
 			case OsPackage.SCHEDULER__SCHEDULE_UNIT_PRIORITY:
 				return scheduleUnitPriority != SCHEDULE_UNIT_PRIORITY_EDEFAULT;
 			case OsPackage.SCHEDULER__SCHEDULINGUNIT:
-				return schedulingunit != null && !schedulingunit.isEmpty();
+				return schedulingunit != null;
 		}
 		return super.eIsSet(featureID);
 	}

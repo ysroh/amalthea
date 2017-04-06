@@ -894,7 +894,7 @@
       </elements>
       <elements xmi:id="_2VpHehiXEeeoWfBb-FGkXQ" name="Scheduler">
         <properties xmi:id="_2VpHexiXEeeoWfBb-FGkXQ" name="scheduleUnitPriority" type="Integer"/>
-        <properties xmi:id="_2VpHfBiXEeeoWfBb-FGkXQ" name="schedulingunit" type="Reference" multiplicity="-1"/>
+        <properties xmi:id="_2VpHfBiXEeeoWfBb-FGkXQ" name="schedulingunit" type="Reference"/>
         <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690yXqDJEeSZxfCXzZz3-w"/>
       </elements>
       <elements xmi:id="_2VpHfRiXEeeoWfBb-FGkXQ" name="PriorityBased" supertypes="_2VpHfhiXEeeoWfBb-FGkXQ"/>

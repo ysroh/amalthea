@@ -357,7 +357,7 @@
           ordered="false" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"
           defaultValueLiteral="0"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="schedulingunit" ordered="false"
-          upperBound="-1" eType="#//os/SchedulingUnit"/>
+          eType="#//os/SchedulingUnit"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SchedulingUnit" abstract="true" eSuperTypes="../../org.eclipse.papyrus.sysml14/resources/profile/sysml.ecore#//blocks/Block"/>
     <eClassifiers xsi:type="ecore:EClass" name="TaskSchedulingAlgorithm" abstract="true"

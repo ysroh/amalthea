@@ -786,7 +786,7 @@ operations of CallSequence Class&#xD;
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_sDEcIRZREeeFzte_Mj5jqA" name="schedulingunit" type="_oiFF4RZKEeeFzte_Mj5jqA" association="_sDD1EBZREeeFzte_Mj5jqA">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_umVqIBZREeeFzte_Mj5jqA"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_umZ7kBZREeeFzte_Mj5jqA" value="*"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_umZ7kBZREeeFzte_Mj5jqA" value="1"/>
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiFF4RZKEeeFzte_Mj5jqA" name="SchedulingUnit" isAbstract="true">

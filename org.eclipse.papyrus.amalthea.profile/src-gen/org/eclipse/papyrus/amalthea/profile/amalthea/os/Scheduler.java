@@ -2,8 +2,6 @@
  */
 package org.eclipse.papyrus.amalthea.profile.amalthea.os;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.papyrus.sysml14.blocks.Block;
 
 /**
@@ -52,19 +50,29 @@ public interface Scheduler extends Block {
 	void setScheduleUnitPriority(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Schedulingunit</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.papyrus.amalthea.profile.amalthea.os.SchedulingUnit}.
+	 * Returns the value of the '<em><b>Schedulingunit</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Schedulingunit</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Schedulingunit</em>' reference list.
+	 * @return the value of the '<em>Schedulingunit</em>' reference.
+	 * @see #setSchedulingunit(SchedulingUnit)
 	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.os.OsPackage#getScheduler_Schedulingunit()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	EList<SchedulingUnit> getSchedulingunit();
+	SchedulingUnit getSchedulingunit();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.os.Scheduler#getSchedulingunit <em>Schedulingunit</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Schedulingunit</em>' reference.
+	 * @see #getSchedulingunit()
+	 * @generated
+	 */
+	void setSchedulingunit(SchedulingUnit value);
 
 } // Scheduler
