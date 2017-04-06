@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Allocations="http://www.eclipse.org/papyrus/sysml/1.4/SysML/Allocations" xmlns:Common="http://www.eclipse.org/papyrus/2017/Amalthea/Common" xmlns:Components="http://www.eclipse.org/papyrus/2017/Amalthea/Components" xmlns:Hardware="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware" xmlns:Os="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem" xmlns:Software="http://www.eclipse.org/papyrus/2017/Amalthea/Software" xmlns:Stimuli="http://www.eclipse.org/papyrus/2017/Amalthea/Stimuli" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/sysml/1.4/SysML/Allocations http://www.eclipse.org/papyrus/sysml/1.4/SysML#//allocations http://www.eclipse.org/papyrus/2017/Amalthea/Common http://www.eclipse.org/papyrus/2017/Amalthea#//common http://www.eclipse.org/papyrus/2017/Amalthea/Components http://www.eclipse.org/papyrus/2017/Amalthea#//components http://www.eclipse.org/papyrus/2017/Amalthea/Hardware http://www.eclipse.org/papyrus/2017/Amalthea#//hardware http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem http://www.eclipse.org/papyrus/2017/Amalthea#//os http://www.eclipse.org/papyrus/2017/Amalthea/Software http://www.eclipse.org/papyrus/2017/Amalthea#//software http://www.eclipse.org/papyrus/2017/Amalthea/Stimuli http://www.eclipse.org/papyrus/2017/Amalthea#//stimuli">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Common="http://www.eclipse.org/papyrus/2017/Amalthea/Common" xmlns:Components="http://www.eclipse.org/papyrus/2017/Amalthea/Components" xmlns:Hardware="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware" xmlns:Os="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem" xmlns:Software="http://www.eclipse.org/papyrus/2017/Amalthea/Software" xmlns:Stimuli="http://www.eclipse.org/papyrus/2017/Amalthea/Stimuli" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/2017/Amalthea/Common http://www.eclipse.org/papyrus/2017/Amalthea#//common http://www.eclipse.org/papyrus/2017/Amalthea/Components http://www.eclipse.org/papyrus/2017/Amalthea#//components http://www.eclipse.org/papyrus/2017/Amalthea/Hardware http://www.eclipse.org/papyrus/2017/Amalthea#//hardware http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem http://www.eclipse.org/papyrus/2017/Amalthea#//os http://www.eclipse.org/papyrus/2017/Amalthea/Software http://www.eclipse.org/papyrus/2017/Amalthea#//software http://www.eclipse.org/papyrus/2017/Amalthea/Stimuli http://www.eclipse.org/papyrus/2017/Amalthea#//stimuli">
   <uml:Model xmi:id="_8Ab4cBoaEee60cQ75oPnTA" name="Demo">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_8JlNYBoaEee60cQ75oPnTA">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -7,18 +7,6 @@
     <packageImport xmi:type="uml:PackageImport" xmi:id="_8J6kkBoaEee60cQ75oPnTA">
       <importedPackage xmi:type="uml:Package" href="pathmap://SysML14_LIBRARIES/SysML-Standard-Library.uml#SysML.package_packagedElement_Libraries"/>
     </packageImport>
-    <packagedElement xmi:type="uml:Package" xmi:id="_ia0V4BoqEeeK7PsAypm8Bw" name="Package"/>
-    <packagedElement xmi:type="uml:Package" xmi:id="_BtkaYBobEee60cQ75oPnTA" name="Common">
-      <packagedElement xmi:type="uml:Package" xmi:id="_1ayn4BofEeezHIvV1tGdjg" name="Weibull">
-        <packagedElement xmi:type="uml:Class" xmi:id="_DUXbQBoqEeeK7PsAypm8Bw" name="WeibullEstimators"/>
-        <packagedElement xmi:type="uml:Class" xmi:id="_DVJeYBoqEeeK7PsAypm8Bw" name="Deviation"/>
-        <packagedElement xmi:type="uml:Class" xmi:id="_DVxJcBoqEeeK7PsAypm8Bw" name="InstructionsDeviation"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:DataType" xmi:id="_-myxgBosEeevi--Z4zF9bA" name="Counter"/>
-      <packagedElement xmi:type="uml:DataType" xmi:id="_KoZ6gBozEeey-4lblVK-ag" name="Time"/>
-      <packagedElement xmi:type="uml:DataType" xmi:id="_XftkIBozEeey-4lblVK-ag" name="Timer10MSOffset"/>
-      <packagedElement xmi:type="uml:DataType" xmi:id="_bAI98BozEeey-4lblVK-ag" name="Timer10MSRecurrence"/>
-    </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_xtNLwBozEeey-4lblVK-ag" name="Component">
       <packagedElement xmi:type="uml:Class" xmi:id="_xtNLwRozEeey-4lblVK-ag" name="Component1">
         <ownedAttribute xmi:type="uml:Port" xmi:id="_xtNLwhozEeey-4lblVK-ag" name="Port1" visibility="public" aggregation="composite"/>
@@ -51,6 +39,12 @@
         <packagedElement xmi:type="uml:Class" xmi:id="_1meAgBosEeevi--Z4zF9bA" name="CallSequence">
           <ownedOperation xmi:type="uml:Operation" xmi:id="_2a5uIBosEeevi--Z4zF9bA" name="Operation1"/>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_Y-34gBotEeevi--Z4zF9bA" name="InterProcessActivation"/>
+          <nestedClassifier xmi:type="uml:DataType" xmi:id="_axNosBsFEeeSFpvWgLU3rg" name="Counter"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_1ayn4BofEeezHIvV1tGdjg" name="Weibull">
+          <packagedElement xmi:type="uml:Class" xmi:id="_DUXbQBoqEeeK7PsAypm8Bw" name="WeibullEstimators"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DVJeYBoqEeeK7PsAypm8Bw" name="Deviation"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DVxJcBoqEeeK7PsAypm8Bw" name="InstructionsDeviation"/>
         </packagedElement>
       </packagedElement>
     </packagedElement>
@@ -65,12 +59,14 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_AAoVcBoxEeeeW9cngqHTXg" name="OperatingSystem">
       <packagedElement xmi:type="uml:Class" xmi:id="_HxHPMBoxEeeeW9cngqHTXg" name="OS"/>
-      <packagedElement xmi:type="uml:Abstraction" xmi:id="_-2jq0Bo3Eeey-4lblVK-ag" name="Allocate2" client="_JgeUABoxEeeeW9cngqHTXg" supplier="_o3fXABotEeevi--Z4zF9bA"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_JgeUABoxEeeeW9cngqHTXg" name="TaskSchedulerCore"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_JgeUABoxEeeeW9cngqHTXg" name="TaskScheduler"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_HmaJIBozEeey-4lblVK-ag" name="SchedulingHwUnit"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_iij6kBsEEee_6e5LGg5HzA" name="SchedulingUnitTime"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_CZ_ZgBoxEeeeW9cngqHTXg" name="Stimuli">
       <packagedElement xmi:type="uml:Class" xmi:id="_SpqbMBozEeey-4lblVK-ag" name="Timer_10MS"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_XftkIBozEeey-4lblVK-ag" name="Timer10MSOffset"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_bAI98BozEeey-4lblVK-ag" name="Timer10MSRecurrence"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_FVPCoBoxEeeeW9cngqHTXg" name="Mapping"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_8DgakBoaEee60cQ75oPnTA">
@@ -150,8 +146,7 @@
   <Software:Task xmi:id="_lAnTcBoqEeeK7PsAypm8Bw" base_Class="_lAdicBoqEeeK7PsAypm8Bw" callgraph="_0aumIBosEeevi--Z4zF9bA" preemption="preemptive"/>
   <Software:CallGraph xmi:id="_0aumIBosEeevi--Z4zF9bA" base_Class="_0aQsEBosEeevi--Z4zF9bA" graphentries="_1mw7cBosEeevi--Z4zF9bA"/>
   <Software:CallSequence xmi:id="_1mw7cBosEeevi--Z4zF9bA" base_Class="_1meAgBosEeevi--Z4zF9bA"/>
-  <Software:TaskRunnableCall xmi:id="_2bQ6gBosEeevi--Z4zF9bA" base_Operation="_2a5uIBosEeevi--Z4zF9bA" counter="_-nGTgBosEeevi--Z4zF9bA" runnable="_TthY0BobEee60cQ75oPnTA"/>
-  <Common:Counter xmi:id="_-nGTgBosEeevi--Z4zF9bA" base_DataType="_-myxgBosEeevi--Z4zF9bA"/>
+  <Software:TaskRunnableCall xmi:id="_2bQ6gBosEeevi--Z4zF9bA" base_Operation="_2a5uIBosEeevi--Z4zF9bA" counter="_a89lsBsFEeeSFpvWgLU3rg" runnable="_TthY0BobEee60cQ75oPnTA"/>
   <Hardware:HwSystem xmi:id="_jj4vYBotEeevi--Z4zF9bA" base_Class="_jjcDcBotEeevi--Z4zF9bA" ecus="_lyulgBotEeevi--Z4zF9bA"/>
   <Hardware:ECU xmi:id="_lyulgBotEeevi--Z4zF9bA" base_Class="_lybqkBotEeevi--Z4zF9bA" quartzes="_xtMFABowEeeeW9cngqHTXg" microcontrollers="_nZtKYBotEeevi--Z4zF9bA"/>
   <Hardware:Microcontroller xmi:id="_nZtKYBotEeevi--Z4zF9bA" base_Class="_nZERMBotEeevi--Z4zF9bA" cores="_o3yR8BotEeevi--Z4zF9bA"/>
@@ -160,9 +155,8 @@
   <Hardware:Quartz xmi:id="_xtMFABowEeeeW9cngqHTXg" base_Class="_xs4jABowEeeeW9cngqHTXg"/>
   <Hardware:CoreType xmi:id="_3SDbwBowEeeeW9cngqHTXg" base_DataType="_3Rv5wBowEeeeW9cngqHTXg"/>
   <Os:OperatingSystem xmi:id="_HxaKIBoxEeeeW9cngqHTXg" base_Class="_HxHPMBoxEeeeW9cngqHTXg" taskscheduler="_Jg5KwBoxEeeeW9cngqHTXg"/>
-  <Os:TaskScheduler xmi:id="_Jg5KwBoxEeeeW9cngqHTXg" base_Class="_JgeUABoxEeeeW9cngqHTXg"/>
-  <Os:SchedulingHWUnit xmi:id="_Hng8YBozEeey-4lblVK-ag" base_Class="_HmaJIBozEeey-4lblVK-ag" time="_Ko2mcBozEeey-4lblVK-ag"/>
-  <Common:Time xmi:id="_Ko2mcBozEeey-4lblVK-ag" base_DataType="_KoZ6gBozEeey-4lblVK-ag"/>
+  <Os:TaskScheduler xmi:id="_Jg5KwBoxEeeeW9cngqHTXg" base_Class="_JgeUABoxEeeeW9cngqHTXg" schedulingunit="_Hng8YBozEeey-4lblVK-ag"/>
+  <Os:SchedulingHWUnit xmi:id="_Hng8YBozEeey-4lblVK-ag" base_Class="_HmaJIBozEeey-4lblVK-ag" time="_ijOB4BsEEee_6e5LGg5HzA"/>
   <Stimuli:Periodic xmi:id="_Sp99MBozEeey-4lblVK-ag" base_Class="_SpqbMBozEeey-4lblVK-ag" recurrence="_bASH4BozEeey-4lblVK-ag" offset="_Xf3VIBozEeey-4lblVK-ag"/>
   <Common:Time xmi:id="_Xf3VIBozEeey-4lblVK-ag" unit="ms" base_DataType="_XftkIBozEeey-4lblVK-ag"/>
   <Common:Time xmi:id="_bASH4BozEeey-4lblVK-ag" value="10" unit="ms" base_DataType="_bAI98BozEeey-4lblVK-ag"/>
@@ -171,5 +165,6 @@
   <Components:Composite xmi:id="_4h5ysBozEeey-4lblVK-ag" base_Class="_xtNLxRozEeey-4lblVK-ag"/>
   <Components:FInterfacePort xmi:id="_5xxfIBozEeey-4lblVK-ag" base_Port="_xtNLwhozEeey-4lblVK-ag"/>
   <Components:FInterfacePort xmi:id="_7KiB0BozEeey-4lblVK-ag" base_Port="_xtNLxBozEeey-4lblVK-ag"/>
-  <Allocations:Allocate xmi:id="_-263MBo3Eeey-4lblVK-ag" base_DirectedRelationship="_-2jq0Bo3Eeey-4lblVK-ag" base_Abstraction="_-2jq0Bo3Eeey-4lblVK-ag"/>
+  <Common:Time xmi:id="_ijOB4BsEEee_6e5LGg5HzA" value="10" unit="ms" base_DataType="_iij6kBsEEee_6e5LGg5HzA"/>
+  <Common:Counter xmi:id="_a89lsBsFEeeSFpvWgLU3rg" base_DataType="_axNosBsFEeeSFpvWgLU3rg"/>
 </xmi:XMI>

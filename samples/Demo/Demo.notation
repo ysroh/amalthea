@@ -282,19 +282,6 @@
       <configuration xmi:type="configuration:PapyrusDiagram" href="platform:/plugin/org.eclipse.papyrus.sysml14.diagram.blockdefinition/resources/configuration/blockDefinitionDiagram.configuration#_ZrBf4JaBEeS8eNvSwD0lgA"/>
     </styles>
     <element xmi:type="uml:Package" href="Demo.uml#_FVPCoBoxEeeeW9cngqHTXg"/>
-    <edges xmi:type="notation:Connector" xmi:id="_-3XjIBo3Eeey-4lblVK-ag" type="Abstraction_Edge" source="_drIvIBo0Eeey-4lblVK-ag" target="_l2-IIBo0Eeey-4lblVK-ag">
-      <children xmi:type="notation:DecorationNode" xmi:id="_-3XjIxo3Eeey-4lblVK-ag" type="Abstraction_NameLabel">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_-3XjJBo3Eeey-4lblVK-ag" y="40"/>
-      </children>
-      <children xmi:type="notation:DecorationNode" xmi:id="_-3XjJRo3Eeey-4lblVK-ag" type="Abstraction_StereotypeLabel">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_-3XjJho3Eeey-4lblVK-ag" y="60"/>
-      </children>
-      <styles xmi:type="notation:FontStyle" xmi:id="_-3XjIRo3Eeey-4lblVK-ag"/>
-      <element xmi:type="uml:Abstraction" href="Demo.uml#_-2jq0Bo3Eeey-4lblVK-ag"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-3XjIho3Eeey-4lblVK-ag" points="[231, 244, -643984, -643984]$[432, 344, -643984, -643984]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-4UlYBo3Eeey-4lblVK-ag" id="(1.0,0.82)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-4UlYRo3Eeey-4lblVK-ag" id="(0.0,0.21)"/>
-    </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_g5KqABo3Eeey-4lblVK-ag" type="PapyrusUMLClassDiagram" name="NewSysML1.4BlockDefinition" measurementUnit="Pixel">
     <children xmi:type="notation:Shape" xmi:id="_hn9CoBo3Eeey-4lblVK-ag" type="Class_Shape">

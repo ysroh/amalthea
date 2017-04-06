@@ -5,9 +5,13 @@
     <specializedTypesID>org.eclipse.papyrus.uml.DataType</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::CommonModel::Time" requiredProfile="Amalthea"/>
-      <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-        <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
-        <permissions containerType="org.eclipse.papyrus.uml.Classifier"/>
+      <composedRules xsi:type="rulebased:OrRuleConfiguration">
+        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+          <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
+        </composedRules>
+        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+          <permissions containerType="org.eclipse.papyrus.uml.Class" permitted="true"/>
+        </composedRules>
       </composedRules>
     </ruleConfiguration>
   </elementTypeConfigurations>
@@ -16,9 +20,13 @@
     <specializedTypesID>org.eclipse.papyrus.uml.DataType</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::CommonModel::Counter" requiredProfile="Amalthea"/>
-      <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-        <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
-        <permissions containerType="org.eclipse.papyrus.uml.Classifier"/>
+      <composedRules xsi:type="rulebased:OrRuleConfiguration">
+        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+          <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
+        </composedRules>
+        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+          <permissions containerType="org.eclipse.papyrus.uml.Class" permitted="true"/>
+        </composedRules>
       </composedRules>
     </ruleConfiguration>
   </elementTypeConfigurations>
@@ -60,9 +68,13 @@
     <specializedTypesID>org.eclipse.papyrus.uml.DataType</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::CommonModel::DataSize" requiredProfile="Amalthea"/>
-      <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-        <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
-        <permissions containerType="org.eclipse.papyrus.uml.Classifier"/>
+      <composedRules xsi:type="rulebased:OrRuleConfiguration">
+        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+          <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
+        </composedRules>
+        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+          <permissions containerType="org.eclipse.papyrus.uml.Class" permitted="true"/>
+        </composedRules>
       </composedRules>
     </ruleConfiguration>
   </elementTypeConfigurations>
