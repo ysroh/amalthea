@@ -2,14 +2,17 @@
  */
 package org.eclipse.papyrus.amalthea.profile.amalthea.components.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.papyrus.amalthea.profile.amalthea.components.Component;
 import org.eclipse.papyrus.amalthea.profile.amalthea.components.ComponentsPackage;
 
@@ -22,6 +25,7 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.components.ComponentsPackag
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.impl.ComponentImpl#getBase_Class <em>Base Class</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.impl.ComponentImpl#getRunnables <em>Runnables</em>}</li>
  * </ul>
  *
  * @generated
@@ -36,6 +40,15 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 	 * @ordered
 	 */
 	protected org.eclipse.uml2.uml.Class base_Class;
+	/**
+	 * The cached value of the '{@link #getRunnables() <em>Runnables</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRunnables()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable> runnables;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -98,12 +111,26 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable> getRunnables() {
+		if (runnables == null) {
+			runnables = new EObjectResolvingEList<org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable>(org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable.class, this, ComponentsPackage.COMPONENT__RUNNABLES);
+		}
+		return runnables;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ComponentsPackage.COMPONENT__BASE_CLASS:
 				if (resolve) return getBase_Class();
 				return basicGetBase_Class();
+			case ComponentsPackage.COMPONENT__RUNNABLES:
+				return getRunnables();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -113,11 +140,16 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ComponentsPackage.COMPONENT__BASE_CLASS:
 				setBase_Class((org.eclipse.uml2.uml.Class)newValue);
+				return;
+			case ComponentsPackage.COMPONENT__RUNNABLES:
+				getRunnables().clear();
+				getRunnables().addAll((Collection<? extends org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -134,6 +166,9 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 			case ComponentsPackage.COMPONENT__BASE_CLASS:
 				setBase_Class((org.eclipse.uml2.uml.Class)null);
 				return;
+			case ComponentsPackage.COMPONENT__RUNNABLES:
+				getRunnables().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -148,6 +183,8 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 		switch (featureID) {
 			case ComponentsPackage.COMPONENT__BASE_CLASS:
 				return base_Class != null;
+			case ComponentsPackage.COMPONENT__RUNNABLES:
+				return runnables != null && !runnables.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

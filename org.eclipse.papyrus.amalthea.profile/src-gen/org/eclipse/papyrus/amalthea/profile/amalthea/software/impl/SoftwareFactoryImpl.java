@@ -73,12 +73,12 @@ public class SoftwareFactoryImpl extends EFactoryImpl implements SoftwareFactory
 			case SoftwarePackage.TASK: return createTask();
 			case SoftwarePackage.ISR: return createISR();
 			case SoftwarePackage.LABEL: return createLabel();
-			case SoftwarePackage.RUNNABLE: return createRunnable();
 			case SoftwarePackage.CALL_SEQUENCE: return createCallSequence();
 			case SoftwarePackage.INTER_PROCESS_ACTIVATION: return createInterProcessActivation();
 			case SoftwarePackage.TASK_RUNNABLE_CALL: return createTaskRunnableCall();
 			case SoftwarePackage.LABEL_ACCESS: return createLabelAccess();
 			case SoftwarePackage.RUNNABLE_INSTRUCTIONS: return createRunnableInstructions();
+			case SoftwarePackage.RUNNABLE: return createRunnable();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}

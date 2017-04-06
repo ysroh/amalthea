@@ -111,6 +111,8 @@
     <eClassifiers xsi:type="ecore:EClass" name="Component">
       <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
           lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="runnables" ordered="false"
+          upperBound="-1" eType="#//software/Runnable"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Composite" eSuperTypes="#//components/Component">
       <eStructuralFeatures xsi:type="ecore:EReference" name="componentinstances" ordered="false"
@@ -119,6 +121,98 @@
     <eClassifiers xsi:type="ecore:EClass" name="ComponentInstance">
       <eStructuralFeatures xsi:type="ecore:EReference" name="base_Property" ordered="false"
           lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Property"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="software" nsURI="http://www.eclipse.org/papyrus/2017/Amalthea/Software"
+      nsPrefix="Software">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="SWModel"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="RunnableItem" abstract="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="RunnableItems are owned&#xD;&#xA;operations of Runnable&#xD;&#xA;"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Operation" ordered="false"
+          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CallSequenceItem" abstract="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="CallSequenceItems are owned&#xD;&#xA;operations of CallSequence Class&#xD;&#xA;"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Operation" ordered="false"
+          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="counter" ordered="false"
+          eType="#//common/Counter"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="AbstractElementMemoryInformation"
+        abstract="true" eSuperTypes="../../org.eclipse.papyrus.sysml14/resources/profile/sysml.ecore#//blocks/Block"/>
+    <eClassifiers xsi:type="ecore:EClass" name="AbstractProcess" abstract="true" eSuperTypes="#//software/AbstractElementMemoryInformation">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="priority" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Process" abstract="true" eSuperTypes="#//software/AbstractProcess">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="callgraph" ordered="false"
+          eType="#//software/CallGraph"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CallGraph">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="graphentries" ordered="false"
+          lowerBound="1" upperBound="-1" eType="#//software/GraphEntry"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="GraphEntry" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
+          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Task" eSuperTypes="#//software/Process">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="preemption" ordered="false"
+          lowerBound="1" eType="#//software/Preemption"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="multipleTaskActivationLimit"
+          ordered="false" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="Preemption">
+      <eLiterals name="_undefined_"/>
+      <eLiterals name="preemptive" value="1"/>
+      <eLiterals name="cooperative" value="2"/>
+      <eLiterals name="non_preemptive" value="3"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ISR" eSuperTypes="#//software/Process"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Label" eSuperTypes="#//software/AbstractElementMemoryInformation">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="constant" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="bVolatile" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="buffered" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberBits" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CallSequence" eSuperTypes="#//software/GraphEntry"/>
+    <eClassifiers xsi:type="ecore:EClass" name="InterProcessActivation" eSuperTypes="#//software/CallSequenceItem"/>
+    <eClassifiers xsi:type="ecore:EClass" name="TaskRunnableCall" eSuperTypes="#//software/CallSequenceItem">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="runnable" ordered="false"
+          lowerBound="1" eType="#//software/Runnable"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="LabelAccess" eSuperTypes="#//software/RunnableItem">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isBuffered" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="access" ordered="false"
+          lowerBound="1" eType="#//software/LabelAccessEnum"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="LabelAccessEnum">
+      <eLiterals name="_undefined_"/>
+      <eLiterals name="read" value="1"/>
+      <eLiterals name="write" value="2"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="RunnableInstructions" eSuperTypes="#//software/RunnableItem">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="default" ordered="false"
+          lowerBound="1" eType="#//common/Instructions"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Runnable" eSuperTypes="#//software/AbstractElementMemoryInformation">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="callback" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="service" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="hardware" nsURI="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"
@@ -239,98 +333,6 @@
       <eLiterals name="kHz" value="2"/>
       <eLiterals name="MHz" value="3"/>
       <eLiterals name="GHz" value="4"/>
-    </eClassifiers>
-  </eSubpackages>
-  <eSubpackages name="software" nsURI="http://www.eclipse.org/papyrus/2017/Amalthea/Software"
-      nsPrefix="Software">
-    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
-      <details key="originalName" value="SWModel"/>
-    </eAnnotations>
-    <eClassifiers xsi:type="ecore:EClass" name="RunnableItem" abstract="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="RunnableItems are owned&#xD;&#xA;operations of Runnable&#xD;&#xA;"/>
-      </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Operation" ordered="false"
-          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="CallSequenceItem" abstract="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="CallSequenceItems are owned&#xD;&#xA;operations of CallSequence Class&#xD;&#xA;"/>
-      </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Operation" ordered="false"
-          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Operation"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="counter" ordered="false"
-          eType="#//common/Counter"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="AbstractElementMemoryInformation"
-        abstract="true" eSuperTypes="../../org.eclipse.papyrus.sysml14/resources/profile/sysml.ecore#//blocks/Block"/>
-    <eClassifiers xsi:type="ecore:EClass" name="AbstractProcess" abstract="true" eSuperTypes="#//software/AbstractElementMemoryInformation">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="priority" ordered="false"
-          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Process" abstract="true" eSuperTypes="#//software/AbstractProcess">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="callgraph" ordered="false"
-          eType="#//software/CallGraph"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="CallGraph">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
-          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="graphentries" ordered="false"
-          lowerBound="1" upperBound="-1" eType="#//software/GraphEntry"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="GraphEntry" abstract="true">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"
-          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Class"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Task" eSuperTypes="#//software/Process">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="preemption" ordered="false"
-          lowerBound="1" eType="#//software/Preemption"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="multipleTaskActivationLimit"
-          ordered="false" lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EEnum" name="Preemption">
-      <eLiterals name="_undefined_"/>
-      <eLiterals name="preemptive" value="1"/>
-      <eLiterals name="cooperative" value="2"/>
-      <eLiterals name="non_preemptive" value="3"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ISR" eSuperTypes="#//software/Process"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Label" eSuperTypes="#//software/AbstractElementMemoryInformation">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="constant" ordered="false"
-          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="bVolatile" ordered="false"
-          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="buffered" ordered="false"
-          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberBits" ordered="false"
-          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Runnable" eSuperTypes="#//software/AbstractElementMemoryInformation">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="callback" ordered="false"
-          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="service" ordered="false"
-          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="CallSequence" eSuperTypes="#//software/GraphEntry"/>
-    <eClassifiers xsi:type="ecore:EClass" name="InterProcessActivation" eSuperTypes="#//software/CallSequenceItem"/>
-    <eClassifiers xsi:type="ecore:EClass" name="TaskRunnableCall" eSuperTypes="#//software/CallSequenceItem">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="runnable" ordered="false"
-          lowerBound="1" eType="#//software/Runnable"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="LabelAccess" eSuperTypes="#//software/RunnableItem">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="isBuffered" ordered="false"
-          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="access" ordered="false"
-          lowerBound="1" eType="#//software/LabelAccessEnum"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EEnum" name="LabelAccessEnum">
-      <eLiterals name="_undefined_"/>
-      <eLiterals name="read" value="1"/>
-      <eLiterals name="write" value="2"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="RunnableInstructions" eSuperTypes="#//software/RunnableItem">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="default" ordered="false"
-          lowerBound="1" eType="#//common/Instructions"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="os" nsURI="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem"

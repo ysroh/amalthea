@@ -789,7 +789,246 @@ public interface SoftwarePackage extends EPackage {
 	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.SoftwarePackageImpl#getRunnable()
 	 * @generated
 	 */
-	int RUNNABLE = 10;
+	int RUNNABLE = 15;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.CallSequenceImpl <em>Call Sequence</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.CallSequenceImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.SoftwarePackageImpl#getCallSequence()
+	 * @generated
+	 */
+	int CALL_SEQUENCE = 10;
+
+	/**
+	 * The feature id for the '<em><b>Base Class</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALL_SEQUENCE__BASE_CLASS = GRAPH_ENTRY__BASE_CLASS;
+
+	/**
+	 * The number of structural features of the '<em>Call Sequence</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALL_SEQUENCE_FEATURE_COUNT = GRAPH_ENTRY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Call Sequence</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALL_SEQUENCE_OPERATION_COUNT = GRAPH_ENTRY_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.InterProcessActivationImpl <em>Inter Process Activation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.InterProcessActivationImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.SoftwarePackageImpl#getInterProcessActivation()
+	 * @generated
+	 */
+	int INTER_PROCESS_ACTIVATION = 11;
+
+	/**
+	 * The feature id for the '<em><b>Base Operation</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTER_PROCESS_ACTIVATION__BASE_OPERATION = CALL_SEQUENCE_ITEM__BASE_OPERATION;
+
+	/**
+	 * The feature id for the '<em><b>Counter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTER_PROCESS_ACTIVATION__COUNTER = CALL_SEQUENCE_ITEM__COUNTER;
+
+	/**
+	 * The number of structural features of the '<em>Inter Process Activation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTER_PROCESS_ACTIVATION_FEATURE_COUNT = CALL_SEQUENCE_ITEM_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Inter Process Activation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTER_PROCESS_ACTIVATION_OPERATION_COUNT = CALL_SEQUENCE_ITEM_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.TaskRunnableCallImpl <em>Task Runnable Call</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.TaskRunnableCallImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.SoftwarePackageImpl#getTaskRunnableCall()
+	 * @generated
+	 */
+	int TASK_RUNNABLE_CALL = 12;
+
+	/**
+	 * The feature id for the '<em><b>Base Operation</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_RUNNABLE_CALL__BASE_OPERATION = CALL_SEQUENCE_ITEM__BASE_OPERATION;
+
+	/**
+	 * The feature id for the '<em><b>Counter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_RUNNABLE_CALL__COUNTER = CALL_SEQUENCE_ITEM__COUNTER;
+
+	/**
+	 * The feature id for the '<em><b>Runnable</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_RUNNABLE_CALL__RUNNABLE = CALL_SEQUENCE_ITEM_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Task Runnable Call</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_RUNNABLE_CALL_FEATURE_COUNT = CALL_SEQUENCE_ITEM_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Task Runnable Call</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TASK_RUNNABLE_CALL_OPERATION_COUNT = CALL_SEQUENCE_ITEM_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.LabelAccessImpl <em>Label Access</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.LabelAccessImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.SoftwarePackageImpl#getLabelAccess()
+	 * @generated
+	 */
+	int LABEL_ACCESS = 13;
+
+	/**
+	 * The feature id for the '<em><b>Base Operation</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL_ACCESS__BASE_OPERATION = RUNNABLE_ITEM__BASE_OPERATION;
+
+	/**
+	 * The feature id for the '<em><b>Is Buffered</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL_ACCESS__IS_BUFFERED = RUNNABLE_ITEM_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Access</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL_ACCESS__ACCESS = RUNNABLE_ITEM_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Label Access</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL_ACCESS_FEATURE_COUNT = RUNNABLE_ITEM_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Label Access</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL_ACCESS_OPERATION_COUNT = RUNNABLE_ITEM_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.RunnableInstructionsImpl <em>Runnable Instructions</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.RunnableInstructionsImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.SoftwarePackageImpl#getRunnableInstructions()
+	 * @generated
+	 */
+	int RUNNABLE_INSTRUCTIONS = 14;
+
+	/**
+	 * The feature id for the '<em><b>Base Operation</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RUNNABLE_INSTRUCTIONS__BASE_OPERATION = RUNNABLE_ITEM__BASE_OPERATION;
+
+	/**
+	 * The feature id for the '<em><b>Default</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RUNNABLE_INSTRUCTIONS__DEFAULT = RUNNABLE_ITEM_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Runnable Instructions</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RUNNABLE_INSTRUCTIONS_FEATURE_COUNT = RUNNABLE_ITEM_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Runnable Instructions</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RUNNABLE_INSTRUCTIONS_OPERATION_COUNT = RUNNABLE_ITEM_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Base Class</b></em>' reference.
@@ -871,245 +1110,6 @@ public interface SoftwarePackage extends EPackage {
 	 * @ordered
 	 */
 	int RUNNABLE_OPERATION_COUNT = ABSTRACT_ELEMENT_MEMORY_INFORMATION_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.CallSequenceImpl <em>Call Sequence</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.CallSequenceImpl
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.SoftwarePackageImpl#getCallSequence()
-	 * @generated
-	 */
-	int CALL_SEQUENCE = 11;
-
-	/**
-	 * The feature id for the '<em><b>Base Class</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALL_SEQUENCE__BASE_CLASS = GRAPH_ENTRY__BASE_CLASS;
-
-	/**
-	 * The number of structural features of the '<em>Call Sequence</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALL_SEQUENCE_FEATURE_COUNT = GRAPH_ENTRY_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Call Sequence</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALL_SEQUENCE_OPERATION_COUNT = GRAPH_ENTRY_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.InterProcessActivationImpl <em>Inter Process Activation</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.InterProcessActivationImpl
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.SoftwarePackageImpl#getInterProcessActivation()
-	 * @generated
-	 */
-	int INTER_PROCESS_ACTIVATION = 12;
-
-	/**
-	 * The feature id for the '<em><b>Base Operation</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTER_PROCESS_ACTIVATION__BASE_OPERATION = CALL_SEQUENCE_ITEM__BASE_OPERATION;
-
-	/**
-	 * The feature id for the '<em><b>Counter</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTER_PROCESS_ACTIVATION__COUNTER = CALL_SEQUENCE_ITEM__COUNTER;
-
-	/**
-	 * The number of structural features of the '<em>Inter Process Activation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTER_PROCESS_ACTIVATION_FEATURE_COUNT = CALL_SEQUENCE_ITEM_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Inter Process Activation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTER_PROCESS_ACTIVATION_OPERATION_COUNT = CALL_SEQUENCE_ITEM_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.TaskRunnableCallImpl <em>Task Runnable Call</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.TaskRunnableCallImpl
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.SoftwarePackageImpl#getTaskRunnableCall()
-	 * @generated
-	 */
-	int TASK_RUNNABLE_CALL = 13;
-
-	/**
-	 * The feature id for the '<em><b>Base Operation</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_RUNNABLE_CALL__BASE_OPERATION = CALL_SEQUENCE_ITEM__BASE_OPERATION;
-
-	/**
-	 * The feature id for the '<em><b>Counter</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_RUNNABLE_CALL__COUNTER = CALL_SEQUENCE_ITEM__COUNTER;
-
-	/**
-	 * The feature id for the '<em><b>Runnable</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_RUNNABLE_CALL__RUNNABLE = CALL_SEQUENCE_ITEM_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Task Runnable Call</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_RUNNABLE_CALL_FEATURE_COUNT = CALL_SEQUENCE_ITEM_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Task Runnable Call</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TASK_RUNNABLE_CALL_OPERATION_COUNT = CALL_SEQUENCE_ITEM_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.LabelAccessImpl <em>Label Access</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.LabelAccessImpl
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.SoftwarePackageImpl#getLabelAccess()
-	 * @generated
-	 */
-	int LABEL_ACCESS = 14;
-
-	/**
-	 * The feature id for the '<em><b>Base Operation</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LABEL_ACCESS__BASE_OPERATION = RUNNABLE_ITEM__BASE_OPERATION;
-
-	/**
-	 * The feature id for the '<em><b>Is Buffered</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LABEL_ACCESS__IS_BUFFERED = RUNNABLE_ITEM_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Access</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LABEL_ACCESS__ACCESS = RUNNABLE_ITEM_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Label Access</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LABEL_ACCESS_FEATURE_COUNT = RUNNABLE_ITEM_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Label Access</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LABEL_ACCESS_OPERATION_COUNT = RUNNABLE_ITEM_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.RunnableInstructionsImpl <em>Runnable Instructions</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.RunnableInstructionsImpl
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.SoftwarePackageImpl#getRunnableInstructions()
-	 * @generated
-	 */
-	int RUNNABLE_INSTRUCTIONS = 15;
-
-	/**
-	 * The feature id for the '<em><b>Base Operation</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RUNNABLE_INSTRUCTIONS__BASE_OPERATION = RUNNABLE_ITEM__BASE_OPERATION;
-
-	/**
-	 * The feature id for the '<em><b>Default</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RUNNABLE_INSTRUCTIONS__DEFAULT = RUNNABLE_ITEM_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Runnable Instructions</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RUNNABLE_INSTRUCTIONS_FEATURE_COUNT = RUNNABLE_ITEM_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Runnable Instructions</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RUNNABLE_INSTRUCTIONS_OPERATION_COUNT = RUNNABLE_ITEM_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.Preemption <em>Preemption</em>}' enum.

@@ -113,13 +113,22 @@ public interface ComponentsPackage extends EPackage {
 	int COMPONENT__BASE_CLASS = 0;
 
 	/**
+	 * The feature id for the '<em><b>Runnables</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__RUNNABLES = 1;
+
+	/**
 	 * The number of structural features of the '<em>Component</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_FEATURE_COUNT = 1;
+	int COMPONENT_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Component</em>' class.
@@ -148,6 +157,15 @@ public interface ComponentsPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPOSITE__BASE_CLASS = COMPONENT__BASE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Runnables</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE__RUNNABLES = COMPONENT__RUNNABLES;
 
 	/**
 	 * The feature id for the '<em><b>Componentinstances</b></em>' reference list.
@@ -257,6 +275,17 @@ public interface ComponentsPackage extends EPackage {
 	EReference getComponent_Base_Class();
 
 	/**
+	 * Returns the meta object for the reference list '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.Component#getRunnables <em>Runnables</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Runnables</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.Component#getRunnables()
+	 * @see #getComponent()
+	 * @generated
+	 */
+	EReference getComponent_Runnables();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.Composite <em>Composite</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -356,6 +385,14 @@ public interface ComponentsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference COMPONENT__BASE_CLASS = eINSTANCE.getComponent_Base_Class();
+
+		/**
+		 * The meta object literal for the '<em><b>Runnables</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPONENT__RUNNABLES = eINSTANCE.getComponent_Runnables();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.impl.CompositeImpl <em>Composite</em>}' class.

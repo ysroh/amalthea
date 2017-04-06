@@ -245,6 +245,10 @@ of UML port&#xD;
         <ownedAttribute xmi:type="uml:Property" xmi:id="_OBiWIRoKEeemOqGrpy978g" name="base_Class" association="_OBZMMBoKEeemOqGrpy978g">
           <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_vYbTMxrXEeemOqGrpy978g" name="runnables" type="_HnTPEBfEEeeFzte_Mj5jqA" association="_vYbTMBrXEeemOqGrpy978g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zAT_4BrXEeemOqGrpy978g"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zAeX8BrXEeemOqGrpy978g" value="*"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_nt3XcBZGEeeFzte_Mj5jqA" name="Composite">
         <generalization xmi:type="uml:Generalization" xmi:id="_nt3XcRZGEeeFzte_Mj5jqA" general="_nt2wYhZGEeeFzte_Mj5jqA"/>
@@ -262,6 +266,12 @@ of UML port&#xD;
         <ownedAttribute xmi:type="uml:Property" xmi:id="_nt3-gxZGEeeFzte_Mj5jqA" name="base_Port" association="_nt5zsBZGEeeFzte_Mj5jqA">
           <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Port"/>
         </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_vYbTMBrXEeemOqGrpy978g" memberEnd="_vYbTMxrXEeemOqGrpy978g _vYkdIBrXEeemOqGrpy978g">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vYbTMRrXEeemOqGrpy978g" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vYbTMhrXEeemOqGrpy978g" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_vYkdIBrXEeemOqGrpy978g" name="component" type="_nt2wYhZGEeeFzte_Mj5jqA" association="_vYbTMBrXEeemOqGrpy978g"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_oiEewBZKEeeFzte_Mj5jqA" name="HWModel" URI="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware">

@@ -907,6 +907,7 @@
         <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690yG6DJEeSZxfCXzZz3-w"/>
       </elements>
       <elements xmi:id="_2VpHgRiXEeeoWfBb-FGkXQ" name="Component">
+        <properties xmi:id="_-cyqQBrXEeemOqGrpy978g" name="runnables" type="Reference" multiplicity="-1"/>
         <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690z56DJEeSZxfCXzZz3-w"/>
       </elements>
       <elements xmi:id="_2VpHghiXEeeoWfBb-FGkXQ" name="FInterfacePort">

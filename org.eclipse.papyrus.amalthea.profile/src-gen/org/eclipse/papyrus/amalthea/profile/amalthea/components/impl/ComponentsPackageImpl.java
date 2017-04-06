@@ -138,8 +138,8 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 		// Obtain or create and register interdependencies
 		AmaltheaPackageImpl theAmaltheaPackage = (AmaltheaPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AmaltheaPackage.eNS_URI) instanceof AmaltheaPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AmaltheaPackage.eNS_URI) : AmaltheaPackage.eINSTANCE);
 		CommonPackageImpl theCommonPackage = (CommonPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CommonPackage.eNS_URI) instanceof CommonPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CommonPackage.eNS_URI) : CommonPackage.eINSTANCE);
-		HardwarePackageImpl theHardwarePackage = (HardwarePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(HardwarePackage.eNS_URI) instanceof HardwarePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(HardwarePackage.eNS_URI) : HardwarePackage.eINSTANCE);
 		SoftwarePackageImpl theSoftwarePackage = (SoftwarePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(SoftwarePackage.eNS_URI) instanceof SoftwarePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(SoftwarePackage.eNS_URI) : SoftwarePackage.eINSTANCE);
+		HardwarePackageImpl theHardwarePackage = (HardwarePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(HardwarePackage.eNS_URI) instanceof HardwarePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(HardwarePackage.eNS_URI) : HardwarePackage.eINSTANCE);
 		OsPackageImpl theOsPackage = (OsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(OsPackage.eNS_URI) instanceof OsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(OsPackage.eNS_URI) : OsPackage.eINSTANCE);
 		MappingPackageImpl theMappingPackage = (MappingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MappingPackage.eNS_URI) instanceof MappingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MappingPackage.eNS_URI) : MappingPackage.eINSTANCE);
 		StimuliPackageImpl theStimuliPackage = (StimuliPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StimuliPackage.eNS_URI) instanceof StimuliPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StimuliPackage.eNS_URI) : StimuliPackage.eINSTANCE);
@@ -149,8 +149,8 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 		theComponentsPackage.createPackageContents();
 		theAmaltheaPackage.createPackageContents();
 		theCommonPackage.createPackageContents();
-		theHardwarePackage.createPackageContents();
 		theSoftwarePackage.createPackageContents();
+		theHardwarePackage.createPackageContents();
 		theOsPackage.createPackageContents();
 		theMappingPackage.createPackageContents();
 		theStimuliPackage.createPackageContents();
@@ -160,8 +160,8 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 		theComponentsPackage.initializePackageContents();
 		theAmaltheaPackage.initializePackageContents();
 		theCommonPackage.initializePackageContents();
-		theHardwarePackage.initializePackageContents();
 		theSoftwarePackage.initializePackageContents();
+		theHardwarePackage.initializePackageContents();
 		theOsPackage.initializePackageContents();
 		theMappingPackage.initializePackageContents();
 		theStimuliPackage.initializePackageContents();
@@ -210,6 +210,15 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 	 */
 	public EReference getComponent_Base_Class() {
 		return (EReference)componentEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getComponent_Runnables() {
+		return (EReference)componentEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -281,6 +290,7 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 
 		componentEClass = createEClass(COMPONENT);
 		createEReference(componentEClass, COMPONENT__BASE_CLASS);
+		createEReference(componentEClass, COMPONENT__RUNNABLES);
 
 		compositeEClass = createEClass(COMPOSITE);
 		createEReference(compositeEClass, COMPOSITE__COMPONENTINSTANCES);
@@ -314,6 +324,7 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 
 		// Obtain other dependent packages
 		UMLPackage theUMLPackage = (UMLPackage)EPackage.Registry.INSTANCE.getEPackage(UMLPackage.eNS_URI);
+		SoftwarePackage theSoftwarePackage = (SoftwarePackage)EPackage.Registry.INSTANCE.getEPackage(SoftwarePackage.eNS_URI);
 
 		// Create type parameters
 
@@ -328,6 +339,7 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 
 		initEClass(componentEClass, Component.class, "Component", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getComponent_Base_Class(), theUMLPackage.getClass_(), null, "base_Class", null, 1, 1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getComponent_Runnables(), theSoftwarePackage.getRunnable(), null, "runnables", null, 0, -1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(compositeEClass, Composite.class, "Composite", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getComposite_Componentinstances(), this.getComponentInstance(), null, "componentinstances", null, 0, -1, Composite.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

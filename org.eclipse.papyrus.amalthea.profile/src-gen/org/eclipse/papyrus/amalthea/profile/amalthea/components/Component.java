@@ -2,6 +2,7 @@
  */
 package org.eclipse.papyrus.amalthea.profile.amalthea.components;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -14,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.Component#getBase_Class <em>Base Class</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.Component#getRunnables <em>Runnables</em>}</li>
  * </ul>
  *
  * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.ComponentsPackage#getComponent()
@@ -46,5 +48,21 @@ public interface Component extends EObject {
 	 * @generated
 	 */
 	void setBase_Class(org.eclipse.uml2.uml.Class value);
+
+	/**
+	 * Returns the value of the '<em><b>Runnables</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Runnables</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Runnables</em>' reference list.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.ComponentsPackage#getComponent_Runnables()
+	 * @model ordered="false"
+	 * @generated
+	 */
+	EList<org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable> getRunnables();
 
 } // Component

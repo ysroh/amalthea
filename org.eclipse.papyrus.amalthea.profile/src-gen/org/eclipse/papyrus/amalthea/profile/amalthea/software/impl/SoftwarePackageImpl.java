@@ -695,10 +695,6 @@ public class SoftwarePackageImpl extends EPackageImpl implements SoftwarePackage
 		createEAttribute(labelEClass, LABEL__BUFFERED);
 		createEAttribute(labelEClass, LABEL__NUMBER_BITS);
 
-		runnableEClass = createEClass(RUNNABLE);
-		createEAttribute(runnableEClass, RUNNABLE__CALLBACK);
-		createEAttribute(runnableEClass, RUNNABLE__SERVICE);
-
 		callSequenceEClass = createEClass(CALL_SEQUENCE);
 
 		interProcessActivationEClass = createEClass(INTER_PROCESS_ACTIVATION);
@@ -712,6 +708,10 @@ public class SoftwarePackageImpl extends EPackageImpl implements SoftwarePackage
 
 		runnableInstructionsEClass = createEClass(RUNNABLE_INSTRUCTIONS);
 		createEReference(runnableInstructionsEClass, RUNNABLE_INSTRUCTIONS__DEFAULT);
+
+		runnableEClass = createEClass(RUNNABLE);
+		createEAttribute(runnableEClass, RUNNABLE__CALLBACK);
+		createEAttribute(runnableEClass, RUNNABLE__SERVICE);
 
 		// Create enums
 		preemptionEEnum = createEEnum(PREEMPTION);
@@ -758,12 +758,12 @@ public class SoftwarePackageImpl extends EPackageImpl implements SoftwarePackage
 		taskEClass.getESuperTypes().add(this.getProcess());
 		isrEClass.getESuperTypes().add(this.getProcess());
 		labelEClass.getESuperTypes().add(this.getAbstractElementMemoryInformation());
-		runnableEClass.getESuperTypes().add(this.getAbstractElementMemoryInformation());
 		callSequenceEClass.getESuperTypes().add(this.getGraphEntry());
 		interProcessActivationEClass.getESuperTypes().add(this.getCallSequenceItem());
 		taskRunnableCallEClass.getESuperTypes().add(this.getCallSequenceItem());
 		labelAccessEClass.getESuperTypes().add(this.getRunnableItem());
 		runnableInstructionsEClass.getESuperTypes().add(this.getRunnableItem());
+		runnableEClass.getESuperTypes().add(this.getAbstractElementMemoryInformation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(runnableItemEClass, RunnableItem.class, "RunnableItem", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -800,10 +800,6 @@ public class SoftwarePackageImpl extends EPackageImpl implements SoftwarePackage
 		initEAttribute(getLabel_Buffered(), theTypesPackage.getBoolean(), "buffered", null, 1, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getLabel_NumberBits(), theTypesPackage.getInteger(), "numberBits", null, 1, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(runnableEClass, org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable.class, "Runnable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getRunnable_Callback(), theTypesPackage.getBoolean(), "callback", null, 1, 1, org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getRunnable_Service(), theTypesPackage.getBoolean(), "service", null, 1, 1, org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
 		initEClass(callSequenceEClass, CallSequence.class, "CallSequence", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(interProcessActivationEClass, InterProcessActivation.class, "InterProcessActivation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -817,6 +813,10 @@ public class SoftwarePackageImpl extends EPackageImpl implements SoftwarePackage
 
 		initEClass(runnableInstructionsEClass, RunnableInstructions.class, "RunnableInstructions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRunnableInstructions_Default(), theCommonPackage.getInstructions(), null, "default", null, 1, 1, RunnableInstructions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(runnableEClass, org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable.class, "Runnable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRunnable_Callback(), theTypesPackage.getBoolean(), "callback", null, 1, 1, org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getRunnable_Service(), theTypesPackage.getBoolean(), "service", null, 1, 1, org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(preemptionEEnum, Preemption.class, "Preemption");

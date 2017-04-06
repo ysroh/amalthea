@@ -111,8 +111,8 @@ public class AmaltheaPackageImpl extends EPackageImpl implements AmaltheaPackage
 		// Obtain or create and register interdependencies
 		CommonPackageImpl theCommonPackage = (CommonPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CommonPackage.eNS_URI) instanceof CommonPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CommonPackage.eNS_URI) : CommonPackage.eINSTANCE);
 		ComponentsPackageImpl theComponentsPackage = (ComponentsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ComponentsPackage.eNS_URI) instanceof ComponentsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ComponentsPackage.eNS_URI) : ComponentsPackage.eINSTANCE);
-		HardwarePackageImpl theHardwarePackage = (HardwarePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(HardwarePackage.eNS_URI) instanceof HardwarePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(HardwarePackage.eNS_URI) : HardwarePackage.eINSTANCE);
 		SoftwarePackageImpl theSoftwarePackage = (SoftwarePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(SoftwarePackage.eNS_URI) instanceof SoftwarePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(SoftwarePackage.eNS_URI) : SoftwarePackage.eINSTANCE);
+		HardwarePackageImpl theHardwarePackage = (HardwarePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(HardwarePackage.eNS_URI) instanceof HardwarePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(HardwarePackage.eNS_URI) : HardwarePackage.eINSTANCE);
 		OsPackageImpl theOsPackage = (OsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(OsPackage.eNS_URI) instanceof OsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(OsPackage.eNS_URI) : OsPackage.eINSTANCE);
 		MappingPackageImpl theMappingPackage = (MappingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MappingPackage.eNS_URI) instanceof MappingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MappingPackage.eNS_URI) : MappingPackage.eINSTANCE);
 		StimuliPackageImpl theStimuliPackage = (StimuliPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StimuliPackage.eNS_URI) instanceof StimuliPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StimuliPackage.eNS_URI) : StimuliPackage.eINSTANCE);
@@ -122,8 +122,8 @@ public class AmaltheaPackageImpl extends EPackageImpl implements AmaltheaPackage
 		theAmaltheaPackage.createPackageContents();
 		theCommonPackage.createPackageContents();
 		theComponentsPackage.createPackageContents();
-		theHardwarePackage.createPackageContents();
 		theSoftwarePackage.createPackageContents();
+		theHardwarePackage.createPackageContents();
 		theOsPackage.createPackageContents();
 		theMappingPackage.createPackageContents();
 		theStimuliPackage.createPackageContents();
@@ -133,8 +133,8 @@ public class AmaltheaPackageImpl extends EPackageImpl implements AmaltheaPackage
 		theAmaltheaPackage.initializePackageContents();
 		theCommonPackage.initializePackageContents();
 		theComponentsPackage.initializePackageContents();
-		theHardwarePackage.initializePackageContents();
 		theSoftwarePackage.initializePackageContents();
+		theHardwarePackage.initializePackageContents();
 		theOsPackage.initializePackageContents();
 		theMappingPackage.initializePackageContents();
 		theStimuliPackage.initializePackageContents();
@@ -215,8 +215,8 @@ public class AmaltheaPackageImpl extends EPackageImpl implements AmaltheaPackage
 		// Obtain other dependent packages
 		CommonPackage theCommonPackage = (CommonPackage)EPackage.Registry.INSTANCE.getEPackage(CommonPackage.eNS_URI);
 		ComponentsPackage theComponentsPackage = (ComponentsPackage)EPackage.Registry.INSTANCE.getEPackage(ComponentsPackage.eNS_URI);
-		HardwarePackage theHardwarePackage = (HardwarePackage)EPackage.Registry.INSTANCE.getEPackage(HardwarePackage.eNS_URI);
 		SoftwarePackage theSoftwarePackage = (SoftwarePackage)EPackage.Registry.INSTANCE.getEPackage(SoftwarePackage.eNS_URI);
+		HardwarePackage theHardwarePackage = (HardwarePackage)EPackage.Registry.INSTANCE.getEPackage(HardwarePackage.eNS_URI);
 		OsPackage theOsPackage = (OsPackage)EPackage.Registry.INSTANCE.getEPackage(OsPackage.eNS_URI);
 		MappingPackage theMappingPackage = (MappingPackage)EPackage.Registry.INSTANCE.getEPackage(MappingPackage.eNS_URI);
 		StimuliPackage theStimuliPackage = (StimuliPackage)EPackage.Registry.INSTANCE.getEPackage(StimuliPackage.eNS_URI);
@@ -225,8 +225,8 @@ public class AmaltheaPackageImpl extends EPackageImpl implements AmaltheaPackage
 		// Add subpackages
 		getESubpackages().add(theCommonPackage);
 		getESubpackages().add(theComponentsPackage);
-		getESubpackages().add(theHardwarePackage);
 		getESubpackages().add(theSoftwarePackage);
+		getESubpackages().add(theHardwarePackage);
 		getESubpackages().add(theOsPackage);
 		getESubpackages().add(theMappingPackage);
 		getESubpackages().add(theStimuliPackage);

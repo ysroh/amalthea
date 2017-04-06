@@ -158,14 +158,6 @@ public class SoftwareSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SoftwarePackage.RUNNABLE: {
-				org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable runnable = (org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable)theEObject;
-				T result = caseRunnable(runnable);
-				if (result == null) result = caseAbstractElementMemoryInformation(runnable);
-				if (result == null) result = caseBlock(runnable);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case SoftwarePackage.CALL_SEQUENCE: {
 				CallSequence callSequence = (CallSequence)theEObject;
 				T result = caseCallSequence(callSequence);
@@ -198,6 +190,14 @@ public class SoftwareSwitch<T> extends Switch<T> {
 				RunnableInstructions runnableInstructions = (RunnableInstructions)theEObject;
 				T result = caseRunnableInstructions(runnableInstructions);
 				if (result == null) result = caseRunnableItem(runnableInstructions);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SoftwarePackage.RUNNABLE: {
+				org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable runnable = (org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable)theEObject;
+				T result = caseRunnable(runnable);
+				if (result == null) result = caseAbstractElementMemoryInformation(runnable);
+				if (result == null) result = caseBlock(runnable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

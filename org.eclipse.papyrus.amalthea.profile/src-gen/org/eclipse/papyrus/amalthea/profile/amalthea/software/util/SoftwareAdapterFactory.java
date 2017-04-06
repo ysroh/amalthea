@@ -124,10 +124,6 @@ public class SoftwareAdapterFactory extends AdapterFactoryImpl {
 				return createLabelAdapter();
 			}
 			@Override
-			public Adapter caseRunnable(org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable object) {
-				return createRunnableAdapter();
-			}
-			@Override
 			public Adapter caseCallSequence(CallSequence object) {
 				return createCallSequenceAdapter();
 			}
@@ -146,6 +142,10 @@ public class SoftwareAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseRunnableInstructions(RunnableInstructions object) {
 				return createRunnableInstructionsAdapter();
+			}
+			@Override
+			public Adapter caseRunnable(org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable object) {
+				return createRunnableAdapter();
 			}
 			@Override
 			public Adapter caseBlock(Block object) {
