@@ -12,9 +12,12 @@ public interface IAmaltheaTypes {
 	
 	
 	// Component Model
-	public static final String COMPONENT = "org.eclipse.papyrus.amalthea.core.Component";
-	public static final String COMPOSITE = "org.eclipse.papyrus.amalthea.core.Composite";
-	public static final String FINTERFACE_PORT = "org.eclipse.papyrus.amalthea.core.FInterfacePort";
+	public static final String HW_SYSTEM = "org.eclipse.papyrus.amalthea.core.HwSystem";
+	public static final String ECU = "org.eclipse.papyrus.amalthea.core.ECU";
+	public static final String MICROCONTROLLER = "org.eclipse.papyrus.amalthea.core.Microcontroller";
+	public static final String CORE = "org.eclipse.papyrus.amalthea.core.Core";
+	public static final String CORE_TYPE = "org.eclipse.papyrus.amalthea.core.CoreType";
+
 	
 	// ToDo: more types
 }
