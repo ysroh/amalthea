@@ -45,38 +45,29 @@
       <packagedElement xmi:type="uml:Package" xmi:id="_dkL-IBoqEeeK7PsAypm8Bw" name="Labels">
         <packagedElement xmi:type="uml:Class" xmi:id="_QFWacBoqEeeK7PsAypm8Bw" name="ABSActivation"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Package" xmi:id="_gkxaQBoqEeeK7PsAypm8Bw" name="Tasks">
-        <packagedElement xmi:type="uml:Class" xmi:id="_lAdicBoqEeeK7PsAypm8Bw" name="Task">
-          <nestedClassifier xmi:type="uml:Class" xmi:id="_0aQsEBosEeevi--Z4zF9bA" name="CallGraph">
-            <nestedClassifier xmi:type="uml:Class" xmi:id="_1meAgBosEeevi--Z4zF9bA" name="CallSequence">
-              <ownedOperation xmi:type="uml:Operation" xmi:id="_2a5uIBosEeevi--Z4zF9bA" name="Operation1"/>
-              <ownedOperation xmi:type="uml:Operation" xmi:id="_Y-34gBotEeevi--Z4zF9bA" name="InterProcessActivation"/>
-            </nestedClassifier>
-          </nestedClassifier>
+      <packagedElement xmi:type="uml:Package" xmi:id="_gkxaQBoqEeeK7PsAypm8Bw" name="Task1">
+        <packagedElement xmi:type="uml:Class" xmi:id="_lAdicBoqEeeK7PsAypm8Bw" name="Task"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_0aQsEBosEeevi--Z4zF9bA" name="CallGraph"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_1meAgBosEeevi--Z4zF9bA" name="CallSequence">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_2a5uIBosEeevi--Z4zF9bA" name="Operation1"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Y-34gBotEeevi--Z4zF9bA" name="InterProcessActivation"/>
         </packagedElement>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_gmMPMBotEeevi--Z4zF9bA" name="Hardware">
-      <packagedElement xmi:type="uml:Class" xmi:id="_jjcDcBotEeevi--Z4zF9bA" name="DemoSystem">
-        <nestedClassifier xmi:type="uml:Class" xmi:id="_lybqkBotEeevi--Z4zF9bA" name="ECU">
-          <nestedClassifier xmi:type="uml:Class" xmi:id="_nZERMBotEeevi--Z4zF9bA" name="Processor">
-            <nestedClassifier xmi:type="uml:Class" xmi:id="_o3fXABotEeevi--Z4zF9bA" name="Core">
-              <nestedClassifier xmi:type="uml:Class" xmi:id="_utD74BowEeeeW9cngqHTXg" name="CorePrescaler"/>
-            </nestedClassifier>
-          </nestedClassifier>
-          <nestedClassifier xmi:type="uml:Class" xmi:id="_xs4jABowEeeeW9cngqHTXg" name="ECUQuartz"/>
-        </nestedClassifier>
-      </packagedElement>
       <packagedElement xmi:type="uml:DataType" xmi:id="_3Rv5wBowEeeeW9cngqHTXg" name="CoreType"/>
-      <packagedElement xmi:type="uml:Abstraction" xmi:id="_2LEBsBo0Eeey-4lblVK-ag" name="Allocate1" client="_o3fXABotEeevi--Z4zF9bA" supplier="_JgeUABoxEeeeW9cngqHTXg"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jjcDcBotEeevi--Z4zF9bA" name="DemoSystem"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_lybqkBotEeevi--Z4zF9bA" name="ECU"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_nZERMBotEeevi--Z4zF9bA" name="Processor"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_o3fXABotEeevi--Z4zF9bA" name="Core"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_xs4jABowEeeeW9cngqHTXg" name="ECUQuartz"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_utD74BowEeeeW9cngqHTXg" name="CorePrescaler"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_AAoVcBoxEeeeW9cngqHTXg" name="OperatingSystem">
-      <packagedElement xmi:type="uml:Class" xmi:id="_HxHPMBoxEeeeW9cngqHTXg" name="OS">
-        <nestedClassifier xmi:type="uml:Class" xmi:id="_JgeUABoxEeeeW9cngqHTXg" name="TaskSchedulerCore">
-          <nestedClassifier xmi:type="uml:Class" xmi:id="_HmaJIBozEeey-4lblVK-ag" name="SchedulingHwUnit"/>
-        </nestedClassifier>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Abstraction" xmi:id="_zU6T8Bo0Eeey-4lblVK-ag" name="Allocate1" client="_JgeUABoxEeeeW9cngqHTXg" supplier="_lAdicBoqEeeK7PsAypm8Bw"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_HxHPMBoxEeeeW9cngqHTXg" name="OS"/>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_-2jq0Bo3Eeey-4lblVK-ag" name="Allocate2" client="_JgeUABoxEeeeW9cngqHTXg" supplier="_o3fXABotEeevi--Z4zF9bA"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_JgeUABoxEeeeW9cngqHTXg" name="TaskSchedulerCore"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_HmaJIBozEeey-4lblVK-ag" name="SchedulingHwUnit"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_CZ_ZgBoxEeeeW9cngqHTXg" name="Stimuli">
       <packagedElement xmi:type="uml:Class" xmi:id="_SpqbMBozEeey-4lblVK-ag" name="Timer_10MS"/>
@@ -150,36 +141,35 @@
     </profileApplication>
   </uml:Model>
   <Software:Runnable xmi:id="_TthY0BobEee60cQ75oPnTA" base_Class="_TtKMcBobEee60cQ75oPnTA"/>
-  <Software:LabelAccess xmi:id="_XwZYYBobEee60cQ75oPnTA" base_Operation="_Xv63QBobEee60cQ75oPnTA" access="read"/>
+  <Software:LabelAccess xmi:id="_XwZYYBobEee60cQ75oPnTA" base_Operation="_Xv63QBobEee60cQ75oPnTA" access="read" data="_QFpVYBoqEeeK7PsAypm8Bw"/>
   <Software:RunnableInstructions xmi:id="_hGiBUBobEee60cQ75oPnTA" base_Operation="_hGPGYBobEee60cQ75oPnTA" default="_DWHHsBoqEeeK7PsAypm8Bw"/>
   <Common:WeibullEstimators xmi:id="_DUqWMBoqEeeK7PsAypm8Bw" base_Class="_DUXbQBoqEeeK7PsAypm8Bw"/>
   <Common:Deviation xmi:id="_DVUdgBoqEeeK7PsAypm8Bw" distribution="_DUqWMBoqEeeK7PsAypm8Bw" base_Class="_DVJeYBoqEeeK7PsAypm8Bw"/>
   <Common:InstructionsDeviation xmi:id="_DWHHsBoqEeeK7PsAypm8Bw" base_Class="_DVxJcBoqEeeK7PsAypm8Bw" deviation="_DVUdgBoqEeeK7PsAypm8Bw"/>
   <Software:Label xmi:id="_QFpVYBoqEeeK7PsAypm8Bw" base_Class="_QFWacBoqEeeK7PsAypm8Bw"/>
-  <Software:Task xmi:id="_lAnTcBoqEeeK7PsAypm8Bw" base_Class="_lAdicBoqEeeK7PsAypm8Bw" preemption="preemptive"/>
-  <Software:CallGraph xmi:id="_0aumIBosEeevi--Z4zF9bA" base_Class="_0aQsEBosEeevi--Z4zF9bA"/>
+  <Software:Task xmi:id="_lAnTcBoqEeeK7PsAypm8Bw" base_Class="_lAdicBoqEeeK7PsAypm8Bw" callgraph="_0aumIBosEeevi--Z4zF9bA" preemption="preemptive"/>
+  <Software:CallGraph xmi:id="_0aumIBosEeevi--Z4zF9bA" base_Class="_0aQsEBosEeevi--Z4zF9bA" graphentries="_1mw7cBosEeevi--Z4zF9bA"/>
   <Software:CallSequence xmi:id="_1mw7cBosEeevi--Z4zF9bA" base_Class="_1meAgBosEeevi--Z4zF9bA"/>
   <Software:TaskRunnableCall xmi:id="_2bQ6gBosEeevi--Z4zF9bA" base_Operation="_2a5uIBosEeevi--Z4zF9bA" counter="_-nGTgBosEeevi--Z4zF9bA" runnable="_TthY0BobEee60cQ75oPnTA"/>
   <Common:Counter xmi:id="_-nGTgBosEeevi--Z4zF9bA" base_DataType="_-myxgBosEeevi--Z4zF9bA"/>
-  <Hardware:HwSystem xmi:id="_jj4vYBotEeevi--Z4zF9bA" base_Class="_jjcDcBotEeevi--Z4zF9bA"/>
-  <Hardware:ECU xmi:id="_lyulgBotEeevi--Z4zF9bA" base_Class="_lybqkBotEeevi--Z4zF9bA"/>
-  <Hardware:Microcontroller xmi:id="_nZtKYBotEeevi--Z4zF9bA" base_Class="_nZERMBotEeevi--Z4zF9bA"/>
+  <Hardware:HwSystem xmi:id="_jj4vYBotEeevi--Z4zF9bA" base_Class="_jjcDcBotEeevi--Z4zF9bA" ecus="_lyulgBotEeevi--Z4zF9bA"/>
+  <Hardware:ECU xmi:id="_lyulgBotEeevi--Z4zF9bA" base_Class="_lybqkBotEeevi--Z4zF9bA" quartzes="_xtMFABowEeeeW9cngqHTXg" microcontrollers="_nZtKYBotEeevi--Z4zF9bA"/>
+  <Hardware:Microcontroller xmi:id="_nZtKYBotEeevi--Z4zF9bA" base_Class="_nZERMBotEeevi--Z4zF9bA" cores="_o3yR8BotEeevi--Z4zF9bA"/>
   <Hardware:Core xmi:id="_o3yR8BotEeevi--Z4zF9bA" base_Class="_o3fXABotEeevi--Z4zF9bA" coretype="_3SDbwBowEeeeW9cngqHTXg"/>
   <Hardware:Prescaler xmi:id="_uuA-IBowEeeeW9cngqHTXg" base_Class="_utD74BowEeeeW9cngqHTXg"/>
   <Hardware:Quartz xmi:id="_xtMFABowEeeeW9cngqHTXg" base_Class="_xs4jABowEeeeW9cngqHTXg"/>
   <Hardware:CoreType xmi:id="_3SDbwBowEeeeW9cngqHTXg" base_DataType="_3Rv5wBowEeeeW9cngqHTXg"/>
-  <Os:OperatingSystem xmi:id="_HxaKIBoxEeeeW9cngqHTXg" base_Class="_HxHPMBoxEeeeW9cngqHTXg"/>
+  <Os:OperatingSystem xmi:id="_HxaKIBoxEeeeW9cngqHTXg" base_Class="_HxHPMBoxEeeeW9cngqHTXg" taskscheduler="_Jg5KwBoxEeeeW9cngqHTXg"/>
   <Os:TaskScheduler xmi:id="_Jg5KwBoxEeeeW9cngqHTXg" base_Class="_JgeUABoxEeeeW9cngqHTXg"/>
   <Os:SchedulingHWUnit xmi:id="_Hng8YBozEeey-4lblVK-ag" base_Class="_HmaJIBozEeey-4lblVK-ag" time="_Ko2mcBozEeey-4lblVK-ag"/>
   <Common:Time xmi:id="_Ko2mcBozEeey-4lblVK-ag" base_DataType="_KoZ6gBozEeey-4lblVK-ag"/>
   <Stimuli:Periodic xmi:id="_Sp99MBozEeey-4lblVK-ag" base_Class="_SpqbMBozEeey-4lblVK-ag" recurrence="_bASH4BozEeey-4lblVK-ag" offset="_Xf3VIBozEeey-4lblVK-ag"/>
   <Common:Time xmi:id="_Xf3VIBozEeey-4lblVK-ag" unit="ms" base_DataType="_XftkIBozEeey-4lblVK-ag"/>
   <Common:Time xmi:id="_bASH4BozEeey-4lblVK-ag" value="10" unit="ms" base_DataType="_bAI98BozEeey-4lblVK-ag"/>
-  <Components:Component xmi:id="_262VUBozEeey-4lblVK-ag" base_Class="_xtNLwRozEeey-4lblVK-ag"/>
+  <Components:Component xmi:id="_262VUBozEeey-4lblVK-ag" base_Class="_xtNLwRozEeey-4lblVK-ag" runnables="_TthY0BobEee60cQ75oPnTA"/>
   <Components:Component xmi:id="_3vxLIBozEeey-4lblVK-ag" base_Class="_xtNLwxozEeey-4lblVK-ag"/>
   <Components:Composite xmi:id="_4h5ysBozEeey-4lblVK-ag" base_Class="_xtNLxRozEeey-4lblVK-ag"/>
   <Components:FInterfacePort xmi:id="_5xxfIBozEeey-4lblVK-ag" base_Port="_xtNLwhozEeey-4lblVK-ag"/>
   <Components:FInterfacePort xmi:id="_7KiB0BozEeey-4lblVK-ag" base_Port="_xtNLxBozEeey-4lblVK-ag"/>
-  <Allocations:Allocate xmi:id="_zVHvUBo0Eeey-4lblVK-ag" base_DirectedRelationship="_zU6T8Bo0Eeey-4lblVK-ag" base_Abstraction="_zU6T8Bo0Eeey-4lblVK-ag"/>
-  <Allocations:Allocate xmi:id="_2LZ_8Bo0Eeey-4lblVK-ag" base_DirectedRelationship="_2LEBsBo0Eeey-4lblVK-ag" base_Abstraction="_2LEBsBo0Eeey-4lblVK-ag"/>
+  <Allocations:Allocate xmi:id="_-263MBo3Eeey-4lblVK-ag" base_DirectedRelationship="_-2jq0Bo3Eeey-4lblVK-ag" base_Abstraction="_-2jq0Bo3Eeey-4lblVK-ag"/>
 </xmi:XMI>
