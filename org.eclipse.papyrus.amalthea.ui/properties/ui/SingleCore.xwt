@@ -26,4 +26,15 @@
 		<ppe:ReferenceDialog input="{Binding}"
 			property="Amalthea:HWModel:Core:coretype"></ppe:ReferenceDialog>
 	</Composite>
+	<Composite>
+		<Composite.layout>
+			<ppel:PropertiesLayout numColumns="3"></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:MultiReference input="{Binding}"
+			property="Amalthea:HWModel:ComplexNode:quartzes"></ppe:MultiReference>
+		<ppe:MultiReference input="{Binding}"
+			property="Amalthea:HWModel:ComplexNode:prescaler"></ppe:MultiReference>
+		<ppe:MultiReference input="{Binding}"
+			property="Amalthea:HWModel:ComplexNode:networks"></ppe:MultiReference>
+	</Composite>
 </Composite>

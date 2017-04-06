@@ -98,7 +98,7 @@ public interface HardwarePackage extends EPackage {
 	int COMPLEX_NODE__QUARTZES = BlocksPackage.BLOCK_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Prescaler</b></em>' reference.
+	 * The feature id for the '<em><b>Prescaler</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -198,7 +198,7 @@ public interface HardwarePackage extends EPackage {
 	int HW_SYSTEM__QUARTZES = COMPLEX_NODE__QUARTZES;
 
 	/**
-	 * The feature id for the '<em><b>Prescaler</b></em>' reference.
+	 * The feature id for the '<em><b>Prescaler</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -316,7 +316,7 @@ public interface HardwarePackage extends EPackage {
 	int QUARTZ__QUARTZES = COMPLEX_NODE__QUARTZES;
 
 	/**
-	 * The feature id for the '<em><b>Prescaler</b></em>' reference.
+	 * The feature id for the '<em><b>Prescaler</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -507,7 +507,7 @@ public interface HardwarePackage extends EPackage {
 	int NETWORK__QUARTZES = COMPLEX_NODE__QUARTZES;
 
 	/**
-	 * The feature id for the '<em><b>Prescaler</b></em>' reference.
+	 * The feature id for the '<em><b>Prescaler</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -671,7 +671,7 @@ public interface HardwarePackage extends EPackage {
 	int ECU__QUARTZES = COMPLEX_NODE__QUARTZES;
 
 	/**
-	 * The feature id for the '<em><b>Prescaler</b></em>' reference.
+	 * The feature id for the '<em><b>Prescaler</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -789,7 +789,7 @@ public interface HardwarePackage extends EPackage {
 	int MICROCONTROLLER__QUARTZES = COMPLEX_NODE__QUARTZES;
 
 	/**
-	 * The feature id for the '<em><b>Prescaler</b></em>' reference.
+	 * The feature id for the '<em><b>Prescaler</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -907,7 +907,7 @@ public interface HardwarePackage extends EPackage {
 	int CORE__QUARTZES = COMPLEX_NODE__QUARTZES;
 
 	/**
-	 * The feature id for the '<em><b>Prescaler</b></em>' reference.
+	 * The feature id for the '<em><b>Prescaler</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1358,10 +1358,10 @@ public interface HardwarePackage extends EPackage {
 	EReference getComplexNode_Quartzes();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.ComplexNode#getPrescaler <em>Prescaler</em>}'.
+	 * Returns the meta object for the reference list '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.ComplexNode#getPrescaler <em>Prescaler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Prescaler</em>'.
+	 * @return the meta object for the reference list '<em>Prescaler</em>'.
 	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.ComplexNode#getPrescaler()
 	 * @see #getComplexNode()
 	 * @generated
@@ -1848,7 +1848,7 @@ public interface HardwarePackage extends EPackage {
 		EReference COMPLEX_NODE__QUARTZES = eINSTANCE.getComplexNode_Quartzes();
 
 		/**
-		 * The meta object literal for the '<em><b>Prescaler</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Prescaler</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

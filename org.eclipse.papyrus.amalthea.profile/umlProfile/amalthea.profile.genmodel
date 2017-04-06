@@ -194,6 +194,8 @@
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//software/LabelAccess">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//software/LabelAccess/isBuffered"/>
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//software/LabelAccess/access"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference amalthea.ecore#//software/LabelAccess/data"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//software/RunnableInstructions">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
@@ -361,7 +363,20 @@
     </nestedGenPackages>
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Constraints" basePackage="org.eclipse.papyrus.amalthea.profile.amalthea"
         disposableProviderFactory="true" ecorePackage="amalthea.ecore#//constraints">
+      <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="amalthea.ecore#//constraints/Severity">
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//constraints/Severity/_undefined_"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//constraints/Severity/Cosmetic"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//constraints/Severity/Minor"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//constraints/Severity/Major"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//constraints/Severity/Critical"/>
+      </genEnums>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//constraints/ConstraintsModel"/>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="amalthea.ecore#//constraints/Requirement">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//constraints/Requirement/severity"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//constraints/ProcessRequirement"/>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="amalthea.ecore#//constraints/RequirementLimit"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//constraints/TimeRequirementLimit"/>
     </nestedGenPackages>
   </genPackages>
 </genmodel:GenModel>

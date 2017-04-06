@@ -17,7 +17,8 @@
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::HWModel::ECU" requiredProfile="Amalthea"/>
       <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-        <permissions containerType="org.eclipse.papyrus.amalthea.core.HwSystem" permitted="true"/>
+        <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
+        <permissions containerType="org.eclipse.papyrus.uml.Classifier"/>
       </composedRules>
     </ruleConfiguration>
   </elementTypeConfigurations>
@@ -27,7 +28,8 @@
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::HWModel::Microcontroller" requiredProfile="Amalthea"/>
       <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-        <permissions containerType="org.eclipse.papyrus.amalthea.core.ECU" permitted="true"/>
+        <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
+        <permissions containerType="org.eclipse.papyrus.uml.Classifier"/>
       </composedRules>
     </ruleConfiguration>
   </elementTypeConfigurations>
@@ -37,7 +39,8 @@
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::HWModel::Core" requiredProfile="Amalthea"/>
       <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-        <permissions containerType="org.eclipse.papyrus.amalthea.core.Microcontroller" permitted="true"/>
+        <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
+        <permissions containerType="org.eclipse.papyrus.uml.Classifier"/>
       </composedRules>
     </ruleConfiguration>
   </elementTypeConfigurations>
@@ -92,16 +95,10 @@
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::HWModel::Network" requiredProfile="Amalthea"/>
       <composedRules xsi:type="rulebased:OrRuleConfiguration">
         <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-          <permissions containerType="org.eclipse.papyrus.amalthea.core.HwSystem" permitted="true"/>
+          <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
         </composedRules>
         <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-          <permissions containerType="org.eclipse.papyrus.amalthea.core.ECU" permitted="true"/>
-        </composedRules>
-        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-          <permissions containerType="org.eclipse.papyrus.amalthea.core.Microcontroller" permitted="true"/>
-        </composedRules>
-        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-          <permissions containerType="org.eclipse.papyrus.amalthea.core.Core" permitted="true"/>
+          <permissions containerType="org.eclipse.papyrus.uml.Class" permitted="true"/>
         </composedRules>
       </composedRules>
     </ruleConfiguration>
@@ -113,16 +110,10 @@
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::HWModel::Quartz" requiredProfile="Amalthea"/>
       <composedRules xsi:type="rulebased:OrRuleConfiguration">
         <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-          <permissions containerType="org.eclipse.papyrus.amalthea.core.HwSystem" permitted="true"/>
+          <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
         </composedRules>
         <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-          <permissions containerType="org.eclipse.papyrus.amalthea.core.ECU" permitted="true"/>
-        </composedRules>
-        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-          <permissions containerType="org.eclipse.papyrus.amalthea.core.Microcontroller" permitted="true"/>
-        </composedRules>
-        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-          <permissions containerType="org.eclipse.papyrus.amalthea.core.Core" permitted="true"/>
+          <permissions containerType="org.eclipse.papyrus.uml.Class" permitted="true"/>
         </composedRules>
       </composedRules>
     </ruleConfiguration>
@@ -134,16 +125,10 @@
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::HWModel::Prescaler" requiredProfile="Amalthea"/>
       <composedRules xsi:type="rulebased:OrRuleConfiguration">
         <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-          <permissions containerType="org.eclipse.papyrus.amalthea.core.HwSystem" permitted="true"/>
+          <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
         </composedRules>
         <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-          <permissions containerType="org.eclipse.papyrus.amalthea.core.ECU" permitted="true"/>
-        </composedRules>
-        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-          <permissions containerType="org.eclipse.papyrus.amalthea.core.Microcontroller" permitted="true"/>
-        </composedRules>
-        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-          <permissions containerType="org.eclipse.papyrus.amalthea.core.Core" permitted="true"/>
+          <permissions containerType="org.eclipse.papyrus.uml.Class" permitted="true"/>
         </composedRules>
       </composedRules>
     </ruleConfiguration>

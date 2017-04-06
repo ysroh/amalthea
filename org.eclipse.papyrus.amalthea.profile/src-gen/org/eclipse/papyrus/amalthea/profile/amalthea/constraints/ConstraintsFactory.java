@@ -31,6 +31,24 @@ public interface ConstraintsFactory extends EFactory {
 	ConstraintsModel createConstraintsModel();
 
 	/**
+	 * Returns a new object of class '<em>Process Requirement</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Process Requirement</em>'.
+	 * @generated
+	 */
+	ProcessRequirement createProcessRequirement();
+
+	/**
+	 * Returns a new object of class '<em>Time Requirement Limit</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Time Requirement Limit</em>'.
+	 * @generated
+	 */
+	TimeRequirementLimit createTimeRequirementLimit();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

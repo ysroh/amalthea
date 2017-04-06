@@ -19,4 +19,22 @@
 		<ppe:ReferenceDialog input="{Binding}"
 			property="Amalthea:HWModel:ECU:ecutype"></ppe:ReferenceDialog>
 	</Composite>
+	<Composite>
+		<Composite.layout>
+			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:MultiReference input="{Binding}"
+			property="Amalthea:HWModel:ECU:microcontrollers"></ppe:MultiReference>
+	</Composite>
+	<Composite>
+		<Composite.layout>
+			<ppel:PropertiesLayout numColumns="3"></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:MultiReference input="{Binding}"
+			property="Amalthea:HWModel:ComplexNode:quartzes"></ppe:MultiReference>
+		<ppe:MultiReference input="{Binding}"
+			property="Amalthea:HWModel:ComplexNode:prescaler"></ppe:MultiReference>
+		<ppe:MultiReference input="{Binding}"
+			property="Amalthea:HWModel:ComplexNode:networks"></ppe:MultiReference>
+	</Composite>
 </Composite>

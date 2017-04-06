@@ -16,8 +16,13 @@
     <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::OSModel::TaskScheduler" requiredProfile="Amalthea"/>
-      <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-        <permissions containerType="org.eclipse.papyrus.amalthea.core.OperatingSystem" permitted="true"/>
+      <composedRules xsi:type="rulebased:OrRuleConfiguration">
+        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+          <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
+        </composedRules>
+        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+          <permissions containerType="org.eclipse.papyrus.uml.Class" permitted="true"/>
+        </composedRules>
       </composedRules>
     </ruleConfiguration>
   </elementTypeConfigurations>
@@ -26,8 +31,13 @@
     <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::OSModel::InterruptController" requiredProfile="Amalthea"/>
-      <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-        <permissions containerType="org.eclipse.papyrus.amalthea.core.OperatingSystem" permitted="true"/>
+      <composedRules xsi:type="rulebased:OrRuleConfiguration">
+        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+          <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
+        </composedRules>
+        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+          <permissions containerType="org.eclipse.papyrus.uml.Class" permitted="true"/>
+        </composedRules>
       </composedRules>
     </ruleConfiguration>
   </elementTypeConfigurations>
@@ -36,8 +46,13 @@
     <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::OSModel::OSEK" requiredProfile="Amalthea"/>
-      <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-        <permissions containerType="org.eclipse.papyrus.amalthea.core.TaskScheduler" permitted="true"/>
+      <composedRules xsi:type="rulebased:OrRuleConfiguration">
+        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+          <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
+        </composedRules>
+        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+          <permissions containerType="org.eclipse.papyrus.uml.Class" permitted="true"/>
+        </composedRules>
       </composedRules>
     </ruleConfiguration>
   </elementTypeConfigurations>
@@ -46,8 +61,13 @@
     <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::OSModel::PriorityBased" requiredProfile="Amalthea"/>
-      <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-        <permissions containerType="org.eclipse.papyrus.amalthea.core.InterruptController" permitted="true"/>
+      <composedRules xsi:type="rulebased:OrRuleConfiguration">
+        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+          <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
+        </composedRules>
+        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+          <permissions containerType="org.eclipse.papyrus.uml.Class" permitted="true"/>
+        </composedRules>
       </composedRules>
     </ruleConfiguration>
   </elementTypeConfigurations>
@@ -58,10 +78,10 @@
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::OSModel::SchedulingHWUnit" requiredProfile="Amalthea"/>
       <composedRules xsi:type="rulebased:OrRuleConfiguration">
         <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-          <permissions containerType="org.eclipse.papyrus.amalthea.core.TaskScheduler" permitted="true"/>
+          <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
         </composedRules>
         <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-          <permissions containerType="org.eclipse.papyrus.amalthea.core.InterruptController" permitted="true"/>
+          <permissions containerType="org.eclipse.papyrus.uml.Class" permitted="true"/>
         </composedRules>
       </composedRules>
     </ruleConfiguration>

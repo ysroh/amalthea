@@ -3,44 +3,54 @@
   <filter xsi:type="filters:CompoundFilter" filter="//@filter/@ownedFilter.0">
     <ownedFilter xsi:type="umlfilters:ProfileApplied" name="isAmaltheaApplied" profileQualifiedName="Amalthea" profileURI="pathmap://AMALTHEA_PROFILE/amalthea.profile.uml#_PUCPMBYtEeeFzte_Mj5jqA"/>
   </filter>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Runnabe" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Runnable" role=""/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Label" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Label" role=""/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Task" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Task" role=""/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="ISR" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.ISR" role=""/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="RunnableInstructions" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.RunnableInstructions" role=""/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="LabelAccess" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.LabelAccess"/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="CallGraph" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.CallGraph" role=""/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="CallSequence" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.CallSequence" role=""/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="TaskRunnableCall" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.TaskRunnableCall" role=""/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="InterProcessActivation" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.InterProcessActivation" role=""/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="HwSystem" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.HwSystem" role=""/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="ECU" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.ECU" role=""/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Microcontroller" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Microcontroller" role=""/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Core" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Core" role=""/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="SystemType" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.SystemType" role=""/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="ECUType" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.ECUType" role=""/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="MicrocontrollerType" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.MicrocontrollerType" role=""/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="CoreType" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.CoreType" role=""/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Network" icon="" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Network" role=""/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Quartz" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Quartz" role=""/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Prescaler" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Prescaler" role=""/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Bus" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Bus" role=""/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Component" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Component"/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Composite" icon="" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Composite"/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="FInterfacePort" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.FInterfacePort"/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="OperatingSystem" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.OperatingSystem"/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="TaskScheduler" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.TaskScheduler"/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="InterruptController" icon="" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.InterruptController"/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="SchedulingHWUnit" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.SchedulingHWUnit"/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="OSEK" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.OSEK"/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="PriorityBased" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.PriorityBased"/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Single" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Single"/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Periodic" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Periodic"/>
-  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Interprocess" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Interprocess"/>
   <menu xsi:type="ElementCreationMenuModel:Folder" label="Common">
     <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Time" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Time"/>
     <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Counter" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Counter"/>
     <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="DataSize" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.DataSize"/>
     <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="WeibullEstimators" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.WeibullEstimators"/>
+  </menu>
+  <menu xsi:type="ElementCreationMenuModel:Folder" label="ComponentsModel">
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Component" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Component"/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Composite" icon="" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Composite"/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="FInterfacePort" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.FInterfacePort"/>
+  </menu>
+  <menu xsi:type="ElementCreationMenuModel:Folder" label="SWModel" icon="">
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Runnabe" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Runnable" role=""/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Label" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Label" role=""/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Task" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Task" role=""/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="ISR" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.ISR" role=""/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="RunnableInstructions" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.RunnableInstructions" role=""/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="LabelAccess" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.LabelAccess"/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="CallGraph" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.CallGraph" role=""/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="CallSequence" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.CallSequence" role=""/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="TaskRunnableCall" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.TaskRunnableCall" role=""/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="InterProcessActivation" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.InterProcessActivation" role=""/>
+  </menu>
+  <menu xsi:type="ElementCreationMenuModel:Folder" label="HWModel">
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="HwSystem" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.HwSystem" role=""/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="ECU" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.ECU" role=""/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Microcontroller" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Microcontroller" role=""/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Core" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Core" role=""/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="SystemType" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.SystemType" role=""/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="ECUType" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.ECUType" role=""/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="MicrocontrollerType" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.MicrocontrollerType" role=""/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="CoreType" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.CoreType" role=""/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Network" icon="" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Network" role=""/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Quartz" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Quartz" role=""/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Prescaler" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Prescaler" role=""/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Bus" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Bus" role=""/>
+  </menu>
+  <menu xsi:type="ElementCreationMenuModel:Folder" label="OSModel">
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="OperatingSystem" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.OperatingSystem"/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="TaskScheduler" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.TaskScheduler"/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="InterruptController" icon="" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.InterruptController"/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="SchedulingHWUnit" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.SchedulingHWUnit"/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="OSEK" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.OSEK"/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="PriorityBased" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.PriorityBased"/>
+  </menu>
+  <menu xsi:type="ElementCreationMenuModel:Folder" label="StimuliModel">
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Single" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Single"/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Periodic" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Periodic"/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Interprocess" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Interprocess"/>
   </menu>
 </ElementCreationMenuModel:Folder>

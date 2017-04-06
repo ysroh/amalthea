@@ -6,8 +6,10 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.papyrus.amalthea.profile.amalthea.software.Label;
 import org.eclipse.papyrus.amalthea.profile.amalthea.software.LabelAccess;
 import org.eclipse.papyrus.amalthea.profile.amalthea.software.LabelAccessEnum;
 import org.eclipse.papyrus.amalthea.profile.amalthea.software.SoftwarePackage;
@@ -22,6 +24,7 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.software.SoftwarePackage;
  * <ul>
  *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.LabelAccessImpl#isBuffered <em>Is Buffered</em>}</li>
  *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.LabelAccessImpl#getAccess <em>Access</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.LabelAccessImpl#getData <em>Data</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,6 +69,16 @@ public class LabelAccessImpl extends RunnableItemImpl implements LabelAccess {
 	 * @ordered
 	 */
 	protected LabelAccessEnum access = ACCESS_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getData() <em>Data</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getData()
+	 * @generated
+	 * @ordered
+	 */
+	protected Label data;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -133,6 +146,44 @@ public class LabelAccessImpl extends RunnableItemImpl implements LabelAccess {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Label getData() {
+		if (data != null && data.eIsProxy()) {
+			InternalEObject oldData = (InternalEObject)data;
+			data = (Label)eResolveProxy(oldData);
+			if (data != oldData) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SoftwarePackage.LABEL_ACCESS__DATA, oldData, data));
+			}
+		}
+		return data;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Label basicGetData() {
+		return data;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setData(Label newData) {
+		Label oldData = data;
+		data = newData;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SoftwarePackage.LABEL_ACCESS__DATA, oldData, data));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -140,6 +191,9 @@ public class LabelAccessImpl extends RunnableItemImpl implements LabelAccess {
 				return isBuffered();
 			case SoftwarePackage.LABEL_ACCESS__ACCESS:
 				return getAccess();
+			case SoftwarePackage.LABEL_ACCESS__DATA:
+				if (resolve) return getData();
+				return basicGetData();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -157,6 +211,9 @@ public class LabelAccessImpl extends RunnableItemImpl implements LabelAccess {
 				return;
 			case SoftwarePackage.LABEL_ACCESS__ACCESS:
 				setAccess((LabelAccessEnum)newValue);
+				return;
+			case SoftwarePackage.LABEL_ACCESS__DATA:
+				setData((Label)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -176,6 +233,9 @@ public class LabelAccessImpl extends RunnableItemImpl implements LabelAccess {
 			case SoftwarePackage.LABEL_ACCESS__ACCESS:
 				setAccess(ACCESS_EDEFAULT);
 				return;
+			case SoftwarePackage.LABEL_ACCESS__DATA:
+				setData((Label)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -192,6 +252,8 @@ public class LabelAccessImpl extends RunnableItemImpl implements LabelAccess {
 				return isBuffered != IS_BUFFERED_EDEFAULT;
 			case SoftwarePackage.LABEL_ACCESS__ACCESS:
 				return access != ACCESS_EDEFAULT;
+			case SoftwarePackage.LABEL_ACCESS__DATA:
+				return data != null;
 		}
 		return super.eIsSet(featureID);
 	}

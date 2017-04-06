@@ -14,6 +14,7 @@ package org.eclipse.papyrus.amalthea.profile.amalthea.software;
  * <ul>
  *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.LabelAccess#isBuffered <em>Is Buffered</em>}</li>
  *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.LabelAccess#getAccess <em>Access</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.LabelAccess#getData <em>Data</em>}</li>
  * </ul>
  *
  * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.SoftwarePackage#getLabelAccess()
@@ -75,5 +76,31 @@ public interface LabelAccess extends RunnableItem {
 	 * @generated
 	 */
 	void setAccess(LabelAccessEnum value);
+
+	/**
+	 * Returns the value of the '<em><b>Data</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Data</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Data</em>' reference.
+	 * @see #setData(Label)
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.SoftwarePackage#getLabelAccess_Data()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	Label getData();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.LabelAccess#getData <em>Data</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Data</em>' reference.
+	 * @see #getData()
+	 * @generated
+	 */
+	void setData(Label value);
 
 } // LabelAccess

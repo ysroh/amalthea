@@ -10,8 +10,7 @@
 		<Composite.layout>
 			<ppel:PropertiesLayout></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:StringEditor property="UML:NamedElement:name"
-			input="{Binding}"></ppe:StringEditor>
+		<ppe:StringEditor input="{Binding}" property="UML:NamedElement:name"></ppe:StringEditor>
 	</Composite>
 	<Composite>
 		<Composite.layout>
@@ -24,7 +23,14 @@
 		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:EnumCombo input="{Binding}"
-			property="Amalthea:SWModel:LabelAccess:access"></ppe:EnumCombo>
+		<ppe:EnumRadio input="{Binding}"
+			property="Amalthea:SWModel:LabelAccess:access"></ppe:EnumRadio>
+	</Composite>
+	<Composite>
+		<Composite.layout>
+			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:ReferenceDialog input="{Binding}"
+			property="Amalthea:SWModel:LabelAccess:data"></ppe:ReferenceDialog>
 	</Composite>
 </Composite>

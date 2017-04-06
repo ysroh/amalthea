@@ -482,7 +482,10 @@ of UML port&#xD;
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_J6kNEBcSEeeFzte_Mj5jqA"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_J6pFkBcSEeeFzte_Mj5jqA" value="*"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_MUEbEhcSEeeFzte_Mj5jqA" name="prescaler" type="_oiEe8RZKEeeFzte_Mj5jqA" association="_MUD0ABcSEeeFzte_Mj5jqA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_MUEbEhcSEeeFzte_Mj5jqA" name="prescaler" type="_oiEe8RZKEeeFzte_Mj5jqA" association="_MUD0ABcSEeeFzte_Mj5jqA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qAxnUBr-Eee65fjWHZc4GA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qA6xQBr-Eee65fjWHZc4GA" value="*"/>
+        </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_PNgtYRcSEeeFzte_Mj5jqA" name="networks" type="_oiEeyxZKEeeFzte_Mj5jqA" association="_PNgGUBcSEeeFzte_Mj5jqA">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QxuSIBcSEeeFzte_Mj5jqA"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QxyjkBcSEeeFzte_Mj5jqA" value="*"/>
@@ -682,6 +685,7 @@ operations of CallSequence Class&#xD;
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_5moakBfMEeeFzte_Mj5jqA" name="access" type="_0yxqABfMEeeFzte_Mj5jqA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_dQebERryEeemOqGrpy978g" name="data" type="_HAOoABfEEeeFzte_Mj5jqA" association="_dQUDABryEeemOqGrpy978g"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Enumeration" xmi:id="_0yxqABfMEeeFzte_Mj5jqA" name="LabelAccessEnum">
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_2EQgABfMEeeFzte_Mj5jqA" name="_undefined_"/>
@@ -703,6 +707,12 @@ operations of CallSequence Class&#xD;
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_krKNcRlREeeUscFGj19tvQ" key="nature" value="UML_Nature"/>
         </eAnnotations>
         <ownedEnd xmi:type="uml:Property" xmi:id="_krMCoRlREeeUscFGj19tvQ" name="taskrunnablecall" type="_LeZqMBfJEeeFzte_Mj5jqA" association="_krHKIBlREeeUscFGj19tvQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_dQUDABryEeemOqGrpy978g" memberEnd="_dQebERryEeemOqGrpy978g _dQfCIBryEeemOqGrpy978g">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dQd0ABryEeemOqGrpy978g" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dQebEBryEeemOqGrpy978g" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_dQfCIBryEeemOqGrpy978g" name="labelaccess" type="_nRB8QBfMEeeFzte_Mj5jqA" association="_dQUDABryEeemOqGrpy978g"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_oiFF1hZKEeeFzte_Mj5jqA" name="OSModel" URI="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem">
@@ -873,6 +883,23 @@ operations of CallSequence Class&#xD;
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_oiFs7hZKEeeFzte_Mj5jqA" name="ConstraintsModel" URI="http://www.eclipse.org/papyrus/2017/Amalthea/Constraints">
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiFs7xZKEeeFzte_Mj5jqA" name="ConstraintsModel"/>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_XS4vMBraEeemOqGrpy978g" name="Requirement" isAbstract="true">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_xl3TwBraEeemOqGrpy978g" name="severity" type="_pzLakBraEeemOqGrpy978g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_pzLakBraEeemOqGrpy978g" name="Severity">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_rNwiMBraEeemOqGrpy978g" name="_undefined_"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_szXOEBraEeemOqGrpy978g" name="Cosmetic"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_twSwYBraEeemOqGrpy978g" name="Minor"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_ukemYBraEeemOqGrpy978g" name="Major"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_vTm9QBraEeemOqGrpy978g" name="Critical"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_03W5sBraEeemOqGrpy978g" name="ProcessRequirement">
+        <generalization xmi:type="uml:Generalization" xmi:id="_2WdU8BraEeemOqGrpy978g" general="_XS4vMBraEeemOqGrpy978g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_5iB5EBraEeemOqGrpy978g" name="RequirementLimit" isAbstract="true"/>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_dpIDEBrbEeemOqGrpy978g" name="TimeRequirementLimit">
+        <generalization xmi:type="uml:Generalization" xmi:id="_fK9CMBrbEeemOqGrpy978g" general="_5iB5EBraEeemOqGrpy978g"/>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Stereotype" xmi:id="_9nf10BZJEeeFzte_Mj5jqA" name="Dummy"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_sxOtABYtEeeFzte_Mj5jqA">

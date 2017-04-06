@@ -72,6 +72,22 @@ public class ConstraintsAdapterFactory extends AdapterFactoryImpl {
 				return createConstraintsModelAdapter();
 			}
 			@Override
+			public Adapter caseRequirement(Requirement object) {
+				return createRequirementAdapter();
+			}
+			@Override
+			public Adapter caseProcessRequirement(ProcessRequirement object) {
+				return createProcessRequirementAdapter();
+			}
+			@Override
+			public Adapter caseRequirementLimit(RequirementLimit object) {
+				return createRequirementLimitAdapter();
+			}
+			@Override
+			public Adapter caseTimeRequirementLimit(TimeRequirementLimit object) {
+				return createTimeRequirementLimitAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -102,6 +118,62 @@ public class ConstraintsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createConstraintsModelAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.constraints.Requirement <em>Requirement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.constraints.Requirement
+	 * @generated
+	 */
+	public Adapter createRequirementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.constraints.ProcessRequirement <em>Process Requirement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.constraints.ProcessRequirement
+	 * @generated
+	 */
+	public Adapter createProcessRequirementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.constraints.RequirementLimit <em>Requirement Limit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.constraints.RequirementLimit
+	 * @generated
+	 */
+	public Adapter createRequirementLimitAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.constraints.TimeRequirementLimit <em>Time Requirement Limit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.constraints.TimeRequirementLimit
+	 * @generated
+	 */
+	public Adapter createTimeRequirementLimitAdapter() {
 		return null;
 	}
 

@@ -198,6 +198,8 @@
           lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="access" ordered="false"
           lowerBound="1" eType="#//software/LabelAccessEnum"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="data" ordered="false"
+          lowerBound="1" eType="#//software/Label"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EEnum" name="LabelAccessEnum">
       <eLiterals name="_undefined_"/>
@@ -230,7 +232,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="quartzes" ordered="false"
           upperBound="-1" eType="#//hardware/Quartz"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="prescaler" ordered="false"
-          lowerBound="1" eType="#//hardware/Prescaler"/>
+          upperBound="-1" eType="#//hardware/Prescaler"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="networks" ordered="false"
           upperBound="-1" eType="#//hardware/Network"/>
     </eClassifiers>
@@ -407,5 +409,19 @@
       <details key="originalName" value="ConstraintsModel"/>
     </eAnnotations>
     <eClassifiers xsi:type="ecore:EClass" name="ConstraintsModel"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Requirement" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="severity" ordered="false"
+          lowerBound="1" eType="#//constraints/Severity"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="Severity">
+      <eLiterals name="_undefined_"/>
+      <eLiterals name="Cosmetic" value="1"/>
+      <eLiterals name="Minor" value="2"/>
+      <eLiterals name="Major" value="3"/>
+      <eLiterals name="Critical" value="4"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ProcessRequirement" eSuperTypes="#//constraints/Requirement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="RequirementLimit" abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="TimeRequirementLimit" eSuperTypes="#//constraints/RequirementLimit"/>
   </eSubpackages>
 </ecore:EPackage>

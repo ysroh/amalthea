@@ -72,6 +72,32 @@ public class ConstraintsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ConstraintsPackage.REQUIREMENT: {
+				Requirement requirement = (Requirement)theEObject;
+				T result = caseRequirement(requirement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ConstraintsPackage.PROCESS_REQUIREMENT: {
+				ProcessRequirement processRequirement = (ProcessRequirement)theEObject;
+				T result = caseProcessRequirement(processRequirement);
+				if (result == null) result = caseRequirement(processRequirement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ConstraintsPackage.REQUIREMENT_LIMIT: {
+				RequirementLimit requirementLimit = (RequirementLimit)theEObject;
+				T result = caseRequirementLimit(requirementLimit);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ConstraintsPackage.TIME_REQUIREMENT_LIMIT: {
+				TimeRequirementLimit timeRequirementLimit = (TimeRequirementLimit)theEObject;
+				T result = caseTimeRequirementLimit(timeRequirementLimit);
+				if (result == null) result = caseRequirementLimit(timeRequirementLimit);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -88,6 +114,66 @@ public class ConstraintsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseConstraintsModel(ConstraintsModel object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Requirement</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Requirement</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRequirement(Requirement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Process Requirement</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Process Requirement</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseProcessRequirement(ProcessRequirement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Requirement Limit</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Requirement Limit</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRequirementLimit(RequirementLimit object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Time Requirement Limit</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Time Requirement Limit</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTimeRequirementLimit(TimeRequirementLimit object) {
 		return null;
 	}
 

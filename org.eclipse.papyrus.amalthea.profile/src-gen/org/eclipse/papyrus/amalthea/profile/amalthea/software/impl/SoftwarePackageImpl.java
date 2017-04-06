@@ -602,6 +602,15 @@ public class SoftwarePackageImpl extends EPackageImpl implements SoftwarePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getLabelAccess_Data() {
+		return (EReference)labelAccessEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getRunnableInstructions() {
 		return runnableInstructionsEClass;
 	}
@@ -705,6 +714,7 @@ public class SoftwarePackageImpl extends EPackageImpl implements SoftwarePackage
 		labelAccessEClass = createEClass(LABEL_ACCESS);
 		createEAttribute(labelAccessEClass, LABEL_ACCESS__IS_BUFFERED);
 		createEAttribute(labelAccessEClass, LABEL_ACCESS__ACCESS);
+		createEReference(labelAccessEClass, LABEL_ACCESS__DATA);
 
 		runnableInstructionsEClass = createEClass(RUNNABLE_INSTRUCTIONS);
 		createEReference(runnableInstructionsEClass, RUNNABLE_INSTRUCTIONS__DEFAULT);
@@ -810,6 +820,7 @@ public class SoftwarePackageImpl extends EPackageImpl implements SoftwarePackage
 		initEClass(labelAccessEClass, LabelAccess.class, "LabelAccess", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLabelAccess_IsBuffered(), theTypesPackage.getBoolean(), "isBuffered", null, 1, 1, LabelAccess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getLabelAccess_Access(), this.getLabelAccessEnum(), "access", null, 1, 1, LabelAccess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getLabelAccess_Data(), this.getLabel(), null, "data", null, 1, 1, LabelAccess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(runnableInstructionsEClass, RunnableInstructions.class, "RunnableInstructions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRunnableInstructions_Default(), theCommonPackage.getInstructions(), null, "default", null, 1, 1, RunnableInstructions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

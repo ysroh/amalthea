@@ -2,7 +2,9 @@
  */
 package org.eclipse.papyrus.amalthea.profile.amalthea.constraints.impl;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
@@ -21,6 +23,11 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.ConstraintsFact
 import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.ConstraintsModel;
 import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.ConstraintsPackage;
 
+import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.ProcessRequirement;
+import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.Requirement;
+import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.RequirementLimit;
+import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.Severity;
+import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.TimeRequirementLimit;
 import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.HardwarePackage;
 
 import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.HardwarePackageImpl;
@@ -58,6 +65,37 @@ public class ConstraintsPackageImpl extends EPackageImpl implements ConstraintsP
 	 * @generated
 	 */
 	private EClass constraintsModelEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass requirementEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass processRequirementEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass requirementLimitEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass timeRequirementLimitEClass = null;
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum severityEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -163,6 +201,60 @@ public class ConstraintsPackageImpl extends EPackageImpl implements ConstraintsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getRequirement() {
+		return requirementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRequirement_Severity() {
+		return (EAttribute)requirementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getProcessRequirement() {
+		return processRequirementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRequirementLimit() {
+		return requirementLimitEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTimeRequirementLimit() {
+		return timeRequirementLimitEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getSeverity() {
+		return severityEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ConstraintsFactory getConstraintsFactory() {
 		return (ConstraintsFactory)getEFactoryInstance();
 	}
@@ -187,6 +279,18 @@ public class ConstraintsPackageImpl extends EPackageImpl implements ConstraintsP
 
 		// Create classes and their features
 		constraintsModelEClass = createEClass(CONSTRAINTS_MODEL);
+
+		requirementEClass = createEClass(REQUIREMENT);
+		createEAttribute(requirementEClass, REQUIREMENT__SEVERITY);
+
+		processRequirementEClass = createEClass(PROCESS_REQUIREMENT);
+
+		requirementLimitEClass = createEClass(REQUIREMENT_LIMIT);
+
+		timeRequirementLimitEClass = createEClass(TIME_REQUIREMENT_LIMIT);
+
+		// Create enums
+		severityEEnum = createEEnum(SEVERITY);
 	}
 
 	/**
@@ -217,9 +321,28 @@ public class ConstraintsPackageImpl extends EPackageImpl implements ConstraintsP
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		processRequirementEClass.getESuperTypes().add(this.getRequirement());
+		timeRequirementLimitEClass.getESuperTypes().add(this.getRequirementLimit());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(constraintsModelEClass, ConstraintsModel.class, "ConstraintsModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(requirementEClass, Requirement.class, "Requirement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRequirement_Severity(), this.getSeverity(), "severity", null, 1, 1, Requirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(processRequirementEClass, ProcessRequirement.class, "ProcessRequirement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(requirementLimitEClass, RequirementLimit.class, "RequirementLimit", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(timeRequirementLimitEClass, TimeRequirementLimit.class, "TimeRequirementLimit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		// Initialize enums and add enum literals
+		initEEnum(severityEEnum, Severity.class, "Severity");
+		addEEnumLiteral(severityEEnum, Severity._UNDEFINED_);
+		addEEnumLiteral(severityEEnum, Severity.COSMETIC);
+		addEEnumLiteral(severityEEnum, Severity.MINOR);
+		addEEnumLiteral(severityEEnum, Severity.MAJOR);
+		addEEnumLiteral(severityEEnum, Severity.CRITICAL);
 
 		// Create annotations
 		// http://www.eclipse.org/uml2/2.0.0/UML

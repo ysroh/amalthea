@@ -27,4 +27,11 @@
 		</Composite.layout>
 		<ppe:EnumCombo input="{Binding}" property="Amalthea:SWModel:Task:preemption"></ppe:EnumCombo>
 	</Composite>
+	<Composite>
+		<Composite.layout>
+			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:ReferenceDialog input="{Binding}"
+			property="Amalthea:SWModel:Process:callgraph"></ppe:ReferenceDialog>
+	</Composite>
 </Composite>

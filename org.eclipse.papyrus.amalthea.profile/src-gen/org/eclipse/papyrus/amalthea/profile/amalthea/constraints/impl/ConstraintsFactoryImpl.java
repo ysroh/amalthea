@@ -3,6 +3,7 @@
 package org.eclipse.papyrus.amalthea.profile.amalthea.constraints.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -57,8 +58,40 @@ public class ConstraintsFactoryImpl extends EFactoryImpl implements ConstraintsF
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case ConstraintsPackage.CONSTRAINTS_MODEL: return createConstraintsModel();
+			case ConstraintsPackage.PROCESS_REQUIREMENT: return createProcessRequirement();
+			case ConstraintsPackage.TIME_REQUIREMENT_LIMIT: return createTimeRequirementLimit();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+			case ConstraintsPackage.SEVERITY:
+				return createSeverityFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+			case ConstraintsPackage.SEVERITY:
+				return convertSeverityToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -70,6 +103,46 @@ public class ConstraintsFactoryImpl extends EFactoryImpl implements ConstraintsF
 	public ConstraintsModel createConstraintsModel() {
 		ConstraintsModelImpl constraintsModel = new ConstraintsModelImpl();
 		return constraintsModel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ProcessRequirement createProcessRequirement() {
+		ProcessRequirementImpl processRequirement = new ProcessRequirementImpl();
+		return processRequirement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TimeRequirementLimit createTimeRequirementLimit() {
+		TimeRequirementLimitImpl timeRequirementLimit = new TimeRequirementLimitImpl();
+		return timeRequirementLimit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Severity createSeverityFromString(EDataType eDataType, String initialValue) {
+		Severity result = Severity.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertSeverityToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

@@ -924,6 +924,7 @@
       <elements xmi:id="_2VpHhxiXEeeoWfBb-FGkXQ" name="LabelAccess" supertypes="_2VpHjhiXEeeoWfBb-FGkXQ">
         <properties xmi:id="_2VpHiBiXEeeoWfBb-FGkXQ" name="isBuffered" type="Boolean"/>
         <properties xmi:id="_2VpHiRiXEeeoWfBb-FGkXQ" name="access" type="Enumeration"/>
+        <properties xmi:id="_pGBFsBryEeemOqGrpy978g" name="data" type="Reference"/>
       </elements>
       <elements xmi:id="_2VpHihiXEeeoWfBb-FGkXQ" name="ISR" supertypes="_2VpHoRiXEeeoWfBb-FGkXQ"/>
       <elements xmi:id="_2VpHixiXEeeoWfBb-FGkXQ" name="Task" supertypes="_2VpHoRiXEeeoWfBb-FGkXQ">
@@ -999,7 +1000,7 @@
       </elements>
       <elements xmi:id="_2VpHtRiXEeeoWfBb-FGkXQ" name="ComplexNode">
         <properties xmi:id="_2VpHthiXEeeoWfBb-FGkXQ" name="quartzes" type="Reference" multiplicity="-1"/>
-        <properties xmi:id="_2VpHtxiXEeeoWfBb-FGkXQ" name="prescaler" type="Reference"/>
+        <properties xmi:id="_2VpHtxiXEeeoWfBb-FGkXQ" name="prescaler" type="Reference" multiplicity="-1"/>
         <properties xmi:id="_2VpHuBiXEeeoWfBb-FGkXQ" name="networks" type="Reference" multiplicity="-1"/>
         <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690yXqDJEeSZxfCXzZz3-w"/>
       </elements>

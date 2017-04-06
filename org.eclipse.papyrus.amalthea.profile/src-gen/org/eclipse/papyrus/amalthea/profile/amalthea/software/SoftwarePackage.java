@@ -967,13 +967,22 @@ public interface SoftwarePackage extends EPackage {
 	int LABEL_ACCESS__ACCESS = RUNNABLE_ITEM_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Data</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL_ACCESS__DATA = RUNNABLE_ITEM_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Label Access</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL_ACCESS_FEATURE_COUNT = RUNNABLE_ITEM_FEATURE_COUNT + 2;
+	int LABEL_ACCESS_FEATURE_COUNT = RUNNABLE_ITEM_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Label Access</em>' class.
@@ -1492,6 +1501,17 @@ public interface SoftwarePackage extends EPackage {
 	EAttribute getLabelAccess_Access();
 
 	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.LabelAccess#getData <em>Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Data</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.LabelAccess#getData()
+	 * @see #getLabelAccess()
+	 * @generated
+	 */
+	EReference getLabelAccess_Data();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.RunnableInstructions <em>Runnable Instructions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1856,6 +1876,14 @@ public interface SoftwarePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute LABEL_ACCESS__ACCESS = eINSTANCE.getLabelAccess_Access();
+
+		/**
+		 * The meta object literal for the '<em><b>Data</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LABEL_ACCESS__DATA = eINSTANCE.getLabelAccess_Data();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.RunnableInstructionsImpl <em>Runnable Instructions</em>}' class.
