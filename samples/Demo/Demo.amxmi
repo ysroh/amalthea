@@ -45,7 +45,9 @@
   <osModel>
     <operatingSystems name="OS">
       <taskSchedulers name="TaskScheduler">
-        <schedulingUnit xsi:type="am:SchedulingHWUnit"/>
+        <schedulingUnit xsi:type="am:SchedulingHWUnit">
+          <delay value="10" unit="ms"/>
+        </schedulingUnit>
         <schedulingAlgorithm xsi:type="am:OSEK"/>
       </taskSchedulers>
       <interruptControllers name="InterruptController">
@@ -56,7 +58,16 @@
       </interruptControllers>
     </operatingSystems>
   </osModel>
-  <stimuliModel/>
+  <stimuliModel>
+    <stimuli xsi:type="am:Periodic" name="Timer_10MS">
+      <offset unit="ms"/>
+      <recurrence value="10" unit="ms"/>
+    </stimuli>
+    <stimuli xsi:type="am:Single" name="Single">
+      <activation unit="ms"/>
+    </stimuli>
+    <stimuli xsi:type="am:InterProcess" name="Interprocess"/>
+  </stimuliModel>
   <mappingModel/>
   <componentsModel/>
 </am:Amalthea>

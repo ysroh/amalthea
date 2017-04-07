@@ -59,6 +59,9 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.os.OSEK
 import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Bus
 import org.eclipse.app4mc.amalthea.model.InterruptSchedulingAlgorithm
 import org.eclipse.papyrus.amalthea.profile.amalthea.os.PriorityBased
+import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Periodic
+import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Single
+import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Interprocess
 
 class MainTransform {
 
@@ -348,12 +351,30 @@ class MainTransform {
 	}
 	
 	def private dispatch create AmaltheaFactory.eINSTANCE.createSchedulingHWUnit transformHelper(SchedulingHWUnit schedUnit, Object owner){
-		it.delay = schedUnit.delay?.transformHelper(schedUnit) as org.eclipse.app4mc.amalthea.model.Time
+		it.delay = schedUnit.delay?.transformHelper(new Object) as org.eclipse.app4mc.amalthea.model.Time
 	}	
 	
 	def private dispatch create AmaltheaFactory.eINSTANCE.createOSEK transformHelper(OSEK osek, Object owner){
 	}	
 	
 	def private dispatch create AmaltheaFactory.eINSTANCE.createPriorityBased transformHelper(PriorityBased osek, Object owner){
-	}		
+	}	
+	
+	/************* Stimuli ***************/
+	
+	def private dispatch create AmaltheaFactory.eINSTANCE.createPeriodic transform(Periodic stimulus){
+		it.name = stimulus.base_Class.name
+		it.offset = stimulus.offset?.transformHelper(new Object) as org.eclipse.app4mc.amalthea.model.Time
+		it.recurrence = stimulus.recurrence?.transformHelper(new Object) as org.eclipse.app4mc.amalthea.model.Time
+	}	
+	
+	def private dispatch create AmaltheaFactory.eINSTANCE.createSingle transform(Single stimulus){
+		it.name = stimulus.base_Class.name
+		it.activation = stimulus.activation?.transformHelper(new Object) as org.eclipse.app4mc.amalthea.model.Time
+	}	
+	
+	def private dispatch create AmaltheaFactory.eINSTANCE.createInterProcess transform(Interprocess stimulus){
+		it.name = stimulus.base_Class.name
+		it.counter = stimulus.counter?.transformHelper(new Object) as Counter
+	}
 }

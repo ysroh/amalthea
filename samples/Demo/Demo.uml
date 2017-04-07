@@ -82,6 +82,8 @@
       <packagedElement xmi:type="uml:Class" xmi:id="_SpqbMBozEeey-4lblVK-ag" name="Timer_10MS"/>
       <packagedElement xmi:type="uml:DataType" xmi:id="_XftkIBozEeey-4lblVK-ag" name="Timer10MSOffset"/>
       <packagedElement xmi:type="uml:DataType" xmi:id="_bAI98BozEeey-4lblVK-ag" name="Timer10MSRecurrence"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_OVr54Bu6EeeS0ZHQabp_-Q" name="Single"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Pq1H4Bu6EeeS0ZHQabp_-Q" name="Interprocess"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_FVPCoBoxEeeeW9cngqHTXg" name="Mapping"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_8DgakBoaEee60cQ75oPnTA">
@@ -192,4 +194,6 @@
   <Os:PriorityBased xmi:id="_l-NAIBu2EeenxIyLAaXNcw" base_Class="_l9wUMBu2EeenxIyLAaXNcw"/>
   <Os:SchedulingHWUnit xmi:id="_bKE5wBu3EeeKlfyNbpZehQ" base_Class="_bJ7IwBu3EeeKlfyNbpZehQ" delay="_ijOB4BsEEee_6e5LGg5HzA"/>
   <Common:Time xmi:id="_bKja4Bu3EeeKlfyNbpZehQ" value="10" unit="ms" base_DataType="_bJ7IwRu3EeeKlfyNbpZehQ"/>
+  <Stimuli:Single xmi:id="_OV5VQBu6EeeS0ZHQabp_-Q" base_Class="_OVr54Bu6EeeS0ZHQabp_-Q" activation="_Xf3VIBozEeey-4lblVK-ag"/>
+  <Stimuli:Interprocess xmi:id="_PrIC0Bu6EeeS0ZHQabp_-Q" base_Class="_Pq1H4Bu6EeeS0ZHQabp_-Q" counter="_a89lsBsFEeeSFpvWgLU3rg"/>
 </xmi:XMI>
