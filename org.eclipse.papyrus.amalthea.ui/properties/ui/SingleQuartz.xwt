@@ -25,4 +25,11 @@
 		<ppe:ReferenceDialog input="{Binding}"
 			property="Amalthea:HWModel:Quartz:frequency"></ppe:ReferenceDialog>
 	</Composite>
+	<Composite>
+		<Composite.layout>
+			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:ReferenceDialog input="{Binding}"
+			property="Amalthea:HWModel:ComplexNode:prescaler"></ppe:ReferenceDialog>
+	</Composite>
 </Composite>

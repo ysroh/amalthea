@@ -32,8 +32,12 @@
       <ecus name="ECU">
         <quartzes name="ECUQuartz"/>
         <microcontrollers name="Processor">
-          <networks name="Network" type="Bus?type=Bus"/>
-          <cores name="Core_1" coreType="CoreType?type=CoreType"/>
+          <networks name="Network" type="Bus?type=Bus">
+            <prescaler name="Prescaler"/>
+          </networks>
+          <cores name="Core_1" coreType="CoreType?type=CoreType">
+            <prescaler name="Prescaler"/>
+          </cores>
         </microcontrollers>
       </ecus>
     </system>
@@ -41,11 +45,15 @@
   <osModel>
     <operatingSystems name="OS">
       <taskSchedulers name="TaskScheduler">
+        <schedulingUnit xsi:type="am:SchedulingHWUnit"/>
+        <schedulingAlgorithm xsi:type="am:OSEK"/>
+      </taskSchedulers>
+      <interruptControllers name="InterruptController">
         <schedulingUnit xsi:type="am:SchedulingHWUnit">
           <delay value="10" unit="ms"/>
         </schedulingUnit>
-        <schedulingAlgorithm xsi:type="am:OSEK"/>
-      </taskSchedulers>
+        <schedulingAlgorithm xsi:type="am:PriorityBased"/>
+      </interruptControllers>
     </operatingSystems>
   </osModel>
   <stimuliModel/>

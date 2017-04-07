@@ -19,4 +19,18 @@
 		<ppe:IntegerEditor input="{Binding}"
 			property="Amalthea:OSModel:Scheduler:scheduleUnitPriority"></ppe:IntegerEditor>
 	</Composite>
+	<Composite>
+		<Composite.layout>
+			<ppel:PropertiesLayout numColumns="2"></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:ReferenceDialog input="{Binding}"
+			property="Amalthea:OSModel:Scheduler:schedulingunit"></ppe:ReferenceDialog>
+	</Composite>
+	<Composite>
+		<Composite.layout>
+			<ppel:PropertiesLayout numColumns="2"></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:ReferenceDialog input="{Binding}"
+			property="Amalthea:OSModel:InterruptController:schedulingalgorithm"></ppe:ReferenceDialog>
+	</Composite>
 </Composite>

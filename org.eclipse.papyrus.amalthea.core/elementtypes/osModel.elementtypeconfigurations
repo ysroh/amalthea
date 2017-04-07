@@ -111,4 +111,9 @@
       <requiredProfiles>Amalthea</requiredProfiles>
     </stereotypesToApply>
   </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.priorityBased" target="//@elementTypeConfigurations.4">
+    <stereotypesToApply stereotypeQualifiedName="Amalthea::OSModel::PriorityBased">
+      <requiredProfiles>Amalthea</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
 </elementtypesconfigurations:ElementTypeSetConfiguration>
