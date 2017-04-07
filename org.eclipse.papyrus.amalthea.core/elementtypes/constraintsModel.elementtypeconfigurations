@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ASCII"?>
+<elementtypesconfigurations:ElementTypeSetConfiguration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:applystereotypeadvice="http://www.eclipse.org/papyrus/uml/types/applystereotypeadvice/1.1" xmlns:elementtypesconfigurations="http://www.eclipse.org/papyrus/infra/elementtypesconfigurations/1.1" xmlns:invariantcontainerrule="http://www.eclipse.org/papyrus/emf/types/invariantcontainerrule/1.1" xmlns:invariantstereotyperule="http://www.eclipse.org/papyrus/uml/types/invariantstereotyperule/1.1" xmlns:rulebased="http://www.eclipse.org/papyrus/infra/types/rulebased/1.1" xmi:id="_ubJcsKeUEeSUR5jX0TaAcA" identifier="org.eclipse.papyrus.amalthea.constraints.elementTypeSet" name="Amalthea Constraints" metamodelNsURI="http://www.eclipse.org/uml2/5.0.0/UML">
+  <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.ProcessRequirement" name="ProcessRequirement">
+    <specializedTypesID>org.eclipse.papyrus.uml.Constraint</specializedTypesID>
+    <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
+      <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::ConstraintsModel::ProcessRequirement" requiredProfile="Amalthea"/>
+      <composedRules xsi:type="rulebased:OrRuleConfiguration">
+        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+          <permissions containerType="org.eclipse.papyrus.amalthea.core.Task" permitted="true"/>
+        </composedRules>
+        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+          <permissions containerType="org.eclipse.papyrus.amalthea.core.ISR" permitted="true"/>
+        </composedRules>
+      </composedRules>
+    </ruleConfiguration>
+  </elementTypeConfigurations>
+  <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.TimeRequirementLimit" name="TimeRequirementLimit">
+    <specializedTypesID>org.eclipse.papyrus.uml.DataType</specializedTypesID>
+    <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
+      <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::ConstraintsModel::TimeRequirementLimit" requiredProfile="Amalthea"/>
+      <composedRules xsi:type="rulebased:OrRuleConfiguration">
+        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+          <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
+        </composedRules>
+        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+          <permissions containerType="org.eclipse.papyrus.uml.Class" permitted="true"/>
+        </composedRules>
+      </composedRules>
+    </ruleConfiguration>
+  </elementTypeConfigurations>
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.processRequirement" target="//@elementTypeConfigurations.0"/>
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.timeRequirementLimit" target="//@elementTypeConfigurations.1"/>
+</elementtypesconfigurations:ElementTypeSetConfiguration>

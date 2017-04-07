@@ -16,7 +16,7 @@
 		<Composite.layout>
 			<ppel:PropertiesLayout></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:ReferenceDialog input="{Binding}"
-			property="Amalthea:StimuliModel:Interprocess:counter"></ppe:ReferenceDialog>
+		<ppe:StringEditor input="{Binding}"
+			property="Amalthea:ConstraintsModel:Requirement:severity"></ppe:StringEditor>
 	</Composite>
 </Composite>

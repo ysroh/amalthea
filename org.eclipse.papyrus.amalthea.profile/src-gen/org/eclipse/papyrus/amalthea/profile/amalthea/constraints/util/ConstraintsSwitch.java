@@ -78,16 +78,16 @@ public class ConstraintsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ConstraintsPackage.REQUIREMENT_LIMIT: {
+				RequirementLimit requirementLimit = (RequirementLimit)theEObject;
+				T result = caseRequirementLimit(requirementLimit);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ConstraintsPackage.PROCESS_REQUIREMENT: {
 				ProcessRequirement processRequirement = (ProcessRequirement)theEObject;
 				T result = caseProcessRequirement(processRequirement);
 				if (result == null) result = caseRequirement(processRequirement);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ConstraintsPackage.REQUIREMENT_LIMIT: {
-				RequirementLimit requirementLimit = (RequirementLimit)theEObject;
-				T result = caseRequirementLimit(requirementLimit);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

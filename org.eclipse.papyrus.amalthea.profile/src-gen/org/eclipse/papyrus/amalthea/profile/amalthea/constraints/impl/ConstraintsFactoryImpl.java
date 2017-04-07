@@ -75,6 +75,10 @@ public class ConstraintsFactoryImpl extends EFactoryImpl implements ConstraintsF
 		switch (eDataType.getClassifierID()) {
 			case ConstraintsPackage.SEVERITY:
 				return createSeverityFromString(eDataType, initialValue);
+			case ConstraintsPackage.LIMIT_TYPE:
+				return createLimitTypeFromString(eDataType, initialValue);
+			case ConstraintsPackage.TIME_METRIC:
+				return createTimeMetricFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -90,6 +94,10 @@ public class ConstraintsFactoryImpl extends EFactoryImpl implements ConstraintsF
 		switch (eDataType.getClassifierID()) {
 			case ConstraintsPackage.SEVERITY:
 				return convertSeverityToString(eDataType, instanceValue);
+			case ConstraintsPackage.LIMIT_TYPE:
+				return convertLimitTypeToString(eDataType, instanceValue);
+			case ConstraintsPackage.TIME_METRIC:
+				return convertTimeMetricToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -142,6 +150,46 @@ public class ConstraintsFactoryImpl extends EFactoryImpl implements ConstraintsF
 	 * @generated
 	 */
 	public String convertSeverityToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LimitType createLimitTypeFromString(EDataType eDataType, String initialValue) {
+		LimitType result = LimitType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertLimitTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TimeMetric createTimeMetricFromString(EDataType eDataType, String initialValue) {
+		TimeMetric result = TimeMetric.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertTimeMetricToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

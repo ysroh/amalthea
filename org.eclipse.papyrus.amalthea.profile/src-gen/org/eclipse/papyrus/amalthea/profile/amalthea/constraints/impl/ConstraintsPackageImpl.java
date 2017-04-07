@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.papyrus.amalthea.profile.amalthea.AmaltheaPackage;
@@ -23,10 +24,12 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.ConstraintsFact
 import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.ConstraintsModel;
 import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.ConstraintsPackage;
 
+import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.LimitType;
 import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.ProcessRequirement;
 import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.Requirement;
 import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.RequirementLimit;
 import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.Severity;
+import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.TimeMetric;
 import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.TimeRequirementLimit;
 import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.HardwarePackage;
 
@@ -51,6 +54,7 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.StimuliPackage;
 import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.impl.StimuliPackageImpl;
 
 import org.eclipse.papyrus.sysml14.sysmlPackage;
+import org.eclipse.uml2.uml.UMLPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -96,6 +100,20 @@ public class ConstraintsPackageImpl extends EPackageImpl implements ConstraintsP
 	 * @generated
 	 */
 	private EEnum severityEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum limitTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum timeMetricEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -219,6 +237,24 @@ public class ConstraintsPackageImpl extends EPackageImpl implements ConstraintsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getRequirement_Limit() {
+		return (EReference)requirementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRequirement_Base_Constraint() {
+		return (EReference)requirementEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getProcessRequirement() {
 		return processRequirementEClass;
 	}
@@ -237,6 +273,24 @@ public class ConstraintsPackageImpl extends EPackageImpl implements ConstraintsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getRequirementLimit_LimitType() {
+		return (EAttribute)requirementLimitEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRequirementLimit_Base_DataType() {
+		return (EReference)requirementLimitEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTimeRequirementLimit() {
 		return timeRequirementLimitEClass;
 	}
@@ -246,8 +300,44 @@ public class ConstraintsPackageImpl extends EPackageImpl implements ConstraintsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getTimeRequirementLimit_Metric() {
+		return (EAttribute)timeRequirementLimitEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTimeRequirementLimit_LimitValue() {
+		return (EReference)timeRequirementLimitEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getSeverity() {
 		return severityEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getLimitType() {
+		return limitTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getTimeMetric() {
+		return timeMetricEEnum;
 	}
 
 	/**
@@ -282,15 +372,23 @@ public class ConstraintsPackageImpl extends EPackageImpl implements ConstraintsP
 
 		requirementEClass = createEClass(REQUIREMENT);
 		createEAttribute(requirementEClass, REQUIREMENT__SEVERITY);
+		createEReference(requirementEClass, REQUIREMENT__LIMIT);
+		createEReference(requirementEClass, REQUIREMENT__BASE_CONSTRAINT);
+
+		requirementLimitEClass = createEClass(REQUIREMENT_LIMIT);
+		createEAttribute(requirementLimitEClass, REQUIREMENT_LIMIT__LIMIT_TYPE);
+		createEReference(requirementLimitEClass, REQUIREMENT_LIMIT__BASE_DATA_TYPE);
 
 		processRequirementEClass = createEClass(PROCESS_REQUIREMENT);
 
-		requirementLimitEClass = createEClass(REQUIREMENT_LIMIT);
-
 		timeRequirementLimitEClass = createEClass(TIME_REQUIREMENT_LIMIT);
+		createEAttribute(timeRequirementLimitEClass, TIME_REQUIREMENT_LIMIT__METRIC);
+		createEReference(timeRequirementLimitEClass, TIME_REQUIREMENT_LIMIT__LIMIT_VALUE);
 
 		// Create enums
 		severityEEnum = createEEnum(SEVERITY);
+		limitTypeEEnum = createEEnum(LIMIT_TYPE);
+		timeMetricEEnum = createEEnum(TIME_METRIC);
 	}
 
 	/**
@@ -316,6 +414,10 @@ public class ConstraintsPackageImpl extends EPackageImpl implements ConstraintsP
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		UMLPackage theUMLPackage = (UMLPackage)EPackage.Registry.INSTANCE.getEPackage(UMLPackage.eNS_URI);
+		CommonPackage theCommonPackage = (CommonPackage)EPackage.Registry.INSTANCE.getEPackage(CommonPackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
@@ -329,12 +431,18 @@ public class ConstraintsPackageImpl extends EPackageImpl implements ConstraintsP
 
 		initEClass(requirementEClass, Requirement.class, "Requirement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRequirement_Severity(), this.getSeverity(), "severity", null, 1, 1, Requirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getRequirement_Limit(), this.getRequirementLimit(), null, "limit", null, 0, 1, Requirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getRequirement_Base_Constraint(), theUMLPackage.getConstraint(), null, "base_Constraint", null, 1, 1, Requirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(requirementLimitEClass, RequirementLimit.class, "RequirementLimit", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRequirementLimit_LimitType(), this.getLimitType(), "limitType", null, 1, 1, RequirementLimit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getRequirementLimit_Base_DataType(), theUMLPackage.getDataType(), null, "base_DataType", null, 1, 1, RequirementLimit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(processRequirementEClass, ProcessRequirement.class, "ProcessRequirement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(requirementLimitEClass, RequirementLimit.class, "RequirementLimit", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(timeRequirementLimitEClass, TimeRequirementLimit.class, "TimeRequirementLimit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTimeRequirementLimit_Metric(), this.getTimeMetric(), "metric", null, 1, 1, TimeRequirementLimit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getTimeRequirementLimit_LimitValue(), theCommonPackage.getTime(), null, "limitValue", null, 0, 1, TimeRequirementLimit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(severityEEnum, Severity.class, "Severity");
@@ -343,6 +451,30 @@ public class ConstraintsPackageImpl extends EPackageImpl implements ConstraintsP
 		addEEnumLiteral(severityEEnum, Severity.MINOR);
 		addEEnumLiteral(severityEEnum, Severity.MAJOR);
 		addEEnumLiteral(severityEEnum, Severity.CRITICAL);
+
+		initEEnum(limitTypeEEnum, LimitType.class, "LimitType");
+		addEEnumLiteral(limitTypeEEnum, LimitType._UNDEFINED_);
+		addEEnumLiteral(limitTypeEEnum, LimitType.UPPER_LIMIT);
+		addEEnumLiteral(limitTypeEEnum, LimitType.LOWER_LIMIT);
+
+		initEEnum(timeMetricEEnum, TimeMetric.class, "TimeMetric");
+		addEEnumLiteral(timeMetricEEnum, TimeMetric._UNDEFINED_);
+		addEEnumLiteral(timeMetricEEnum, TimeMetric.ACTIVATE_TO_ACTIVATE);
+		addEEnumLiteral(timeMetricEEnum, TimeMetric.CORE_EXECUTION_TIME);
+		addEEnumLiteral(timeMetricEEnum, TimeMetric.END_TO_END);
+		addEEnumLiteral(timeMetricEEnum, TimeMetric.GROSS_EXECUTION_TIME);
+		addEEnumLiteral(timeMetricEEnum, TimeMetric.LATENESS);
+		addEEnumLiteral(timeMetricEEnum, TimeMetric.MEMORY_ACCESS_TIME);
+		addEEnumLiteral(timeMetricEEnum, TimeMetric.NET_EXECUTION_TIME);
+		addEEnumLiteral(timeMetricEEnum, TimeMetric.OS_OVERHEAD);
+		addEEnumLiteral(timeMetricEEnum, TimeMetric.PARKING_TIME);
+		addEEnumLiteral(timeMetricEEnum, TimeMetric.POLLING_TIME);
+		addEEnumLiteral(timeMetricEEnum, TimeMetric.READY_TIME);
+		addEEnumLiteral(timeMetricEEnum, TimeMetric.RESPONSE_TIME);
+		addEEnumLiteral(timeMetricEEnum, TimeMetric.RUNNING_TIME);
+		addEEnumLiteral(timeMetricEEnum, TimeMetric.START_DELAY);
+		addEEnumLiteral(timeMetricEEnum, TimeMetric.START_TO_START);
+		addEEnumLiteral(timeMetricEEnum, TimeMetric.WAITING_TIME);
 
 		// Create annotations
 		// http://www.eclipse.org/uml2/2.0.0/UML

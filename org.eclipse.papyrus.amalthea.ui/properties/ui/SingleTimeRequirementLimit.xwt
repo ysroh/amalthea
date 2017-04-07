@@ -16,7 +16,21 @@
 		<Composite.layout>
 			<ppel:PropertiesLayout></ppel:PropertiesLayout>
 		</Composite.layout>
+		<ppe:EnumRadio input="{Binding}"
+			property="Amalthea:ConstraintsModel:RequirementLimit:limitType"></ppe:EnumRadio>
+	</Composite>
+	<Composite>
+		<Composite.layout>
+			<ppel:PropertiesLayout></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:EnumCombo input="{Binding}"
+			property="Amalthea:ConstraintsModel:TimeRequirementLimit:metric"></ppe:EnumCombo>
+	</Composite>
+	<Composite>
+		<Composite.layout>
+			<ppel:PropertiesLayout></ppel:PropertiesLayout>
+		</Composite.layout>
 		<ppe:ReferenceDialog input="{Binding}"
-			property="Amalthea:StimuliModel:Interprocess:counter"></ppe:ReferenceDialog>
+			property="Amalthea:ConstraintsModel:TimeRequirementLimit:limitValue"></ppe:ReferenceDialog>
 	</Composite>
 </Composite>

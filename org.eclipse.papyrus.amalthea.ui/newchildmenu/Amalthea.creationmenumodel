@@ -53,4 +53,8 @@
     <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Periodic" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Periodic"/>
     <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Interprocess" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Interprocess"/>
   </menu>
+  <menu xsi:type="ElementCreationMenuModel:Folder" label="ConstraintsModel">
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="ProcessRequirement" icon="" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.ProcessRequirement"/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="TimeRequirementLimit" icon="" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.TimeRequirementLimit"/>
+  </menu>
 </ElementCreationMenuModel:Folder>

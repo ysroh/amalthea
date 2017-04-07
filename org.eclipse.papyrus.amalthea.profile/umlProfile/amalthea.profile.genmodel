@@ -374,13 +374,49 @@
         <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//constraints/Severity/Major"/>
         <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//constraints/Severity/Critical"/>
       </genEnums>
+      <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="amalthea.ecore#//constraints/LimitType">
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//constraints/LimitType/_undefined_"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//constraints/LimitType/UpperLimit"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//constraints/LimitType/LowerLimit"/>
+      </genEnums>
+      <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="amalthea.ecore#//constraints/TimeMetric">
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//constraints/TimeMetric/_undefined_"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//constraints/TimeMetric/ActivateToActivate"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//constraints/TimeMetric/CoreExecutionTime"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//constraints/TimeMetric/EndToEnd"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//constraints/TimeMetric/GrossExecutionTime"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//constraints/TimeMetric/Lateness"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//constraints/TimeMetric/MemoryAccessTime"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//constraints/TimeMetric/NetExecutionTime"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//constraints/TimeMetric/OsOverhead"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//constraints/TimeMetric/ParkingTime"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//constraints/TimeMetric/PollingTime"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//constraints/TimeMetric/ReadyTime"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//constraints/TimeMetric/ResponseTime"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//constraints/TimeMetric/RunningTime"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//constraints/TimeMetric/StartDelay"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//constraints/TimeMetric/StartToStart"/>
+        <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="amalthea.ecore#//constraints/TimeMetric/WaitingTime"/>
+      </genEnums>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//constraints/ConstraintsModel"/>
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="amalthea.ecore#//constraints/Requirement">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//constraints/Requirement/severity"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference amalthea.ecore#//constraints/Requirement/limit"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference amalthea.ecore#//constraints/Requirement/base_Constraint"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="amalthea.ecore#//constraints/RequirementLimit">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//constraints/RequirementLimit/limitType"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference amalthea.ecore#//constraints/RequirementLimit/base_DataType"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//constraints/ProcessRequirement"/>
-      <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="amalthea.ecore#//constraints/RequirementLimit"/>
-      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//constraints/TimeRequirementLimit"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//constraints/TimeRequirementLimit">
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//constraints/TimeRequirementLimit/metric"/>
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference amalthea.ecore#//constraints/TimeRequirementLimit/limitValue"/>
+      </genClasses>
     </nestedGenPackages>
   </genPackages>
 </genmodel:GenModel>

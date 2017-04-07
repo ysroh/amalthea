@@ -76,12 +76,12 @@ public class ConstraintsAdapterFactory extends AdapterFactoryImpl {
 				return createRequirementAdapter();
 			}
 			@Override
-			public Adapter caseProcessRequirement(ProcessRequirement object) {
-				return createProcessRequirementAdapter();
-			}
-			@Override
 			public Adapter caseRequirementLimit(RequirementLimit object) {
 				return createRequirementLimitAdapter();
+			}
+			@Override
+			public Adapter caseProcessRequirement(ProcessRequirement object) {
+				return createProcessRequirementAdapter();
 			}
 			@Override
 			public Adapter caseTimeRequirementLimit(TimeRequirementLimit object) {

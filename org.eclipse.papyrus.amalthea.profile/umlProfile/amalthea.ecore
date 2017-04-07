@@ -417,6 +417,10 @@
     <eClassifiers xsi:type="ecore:EClass" name="Requirement" abstract="true">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="severity" ordered="false"
           lowerBound="1" eType="#//constraints/Severity"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="limit" ordered="false"
+          eType="#//constraints/RequirementLimit"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_Constraint" ordered="false"
+          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Constraint"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EEnum" name="Severity">
       <eLiterals name="_undefined_"/>
@@ -425,8 +429,42 @@
       <eLiterals name="Major" value="3"/>
       <eLiterals name="Critical" value="4"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="RequirementLimit" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="limitType" ordered="false"
+          lowerBound="1" eType="#//constraints/LimitType"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="base_DataType" ordered="false"
+          lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//DataType"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="LimitType">
+      <eLiterals name="_undefined_"/>
+      <eLiterals name="UpperLimit" value="1"/>
+      <eLiterals name="LowerLimit" value="2"/>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ProcessRequirement" eSuperTypes="#//constraints/Requirement"/>
-    <eClassifiers xsi:type="ecore:EClass" name="RequirementLimit" abstract="true"/>
-    <eClassifiers xsi:type="ecore:EClass" name="TimeRequirementLimit" eSuperTypes="#//constraints/RequirementLimit"/>
+    <eClassifiers xsi:type="ecore:EClass" name="TimeRequirementLimit" eSuperTypes="#//constraints/RequirementLimit">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="metric" ordered="false"
+          lowerBound="1" eType="#//constraints/TimeMetric"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="limitValue" ordered="false"
+          eType="#//common/Time"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="TimeMetric">
+      <eLiterals name="_undefined_"/>
+      <eLiterals name="ActivateToActivate" value="1"/>
+      <eLiterals name="CoreExecutionTime" value="2"/>
+      <eLiterals name="EndToEnd" value="3"/>
+      <eLiterals name="GrossExecutionTime" value="4"/>
+      <eLiterals name="Lateness" value="5"/>
+      <eLiterals name="MemoryAccessTime" value="6"/>
+      <eLiterals name="NetExecutionTime" value="7"/>
+      <eLiterals name="OsOverhead" value="8"/>
+      <eLiterals name="ParkingTime" value="9"/>
+      <eLiterals name="PollingTime" value="10"/>
+      <eLiterals name="ReadyTime" value="11"/>
+      <eLiterals name="ResponseTime" value="12"/>
+      <eLiterals name="RunningTime" value="13"/>
+      <eLiterals name="StartDelay" value="14"/>
+      <eLiterals name="StartToStart" value="15"/>
+      <eLiterals name="WaitingTime" value="16"/>
+    </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>
