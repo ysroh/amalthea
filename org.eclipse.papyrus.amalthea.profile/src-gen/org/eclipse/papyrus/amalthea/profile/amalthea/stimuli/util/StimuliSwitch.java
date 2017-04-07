@@ -76,13 +76,6 @@ public class StimuliSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case StimuliPackage.STIMULUS: {
-				Stimulus stimulus = (Stimulus)theEObject;
-				T result = caseStimulus(stimulus);
-				if (result == null) result = caseBlock(stimulus);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case StimuliPackage.PERIODIC: {
 				Periodic periodic = (Periodic)theEObject;
 				T result = casePeriodic(periodic);
@@ -96,6 +89,13 @@ public class StimuliSwitch<T> extends Switch<T> {
 				T result = caseInterprocess(interprocess);
 				if (result == null) result = caseStimulus(interprocess);
 				if (result == null) result = caseBlock(interprocess);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case StimuliPackage.STIMULUS: {
+				Stimulus stimulus = (Stimulus)theEObject;
+				T result = caseStimulus(stimulus);
+				if (result == null) result = caseBlock(stimulus);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

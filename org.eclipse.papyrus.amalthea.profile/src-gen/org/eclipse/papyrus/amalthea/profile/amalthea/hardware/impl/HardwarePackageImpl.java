@@ -265,9 +265,9 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 		CommonPackageImpl theCommonPackage = (CommonPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CommonPackage.eNS_URI) instanceof CommonPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CommonPackage.eNS_URI) : CommonPackage.eINSTANCE);
 		ComponentsPackageImpl theComponentsPackage = (ComponentsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ComponentsPackage.eNS_URI) instanceof ComponentsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ComponentsPackage.eNS_URI) : ComponentsPackage.eINSTANCE);
 		SoftwarePackageImpl theSoftwarePackage = (SoftwarePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(SoftwarePackage.eNS_URI) instanceof SoftwarePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(SoftwarePackage.eNS_URI) : SoftwarePackage.eINSTANCE);
+		StimuliPackageImpl theStimuliPackage = (StimuliPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StimuliPackage.eNS_URI) instanceof StimuliPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StimuliPackage.eNS_URI) : StimuliPackage.eINSTANCE);
 		OsPackageImpl theOsPackage = (OsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(OsPackage.eNS_URI) instanceof OsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(OsPackage.eNS_URI) : OsPackage.eINSTANCE);
 		MappingPackageImpl theMappingPackage = (MappingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MappingPackage.eNS_URI) instanceof MappingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MappingPackage.eNS_URI) : MappingPackage.eINSTANCE);
-		StimuliPackageImpl theStimuliPackage = (StimuliPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StimuliPackage.eNS_URI) instanceof StimuliPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StimuliPackage.eNS_URI) : StimuliPackage.eINSTANCE);
 		ConstraintsPackageImpl theConstraintsPackage = (ConstraintsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ConstraintsPackage.eNS_URI) instanceof ConstraintsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ConstraintsPackage.eNS_URI) : ConstraintsPackage.eINSTANCE);
 
 		// Create package meta-data objects
@@ -276,9 +276,9 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 		theCommonPackage.createPackageContents();
 		theComponentsPackage.createPackageContents();
 		theSoftwarePackage.createPackageContents();
+		theStimuliPackage.createPackageContents();
 		theOsPackage.createPackageContents();
 		theMappingPackage.createPackageContents();
-		theStimuliPackage.createPackageContents();
 		theConstraintsPackage.createPackageContents();
 
 		// Initialize created meta-data
@@ -287,9 +287,9 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 		theCommonPackage.initializePackageContents();
 		theComponentsPackage.initializePackageContents();
 		theSoftwarePackage.initializePackageContents();
+		theStimuliPackage.initializePackageContents();
 		theOsPackage.initializePackageContents();
 		theMappingPackage.initializePackageContents();
-		theStimuliPackage.initializePackageContents();
 		theConstraintsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
@@ -380,6 +380,15 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 	 */
 	public EAttribute getQuartz_Type() {
 		return (EAttribute)quartzEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getQuartz_Frequency() {
+		return (EReference)quartzEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -745,6 +754,11 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 
 		quartzEClass = createEClass(QUARTZ);
 		createEAttribute(quartzEClass, QUARTZ__TYPE);
+		createEReference(quartzEClass, QUARTZ__FREQUENCY);
+
+		frequencyEClass = createEClass(FREQUENCY);
+		createEAttribute(frequencyEClass, FREQUENCY__VALUE);
+		createEAttribute(frequencyEClass, FREQUENCY__UNIT);
 
 		prescalerEClass = createEClass(PRESCALER);
 		createEAttribute(prescalerEClass, PRESCALER__CLOCK_RATIO);
@@ -786,15 +800,11 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 		busEClass = createEClass(BUS);
 		createEAttribute(busEClass, BUS__BUS_TYPE);
 
-		frequencyEClass = createEClass(FREQUENCY);
-		createEAttribute(frequencyEClass, FREQUENCY__VALUE);
-		createEAttribute(frequencyEClass, FREQUENCY__UNIT);
-
 		// Create enums
 		qTypeEEnum = createEEnum(QTYPE);
+		frequencyUnitEEnum = createEEnum(FREQUENCY_UNIT);
 		schedTypeEEnum = createEEnum(SCHED_TYPE);
 		busTypeEEnum = createEEnum(BUS_TYPE);
-		frequencyUnitEEnum = createEEnum(FREQUENCY_UNIT);
 	}
 
 	/**
@@ -847,11 +857,16 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 
 		initEClass(complexNodeEClass, ComplexNode.class, "ComplexNode", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getComplexNode_Quartzes(), this.getQuartz(), null, "quartzes", null, 0, -1, ComplexNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getComplexNode_Prescaler(), this.getPrescaler(), null, "prescaler", null, 0, -1, ComplexNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getComplexNode_Prescaler(), this.getPrescaler(), null, "prescaler", null, 0, 1, ComplexNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getComplexNode_Networks(), this.getNetwork(), null, "networks", null, 0, -1, ComplexNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(quartzEClass, Quartz.class, "Quartz", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getQuartz_Type(), this.getQType(), "type", "_undefined_", 1, 1, Quartz.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getQuartz_Frequency(), this.getFrequency(), null, "frequency", null, 0, 1, Quartz.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(frequencyEClass, Frequency.class, "Frequency", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFrequency_Value(), theTypesPackage.getReal(), "value", null, 1, 1, Frequency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getFrequency_Unit(), this.getFrequencyUnit(), "unit", "_undefined_", 1, 1, Frequency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(prescalerEClass, Prescaler.class, "Prescaler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPrescaler_ClockRatio(), theTypesPackage.getReal(), "clockRatio", "0.0", 1, 1, Prescaler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -893,15 +908,18 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 		initEClass(busEClass, Bus.class, "Bus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBus_BusType(), this.getBusType(), "busType", "_undefined_", 1, 1, Bus.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(frequencyEClass, Frequency.class, "Frequency", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFrequency_Value(), theTypesPackage.getReal(), "value", null, 1, 1, Frequency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getFrequency_Unit(), this.getFrequencyUnit(), "unit", "_undefined_", 1, 1, Frequency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
 		// Initialize enums and add enum literals
 		initEEnum(qTypeEEnum, QType.class, "QType");
 		addEEnumLiteral(qTypeEEnum, QType._UNDEFINED_);
 		addEEnumLiteral(qTypeEEnum, QType.DYNAMIC);
 		addEEnumLiteral(qTypeEEnum, QType.STATIC);
+
+		initEEnum(frequencyUnitEEnum, FrequencyUnit.class, "FrequencyUnit");
+		addEEnumLiteral(frequencyUnitEEnum, FrequencyUnit._UNDEFINED_);
+		addEEnumLiteral(frequencyUnitEEnum, FrequencyUnit.HZ);
+		addEEnumLiteral(frequencyUnitEEnum, FrequencyUnit.KHZ);
+		addEEnumLiteral(frequencyUnitEEnum, FrequencyUnit.MHZ);
+		addEEnumLiteral(frequencyUnitEEnum, FrequencyUnit.GHZ);
 
 		initEEnum(schedTypeEEnum, SchedType.class, "SchedType");
 		addEEnumLiteral(schedTypeEEnum, SchedType._UNDEFINED_);
@@ -917,13 +935,6 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 		addEEnumLiteral(busTypeEEnum, BusType.ETHERNET);
 		addEEnumLiteral(busTypeEEnum, BusType.SPI);
 		addEEnumLiteral(busTypeEEnum, BusType.NA);
-
-		initEEnum(frequencyUnitEEnum, FrequencyUnit.class, "FrequencyUnit");
-		addEEnumLiteral(frequencyUnitEEnum, FrequencyUnit._UNDEFINED_);
-		addEEnumLiteral(frequencyUnitEEnum, FrequencyUnit.HZ);
-		addEEnumLiteral(frequencyUnitEEnum, FrequencyUnit.KHZ);
-		addEEnumLiteral(frequencyUnitEEnum, FrequencyUnit.MHZ);
-		addEEnumLiteral(frequencyUnitEEnum, FrequencyUnit.GHZ);
 
 		// Create annotations
 		// http://www.eclipse.org/uml2/2.0.0/UML

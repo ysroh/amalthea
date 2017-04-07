@@ -188,7 +188,10 @@
           lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="CallSequence" eSuperTypes="#//software/GraphEntry"/>
-    <eClassifiers xsi:type="ecore:EClass" name="InterProcessActivation" eSuperTypes="#//software/CallSequenceItem"/>
+    <eClassifiers xsi:type="ecore:EClass" name="InterProcessActivation" eSuperTypes="#//software/CallSequenceItem">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="stimulus" ordered="false"
+          lowerBound="1" eType="#//stimuli/Stimulus"/>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="TaskRunnableCall" eSuperTypes="#//software/CallSequenceItem">
       <eStructuralFeatures xsi:type="ecore:EReference" name="runnable" ordered="false"
           lowerBound="1" eType="#//software/Runnable"/>
@@ -217,6 +220,27 @@
           lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Boolean"/>
     </eClassifiers>
   </eSubpackages>
+  <eSubpackages name="stimuli" nsURI="http://www.eclipse.org/papyrus/2017/Amalthea/Stimuli"
+      nsPrefix="Stimuli">
+    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <details key="originalName" value="StimuliModel"/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="Single" eSuperTypes="#//stimuli/Stimulus">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="activation" ordered="false"
+          lowerBound="1" eType="#//common/Time"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Periodic" eSuperTypes="#//stimuli/Stimulus">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="recurrence" ordered="false"
+          lowerBound="1" eType="#//common/Time"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="offset" ordered="false"
+          lowerBound="1" eType="#//common/Time"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Interprocess" eSuperTypes="#//stimuli/Stimulus">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="counter" ordered="false"
+          lowerBound="1" eType="#//common/Counter"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Stimulus" abstract="true" eSuperTypes="../../org.eclipse.papyrus.sysml14/resources/profile/sysml.ecore#//blocks/Block"/>
+  </eSubpackages>
   <eSubpackages name="hardware" nsURI="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware"
       nsPrefix="Hardware">
     <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
@@ -232,18 +256,33 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="quartzes" ordered="false"
           upperBound="-1" eType="#//hardware/Quartz"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="prescaler" ordered="false"
-          upperBound="-1" eType="#//hardware/Prescaler"/>
+          eType="#//hardware/Prescaler"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="networks" ordered="false"
           upperBound="-1" eType="#//hardware/Network"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Quartz" eSuperTypes="#//hardware/ComplexNode">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" ordered="false"
           lowerBound="1" eType="#//hardware/QType" defaultValueLiteral="_undefined_"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="frequency" ordered="false"
+          eType="#//hardware/Frequency"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EEnum" name="QType">
       <eLiterals name="_undefined_"/>
       <eLiterals name="DYNAMIC" value="1"/>
       <eLiterals name="STATIC" value="2"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Frequency">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Real"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" ordered="false"
+          lowerBound="1" eType="#//hardware/FrequencyUnit" defaultValueLiteral="_undefined_"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="FrequencyUnit">
+      <eLiterals name="_undefined_"/>
+      <eLiterals name="Hz" value="1"/>
+      <eLiterals name="kHz" value="2"/>
+      <eLiterals name="MHz" value="3"/>
+      <eLiterals name="GHz" value="4"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Prescaler" eSuperTypes="../../org.eclipse.papyrus.sysml14/resources/profile/sysml.ecore#//blocks/Block">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="clockRatio" ordered="false"
@@ -323,19 +362,6 @@
       <eLiterals name="SPI" value="6"/>
       <eLiterals name="NA" value="7"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Frequency">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
-          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Real"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" ordered="false"
-          lowerBound="1" eType="#//hardware/FrequencyUnit" defaultValueLiteral="_undefined_"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EEnum" name="FrequencyUnit">
-      <eLiterals name="_undefined_"/>
-      <eLiterals name="Hz" value="1"/>
-      <eLiterals name="kHz" value="2"/>
-      <eLiterals name="MHz" value="3"/>
-      <eLiterals name="GHz" value="4"/>
-    </eClassifiers>
   </eSubpackages>
   <eSubpackages name="os" nsURI="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem"
       nsPrefix="Os">
@@ -381,27 +407,6 @@
       <details key="originalName" value="MappingModel"/>
     </eAnnotations>
     <eClassifiers xsi:type="ecore:EClass" name="MappingModel" eSuperTypes="../../org.eclipse.papyrus.sysml14/resources/profile/sysml.ecore#//blocks/Block"/>
-  </eSubpackages>
-  <eSubpackages name="stimuli" nsURI="http://www.eclipse.org/papyrus/2017/Amalthea/Stimuli"
-      nsPrefix="Stimuli">
-    <eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML">
-      <details key="originalName" value="StimuliModel"/>
-    </eAnnotations>
-    <eClassifiers xsi:type="ecore:EClass" name="Single" eSuperTypes="#//stimuli/Stimulus">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="activation" ordered="false"
-          lowerBound="1" eType="#//common/Time"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Stimulus" abstract="true" eSuperTypes="../../org.eclipse.papyrus.sysml14/resources/profile/sysml.ecore#//blocks/Block"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Periodic" eSuperTypes="#//stimuli/Stimulus">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="recurrence" ordered="false"
-          lowerBound="1" eType="#//common/Time"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="offset" ordered="false"
-          lowerBound="1" eType="#//common/Time"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Interprocess" eSuperTypes="#//stimuli/Stimulus">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="counter" ordered="false"
-          lowerBound="1" eType="#//common/Counter"/>
-    </eClassifiers>
   </eSubpackages>
   <eSubpackages name="constraints" nsURI="http://www.eclipse.org/papyrus/2017/Amalthea/Constraints"
       nsPrefix="Constraints">

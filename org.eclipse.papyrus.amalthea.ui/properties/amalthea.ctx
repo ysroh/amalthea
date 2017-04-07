@@ -934,7 +934,9 @@
       <elements xmi:id="_2VpHjhiXEeeoWfBb-FGkXQ" name="RunnableItem">
         <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690yQKDJEeSZxfCXzZz3-w"/>
       </elements>
-      <elements xmi:id="_2VpHjxiXEeeoWfBb-FGkXQ" name="InterProcessActivation" supertypes="_2VpHnxiXEeeoWfBb-FGkXQ"/>
+      <elements xmi:id="_2VpHjxiXEeeoWfBb-FGkXQ" name="InterProcessActivation" supertypes="_2VpHnxiXEeeoWfBb-FGkXQ">
+        <properties xmi:id="_a41XkBudEee65fjWHZc4GA" name="stimulus" type="Reference"/>
+      </elements>
       <elements xmi:id="_2VpHkBiXEeeoWfBb-FGkXQ" name="Runnable" supertypes="_2VpHnhiXEeeoWfBb-FGkXQ">
         <properties xmi:id="_2VpHkRiXEeeoWfBb-FGkXQ" name="callback" type="Boolean"/>
         <properties xmi:id="_2VpHkhiXEeeoWfBb-FGkXQ" name="service" type="Boolean"/>
@@ -995,12 +997,13 @@
       </elements>
       <elements xmi:id="_2VpHsxiXEeeoWfBb-FGkXQ" name="Quartz">
         <properties xmi:id="_2VpHtBiXEeeoWfBb-FGkXQ" name="type" type="Enumeration"/>
+        <properties xmi:id="_zu08kBukEee65fjWHZc4GA" name="frequency" type="Reference"/>
         <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690yXqDJEeSZxfCXzZz3-w"/>
         <supertypes href="#_2VpHtRiXEeeoWfBb-FGkXQ"/>
       </elements>
       <elements xmi:id="_2VpHtRiXEeeoWfBb-FGkXQ" name="ComplexNode">
         <properties xmi:id="_2VpHthiXEeeoWfBb-FGkXQ" name="quartzes" type="Reference" multiplicity="-1"/>
-        <properties xmi:id="_2VpHtxiXEeeoWfBb-FGkXQ" name="prescaler" type="Reference" multiplicity="-1"/>
+        <properties xmi:id="_2VpHtxiXEeeoWfBb-FGkXQ" name="prescaler" type="Reference"/>
         <properties xmi:id="_2VpHuBiXEeeoWfBb-FGkXQ" name="networks" type="Reference" multiplicity="-1"/>
         <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690yXqDJEeSZxfCXzZz3-w"/>
       </elements>

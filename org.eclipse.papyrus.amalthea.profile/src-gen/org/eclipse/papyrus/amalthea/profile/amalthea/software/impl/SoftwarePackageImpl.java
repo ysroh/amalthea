@@ -254,10 +254,10 @@ public class SoftwarePackageImpl extends EPackageImpl implements SoftwarePackage
 		AmaltheaPackageImpl theAmaltheaPackage = (AmaltheaPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(AmaltheaPackage.eNS_URI) instanceof AmaltheaPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(AmaltheaPackage.eNS_URI) : AmaltheaPackage.eINSTANCE);
 		CommonPackageImpl theCommonPackage = (CommonPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CommonPackage.eNS_URI) instanceof CommonPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CommonPackage.eNS_URI) : CommonPackage.eINSTANCE);
 		ComponentsPackageImpl theComponentsPackage = (ComponentsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ComponentsPackage.eNS_URI) instanceof ComponentsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ComponentsPackage.eNS_URI) : ComponentsPackage.eINSTANCE);
+		StimuliPackageImpl theStimuliPackage = (StimuliPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StimuliPackage.eNS_URI) instanceof StimuliPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StimuliPackage.eNS_URI) : StimuliPackage.eINSTANCE);
 		HardwarePackageImpl theHardwarePackage = (HardwarePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(HardwarePackage.eNS_URI) instanceof HardwarePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(HardwarePackage.eNS_URI) : HardwarePackage.eINSTANCE);
 		OsPackageImpl theOsPackage = (OsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(OsPackage.eNS_URI) instanceof OsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(OsPackage.eNS_URI) : OsPackage.eINSTANCE);
 		MappingPackageImpl theMappingPackage = (MappingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MappingPackage.eNS_URI) instanceof MappingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MappingPackage.eNS_URI) : MappingPackage.eINSTANCE);
-		StimuliPackageImpl theStimuliPackage = (StimuliPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StimuliPackage.eNS_URI) instanceof StimuliPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StimuliPackage.eNS_URI) : StimuliPackage.eINSTANCE);
 		ConstraintsPackageImpl theConstraintsPackage = (ConstraintsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ConstraintsPackage.eNS_URI) instanceof ConstraintsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ConstraintsPackage.eNS_URI) : ConstraintsPackage.eINSTANCE);
 
 		// Create package meta-data objects
@@ -265,10 +265,10 @@ public class SoftwarePackageImpl extends EPackageImpl implements SoftwarePackage
 		theAmaltheaPackage.createPackageContents();
 		theCommonPackage.createPackageContents();
 		theComponentsPackage.createPackageContents();
+		theStimuliPackage.createPackageContents();
 		theHardwarePackage.createPackageContents();
 		theOsPackage.createPackageContents();
 		theMappingPackage.createPackageContents();
-		theStimuliPackage.createPackageContents();
 		theConstraintsPackage.createPackageContents();
 
 		// Initialize created meta-data
@@ -276,10 +276,10 @@ public class SoftwarePackageImpl extends EPackageImpl implements SoftwarePackage
 		theAmaltheaPackage.initializePackageContents();
 		theCommonPackage.initializePackageContents();
 		theComponentsPackage.initializePackageContents();
+		theStimuliPackage.initializePackageContents();
 		theHardwarePackage.initializePackageContents();
 		theOsPackage.initializePackageContents();
 		theMappingPackage.initializePackageContents();
-		theStimuliPackage.initializePackageContents();
 		theConstraintsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
@@ -557,6 +557,15 @@ public class SoftwarePackageImpl extends EPackageImpl implements SoftwarePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getInterProcessActivation_Stimulus() {
+		return (EReference)interProcessActivationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTaskRunnableCall() {
 		return taskRunnableCallEClass;
 	}
@@ -707,6 +716,7 @@ public class SoftwarePackageImpl extends EPackageImpl implements SoftwarePackage
 		callSequenceEClass = createEClass(CALL_SEQUENCE);
 
 		interProcessActivationEClass = createEClass(INTER_PROCESS_ACTIVATION);
+		createEReference(interProcessActivationEClass, INTER_PROCESS_ACTIVATION__STIMULUS);
 
 		taskRunnableCallEClass = createEClass(TASK_RUNNABLE_CALL);
 		createEReference(taskRunnableCallEClass, TASK_RUNNABLE_CALL__RUNNABLE);
@@ -756,6 +766,7 @@ public class SoftwarePackageImpl extends EPackageImpl implements SoftwarePackage
 		CommonPackage theCommonPackage = (CommonPackage)EPackage.Registry.INSTANCE.getEPackage(CommonPackage.eNS_URI);
 		BlocksPackage theBlocksPackage = (BlocksPackage)EPackage.Registry.INSTANCE.getEPackage(BlocksPackage.eNS_URI);
 		TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
+		StimuliPackage theStimuliPackage = (StimuliPackage)EPackage.Registry.INSTANCE.getEPackage(StimuliPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -813,6 +824,7 @@ public class SoftwarePackageImpl extends EPackageImpl implements SoftwarePackage
 		initEClass(callSequenceEClass, CallSequence.class, "CallSequence", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(interProcessActivationEClass, InterProcessActivation.class, "InterProcessActivation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getInterProcessActivation_Stimulus(), theStimuliPackage.getStimulus(), null, "stimulus", null, 1, 1, InterProcessActivation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(taskRunnableCallEClass, TaskRunnableCall.class, "TaskRunnableCall", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTaskRunnableCall_Runnable(), this.getRunnable(), null, "runnable", null, 1, 1, TaskRunnableCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

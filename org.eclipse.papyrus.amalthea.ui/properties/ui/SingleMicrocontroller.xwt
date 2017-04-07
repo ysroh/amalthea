@@ -28,12 +28,17 @@
 	</Composite>
 	<Composite>
 		<Composite.layout>
-			<ppel:PropertiesLayout numColumns="3"></ppel:PropertiesLayout>
+			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:ReferenceDialog input="{Binding}"
+			property="Amalthea:HWModel:ComplexNode:prescaler"></ppe:ReferenceDialog>
+	</Composite>
+	<Composite>
+		<Composite.layout>
+			<ppel:PropertiesLayout numColumns="2"></ppel:PropertiesLayout>
 		</Composite.layout>
 		<ppe:MultiReference input="{Binding}"
 			property="Amalthea:HWModel:ComplexNode:quartzes"></ppe:MultiReference>
-		<ppe:MultiReference input="{Binding}"
-			property="Amalthea:HWModel:ComplexNode:prescaler"></ppe:MultiReference>
 		<ppe:MultiReference input="{Binding}"
 			property="Amalthea:HWModel:ComplexNode:networks"></ppe:MultiReference>
 	</Composite>

@@ -59,6 +59,7 @@ public class HardwareFactoryImpl extends EFactoryImpl implements HardwareFactory
 		switch (eClass.getClassifierID()) {
 			case HardwarePackage.HW_SYSTEM: return createHwSystem();
 			case HardwarePackage.QUARTZ: return createQuartz();
+			case HardwarePackage.FREQUENCY: return createFrequency();
 			case HardwarePackage.PRESCALER: return createPrescaler();
 			case HardwarePackage.NETWORK: return createNetwork();
 			case HardwarePackage.NETWORK_TYPE: return createNetworkType();
@@ -70,7 +71,6 @@ public class HardwareFactoryImpl extends EFactoryImpl implements HardwareFactory
 			case HardwarePackage.ECU_TYPE: return createECUType();
 			case HardwarePackage.SYSTEM_TYPE: return createSystemType();
 			case HardwarePackage.BUS: return createBus();
-			case HardwarePackage.FREQUENCY: return createFrequency();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -86,12 +86,12 @@ public class HardwareFactoryImpl extends EFactoryImpl implements HardwareFactory
 		switch (eDataType.getClassifierID()) {
 			case HardwarePackage.QTYPE:
 				return createQTypeFromString(eDataType, initialValue);
+			case HardwarePackage.FREQUENCY_UNIT:
+				return createFrequencyUnitFromString(eDataType, initialValue);
 			case HardwarePackage.SCHED_TYPE:
 				return createSchedTypeFromString(eDataType, initialValue);
 			case HardwarePackage.BUS_TYPE:
 				return createBusTypeFromString(eDataType, initialValue);
-			case HardwarePackage.FREQUENCY_UNIT:
-				return createFrequencyUnitFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -107,12 +107,12 @@ public class HardwareFactoryImpl extends EFactoryImpl implements HardwareFactory
 		switch (eDataType.getClassifierID()) {
 			case HardwarePackage.QTYPE:
 				return convertQTypeToString(eDataType, instanceValue);
+			case HardwarePackage.FREQUENCY_UNIT:
+				return convertFrequencyUnitToString(eDataType, instanceValue);
 			case HardwarePackage.SCHED_TYPE:
 				return convertSchedTypeToString(eDataType, instanceValue);
 			case HardwarePackage.BUS_TYPE:
 				return convertBusTypeToString(eDataType, instanceValue);
-			case HardwarePackage.FREQUENCY_UNIT:
-				return convertFrequencyUnitToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}

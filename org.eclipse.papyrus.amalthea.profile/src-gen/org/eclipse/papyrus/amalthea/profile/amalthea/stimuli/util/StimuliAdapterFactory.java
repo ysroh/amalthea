@@ -74,16 +74,16 @@ public class StimuliAdapterFactory extends AdapterFactoryImpl {
 				return createSingleAdapter();
 			}
 			@Override
-			public Adapter caseStimulus(Stimulus object) {
-				return createStimulusAdapter();
-			}
-			@Override
 			public Adapter casePeriodic(Periodic object) {
 				return createPeriodicAdapter();
 			}
 			@Override
 			public Adapter caseInterprocess(Interprocess object) {
 				return createInterprocessAdapter();
+			}
+			@Override
+			public Adapter caseStimulus(Stimulus object) {
+				return createStimulusAdapter();
 			}
 			@Override
 			public Adapter caseBlock(Block object) {

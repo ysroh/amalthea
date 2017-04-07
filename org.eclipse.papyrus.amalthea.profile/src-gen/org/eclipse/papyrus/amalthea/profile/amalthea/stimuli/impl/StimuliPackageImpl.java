@@ -279,14 +279,14 @@ public class StimuliPackageImpl extends EPackageImpl implements StimuliPackage {
 		singleEClass = createEClass(SINGLE);
 		createEReference(singleEClass, SINGLE__ACTIVATION);
 
-		stimulusEClass = createEClass(STIMULUS);
-
 		periodicEClass = createEClass(PERIODIC);
 		createEReference(periodicEClass, PERIODIC__RECURRENCE);
 		createEReference(periodicEClass, PERIODIC__OFFSET);
 
 		interprocessEClass = createEClass(INTERPROCESS);
 		createEReference(interprocessEClass, INTERPROCESS__COUNTER);
+
+		stimulusEClass = createEClass(STIMULUS);
 	}
 
 	/**
@@ -322,15 +322,13 @@ public class StimuliPackageImpl extends EPackageImpl implements StimuliPackage {
 
 		// Add supertypes to classes
 		singleEClass.getESuperTypes().add(this.getStimulus());
-		stimulusEClass.getESuperTypes().add(theBlocksPackage.getBlock());
 		periodicEClass.getESuperTypes().add(this.getStimulus());
 		interprocessEClass.getESuperTypes().add(this.getStimulus());
+		stimulusEClass.getESuperTypes().add(theBlocksPackage.getBlock());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(singleEClass, Single.class, "Single", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSingle_Activation(), theCommonPackage.getTime(), null, "activation", null, 1, 1, Single.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(stimulusEClass, Stimulus.class, "Stimulus", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(periodicEClass, Periodic.class, "Periodic", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPeriodic_Recurrence(), theCommonPackage.getTime(), null, "recurrence", null, 1, 1, Periodic.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -338,6 +336,8 @@ public class StimuliPackageImpl extends EPackageImpl implements StimuliPackage {
 
 		initEClass(interprocessEClass, Interprocess.class, "Interprocess", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInterprocess_Counter(), theCommonPackage.getCounter(), null, "counter", null, 1, 1, Interprocess.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(stimulusEClass, Stimulus.class, "Stimulus", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create annotations
 		// http://www.eclipse.org/uml2/2.0.0/UML

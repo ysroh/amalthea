@@ -115,9 +115,9 @@ public class MappingPackageImpl extends EPackageImpl implements MappingPackage {
 		CommonPackageImpl theCommonPackage = (CommonPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CommonPackage.eNS_URI) instanceof CommonPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CommonPackage.eNS_URI) : CommonPackage.eINSTANCE);
 		ComponentsPackageImpl theComponentsPackage = (ComponentsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ComponentsPackage.eNS_URI) instanceof ComponentsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ComponentsPackage.eNS_URI) : ComponentsPackage.eINSTANCE);
 		SoftwarePackageImpl theSoftwarePackage = (SoftwarePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(SoftwarePackage.eNS_URI) instanceof SoftwarePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(SoftwarePackage.eNS_URI) : SoftwarePackage.eINSTANCE);
+		StimuliPackageImpl theStimuliPackage = (StimuliPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StimuliPackage.eNS_URI) instanceof StimuliPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StimuliPackage.eNS_URI) : StimuliPackage.eINSTANCE);
 		HardwarePackageImpl theHardwarePackage = (HardwarePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(HardwarePackage.eNS_URI) instanceof HardwarePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(HardwarePackage.eNS_URI) : HardwarePackage.eINSTANCE);
 		OsPackageImpl theOsPackage = (OsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(OsPackage.eNS_URI) instanceof OsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(OsPackage.eNS_URI) : OsPackage.eINSTANCE);
-		StimuliPackageImpl theStimuliPackage = (StimuliPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StimuliPackage.eNS_URI) instanceof StimuliPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StimuliPackage.eNS_URI) : StimuliPackage.eINSTANCE);
 		ConstraintsPackageImpl theConstraintsPackage = (ConstraintsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ConstraintsPackage.eNS_URI) instanceof ConstraintsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ConstraintsPackage.eNS_URI) : ConstraintsPackage.eINSTANCE);
 
 		// Create package meta-data objects
@@ -126,9 +126,9 @@ public class MappingPackageImpl extends EPackageImpl implements MappingPackage {
 		theCommonPackage.createPackageContents();
 		theComponentsPackage.createPackageContents();
 		theSoftwarePackage.createPackageContents();
+		theStimuliPackage.createPackageContents();
 		theHardwarePackage.createPackageContents();
 		theOsPackage.createPackageContents();
-		theStimuliPackage.createPackageContents();
 		theConstraintsPackage.createPackageContents();
 
 		// Initialize created meta-data
@@ -137,9 +137,9 @@ public class MappingPackageImpl extends EPackageImpl implements MappingPackage {
 		theCommonPackage.initializePackageContents();
 		theComponentsPackage.initializePackageContents();
 		theSoftwarePackage.initializePackageContents();
+		theStimuliPackage.initializePackageContents();
 		theHardwarePackage.initializePackageContents();
 		theOsPackage.initializePackageContents();
-		theStimuliPackage.initializePackageContents();
 		theConstraintsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed

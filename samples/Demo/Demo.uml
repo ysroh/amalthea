@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Common="http://www.eclipse.org/papyrus/2017/Amalthea/Common" xmlns:Components="http://www.eclipse.org/papyrus/2017/Amalthea/Components" xmlns:Hardware="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware" xmlns:Os="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem" xmlns:Software="http://www.eclipse.org/papyrus/2017/Amalthea/Software" xmlns:Stimuli="http://www.eclipse.org/papyrus/2017/Amalthea/Stimuli" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/2017/Amalthea/Common http://www.eclipse.org/papyrus/2017/Amalthea#//common http://www.eclipse.org/papyrus/2017/Amalthea/Components http://www.eclipse.org/papyrus/2017/Amalthea#//components http://www.eclipse.org/papyrus/2017/Amalthea/Hardware http://www.eclipse.org/papyrus/2017/Amalthea#//hardware http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem http://www.eclipse.org/papyrus/2017/Amalthea#//os http://www.eclipse.org/papyrus/2017/Amalthea/Software http://www.eclipse.org/papyrus/2017/Amalthea#//software http://www.eclipse.org/papyrus/2017/Amalthea/Stimuli http://www.eclipse.org/papyrus/2017/Amalthea#//stimuli">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Allocations="http://www.eclipse.org/papyrus/sysml/1.4/SysML/Allocations" xmlns:Common="http://www.eclipse.org/papyrus/2017/Amalthea/Common" xmlns:Components="http://www.eclipse.org/papyrus/2017/Amalthea/Components" xmlns:Hardware="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware" xmlns:Os="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem" xmlns:Software="http://www.eclipse.org/papyrus/2017/Amalthea/Software" xmlns:Stimuli="http://www.eclipse.org/papyrus/2017/Amalthea/Stimuli" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/sysml/1.4/SysML/Allocations http://www.eclipse.org/papyrus/sysml/1.4/SysML#//allocations http://www.eclipse.org/papyrus/2017/Amalthea/Common http://www.eclipse.org/papyrus/2017/Amalthea#//common http://www.eclipse.org/papyrus/2017/Amalthea/Components http://www.eclipse.org/papyrus/2017/Amalthea#//components http://www.eclipse.org/papyrus/2017/Amalthea/Hardware http://www.eclipse.org/papyrus/2017/Amalthea#//hardware http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem http://www.eclipse.org/papyrus/2017/Amalthea#//os http://www.eclipse.org/papyrus/2017/Amalthea/Software http://www.eclipse.org/papyrus/2017/Amalthea#//software http://www.eclipse.org/papyrus/2017/Amalthea/Stimuli http://www.eclipse.org/papyrus/2017/Amalthea#//stimuli">
   <uml:Model xmi:id="_8Ab4cBoaEee60cQ75oPnTA" name="Demo">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_8JlNYBoaEee60cQ75oPnTA">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -37,8 +37,8 @@
         <packagedElement xmi:type="uml:Class" xmi:id="_lAdicBoqEeeK7PsAypm8Bw" name="Task"/>
         <packagedElement xmi:type="uml:Class" xmi:id="_0aQsEBosEeevi--Z4zF9bA" name="CallGraph"/>
         <packagedElement xmi:type="uml:Class" xmi:id="_1meAgBosEeevi--Z4zF9bA" name="CallSequence">
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_2a5uIBosEeevi--Z4zF9bA" name="Operation1"/>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_Y-34gBotEeevi--Z4zF9bA" name="InterProcessActivation"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_2a5uIBosEeevi--Z4zF9bA" name="taskRrunnableCall"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_gqmXUBucEeenZcDyXh70PA" name="interProcessActivation"/>
           <nestedClassifier xmi:type="uml:DataType" xmi:id="_axNosBsFEeeSFpvWgLU3rg" name="Counter"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="_1ayn4BofEeezHIvV1tGdjg" name="Weibull">
@@ -46,6 +46,7 @@
           <packagedElement xmi:type="uml:Class" xmi:id="_DVJeYBoqEeeK7PsAypm8Bw" name="Deviation"/>
           <packagedElement xmi:type="uml:Class" xmi:id="_DVxJcBoqEeeK7PsAypm8Bw" name="InstructionsDeviation"/>
         </packagedElement>
+        <packagedElement xmi:type="uml:Abstraction" xmi:id="_0lbq4BuYEeeSQLqP5Np32w" name="Allocate1" client="_lAdicBoqEeeK7PsAypm8Bw" supplier="_JgeUABoxEeeeW9cngqHTXg"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_gmMPMBotEeevi--Z4zF9bA" name="Hardware">
@@ -53,15 +54,16 @@
       <packagedElement xmi:type="uml:Class" xmi:id="_jjcDcBotEeevi--Z4zF9bA" name="DemoSystem"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_lybqkBotEeevi--Z4zF9bA" name="ECU"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_nZERMBotEeevi--Z4zF9bA" name="Processor"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_o3fXABotEeevi--Z4zF9bA" name="Core"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_xs4jABowEeeeW9cngqHTXg" name="ECUQuartz"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_utD74BowEeeeW9cngqHTXg" name="CorePrescaler"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_UDaUsBuZEeeSQLqP5Np32w" name="Core_1"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_AAoVcBoxEeeeW9cngqHTXg" name="OperatingSystem">
       <packagedElement xmi:type="uml:Class" xmi:id="_HxHPMBoxEeeeW9cngqHTXg" name="OS"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_JgeUABoxEeeeW9cngqHTXg" name="TaskScheduler"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_HmaJIBozEeey-4lblVK-ag" name="SchedulingHwUnit"/>
       <packagedElement xmi:type="uml:DataType" xmi:id="_iij6kBsEEee_6e5LGg5HzA" name="SchedulingUnitTime"/>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_h94rgBuZEeeSQLqP5Np32w" name="Allocate1" client="_JgeUABoxEeeeW9cngqHTXg" supplier="_UDaUsBuZEeeSQLqP5Np32w"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_CZ_ZgBoxEeeeW9cngqHTXg" name="Stimuli">
       <packagedElement xmi:type="uml:Class" xmi:id="_SpqbMBozEeey-4lblVK-ag" name="Timer_10MS"/>
@@ -149,8 +151,7 @@
   <Software:TaskRunnableCall xmi:id="_2bQ6gBosEeevi--Z4zF9bA" base_Operation="_2a5uIBosEeevi--Z4zF9bA" counter="_a89lsBsFEeeSFpvWgLU3rg" runnable="_TthY0BobEee60cQ75oPnTA"/>
   <Hardware:HwSystem xmi:id="_jj4vYBotEeevi--Z4zF9bA" base_Class="_jjcDcBotEeevi--Z4zF9bA" ecus="_lyulgBotEeevi--Z4zF9bA"/>
   <Hardware:ECU xmi:id="_lyulgBotEeevi--Z4zF9bA" base_Class="_lybqkBotEeevi--Z4zF9bA" quartzes="_xtMFABowEeeeW9cngqHTXg" microcontrollers="_nZtKYBotEeevi--Z4zF9bA"/>
-  <Hardware:Microcontroller xmi:id="_nZtKYBotEeevi--Z4zF9bA" base_Class="_nZERMBotEeevi--Z4zF9bA" cores="_o3yR8BotEeevi--Z4zF9bA"/>
-  <Hardware:Core xmi:id="_o3yR8BotEeevi--Z4zF9bA" base_Class="_o3fXABotEeevi--Z4zF9bA" coretype="_3SDbwBowEeeeW9cngqHTXg"/>
+  <Hardware:Microcontroller xmi:id="_nZtKYBotEeevi--Z4zF9bA" base_Class="_nZERMBotEeevi--Z4zF9bA" cores="_UDmh8BuZEeeSQLqP5Np32w"/>
   <Hardware:Prescaler xmi:id="_uuA-IBowEeeeW9cngqHTXg" base_Class="_utD74BowEeeeW9cngqHTXg"/>
   <Hardware:Quartz xmi:id="_xtMFABowEeeeW9cngqHTXg" base_Class="_xs4jABowEeeeW9cngqHTXg"/>
   <Hardware:CoreType xmi:id="_3SDbwBowEeeeW9cngqHTXg" base_DataType="_3Rv5wBowEeeeW9cngqHTXg"/>
@@ -167,4 +168,8 @@
   <Components:FInterfacePort xmi:id="_7KiB0BozEeey-4lblVK-ag" base_Port="_xtNLxBozEeey-4lblVK-ag"/>
   <Common:Time xmi:id="_ijOB4BsEEee_6e5LGg5HzA" value="10" unit="ms" base_DataType="_iij6kBsEEee_6e5LGg5HzA"/>
   <Common:Counter xmi:id="_a89lsBsFEeeSFpvWgLU3rg" base_DataType="_axNosBsFEeeSFpvWgLU3rg"/>
+  <Allocations:Allocate xmi:id="_0l4W0BuYEeeSQLqP5Np32w" base_DirectedRelationship="_0lbq4BuYEeeSQLqP5Np32w" base_Abstraction="_0lbq4BuYEeeSQLqP5Np32w"/>
+  <Hardware:Core xmi:id="_UDmh8BuZEeeSQLqP5Np32w" base_Class="_UDaUsBuZEeeSQLqP5Np32w" coretype="_3SDbwBowEeeeW9cngqHTXg"/>
+  <Allocations:Allocate xmi:id="_h-M0kBuZEeeSQLqP5Np32w" base_DirectedRelationship="_h94rgBuZEeeSQLqP5Np32w" base_Abstraction="_h94rgBuZEeeSQLqP5Np32w"/>
+  <Software:InterProcessActivation xmi:id="_grQeoBucEeenZcDyXh70PA" base_Operation="_gqmXUBucEeenZcDyXh70PA" counter="_a89lsBsFEeeSFpvWgLU3rg"/>
 </xmi:XMI>

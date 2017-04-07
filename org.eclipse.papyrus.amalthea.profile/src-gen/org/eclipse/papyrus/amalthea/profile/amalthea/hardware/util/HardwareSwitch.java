@@ -91,6 +91,12 @@ public class HardwareSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case HardwarePackage.FREQUENCY: {
+				Frequency frequency = (Frequency)theEObject;
+				T result = caseFrequency(frequency);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case HardwarePackage.PRESCALER: {
 				Prescaler prescaler = (Prescaler)theEObject;
 				T result = casePrescaler(prescaler);
@@ -164,12 +170,6 @@ public class HardwareSwitch<T> extends Switch<T> {
 				Bus bus = (Bus)theEObject;
 				T result = caseBus(bus);
 				if (result == null) result = caseNetworkType(bus);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case HardwarePackage.FREQUENCY: {
-				Frequency frequency = (Frequency)theEObject;
-				T result = caseFrequency(frequency);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

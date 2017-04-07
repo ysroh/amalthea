@@ -13,6 +13,7 @@ package org.eclipse.papyrus.amalthea.profile.amalthea.hardware;
  * </p>
  * <ul>
  *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Quartz#getType <em>Type</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Quartz#getFrequency <em>Frequency</em>}</li>
  * </ul>
  *
  * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.HardwarePackage#getQuartz()
@@ -49,5 +50,31 @@ public interface Quartz extends ComplexNode {
 	 * @generated
 	 */
 	void setType(QType value);
+
+	/**
+	 * Returns the value of the '<em><b>Frequency</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Frequency</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Frequency</em>' reference.
+	 * @see #setFrequency(Frequency)
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.HardwarePackage#getQuartz_Frequency()
+	 * @model ordered="false"
+	 * @generated
+	 */
+	Frequency getFrequency();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Quartz#getFrequency <em>Frequency</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Frequency</em>' reference.
+	 * @see #getFrequency()
+	 * @generated
+	 */
+	void setFrequency(Frequency value);
 
 } // Quartz

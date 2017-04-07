@@ -484,7 +484,7 @@ of UML port&#xD;
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_MUEbEhcSEeeFzte_Mj5jqA" name="prescaler" type="_oiEe8RZKEeeFzte_Mj5jqA" association="_MUD0ABcSEeeFzte_Mj5jqA">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qAxnUBr-Eee65fjWHZc4GA"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qA6xQBr-Eee65fjWHZc4GA" value="*"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qA6xQBr-Eee65fjWHZc4GA" value="1"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_PNgtYRcSEeeFzte_Mj5jqA" name="networks" type="_oiEeyxZKEeeFzte_Mj5jqA" association="_PNgGUBcSEeeFzte_Mj5jqA">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QxuSIBcSEeeFzte_Mj5jqA"/>
@@ -498,6 +498,10 @@ of UML port&#xD;
         </generalization>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_oiEe6xZKEeeFzte_Mj5jqA" name="type" type="_oiEe7RZKEeeFzte_Mj5jqA">
           <defaultValue xmi:type="uml:InstanceValue" xmi:id="_oiEe7BZKEeeFzte_Mj5jqA" type="_oiEe7RZKEeeFzte_Mj5jqA" instance="_oiEe7hZKEeeFzte_Mj5jqA"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_oB5bYxukEee65fjWHZc4GA" name="frequency" type="_oiEe9RZKEeeFzte_Mj5jqA" association="_oB5bYBukEee65fjWHZc4GA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oihcMBukEee65fjWHZc4GA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oihcMRukEee65fjWHZc4GA" value="1"/>
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Enumeration" xmi:id="_oiEe7RZKEeeFzte_Mj5jqA" name="QType">
@@ -528,6 +532,12 @@ of UML port&#xD;
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_oiEe_BZKEeeFzte_Mj5jqA" name="kHz"/>
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_oiEe_RZKEeeFzte_Mj5jqA" name="MHz"/>
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_oiEe_hZKEeeFzte_Mj5jqA" name="GHz"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_oB5bYBukEee65fjWHZc4GA" memberEnd="_oB5bYxukEee65fjWHZc4GA _oB5bZBukEee65fjWHZc4GA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oB5bYRukEee65fjWHZc4GA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oB5bYhukEee65fjWHZc4GA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_oB5bZBukEee65fjWHZc4GA" name="quartz" type="_oiEe6RZKEeeFzte_Mj5jqA" association="_oB5bYBukEee65fjWHZc4GA"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_oiFs6hZKEeeFzte_Mj5jqA" name="SWModel" URI="http://www.eclipse.org/papyrus/2017/Amalthea/Software">
@@ -674,6 +684,7 @@ operations of CallSequence Class&#xD;
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_JxUdUBfJEeeFzte_Mj5jqA" name="InterProcessActivation">
         <generalization xmi:type="uml:Generalization" xmi:id="_NnmLUBfJEeeFzte_Mj5jqA" general="_6NBB8BfIEeeFzte_Mj5jqA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_AmqrUxudEee65fjWHZc4GA" name="stimulus" type="_-NpOwBcYEeeFzte_Mj5jqA" association="_AmqrUBudEee65fjWHZc4GA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_LeZqMBfJEeeFzte_Mj5jqA" name="TaskRunnableCall">
         <generalization xmi:type="uml:Generalization" xmi:id="_N9zr4BfJEeeFzte_Mj5jqA" general="_6NBB8BfIEeeFzte_Mj5jqA"/>
@@ -713,6 +724,12 @@ operations of CallSequence Class&#xD;
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dQebEBryEeemOqGrpy978g" key="nature" value="UML_Nature"/>
         </eAnnotations>
         <ownedEnd xmi:type="uml:Property" xmi:id="_dQfCIBryEeemOqGrpy978g" name="labelaccess" type="_nRB8QBfMEeeFzte_Mj5jqA" association="_dQUDABryEeemOqGrpy978g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_AmqrUBudEee65fjWHZc4GA" memberEnd="_AmqrUxudEee65fjWHZc4GA _AmqrVBudEee65fjWHZc4GA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_AmqrURudEee65fjWHZc4GA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_AmqrUhudEee65fjWHZc4GA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_AmqrVBudEee65fjWHZc4GA" name="interprocessactivation" type="_JxUdUBfJEeeFzte_Mj5jqA" association="_AmqrUBudEee65fjWHZc4GA"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_oiFF1hZKEeeFzte_Mj5jqA" name="OSModel" URI="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem">

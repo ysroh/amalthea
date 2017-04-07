@@ -857,13 +857,22 @@ public interface SoftwarePackage extends EPackage {
 	int INTER_PROCESS_ACTIVATION__COUNTER = CALL_SEQUENCE_ITEM__COUNTER;
 
 	/**
+	 * The feature id for the '<em><b>Stimulus</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTER_PROCESS_ACTIVATION__STIMULUS = CALL_SEQUENCE_ITEM_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Inter Process Activation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTER_PROCESS_ACTIVATION_FEATURE_COUNT = CALL_SEQUENCE_ITEM_FEATURE_COUNT + 0;
+	int INTER_PROCESS_ACTIVATION_FEATURE_COUNT = CALL_SEQUENCE_ITEM_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Inter Process Activation</em>' class.
@@ -1448,6 +1457,17 @@ public interface SoftwarePackage extends EPackage {
 	EClass getInterProcessActivation();
 
 	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.InterProcessActivation#getStimulus <em>Stimulus</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Stimulus</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.InterProcessActivation#getStimulus()
+	 * @see #getInterProcessActivation()
+	 * @generated
+	 */
+	EReference getInterProcessActivation_Stimulus();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.TaskRunnableCall <em>Task Runnable Call</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1832,6 +1852,14 @@ public interface SoftwarePackage extends EPackage {
 		 * @generated
 		 */
 		EClass INTER_PROCESS_ACTIVATION = eINSTANCE.getInterProcessActivation();
+
+		/**
+		 * The meta object literal for the '<em><b>Stimulus</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INTER_PROCESS_ACTIVATION__STIMULUS = eINSTANCE.getInterProcessActivation_Stimulus();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.TaskRunnableCallImpl <em>Task Runnable Call</em>}' class.

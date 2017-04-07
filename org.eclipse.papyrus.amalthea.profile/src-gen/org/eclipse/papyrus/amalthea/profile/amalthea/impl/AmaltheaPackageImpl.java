@@ -112,10 +112,10 @@ public class AmaltheaPackageImpl extends EPackageImpl implements AmaltheaPackage
 		CommonPackageImpl theCommonPackage = (CommonPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CommonPackage.eNS_URI) instanceof CommonPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CommonPackage.eNS_URI) : CommonPackage.eINSTANCE);
 		ComponentsPackageImpl theComponentsPackage = (ComponentsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ComponentsPackage.eNS_URI) instanceof ComponentsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ComponentsPackage.eNS_URI) : ComponentsPackage.eINSTANCE);
 		SoftwarePackageImpl theSoftwarePackage = (SoftwarePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(SoftwarePackage.eNS_URI) instanceof SoftwarePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(SoftwarePackage.eNS_URI) : SoftwarePackage.eINSTANCE);
+		StimuliPackageImpl theStimuliPackage = (StimuliPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StimuliPackage.eNS_URI) instanceof StimuliPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StimuliPackage.eNS_URI) : StimuliPackage.eINSTANCE);
 		HardwarePackageImpl theHardwarePackage = (HardwarePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(HardwarePackage.eNS_URI) instanceof HardwarePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(HardwarePackage.eNS_URI) : HardwarePackage.eINSTANCE);
 		OsPackageImpl theOsPackage = (OsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(OsPackage.eNS_URI) instanceof OsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(OsPackage.eNS_URI) : OsPackage.eINSTANCE);
 		MappingPackageImpl theMappingPackage = (MappingPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MappingPackage.eNS_URI) instanceof MappingPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MappingPackage.eNS_URI) : MappingPackage.eINSTANCE);
-		StimuliPackageImpl theStimuliPackage = (StimuliPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StimuliPackage.eNS_URI) instanceof StimuliPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StimuliPackage.eNS_URI) : StimuliPackage.eINSTANCE);
 		ConstraintsPackageImpl theConstraintsPackage = (ConstraintsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ConstraintsPackage.eNS_URI) instanceof ConstraintsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ConstraintsPackage.eNS_URI) : ConstraintsPackage.eINSTANCE);
 
 		// Create package meta-data objects
@@ -123,10 +123,10 @@ public class AmaltheaPackageImpl extends EPackageImpl implements AmaltheaPackage
 		theCommonPackage.createPackageContents();
 		theComponentsPackage.createPackageContents();
 		theSoftwarePackage.createPackageContents();
+		theStimuliPackage.createPackageContents();
 		theHardwarePackage.createPackageContents();
 		theOsPackage.createPackageContents();
 		theMappingPackage.createPackageContents();
-		theStimuliPackage.createPackageContents();
 		theConstraintsPackage.createPackageContents();
 
 		// Initialize created meta-data
@@ -134,10 +134,10 @@ public class AmaltheaPackageImpl extends EPackageImpl implements AmaltheaPackage
 		theCommonPackage.initializePackageContents();
 		theComponentsPackage.initializePackageContents();
 		theSoftwarePackage.initializePackageContents();
+		theStimuliPackage.initializePackageContents();
 		theHardwarePackage.initializePackageContents();
 		theOsPackage.initializePackageContents();
 		theMappingPackage.initializePackageContents();
-		theStimuliPackage.initializePackageContents();
 		theConstraintsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
@@ -216,20 +216,20 @@ public class AmaltheaPackageImpl extends EPackageImpl implements AmaltheaPackage
 		CommonPackage theCommonPackage = (CommonPackage)EPackage.Registry.INSTANCE.getEPackage(CommonPackage.eNS_URI);
 		ComponentsPackage theComponentsPackage = (ComponentsPackage)EPackage.Registry.INSTANCE.getEPackage(ComponentsPackage.eNS_URI);
 		SoftwarePackage theSoftwarePackage = (SoftwarePackage)EPackage.Registry.INSTANCE.getEPackage(SoftwarePackage.eNS_URI);
+		StimuliPackage theStimuliPackage = (StimuliPackage)EPackage.Registry.INSTANCE.getEPackage(StimuliPackage.eNS_URI);
 		HardwarePackage theHardwarePackage = (HardwarePackage)EPackage.Registry.INSTANCE.getEPackage(HardwarePackage.eNS_URI);
 		OsPackage theOsPackage = (OsPackage)EPackage.Registry.INSTANCE.getEPackage(OsPackage.eNS_URI);
 		MappingPackage theMappingPackage = (MappingPackage)EPackage.Registry.INSTANCE.getEPackage(MappingPackage.eNS_URI);
-		StimuliPackage theStimuliPackage = (StimuliPackage)EPackage.Registry.INSTANCE.getEPackage(StimuliPackage.eNS_URI);
 		ConstraintsPackage theConstraintsPackage = (ConstraintsPackage)EPackage.Registry.INSTANCE.getEPackage(ConstraintsPackage.eNS_URI);
 
 		// Add subpackages
 		getESubpackages().add(theCommonPackage);
 		getESubpackages().add(theComponentsPackage);
 		getESubpackages().add(theSoftwarePackage);
+		getESubpackages().add(theStimuliPackage);
 		getESubpackages().add(theHardwarePackage);
 		getESubpackages().add(theOsPackage);
 		getESubpackages().add(theMappingPackage);
-		getESubpackages().add(theStimuliPackage);
 		getESubpackages().add(theConstraintsPackage);
 
 		// Create type parameters

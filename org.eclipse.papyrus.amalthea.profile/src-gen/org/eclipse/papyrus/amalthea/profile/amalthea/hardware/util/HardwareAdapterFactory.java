@@ -82,6 +82,10 @@ public class HardwareAdapterFactory extends AdapterFactoryImpl {
 				return createQuartzAdapter();
 			}
 			@Override
+			public Adapter caseFrequency(Frequency object) {
+				return createFrequencyAdapter();
+			}
+			@Override
 			public Adapter casePrescaler(Prescaler object) {
 				return createPrescalerAdapter();
 			}
@@ -124,10 +128,6 @@ public class HardwareAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseBus(Bus object) {
 				return createBusAdapter();
-			}
-			@Override
-			public Adapter caseFrequency(Frequency object) {
-				return createFrequencyAdapter();
 			}
 			@Override
 			public Adapter caseBlock(Block object) {

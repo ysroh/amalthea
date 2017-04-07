@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ASCII"?>
+<am:Amalthea xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:am="http://app4mc.eclipse.org/amalthea/0.7.2">
+  <swModel>
+    <tasks name="Task">
+      <callGraph>
+        <graphEntries xsi:type="am:CallSequence" name="CallSequence">
+          <calls xsi:type="am:TaskRunnableCall" runnable="ABSCalculation?type=Runnable">
+            <counter prescaler="0"/>
+          </calls>
+          <calls xsi:type="am:InterProcessActivation">
+            <counter prescaler="0"/>
+          </calls>
+        </graphEntries>
+      </callGraph>
+    </tasks>
+    <runnables name="ABSCalculation">
+      <runnableItems xsi:type="am:LabelAccess" data="ABSActivation?type=Label" access="read"/>
+      <runnableItems xsi:type="am:RunnableInstructions">
+        <default xsi:type="am:InstructionsDeviation">
+          <deviation>
+            <distribution xsi:type="am:WeibullEstimators"/>
+          </deviation>
+        </default>
+      </runnableItems>
+    </runnables>
+    <labels name="ABSActivation"/>
+  </swModel>
+  <hwModel>
+    <system name="DemoSystem">
+      <ecus name="ECU">
+        <microcontrollers name="Processor">
+          <cores name="Core_1"/>
+        </microcontrollers>
+      </ecus>
+    </system>
+  </hwModel>
+  <osModel/>
+  <stimuliModel/>
+  <mappingModel/>
+  <componentsModel/>
+</am:Amalthea>

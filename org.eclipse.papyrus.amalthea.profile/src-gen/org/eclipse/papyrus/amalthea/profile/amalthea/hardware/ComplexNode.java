@@ -42,20 +42,30 @@ public interface ComplexNode extends Block {
 	EList<Quartz> getQuartzes();
 
 	/**
-	 * Returns the value of the '<em><b>Prescaler</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Prescaler}.
+	 * Returns the value of the '<em><b>Prescaler</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Prescaler</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Prescaler</em>' reference list.
+	 * @return the value of the '<em>Prescaler</em>' reference.
+	 * @see #setPrescaler(Prescaler)
 	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.HardwarePackage#getComplexNode_Prescaler()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	EList<Prescaler> getPrescaler();
+	Prescaler getPrescaler();
+
+	/**
+	 * Sets the value of the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.ComplexNode#getPrescaler <em>Prescaler</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Prescaler</em>' reference.
+	 * @see #getPrescaler()
+	 * @generated
+	 */
+	void setPrescaler(Prescaler value);
 
 	/**
 	 * Returns the value of the '<em><b>Networks</b></em>' reference list.

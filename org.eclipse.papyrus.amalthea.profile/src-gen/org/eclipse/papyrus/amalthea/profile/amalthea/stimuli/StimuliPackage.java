@@ -66,7 +66,7 @@ public interface StimuliPackage extends EPackage {
 	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.impl.StimuliPackageImpl#getStimulus()
 	 * @generated
 	 */
-	int STIMULUS = 1;
+	int STIMULUS = 3;
 
 	/**
 	 * The feature id for the '<em><b>Base Class</b></em>' reference.
@@ -221,7 +221,7 @@ public interface StimuliPackage extends EPackage {
 	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.impl.StimuliPackageImpl#getPeriodic()
 	 * @generated
 	 */
-	int PERIODIC = 2;
+	int PERIODIC = 1;
 
 	/**
 	 * The feature id for the '<em><b>Base Class</b></em>' reference.
@@ -312,7 +312,7 @@ public interface StimuliPackage extends EPackage {
 	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.impl.StimuliPackageImpl#getInterprocess()
 	 * @generated
 	 */
-	int INTERPROCESS = 3;
+	int INTERPROCESS = 2;
 
 	/**
 	 * The feature id for the '<em><b>Base Class</b></em>' reference.

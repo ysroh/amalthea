@@ -153,7 +153,7 @@
     </stereotypesToApply>
   </adviceBindingsConfigurations>
   <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.interprocessActivation" target="//@elementTypeConfigurations.8">
-    <stereotypesToApply stereotypeQualifiedName="Amalthea::SWModel::InterprocessActivation">
+    <stereotypesToApply stereotypeQualifiedName="Amalthea::SWModel::InterProcessActivation">
       <requiredProfiles>Amalthea</requiredProfiles>
     </stereotypesToApply>
   </adviceBindingsConfigurations>
