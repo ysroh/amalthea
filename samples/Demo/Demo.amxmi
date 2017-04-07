@@ -26,15 +26,28 @@
     <labels name="ABSActivation"/>
   </swModel>
   <hwModel>
+    <coreTypes name="CoreType"/>
+    <networkTypes xsi:type="am:Bus" name="Bus"/>
     <system name="DemoSystem">
       <ecus name="ECU">
+        <quartzes name="ECUQuartz"/>
         <microcontrollers name="Processor">
-          <cores name="Core_1"/>
+          <networks name="Network" type="Bus?type=Bus"/>
+          <cores name="Core_1" coreType="CoreType?type=CoreType"/>
         </microcontrollers>
       </ecus>
     </system>
   </hwModel>
-  <osModel/>
+  <osModel>
+    <operatingSystems name="OS">
+      <taskSchedulers name="TaskScheduler">
+        <schedulingUnit xsi:type="am:SchedulingHWUnit">
+          <delay value="10" unit="ms"/>
+        </schedulingUnit>
+        <schedulingAlgorithm xsi:type="am:OSEK"/>
+      </taskSchedulers>
+    </operatingSystems>
+  </osModel>
   <stimuliModel/>
   <mappingModel/>
   <componentsModel/>

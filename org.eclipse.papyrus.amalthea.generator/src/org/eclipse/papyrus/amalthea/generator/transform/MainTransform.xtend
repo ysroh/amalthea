@@ -50,6 +50,13 @@ import org.eclipse.app4mc.amalthea.model.FrequencyUnit
 import org.eclipse.app4mc.amalthea.model.SchedType
 import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.SystemType
 import org.eclipse.app4mc.amalthea.model.ECUType
+import org.eclipse.app4mc.amalthea.model.TaskScheduler
+import org.eclipse.app4mc.amalthea.model.InterruptController
+import org.eclipse.app4mc.amalthea.model.SchedulingUnit
+import org.eclipse.app4mc.amalthea.model.TaskSchedulingAlgorithm
+import org.eclipse.papyrus.amalthea.profile.amalthea.os.SchedulingHWUnit
+import org.eclipse.papyrus.amalthea.profile.amalthea.os.OSEK
+import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Bus
 
 class MainTransform {
 
@@ -223,9 +230,9 @@ class MainTransform {
 	def private dispatch create AmaltheaFactory.eINSTANCE.createHwSystem transform(org.eclipse.papyrus.amalthea.profile.amalthea.hardware.HwSystem system){
 		it.name = system.base_Class.name
 		val ecus = system.ecus.map[e | e.transform].filter(typeof(ECU))
-		val quartz = system.quartzes.map[e | e.transform].filter(typeof(Quartz))
-		val prescaler = system.prescaler?.transform as Prescaler
-		val networks = system.networks.map[e | e.transform].filter(typeof(Network))
+		val quartz = system.quartzes.map[e | e.transformHelper(system)].filter(typeof(Quartz))
+		val prescaler = system.prescaler?.transformHelper(system) as Prescaler
+		val networks = system.networks.map[e | e.transformHelper(system)].filter(typeof(Network))
 
 		it.ecus.addAll(ecus)
 		it.quartzes.addAll(quartz)
@@ -236,9 +243,9 @@ class MainTransform {
 	def private dispatch create AmaltheaFactory.eINSTANCE.createECU transform(org.eclipse.papyrus.amalthea.profile.amalthea.hardware.ECU ecu){
 		it.name = ecu.base_Class.name
 		val processors = ecu.microcontrollers.map[e | e.transform].filter(typeof(Microcontroller))
-		val quartz = ecu.quartzes.map[e | e.transform].filter(typeof(Quartz))
-		val prescaler = ecu.prescaler?.transform as Prescaler
-		val networks = ecu.networks.map[e | e.transform].filter(typeof(Network))
+		val quartz = ecu.quartzes.map[e | e.transformHelper(ecu)].filter(typeof(Quartz))
+		val prescaler = ecu.prescaler?.transformHelper(ecu) as Prescaler
+		val networks = ecu.networks.map[e | e.transformHelper(ecu)].filter(typeof(Network))
 
 		it.microcontrollers.addAll(processors)
 		it.quartzes.addAll(quartz)
@@ -249,9 +256,9 @@ class MainTransform {
 	def private dispatch create AmaltheaFactory.eINSTANCE.createMicrocontroller transform(org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Microcontroller processor){
 		it.name = processor.base_Class.name
 		val cores = processor.cores.map[e | e.transform].filter(typeof(Core))
-		val quartz = processor.quartzes.map[e | e.transform].filter(typeof(Quartz))
-		val prescaler = processor.prescaler?.transform as Prescaler
-		val networks = processor.networks.map[e | e.transform].filter(typeof(Network))
+		val quartz = processor.quartzes.map[e | e.transformHelper(processor)].filter(typeof(Quartz))
+		val prescaler = processor.prescaler?.transformHelper(processor) as Prescaler
+		val networks = processor.networks.map[e | e.transformHelper(processor)].filter(typeof(Network))
 
 		it.cores.addAll(cores)
 		it.quartzes.addAll(quartz)
@@ -261,10 +268,10 @@ class MainTransform {
 	
 	def private dispatch create AmaltheaFactory.eINSTANCE.createCore transform(org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Core core){
 		it.name = core.base_Class.name
-		it.coreType = core.coretype?.transformHelper(core) as CoreType
-		val quartz = core.quartzes.map[e | e.transform].filter(typeof(Quartz))
-		val prescaler = core.prescaler?.transform as Prescaler
-		val networks = core.networks.map[e | e.transform].filter(typeof(Network))
+		it.coreType = core.coretype?.transform as CoreType
+		val quartz = core.quartzes.map[e | e.transformHelper(core)].filter(typeof(Quartz))
+		val prescaler = core.prescaler?.transformHelper(core) as Prescaler
+		val networks = core.networks.map[e | e.transformHelper(core)].filter(typeof(Network))
 
 		it.quartzes.addAll(quartz)
 		it.prescaler = prescaler
@@ -276,7 +283,19 @@ class MainTransform {
 		it.type = network.networktype?.transform as NetworkType
 	}	
 	
-	def private dispatch create AmaltheaFactory.eINSTANCE.createNetworkType transformHelper(org.eclipse.papyrus.amalthea.profile.amalthea.hardware.NetworkType type, Object owner){
+	def private dispatch create AmaltheaFactory.eINSTANCE.createSystemType transform(SystemType type){
+		it.name = type.base_DataType.name
+	}	
+	
+	def private dispatch create AmaltheaFactory.eINSTANCE.createECUType transform(org.eclipse.papyrus.amalthea.profile.amalthea.hardware.ECUType type){
+		it.name = type.base_DataType.name
+	}	
+	
+	def private dispatch create AmaltheaFactory.eINSTANCE.createMicrocontrollerType transform(org.eclipse.papyrus.amalthea.profile.amalthea.hardware.MicrocontrollerType type){
+		it.name = type.base_DataType.name
+	}	
+		
+	def private dispatch create AmaltheaFactory.eINSTANCE.createBus transform(Bus type){
 		it.name = type.base_DataType.name
 		it.bitWidth = type.bitWidth
 		it.schedPolicy = SchedType.get(type.schedPolicy.literal)
@@ -291,30 +310,38 @@ class MainTransform {
 		it.value = frequency.value
 		it.unit = FrequencyUnit.get(frequency.unit.literal)
 	}
-		
+	
 	def private dispatch create AmaltheaFactory.eINSTANCE.createPrescaler transformHelper(org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Prescaler prescaler, Object owner){
 		it.name = prescaler.base_Class.name
 		it.clockRatio = prescaler.clockRatio
 	}		
 	
-	def private dispatch create AmaltheaFactory.eINSTANCE.createCoreType transformHelper(org.eclipse.papyrus.amalthea.profile.amalthea.hardware.CoreType type, Object owner){
+	def private dispatch create AmaltheaFactory.eINSTANCE.createCoreType transform(org.eclipse.papyrus.amalthea.profile.amalthea.hardware.CoreType type){
 		it.name = type.base_DataType.name
 		it.bitWidth = type.bitWidth
 		it.instructionsPerCycle = type.instructionsPerCycle
 	}
 	
-	def private dispatch create AmaltheaFactory.eINSTANCE.createSystemType transformHelper(SystemType type, Object owner){
-		it.name = type.base_DataType.name
-	}	
-	
-	def private dispatch create AmaltheaFactory.eINSTANCE.createECUType transformHelper(org.eclipse.papyrus.amalthea.profile.amalthea.hardware.ECUType type, Object owner){
-		it.name = type.base_DataType.name
-	}	
-	
-	def private dispatch create AmaltheaFactory.eINSTANCE.createMicrocontrollerType transformHelper(org.eclipse.papyrus.amalthea.profile.amalthea.hardware.MicrocontrollerType type, Object owner){
-		it.name = type.base_DataType.name
-	}	
-	
 	/************* OS ***************/
+	def private dispatch create AmaltheaFactory.eINSTANCE.createOperatingSystem transform(org.eclipse.papyrus.amalthea.profile.amalthea.os.OperatingSystem os){
+		it.name = os.base_Class.name
+		val schedulers = os.taskscheduler.map[e | e.transform].filter(typeof(TaskScheduler))
+		val controllers = os.interruptcontroller.map[e | e.transform].filter(typeof(InterruptController))
+		it.taskSchedulers.addAll(schedulers)
+		it.interruptControllers.addAll(controllers)
+	}
 	
+	def private dispatch create AmaltheaFactory.eINSTANCE.createTaskScheduler transform(org.eclipse.papyrus.amalthea.profile.amalthea.os.TaskScheduler scheduler){
+		it.name = scheduler.base_Class.name
+		it.scheduleUnitPriority = scheduler.scheduleUnitPriority
+		it.schedulingUnit = scheduler.schedulingunit?.transform as SchedulingUnit
+		it.schedulingAlgorithm = scheduler.schedulingalgorithm?.transform as TaskSchedulingAlgorithm
+	}
+	
+	def private dispatch create AmaltheaFactory.eINSTANCE.createSchedulingHWUnit transform(SchedulingHWUnit schedUnit){
+		it.delay = schedUnit.delay?.transformHelper(schedUnit) as org.eclipse.app4mc.amalthea.model.Time
+	}	
+	
+	def private dispatch create AmaltheaFactory.eINSTANCE.createOSEK transform(OSEK osek){
+	}	
 }

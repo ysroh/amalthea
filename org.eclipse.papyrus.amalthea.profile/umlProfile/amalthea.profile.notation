@@ -1557,7 +1557,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_l3YCthoyEeemOqGrpy978g" y="20"/>
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_l3YCtxoyEeemOqGrpy978g" type="Association_TargetRoleLabel">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_l3YCuBoyEeemOqGrpy978g" y="-20"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_l3YCuBoyEeemOqGrpy978g" x="-10" y="-28"/>
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_l3YCuRoyEeemOqGrpy978g" type="Association_SourceRoleLabel">
         <layoutConstraint xmi:type="notation:Location" xmi:id="_l3YCuhoyEeemOqGrpy978g" y="20"/>

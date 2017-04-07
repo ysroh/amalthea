@@ -395,7 +395,7 @@
     <eClassifiers xsi:type="ecore:EClass" name="InterruptSchedulingAlgorithm" abstract="true"
         eSuperTypes="../../org.eclipse.papyrus.sysml14/resources/profile/sysml.ecore#//blocks/Block"/>
     <eClassifiers xsi:type="ecore:EClass" name="SchedulingHWUnit" eSuperTypes="#//os/SchedulingUnit">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="time" ordered="false"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="delay" ordered="false"
           eType="#//common/Time"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="OSEK" eSuperTypes="#//os/TaskSchedulingAlgorithm"/>

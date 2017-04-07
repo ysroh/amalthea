@@ -357,7 +357,7 @@ public class OsPackageImpl extends EPackageImpl implements OsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSchedulingHWUnit_Time() {
+	public EReference getSchedulingHWUnit_Delay() {
 		return (EReference)schedulingHWUnitEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -428,7 +428,7 @@ public class OsPackageImpl extends EPackageImpl implements OsPackage {
 		interruptSchedulingAlgorithmEClass = createEClass(INTERRUPT_SCHEDULING_ALGORITHM);
 
 		schedulingHWUnitEClass = createEClass(SCHEDULING_HW_UNIT);
-		createEReference(schedulingHWUnitEClass, SCHEDULING_HW_UNIT__TIME);
+		createEReference(schedulingHWUnitEClass, SCHEDULING_HW_UNIT__DELAY);
 
 		osekEClass = createEClass(OSEK);
 
@@ -501,7 +501,7 @@ public class OsPackageImpl extends EPackageImpl implements OsPackage {
 		initEClass(interruptSchedulingAlgorithmEClass, InterruptSchedulingAlgorithm.class, "InterruptSchedulingAlgorithm", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(schedulingHWUnitEClass, SchedulingHWUnit.class, "SchedulingHWUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSchedulingHWUnit_Time(), theCommonPackage.getTime(), null, "time", null, 0, 1, SchedulingHWUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getSchedulingHWUnit_Delay(), theCommonPackage.getTime(), null, "delay", null, 0, 1, SchedulingHWUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(osekEClass, org.eclipse.papyrus.amalthea.profile.amalthea.os.OSEK.class, "OSEK", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

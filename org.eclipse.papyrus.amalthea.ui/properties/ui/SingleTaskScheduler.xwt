@@ -26,4 +26,11 @@
 		<ppe:ReferenceDialog input="{Binding}"
 			property="Amalthea:OSModel:Scheduler:schedulingunit"></ppe:ReferenceDialog>
 	</Composite>
+	<Composite>
+		<Composite.layout>
+			<ppel:PropertiesLayout numColumns="2"></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:ReferenceDialog input="{Binding}"
+			property="Amalthea:OSModel:TaskScheduler:schedulingalgorithm"></ppe:ReferenceDialog>
+	</Composite>
 </Composite>

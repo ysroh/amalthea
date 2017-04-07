@@ -356,7 +356,7 @@
       <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="amalthea.ecore#//os/InterruptSchedulingAlgorithm"/>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//os/SchedulingHWUnit">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-            propertySortChoices="true" ecoreFeature="ecore:EReference amalthea.ecore#//os/SchedulingHWUnit/time"/>
+            propertySortChoices="true" ecoreFeature="ecore:EReference amalthea.ecore#//os/SchedulingHWUnit/delay"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//os/OSEK"/>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//os/PriorityBased"/>

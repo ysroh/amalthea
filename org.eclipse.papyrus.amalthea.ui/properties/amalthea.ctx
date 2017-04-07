@@ -881,7 +881,7 @@
       </elements>
       <elements xmi:id="_2VpHcxiXEeeoWfBb-FGkXQ" name="OSEK" supertypes="_2VpHchiXEeeoWfBb-FGkXQ"/>
       <elements xmi:id="_2VpHdBiXEeeoWfBb-FGkXQ" name="SchedulingHWUnit" supertypes="_2VpHeRiXEeeoWfBb-FGkXQ">
-        <properties xmi:id="_2Lo7YBoyEeemOqGrpy978g" name="time" type="Reference"/>
+        <properties xmi:id="_2Lo7YBoyEeemOqGrpy978g" name="delay" type="Reference"/>
       </elements>
       <elements xmi:id="_2VpHdRiXEeeoWfBb-FGkXQ" name="InterruptController" supertypes="_2VpHehiXEeeoWfBb-FGkXQ">
         <properties xmi:id="_2VpHdhiXEeeoWfBb-FGkXQ" name="schedulingalgorithm" type="Reference"/>

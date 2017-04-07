@@ -57,6 +57,8 @@
       <packagedElement xmi:type="uml:Class" xmi:id="_xs4jABowEeeeW9cngqHTXg" name="ECUQuartz"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_utD74BowEeeeW9cngqHTXg" name="CorePrescaler"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_UDaUsBuZEeeSQLqP5Np32w" name="Core_1"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_1i8SoBuxEeeuRJH_EpEjWQ" name="Bus"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_62-_IBuxEeeuRJH_EpEjWQ" name="Network"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_AAoVcBoxEeeeW9cngqHTXg" name="OperatingSystem">
       <packagedElement xmi:type="uml:Class" xmi:id="_HxHPMBoxEeeeW9cngqHTXg" name="OS"/>
@@ -64,6 +66,7 @@
       <packagedElement xmi:type="uml:Class" xmi:id="_HmaJIBozEeey-4lblVK-ag" name="SchedulingHwUnit"/>
       <packagedElement xmi:type="uml:DataType" xmi:id="_iij6kBsEEee_6e5LGg5HzA" name="SchedulingUnitTime"/>
       <packagedElement xmi:type="uml:Abstraction" xmi:id="_h94rgBuZEeeSQLqP5Np32w" name="Allocate1" client="_JgeUABoxEeeeW9cngqHTXg" supplier="_UDaUsBuZEeeSQLqP5Np32w"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_pJGaYBusEeeP3qL0gzLlrA" name="OSEK"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_CZ_ZgBoxEeeeW9cngqHTXg" name="Stimuli">
       <packagedElement xmi:type="uml:Class" xmi:id="_SpqbMBozEeey-4lblVK-ag" name="Timer_10MS"/>
@@ -151,13 +154,13 @@
   <Software:TaskRunnableCall xmi:id="_2bQ6gBosEeevi--Z4zF9bA" base_Operation="_2a5uIBosEeevi--Z4zF9bA" counter="_a89lsBsFEeeSFpvWgLU3rg" runnable="_TthY0BobEee60cQ75oPnTA"/>
   <Hardware:HwSystem xmi:id="_jj4vYBotEeevi--Z4zF9bA" base_Class="_jjcDcBotEeevi--Z4zF9bA" ecus="_lyulgBotEeevi--Z4zF9bA"/>
   <Hardware:ECU xmi:id="_lyulgBotEeevi--Z4zF9bA" base_Class="_lybqkBotEeevi--Z4zF9bA" quartzes="_xtMFABowEeeeW9cngqHTXg" microcontrollers="_nZtKYBotEeevi--Z4zF9bA"/>
-  <Hardware:Microcontroller xmi:id="_nZtKYBotEeevi--Z4zF9bA" base_Class="_nZERMBotEeevi--Z4zF9bA" cores="_UDmh8BuZEeeSQLqP5Np32w"/>
+  <Hardware:Microcontroller xmi:id="_nZtKYBotEeevi--Z4zF9bA" base_Class="_nZERMBotEeevi--Z4zF9bA" networks="_63c5MBuxEeeuRJH_EpEjWQ" cores="_UDmh8BuZEeeSQLqP5Np32w"/>
   <Hardware:Prescaler xmi:id="_uuA-IBowEeeeW9cngqHTXg" base_Class="_utD74BowEeeeW9cngqHTXg"/>
   <Hardware:Quartz xmi:id="_xtMFABowEeeeW9cngqHTXg" base_Class="_xs4jABowEeeeW9cngqHTXg"/>
   <Hardware:CoreType xmi:id="_3SDbwBowEeeeW9cngqHTXg" base_DataType="_3Rv5wBowEeeeW9cngqHTXg"/>
   <Os:OperatingSystem xmi:id="_HxaKIBoxEeeeW9cngqHTXg" base_Class="_HxHPMBoxEeeeW9cngqHTXg" taskscheduler="_Jg5KwBoxEeeeW9cngqHTXg"/>
-  <Os:TaskScheduler xmi:id="_Jg5KwBoxEeeeW9cngqHTXg" base_Class="_JgeUABoxEeeeW9cngqHTXg" schedulingunit="_Hng8YBozEeey-4lblVK-ag"/>
-  <Os:SchedulingHWUnit xmi:id="_Hng8YBozEeey-4lblVK-ag" base_Class="_HmaJIBozEeey-4lblVK-ag" time="_ijOB4BsEEee_6e5LGg5HzA"/>
+  <Os:TaskScheduler xmi:id="_Jg5KwBoxEeeeW9cngqHTXg" base_Class="_JgeUABoxEeeeW9cngqHTXg" schedulingunit="_Hng8YBozEeey-4lblVK-ag" schedulingalgorithm="_pKAZUBusEeeP3qL0gzLlrA"/>
+  <Os:SchedulingHWUnit xmi:id="_Hng8YBozEeey-4lblVK-ag" base_Class="_HmaJIBozEeey-4lblVK-ag" delay="_ijOB4BsEEee_6e5LGg5HzA" time="_ijOB4BsEEee_6e5LGg5HzA"/>
   <Stimuli:Periodic xmi:id="_Sp99MBozEeey-4lblVK-ag" base_Class="_SpqbMBozEeey-4lblVK-ag" recurrence="_bASH4BozEeey-4lblVK-ag" offset="_Xf3VIBozEeey-4lblVK-ag"/>
   <Common:Time xmi:id="_Xf3VIBozEeey-4lblVK-ag" unit="ms" base_DataType="_XftkIBozEeey-4lblVK-ag"/>
   <Common:Time xmi:id="_bASH4BozEeey-4lblVK-ag" value="10" unit="ms" base_DataType="_bAI98BozEeey-4lblVK-ag"/>
@@ -172,4 +175,7 @@
   <Hardware:Core xmi:id="_UDmh8BuZEeeSQLqP5Np32w" base_Class="_UDaUsBuZEeeSQLqP5Np32w" coretype="_3SDbwBowEeeeW9cngqHTXg"/>
   <Allocations:Allocate xmi:id="_h-M0kBuZEeeSQLqP5Np32w" base_DirectedRelationship="_h94rgBuZEeeSQLqP5Np32w" base_Abstraction="_h94rgBuZEeeSQLqP5Np32w"/>
   <Software:InterProcessActivation xmi:id="_grQeoBucEeenZcDyXh70PA" base_Operation="_gqmXUBucEeenZcDyXh70PA" counter="_a89lsBsFEeeSFpvWgLU3rg"/>
+  <Os:OSEK xmi:id="_pKAZUBusEeeP3qL0gzLlrA" base_Class="_pJGaYBusEeeP3qL0gzLlrA"/>
+  <Hardware:Bus xmi:id="_1j5U4BuxEeeuRJH_EpEjWQ" base_DataType="_1i8SoBuxEeeuRJH_EpEjWQ"/>
+  <Hardware:Network xmi:id="_63c5MBuxEeeuRJH_EpEjWQ" base_Class="_62-_IBuxEeeuRJH_EpEjWQ" networktype="_1j5U4BuxEeeuRJH_EpEjWQ"/>
 </xmi:XMI>

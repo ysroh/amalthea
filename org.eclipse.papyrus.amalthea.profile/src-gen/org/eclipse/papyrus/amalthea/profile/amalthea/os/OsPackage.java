@@ -689,13 +689,13 @@ public interface OsPackage extends EPackage {
 	int SCHEDULING_HW_UNIT__IS_ENCAPSULATED = SCHEDULING_UNIT__IS_ENCAPSULATED;
 
 	/**
-	 * The feature id for the '<em><b>Time</b></em>' reference.
+	 * The feature id for the '<em><b>Delay</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEDULING_HW_UNIT__TIME = SCHEDULING_UNIT_FEATURE_COUNT + 0;
+	int SCHEDULING_HW_UNIT__DELAY = SCHEDULING_UNIT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Scheduling HW Unit</em>' class.
@@ -1036,15 +1036,15 @@ public interface OsPackage extends EPackage {
 	EClass getSchedulingHWUnit();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.amalthea.os.SchedulingHWUnit#getTime <em>Time</em>}'.
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.amalthea.os.SchedulingHWUnit#getDelay <em>Delay</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Time</em>'.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.os.SchedulingHWUnit#getTime()
+	 * @return the meta object for the reference '<em>Delay</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.os.SchedulingHWUnit#getDelay()
 	 * @see #getSchedulingHWUnit()
 	 * @generated
 	 */
-	EReference getSchedulingHWUnit_Time();
+	EReference getSchedulingHWUnit_Delay();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.os.OSEK <em>OSEK</em>}'.
@@ -1218,12 +1218,12 @@ public interface OsPackage extends EPackage {
 		EClass SCHEDULING_HW_UNIT = eINSTANCE.getSchedulingHWUnit();
 
 		/**
-		 * The meta object literal for the '<em><b>Time</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Delay</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SCHEDULING_HW_UNIT__TIME = eINSTANCE.getSchedulingHWUnit_Time();
+		EReference SCHEDULING_HW_UNIT__DELAY = eINSTANCE.getSchedulingHWUnit_Delay();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.os.impl.OSEKImpl <em>OSEK</em>}' class.

@@ -19,22 +19,21 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.os.SchedulingHWUnit;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.os.impl.SchedulingHWUnitImpl#getTime <em>Time</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.os.impl.SchedulingHWUnitImpl#getDelay <em>Delay</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class SchedulingHWUnitImpl extends SchedulingUnitImpl implements SchedulingHWUnit {
 	/**
-	 * The cached value of the '{@link #getTime() <em>Time</em>}' reference.
+	 * The cached value of the '{@link #getDelay() <em>Delay</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTime()
+	 * @see #getDelay()
 	 * @generated
 	 * @ordered
 	 */
-	protected Time time;
-
+	protected Time delay;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -59,16 +58,16 @@ public class SchedulingHWUnitImpl extends SchedulingUnitImpl implements Scheduli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Time getTime() {
-		if (time != null && time.eIsProxy()) {
-			InternalEObject oldTime = (InternalEObject)time;
-			time = (Time)eResolveProxy(oldTime);
-			if (time != oldTime) {
+	public Time getDelay() {
+		if (delay != null && delay.eIsProxy()) {
+			InternalEObject oldDelay = (InternalEObject)delay;
+			delay = (Time)eResolveProxy(oldDelay);
+			if (delay != oldDelay) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, OsPackage.SCHEDULING_HW_UNIT__TIME, oldTime, time));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, OsPackage.SCHEDULING_HW_UNIT__DELAY, oldDelay, delay));
 			}
 		}
-		return time;
+		return delay;
 	}
 
 	/**
@@ -76,8 +75,8 @@ public class SchedulingHWUnitImpl extends SchedulingUnitImpl implements Scheduli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Time basicGetTime() {
-		return time;
+	public Time basicGetDelay() {
+		return delay;
 	}
 
 	/**
@@ -85,11 +84,11 @@ public class SchedulingHWUnitImpl extends SchedulingUnitImpl implements Scheduli
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTime(Time newTime) {
-		Time oldTime = time;
-		time = newTime;
+	public void setDelay(Time newDelay) {
+		Time oldDelay = delay;
+		delay = newDelay;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OsPackage.SCHEDULING_HW_UNIT__TIME, oldTime, time));
+			eNotify(new ENotificationImpl(this, Notification.SET, OsPackage.SCHEDULING_HW_UNIT__DELAY, oldDelay, delay));
 	}
 
 	/**
@@ -100,9 +99,9 @@ public class SchedulingHWUnitImpl extends SchedulingUnitImpl implements Scheduli
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case OsPackage.SCHEDULING_HW_UNIT__TIME:
-				if (resolve) return getTime();
-				return basicGetTime();
+			case OsPackage.SCHEDULING_HW_UNIT__DELAY:
+				if (resolve) return getDelay();
+				return basicGetDelay();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -115,8 +114,8 @@ public class SchedulingHWUnitImpl extends SchedulingUnitImpl implements Scheduli
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case OsPackage.SCHEDULING_HW_UNIT__TIME:
-				setTime((Time)newValue);
+			case OsPackage.SCHEDULING_HW_UNIT__DELAY:
+				setDelay((Time)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -130,8 +129,8 @@ public class SchedulingHWUnitImpl extends SchedulingUnitImpl implements Scheduli
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case OsPackage.SCHEDULING_HW_UNIT__TIME:
-				setTime((Time)null);
+			case OsPackage.SCHEDULING_HW_UNIT__DELAY:
+				setDelay((Time)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -145,8 +144,8 @@ public class SchedulingHWUnitImpl extends SchedulingUnitImpl implements Scheduli
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case OsPackage.SCHEDULING_HW_UNIT__TIME:
-				return time != null;
+			case OsPackage.SCHEDULING_HW_UNIT__DELAY:
+				return delay != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -17,6 +17,6 @@
 			<ppel:PropertiesLayout></ppel:PropertiesLayout>
 		</Composite.layout>
 		<ppe:ReferenceDialog input="{Binding}"
-			property="Amalthea:OSModel:SchedulingHWUnit:time"></ppe:ReferenceDialog>
+			property="Amalthea:OSModel:SchedulingHWUnit:delay"></ppe:ReferenceDialog>
 	</Composite>
 </Composite>
