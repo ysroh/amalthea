@@ -262,7 +262,7 @@
       <children xmi:type="notation:Compartment" xmi:id="_XTcClhu7EeeS0ZHQabp_-Q" type="Flow Properties"/>
       <children xmi:type="notation:Compartment" xmi:id="_XTcClxu7EeeS0ZHQabp_-Q" type="Parameters"/>
       <element xmi:type="uml:Class" href="DemoHardware.uml#_L6ZGsBu7EeeS0ZHQabp_-Q"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XS8TURu7EeeS0ZHQabp_-Q" x="489" y="344"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XS8TURu7EeeS0ZHQabp_-Q" x="233" y="115"/>
     </children>
     <styles xmi:type="notation:StringValueStyle" xmi:id="_bBcJARo0Eeey-4lblVK-ag" name="diagram_compatibility_version" stringValue="1.2.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_bBcJAho0Eeey-4lblVK-ag"/>
@@ -286,16 +286,18 @@
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_YgUFYBu7EeeS0ZHQabp_-Q" type="Abstraction_Edge" source="_drIvIBo0Eeey-4lblVK-ag" target="_XS8TUBu7EeeS0ZHQabp_-Q">
       <children xmi:type="notation:DecorationNode" xmi:id="_YgUFYxu7EeeS0ZHQabp_-Q" type="Abstraction_NameLabel">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_YgUFZBu7EeeS0ZHQabp_-Q" y="40"/>
+        <styles xmi:type="notation:BooleanValueStyle" xmi:id="_35stoBu8Eee0qqo0V8Lx2g" name="IS_UPDATED_POSITION" booleanValue="true"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_YgUFZBu7EeeS0ZHQabp_-Q" x="14" y="97"/>
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_YgUFZRu7EeeS0ZHQabp_-Q" type="Abstraction_StereotypeLabel">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_YgUFZhu7EeeS0ZHQabp_-Q" y="60"/>
+        <styles xmi:type="notation:BooleanValueStyle" xmi:id="_36gl8Bu8Eee0qqo0V8Lx2g" name="IS_UPDATED_POSITION" booleanValue="true"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_YgUFZhu7EeeS0ZHQabp_-Q" x="1" y="59"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_YgUFYRu7EeeS0ZHQabp_-Q"/>
       <element xmi:type="uml:Abstraction" href="Demo.uml#_YfgNEBu7EeeS0ZHQabp_-Q"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_YgUFYhu7EeeS0ZHQabp_-Q" points="[337, 349, -643984, -643984]$[489, 379, -643984, -643984]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YhoUABu7EeeS0ZHQabp_-Q" id="(1.0,0.76)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YhoUARu7EeeS0ZHQabp_-Q" id="(0.0,0.35)"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YhoUABu7EeeS0ZHQabp_-Q" id="(0.48,0.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YhoUARu7EeeS0ZHQabp_-Q" id="(0.52,1.0)"/>
     </edges>
   </notation:Diagram>
   <notation:Diagram xmi:id="_g5KqABo3Eeey-4lblVK-ag" type="PapyrusUMLClassDiagram" name="NewSysML1.4BlockDefinition" measurementUnit="Pixel">

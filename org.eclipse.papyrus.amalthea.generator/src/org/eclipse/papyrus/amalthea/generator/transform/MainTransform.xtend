@@ -189,16 +189,16 @@ class MainTransform {
 	}
 	
 	def private dispatch create AmaltheaFactory.eINSTANCE.createRunnableInstructions transform(RunnableInstructions instruction){
-		val dist = instruction.^default?.transformHelper(instruction) as org.eclipse.app4mc.amalthea.model.InstructionsDeviation
+		val dist = instruction.^default?.transformHelper(new Object) as org.eclipse.app4mc.amalthea.model.InstructionsDeviation
 		it.^default = dist
 	}
 	
 	def private dispatch create AmaltheaFactory.eINSTANCE.createInstructionsDeviation transformHelper(InstructionsDeviation instructionsDeviation, Object owner){
-		it.deviation = instructionsDeviation.deviation?.transformHelper(instructionsDeviation) as org.eclipse.app4mc.amalthea.model.Deviation
+		it.deviation = instructionsDeviation.deviation?.transformHelper(new Object) as org.eclipse.app4mc.amalthea.model.Deviation
 	}
 	
 	def private dispatch create AmaltheaFactory.eINSTANCE.createDeviation transformHelper(Deviation instruction, Object owner){
-		it.distribution = instruction.distribution?.transformHelper(instruction) as Distribution
+		it.distribution = instruction.distribution?.transformHelper(new Object) as Distribution
 	}
 	
 	def private dispatch create AmaltheaFactory.eINSTANCE.createWeibullEstimators transformHelper(WeibullEstimators distribution, Object owner){
@@ -213,12 +213,12 @@ class MainTransform {
 	// Tasks
 	def private dispatch create AmaltheaFactory.eINSTANCE.createTask transform(org.eclipse.papyrus.amalthea.profile.amalthea.software.Task task){
 		it.name = task.base_Class.name
-		val callGraph = task.callgraph?.transformHelper(task) as CallGraph
+		val callGraph = task.callgraph?.transformHelper(new Object) as CallGraph
 		it.callGraph = callGraph
 	}
 
 	def private dispatch create AmaltheaFactory.eINSTANCE.createCallGraph transformHelper(org.eclipse.papyrus.amalthea.profile.amalthea.software.CallGraph callGraph, Object owner){
-		val graphEntries = callGraph.graphentries.map[e | e.transformHelper(callGraph)].filter(typeof(GraphEntryBase))
+		val graphEntries = callGraph.graphentries.map[e | e.transformHelper(new Object)].filter(typeof(GraphEntryBase))
 		it.graphEntries.addAll(graphEntries)
 	}
 	
@@ -255,9 +255,9 @@ class MainTransform {
 	def private dispatch create AmaltheaFactory.eINSTANCE.createECU transform(org.eclipse.papyrus.amalthea.profile.amalthea.hardware.ECU ecu){
 		it.name = ecu.base_Class.name
 		val processors = ecu.microcontrollers.map[e | e.transform].filter(typeof(Microcontroller))
-		val quartz = ecu.quartzes.map[e | e.transformHelper(ecu)].filter(typeof(Quartz))
-		val prescaler = ecu.prescaler?.transformHelper(ecu) as Prescaler
-		val networks = ecu.networks.map[e | e.transformHelper(ecu)].filter(typeof(Network))
+		val quartz = ecu.quartzes.map[e | e.transformHelper(new Object)].filter(typeof(Quartz))
+		val prescaler = ecu.prescaler?.transformHelper(new Object) as Prescaler
+		val networks = ecu.networks.map[e | e.transformHelper(new Object)].filter(typeof(Network))
 
 		it.microcontrollers.addAll(processors)
 		it.quartzes.addAll(quartz)
@@ -268,9 +268,9 @@ class MainTransform {
 	def private dispatch create AmaltheaFactory.eINSTANCE.createMicrocontroller transform(org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Microcontroller processor){
 		it.name = processor.base_Class.name
 		val cores = processor.cores.map[e | e.transform].filter(typeof(Core))
-		val quartz = processor.quartzes.map[e | e.transformHelper(processor)].filter(typeof(Quartz))
-		val prescaler = processor.prescaler?.transformHelper(processor) as Prescaler
-		val networks = processor.networks.map[e | e.transformHelper(processor)].filter(typeof(Network))
+		val quartz = processor.quartzes.map[e | e.transformHelper(new Object)].filter(typeof(Quartz))
+		val prescaler = processor.prescaler?.transformHelper(new Object) as Prescaler
+		val networks = processor.networks.map[e | e.transformHelper(new Object)].filter(typeof(Network))
 
 		it.cores.addAll(cores)
 		it.quartzes.addAll(quartz)
@@ -281,9 +281,9 @@ class MainTransform {
 	def private dispatch create AmaltheaFactory.eINSTANCE.createCore transform(org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Core core){
 		it.name = core.base_Class.name
 		it.coreType = core.coretype?.transform as CoreType
-		val quartz = core.quartzes.map[e | e.transformHelper(core)].filter(typeof(Quartz))
-		val prescaler = core.prescaler?.transformHelper(core) as Prescaler
-		val networks = core.networks.map[e | e.transformHelper(core)].filter(typeof(Network))
+		val quartz = core.quartzes.map[e | e.transformHelper(new Object)].filter(typeof(Quartz))
+		val prescaler = core.prescaler?.transformHelper(new Object) as Prescaler
+		val networks = core.networks.map[e | e.transformHelper(new Object)].filter(typeof(Network))
 
 		it.quartzes.addAll(quartz)
 		it.prescaler = prescaler
@@ -293,7 +293,7 @@ class MainTransform {
 	def private dispatch create AmaltheaFactory.eINSTANCE.createNetwork transformHelper(org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Network network, Object owner){
 		it.name = network.base_Class.name
 		it.type = network.networktype?.transform as NetworkType
-		it.prescaler = network.prescaler?.transformHelper(network) as Prescaler
+		it.prescaler = network.prescaler?.transformHelper(new Object) as Prescaler
 	}	
 	
 	def private dispatch create AmaltheaFactory.eINSTANCE.createSystemType transform(SystemType type){
@@ -316,7 +316,7 @@ class MainTransform {
 		
 	def private dispatch create AmaltheaFactory.eINSTANCE.createQuartz transformHelper(org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Quartz quartz, Object owner){
 		it.name = quartz.base_Class.name
-		it.frequency = quartz.frequency?.transformHelper(quartz) as Frequency
+		it.frequency = quartz.frequency?.transformHelper(new Object) as Frequency
 	}
 			
 	def private dispatch create AmaltheaFactory.eINSTANCE.createFrequency transformHelper(org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Frequency frequency, Object owner){
@@ -338,8 +338,8 @@ class MainTransform {
 	/************* OS ***************/
 	def private dispatch create AmaltheaFactory.eINSTANCE.createOperatingSystem transform(org.eclipse.papyrus.amalthea.profile.amalthea.os.OperatingSystem os){
 		it.name = os.base_Class.name
-		val schedulers = os.taskscheduler.map[e | e.transformHelper(os)].filter(typeof(TaskScheduler))
-		val controllers = os.interruptcontroller.map[e | e.transformHelper(os)].filter(typeof(InterruptController))
+		val schedulers = os.taskscheduler.map[e | e.transformHelper(new Object)].filter(typeof(TaskScheduler))
+		val controllers = os.interruptcontroller.map[e | e.transformHelper(new Object)].filter(typeof(InterruptController))
 		it.taskSchedulers.addAll(schedulers)
 		it.interruptControllers.addAll(controllers)
 	}
@@ -347,15 +347,15 @@ class MainTransform {
 	def private dispatch create AmaltheaFactory.eINSTANCE.createTaskScheduler transformHelper(org.eclipse.papyrus.amalthea.profile.amalthea.os.TaskScheduler scheduler, Object owner){
 		it.name = scheduler.base_Class.name
 		it.scheduleUnitPriority = scheduler.scheduleUnitPriority
-		it.schedulingUnit = scheduler.schedulingunit?.transformHelper(scheduler) as SchedulingUnit
-		it.schedulingAlgorithm = scheduler.schedulingalgorithm?.transformHelper(scheduler) as TaskSchedulingAlgorithm
+		it.schedulingUnit = scheduler.schedulingunit?.transformHelper(new Object) as SchedulingUnit
+		it.schedulingAlgorithm = scheduler.schedulingalgorithm?.transformHelper(new Object) as TaskSchedulingAlgorithm
 	}
 	
 	def private dispatch create AmaltheaFactory.eINSTANCE.createInterruptController transformHelper(org.eclipse.papyrus.amalthea.profile.amalthea.os.InterruptController ic, Object owner){
 		it.name = ic.base_Class.name
 		it.scheduleUnitPriority = ic.scheduleUnitPriority
-		it.schedulingUnit = ic.schedulingunit?.transformHelper(ic) as SchedulingUnit
-		it.schedulingAlgorithm = ic.schedulingalgorithm?.transformHelper(ic) as InterruptSchedulingAlgorithm
+		it.schedulingUnit = ic.schedulingunit?.transformHelper(new Object) as SchedulingUnit
+		it.schedulingAlgorithm = ic.schedulingalgorithm?.transformHelper(new Object) as InterruptSchedulingAlgorithm
 	}
 	
 	def private dispatch create AmaltheaFactory.eINSTANCE.createSchedulingHWUnit transformHelper(SchedulingHWUnit schedUnit, Object owner){
