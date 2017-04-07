@@ -62,6 +62,7 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.os.PriorityBased
 import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Periodic
 import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Single
 import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Interprocess
+import org.eclipse.uml2.uml.PackageImport
 
 class MainTransform {
 
@@ -97,6 +98,9 @@ class MainTransform {
     
 	def private void transformPackage(Package pkg) {
 		val transformed = pkg.packagedElements.amaltheaList.map(p|p.transform).filter(e | e != null)
+		for(pi : pkg.packageImports){
+			pi.transform
+		}
 
 		// SWModel elements
 		val swModel = root.softwareModel
@@ -135,6 +139,10 @@ class MainTransform {
 	def private dispatch transform(Package pkg) {
 		pkg.transformPackage
 	}
+	
+	def private dispatch transform(PackageImport pkg) {
+		pkg.importedPackage?.transformPackage
+	}	
 	
 	def private create AmaltheaFactory.eINSTANCE.createSWModel getSoftwareModel(Model model){
 	}
