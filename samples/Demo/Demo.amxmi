@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
 <am:Amalthea xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:am="http://app4mc.eclipse.org/amalthea/0.7.2">
   <swModel>
-<<<<<<< Upstream, based on branch 'master' of https://github.com/ysroh/amalthea
-=======
     <isrs name="ISR"/>
->>>>>>> a95213d Update generator
     <tasks name="Task" preemption="preemptive">
       <callGraph>
         <graphEntries xsi:type="am:CallSequence" name="CallSequence">
@@ -17,7 +14,6 @@
         </graphEntries>
       </callGraph>
     </tasks>
-    <tasks name="ISR"/>
     <runnables name="ABSCalculation">
       <runnableItems xsi:type="am:LabelAccess" data="ABSActivation?type=Label" access="read"/>
       <runnableItems xsi:type="am:RunnableInstructions">
@@ -69,10 +65,6 @@
       <counter prescaler="0"/>
     </stimuli>
   </stimuliModel>
-<<<<<<< Upstream, based on branch 'master' of https://github.com/ysroh/amalthea
-  <constraintsModel/>
-  <mappingModel/>
-=======
   <constraintsModel>
     <requirements xsi:type="am:ProcessRequirement" name="Constraint1" severity="Minor" process="Task?type=Task"/>
   </constraintsModel>
@@ -81,6 +73,5 @@
     <isrAllocation isr="ISR?type=ISR" controller="InterruptController?type=InterruptController"/>
     <coreAllocation scheduler="TaskScheduler?type=TaskScheduler" core="Core_1?type=Core Core_2?type=Core"/>
   </mappingModel>
->>>>>>> a95213d Update generator
   <componentsModel/>
 </am:Amalthea>
