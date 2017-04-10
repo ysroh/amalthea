@@ -13,6 +13,7 @@
       <packagedElement xmi:type="uml:Class" xmi:id="_L5u_YBu7EeeS0ZHQabp_-Q" name="Processor_1"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_L6ZGsBu7EeeS0ZHQabp_-Q" name="Core_1"/>
       <packagedElement xmi:type="uml:DataType" xmi:id="_L7WwABu7EeeS0ZHQabp_-Q" name="DefaultCoreType"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_0Tg70B4GEeeGg_NVrlgfgA" name="Core_2"/>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_CQQjsBu7EeeS0ZHQabp_-Q">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CQS_8Bu7EeeS0ZHQabp_-Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
@@ -83,7 +84,8 @@
   </uml:Model>
   <Hardware:HwSystem xmi:id="_L4ebIBu7EeeS0ZHQabp_-Q" base_Class="_L4UqIBu7EeeS0ZHQabp_-Q" ecus="_L5RsYBu7EeeS0ZHQabp_-Q"/>
   <Hardware:ECU xmi:id="_L5RsYBu7EeeS0ZHQabp_-Q" base_Class="_L47HEBu7EeeS0ZHQabp_-Q" microcontrollers="_L54JUBu7EeeS0ZHQabp_-Q"/>
-  <Hardware:Microcontroller xmi:id="_L54JUBu7EeeS0ZHQabp_-Q" base_Class="_L5u_YBu7EeeS0ZHQabp_-Q" cores="_L61LkBu7EeeS0ZHQabp_-Q"/>
+  <Hardware:Microcontroller xmi:id="_L54JUBu7EeeS0ZHQabp_-Q" base_Class="_L5u_YBu7EeeS0ZHQabp_-Q" cores="_L61LkBu7EeeS0ZHQabp_-Q _0ULDIB4GEeeGg_NVrlgfgA"/>
   <Hardware:Core xmi:id="_L61LkBu7EeeS0ZHQabp_-Q" base_Class="_L6ZGsBu7EeeS0ZHQabp_-Q" coretype="_L7q5EBu7EeeS0ZHQabp_-Q"/>
   <Hardware:CoreType xmi:id="_L7q5EBu7EeeS0ZHQabp_-Q" base_DataType="_L7WwABu7EeeS0ZHQabp_-Q"/>
+  <Hardware:Core xmi:id="_0ULDIB4GEeeGg_NVrlgfgA" base_Class="_0Tg70B4GEeeGg_NVrlgfgA" coretype="_L7q5EBu7EeeS0ZHQabp_-Q"/>
 </xmi:XMI>

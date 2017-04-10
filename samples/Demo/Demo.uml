@@ -56,6 +56,13 @@
         <packagedElement xmi:type="uml:Abstraction" xmi:id="_0lbq4BuYEeeSQLqP5Np32w" name="Allocate1" client="_lAdicBoqEeeK7PsAypm8Bw" supplier="_JgeUABoxEeeeW9cngqHTXg"/>
         <packagedElement xmi:type="uml:DataType" xmi:id="_dbbWUB3xEeewM5qyb0um-g" name="TimeRequirement"/>
         <packagedElement xmi:type="uml:DataType" xmi:id="_c5jFYB3-EeeCSKa87YzWvQ" name="RequirementTime"/>
+<<<<<<< Upstream, based on branch 'master' of https://github.com/ysroh/amalthea
+=======
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_zEzhcB4QEeeM5c-vlmXK6Q" name="ISR">
+        <packagedElement xmi:type="uml:Class" xmi:id="_tUG4sB4REee06O_1NeIT5A" name="ISR"/>
+        <packagedElement xmi:type="uml:Abstraction" xmi:id="_BRQjoB4SEee06O_1NeIT5A" name="Allocate1" client="_tUG4sB4REee06O_1NeIT5A" supplier="_xiRVsBu1EeeaDY-_tsKTIw"/>
+>>>>>>> a95213d Update generator
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_AAoVcBoxEeeeW9cngqHTXg" name="OperatingSystem">
@@ -68,6 +75,9 @@
         <packagedElement xmi:type="uml:Class" xmi:id="_pJGaYBusEeeP3qL0gzLlrA" name="OSEK"/>
         <packagedElement xmi:type="uml:Abstraction" xmi:id="_YfgNEBu7EeeS0ZHQabp_-Q" name="Allocate1" client="_JgeUABoxEeeeW9cngqHTXg">
           <supplier xmi:type="uml:Class" href="DemoHardware.uml#_L6ZGsBu7EeeS0ZHQabp_-Q"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Abstraction" xmi:id="_90SugB4GEeeGg_NVrlgfgA" name="Allocate2" client="_JgeUABoxEeeeW9cngqHTXg">
+          <supplier xmi:type="uml:Class" href="DemoHardware.uml#_0Tg70B4GEeeGg_NVrlgfgA"/>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_Z7pCoBu1EeeaDY-_tsKTIw" name="InterruptControllers">
@@ -188,6 +198,14 @@
   <Stimuli:Interprocess xmi:id="_PrIC0Bu6EeeS0ZHQabp_-Q" base_Class="_Pq1H4Bu6EeeS0ZHQabp_-Q" counter="_a89lsBsFEeeSFpvWgLU3rg"/>
   <Allocations:Allocate xmi:id="_Yf3ZcBu7EeeS0ZHQabp_-Q" base_DirectedRelationship="_YfgNEBu7EeeS0ZHQabp_-Q" base_Abstraction="_YfgNEBu7EeeS0ZHQabp_-Q"/>
   <Constraints:ProcessRequirement xmi:id="_NOspAB3xEeewM5qyb0um-g" severity="Minor" base_Constraint="_NNu_sB3xEeewM5qyb0um-g" process="_lAnTcBoqEeeK7PsAypm8Bw"/>
+<<<<<<< Upstream, based on branch 'master' of https://github.com/ysroh/amalthea
   <Constraints:TimeRequirementLimit xmi:id="_db7soB3xEeewM5qyb0um-g" limitType="UpperLimit" base_DataType="_dbbWUB3xEeewM5qyb0um-g" metric="ActivateToActivate"/>
   <Common:SignedTime xmi:id="_dFOJ4B3-EeeCSKa87YzWvQ" base_DataType="_c5jFYB3-EeeCSKa87YzWvQ"/>
+=======
+  <Constraints:TimeRequirementLimit xmi:id="_db7soB3xEeewM5qyb0um-g" limitType="UpperLimit" base_DataType="_dbbWUB3xEeewM5qyb0um-g" metric="ActivateToActivate" limitValue="_dFOJ4B3-EeeCSKa87YzWvQ"/>
+  <Common:SignedTime xmi:id="_dFOJ4B3-EeeCSKa87YzWvQ" base_DataType="_c5jFYB3-EeeCSKa87YzWvQ"/>
+  <Allocations:Allocate xmi:id="_90h_EB4GEeeGg_NVrlgfgA" base_DirectedRelationship="_90SugB4GEeeGg_NVrlgfgA" base_Abstraction="_90SugB4GEeeGg_NVrlgfgA"/>
+  <Software:ISR xmi:id="_thE9sB4REee06O_1NeIT5A" base_Class="_tUG4sB4REee06O_1NeIT5A"/>
+  <Allocations:Allocate xmi:id="_BRjekB4SEee06O_1NeIT5A" base_DirectedRelationship="_BRQjoB4SEee06O_1NeIT5A" base_Abstraction="_BRQjoB4SEee06O_1NeIT5A"/>
+>>>>>>> a95213d Update generator
 </xmi:XMI>

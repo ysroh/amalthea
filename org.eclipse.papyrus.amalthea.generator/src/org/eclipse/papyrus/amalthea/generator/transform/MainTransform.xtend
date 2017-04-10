@@ -1,76 +1,77 @@
 package org.eclipse.papyrus.amalthea.generator.transform
 
 import java.util.Collections
+import org.eclipse.app4mc.amalthea.model.AbstractProcess
 import org.eclipse.app4mc.amalthea.model.AmaltheaFactory
 import org.eclipse.app4mc.amalthea.model.CallGraph
 import org.eclipse.app4mc.amalthea.model.CallSequenceItem
 import org.eclipse.app4mc.amalthea.model.Component
+import org.eclipse.app4mc.amalthea.model.Core
 import org.eclipse.app4mc.amalthea.model.CoreAllocation
 import org.eclipse.app4mc.amalthea.model.CoreType
 import org.eclipse.app4mc.amalthea.model.Counter
 import org.eclipse.app4mc.amalthea.model.Distribution
+import org.eclipse.app4mc.amalthea.model.ECU
+import org.eclipse.app4mc.amalthea.model.Frequency
+import org.eclipse.app4mc.amalthea.model.FrequencyUnit
 import org.eclipse.app4mc.amalthea.model.GraphEntryBase
 import org.eclipse.app4mc.amalthea.model.HwSystem
 import org.eclipse.app4mc.amalthea.model.ISR
+import org.eclipse.app4mc.amalthea.model.InterruptController
+import org.eclipse.app4mc.amalthea.model.InterruptSchedulingAlgorithm
 import org.eclipse.app4mc.amalthea.model.Label
 import org.eclipse.app4mc.amalthea.model.LabelAccessEnum
+import org.eclipse.app4mc.amalthea.model.LimitType
+import org.eclipse.app4mc.amalthea.model.Microcontroller
 import org.eclipse.app4mc.amalthea.model.MicrocontrollerType
+import org.eclipse.app4mc.amalthea.model.Network
 import org.eclipse.app4mc.amalthea.model.NetworkType
 import org.eclipse.app4mc.amalthea.model.OperatingSystem
+import org.eclipse.app4mc.amalthea.model.Preemption
+import org.eclipse.app4mc.amalthea.model.Prescaler
+import org.eclipse.app4mc.amalthea.model.ProcessRequirement
+import org.eclipse.app4mc.amalthea.model.Quartz
 import org.eclipse.app4mc.amalthea.model.Runnable
 import org.eclipse.app4mc.amalthea.model.RunnableItem
+import org.eclipse.app4mc.amalthea.model.SchedType
+import org.eclipse.app4mc.amalthea.model.SchedulingUnit
+import org.eclipse.app4mc.amalthea.model.Severity
+import org.eclipse.app4mc.amalthea.model.SignedTime
 import org.eclipse.app4mc.amalthea.model.Stimulus
 import org.eclipse.app4mc.amalthea.model.Task
 import org.eclipse.app4mc.amalthea.model.TaskAllocation
+import org.eclipse.app4mc.amalthea.model.TaskScheduler
+import org.eclipse.app4mc.amalthea.model.TaskSchedulingAlgorithm
+import org.eclipse.app4mc.amalthea.model.Time
+import org.eclipse.app4mc.amalthea.model.TimeMetric
+import org.eclipse.app4mc.amalthea.model.TimeUnit
 import org.eclipse.emf.ecore.resource.ResourceSet
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.Deviation
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.InstructionsDeviation
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.WeibullEstimators
+import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.TimeRequirementLimit
+import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Bus
+import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.ECUType
+import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.SystemType
+import org.eclipse.papyrus.amalthea.profile.amalthea.os.OSEK
+import org.eclipse.papyrus.amalthea.profile.amalthea.os.PriorityBased
+import org.eclipse.papyrus.amalthea.profile.amalthea.os.SchedulingHWUnit
 import org.eclipse.papyrus.amalthea.profile.amalthea.software.CallSequence
 import org.eclipse.papyrus.amalthea.profile.amalthea.software.InterProcessActivation
 import org.eclipse.papyrus.amalthea.profile.amalthea.software.LabelAccess
+import org.eclipse.papyrus.amalthea.profile.amalthea.software.Process
 import org.eclipse.papyrus.amalthea.profile.amalthea.software.RunnableInstructions
 import org.eclipse.papyrus.amalthea.profile.amalthea.software.TaskRunnableCall
-import org.eclipse.uml2.uml.Model
-import org.eclipse.uml2.uml.Package
-
-import static extension org.eclipse.papyrus.amalthea.generator.transform.TransformUtil.*
-import org.eclipse.papyrus.amalthea.profile.amalthea.common.Time
-import org.eclipse.app4mc.amalthea.model.TimeUnit
-import org.eclipse.uml2.uml.EnumerationLiteral
-import org.eclipse.app4mc.amalthea.model.ECU
-import org.eclipse.app4mc.amalthea.model.Quartz
-import org.eclipse.app4mc.amalthea.model.Prescaler
-import org.eclipse.app4mc.amalthea.model.Network
-import org.eclipse.app4mc.amalthea.model.Microcontroller
-import org.eclipse.app4mc.amalthea.model.Core
-import org.eclipse.app4mc.amalthea.model.Frequency
-import org.eclipse.app4mc.amalthea.model.FrequencyUnit
-import org.eclipse.app4mc.amalthea.model.SchedType
-import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.SystemType
-import org.eclipse.app4mc.amalthea.model.ECUType
-import org.eclipse.app4mc.amalthea.model.TaskScheduler
-import org.eclipse.app4mc.amalthea.model.InterruptController
-import org.eclipse.app4mc.amalthea.model.SchedulingUnit
-import org.eclipse.app4mc.amalthea.model.TaskSchedulingAlgorithm
-import org.eclipse.papyrus.amalthea.profile.amalthea.os.SchedulingHWUnit
-import org.eclipse.papyrus.amalthea.profile.amalthea.os.OSEK
-import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Bus
-import org.eclipse.app4mc.amalthea.model.InterruptSchedulingAlgorithm
-import org.eclipse.papyrus.amalthea.profile.amalthea.os.PriorityBased
+import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Interprocess
 import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Periodic
 import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Single
-import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Interprocess
+import org.eclipse.uml2.uml.Abstraction
+import org.eclipse.uml2.uml.Model
+import org.eclipse.uml2.uml.Package
 import org.eclipse.uml2.uml.PackageImport
-import org.eclipse.app4mc.amalthea.model.Preemption
-import org.eclipse.app4mc.amalthea.model.ProcessRequirement
-import org.eclipse.app4mc.amalthea.model.Severity
-import org.eclipse.app4mc.amalthea.model.AbstractProcess
-import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.TimeRequirementLimit
-import org.eclipse.app4mc.amalthea.model.LimitType
-import org.eclipse.app4mc.amalthea.model.TimeMetric
-import org.eclipse.app4mc.amalthea.model.SignedTime
+
+import static extension org.eclipse.papyrus.amalthea.generator.transform.TransformUtil.*
 
 class MainTransform {
 
@@ -106,7 +107,8 @@ class MainTransform {
 	}
     
 	def private void transformPackage(Package pkg) {
-		val transformed = pkg.packagedElements.amaltheaList.map(p|p.transform).filter(e | e != null)
+		val list = pkg.packagedElements.amaltheaList
+		val transformed = list.map(p|p.transform).filter(e | e != null)
 		for(pi : pkg.packageImports){
 			pi.transform
 		}
@@ -180,12 +182,12 @@ class MainTransform {
 		it.prescaler = counter.prescaler
 	}
 
-	def private dispatch create AmaltheaFactory.eINSTANCE.createTime transformHelper(Time time, Object owner){
+	def private dispatch create AmaltheaFactory.eINSTANCE.createTime transformHelper(org.eclipse.papyrus.amalthea.profile.amalthea.common.Time time, Object owner){
 		it.value = time.value
 		it.unit = TimeUnit.get(time.unit.literal)
 	}
 	
-	def private dispatch create AmaltheaFactory.eINSTANCE.createTime transformHelper(org.eclipse.papyrus.amalthea.profile.amalthea.common.SignedTime time, Object owner){
+	def private dispatch create AmaltheaFactory.eINSTANCE.createSignedTime transformHelper(org.eclipse.papyrus.amalthea.profile.amalthea.common.SignedTime time, Object owner){
 		it.value = time.value
 		it.unit = TimeUnit.get(time.unit.literal)
 	}	
@@ -235,16 +237,16 @@ class MainTransform {
 		task.transformProcessHelper(it)
 	}
 	
-	def private dispatch create AmaltheaFactory.eINSTANCE.createTask transform(org.eclipse.papyrus.amalthea.profile.amalthea.software.ISR isr){
+	def private dispatch create AmaltheaFactory.eINSTANCE.createISR transform(org.eclipse.papyrus.amalthea.profile.amalthea.software.ISR isr){
 		it.name = isr.base_Class.name
 		isr.transformProcessHelper(it)
 	}	
 	
-	def private transformProcessHelper(org.eclipse.papyrus.amalthea.profile.amalthea.software.Process source, org.eclipse.app4mc.amalthea.model.Process target){
+	def private transformProcessHelper(Process source, org.eclipse.app4mc.amalthea.model.Process target){
 		target.priority = source.priority
 		val callGraph = source.callgraph?.transformHelper(new Object) as CallGraph
 		target.callGraph = callGraph
-		root.constraintsModel.requirements.addAll(source.base_Class.ownedRules.map[e | e.transform].filter(typeof(ProcessRequirement)))
+		root.constraintsModel.requirements.addAll(source.base_Class.ownedRules.amaltheaFilteredList.map[e | e.transform].filter(typeof(ProcessRequirement)))
 	}
 
 	def private dispatch create AmaltheaFactory.eINSTANCE.createCallGraph transformHelper(org.eclipse.papyrus.amalthea.profile.amalthea.software.CallGraph callGraph, Object owner){
@@ -255,7 +257,7 @@ class MainTransform {
 	def private dispatch create AmaltheaFactory.eINSTANCE.createCallSequence transformHelper(CallSequence callSequence, Object owner){
 		val base = callSequence.base_Class
 		it.name = base.name
-		val items = base.ownedOperations.amaltheaList.map[e | e.transform].filter(typeof(CallSequenceItem))
+		val items = base.ownedOperations.amaltheaFilteredList.map[e | e.transform].filter(typeof(CallSequenceItem))
 		it.calls.addAll(items)
 	}
 	
@@ -330,7 +332,7 @@ class MainTransform {
 		it.name = type.base_DataType.name
 	}	
 	
-	def private dispatch create AmaltheaFactory.eINSTANCE.createECUType transform(org.eclipse.papyrus.amalthea.profile.amalthea.hardware.ECUType type){
+	def private dispatch create AmaltheaFactory.eINSTANCE.createECUType transform(ECUType type){
 		it.name = type.base_DataType.name
 	}	
 	
@@ -368,20 +370,20 @@ class MainTransform {
 	/************* OS ***************/
 	def private dispatch create AmaltheaFactory.eINSTANCE.createOperatingSystem transform(org.eclipse.papyrus.amalthea.profile.amalthea.os.OperatingSystem os){
 		it.name = os.base_Class.name
-		val schedulers = os.taskscheduler.map[e | e.transformHelper(new Object)].filter(typeof(TaskScheduler))
-		val controllers = os.interruptcontroller.map[e | e.transformHelper(new Object)].filter(typeof(InterruptController))
+		val schedulers = os.taskscheduler.map[e | e.transform].filter(typeof(TaskScheduler))
+		val controllers = os.interruptcontroller.map[e | e.transform].filter(typeof(InterruptController))
 		it.taskSchedulers.addAll(schedulers)
 		it.interruptControllers.addAll(controllers)
 	}
 	
-	def private dispatch create AmaltheaFactory.eINSTANCE.createTaskScheduler transformHelper(org.eclipse.papyrus.amalthea.profile.amalthea.os.TaskScheduler scheduler, Object owner){
+	def private dispatch create AmaltheaFactory.eINSTANCE.createTaskScheduler transform(org.eclipse.papyrus.amalthea.profile.amalthea.os.TaskScheduler scheduler){
 		it.name = scheduler.base_Class.name
 		it.scheduleUnitPriority = scheduler.scheduleUnitPriority
 		it.schedulingUnit = scheduler.schedulingunit?.transformHelper(new Object) as SchedulingUnit
 		it.schedulingAlgorithm = scheduler.schedulingalgorithm?.transformHelper(new Object) as TaskSchedulingAlgorithm
 	}
 	
-	def private dispatch create AmaltheaFactory.eINSTANCE.createInterruptController transformHelper(org.eclipse.papyrus.amalthea.profile.amalthea.os.InterruptController ic, Object owner){
+	def private dispatch create AmaltheaFactory.eINSTANCE.createInterruptController transform(org.eclipse.papyrus.amalthea.profile.amalthea.os.InterruptController ic){
 		it.name = ic.base_Class.name
 		it.scheduleUnitPriority = ic.scheduleUnitPriority
 		it.schedulingUnit = ic.schedulingunit?.transformHelper(new Object) as SchedulingUnit
@@ -389,7 +391,7 @@ class MainTransform {
 	}
 	
 	def private dispatch create AmaltheaFactory.eINSTANCE.createSchedulingHWUnit transformHelper(SchedulingHWUnit schedUnit, Object owner){
-		it.delay = schedUnit.delay?.transformHelper(new Object) as org.eclipse.app4mc.amalthea.model.Time
+		it.delay = schedUnit.delay?.transformHelper(new Object) as Time
 	}	
 	
 	def private dispatch create AmaltheaFactory.eINSTANCE.createOSEK transformHelper(OSEK osek, Object owner){
@@ -402,13 +404,13 @@ class MainTransform {
 	
 	def private dispatch create AmaltheaFactory.eINSTANCE.createPeriodic transform(Periodic stimulus){
 		it.name = stimulus.base_Class.name
-		it.offset = stimulus.offset?.transformHelper(new Object) as org.eclipse.app4mc.amalthea.model.Time
-		it.recurrence = stimulus.recurrence?.transformHelper(new Object) as org.eclipse.app4mc.amalthea.model.Time
+		it.offset = stimulus.offset?.transformHelper(new Object) as Time
+		it.recurrence = stimulus.recurrence?.transformHelper(new Object) as Time
 	}	
 	
 	def private dispatch create AmaltheaFactory.eINSTANCE.createSingle transform(Single stimulus){
 		it.name = stimulus.base_Class.name
-		it.activation = stimulus.activation?.transformHelper(new Object) as org.eclipse.app4mc.amalthea.model.Time
+		it.activation = stimulus.activation?.transformHelper(new Object) as Time
 	}	
 	
 	def private dispatch create AmaltheaFactory.eINSTANCE.createInterProcess transform(Interprocess stimulus){
@@ -429,4 +431,44 @@ class MainTransform {
 		it.limitValue = limit.limitValue?.transformHelper(new Object) as SignedTime
 	}	
 	
+	/************* Mapping ***************/
+	def private dispatch transform(Abstraction ab){
+		ab.transformAllocation
+	}
+	
+	def private void transformAllocation(Abstraction ab){
+		val sourceList = ab.clients.amaltheaFilteredList
+		val targetList = ab.suppliers.amaltheaFilteredList
+		if(!sourceList.isEmpty && !targetList.isEmpty){
+			val source = sourceList.get(0).transform
+			val target = targetList.get(0).transform
+			transformAllocation(source, target)
+		}
+	}
+	
+	def private dispatch create AmaltheaFactory.eINSTANCE.createTaskAllocation transformAllocation(Task task, TaskScheduler scheduler){
+		it.task = task
+		it.scheduler = scheduler
+		root.mappingModel.taskAllocation.add(it)
+	}
+	
+	def private dispatch create AmaltheaFactory.eINSTANCE.createISRAllocation transformAllocation(ISR isr, InterruptController controller){
+		it.isr = isr
+		it.controller = controller
+		root.mappingModel.isrAllocation.add(it)
+	}	
+	
+	def private dispatch create scheduler.createCoreAllocation transformAllocation(TaskScheduler scheduler, Core core){
+		it.scheduler = scheduler
+		it.core.add(core)
+	}
+	
+	def private create AmaltheaFactory.eINSTANCE.createCoreAllocation createCoreAllocation(TaskScheduler scheduler){
+		it.scheduler = scheduler
+		root.mappingModel.coreAllocation.add(it)
+	}		
+	
+	def private dispatch transformAllocation(Object task, Object scheduler){
+		
+	}	
 }

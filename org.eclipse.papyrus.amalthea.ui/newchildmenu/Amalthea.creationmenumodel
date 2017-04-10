@@ -3,6 +3,7 @@
   <filter xsi:type="filters:CompoundFilter" filter="//@filter/@ownedFilter.0">
     <ownedFilter xsi:type="umlfilters:ProfileApplied" name="isAmaltheaApplied" profileQualifiedName="Amalthea" profileURI="pathmap://AMALTHEA_PROFILE/amalthea.profile.uml#_PUCPMBYtEeeFzte_Mj5jqA"/>
   </filter>
+  <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Package" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Package"/>
   <menu xsi:type="ElementCreationMenuModel:Folder" label="Common">
     <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Time" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Time"/>
     <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="SignedTime" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.SignedTime"/>

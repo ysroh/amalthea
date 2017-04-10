@@ -94,6 +94,7 @@
     </ruleConfiguration>
   </elementTypeConfigurations>
   <elementTypeConfigurations xsi:type="elementtypesconfigurations:SpecializationTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.Package" name="Package">
+    <iconEntry iconPath="/icons/full/obj16/Package.gif" bundleId="org.eclipse.uml2.uml.edit"/>
     <specializedTypesID>org.eclipse.papyrus.uml.Package</specializedTypesID>
     <editHelperAdviceConfiguration xsi:type="elementtypesconfigurations:EditHelperAdviceConfiguration" editHelperAdviceClassName="org.eclipse.papyrus.amalthea.core.types.advice.PackageEditHelperAdvice"/>
   </elementTypeConfigurations>
