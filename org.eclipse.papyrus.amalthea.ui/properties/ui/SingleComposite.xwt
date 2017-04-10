@@ -6,10 +6,4 @@
 	<Composite.layout>
 		<ppel:PropertiesLayout></ppel:PropertiesLayout>
 	</Composite.layout>
-	<Composite>
-		<Composite.layout>
-			<ppel:PropertiesLayout></ppel:PropertiesLayout>
-		</Composite.layout>
-		<ppe:StringEditor input="{Binding}" property="UML:NamedElement:name"></ppe:StringEditor>
-	</Composite>
 </Composite>
