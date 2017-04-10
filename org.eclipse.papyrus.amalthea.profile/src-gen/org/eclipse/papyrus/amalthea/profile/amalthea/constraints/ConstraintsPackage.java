@@ -226,13 +226,22 @@ public interface ConstraintsPackage extends EPackage {
 	int PROCESS_REQUIREMENT__BASE_CONSTRAINT = REQUIREMENT__BASE_CONSTRAINT;
 
 	/**
+	 * The feature id for the '<em><b>Process</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS_REQUIREMENT__PROCESS = REQUIREMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Process Requirement</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_REQUIREMENT_FEATURE_COUNT = REQUIREMENT_FEATURE_COUNT + 0;
+	int PROCESS_REQUIREMENT_FEATURE_COUNT = REQUIREMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Process Requirement</em>' class.
@@ -403,6 +412,17 @@ public interface ConstraintsPackage extends EPackage {
 	EClass getProcessRequirement();
 
 	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.amalthea.constraints.ProcessRequirement#getProcess <em>Process</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Process</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.constraints.ProcessRequirement#getProcess()
+	 * @see #getProcessRequirement()
+	 * @generated
+	 */
+	EReference getProcessRequirement_Process();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.constraints.RequirementLimit <em>Requirement Limit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -567,6 +587,13 @@ public interface ConstraintsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PROCESS_REQUIREMENT = eINSTANCE.getProcessRequirement();
+		/**
+		 * The meta object literal for the '<em><b>Process</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROCESS_REQUIREMENT__PROCESS = eINSTANCE.getProcessRequirement_Process();
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.constraints.impl.RequirementLimitImpl <em>Requirement Limit</em>}' class.
 		 * <!-- begin-user-doc -->

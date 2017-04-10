@@ -264,6 +264,15 @@ public class ConstraintsPackageImpl extends EPackageImpl implements ConstraintsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getProcessRequirement_Process() {
+		return (EReference)processRequirementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getRequirementLimit() {
 		return requirementLimitEClass;
 	}
@@ -380,6 +389,7 @@ public class ConstraintsPackageImpl extends EPackageImpl implements ConstraintsP
 		createEReference(requirementLimitEClass, REQUIREMENT_LIMIT__BASE_DATA_TYPE);
 
 		processRequirementEClass = createEClass(PROCESS_REQUIREMENT);
+		createEReference(processRequirementEClass, PROCESS_REQUIREMENT__PROCESS);
 
 		timeRequirementLimitEClass = createEClass(TIME_REQUIREMENT_LIMIT);
 		createEAttribute(timeRequirementLimitEClass, TIME_REQUIREMENT_LIMIT__METRIC);
@@ -416,6 +426,7 @@ public class ConstraintsPackageImpl extends EPackageImpl implements ConstraintsP
 
 		// Obtain other dependent packages
 		UMLPackage theUMLPackage = (UMLPackage)EPackage.Registry.INSTANCE.getEPackage(UMLPackage.eNS_URI);
+		SoftwarePackage theSoftwarePackage = (SoftwarePackage)EPackage.Registry.INSTANCE.getEPackage(SoftwarePackage.eNS_URI);
 		CommonPackage theCommonPackage = (CommonPackage)EPackage.Registry.INSTANCE.getEPackage(CommonPackage.eNS_URI);
 
 		// Create type parameters
@@ -439,6 +450,7 @@ public class ConstraintsPackageImpl extends EPackageImpl implements ConstraintsP
 		initEReference(getRequirementLimit_Base_DataType(), theUMLPackage.getDataType(), null, "base_DataType", null, 1, 1, RequirementLimit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(processRequirementEClass, ProcessRequirement.class, "ProcessRequirement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getProcessRequirement_Process(), theSoftwarePackage.getAbstractProcess(), null, "process", null, 0, 1, ProcessRequirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(timeRequirementLimitEClass, TimeRequirementLimit.class, "TimeRequirementLimit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTimeRequirementLimit_Metric(), this.getTimeMetric(), "metric", null, 1, 1, TimeRequirementLimit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

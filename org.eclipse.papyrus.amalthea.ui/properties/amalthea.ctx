@@ -399,11 +399,13 @@
   <views xmi:id="_1nN9kBvQEee65fjWHZc4GA" name="Single ProcessRequirement" sections="_-OIJABvQEee65fjWHZc4GA">
     <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_88OcQBvQEee65fjWHZc4GA" name="isSingleProcessRequirement">
       <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_u7q58B3xEee65fjWHZc4GA" name="stereotypeName" value="Amalthea::ConstraintsModel::ProcessRequirement"/>
     </constraints>
   </views>
   <views xmi:id="_SVff4BvREee65fjWHZc4GA" name="Single TimeRequirementLimit" sections="_aHCwoBvREee65fjWHZc4GA">
     <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_XU4LABvREee65fjWHZc4GA" name="isSingleTimeRequirementLimit">
       <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_vR6PsB3xEee65fjWHZc4GA" name="stereotypeName" value="Amalthea::ConstraintsModel::TimeRequirementLimit"/>
     </constraints>
   </views>
   <views xmi:id="_7beOYBoTEeemOqGrpy978g" name="Single Interprocess" sections="_Fa7hIBoUEeemOqGrpy978g">
@@ -1007,10 +1009,14 @@
       <elements xmi:id="_82QzoBvPEee65fjWHZc4GA" name="Requirement">
         <properties xmi:id="_Kp0DEBvQEee65fjWHZc4GA" name="severity" type="Enumeration"/>
         <properties xmi:id="_PLKHUBvQEee65fjWHZc4GA" name="limit" type="Reference"/>
+        <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690xsqDJEeSZxfCXzZz3-w"/>
       </elements>
-      <elements xmi:id="_WIP1QBvQEee65fjWHZc4GA" name="ProcessRequirement" supertypes="_82QzoBvPEee65fjWHZc4GA"/>
+      <elements xmi:id="_WIP1QBvQEee65fjWHZc4GA" name="ProcessRequirement" supertypes="_82QzoBvPEee65fjWHZc4GA">
+        <properties xmi:id="_yWbmEB3wEee65fjWHZc4GA" name="process" type="Reference"/>
+      </elements>
       <elements xmi:id="_jPf_YBvQEee65fjWHZc4GA" name="RequirementLimit">
         <properties xmi:id="_jPf_YRvQEee65fjWHZc4GA" name="limitType" type="Enumeration"/>
+        <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690y1qDJEeSZxfCXzZz3-w"/>
       </elements>
       <elements xmi:id="_mASE8BvQEee65fjWHZc4GA" name="TimeRequirementLimit" supertypes="_jPf_YBvQEee65fjWHZc4GA">
         <properties xmi:id="_rZu14BvQEee65fjWHZc4GA" name="metric" type="Enumeration"/>

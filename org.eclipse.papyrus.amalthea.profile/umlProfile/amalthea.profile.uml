@@ -943,6 +943,10 @@ operations of CallSequence Class&#xD;
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_03W5sBraEeemOqGrpy978g" name="ProcessRequirement">
         <generalization xmi:type="uml:Generalization" xmi:id="_2WdU8BraEeemOqGrpy978g" general="_XS4vMBraEeemOqGrpy978g"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_o44Ggh3wEee65fjWHZc4GA" name="process" type="_rPEOMBfDEeeFzte_Mj5jqA" association="_o4uVgB3wEee65fjWHZc4GA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_r9ypAB3wEee65fjWHZc4GA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_r98aAB3wEee65fjWHZc4GA" value="1"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_5iB5EBraEeemOqGrpy978g" name="RequirementLimit" isAbstract="true">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_MYE4gBvMEee65fjWHZc4GA" name="limitType" type="_GPzSsBvMEee65fjWHZc4GA"/>
@@ -981,6 +985,12 @@ operations of CallSequence Class&#xD;
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_uwFDcBvMEee65fjWHZc4GA" name="StartDelay"/>
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_wQVVQBvMEee65fjWHZc4GA" name="StartToStart"/>
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_xllQ8BvMEee65fjWHZc4GA" name="WaitingTime"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_o4uVgB3wEee65fjWHZc4GA" memberEnd="_o44Ggh3wEee65fjWHZc4GA _o44Ggx3wEee65fjWHZc4GA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o44GgB3wEee65fjWHZc4GA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_o44GgR3wEee65fjWHZc4GA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_o44Ggx3wEee65fjWHZc4GA" name="processrequirement" type="_03W5sBraEeemOqGrpy978g" association="_o4uVgB3wEee65fjWHZc4GA"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Stereotype" xmi:id="_9nf10BZJEeeFzte_Mj5jqA" name="Dummy"/>

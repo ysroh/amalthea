@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Allocations="http://www.eclipse.org/papyrus/sysml/1.4/SysML/Allocations" xmlns:Common="http://www.eclipse.org/papyrus/2017/Amalthea/Common" xmlns:Components="http://www.eclipse.org/papyrus/2017/Amalthea/Components" xmlns:Os="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem" xmlns:Software="http://www.eclipse.org/papyrus/2017/Amalthea/Software" xmlns:Stimuli="http://www.eclipse.org/papyrus/2017/Amalthea/Stimuli" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/sysml/1.4/SysML/Allocations http://www.eclipse.org/papyrus/sysml/1.4/SysML#//allocations http://www.eclipse.org/papyrus/2017/Amalthea/Common http://www.eclipse.org/papyrus/2017/Amalthea#//common http://www.eclipse.org/papyrus/2017/Amalthea/Components http://www.eclipse.org/papyrus/2017/Amalthea#//components http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem http://www.eclipse.org/papyrus/2017/Amalthea#//os http://www.eclipse.org/papyrus/2017/Amalthea/Software http://www.eclipse.org/papyrus/2017/Amalthea#//software http://www.eclipse.org/papyrus/2017/Amalthea/Stimuli http://www.eclipse.org/papyrus/2017/Amalthea#//stimuli">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Allocations="http://www.eclipse.org/papyrus/sysml/1.4/SysML/Allocations" xmlns:Common="http://www.eclipse.org/papyrus/2017/Amalthea/Common" xmlns:Components="http://www.eclipse.org/papyrus/2017/Amalthea/Components" xmlns:Constraints="http://www.eclipse.org/papyrus/2017/Amalthea/Constraints" xmlns:Os="http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem" xmlns:Software="http://www.eclipse.org/papyrus/2017/Amalthea/Software" xmlns:Stimuli="http://www.eclipse.org/papyrus/2017/Amalthea/Stimuli" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/sysml/1.4/SysML/Allocations http://www.eclipse.org/papyrus/sysml/1.4/SysML#//allocations http://www.eclipse.org/papyrus/2017/Amalthea/Common http://www.eclipse.org/papyrus/2017/Amalthea#//common http://www.eclipse.org/papyrus/2017/Amalthea/Components http://www.eclipse.org/papyrus/2017/Amalthea#//components http://www.eclipse.org/papyrus/2017/Amalthea/Constraints http://www.eclipse.org/papyrus/2017/Amalthea#//constraints http://www.eclipse.org/papyrus/2017/Amalthea/OperatingSystem http://www.eclipse.org/papyrus/2017/Amalthea#//os http://www.eclipse.org/papyrus/2017/Amalthea/Software http://www.eclipse.org/papyrus/2017/Amalthea#//software http://www.eclipse.org/papyrus/2017/Amalthea/Stimuli http://www.eclipse.org/papyrus/2017/Amalthea#//stimuli">
   <uml:Model xmi:id="_8Ab4cBoaEee60cQ75oPnTA" name="Demo">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_8JlNYBoaEee60cQ75oPnTA">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -37,7 +37,11 @@
         <packagedElement xmi:type="uml:Class" xmi:id="_QFWacBoqEeeK7PsAypm8Bw" name="ABSActivation"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_gkxaQBoqEeeK7PsAypm8Bw" name="Task1">
-        <packagedElement xmi:type="uml:Class" xmi:id="_lAdicBoqEeeK7PsAypm8Bw" name="Task"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_lAdicBoqEeeK7PsAypm8Bw" name="Task">
+          <ownedRule xmi:type="uml:Constraint" xmi:id="_NNu_sB3xEeewM5qyb0um-g" name="Constraint1">
+            <specification xmi:type="uml:LiteralString" xmi:id="_NOfNoB3xEeewM5qyb0um-g" name="constraintSpec"/>
+          </ownedRule>
+        </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_0aQsEBosEeevi--Z4zF9bA" name="CallGraph"/>
         <packagedElement xmi:type="uml:Class" xmi:id="_1meAgBosEeevi--Z4zF9bA" name="CallSequence">
           <ownedOperation xmi:type="uml:Operation" xmi:id="_2a5uIBosEeevi--Z4zF9bA" name="taskRrunnableCall"/>
@@ -50,6 +54,8 @@
           <packagedElement xmi:type="uml:Class" xmi:id="_DVxJcBoqEeeK7PsAypm8Bw" name="InstructionsDeviation"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Abstraction" xmi:id="_0lbq4BuYEeeSQLqP5Np32w" name="Allocate1" client="_lAdicBoqEeeK7PsAypm8Bw" supplier="_JgeUABoxEeeeW9cngqHTXg"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_dbbWUB3xEeewM5qyb0um-g" name="TimeRequirement"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_oBvbcB32Eeeu1MxnJgY-ig" name="RequirementTime"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_AAoVcBoxEeeeW9cngqHTXg" name="OperatingSystem">
@@ -181,4 +187,7 @@
   <Stimuli:Single xmi:id="_OV5VQBu6EeeS0ZHQabp_-Q" base_Class="_OVr54Bu6EeeS0ZHQabp_-Q" activation="_Xf3VIBozEeey-4lblVK-ag"/>
   <Stimuli:Interprocess xmi:id="_PrIC0Bu6EeeS0ZHQabp_-Q" base_Class="_Pq1H4Bu6EeeS0ZHQabp_-Q" counter="_a89lsBsFEeeSFpvWgLU3rg"/>
   <Allocations:Allocate xmi:id="_Yf3ZcBu7EeeS0ZHQabp_-Q" base_DirectedRelationship="_YfgNEBu7EeeS0ZHQabp_-Q" base_Abstraction="_YfgNEBu7EeeS0ZHQabp_-Q"/>
+  <Constraints:ProcessRequirement xmi:id="_NOspAB3xEeewM5qyb0um-g" severity="Minor" base_Constraint="_NNu_sB3xEeewM5qyb0um-g" process="_lAnTcBoqEeeK7PsAypm8Bw"/>
+  <Constraints:TimeRequirementLimit xmi:id="_db7soB3xEeewM5qyb0um-g" limitType="UpperLimit" base_DataType="_dbbWUB3xEeewM5qyb0um-g" metric="ActivateToActivate" limitValue="_oCMHYB32Eeeu1MxnJgY-ig"/>
+  <Common:Time xmi:id="_oCMHYB32Eeeu1MxnJgY-ig" base_DataType="_oBvbcB32Eeeu1MxnJgY-ig"/>
 </xmi:XMI>

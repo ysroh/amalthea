@@ -17,7 +17,7 @@
 		<Composite.layout>
 			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:EnumCombo input="{Binding}"
-			property="Amalthea:CommonModel:AbstractTime:unit"></ppe:EnumCombo>
+		<ppe:EnumRadio input="{Binding}"
+			property="Amalthea:CommonModel:AbstractTime:unit"></ppe:EnumRadio>
 	</Composite>
 </Composite>

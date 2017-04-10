@@ -16,7 +16,14 @@
 		<Composite.layout>
 			<ppel:PropertiesLayout></ppel:PropertiesLayout>
 		</Composite.layout>
-		<ppe:StringEditor input="{Binding}"
-			property="Amalthea:ConstraintsModel:Requirement:severity"></ppe:StringEditor>
+		<ppe:EnumRadio input="{Binding}"
+			property="Amalthea:ConstraintsModel:Requirement:severity"></ppe:EnumRadio>
+	</Composite>
+	<Composite>
+		<Composite.layout>
+			<ppel:PropertiesLayout></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:ReferenceDialog input="{Binding}"
+			property="Amalthea:ConstraintsModel:ProcessRequirement:process"></ppe:ReferenceDialog>
 	</Composite>
 </Composite>

@@ -440,7 +440,10 @@
       <eLiterals name="UpperLimit" value="1"/>
       <eLiterals name="LowerLimit" value="2"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ProcessRequirement" eSuperTypes="#//constraints/Requirement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ProcessRequirement" eSuperTypes="#//constraints/Requirement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="process" ordered="false"
+          eType="#//software/AbstractProcess"/>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="TimeRequirementLimit" eSuperTypes="#//constraints/RequirementLimit">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="metric" ordered="false"
           lowerBound="1" eType="#//constraints/TimeMetric"/>

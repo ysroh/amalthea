@@ -411,7 +411,10 @@
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
             propertySortChoices="true" ecoreFeature="ecore:EReference amalthea.ecore#//constraints/RequirementLimit/base_DataType"/>
       </genClasses>
-      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//constraints/ProcessRequirement"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//constraints/ProcessRequirement">
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference amalthea.ecore#//constraints/ProcessRequirement/process"/>
+      </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//constraints/TimeRequirementLimit">
         <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//constraints/TimeRequirementLimit/metric"/>
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"

@@ -28,6 +28,14 @@
       </composedRules>
     </ruleConfiguration>
   </elementTypeConfigurations>
-  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.processRequirement" target="//@elementTypeConfigurations.0"/>
-  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.timeRequirementLimit" target="//@elementTypeConfigurations.1"/>
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.processRequirement" target="//@elementTypeConfigurations.0">
+    <stereotypesToApply stereotypeQualifiedName="Amalthea::ConstraintsModel::ProcessRequirement">
+      <requiredProfiles>Amalthea</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.timeRequirementLimit" target="//@elementTypeConfigurations.1">
+    <stereotypesToApply stereotypeQualifiedName="Amalthea::ConstraintsModel::TimeRequirementLimit">
+      <requiredProfiles>Amalthea</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
 </elementtypesconfigurations:ElementTypeSetConfiguration>
