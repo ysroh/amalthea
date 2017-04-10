@@ -474,22 +474,22 @@ public interface CommonPackage extends EPackage {
 	int COUNTER = 9;
 
 	/**
-	 * The feature id for the '<em><b>Counter Offset</b></em>' attribute.
+	 * The feature id for the '<em><b>Offset</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COUNTER__COUNTER_OFFSET = 0;
+	int COUNTER__OFFSET = 0;
 
 	/**
-	 * The feature id for the '<em><b>Counter Prescaler</b></em>' attribute.
+	 * The feature id for the '<em><b>Prescaler</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COUNTER__COUNTER_PRESCALER = 1;
+	int COUNTER__PRESCALER = 1;
 
 	/**
 	 * The feature id for the '<em><b>Base Data Type</b></em>' reference.
@@ -574,6 +574,61 @@ public interface CommonPackage extends EPackage {
 	int DATA_SIZE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.SignedTimeImpl <em>Signed Time</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.SignedTimeImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CommonPackageImpl#getSignedTime()
+	 * @generated
+	 */
+	int SIGNED_TIME = 11;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNED_TIME__VALUE = ABSTRACT_TIME__VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Unit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNED_TIME__UNIT = ABSTRACT_TIME__UNIT;
+
+	/**
+	 * The feature id for the '<em><b>Base Data Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNED_TIME__BASE_DATA_TYPE = ABSTRACT_TIME__BASE_DATA_TYPE;
+
+	/**
+	 * The number of structural features of the '<em>Signed Time</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNED_TIME_FEATURE_COUNT = ABSTRACT_TIME_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Signed Time</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNED_TIME_OPERATION_COUNT = ABSTRACT_TIME_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.TimeUnit <em>Time Unit</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -581,7 +636,7 @@ public interface CommonPackage extends EPackage {
 	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CommonPackageImpl#getTimeUnit()
 	 * @generated
 	 */
-	int TIME_UNIT = 11;
+	int TIME_UNIT = 12;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.DataUnit <em>Data Unit</em>}' enum.
@@ -591,7 +646,7 @@ public interface CommonPackage extends EPackage {
 	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CommonPackageImpl#getDataUnit()
 	 * @generated
 	 */
-	int DATA_UNIT = 12;
+	int DATA_UNIT = 13;
 
 
 	/**
@@ -827,26 +882,26 @@ public interface CommonPackage extends EPackage {
 	EClass getCounter();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.Counter#getCounterOffset <em>Counter Offset</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.Counter#getOffset <em>Offset</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Counter Offset</em>'.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.Counter#getCounterOffset()
+	 * @return the meta object for the attribute '<em>Offset</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.Counter#getOffset()
 	 * @see #getCounter()
 	 * @generated
 	 */
-	EAttribute getCounter_CounterOffset();
+	EAttribute getCounter_Offset();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.Counter#getCounterPrescaler <em>Counter Prescaler</em>}'.
+	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.Counter#getPrescaler <em>Prescaler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Counter Prescaler</em>'.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.Counter#getCounterPrescaler()
+	 * @return the meta object for the attribute '<em>Prescaler</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.Counter#getPrescaler()
 	 * @see #getCounter()
 	 * @generated
 	 */
-	EAttribute getCounter_CounterPrescaler();
+	EAttribute getCounter_Prescaler();
 
 	/**
 	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.Counter#getBase_DataType <em>Base Data Type</em>}'.
@@ -901,6 +956,16 @@ public interface CommonPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getDataSize_Base_DataType();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.SignedTime <em>Signed Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Signed Time</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.SignedTime
+	 * @generated
+	 */
+	EClass getSignedTime();
 
 	/**
 	 * Returns the meta object for enum '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.TimeUnit <em>Time Unit</em>}'.
@@ -1142,20 +1207,20 @@ public interface CommonPackage extends EPackage {
 		EClass COUNTER = eINSTANCE.getCounter();
 
 		/**
-		 * The meta object literal for the '<em><b>Counter Offset</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Offset</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute COUNTER__COUNTER_OFFSET = eINSTANCE.getCounter_CounterOffset();
+		EAttribute COUNTER__OFFSET = eINSTANCE.getCounter_Offset();
 
 		/**
-		 * The meta object literal for the '<em><b>Counter Prescaler</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Prescaler</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute COUNTER__COUNTER_PRESCALER = eINSTANCE.getCounter_CounterPrescaler();
+		EAttribute COUNTER__PRESCALER = eINSTANCE.getCounter_Prescaler();
 
 		/**
 		 * The meta object literal for the '<em><b>Base Data Type</b></em>' reference feature.
@@ -1198,6 +1263,16 @@ public interface CommonPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DATA_SIZE__BASE_DATA_TYPE = eINSTANCE.getDataSize_Base_DataType();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.SignedTimeImpl <em>Signed Time</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.SignedTimeImpl
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CommonPackageImpl#getSignedTime()
+		 * @generated
+		 */
+		EClass SIGNED_TIME = eINSTANCE.getSignedTime();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.TimeUnit <em>Time Unit</em>}' enum.

@@ -85,6 +85,15 @@ public interface CommonFactory extends EFactory {
 	DataSize createDataSize();
 
 	/**
+	 * Returns a new object of class '<em>Signed Time</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Signed Time</em>'.
+	 * @generated
+	 */
+	SignedTime createSignedTime();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

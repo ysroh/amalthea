@@ -60,9 +60,9 @@
           eType="#//common/Deviation"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Counter">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="counterOffset" ordered="false"
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="offset" ordered="false"
           lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="counterPrescaler" ordered="false"
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="prescaler" ordered="false"
           lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//Integer"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="base_DataType" ordered="false"
           lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//DataType"/>
@@ -95,6 +95,7 @@
       <eLiterals name="GiB" value="16"/>
       <eLiterals name="TiB" value="17"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SignedTime" eSuperTypes="#//common/AbstractTime"/>
   </eSubpackages>
   <eSubpackages name="components" nsURI="http://www.eclipse.org/papyrus/2017/Amalthea/Components"
       nsPrefix="Components">
@@ -448,7 +449,7 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="metric" ordered="false"
           lowerBound="1" eType="#//constraints/TimeMetric"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="limitValue" ordered="false"
-          eType="#//common/Time"/>
+          eType="#//common/SignedTime"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EEnum" name="TimeMetric">
       <eLiterals name="_undefined_"/>

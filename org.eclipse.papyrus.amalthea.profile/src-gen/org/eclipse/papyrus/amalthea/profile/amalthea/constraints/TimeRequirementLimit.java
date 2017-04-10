@@ -2,7 +2,7 @@
  */
 package org.eclipse.papyrus.amalthea.profile.amalthea.constraints;
 
-import org.eclipse.papyrus.amalthea.profile.amalthea.common.Time;
+import org.eclipse.papyrus.amalthea.profile.amalthea.common.SignedTime;
 
 
 /**
@@ -62,12 +62,12 @@ public interface TimeRequirementLimit extends RequirementLimit {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Limit Value</em>' reference.
-	 * @see #setLimitValue(Time)
+	 * @see #setLimitValue(SignedTime)
 	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.constraints.ConstraintsPackage#getTimeRequirementLimit_LimitValue()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	Time getLimitValue();
+	SignedTime getLimitValue();
 
 	/**
 	 * Sets the value of the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.constraints.TimeRequirementLimit#getLimitValue <em>Limit Value</em>}' reference.
@@ -77,5 +77,5 @@ public interface TimeRequirementLimit extends RequirementLimit {
 	 * @see #getLimitValue()
 	 * @generated
 	 */
-	void setLimitValue(Time value);
+	void setLimitValue(SignedTime value);
 } // TimeRequirementLimit

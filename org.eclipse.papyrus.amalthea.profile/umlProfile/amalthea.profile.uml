@@ -166,10 +166,10 @@
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_SDLvIBh0EeeoWfBb-FGkXQ" name="Counter">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_SDLvIRh0EeeoWfBb-FGkXQ" name="counterOffset">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_SDLvIRh0EeeoWfBb-FGkXQ" name="offset">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_SDLvIhh0EeeoWfBb-FGkXQ" name="counterPrescaler">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_SDLvIhh0EeeoWfBb-FGkXQ" name="prescaler">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_OQBkgBlOEeeUscFGj19tvQ" name="base_DataType" association="_OQAWYBlOEeeUscFGj19tvQ">
@@ -204,6 +204,9 @@
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_03s6IBh4EeeoWfBb-FGkXQ" name="MiB"/>
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_2UMGQBh4EeeoWfBb-FGkXQ" name="GiB"/>
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_3MFXkBh4EeeoWfBb-FGkXQ" name="TiB"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_mnht8B37Eee65fjWHZc4GA" name="SignedTime">
+        <generalization xmi:type="uml:Generalization" xmi:id="_oMZaAB37Eee65fjWHZc4GA" general="_oiGT8xZKEeeFzte_Mj5jqA"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_ijTT4BZCEeeFzte_Mj5jqA" name="ComponentsModel" URI="http://www.eclipse.org/papyrus/2017/Amalthea/Components">
@@ -911,12 +914,6 @@ operations of CallSequence Class&#xD;
         </eAnnotations>
         <ownedEnd xmi:type="uml:Property" xmi:id="_rW7LxBvLEee65fjWHZc4GA" name="requirement" type="_XS4vMBraEeemOqGrpy978g" association="_rW7LwBvLEee65fjWHZc4GA"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_Jk3UkBvNEee65fjWHZc4GA" memberEnd="_Jk3UkxvNEee65fjWHZc4GA _Jk3UlBvNEee65fjWHZc4GA">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Jk3UkRvNEee65fjWHZc4GA" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Jk3UkhvNEee65fjWHZc4GA" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_Jk3UlBvNEee65fjWHZc4GA" name="timerequirementlimit" type="_dpIDEBrbEeemOqGrpy978g" association="_Jk3UkBvNEee65fjWHZc4GA"/>
-      </packagedElement>
       <packagedElement xmi:type="uml:Extension" xmi:id="_8cUmcBvLEee65fjWHZc4GA" name="E_Requirement_Constraint1" memberEnd="_8cdwYBvLEee65fjWHZc4GA _8cdwYRvLEee65fjWHZc4GA">
         <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_8cdwYBvLEee65fjWHZc4GA" name="extension_Requirement" type="_XS4vMBraEeemOqGrpy978g" aggregation="composite" association="_8cUmcBvLEee65fjWHZc4GA"/>
       </packagedElement>
@@ -957,9 +954,9 @@ operations of CallSequence Class&#xD;
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_dpIDEBrbEeemOqGrpy978g" name="TimeRequirementLimit">
         <generalization xmi:type="uml:Generalization" xmi:id="_fK9CMBrbEeemOqGrpy978g" general="_5iB5EBraEeemOqGrpy978g"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_zGC-IBvMEee65fjWHZc4GA" name="metric" type="_WkSN0BvMEee65fjWHZc4GA"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_Jk3UkxvNEee65fjWHZc4GA" name="limitValue" type="_oiGT9hZKEeeFzte_Mj5jqA" association="_Jk3UkBvNEee65fjWHZc4GA">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LAZecBvNEee65fjWHZc4GA"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LAZecRvNEee65fjWHZc4GA" value="1"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qCNkwB3-Eee-N_wy_mgmag" name="limitValue" type="_mnht8B37Eee65fjWHZc4GA" association="_qCDzwB3-Eee-N_wy_mgmag">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tCQ1YB3-Eee-N_wy_mgmag"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tCZ_UB3-Eee-N_wy_mgmag" value="1"/>
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Enumeration" xmi:id="_GPzSsBvMEee65fjWHZc4GA" name="LimitType">
@@ -991,6 +988,12 @@ operations of CallSequence Class&#xD;
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_o44GgR3wEee65fjWHZc4GA" key="nature" value="UML_Nature"/>
         </eAnnotations>
         <ownedEnd xmi:type="uml:Property" xmi:id="_o44Ggx3wEee65fjWHZc4GA" name="processrequirement" type="_03W5sBraEeemOqGrpy978g" association="_o4uVgB3wEee65fjWHZc4GA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_qCDzwB3-Eee-N_wy_mgmag" memberEnd="_qCNkwB3-Eee-N_wy_mgmag _qCNkwR3-Eee-N_wy_mgmag">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qCDzwR3-Eee-N_wy_mgmag" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qCDzwh3-Eee-N_wy_mgmag" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_qCNkwR3-Eee-N_wy_mgmag" name="timerequirementlimit" type="_dpIDEBrbEeemOqGrpy978g" association="_qCDzwB3-Eee-N_wy_mgmag"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Stereotype" xmi:id="_9nf10BZJEeeFzte_Mj5jqA" name="Dummy"/>

@@ -389,6 +389,9 @@
     <sections xmi:id="_aHCwoBvREee65fjWHZc4GA" name="SingleTimeRequirementLimit" sectionFile="ui/SingleTimeRequirementLimit.xwt">
       <widget href="ui/SingleTimeRequirementLimit.xwt#/"/>
     </sections>
+    <sections xmi:id="_snhsEB38Eee65fjWHZc4GA" name="SingleSignedTime" sectionFile="ui/SingleSignedTime.xwt">
+      <widget href="ui/SingleSignedTime.xwt#/"/>
+    </sections>
   </tabs>
   <views xmi:id="_2VofsxiXEeeoWfBb-FGkXQ" name="Single Single" sections="_3BfgFBiXEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_2VpHphiXEeeoWfBb-FGkXQ">
     <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_2VoftBiXEeeoWfBb-FGkXQ" name="isSingleSingle">
@@ -508,6 +511,12 @@
     <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_2VogAhiXEeeoWfBb-FGkXQ" name="isSingleTime">
       <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
       <properties xsi:type="constraints:ValueProperty" xmi:id="_2VogAxiXEeeoWfBb-FGkXQ" name="stereotypeName" value="Amalthea::CommonModel::Time"/>
+    </constraints>
+  </views>
+  <views xmi:id="_o5ukoB38Eee65fjWHZc4GA" name="Single SignedTime" sections="_snhsEB38Eee65fjWHZc4GA">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="__9e0IB38Eee65fjWHZc4GA" name="isSingleSignedTime">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_IDZV4B3-Eee-N_wy_mgmag" name="stereotypeName" value="Amalthea::CommonModel::SingleTime"/>
     </constraints>
   </views>
   <views xmi:id="_2VogBBiXEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple Time" sections="_3Bh8UxiXEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_2VpH5xiXEeeoWfBb-FGkXQ">
@@ -1105,8 +1114,8 @@
         <properties xmi:id="_2VpH3hiXEeeoWfBb-FGkXQ" name="value" type="Integer"/>
       </elements>
       <elements xmi:id="_2VpH3xiXEeeoWfBb-FGkXQ" name="Counter">
-        <properties xmi:id="_2VpH4BiXEeeoWfBb-FGkXQ" name="counterOffset" type="Integer"/>
-        <properties xmi:id="_2VpH4RiXEeeoWfBb-FGkXQ" name="counterPrescaler" type="Integer"/>
+        <properties xmi:id="_2VpH4BiXEeeoWfBb-FGkXQ" name="offset" type="Integer"/>
+        <properties xmi:id="_2VpH4RiXEeeoWfBb-FGkXQ" name="prescaler" type="Integer"/>
       </elements>
       <elements xmi:id="_2VpH4hiXEeeoWfBb-FGkXQ" name="Instructions"/>
       <elements xmi:id="_2VpH4xiXEeeoWfBb-FGkXQ" name="Distribution"/>
@@ -1120,6 +1129,7 @@
         <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690yG6DJEeSZxfCXzZz3-w"/>
       </elements>
       <elements xmi:id="_2VpH6hiXEeeoWfBb-FGkXQ" name="IAnnotatable"/>
+      <elements xmi:id="_gIGW8B38Eee65fjWHZc4GA" name="SignedTime" supertypes="_2VpH2RiXEeeoWfBb-FGkXQ"/>
     </elements>
     <modelElementFactory href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@modelElementFactories.2"/>
   </dataContexts>

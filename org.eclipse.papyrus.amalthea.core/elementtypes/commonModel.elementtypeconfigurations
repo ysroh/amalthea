@@ -15,6 +15,21 @@
       </composedRules>
     </ruleConfiguration>
   </elementTypeConfigurations>
+  <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.SignedTime" name="SignedTime">
+    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
+    <specializedTypesID>org.eclipse.papyrus.uml.DataType</specializedTypesID>
+    <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
+      <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::CommonModel::SignedTime" requiredProfile="Amalthea"/>
+      <composedRules xsi:type="rulebased:OrRuleConfiguration">
+        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+          <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
+        </composedRules>
+        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+          <permissions containerType="org.eclipse.papyrus.uml.Class" permitted="true"/>
+        </composedRules>
+      </composedRules>
+    </ruleConfiguration>
+  </elementTypeConfigurations>
   <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.Counter" name="Counter">
     <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
     <specializedTypesID>org.eclipse.papyrus.uml.DataType</specializedTypesID>
@@ -82,32 +97,37 @@
     <specializedTypesID>org.eclipse.papyrus.uml.Package</specializedTypesID>
     <editHelperAdviceConfiguration xsi:type="elementtypesconfigurations:EditHelperAdviceConfiguration" editHelperAdviceClassName="org.eclipse.papyrus.amalthea.core.types.advice.PackageEditHelperAdvice"/>
   </elementTypeConfigurations>
-  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.labelaccess" target="//@elementTypeConfigurations.0">
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.time" target="//@elementTypeConfigurations.0">
     <stereotypesToApply stereotypeQualifiedName="Amalthea::CommonModel::Time">
       <requiredProfiles>Amalthea</requiredProfiles>
     </stereotypesToApply>
   </adviceBindingsConfigurations>
-  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.counter" target="//@elementTypeConfigurations.1">
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.signedTime" target="//@elementTypeConfigurations.1">
+    <stereotypesToApply stereotypeQualifiedName="Amalthea::CommonModel::SignedTime">
+      <requiredProfiles>Amalthea</requiredProfiles>
+    </stereotypesToApply>
+  </adviceBindingsConfigurations>
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.counter" target="//@elementTypeConfigurations.2">
     <stereotypesToApply stereotypeQualifiedName="Amalthea::CommonModel::Counter">
       <requiredProfiles>Amalthea</requiredProfiles>
     </stereotypesToApply>
   </adviceBindingsConfigurations>
-  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.instructionDeviation" target="//@elementTypeConfigurations.2">
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.instructionDeviation" target="//@elementTypeConfigurations.3">
     <stereotypesToApply stereotypeQualifiedName="Amalthea::CommonModel::InstructionsDeviation">
       <requiredProfiles>Amalthea</requiredProfiles>
     </stereotypesToApply>
   </adviceBindingsConfigurations>
-  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.deviation" target="//@elementTypeConfigurations.3">
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.deviation" target="//@elementTypeConfigurations.4">
     <stereotypesToApply stereotypeQualifiedName="Amalthea::CommonModel::Deviation">
       <requiredProfiles>Amalthea</requiredProfiles>
     </stereotypesToApply>
   </adviceBindingsConfigurations>
-  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.weibullEstiamtors" target="//@elementTypeConfigurations.4">
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.weibullEstiamtors" target="//@elementTypeConfigurations.5">
     <stereotypesToApply stereotypeQualifiedName="Amalthea::CommonModel::WeibullEstimators">
       <requiredProfiles>Amalthea</requiredProfiles>
     </stereotypesToApply>
   </adviceBindingsConfigurations>
-  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.dataSize" target="//@elementTypeConfigurations.5">
+  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.dataSize" target="//@elementTypeConfigurations.6">
     <stereotypesToApply stereotypeQualifiedName="Amalthea::CommonModel::DataSize">
       <requiredProfiles>Amalthea</requiredProfiles>
     </stereotypesToApply>

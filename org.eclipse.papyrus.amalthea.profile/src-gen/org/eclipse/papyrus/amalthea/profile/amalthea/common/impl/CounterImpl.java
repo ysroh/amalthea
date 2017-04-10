@@ -22,8 +22,8 @@ import org.eclipse.uml2.uml.DataType;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CounterImpl#getCounterOffset <em>Counter Offset</em>}</li>
- *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CounterImpl#getCounterPrescaler <em>Counter Prescaler</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CounterImpl#getOffset <em>Offset</em>}</li>
+ *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CounterImpl#getPrescaler <em>Prescaler</em>}</li>
  *   <li>{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CounterImpl#getBase_DataType <em>Base Data Type</em>}</li>
  * </ul>
  *
@@ -31,44 +31,44 @@ import org.eclipse.uml2.uml.DataType;
  */
 public class CounterImpl extends MinimalEObjectImpl.Container implements Counter {
 	/**
-	 * The default value of the '{@link #getCounterOffset() <em>Counter Offset</em>}' attribute.
+	 * The default value of the '{@link #getOffset() <em>Offset</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCounterOffset()
+	 * @see #getOffset()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int COUNTER_OFFSET_EDEFAULT = 0;
+	protected static final int OFFSET_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getCounterOffset() <em>Counter Offset</em>}' attribute.
+	 * The cached value of the '{@link #getOffset() <em>Offset</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCounterOffset()
+	 * @see #getOffset()
 	 * @generated
 	 * @ordered
 	 */
-	protected int counterOffset = COUNTER_OFFSET_EDEFAULT;
+	protected int offset = OFFSET_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getCounterPrescaler() <em>Counter Prescaler</em>}' attribute.
+	 * The default value of the '{@link #getPrescaler() <em>Prescaler</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCounterPrescaler()
+	 * @see #getPrescaler()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int COUNTER_PRESCALER_EDEFAULT = 0;
+	protected static final int PRESCALER_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getCounterPrescaler() <em>Counter Prescaler</em>}' attribute.
+	 * The cached value of the '{@link #getPrescaler() <em>Prescaler</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCounterPrescaler()
+	 * @see #getPrescaler()
 	 * @generated
 	 * @ordered
 	 */
-	protected int counterPrescaler = COUNTER_PRESCALER_EDEFAULT;
+	protected int prescaler = PRESCALER_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getBase_DataType() <em>Base Data Type</em>}' reference.
@@ -104,8 +104,8 @@ public class CounterImpl extends MinimalEObjectImpl.Container implements Counter
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getCounterOffset() {
-		return counterOffset;
+	public int getOffset() {
+		return offset;
 	}
 
 	/**
@@ -113,11 +113,11 @@ public class CounterImpl extends MinimalEObjectImpl.Container implements Counter
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCounterOffset(int newCounterOffset) {
-		int oldCounterOffset = counterOffset;
-		counterOffset = newCounterOffset;
+	public void setOffset(int newOffset) {
+		int oldOffset = offset;
+		offset = newOffset;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CommonPackage.COUNTER__COUNTER_OFFSET, oldCounterOffset, counterOffset));
+			eNotify(new ENotificationImpl(this, Notification.SET, CommonPackage.COUNTER__OFFSET, oldOffset, offset));
 	}
 
 	/**
@@ -125,8 +125,8 @@ public class CounterImpl extends MinimalEObjectImpl.Container implements Counter
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getCounterPrescaler() {
-		return counterPrescaler;
+	public int getPrescaler() {
+		return prescaler;
 	}
 
 	/**
@@ -134,11 +134,11 @@ public class CounterImpl extends MinimalEObjectImpl.Container implements Counter
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCounterPrescaler(int newCounterPrescaler) {
-		int oldCounterPrescaler = counterPrescaler;
-		counterPrescaler = newCounterPrescaler;
+	public void setPrescaler(int newPrescaler) {
+		int oldPrescaler = prescaler;
+		prescaler = newPrescaler;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CommonPackage.COUNTER__COUNTER_PRESCALER, oldCounterPrescaler, counterPrescaler));
+			eNotify(new ENotificationImpl(this, Notification.SET, CommonPackage.COUNTER__PRESCALER, oldPrescaler, prescaler));
 	}
 
 	/**
@@ -187,10 +187,10 @@ public class CounterImpl extends MinimalEObjectImpl.Container implements Counter
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CommonPackage.COUNTER__COUNTER_OFFSET:
-				return getCounterOffset();
-			case CommonPackage.COUNTER__COUNTER_PRESCALER:
-				return getCounterPrescaler();
+			case CommonPackage.COUNTER__OFFSET:
+				return getOffset();
+			case CommonPackage.COUNTER__PRESCALER:
+				return getPrescaler();
 			case CommonPackage.COUNTER__BASE_DATA_TYPE:
 				if (resolve) return getBase_DataType();
 				return basicGetBase_DataType();
@@ -206,11 +206,11 @@ public class CounterImpl extends MinimalEObjectImpl.Container implements Counter
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CommonPackage.COUNTER__COUNTER_OFFSET:
-				setCounterOffset((Integer)newValue);
+			case CommonPackage.COUNTER__OFFSET:
+				setOffset((Integer)newValue);
 				return;
-			case CommonPackage.COUNTER__COUNTER_PRESCALER:
-				setCounterPrescaler((Integer)newValue);
+			case CommonPackage.COUNTER__PRESCALER:
+				setPrescaler((Integer)newValue);
 				return;
 			case CommonPackage.COUNTER__BASE_DATA_TYPE:
 				setBase_DataType((DataType)newValue);
@@ -227,11 +227,11 @@ public class CounterImpl extends MinimalEObjectImpl.Container implements Counter
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CommonPackage.COUNTER__COUNTER_OFFSET:
-				setCounterOffset(COUNTER_OFFSET_EDEFAULT);
+			case CommonPackage.COUNTER__OFFSET:
+				setOffset(OFFSET_EDEFAULT);
 				return;
-			case CommonPackage.COUNTER__COUNTER_PRESCALER:
-				setCounterPrescaler(COUNTER_PRESCALER_EDEFAULT);
+			case CommonPackage.COUNTER__PRESCALER:
+				setPrescaler(PRESCALER_EDEFAULT);
 				return;
 			case CommonPackage.COUNTER__BASE_DATA_TYPE:
 				setBase_DataType((DataType)null);
@@ -248,10 +248,10 @@ public class CounterImpl extends MinimalEObjectImpl.Container implements Counter
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CommonPackage.COUNTER__COUNTER_OFFSET:
-				return counterOffset != COUNTER_OFFSET_EDEFAULT;
-			case CommonPackage.COUNTER__COUNTER_PRESCALER:
-				return counterPrescaler != COUNTER_PRESCALER_EDEFAULT;
+			case CommonPackage.COUNTER__OFFSET:
+				return offset != OFFSET_EDEFAULT;
+			case CommonPackage.COUNTER__PRESCALER:
+				return prescaler != PRESCALER_EDEFAULT;
 			case CommonPackage.COUNTER__BASE_DATA_TYPE:
 				return base_DataType != null;
 		}
@@ -268,10 +268,10 @@ public class CounterImpl extends MinimalEObjectImpl.Container implements Counter
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (counterOffset: ");
-		result.append(counterOffset);
-		result.append(", counterPrescaler: ");
-		result.append(counterPrescaler);
+		result.append(" (offset: ");
+		result.append(offset);
+		result.append(", prescaler: ");
+		result.append(prescaler);
 		result.append(')');
 		return result.toString();
 	}

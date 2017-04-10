@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
 <am:Amalthea xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:am="http://app4mc.eclipse.org/amalthea/0.7.2">
   <swModel>
-    <tasks name="Task">
+    <tasks name="Task" preemption="preemptive">
       <callGraph>
         <graphEntries xsi:type="am:CallSequence" name="CallSequence">
           <calls xsi:type="am:TaskRunnableCall" runnable="ABSCalculation?type=Runnable">
@@ -13,6 +13,7 @@
         </graphEntries>
       </callGraph>
     </tasks>
+    <tasks name="ISR"/>
     <runnables name="ABSCalculation">
       <runnableItems xsi:type="am:LabelAccess" data="ABSActivation?type=Label" access="read"/>
       <runnableItems xsi:type="am:RunnableInstructions">
@@ -63,6 +64,7 @@
       <counter prescaler="0"/>
     </stimuli>
   </stimuliModel>
+  <constraintsModel/>
   <mappingModel/>
   <componentsModel/>
 </am:Amalthea>

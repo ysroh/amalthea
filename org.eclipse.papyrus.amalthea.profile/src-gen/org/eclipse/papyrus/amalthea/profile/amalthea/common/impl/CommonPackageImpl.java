@@ -24,6 +24,7 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.common.Distribution;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.IAnnotatable;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.Instructions;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.InstructionsDeviation;
+import org.eclipse.papyrus.amalthea.profile.amalthea.common.SignedTime;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.Time;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.TimeUnit;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.WeibullEstimators;
@@ -147,6 +148,13 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 * @generated
 	 */
 	private EClass dataSizeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass signedTimeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -455,7 +463,7 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCounter_CounterOffset() {
+	public EAttribute getCounter_Offset() {
 		return (EAttribute)counterEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -464,7 +472,7 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCounter_CounterPrescaler() {
+	public EAttribute getCounter_Prescaler() {
 		return (EAttribute)counterEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -511,6 +519,15 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 */
 	public EReference getDataSize_Base_DataType() {
 		return (EReference)dataSizeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSignedTime() {
+		return signedTimeEClass;
 	}
 
 	/**
@@ -590,14 +607,16 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		createEReference(instructionsDeviationEClass, INSTRUCTIONS_DEVIATION__DEVIATION);
 
 		counterEClass = createEClass(COUNTER);
-		createEAttribute(counterEClass, COUNTER__COUNTER_OFFSET);
-		createEAttribute(counterEClass, COUNTER__COUNTER_PRESCALER);
+		createEAttribute(counterEClass, COUNTER__OFFSET);
+		createEAttribute(counterEClass, COUNTER__PRESCALER);
 		createEReference(counterEClass, COUNTER__BASE_DATA_TYPE);
 
 		dataSizeEClass = createEClass(DATA_SIZE);
 		createEAttribute(dataSizeEClass, DATA_SIZE__UNIT);
 		createEAttribute(dataSizeEClass, DATA_SIZE__VALUE);
 		createEReference(dataSizeEClass, DATA_SIZE__BASE_DATA_TYPE);
+
+		signedTimeEClass = createEClass(SIGNED_TIME);
 
 		// Create enums
 		timeUnitEEnum = createEEnum(TIME_UNIT);
@@ -639,6 +658,7 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		timeEClass.getESuperTypes().add(this.getAbstractTime());
 		weibullEstimatorsEClass.getESuperTypes().add(this.getDistribution());
 		instructionsDeviationEClass.getESuperTypes().add(this.getInstructions());
+		signedTimeEClass.getESuperTypes().add(this.getAbstractTime());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(customPropertyEClass, CustomProperty.class, "CustomProperty", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -672,14 +692,16 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		initEReference(getInstructionsDeviation_Deviation(), this.getDeviation(), null, "deviation", null, 0, 1, InstructionsDeviation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(counterEClass, Counter.class, "Counter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCounter_CounterOffset(), theTypesPackage.getInteger(), "counterOffset", null, 1, 1, Counter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getCounter_CounterPrescaler(), theTypesPackage.getInteger(), "counterPrescaler", null, 1, 1, Counter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCounter_Offset(), theTypesPackage.getInteger(), "offset", null, 1, 1, Counter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCounter_Prescaler(), theTypesPackage.getInteger(), "prescaler", null, 1, 1, Counter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getCounter_Base_DataType(), theUMLPackage.getDataType(), null, "base_DataType", null, 1, 1, Counter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(dataSizeEClass, DataSize.class, "DataSize", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDataSize_Unit(), this.getDataUnit(), "unit", null, 1, 1, DataSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getDataSize_Value(), theTypesPackage.getInteger(), "value", null, 1, 1, DataSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getDataSize_Base_DataType(), theUMLPackage.getDataType(), null, "base_DataType", null, 1, 1, DataSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(signedTimeEClass, SignedTime.class, "SignedTime", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(timeUnitEEnum, TimeUnit.class, "TimeUnit");

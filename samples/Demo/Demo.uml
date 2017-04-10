@@ -55,7 +55,7 @@
         </packagedElement>
         <packagedElement xmi:type="uml:Abstraction" xmi:id="_0lbq4BuYEeeSQLqP5Np32w" name="Allocate1" client="_lAdicBoqEeeK7PsAypm8Bw" supplier="_JgeUABoxEeeeW9cngqHTXg"/>
         <packagedElement xmi:type="uml:DataType" xmi:id="_dbbWUB3xEeewM5qyb0um-g" name="TimeRequirement"/>
-        <packagedElement xmi:type="uml:DataType" xmi:id="_oBvbcB32Eeeu1MxnJgY-ig" name="RequirementTime"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_c5jFYB3-EeeCSKa87YzWvQ" name="RequirementTime"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_AAoVcBoxEeeeW9cngqHTXg" name="OperatingSystem">
@@ -188,6 +188,6 @@
   <Stimuli:Interprocess xmi:id="_PrIC0Bu6EeeS0ZHQabp_-Q" base_Class="_Pq1H4Bu6EeeS0ZHQabp_-Q" counter="_a89lsBsFEeeSFpvWgLU3rg"/>
   <Allocations:Allocate xmi:id="_Yf3ZcBu7EeeS0ZHQabp_-Q" base_DirectedRelationship="_YfgNEBu7EeeS0ZHQabp_-Q" base_Abstraction="_YfgNEBu7EeeS0ZHQabp_-Q"/>
   <Constraints:ProcessRequirement xmi:id="_NOspAB3xEeewM5qyb0um-g" severity="Minor" base_Constraint="_NNu_sB3xEeewM5qyb0um-g" process="_lAnTcBoqEeeK7PsAypm8Bw"/>
-  <Constraints:TimeRequirementLimit xmi:id="_db7soB3xEeewM5qyb0um-g" limitType="UpperLimit" base_DataType="_dbbWUB3xEeewM5qyb0um-g" metric="ActivateToActivate" limitValue="_oCMHYB32Eeeu1MxnJgY-ig"/>
-  <Common:Time xmi:id="_oCMHYB32Eeeu1MxnJgY-ig" base_DataType="_oBvbcB32Eeeu1MxnJgY-ig"/>
+  <Constraints:TimeRequirementLimit xmi:id="_db7soB3xEeewM5qyb0um-g" limitType="UpperLimit" base_DataType="_dbbWUB3xEeewM5qyb0um-g" metric="ActivateToActivate"/>
+  <Common:SignedTime xmi:id="_dFOJ4B3-EeeCSKa87YzWvQ" base_DataType="_c5jFYB3-EeeCSKa87YzWvQ"/>
 </xmi:XMI>

@@ -63,6 +63,14 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Periodic
 import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Single
 import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Interprocess
 import org.eclipse.uml2.uml.PackageImport
+import org.eclipse.app4mc.amalthea.model.Preemption
+import org.eclipse.app4mc.amalthea.model.ProcessRequirement
+import org.eclipse.app4mc.amalthea.model.Severity
+import org.eclipse.app4mc.amalthea.model.AbstractProcess
+import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.TimeRequirementLimit
+import org.eclipse.app4mc.amalthea.model.LimitType
+import org.eclipse.app4mc.amalthea.model.TimeMetric
+import org.eclipse.app4mc.amalthea.model.SignedTime
 
 class MainTransform {
 
@@ -89,6 +97,7 @@ class MainTransform {
 		it.osModel = model.OSModel
 		it.stimuliModel = model.stimuliModel
 		it.mappingModel = model.mappingModel
+		it.constraintsModel = model.constraintsModel
     }
     
     
@@ -162,16 +171,24 @@ class MainTransform {
 	def private create AmaltheaFactory.eINSTANCE.createComponentsModel getComponentsModel(Model model){
 	}	
 	
+	def private create AmaltheaFactory.eINSTANCE.createConstraintsModel getConstraintsModel(Model model){
+	}		
+	
 	// common elements	
 	def private dispatch create AmaltheaFactory.eINSTANCE.createCounter transformHelper(org.eclipse.papyrus.amalthea.profile.amalthea.common.Counter counter, Object owner){
-		it.offset = counter.counterOffset
-		it.prescaler = counter.counterPrescaler
+		it.offset = counter.offset
+		it.prescaler = counter.prescaler
 	}
 
 	def private dispatch create AmaltheaFactory.eINSTANCE.createTime transformHelper(Time time, Object owner){
 		it.value = time.value
 		it.unit = TimeUnit.get(time.unit.literal)
 	}
+	
+	def private dispatch create AmaltheaFactory.eINSTANCE.createTime transformHelper(org.eclipse.papyrus.amalthea.profile.amalthea.common.SignedTime time, Object owner){
+		it.value = time.value
+		it.unit = TimeUnit.get(time.unit.literal)
+	}	
 	
 	/************* Software ***************/
 	// Runnables
@@ -213,8 +230,21 @@ class MainTransform {
 	// Tasks
 	def private dispatch create AmaltheaFactory.eINSTANCE.createTask transform(org.eclipse.papyrus.amalthea.profile.amalthea.software.Task task){
 		it.name = task.base_Class.name
-		val callGraph = task.callgraph?.transformHelper(new Object) as CallGraph
-		it.callGraph = callGraph
+		it.multipleTaskActivationLimit = task.multipleTaskActivationLimit
+		it.preemption = Preemption.get(task.preemption.literal)
+		task.transformProcessHelper(it)
+	}
+	
+	def private dispatch create AmaltheaFactory.eINSTANCE.createTask transform(org.eclipse.papyrus.amalthea.profile.amalthea.software.ISR isr){
+		it.name = isr.base_Class.name
+		isr.transformProcessHelper(it)
+	}	
+	
+	def private transformProcessHelper(org.eclipse.papyrus.amalthea.profile.amalthea.software.Process source, org.eclipse.app4mc.amalthea.model.Process target){
+		target.priority = source.priority
+		val callGraph = source.callgraph?.transformHelper(new Object) as CallGraph
+		target.callGraph = callGraph
+		root.constraintsModel.requirements.addAll(source.base_Class.ownedRules.map[e | e.transform].filter(typeof(ProcessRequirement)))
 	}
 
 	def private dispatch create AmaltheaFactory.eINSTANCE.createCallGraph transformHelper(org.eclipse.papyrus.amalthea.profile.amalthea.software.CallGraph callGraph, Object owner){
@@ -385,4 +415,18 @@ class MainTransform {
 		it.name = stimulus.base_Class.name
 		it.counter = stimulus.counter?.transformHelper(new Object) as Counter
 	}
+	
+	/************* Constraints ***************/
+	def private dispatch create AmaltheaFactory.eINSTANCE.createProcessRequirement transform(org.eclipse.papyrus.amalthea.profile.amalthea.constraints.ProcessRequirement pr){
+		it.name = pr.base_Constraint.name
+		it.severity = Severity.get(pr.severity.literal)
+		it.process = pr.process?.transform as AbstractProcess
+	}
+	
+	def private dispatch create AmaltheaFactory.eINSTANCE.createTimeRequirementLimit transform(TimeRequirementLimit limit){
+		it.limitType = LimitType.get(limit.limitType.literal)
+		it.metric = TimeMetric.get(limit.metric.literal)
+		it.limitValue = limit.limitValue?.transformHelper(new Object) as SignedTime
+	}	
+	
 }

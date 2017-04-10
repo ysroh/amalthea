@@ -7,7 +7,7 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.papyrus.amalthea.profile.amalthea.common.Time;
+import org.eclipse.papyrus.amalthea.profile.amalthea.common.SignedTime;
 import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.ConstraintsPackage;
 import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.TimeMetric;
 import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.TimeRequirementLimit;
@@ -53,7 +53,7 @@ public class TimeRequirementLimitImpl extends RequirementLimitImpl implements Ti
 	 * @generated
 	 * @ordered
 	 */
-	protected Time limitValue;
+	protected SignedTime limitValue;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -100,10 +100,10 @@ public class TimeRequirementLimitImpl extends RequirementLimitImpl implements Ti
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Time getLimitValue() {
+	public SignedTime getLimitValue() {
 		if (limitValue != null && limitValue.eIsProxy()) {
 			InternalEObject oldLimitValue = (InternalEObject)limitValue;
-			limitValue = (Time)eResolveProxy(oldLimitValue);
+			limitValue = (SignedTime)eResolveProxy(oldLimitValue);
 			if (limitValue != oldLimitValue) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ConstraintsPackage.TIME_REQUIREMENT_LIMIT__LIMIT_VALUE, oldLimitValue, limitValue));
@@ -117,7 +117,7 @@ public class TimeRequirementLimitImpl extends RequirementLimitImpl implements Ti
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Time basicGetLimitValue() {
+	public SignedTime basicGetLimitValue() {
 		return limitValue;
 	}
 
@@ -126,8 +126,8 @@ public class TimeRequirementLimitImpl extends RequirementLimitImpl implements Ti
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLimitValue(Time newLimitValue) {
-		Time oldLimitValue = limitValue;
+	public void setLimitValue(SignedTime newLimitValue) {
+		SignedTime oldLimitValue = limitValue;
 		limitValue = newLimitValue;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ConstraintsPackage.TIME_REQUIREMENT_LIMIT__LIMIT_VALUE, oldLimitValue, limitValue));
@@ -162,7 +162,7 @@ public class TimeRequirementLimitImpl extends RequirementLimitImpl implements Ti
 				setMetric((TimeMetric)newValue);
 				return;
 			case ConstraintsPackage.TIME_REQUIREMENT_LIMIT__LIMIT_VALUE:
-				setLimitValue((Time)newValue);
+				setLimitValue((SignedTime)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -180,7 +180,7 @@ public class TimeRequirementLimitImpl extends RequirementLimitImpl implements Ti
 				setMetric(METRIC_EDEFAULT);
 				return;
 			case ConstraintsPackage.TIME_REQUIREMENT_LIMIT__LIMIT_VALUE:
-				setLimitValue((Time)null);
+				setLimitValue((SignedTime)null);
 				return;
 		}
 		super.eUnset(featureID);

@@ -100,8 +100,8 @@
             propertySortChoices="true" ecoreFeature="ecore:EReference amalthea.ecore#//common/InstructionsDeviation/deviation"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//common/Counter">
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//common/Counter/counterOffset"/>
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//common/Counter/counterPrescaler"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//common/Counter/offset"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//common/Counter/prescaler"/>
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
             propertySortChoices="true" ecoreFeature="ecore:EReference amalthea.ecore#//common/Counter/base_DataType"/>
       </genClasses>
@@ -111,6 +111,7 @@
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
             propertySortChoices="true" ecoreFeature="ecore:EReference amalthea.ecore#//common/DataSize/base_DataType"/>
       </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//common/SignedTime"/>
     </nestedGenPackages>
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Components" basePackage="org.eclipse.papyrus.amalthea.profile.amalthea"
         disposableProviderFactory="true" ecorePackage="amalthea.ecore#//components">

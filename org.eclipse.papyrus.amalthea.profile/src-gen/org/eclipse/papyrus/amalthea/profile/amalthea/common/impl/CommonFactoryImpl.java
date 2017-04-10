@@ -64,6 +64,7 @@ public class CommonFactoryImpl extends EFactoryImpl implements CommonFactory {
 			case CommonPackage.INSTRUCTIONS_DEVIATION: return createInstructionsDeviation();
 			case CommonPackage.COUNTER: return createCounter();
 			case CommonPackage.DATA_SIZE: return createDataSize();
+			case CommonPackage.SIGNED_TIME: return createSignedTime();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -171,6 +172,16 @@ public class CommonFactoryImpl extends EFactoryImpl implements CommonFactory {
 	public DataSize createDataSize() {
 		DataSizeImpl dataSize = new DataSizeImpl();
 		return dataSize;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SignedTime createSignedTime() {
+		SignedTimeImpl signedTime = new SignedTimeImpl();
+		return signedTime;
 	}
 
 	/**

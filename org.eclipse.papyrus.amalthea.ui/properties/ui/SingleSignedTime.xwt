@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Composite xmlns="http://www.eclipse.org/xwt/presentation"
-	xmlns:j="clr-namespace:java.lang" xmlns:ppe="clr-namespace:org.eclipse.papyrus.infra.properties.ui.widgets"
+	xmlns:ppe="clr-namespace:org.eclipse.papyrus.infra.properties.ui.widgets"
 	xmlns:ppel="clr-namespace:org.eclipse.papyrus.infra.properties.ui.widgets.layout"
 	xmlns:x="http://www.eclipse.org/xwt">
 	<Composite.layout>
@@ -17,8 +17,13 @@
 			<ppel:PropertiesLayout numColumns="2"></ppel:PropertiesLayout>
 		</Composite.layout>
 		<ppe:IntegerEditor input="{Binding}"
-			property="Amalthea:CommonModel:Counter:offset"></ppe:IntegerEditor>
-		<ppe:IntegerEditor input="{Binding}"
-			property="Amalthea:CommonModel:Counter:prescaler"></ppe:IntegerEditor>
+			property="Amalthea:CommonModel:AbstractTime:value"></ppe:IntegerEditor>
+	</Composite>
+	<Composite>
+		<Composite.layout>
+			<ppel:PropertiesLayout numColumns="1"></ppel:PropertiesLayout>
+		</Composite.layout>
+		<ppe:EnumRadio input="{Binding}"
+			property="Amalthea:CommonModel:AbstractTime:unit"></ppe:EnumRadio>
 	</Composite>
 </Composite>
