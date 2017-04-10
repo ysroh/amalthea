@@ -108,6 +108,8 @@
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="base_Port" ordered="false"
           lowerBound="1" eType="ecore:EClass ../../org.eclipse.uml2.uml/model/UML.ecore#//Port"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="interfaceName" ordered="false"
+          lowerBound="1" eType="ecore:EDataType ../../org.eclipse.uml2.types/model/Types.ecore#//String"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Component">
       <eStructuralFeatures xsi:type="ecore:EReference" name="base_Class" ordered="false"

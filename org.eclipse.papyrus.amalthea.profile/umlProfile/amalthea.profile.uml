@@ -275,6 +275,9 @@ of UML port&#xD;
         <ownedAttribute xmi:type="uml:Property" xmi:id="_nt3-gxZGEeeFzte_Mj5jqA" name="base_Port" association="_nt5zsBZGEeeFzte_Mj5jqA">
           <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Port"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Q4HCEB4lEee-N_wy_mgmag" name="interfaceName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_oiEewBZKEeeFzte_Mj5jqA" name="HWModel" URI="http://www.eclipse.org/papyrus/2017/Amalthea/Hardware">

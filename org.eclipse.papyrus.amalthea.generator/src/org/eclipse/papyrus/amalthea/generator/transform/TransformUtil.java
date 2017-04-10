@@ -54,7 +54,7 @@ public class TransformUtil {
 		return result;
 	}
 
-	private static EObject getAmaltheaStereotypeApplication(EObject source) {
+	public static EObject getAmaltheaStereotypeApplication(EObject source) {
 		if (source instanceof Element) {
 			Element element = (Element) source;
 			for (EObject s : element.getStereotypeApplications()) {

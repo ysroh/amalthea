@@ -15,7 +15,7 @@
         <ownedAttribute xmi:type="uml:Port" xmi:id="_xtNLwhozEeey-4lblVK-ag" name="Port1" visibility="public" aggregation="composite"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_xtNLwxozEeey-4lblVK-ag" name="Component2">
-        <ownedAttribute xmi:type="uml:Port" xmi:id="_xtNLxBozEeey-4lblVK-ag" name="Port1" visibility="public" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_xtNLxBozEeey-4lblVK-ag" name="Port1" visibility="public" aggregation="composite" isConjugated="true"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_xtNLxRozEeey-4lblVK-ag" name="Composite">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_xtNLxhozEeey-4lblVK-ag" name="component1" type="_xtNLwRozEeey-4lblVK-ag"/>

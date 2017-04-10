@@ -2,6 +2,7 @@
  */
 package org.eclipse.papyrus.amalthea.profile.amalthea.components.impl;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -49,6 +50,7 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.impl.StimuliPackage
 
 import org.eclipse.papyrus.sysml14.sysmlPackage;
 
+import org.eclipse.uml2.types.TypesPackage;
 import org.eclipse.uml2.uml.UMLPackage;
 
 /**
@@ -199,6 +201,15 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getFInterfacePort_InterfaceName() {
+		return (EAttribute)fInterfacePortEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getComponent() {
 		return componentEClass;
 	}
@@ -287,6 +298,7 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 		// Create classes and their features
 		fInterfacePortEClass = createEClass(FINTERFACE_PORT);
 		createEReference(fInterfacePortEClass, FINTERFACE_PORT__BASE_PORT);
+		createEAttribute(fInterfacePortEClass, FINTERFACE_PORT__INTERFACE_NAME);
 
 		componentEClass = createEClass(COMPONENT);
 		createEReference(componentEClass, COMPONENT__BASE_CLASS);
@@ -324,6 +336,7 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 
 		// Obtain other dependent packages
 		UMLPackage theUMLPackage = (UMLPackage)EPackage.Registry.INSTANCE.getEPackage(UMLPackage.eNS_URI);
+		TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
 		SoftwarePackage theSoftwarePackage = (SoftwarePackage)EPackage.Registry.INSTANCE.getEPackage(SoftwarePackage.eNS_URI);
 
 		// Create type parameters
@@ -336,6 +349,7 @@ public class ComponentsPackageImpl extends EPackageImpl implements ComponentsPac
 		// Initialize classes, features, and operations; add parameters
 		initEClass(fInterfacePortEClass, FInterfacePort.class, "FInterfacePort", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFInterfacePort_Base_Port(), theUMLPackage.getPort(), null, "base_Port", null, 1, 1, FInterfacePort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getFInterfacePort_InterfaceName(), theTypesPackage.getString(), "interfaceName", null, 1, 1, FInterfacePort.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(componentEClass, Component.class, "Component", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getComponent_Base_Class(), theUMLPackage.getClass_(), null, "base_Class", null, 1, 1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

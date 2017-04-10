@@ -2,6 +2,7 @@
  */
 package org.eclipse.papyrus.amalthea.profile.amalthea.components;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -76,13 +77,22 @@ public interface ComponentsPackage extends EPackage {
 	int FINTERFACE_PORT__BASE_PORT = 0;
 
 	/**
+	 * The feature id for the '<em><b>Interface Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FINTERFACE_PORT__INTERFACE_NAME = 1;
+
+	/**
 	 * The number of structural features of the '<em>FInterface Port</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FINTERFACE_PORT_FEATURE_COUNT = 1;
+	int FINTERFACE_PORT_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>FInterface Port</em>' class.
@@ -254,6 +264,17 @@ public interface ComponentsPackage extends EPackage {
 	EReference getFInterfacePort_Base_Port();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.FInterfacePort#getInterfaceName <em>Interface Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Interface Name</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.FInterfacePort#getInterfaceName()
+	 * @see #getFInterfacePort()
+	 * @generated
+	 */
+	EAttribute getFInterfacePort_InterfaceName();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.Component <em>Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -367,6 +388,14 @@ public interface ComponentsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference FINTERFACE_PORT__BASE_PORT = eINSTANCE.getFInterfacePort_Base_Port();
+
+		/**
+		 * The meta object literal for the '<em><b>Interface Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FINTERFACE_PORT__INTERFACE_NAME = eINSTANCE.getFInterfacePort_InterfaceName();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.impl.ComponentImpl <em>Component</em>}' class.

@@ -938,6 +938,7 @@
         <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690z56DJEeSZxfCXzZz3-w"/>
       </elements>
       <elements xmi:id="_2VpHghiXEeeoWfBb-FGkXQ" name="FInterfacePort">
+        <properties xmi:id="_ciPt8B4lEee-N_wy_mgmag" name="interfaceName"/>
         <supertypes href="ppe:/context/org.eclipse.papyrus.uml.properties/Model/UML/UML.ctx#_690ylaDJEeSZxfCXzZz3-w"/>
       </elements>
       <elements xmi:id="_2VpHgxiXEeeoWfBb-FGkXQ" name="Composite" supertypes="_2VpHgRiXEeeoWfBb-FGkXQ">

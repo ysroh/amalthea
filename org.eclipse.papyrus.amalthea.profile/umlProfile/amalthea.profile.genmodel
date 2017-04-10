@@ -118,6 +118,7 @@
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//components/FInterfacePort">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
             propertySortChoices="true" ecoreFeature="ecore:EReference amalthea.ecore#//components/FInterfacePort/base_Port"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//components/FInterfacePort/interfaceName"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//components/Component">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"

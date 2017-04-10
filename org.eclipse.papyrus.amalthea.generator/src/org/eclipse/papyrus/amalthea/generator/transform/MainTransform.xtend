@@ -72,6 +72,13 @@ import org.eclipse.uml2.uml.Package
 import org.eclipse.uml2.uml.PackageImport
 
 import static extension org.eclipse.papyrus.amalthea.generator.transform.TransformUtil.*
+import org.eclipse.app4mc.amalthea.model.FInterfacePort
+import org.eclipse.app4mc.amalthea.model.Port
+import org.eclipse.app4mc.amalthea.model.InterfaceKind
+import org.eclipse.papyrus.amalthea.profile.amalthea.components.Composite
+import org.eclipse.app4mc.amalthea.model.ComponentInstance
+import org.eclipse.app4mc.amalthea.model.Connector
+import org.eclipse.uml2.uml.ConnectorEnd
 
 class MainTransform {
 
@@ -471,4 +478,53 @@ class MainTransform {
 	def private dispatch transformAllocation(Object task, Object scheduler){
 		
 	}	
+	
+	/************* Components ***************/
+	def private dispatch create AmaltheaFactory.eINSTANCE.createComponent transform(org.eclipse.papyrus.amalthea.profile.amalthea.components.Component component){
+		it.name = component.base_Class.name
+		component.transformComponentHelper(it)
+	}
+	
+	def private transformComponentHelper(org.eclipse.papyrus.amalthea.profile.amalthea.components.Component source, Component target){
+		target.runnables.addAll(source.runnables.amaltheaFilteredList.map[c | c.transform].filter(typeof(Runnable)))
+		val portList = source.base_Class.ownedPorts.amaltheaFilteredList
+		target.ports.addAll(portList.map[p | p.transform].filter(typeof(Port)))
+	}
+	
+	def private dispatch create AmaltheaFactory.eINSTANCE.createFInterfacePort transform(org.eclipse.papyrus.amalthea.profile.amalthea.components.FInterfacePort port){
+		it.name = port.base_Port.name
+		it.interfaceName = port.interfaceName
+		var kind = "provides" 
+		if(port.base_Port.isConjugated){
+			kind = "requires"
+		}
+		it.kind = InterfaceKind.get(kind)
+	}
+
+	def private dispatch create AmaltheaFactory.eINSTANCE.createComposite transform(Composite composite){
+		val base = composite.base_Class
+		it.name = base.name
+		composite.transformComponentHelper(it)
+		it.componentInstances.addAll( base.ownedAttributes.map[e | e.transform].filter(typeof(ComponentInstance)))
+		val mappedConnectors = base.ownedConnectors.map[c | c.transform].filter(typeof(Connector))
+		it.connectors.addAll(mappedConnectors)
+		
+	}
+	
+	def private dispatch create AmaltheaFactory.eINSTANCE.createComponentInstance transform(org.eclipse.uml2.uml.Property instance){
+		it.name = instance.name
+		it.type = instance.type?.amaltheaStereotypeApplication?.transform as Component
+	}
+	
+	def private dispatch create AmaltheaFactory.eINSTANCE.createConnector transform(org.eclipse.uml2.uml.Connector connector){
+		it.name = connector.name
+		it.sourcePort = connector.ends.get(0).transformQaulifiedPort
+		it.targetPort = connector.ends.get(0).transformQaulifiedPort		
+	}
+	
+	def private create AmaltheaFactory.eINSTANCE.createQualifiedPort transformQaulifiedPort(ConnectorEnd end){
+		it.port = end.role.amaltheaStereotypeApplication?.transform as Port
+		it.instance = end.partWithPort?.transform as ComponentInstance
+	}
+	
 }
