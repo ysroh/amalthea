@@ -20,6 +20,7 @@ import org.eclipse.app4mc.amalthea.model.CoreType;
 import org.eclipse.app4mc.amalthea.model.GraphEntryBase;
 import org.eclipse.app4mc.amalthea.model.HWModel;
 import org.eclipse.app4mc.amalthea.model.HwSystem;
+import org.eclipse.app4mc.amalthea.model.IAnnotatable;
 import org.eclipse.app4mc.amalthea.model.ISR;
 import org.eclipse.app4mc.amalthea.model.ISRAllocation;
 import org.eclipse.app4mc.amalthea.model.InstructionsDeviation;
@@ -520,6 +521,7 @@ public class MainTransform {
     EList<RunnableItem> _runnableItems = it.getRunnableItems();
     Iterable<RunnableItem> _filter = Iterables.<RunnableItem>filter(mappedElements, RunnableItem.class);
     Iterables.<RunnableItem>addAll(_runnableItems, _filter);
+    this.transformCustomProperties(base, it);
   }
   
   private EObject _transform(final LabelAccess label) {
@@ -674,6 +676,8 @@ public class MainTransform {
     org.eclipse.uml2.uml.Class _base_Class = label.getBase_Class();
     String _name = _base_Class.getName();
     it.setName(_name);
+    org.eclipse.uml2.uml.Class _base_Class_1 = label.getBase_Class();
+    this.transformCustomProperties(_base_Class_1, it);
   }
   
   private EObject _transform(final org.eclipse.papyrus.amalthea.profile.amalthea.software.Task task) {
@@ -730,32 +734,30 @@ public class MainTransform {
     this.transformProcessHelper(isr, it);
   }
   
-  private boolean transformProcessHelper(final org.eclipse.papyrus.amalthea.profile.amalthea.software.Process source, final org.eclipse.app4mc.amalthea.model.Process target) {
-    boolean _xblockexpression = false;
-    {
-      int _priority = source.getPriority();
-      target.setPriority(_priority);
-      CallGraph _callgraph = source.getCallgraph();
-      EObject _transformHelper = null;
-      if (_callgraph!=null) {
-        Object _object = new Object();
-        _transformHelper=this.transformHelper(_callgraph, _object);
-      }
-      final org.eclipse.app4mc.amalthea.model.CallGraph callGraph = ((org.eclipse.app4mc.amalthea.model.CallGraph) _transformHelper);
-      target.setCallGraph(callGraph);
-      ConstraintsModel _constraintsModel = this.getConstraintsModel(this.root);
-      EList<Requirement> _requirements = _constraintsModel.getRequirements();
-      org.eclipse.uml2.uml.Class _base_Class = source.getBase_Class();
-      EList<Constraint> _ownedRules = _base_Class.getOwnedRules();
-      List<EObject> _amaltheaFilteredList = TransformUtil.getAmaltheaFilteredList(_ownedRules);
-      final Function1<EObject, EObject> _function = (EObject e) -> {
-        return this.transform(e);
-      };
-      List<EObject> _map = ListExtensions.<EObject, EObject>map(_amaltheaFilteredList, _function);
-      Iterable<ProcessRequirement> _filter = Iterables.<ProcessRequirement>filter(_map, ProcessRequirement.class);
-      _xblockexpression = Iterables.<Requirement>addAll(_requirements, _filter);
+  private void transformProcessHelper(final org.eclipse.papyrus.amalthea.profile.amalthea.software.Process source, final org.eclipse.app4mc.amalthea.model.Process target) {
+    int _priority = source.getPriority();
+    target.setPriority(_priority);
+    CallGraph _callgraph = source.getCallgraph();
+    EObject _transformHelper = null;
+    if (_callgraph!=null) {
+      Object _object = new Object();
+      _transformHelper=this.transformHelper(_callgraph, _object);
     }
-    return _xblockexpression;
+    final org.eclipse.app4mc.amalthea.model.CallGraph callGraph = ((org.eclipse.app4mc.amalthea.model.CallGraph) _transformHelper);
+    target.setCallGraph(callGraph);
+    ConstraintsModel _constraintsModel = this.getConstraintsModel(this.root);
+    EList<Requirement> _requirements = _constraintsModel.getRequirements();
+    org.eclipse.uml2.uml.Class _base_Class = source.getBase_Class();
+    EList<Constraint> _ownedRules = _base_Class.getOwnedRules();
+    List<EObject> _amaltheaFilteredList = TransformUtil.getAmaltheaFilteredList(_ownedRules);
+    final Function1<EObject, EObject> _function = (EObject e) -> {
+      return this.transform(e);
+    };
+    List<EObject> _map = ListExtensions.<EObject, EObject>map(_amaltheaFilteredList, _function);
+    Iterable<ProcessRequirement> _filter = Iterables.<ProcessRequirement>filter(_map, ProcessRequirement.class);
+    Iterables.<Requirement>addAll(_requirements, _filter);
+    org.eclipse.uml2.uml.Class _base_Class_1 = source.getBase_Class();
+    this.transformCustomProperties(_base_Class_1, target);
   }
   
   private EObject _transformHelper(final CallGraph callGraph, final Object owner) {
@@ -785,6 +787,8 @@ public class MainTransform {
     final Iterable<GraphEntryBase> graphEntries = Iterables.<GraphEntryBase>filter(_map, GraphEntryBase.class);
     EList<GraphEntryBase> _graphEntries = it.getGraphEntries();
     Iterables.<GraphEntryBase>addAll(_graphEntries, graphEntries);
+    org.eclipse.uml2.uml.Class _base_Class = callGraph.getBase_Class();
+    this.transformCustomProperties(_base_Class, it);
   }
   
   private EObject _transformHelper(final CallSequence callSequence, final Object owner) {
@@ -817,6 +821,7 @@ public class MainTransform {
     final Iterable<CallSequenceItem> items = Iterables.<CallSequenceItem>filter(_map, CallSequenceItem.class);
     EList<CallSequenceItem> _calls = it.getCalls();
     Iterables.<CallSequenceItem>addAll(_calls, items);
+    this.transformCustomProperties(base, it);
   }
   
   private EObject _transform(final TaskRunnableCall call) {
@@ -929,6 +934,8 @@ public class MainTransform {
     it.setPrescaler(prescaler);
     EList<org.eclipse.app4mc.amalthea.model.Network> _networks_1 = it.getNetworks();
     Iterables.<org.eclipse.app4mc.amalthea.model.Network>addAll(_networks_1, networks);
+    org.eclipse.uml2.uml.Class _base_Class_1 = system.getBase_Class();
+    this.transformCustomProperties(_base_Class_1, it);
   }
   
   private EObject _transform(final ECU ecu) {
@@ -986,6 +993,8 @@ public class MainTransform {
     it.setPrescaler(prescaler);
     EList<org.eclipse.app4mc.amalthea.model.Network> _networks_1 = it.getNetworks();
     Iterables.<org.eclipse.app4mc.amalthea.model.Network>addAll(_networks_1, networks);
+    org.eclipse.uml2.uml.Class _base_Class_1 = ecu.getBase_Class();
+    this.transformCustomProperties(_base_Class_1, it);
   }
   
   private EObject _transform(final Microcontroller processor) {
@@ -1043,6 +1052,8 @@ public class MainTransform {
     it.setPrescaler(prescaler);
     EList<org.eclipse.app4mc.amalthea.model.Network> _networks_1 = it.getNetworks();
     Iterables.<org.eclipse.app4mc.amalthea.model.Network>addAll(_networks_1, networks);
+    org.eclipse.uml2.uml.Class _base_Class_1 = processor.getBase_Class();
+    this.transformCustomProperties(_base_Class_1, it);
   }
   
   private EObject _transform(final Core core) {
@@ -1098,6 +1109,8 @@ public class MainTransform {
     it.setPrescaler(prescaler);
     EList<org.eclipse.app4mc.amalthea.model.Network> _networks_1 = it.getNetworks();
     Iterables.<org.eclipse.app4mc.amalthea.model.Network>addAll(_networks_1, networks);
+    org.eclipse.uml2.uml.Class _base_Class_1 = core.getBase_Class();
+    this.transformCustomProperties(_base_Class_1, it);
   }
   
   private EObject _transformHelper(final Network network, final Object owner) {
@@ -1134,6 +1147,8 @@ public class MainTransform {
       _transformHelper=this.transformHelper(_prescaler, _object);
     }
     it.setPrescaler(((org.eclipse.app4mc.amalthea.model.Prescaler) _transformHelper));
+    org.eclipse.uml2.uml.Class _base_Class_1 = network.getBase_Class();
+    this.transformCustomProperties(_base_Class_1, it);
   }
   
   private EObject _transform(final SystemType type) {
@@ -1262,6 +1277,8 @@ public class MainTransform {
       _transformHelper=this.transformHelper(_frequency, _object);
     }
     it.setFrequency(((org.eclipse.app4mc.amalthea.model.Frequency) _transformHelper));
+    org.eclipse.uml2.uml.Class _base_Class_1 = quartz.getBase_Class();
+    this.transformCustomProperties(_base_Class_1, it);
   }
   
   private EObject _transformHelper(final Frequency frequency, final Object owner) {
@@ -1382,6 +1399,8 @@ public class MainTransform {
     Iterables.<org.eclipse.app4mc.amalthea.model.TaskScheduler>addAll(_taskSchedulers, schedulers);
     EList<org.eclipse.app4mc.amalthea.model.InterruptController> _interruptControllers = it.getInterruptControllers();
     Iterables.<org.eclipse.app4mc.amalthea.model.InterruptController>addAll(_interruptControllers, controllers);
+    org.eclipse.uml2.uml.Class _base_Class_1 = os.getBase_Class();
+    this.transformCustomProperties(_base_Class_1, it);
   }
   
   private EObject _transform(final TaskScheduler scheduler) {
@@ -1421,6 +1440,8 @@ public class MainTransform {
       _transformHelper_1=this.transformHelper(_schedulingalgorithm, _object_1);
     }
     it.setSchedulingAlgorithm(((org.eclipse.app4mc.amalthea.model.TaskSchedulingAlgorithm) _transformHelper_1));
+    org.eclipse.uml2.uml.Class _base_Class_1 = scheduler.getBase_Class();
+    this.transformCustomProperties(_base_Class_1, it);
   }
   
   private EObject _transform(final InterruptController ic) {
@@ -1460,6 +1481,8 @@ public class MainTransform {
       _transformHelper_1=this.transformHelper(_schedulingalgorithm, _object_1);
     }
     it.setSchedulingAlgorithm(((org.eclipse.app4mc.amalthea.model.InterruptSchedulingAlgorithm) _transformHelper_1));
+    org.eclipse.uml2.uml.Class _base_Class_1 = ic.getBase_Class();
+    this.transformCustomProperties(_base_Class_1, it);
   }
   
   private EObject _transformHelper(final SchedulingHWUnit schedUnit, final Object owner) {
@@ -1848,12 +1871,14 @@ public class MainTransform {
     String _name = _base_Class.getName();
     it.setName(_name);
     this.transformComponentHelper(component, it);
-    org.eclipse.uml2.uml.Class _base_Class_1 = component.getBase_Class();
-    EList<Property> _ownedAttributes = _base_Class_1.getOwnedAttributes();
+  }
+  
+  private void transformCustomProperties(final org.eclipse.uml2.uml.Class container, final IAnnotatable annotatable) {
+    EList<Property> _ownedAttributes = container.getOwnedAttributes();
     List<EObject> _amaltheaFilteredList = TransformUtil.getAmaltheaFilteredList(_ownedAttributes);
     final Iterable<CustomProperty> customProperties = Iterables.<CustomProperty>filter(_amaltheaFilteredList, CustomProperty.class);
     for (final CustomProperty custom : customProperties) {
-      EMap<String, Value> _customProperties = it.getCustomProperties();
+      EMap<String, Value> _customProperties = annotatable.getCustomProperties();
       this.transformCustomProperty(custom, _customProperties);
     }
   }
@@ -1942,29 +1967,27 @@ public class MainTransform {
     return null;
   }
   
-  private boolean transformComponentHelper(final org.eclipse.papyrus.amalthea.profile.amalthea.components.Component source, final Component target) {
-    boolean _xblockexpression = false;
-    {
-      EList<org.eclipse.app4mc.amalthea.model.Runnable> _runnables = target.getRunnables();
-      EList<org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable> _runnables_1 = source.getRunnables();
-      final Function1<org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable, EObject> _function = (org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable c) -> {
-        return this.transform(c);
-      };
-      List<EObject> _map = ListExtensions.<org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable, EObject>map(_runnables_1, _function);
-      Iterable<org.eclipse.app4mc.amalthea.model.Runnable> _filter = Iterables.<org.eclipse.app4mc.amalthea.model.Runnable>filter(_map, org.eclipse.app4mc.amalthea.model.Runnable.class);
-      Iterables.<org.eclipse.app4mc.amalthea.model.Runnable>addAll(_runnables, _filter);
-      org.eclipse.uml2.uml.Class _base_Class = source.getBase_Class();
-      EList<Port> _ownedPorts = _base_Class.getOwnedPorts();
-      final List<EObject> portList = TransformUtil.getAmaltheaFilteredList(_ownedPorts);
-      EList<org.eclipse.app4mc.amalthea.model.Port> _ports = target.getPorts();
-      final Function1<EObject, EObject> _function_1 = (EObject p) -> {
-        return this.transform(p);
-      };
-      List<EObject> _map_1 = ListExtensions.<EObject, EObject>map(portList, _function_1);
-      Iterable<org.eclipse.app4mc.amalthea.model.Port> _filter_1 = Iterables.<org.eclipse.app4mc.amalthea.model.Port>filter(_map_1, org.eclipse.app4mc.amalthea.model.Port.class);
-      _xblockexpression = Iterables.<org.eclipse.app4mc.amalthea.model.Port>addAll(_ports, _filter_1);
-    }
-    return _xblockexpression;
+  private void transformComponentHelper(final org.eclipse.papyrus.amalthea.profile.amalthea.components.Component source, final Component target) {
+    EList<org.eclipse.app4mc.amalthea.model.Runnable> _runnables = target.getRunnables();
+    EList<org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable> _runnables_1 = source.getRunnables();
+    final Function1<org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable, EObject> _function = (org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable c) -> {
+      return this.transform(c);
+    };
+    List<EObject> _map = ListExtensions.<org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable, EObject>map(_runnables_1, _function);
+    Iterable<org.eclipse.app4mc.amalthea.model.Runnable> _filter = Iterables.<org.eclipse.app4mc.amalthea.model.Runnable>filter(_map, org.eclipse.app4mc.amalthea.model.Runnable.class);
+    Iterables.<org.eclipse.app4mc.amalthea.model.Runnable>addAll(_runnables, _filter);
+    org.eclipse.uml2.uml.Class _base_Class = source.getBase_Class();
+    EList<Port> _ownedPorts = _base_Class.getOwnedPorts();
+    final List<EObject> portList = TransformUtil.getAmaltheaFilteredList(_ownedPorts);
+    EList<org.eclipse.app4mc.amalthea.model.Port> _ports = target.getPorts();
+    final Function1<EObject, EObject> _function_1 = (EObject p) -> {
+      return this.transform(p);
+    };
+    List<EObject> _map_1 = ListExtensions.<EObject, EObject>map(portList, _function_1);
+    Iterable<org.eclipse.app4mc.amalthea.model.Port> _filter_1 = Iterables.<org.eclipse.app4mc.amalthea.model.Port>filter(_map_1, org.eclipse.app4mc.amalthea.model.Port.class);
+    Iterables.<org.eclipse.app4mc.amalthea.model.Port>addAll(_ports, _filter_1);
+    org.eclipse.uml2.uml.Class _base_Class_1 = source.getBase_Class();
+    this.transformCustomProperties(_base_Class_1, target);
   }
   
   private EObject _transform(final FInterfacePort port) {

@@ -16,6 +16,9 @@
     </tasks>
     <tasks name="Class1"/>
     <runnables name="ABSCalculation">
+      <customProperties key="runnableCustom">
+        <value xsi:type="am:StringObject" value="runnableCustom"/>
+      </customProperties>
       <runnableItems xsi:type="am:LabelAccess" data="ABSActivation?type=Label" access="read"/>
       <runnableItems xsi:type="am:RunnableInstructions">
         <default xsi:type="am:InstructionsDeviation">

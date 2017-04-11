@@ -87,6 +87,7 @@ import org.eclipse.emf.ecore.EDataType
 import org.eclipse.uml2.uml.LiteralString
 import org.eclipse.uml2.uml.LiteralInteger
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.PortCustomProperty
+import org.eclipse.app4mc.amalthea.model.IAnnotatable
 
 class MainTransform {
 
@@ -216,6 +217,7 @@ class MainTransform {
 		it.service = runnable.service
 		val mappedElements = base.ownedElements.amaltheaList.map[o | o.transform]
 		it.runnableItems.addAll(mappedElements.filter(typeof(RunnableItem)))
+		base.transformCustomProperties(it)
 	}
 			
 	def private dispatch create AmaltheaFactory.eINSTANCE.createLabelAccess transform(LabelAccess label){
@@ -243,6 +245,7 @@ class MainTransform {
 	// Labels
 	def private dispatch create AmaltheaFactory.eINSTANCE.createLabel transform(org.eclipse.papyrus.amalthea.profile.amalthea.software.Label label){
 		it.name = label.base_Class.name
+		label.base_Class.transformCustomProperties(it)
 	}
 	
 	// Tasks
@@ -263,11 +266,14 @@ class MainTransform {
 		val callGraph = source.callgraph?.transformHelper(new Object) as CallGraph
 		target.callGraph = callGraph
 		root.constraintsModel.requirements.addAll(source.base_Class.ownedRules.amaltheaFilteredList.map[e | e.transform].filter(typeof(ProcessRequirement)))
+		source.base_Class.transformCustomProperties(target)
+		
 	}
 
 	def private dispatch create AmaltheaFactory.eINSTANCE.createCallGraph transformHelper(org.eclipse.papyrus.amalthea.profile.amalthea.software.CallGraph callGraph, Object owner){
 		val graphEntries = callGraph.graphentries.map[e | e.transformHelper(new Object)].filter(typeof(GraphEntryBase))
 		it.graphEntries.addAll(graphEntries)
+		callGraph.base_Class.transformCustomProperties(it)
 	}
 	
 	def private dispatch create AmaltheaFactory.eINSTANCE.createCallSequence transformHelper(CallSequence callSequence, Object owner){
@@ -275,6 +281,7 @@ class MainTransform {
 		it.name = base.name
 		val items = base.ownedOperations.amaltheaFilteredList.map[e | e.transform].filter(typeof(CallSequenceItem))
 		it.calls.addAll(items)
+		base.transformCustomProperties(it)
 	}
 	
 	def private dispatch create AmaltheaFactory.eINSTANCE.createTaskRunnableCall transform(TaskRunnableCall call){
@@ -298,6 +305,8 @@ class MainTransform {
 		it.quartzes.addAll(quartz)
 		it.prescaler = prescaler
 		it.networks.addAll(networks)
+		
+		system.base_Class.transformCustomProperties(it)
 	}
 	
 	def private dispatch create AmaltheaFactory.eINSTANCE.createECU transform(org.eclipse.papyrus.amalthea.profile.amalthea.hardware.ECU ecu){
@@ -310,7 +319,10 @@ class MainTransform {
 		it.microcontrollers.addAll(processors)
 		it.quartzes.addAll(quartz)
 		it.prescaler = prescaler
-		it.networks.addAll(networks)		
+		it.networks.addAll(networks)	
+		
+		ecu.base_Class.transformCustomProperties(it)
+			
 	}
 	
 	def private dispatch create AmaltheaFactory.eINSTANCE.createMicrocontroller transform(org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Microcontroller processor){
@@ -323,7 +335,10 @@ class MainTransform {
 		it.cores.addAll(cores)
 		it.quartzes.addAll(quartz)
 		it.prescaler = prescaler
-		it.networks.addAll(networks)		
+		it.networks.addAll(networks)
+		
+		processor.base_Class.transformCustomProperties(it)
+
 	}	
 	
 	def private dispatch create AmaltheaFactory.eINSTANCE.createCore transform(org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Core core){
@@ -335,13 +350,18 @@ class MainTransform {
 
 		it.quartzes.addAll(quartz)
 		it.prescaler = prescaler
-		it.networks.addAll(networks)		
+		it.networks.addAll(networks)
+		
+		core.base_Class.transformCustomProperties(it)
+		
 	}
 	
 	def private dispatch create AmaltheaFactory.eINSTANCE.createNetwork transformHelper(org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Network network, Object owner){
 		it.name = network.base_Class.name
 		it.type = network.networktype?.transform as NetworkType
 		it.prescaler = network.prescaler?.transformHelper(new Object) as Prescaler
+		network.base_Class.transformCustomProperties(it)
+		
 	}	
 	
 	def private dispatch create AmaltheaFactory.eINSTANCE.createSystemType transform(SystemType type){
@@ -365,11 +385,14 @@ class MainTransform {
 	def private dispatch create AmaltheaFactory.eINSTANCE.createQuartz transformHelper(org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Quartz quartz, Object owner){
 		it.name = quartz.base_Class.name
 		it.frequency = quartz.frequency?.transformHelper(new Object) as Frequency
+		quartz.base_Class.transformCustomProperties(it)
+		
 	}
 			
 	def private dispatch create AmaltheaFactory.eINSTANCE.createFrequency transformHelper(org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Frequency frequency, Object owner){
 		it.value = frequency.value
 		it.unit = FrequencyUnit.get(frequency.unit.literal)
+		
 	}
 	
 	def private dispatch create AmaltheaFactory.eINSTANCE.createPrescaler transformHelper(org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Prescaler prescaler, Object owner){
@@ -390,6 +413,9 @@ class MainTransform {
 		val controllers = os.interruptcontroller.map[e | e.transform].filter(typeof(InterruptController))
 		it.taskSchedulers.addAll(schedulers)
 		it.interruptControllers.addAll(controllers)
+		
+		os.base_Class.transformCustomProperties(it)
+		
 	}
 	
 	def private dispatch create AmaltheaFactory.eINSTANCE.createTaskScheduler transform(org.eclipse.papyrus.amalthea.profile.amalthea.os.TaskScheduler scheduler){
@@ -397,6 +423,9 @@ class MainTransform {
 		it.scheduleUnitPriority = scheduler.scheduleUnitPriority
 		it.schedulingUnit = scheduler.schedulingunit?.transformHelper(new Object) as SchedulingUnit
 		it.schedulingAlgorithm = scheduler.schedulingalgorithm?.transformHelper(new Object) as TaskSchedulingAlgorithm
+		
+		scheduler.base_Class.transformCustomProperties(it)
+		
 	}
 	
 	def private dispatch create AmaltheaFactory.eINSTANCE.createInterruptController transform(org.eclipse.papyrus.amalthea.profile.amalthea.os.InterruptController ic){
@@ -404,6 +433,9 @@ class MainTransform {
 		it.scheduleUnitPriority = ic.scheduleUnitPriority
 		it.schedulingUnit = ic.schedulingunit?.transformHelper(new Object) as SchedulingUnit
 		it.schedulingAlgorithm = ic.schedulingalgorithm?.transformHelper(new Object) as InterruptSchedulingAlgorithm
+		
+		ic.base_Class.transformCustomProperties(it)
+		
 	}
 	
 	def private dispatch create AmaltheaFactory.eINSTANCE.createSchedulingHWUnit transformHelper(SchedulingHWUnit schedUnit, Object owner){
@@ -492,9 +524,12 @@ class MainTransform {
 	def private dispatch create AmaltheaFactory.eINSTANCE.createComponent transform(org.eclipse.papyrus.amalthea.profile.amalthea.components.Component component){
 		it.name = component.base_Class.name
 		component.transformComponentHelper(it)
-		val customProperties = component.base_Class.ownedAttributes.amaltheaFilteredList.filter(typeof(CustomProperty))
+	}
+	
+	def private transformCustomProperties(org.eclipse.uml2.uml.Class container, IAnnotatable annotatable){
+		val customProperties = container.ownedAttributes.amaltheaFilteredList.filter(typeof(CustomProperty))
 		for(custom : customProperties){
-			custom.transformCustomProperty(it.customProperties)
+			custom.transformCustomProperty(annotatable.customProperties)
 		}
 	}
 	
@@ -525,6 +560,7 @@ class MainTransform {
 		target.runnables.addAll(source.runnables.map[c | c.transform].filter(typeof(Runnable)))
 		val portList = source.base_Class.ownedPorts.amaltheaFilteredList
 		target.ports.addAll(portList.map[p | p.transform].filter(typeof(Port)))
+		source.base_Class.transformCustomProperties(target)
 	}
 	
 	def private dispatch create AmaltheaFactory.eINSTANCE.createFInterfacePort transform(FInterfacePort port){

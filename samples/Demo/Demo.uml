@@ -37,6 +37,10 @@
     <packagedElement xmi:type="uml:Package" xmi:id="_Fg8lYBobEee60cQ75oPnTA" name="Software">
       <packagedElement xmi:type="uml:Package" xmi:id="_InPn8BobEee60cQ75oPnTA" name="Runnables">
         <packagedElement xmi:type="uml:Class" xmi:id="_TtKMcBobEee60cQ75oPnTA" name="ABSCalculation">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_6uizwB7xEeelxpXHKyEQyw" name="runnableCustom">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_B6rDQB7yEeelxpXHKyEQyw" value="runnableCustom"/>
+          </ownedAttribute>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_Xv63QBobEee60cQ75oPnTA" name="VotedDecelerationRate"/>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_hGPGYBobEee60cQ75oPnTA" name="RunnableInstructions"/>
         </packagedElement>
@@ -214,4 +218,5 @@
   <Software:Task xmi:id="_OZ_VYB7LEeeUA-EDwkME5w" base_Class="_OZtokB7LEeeUA-EDwkME5w"/>
   <Common:CustomProperty xmi:id="__af1QB7gEeeER7OeXdCh5w" key="comp1CustomProperty" base_Property="_yv6ZAB7gEeeER7OeXdCh5w"/>
   <Common:PortCustomProperty xmi:id="_KMcU4B7hEeeER7OeXdCh5w" key="port1CustomProperty" base_Property="_KL47QB7hEeeER7OeXdCh5w" port="_5xxfIBozEeey-4lblVK-ag"/>
+  <Common:CustomProperty xmi:id="_6va9gB7xEeelxpXHKyEQyw" key="runnableCustom" base_Property="_6uizwB7xEeelxpXHKyEQyw"/>
 </xmi:XMI>
