@@ -13,11 +13,14 @@
     <packagedElement xmi:type="uml:Package" xmi:id="_xtNLwBozEeey-4lblVK-ag" name="Component">
       <packagedElement xmi:type="uml:Class" xmi:id="_xtNLwRozEeey-4lblVK-ag" name="Component1">
         <ownedAttribute xmi:type="uml:Port" xmi:id="_xtNLwhozEeey-4lblVK-ag" name="Port1" visibility="public" aggregation="composite"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_yv6ZAB7gEeeER7OeXdCh5w" name="Attribute1" visibility="public">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_yv6ZAB7gEeeER7OeXdCh5w" name="comp1CustomProperty" visibility="public">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           <defaultValue xmi:type="uml:LiteralString" xmi:id="_FETWYB7hEeeER7OeXdCh5w" value="test"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_KL47QB7hEeeER7OeXdCh5w" name="Attribute2" visibility="public"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_KL47QB7hEeeER7OeXdCh5w" name="port1CustomProperty" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_p3B9sB7pEeebov0zdO4EEg" value="port1CustomString"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_xtNLwxozEeey-4lblVK-ag" name="Component2">
         <ownedAttribute xmi:type="uml:Port" xmi:id="_xtNLxBozEeey-4lblVK-ag" name="Port1" visibility="public" aggregation="composite" isConjugated="true"/>
@@ -209,6 +212,6 @@
   <Allocations:Allocate xmi:id="_E6KcoB4VEee3c8IygCLd7Q" base_DirectedRelationship="_E5_dgB4VEee3c8IygCLd7Q" base_Abstraction="_E5_dgB4VEee3c8IygCLd7Q"/>
   <Allocations:Allocate xmi:id="_KeBGwB4VEee3c8IygCLd7Q" base_DirectedRelationship="_KduL0B4VEee3c8IygCLd7Q" base_Abstraction="_KduL0B4VEee3c8IygCLd7Q"/>
   <Software:Task xmi:id="_OZ_VYB7LEeeUA-EDwkME5w" base_Class="_OZtokB7LEeeUA-EDwkME5w"/>
-  <Common:CustomProperty xmi:id="__af1QB7gEeeER7OeXdCh5w" base_Property="_yv6ZAB7gEeeER7OeXdCh5w"/>
-  <Common:PortCustomProperty xmi:id="_KMcU4B7hEeeER7OeXdCh5w" base_Property="_KL47QB7hEeeER7OeXdCh5w" port="_5xxfIBozEeey-4lblVK-ag"/>
+  <Common:CustomProperty xmi:id="__af1QB7gEeeER7OeXdCh5w" key="comp1CustomProperty" base_Property="_yv6ZAB7gEeeER7OeXdCh5w"/>
+  <Common:PortCustomProperty xmi:id="_KMcU4B7hEeeER7OeXdCh5w" key="port1CustomProperty" base_Property="_KL47QB7hEeeER7OeXdCh5w" port="_5xxfIBozEeey-4lblVK-ag"/>
 </xmi:XMI>

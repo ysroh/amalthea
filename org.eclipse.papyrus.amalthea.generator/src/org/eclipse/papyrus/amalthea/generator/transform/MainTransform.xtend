@@ -80,6 +80,13 @@ import org.eclipse.uml2.uml.PackageImport
 import org.eclipse.uml2.uml.Property
 
 import static extension org.eclipse.papyrus.amalthea.generator.transform.TransformUtil.*
+import org.eclipse.papyrus.amalthea.profile.amalthea.common.CustomProperty
+import org.eclipse.emf.common.util.EMap
+import org.eclipse.app4mc.amalthea.model.Value
+import org.eclipse.emf.ecore.EDataType
+import org.eclipse.uml2.uml.LiteralString
+import org.eclipse.uml2.uml.LiteralInteger
+import org.eclipse.papyrus.amalthea.profile.amalthea.common.PortCustomProperty
 
 class MainTransform {
 
@@ -207,7 +214,8 @@ class MainTransform {
 		it.name = base.name
 		it.callback = runnable.callback
 		it.service = runnable.service
-		it.runnableItems.addAll(base.ownedOperations.amaltheaList.map[o | o.transform].filter(typeof(RunnableItem)))
+		val mappedElements = base.ownedElements.amaltheaList.map[o | o.transform]
+		it.runnableItems.addAll(mappedElements.filter(typeof(RunnableItem)))
 	}
 			
 	def private dispatch create AmaltheaFactory.eINSTANCE.createLabelAccess transform(LabelAccess label){
@@ -484,8 +492,35 @@ class MainTransform {
 	def private dispatch create AmaltheaFactory.eINSTANCE.createComponent transform(org.eclipse.papyrus.amalthea.profile.amalthea.components.Component component){
 		it.name = component.base_Class.name
 		component.transformComponentHelper(it)
+		val customProperties = component.base_Class.ownedAttributes.amaltheaFilteredList.filter(typeof(CustomProperty))
+		for(custom : customProperties){
+			custom.transformCustomProperty(it.customProperties)
+		}
 	}
 	
+	def private dispatch transformCustomProperty(CustomProperty custom, EMap<String, Value> map){
+		val value = custom.base_Property.defaultValue?.transformValue as Value
+		map.put(custom.key, value)
+	}
+	
+	def private dispatch transformCustomProperty(PortCustomProperty custom, EMap<String, Value> map){
+		val port = custom.port.transform as org.eclipse.app4mc.amalthea.model.FInterfacePort
+		val value = custom.base_Property.defaultValue?.transformValue as Value
+		port.customProperties.put(custom.key, value)
+	}	
+	
+	def private dispatch create AmaltheaFactory.eINSTANCE.createStringObject transformValue(LiteralString value){
+		it.value = value.value
+	}
+
+	def private dispatch create AmaltheaFactory.eINSTANCE.createIntegerObject transformValue(LiteralInteger value){
+		it.value = value.value
+	}
+	
+	def private dispatch transformValue(Object value){
+		
+	}
+		
 	def private transformComponentHelper(org.eclipse.papyrus.amalthea.profile.amalthea.components.Component source, Component target){
 		target.runnables.addAll(source.runnables.map[c | c.transform].filter(typeof(Runnable)))
 		val portList = source.base_Class.ownedPorts.amaltheaFilteredList

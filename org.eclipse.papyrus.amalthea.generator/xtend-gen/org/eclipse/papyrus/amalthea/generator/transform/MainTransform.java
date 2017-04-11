@@ -23,6 +23,7 @@ import org.eclipse.app4mc.amalthea.model.HwSystem;
 import org.eclipse.app4mc.amalthea.model.ISR;
 import org.eclipse.app4mc.amalthea.model.ISRAllocation;
 import org.eclipse.app4mc.amalthea.model.InstructionsDeviation;
+import org.eclipse.app4mc.amalthea.model.IntegerObject;
 import org.eclipse.app4mc.amalthea.model.InterProcess;
 import org.eclipse.app4mc.amalthea.model.InterfaceKind;
 import org.eclipse.app4mc.amalthea.model.Label;
@@ -39,9 +40,12 @@ import org.eclipse.app4mc.amalthea.model.RunnableItem;
 import org.eclipse.app4mc.amalthea.model.SWModel;
 import org.eclipse.app4mc.amalthea.model.StimuliModel;
 import org.eclipse.app4mc.amalthea.model.Stimulus;
+import org.eclipse.app4mc.amalthea.model.StringObject;
 import org.eclipse.app4mc.amalthea.model.Task;
 import org.eclipse.app4mc.amalthea.model.TaskAllocation;
+import org.eclipse.app4mc.amalthea.model.Value;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -49,9 +53,11 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.papyrus.amalthea.generator.transform.TransformUtil;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.Counter;
+import org.eclipse.papyrus.amalthea.profile.amalthea.common.CustomProperty;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.Deviation;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.Distribution;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.Instructions;
+import org.eclipse.papyrus.amalthea.profile.amalthea.common.PortCustomProperty;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.SignedTime;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.Time;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.TimeUnit;
@@ -100,6 +106,9 @@ import org.eclipse.uml2.uml.Connector;
 import org.eclipse.uml2.uml.ConnectorEnd;
 import org.eclipse.uml2.uml.Constraint;
 import org.eclipse.uml2.uml.DataType;
+import org.eclipse.uml2.uml.Element;
+import org.eclipse.uml2.uml.LiteralInteger;
+import org.eclipse.uml2.uml.LiteralString;
 import org.eclipse.uml2.uml.Model;
 import org.eclipse.uml2.uml.NamedElement;
 import org.eclipse.uml2.uml.Operation;
@@ -108,6 +117,7 @@ import org.eclipse.uml2.uml.PackageableElement;
 import org.eclipse.uml2.uml.Port;
 import org.eclipse.uml2.uml.Property;
 import org.eclipse.uml2.uml.Type;
+import org.eclipse.uml2.uml.ValueSpecification;
 import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 import org.eclipse.xtext.xbase.lib.Conversions;
 import org.eclipse.xtext.xbase.lib.Exceptions;
@@ -501,14 +511,14 @@ public class MainTransform {
     it.setCallback(_isCallback);
     boolean _isService = runnable.isService();
     it.setService(_isService);
-    EList<RunnableItem> _runnableItems = it.getRunnableItems();
-    EList<Operation> _ownedOperations = base.getOwnedOperations();
-    List<EObject> _amaltheaList = TransformUtil.getAmaltheaList(_ownedOperations);
+    EList<Element> _ownedElements = base.getOwnedElements();
+    List<EObject> _amaltheaList = TransformUtil.getAmaltheaList(_ownedElements);
     final Function1<EObject, EObject> _function = (EObject o) -> {
       return this.transform(o);
     };
-    List<EObject> _map = ListExtensions.<EObject, EObject>map(_amaltheaList, _function);
-    Iterable<RunnableItem> _filter = Iterables.<RunnableItem>filter(_map, RunnableItem.class);
+    final List<EObject> mappedElements = ListExtensions.<EObject, EObject>map(_amaltheaList, _function);
+    EList<RunnableItem> _runnableItems = it.getRunnableItems();
+    Iterable<RunnableItem> _filter = Iterables.<RunnableItem>filter(mappedElements, RunnableItem.class);
     Iterables.<RunnableItem>addAll(_runnableItems, _filter);
   }
   
@@ -1838,6 +1848,98 @@ public class MainTransform {
     String _name = _base_Class.getName();
     it.setName(_name);
     this.transformComponentHelper(component, it);
+    org.eclipse.uml2.uml.Class _base_Class_1 = component.getBase_Class();
+    EList<Property> _ownedAttributes = _base_Class_1.getOwnedAttributes();
+    List<EObject> _amaltheaFilteredList = TransformUtil.getAmaltheaFilteredList(_ownedAttributes);
+    final Iterable<CustomProperty> customProperties = Iterables.<CustomProperty>filter(_amaltheaFilteredList, CustomProperty.class);
+    for (final CustomProperty custom : customProperties) {
+      EMap<String, Value> _customProperties = it.getCustomProperties();
+      this.transformCustomProperty(custom, _customProperties);
+    }
+  }
+  
+  private Value _transformCustomProperty(final CustomProperty custom, final EMap<String, Value> map) {
+    Value _xblockexpression = null;
+    {
+      Property _base_Property = custom.getBase_Property();
+      ValueSpecification _defaultValue = _base_Property.getDefaultValue();
+      Value _transformValue = null;
+      if (_defaultValue!=null) {
+        _transformValue=this.transformValue(_defaultValue);
+      }
+      final Value value = ((Value) _transformValue);
+      String _key = custom.getKey();
+      _xblockexpression = map.put(_key, value);
+    }
+    return _xblockexpression;
+  }
+  
+  private Value _transformCustomProperty(final PortCustomProperty custom, final EMap<String, Value> map) {
+    Value _xblockexpression = null;
+    {
+      FInterfacePort _port = custom.getPort();
+      EObject _transform = this.transform(_port);
+      final org.eclipse.app4mc.amalthea.model.FInterfacePort port = ((org.eclipse.app4mc.amalthea.model.FInterfacePort) _transform);
+      Property _base_Property = custom.getBase_Property();
+      ValueSpecification _defaultValue = _base_Property.getDefaultValue();
+      Value _transformValue = null;
+      if (_defaultValue!=null) {
+        _transformValue=this.transformValue(_defaultValue);
+      }
+      final Value value = ((Value) _transformValue);
+      EMap<String, Value> _customProperties = port.getCustomProperties();
+      String _key = custom.getKey();
+      _xblockexpression = _customProperties.put(_key, value);
+    }
+    return _xblockexpression;
+  }
+  
+  private Value _transformValue(final LiteralString value) {
+    final ArrayList<?> _cacheKey = CollectionLiterals.newArrayList(value);
+    final StringObject _result;
+    synchronized (_createCache_transformValue) {
+      if (_createCache_transformValue.containsKey(_cacheKey)) {
+        return _createCache_transformValue.get(_cacheKey);
+      }
+      StringObject _createStringObject = AmaltheaFactory.eINSTANCE.createStringObject();
+      _result = _createStringObject;
+      _createCache_transformValue.put(_cacheKey, _result);
+    }
+    _init_transformValue(_result, value);
+    return _result;
+  }
+  
+  private final HashMap<ArrayList<?>, Value> _createCache_transformValue = CollectionLiterals.newHashMap();
+  
+  private void _init_transformValue(final StringObject it, final LiteralString value) {
+    String _value = value.getValue();
+    it.setValue(_value);
+  }
+  
+  private Value _transformValue(final LiteralInteger value) {
+    final ArrayList<?> _cacheKey = CollectionLiterals.newArrayList(value);
+    final IntegerObject _result;
+    synchronized (_createCache_transformValue_1) {
+      if (_createCache_transformValue_1.containsKey(_cacheKey)) {
+        return _createCache_transformValue_1.get(_cacheKey);
+      }
+      IntegerObject _createIntegerObject = AmaltheaFactory.eINSTANCE.createIntegerObject();
+      _result = _createIntegerObject;
+      _createCache_transformValue_1.put(_cacheKey, _result);
+    }
+    _init_transformValue_1(_result, value);
+    return _result;
+  }
+  
+  private final HashMap<ArrayList<?>, Value> _createCache_transformValue_1 = CollectionLiterals.newHashMap();
+  
+  private void _init_transformValue_1(final IntegerObject it, final LiteralInteger value) {
+    int _value = value.getValue();
+    it.setValue(_value);
+  }
+  
+  private Value _transformValue(final Object value) {
+    return null;
   }
   
   private boolean transformComponentHelper(final org.eclipse.papyrus.amalthea.profile.amalthea.components.Component source, final Component target) {
@@ -2161,6 +2263,30 @@ public class MainTransform {
     } else {
       throw new IllegalArgumentException("Unhandled parameter types: " +
         Arrays.<Object>asList(isr, controller).toString());
+    }
+  }
+  
+  private Value transformCustomProperty(final CustomProperty custom, final EMap<String, Value> map) {
+    if (custom instanceof PortCustomProperty) {
+      return _transformCustomProperty((PortCustomProperty)custom, map);
+    } else if (custom != null) {
+      return _transformCustomProperty(custom, map);
+    } else {
+      throw new IllegalArgumentException("Unhandled parameter types: " +
+        Arrays.<Object>asList(custom, map).toString());
+    }
+  }
+  
+  private Value transformValue(final Object value) {
+    if (value instanceof LiteralInteger) {
+      return _transformValue((LiteralInteger)value);
+    } else if (value instanceof LiteralString) {
+      return _transformValue((LiteralString)value);
+    } else if (value != null) {
+      return _transformValue(value);
+    } else {
+      throw new IllegalArgumentException("Unhandled parameter types: " +
+        Arrays.<Object>asList(value).toString());
     }
   }
 }
