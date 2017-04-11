@@ -6,6 +6,8 @@ import org.eclipse.app4mc.amalthea.model.AmaltheaFactory
 import org.eclipse.app4mc.amalthea.model.CallGraph
 import org.eclipse.app4mc.amalthea.model.CallSequenceItem
 import org.eclipse.app4mc.amalthea.model.Component
+import org.eclipse.app4mc.amalthea.model.ComponentInstance
+import org.eclipse.app4mc.amalthea.model.Connector
 import org.eclipse.app4mc.amalthea.model.Core
 import org.eclipse.app4mc.amalthea.model.CoreAllocation
 import org.eclipse.app4mc.amalthea.model.CoreType
@@ -17,6 +19,7 @@ import org.eclipse.app4mc.amalthea.model.FrequencyUnit
 import org.eclipse.app4mc.amalthea.model.GraphEntryBase
 import org.eclipse.app4mc.amalthea.model.HwSystem
 import org.eclipse.app4mc.amalthea.model.ISR
+import org.eclipse.app4mc.amalthea.model.InterfaceKind
 import org.eclipse.app4mc.amalthea.model.InterruptController
 import org.eclipse.app4mc.amalthea.model.InterruptSchedulingAlgorithm
 import org.eclipse.app4mc.amalthea.model.Label
@@ -27,6 +30,7 @@ import org.eclipse.app4mc.amalthea.model.MicrocontrollerType
 import org.eclipse.app4mc.amalthea.model.Network
 import org.eclipse.app4mc.amalthea.model.NetworkType
 import org.eclipse.app4mc.amalthea.model.OperatingSystem
+import org.eclipse.app4mc.amalthea.model.Port
 import org.eclipse.app4mc.amalthea.model.Preemption
 import org.eclipse.app4mc.amalthea.model.Prescaler
 import org.eclipse.app4mc.amalthea.model.ProcessRequirement
@@ -50,6 +54,8 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.Deviation
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.InstructionsDeviation
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.WeibullEstimators
+import org.eclipse.papyrus.amalthea.profile.amalthea.components.Composite
+import org.eclipse.papyrus.amalthea.profile.amalthea.components.FInterfacePort
 import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.TimeRequirementLimit
 import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Bus
 import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.ECUType
@@ -67,18 +73,13 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Interprocess
 import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Periodic
 import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Single
 import org.eclipse.uml2.uml.Abstraction
+import org.eclipse.uml2.uml.ConnectorEnd
 import org.eclipse.uml2.uml.Model
 import org.eclipse.uml2.uml.Package
 import org.eclipse.uml2.uml.PackageImport
+import org.eclipse.uml2.uml.Property
 
 import static extension org.eclipse.papyrus.amalthea.generator.transform.TransformUtil.*
-import org.eclipse.app4mc.amalthea.model.FInterfacePort
-import org.eclipse.app4mc.amalthea.model.Port
-import org.eclipse.app4mc.amalthea.model.InterfaceKind
-import org.eclipse.papyrus.amalthea.profile.amalthea.components.Composite
-import org.eclipse.app4mc.amalthea.model.ComponentInstance
-import org.eclipse.app4mc.amalthea.model.Connector
-import org.eclipse.uml2.uml.ConnectorEnd
 
 class MainTransform {
 
@@ -491,7 +492,7 @@ class MainTransform {
 		target.ports.addAll(portList.map[p | p.transform].filter(typeof(Port)))
 	}
 	
-	def private dispatch create AmaltheaFactory.eINSTANCE.createFInterfacePort transform(org.eclipse.papyrus.amalthea.profile.amalthea.components.FInterfacePort port){
+	def private dispatch create AmaltheaFactory.eINSTANCE.createFInterfacePort transform(FInterfacePort port){
 		it.name = port.base_Port.name
 		it.interfaceName = port.interfaceName
 		var kind = "provides" 
@@ -511,7 +512,7 @@ class MainTransform {
 		
 	}
 	
-	def private dispatch create AmaltheaFactory.eINSTANCE.createComponentInstance transform(org.eclipse.uml2.uml.Property instance){
+	def private dispatch create AmaltheaFactory.eINSTANCE.createComponentInstance transform(Property instance){
 		it.name = instance.name
 		it.type = instance.type?.amaltheaStereotypeApplication?.transform as Component
 	}
@@ -519,7 +520,7 @@ class MainTransform {
 	def private dispatch create AmaltheaFactory.eINSTANCE.createConnector transform(org.eclipse.uml2.uml.Connector connector){
 		it.name = connector.name
 		it.sourcePort = connector.ends.get(0).transformQaulifiedPort
-		it.targetPort = connector.ends.get(0).transformQaulifiedPort		
+		it.targetPort = connector.ends.get(1).transformQaulifiedPort		
 	}
 	
 	def private create AmaltheaFactory.eINSTANCE.createQualifiedPort transformQaulifiedPort(ConnectorEnd end){

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <elementtypesconfigurations:ElementTypeSetConfiguration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:applystereotypeadvice="http://www.eclipse.org/papyrus/uml/types/applystereotypeadvice/1.1" xmlns:elementtypesconfigurations="http://www.eclipse.org/papyrus/infra/elementtypesconfigurations/1.1" xmlns:invariantcontainerrule="http://www.eclipse.org/papyrus/emf/types/invariantcontainerrule/1.1" xmlns:invariantstereotyperule="http://www.eclipse.org/papyrus/uml/types/invariantstereotyperule/1.1" xmlns:rulebased="http://www.eclipse.org/papyrus/infra/types/rulebased/1.1" xmi:id="_ubJcsKeUEeSUR5jX0TaAcA" identifier="org.eclipse.papyrus.amalthea.software.elementTypeSet" name="Amalthea Software" metamodelNsURI="http://www.eclipse.org/uml2/5.0.0/UML">
   <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.Runnable" name="Runnable">
-    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
     <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
     <editHelperAdviceConfiguration xsi:type="elementtypesconfigurations:EditHelperAdviceConfiguration" description="Advice for Runnable" editHelperAdviceClassName="org.eclipse.papyrus.amalthea.core.types.advice.RunnableEditHelperAdvice"/>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
@@ -13,7 +12,6 @@
     </ruleConfiguration>
   </elementTypeConfigurations>
   <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.Label" name="Label">
-    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
     <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
     <editHelperAdviceConfiguration xsi:type="elementtypesconfigurations:EditHelperAdviceConfiguration" description="Advice for Runnable" editHelperAdviceClassName="org.eclipse.papyrus.amalthea.core.types.advice.RunnableEditHelperAdvice"/>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
@@ -25,7 +23,6 @@
     </ruleConfiguration>
   </elementTypeConfigurations>
   <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.Task" name="Task">
-    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
     <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::SWModel::Task" requiredProfile="Amalthea"/>
@@ -36,7 +33,6 @@
     </ruleConfiguration>
   </elementTypeConfigurations>
   <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.ISR" name="ISR">
-    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
     <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::SWModel::ISR" requiredProfile="Amalthea"/>
@@ -65,7 +61,6 @@
     </ruleConfiguration>
   </elementTypeConfigurations>
   <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.CallGraph" name="CallGraph">
-    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
     <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::SWModel::CallGraph" requiredProfile="Amalthea"/>
@@ -80,7 +75,6 @@
     </ruleConfiguration>
   </elementTypeConfigurations>
   <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.CallSequence" name="CallSequence">
-    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
     <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::SWModel::CallSequence" requiredProfile="Amalthea"/>

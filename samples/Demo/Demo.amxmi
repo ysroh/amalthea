@@ -80,6 +80,13 @@
     <components name="Component2">
       <ports xsi:type="am:FInterfacePort" name="Port1" kind="requires"/>
     </components>
-    <components xsi:type="am:Composite" name="Composite"/>
+    <components xsi:type="am:Composite" name="Composite">
+      <componentInstances name="component1" type="Component1?type=Component"/>
+      <componentInstances name="component2" type="Component2?type=Component"/>
+      <connectors name="Connector1">
+        <sourcePort instance="component1?type=ComponentInstance" port="Component1/Port1?type=FInterfacePort"/>
+        <targetPort instance="component2?type=ComponentInstance" port="Component2/Port1?type=FInterfacePort"/>
+      </connectors>
+    </components>
   </componentsModel>
 </am:Amalthea>

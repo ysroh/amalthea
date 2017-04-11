@@ -258,6 +258,11 @@ of UML port&#xD;
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zAT_4BrXEeemOqGrpy978g"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zAeX8BrXEeemOqGrpy978g" value="*"/>
         </ownedAttribute>
+        <icon xmi:type="uml:Image" xmi:id="_oLYQ0B7AEee-N_wy_mgmag" format="GIF" location="platform:/plugin/org.eclipse.papyrus.amalthea.core/icons/full/obj16/component.gif">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oLYQ0R7AEee-N_wy_mgmag" source="image_papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oLYQ0h7AEee-N_wy_mgmag" key="image_kind_key" value="icon"/>
+          </eAnnotations>
+        </icon>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_nt3XcBZGEeeFzte_Mj5jqA" name="Composite">
         <generalization xmi:type="uml:Generalization" xmi:id="_nt3XcRZGEeeFzte_Mj5jqA" general="_nt2wYhZGEeeFzte_Mj5jqA"/>
@@ -265,6 +270,11 @@ of UML port&#xD;
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nt3XcxZGEeeFzte_Mj5jqA"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nt3XdBZGEeeFzte_Mj5jqA" value="*"/>
         </ownedAttribute>
+        <icon xmi:type="uml:Image" xmi:id="_7WdloB7AEee-N_wy_mgmag" format="GIF" location="platform:/plugin/org.eclipse.papyrus.amalthea.core/icons/full/obj16/composite.gif">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7WdloR7AEee-N_wy_mgmag" source="image_papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_7Wdloh7AEee-N_wy_mgmag" key="image_kind_key" value="icon"/>
+          </eAnnotations>
+        </icon>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_nt3XdRZGEeeFzte_Mj5jqA" name="ComponentInstance">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_sC_LURZLEeeFzte_Mj5jqA" name="base_Property" association="_sC99MBZLEeeFzte_Mj5jqA">
@@ -451,6 +461,11 @@ of UML port&#xD;
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dXfCEBouEeemOqGrpy978g"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dXfCERouEeemOqGrpy978g" value="1"/>
         </ownedAttribute>
+        <icon xmi:type="uml:Image" xmi:id="_BtPhgB7BEee-N_wy_mgmag" format="GIF" location="platform:/plugin/org.eclipse.papyrus.amalthea.core/icons/full/obj16/core.gif">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BtPhgR7BEee-N_wy_mgmag" source="image_papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BtPhgh7BEee-N_wy_mgmag" key="image_kind_key" value="icon"/>
+          </eAnnotations>
+        </icon>
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_oiFF0RZKEeeFzte_Mj5jqA" name="CoreType">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_oiFF0hZKEeeFzte_Mj5jqA" name="bitWidth">

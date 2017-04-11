@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <elementtypesconfigurations:ElementTypeSetConfiguration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:applystereotypeadvice="http://www.eclipse.org/papyrus/uml/types/applystereotypeadvice/1.1" xmlns:elementtypesconfigurations="http://www.eclipse.org/papyrus/infra/elementtypesconfigurations/1.1" xmlns:invariantcontainerrule="http://www.eclipse.org/papyrus/emf/types/invariantcontainerrule/1.1" xmlns:invariantstereotyperule="http://www.eclipse.org/papyrus/uml/types/invariantstereotyperule/1.1" xmlns:rulebased="http://www.eclipse.org/papyrus/infra/types/rulebased/1.1" xmi:id="_ubJcsKeUEeSUR5jX0TaAcA" identifier="org.eclipse.papyrus.amalthea.common.elementTypeSet" name="Amalthea Common" metamodelNsURI="http://www.eclipse.org/uml2/5.0.0/UML">
   <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.Time" name="Time">
-    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
     <specializedTypesID>org.eclipse.papyrus.uml.DataType</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::CommonModel::Time" requiredProfile="Amalthea"/>
@@ -16,7 +15,6 @@
     </ruleConfiguration>
   </elementTypeConfigurations>
   <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.SignedTime" name="SignedTime">
-    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
     <specializedTypesID>org.eclipse.papyrus.uml.DataType</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::CommonModel::SignedTime" requiredProfile="Amalthea"/>
@@ -31,7 +29,6 @@
     </ruleConfiguration>
   </elementTypeConfigurations>
   <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.Counter" name="Counter">
-    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
     <specializedTypesID>org.eclipse.papyrus.uml.DataType</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::CommonModel::Counter" requiredProfile="Amalthea"/>
@@ -46,7 +43,6 @@
     </ruleConfiguration>
   </elementTypeConfigurations>
   <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.InstructionsDeviation" name="InstructionsDeviation">
-    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
     <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::CommonModel::InstructionsDeviation" requiredProfile="Amalthea"/>
@@ -57,7 +53,6 @@
     </ruleConfiguration>
   </elementTypeConfigurations>
   <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.Deviation" name="Deviation">
-    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
     <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::CommonModel::Deviation" requiredProfile="Amalthea"/>
@@ -68,7 +63,6 @@
     </ruleConfiguration>
   </elementTypeConfigurations>
   <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.WeibullEstimators" name="WeibullEstimators">
-    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
     <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::CommonModel::WeibullEstimators" requiredProfile="Amalthea"/>
@@ -79,7 +73,6 @@
     </ruleConfiguration>
   </elementTypeConfigurations>
   <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.DataSize" name="DataSize">
-    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
     <specializedTypesID>org.eclipse.papyrus.uml.DataType</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::CommonModel::DataSize" requiredProfile="Amalthea"/>

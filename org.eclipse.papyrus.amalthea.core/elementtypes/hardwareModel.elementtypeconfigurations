@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <elementtypesconfigurations:ElementTypeSetConfiguration xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:applystereotypeadvice="http://www.eclipse.org/papyrus/uml/types/applystereotypeadvice/1.1" xmlns:elementtypesconfigurations="http://www.eclipse.org/papyrus/infra/elementtypesconfigurations/1.1" xmlns:invariantcontainerrule="http://www.eclipse.org/papyrus/emf/types/invariantcontainerrule/1.1" xmlns:invariantstereotyperule="http://www.eclipse.org/papyrus/uml/types/invariantstereotyperule/1.1" xmlns:rulebased="http://www.eclipse.org/papyrus/infra/types/rulebased/1.1" xmi:id="_ubJcsKeUEeSUR5jX0TaAcA" identifier="org.eclipse.papyrus.amalthea.hardware.elementTypeSet" name="Amalthea Hardware" metamodelNsURI="http://www.eclipse.org/uml2/5.0.0/UML">
   <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.HwSystem" name="HwSystem">
-    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
     <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::HWModel::HwSystem" requiredProfile="Amalthea"/>
@@ -12,7 +11,6 @@
     </ruleConfiguration>
   </elementTypeConfigurations>
   <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.ECU" name="ECU">
-    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
     <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::HWModel::ECU" requiredProfile="Amalthea"/>
@@ -23,7 +21,6 @@
     </ruleConfiguration>
   </elementTypeConfigurations>
   <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.Microcontroller" name="Microcontroller">
-    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
     <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::HWModel::Microcontroller" requiredProfile="Amalthea"/>
@@ -34,7 +31,7 @@
     </ruleConfiguration>
   </elementTypeConfigurations>
   <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.Core" name="Core">
-    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
+    <iconEntry iconPath="/icons/full/obj16/core.gif" bundleId="org.eclipse.papyrus.amalthea.core"/>
     <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::HWModel::Core" requiredProfile="Amalthea"/>
@@ -45,7 +42,6 @@
     </ruleConfiguration>
   </elementTypeConfigurations>
   <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.SystemType" name="SystemType">
-    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
     <specializedTypesID>org.eclipse.papyrus.uml.DataType</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::HWModel::SystemType" requiredProfile="Amalthea"/>
@@ -56,7 +52,6 @@
     </ruleConfiguration>
   </elementTypeConfigurations>
   <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.ECUType" name="ECUType">
-    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
     <specializedTypesID>org.eclipse.papyrus.uml.DataType</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::HWModel::ECUType" requiredProfile="Amalthea"/>
@@ -67,7 +62,6 @@
     </ruleConfiguration>
   </elementTypeConfigurations>
   <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.MicrocontrollerType" name="MicrocontrollerType">
-    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
     <specializedTypesID>org.eclipse.papyrus.uml.DataType</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::HWModel::MicrocontrollerType" requiredProfile="Amalthea"/>
@@ -78,7 +72,6 @@
     </ruleConfiguration>
   </elementTypeConfigurations>
   <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.CoreType" name="CoreType">
-    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
     <specializedTypesID>org.eclipse.papyrus.uml.DataType</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::HWModel::CoreType" requiredProfile="Amalthea"/>
@@ -89,7 +82,6 @@
     </ruleConfiguration>
   </elementTypeConfigurations>
   <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.Network" name="Network">
-    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
     <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::HWModel::Network" requiredProfile="Amalthea"/>
@@ -104,7 +96,6 @@
     </ruleConfiguration>
   </elementTypeConfigurations>
   <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.Quartz" name="Quartz">
-    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
     <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::HWModel::Quartz" requiredProfile="Amalthea"/>
@@ -119,7 +110,6 @@
     </ruleConfiguration>
   </elementTypeConfigurations>
   <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.Prescaler" name="Prescaler">
-    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
     <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::HWModel::Prescaler" requiredProfile="Amalthea"/>
@@ -134,7 +124,6 @@
     </ruleConfiguration>
   </elementTypeConfigurations>
   <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.Bus" name="Bus">
-    <iconEntry iconPath="/icons/runnable.png" bundleId="org.eclipse.papyrus.amalthea.core"/>
     <specializedTypesID>org.eclipse.papyrus.uml.DataType</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::HWModel::Bus" requiredProfile="Amalthea"/>
