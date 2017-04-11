@@ -14,6 +14,7 @@
         </graphEntries>
       </callGraph>
     </tasks>
+    <tasks name="Class1"/>
     <runnables name="ABSCalculation">
       <runnableItems xsi:type="am:LabelAccess" data="ABSActivation?type=Label" access="read"/>
       <runnableItems xsi:type="am:RunnableInstructions">
@@ -28,10 +29,15 @@
   </swModel>
   <hwModel>
     <coreTypes name="DefaultCoreType"/>
+    <networkTypes xsi:type="am:Bus" name="Bus" schedPolicy="RROBIN"/>
     <system name="HwSystem">
       <ecus name="ECU_1">
+        <quartzes name="ECUQuartz"/>
         <microcontrollers name="Processor_1">
-          <cores name="Core_1" coreType="DefaultCoreType?type=CoreType"/>
+          <networks name="Network" type="Bus?type=Bus"/>
+          <cores name="Core_1" coreType="DefaultCoreType?type=CoreType">
+            <prescaler name="Core_1Prescaler"/>
+          </cores>
           <cores name="Core_2" coreType="DefaultCoreType?type=CoreType"/>
         </microcontrollers>
       </ecus>

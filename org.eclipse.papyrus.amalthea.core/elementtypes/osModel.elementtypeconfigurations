@@ -4,9 +4,13 @@
     <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::OSModel::OperatingSystem" requiredProfile="Amalthea"/>
-      <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-        <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
-        <permissions containerType="org.eclipse.papyrus.uml.Classifier"/>
+      <composedRules xsi:type="rulebased:AndRuleConfiguration">
+        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+          <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
+        </composedRules>
+        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
+          <permissions containerType="org.eclipse.papyrus.uml.Classifier"/>
+        </composedRules>
       </composedRules>
     </ruleConfiguration>
   </elementTypeConfigurations>
@@ -14,12 +18,12 @@
     <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::OSModel::TaskScheduler" requiredProfile="Amalthea"/>
-      <composedRules xsi:type="rulebased:OrRuleConfiguration">
+      <composedRules xsi:type="rulebased:AndRuleConfiguration">
         <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
           <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
         </composedRules>
         <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-          <permissions containerType="org.eclipse.papyrus.uml.Class" permitted="true"/>
+          <permissions containerType="org.eclipse.papyrus.uml.Classifier"/>
         </composedRules>
       </composedRules>
     </ruleConfiguration>
@@ -28,12 +32,12 @@
     <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::OSModel::InterruptController" requiredProfile="Amalthea"/>
-      <composedRules xsi:type="rulebased:OrRuleConfiguration">
+      <composedRules xsi:type="rulebased:AndRuleConfiguration">
         <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
           <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
         </composedRules>
         <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-          <permissions containerType="org.eclipse.papyrus.uml.Class" permitted="true"/>
+          <permissions containerType="org.eclipse.papyrus.uml.Classifier"/>
         </composedRules>
       </composedRules>
     </ruleConfiguration>
@@ -42,12 +46,12 @@
     <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::OSModel::OSEK" requiredProfile="Amalthea"/>
-      <composedRules xsi:type="rulebased:OrRuleConfiguration">
+      <composedRules xsi:type="rulebased:AndRuleConfiguration">
         <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
           <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
         </composedRules>
         <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-          <permissions containerType="org.eclipse.papyrus.uml.Class" permitted="true"/>
+          <permissions containerType="org.eclipse.papyrus.uml.Classifier"/>
         </composedRules>
       </composedRules>
     </ruleConfiguration>
@@ -56,12 +60,12 @@
     <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::OSModel::PriorityBased" requiredProfile="Amalthea"/>
-      <composedRules xsi:type="rulebased:OrRuleConfiguration">
+      <composedRules xsi:type="rulebased:AndRuleConfiguration">
         <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
           <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
         </composedRules>
         <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-          <permissions containerType="org.eclipse.papyrus.uml.Class" permitted="true"/>
+          <permissions containerType="org.eclipse.papyrus.uml.Classifier"/>
         </composedRules>
       </composedRules>
     </ruleConfiguration>
@@ -71,12 +75,12 @@
     <specializedTypesID>org.eclipse.papyrus.uml.Class</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::OSModel::SchedulingHWUnit" requiredProfile="Amalthea"/>
-      <composedRules xsi:type="rulebased:OrRuleConfiguration">
+      <composedRules xsi:type="rulebased:AndRuleConfiguration">
         <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
           <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
         </composedRules>
         <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-          <permissions containerType="org.eclipse.papyrus.uml.Class" permitted="true"/>
+          <permissions containerType="org.eclipse.papyrus.uml.Classifier"/>
         </composedRules>
       </composedRules>
     </ruleConfiguration>

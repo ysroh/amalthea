@@ -8,12 +8,18 @@
       <importedPackage xmi:type="uml:Package" href="pathmap://SysML14_LIBRARIES/SysML-Standard-Library.uml#SysML.package_packagedElement_Libraries"/>
     </packageImport>
     <packagedElement xmi:type="uml:Package" xmi:id="_IpNp0Bu7EeeS0ZHQabp_-Q" name="Hardware">
-      <packagedElement xmi:type="uml:Class" xmi:id="_L4UqIBu7EeeS0ZHQabp_-Q" name="HwSystem"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_L47HEBu7EeeS0ZHQabp_-Q" name="ECU_1"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_L5u_YBu7EeeS0ZHQabp_-Q" name="Processor_1"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_L6ZGsBu7EeeS0ZHQabp_-Q" name="Core_1"/>
       <packagedElement xmi:type="uml:DataType" xmi:id="_L7WwABu7EeeS0ZHQabp_-Q" name="DefaultCoreType"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_0Tg70B4GEeeGg_NVrlgfgA" name="Core_2"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_JwKgAB7KEeeGT59n18zb4g" name="Bus"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_L4UqIBu7EeeS0ZHQabp_-Q" name="HwSystem"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_iq8ikB7KEeeGT59n18zb4g" name="ECU1">
+        <packagedElement xmi:type="uml:Class" xmi:id="_bXuMkB7KEeeGT59n18zb4g" name="ECUQuartz"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_L47HEBu7EeeS0ZHQabp_-Q" name="ECU_1"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_L5u_YBu7EeeS0ZHQabp_-Q" name="Processor_1"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_L6ZGsBu7EeeS0ZHQabp_-Q" name="Core_1"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_0Tg70B4GEeeGg_NVrlgfgA" name="Core_2"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_ykL54B7PEeeYS7DxhKMnCA" name="Network"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_7ZFeAB7PEeeYS7DxhKMnCA" name="Core_1Prescaler"/>
+      </packagedElement>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_CQQjsBu7EeeS0ZHQabp_-Q">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CQS_8Bu7EeeS0ZHQabp_-Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
@@ -83,9 +89,13 @@
     </profileApplication>
   </uml:Model>
   <Hardware:HwSystem xmi:id="_L4ebIBu7EeeS0ZHQabp_-Q" base_Class="_L4UqIBu7EeeS0ZHQabp_-Q" ecus="_L5RsYBu7EeeS0ZHQabp_-Q"/>
-  <Hardware:ECU xmi:id="_L5RsYBu7EeeS0ZHQabp_-Q" base_Class="_L47HEBu7EeeS0ZHQabp_-Q" microcontrollers="_L54JUBu7EeeS0ZHQabp_-Q"/>
-  <Hardware:Microcontroller xmi:id="_L54JUBu7EeeS0ZHQabp_-Q" base_Class="_L5u_YBu7EeeS0ZHQabp_-Q" cores="_L61LkBu7EeeS0ZHQabp_-Q _0ULDIB4GEeeGg_NVrlgfgA"/>
-  <Hardware:Core xmi:id="_L61LkBu7EeeS0ZHQabp_-Q" base_Class="_L6ZGsBu7EeeS0ZHQabp_-Q" coretype="_L7q5EBu7EeeS0ZHQabp_-Q"/>
+  <Hardware:ECU xmi:id="_L5RsYBu7EeeS0ZHQabp_-Q" base_Class="_L47HEBu7EeeS0ZHQabp_-Q" quartzes="_bX-rQB7KEeeGT59n18zb4g" microcontrollers="_L54JUBu7EeeS0ZHQabp_-Q"/>
+  <Hardware:Microcontroller xmi:id="_L54JUBu7EeeS0ZHQabp_-Q" base_Class="_L5u_YBu7EeeS0ZHQabp_-Q" networks="_yk2BMB7PEeeYS7DxhKMnCA" cores="_L61LkBu7EeeS0ZHQabp_-Q _0ULDIB4GEeeGg_NVrlgfgA"/>
+  <Hardware:Core xmi:id="_L61LkBu7EeeS0ZHQabp_-Q" base_Class="_L6ZGsBu7EeeS0ZHQabp_-Q" prescaler="_7ZZAAB7PEeeYS7DxhKMnCA" lockstepGroup="1" coretype="_L7q5EBu7EeeS0ZHQabp_-Q"/>
   <Hardware:CoreType xmi:id="_L7q5EBu7EeeS0ZHQabp_-Q" base_DataType="_L7WwABu7EeeS0ZHQabp_-Q"/>
   <Hardware:Core xmi:id="_0ULDIB4GEeeGg_NVrlgfgA" base_Class="_0Tg70B4GEeeGg_NVrlgfgA" coretype="_L7q5EBu7EeeS0ZHQabp_-Q"/>
+  <Hardware:Bus xmi:id="_JwrdYB7KEeeGT59n18zb4g" schedPolicy="RROBIN" base_DataType="_JwKgAB7KEeeGT59n18zb4g" busType="CAN"/>
+  <Hardware:Quartz xmi:id="_bX-rQB7KEeeGT59n18zb4g" base_Class="_bXuMkB7KEeeGT59n18zb4g"/>
+  <Hardware:Network xmi:id="_yk2BMB7PEeeYS7DxhKMnCA" base_Class="_ykL54B7PEeeYS7DxhKMnCA" networktype="_JwrdYB7KEeeGT59n18zb4g"/>
+  <Hardware:Prescaler xmi:id="_7ZZAAB7PEeeYS7DxhKMnCA" base_Class="_7ZFeAB7PEeeYS7DxhKMnCA"/>
 </xmi:XMI>

@@ -61,9 +61,11 @@
         <packagedElement xmi:type="uml:Class" xmi:id="_bNfxQB4UEee3c8IygCLd7Q" name="ISR"/>
         <packagedElement xmi:type="uml:Abstraction" xmi:id="_KduL0B4VEee3c8IygCLd7Q" name="Allocate1" client="_bNfxQB4UEee3c8IygCLd7Q" supplier="_xiRVsBu1EeeaDY-_tsKTIw"/>
       </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_MFN2YB7LEeeUA-EDwkME5w" name="Package1">
+        <packagedElement xmi:type="uml:Class" xmi:id="_OZtokB7LEeeUA-EDwkME5w" name="Class1"/>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_AAoVcBoxEeeeW9cngqHTXg" name="OperatingSystem">
-      <packagedElement xmi:type="uml:Class" xmi:id="_HxHPMBoxEeeeW9cngqHTXg" name="OS"/>
       <packagedElement xmi:type="uml:Package" xmi:id="_YomtcBu1EeeaDY-_tsKTIw" name="TaskSchedulers">
         <packagedElement xmi:type="uml:Class" xmi:id="_JgeUABoxEeeeW9cngqHTXg" name="TaskScheduler"/>
         <packagedElement xmi:type="uml:Class" xmi:id="_HmaJIBozEeey-4lblVK-ag" name="SchedulingHwUnit">
@@ -84,6 +86,7 @@
           <nestedClassifier xmi:type="uml:DataType" xmi:id="_bJ7IwRu3EeeKlfyNbpZehQ" name="SchedulingUnitTime"/>
         </packagedElement>
       </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_HxHPMBoxEeeeW9cngqHTXg" name="OS"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_CZ_ZgBoxEeeeW9cngqHTXg" name="Stimuli">
       <packagedElement xmi:type="uml:Class" xmi:id="_SpqbMBozEeey-4lblVK-ag" name="Timer_10MS"/>
@@ -200,4 +203,5 @@
   <Software:ISR xmi:id="_bNslkB4UEee3c8IygCLd7Q" base_Class="_bNfxQB4UEee3c8IygCLd7Q"/>
   <Allocations:Allocate xmi:id="_E6KcoB4VEee3c8IygCLd7Q" base_DirectedRelationship="_E5_dgB4VEee3c8IygCLd7Q" base_Abstraction="_E5_dgB4VEee3c8IygCLd7Q"/>
   <Allocations:Allocate xmi:id="_KeBGwB4VEee3c8IygCLd7Q" base_DirectedRelationship="_KduL0B4VEee3c8IygCLd7Q" base_Abstraction="_KduL0B4VEee3c8IygCLd7Q"/>
+  <Software:Task xmi:id="_OZ_VYB7LEeeUA-EDwkME5w" base_Class="_OZtokB7LEeeUA-EDwkME5w"/>
 </xmi:XMI>

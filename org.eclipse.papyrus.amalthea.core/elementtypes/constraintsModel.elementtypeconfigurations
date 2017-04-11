@@ -18,14 +18,6 @@
     <specializedTypesID>org.eclipse.papyrus.uml.DataType</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::ConstraintsModel::TimeRequirementLimit" requiredProfile="Amalthea"/>
-      <composedRules xsi:type="rulebased:OrRuleConfiguration">
-        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-          <permissions containerType="org.eclipse.papyrus.uml.Package" permitted="true"/>
-        </composedRules>
-        <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-          <permissions containerType="org.eclipse.papyrus.uml.Class" permitted="true"/>
-        </composedRules>
-      </composedRules>
     </ruleConfiguration>
   </elementTypeConfigurations>
   <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.processRequirement" target="//@elementTypeConfigurations.0">

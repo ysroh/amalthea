@@ -5,6 +5,7 @@ import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.jface.dialogs.ErrorDialog;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
@@ -30,7 +31,7 @@ public class UmlToAmaltheaHandler extends AbstractHandler {
 			}
 
 			UmlToAmaltheaGenerator generator = new UmlToAmaltheaGenerator();
-			final IStatus status = generator.generate((Model)eobj);
+			final IStatus status = generator.generate((Model)EcoreUtil.getRootContainer(eobj));
 			Display.getDefault().syncExec(new Runnable() {
 				@Override
 				public void run() {
