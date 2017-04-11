@@ -74,7 +74,7 @@
     <coreAllocation scheduler="TaskScheduler?type=TaskScheduler" core="Core_1?type=Core Core_2?type=Core"/>
   </mappingModel>
   <componentsModel>
-    <components name="Component1">
+    <components name="Component1" runnables="ABSCalculation?type=Runnable">
       <ports xsi:type="am:FInterfacePort" name="Port1" kind="provides"/>
     </components>
     <components name="Component2">

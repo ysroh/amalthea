@@ -487,7 +487,7 @@ class MainTransform {
 	}
 	
 	def private transformComponentHelper(org.eclipse.papyrus.amalthea.profile.amalthea.components.Component source, Component target){
-		target.runnables.addAll(source.runnables.amaltheaFilteredList.map[c | c.transform].filter(typeof(Runnable)))
+		target.runnables.addAll(source.runnables.map[c | c.transform].filter(typeof(Runnable)))
 		val portList = source.base_Class.ownedPorts.amaltheaFilteredList
 		target.ports.addAll(portList.map[p | p.transform].filter(typeof(Port)))
 	}

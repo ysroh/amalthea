@@ -46,9 +46,13 @@ public class TransformUtil {
 	public static List<EObject> getAmaltheaFilteredList(EList<? extends EObject> list) {
 		List<EObject> result = new ArrayList<>();
 		for (EObject source : list) {
-			EObject sa = getAmaltheaStereotypeApplication(source);
-			if (sa != null) {
-				result.add(sa);
+			if (isAmaltheaPackage(source)) {
+				result.add(source);
+			} else {
+				EObject sa = getAmaltheaStereotypeApplication(source);
+				if (sa != null) {
+					result.add(sa);
+				}
 			}
 		}
 		return result;
@@ -58,16 +62,22 @@ public class TransformUtil {
 		if (source instanceof Element) {
 			Element element = (Element) source;
 			for (EObject s : element.getStereotypeApplications()) {
-				EPackage ePkg = s.eClass().getEPackage();
-				if (ePkg == CommonPackage.eINSTANCE || ePkg == SoftwarePackage.eINSTANCE
-						|| ePkg == HardwarePackage.eINSTANCE || ePkg == OsPackage.eINSTANCE
-						|| ePkg == StimuliPackage.eINSTANCE || ePkg == ComponentsPackage.eINSTANCE
-						|| ePkg == ConstraintsPackage.eINSTANCE) {
+				if (isAmaltheaPackage(s)) {
 					return s;
 				}
 			}
 		}
 
 		return null;
+	}
+
+	private static boolean isAmaltheaPackage(EObject source) {
+		EPackage ePkg = source.eClass().getEPackage();
+		if (ePkg == CommonPackage.eINSTANCE || ePkg == SoftwarePackage.eINSTANCE || ePkg == HardwarePackage.eINSTANCE
+				|| ePkg == OsPackage.eINSTANCE || ePkg == StimuliPackage.eINSTANCE
+				|| ePkg == ComponentsPackage.eINSTANCE || ePkg == ConstraintsPackage.eINSTANCE) {
+			return true;
+		}
+		return false;
 	}
 }
