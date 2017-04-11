@@ -6,8 +6,8 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.EReference;
+
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.eclipse.papyrus.amalthea.profile.amalthea.AmaltheaPackage;
@@ -23,7 +23,6 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.components.impl.ComponentsP
 import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.ConstraintsFactory;
 import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.ConstraintsModel;
 import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.ConstraintsPackage;
-
 import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.LimitType;
 import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.ProcessRequirement;
 import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.Requirement;
@@ -31,6 +30,7 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.RequirementLimi
 import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.Severity;
 import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.TimeMetric;
 import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.TimeRequirementLimit;
+
 import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.HardwarePackage;
 
 import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.HardwarePackageImpl;
@@ -54,6 +54,7 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.StimuliPackage;
 import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.impl.StimuliPackageImpl;
 
 import org.eclipse.papyrus.sysml14.sysmlPackage;
+
 import org.eclipse.uml2.uml.UMLPackage;
 
 /**
@@ -76,24 +77,28 @@ public class ConstraintsPackageImpl extends EPackageImpl implements ConstraintsP
 	 * @generated
 	 */
 	private EClass requirementEClass = null;
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass processRequirementEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass requirementLimitEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass processRequirementEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass timeRequirementLimitEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -255,24 +260,6 @@ public class ConstraintsPackageImpl extends EPackageImpl implements ConstraintsP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getProcessRequirement() {
-		return processRequirementEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getProcessRequirement_Process() {
-		return (EReference)processRequirementEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getRequirementLimit() {
 		return requirementLimitEClass;
 	}
@@ -293,6 +280,24 @@ public class ConstraintsPackageImpl extends EPackageImpl implements ConstraintsP
 	 */
 	public EReference getRequirementLimit_Base_DataType() {
 		return (EReference)requirementLimitEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getProcessRequirement() {
+		return processRequirementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProcessRequirement_Process() {
+		return (EReference)processRequirementEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**

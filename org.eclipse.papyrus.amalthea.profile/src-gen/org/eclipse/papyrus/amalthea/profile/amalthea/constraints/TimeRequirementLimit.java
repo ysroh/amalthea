@@ -4,7 +4,6 @@ package org.eclipse.papyrus.amalthea.profile.amalthea.constraints;
 
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.SignedTime;
 
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Time Requirement Limit</b></em>'.
@@ -23,7 +22,6 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.common.SignedTime;
  * @generated
  */
 public interface TimeRequirementLimit extends RequirementLimit {
-
 	/**
 	 * Returns the value of the '<em><b>Metric</b></em>' attribute.
 	 * The literals are from the enumeration {@link org.eclipse.papyrus.amalthea.profile.amalthea.constraints.TimeMetric}.
@@ -78,4 +76,5 @@ public interface TimeRequirementLimit extends RequirementLimit {
 	 * @generated
 	 */
 	void setLimitValue(SignedTime value);
+
 } // TimeRequirementLimit

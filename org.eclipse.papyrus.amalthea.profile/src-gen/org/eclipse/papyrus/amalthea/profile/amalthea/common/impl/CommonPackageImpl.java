@@ -24,6 +24,7 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.common.Distribution;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.IAnnotatable;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.Instructions;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.InstructionsDeviation;
+import org.eclipse.papyrus.amalthea.profile.amalthea.common.PortCustomProperty;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.SignedTime;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.Time;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.TimeUnit;
@@ -155,6 +156,13 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 * @generated
 	 */
 	private EClass signedTimeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass portCustomPropertyEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -535,6 +543,24 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getPortCustomProperty() {
+		return portCustomPropertyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPortCustomProperty_Port() {
+		return (EReference)portCustomPropertyEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getTimeUnit() {
 		return timeUnitEEnum;
 	}
@@ -618,6 +644,9 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 
 		signedTimeEClass = createEClass(SIGNED_TIME);
 
+		portCustomPropertyEClass = createEClass(PORT_CUSTOM_PROPERTY);
+		createEReference(portCustomPropertyEClass, PORT_CUSTOM_PROPERTY__PORT);
+
 		// Create enums
 		timeUnitEEnum = createEEnum(TIME_UNIT);
 		dataUnitEEnum = createEEnum(DATA_UNIT);
@@ -649,6 +678,7 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		// Obtain other dependent packages
 		UMLPackage theUMLPackage = (UMLPackage)EPackage.Registry.INSTANCE.getEPackage(UMLPackage.eNS_URI);
 		TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
+		ComponentsPackage theComponentsPackage = (ComponentsPackage)EPackage.Registry.INSTANCE.getEPackage(ComponentsPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -659,6 +689,7 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		weibullEstimatorsEClass.getESuperTypes().add(this.getDistribution());
 		instructionsDeviationEClass.getESuperTypes().add(this.getInstructions());
 		signedTimeEClass.getESuperTypes().add(this.getAbstractTime());
+		portCustomPropertyEClass.getESuperTypes().add(this.getCustomProperty());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(customPropertyEClass, CustomProperty.class, "CustomProperty", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -702,6 +733,9 @@ public class CommonPackageImpl extends EPackageImpl implements CommonPackage {
 		initEReference(getDataSize_Base_DataType(), theUMLPackage.getDataType(), null, "base_DataType", null, 1, 1, DataSize.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(signedTimeEClass, SignedTime.class, "SignedTime", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(portCustomPropertyEClass, PortCustomProperty.class, "PortCustomProperty", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPortCustomProperty_Port(), theComponentsPackage.getFInterfacePort(), null, "port", null, 1, 1, PortCustomProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(timeUnitEEnum, TimeUnit.class, "TimeUnit");

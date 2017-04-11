@@ -782,16 +782,6 @@ public interface SoftwarePackage extends EPackage {
 	int LABEL_OPERATION_COUNT = ABSTRACT_ELEMENT_MEMORY_INFORMATION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.RunnableImpl <em>Runnable</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.RunnableImpl
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.SoftwarePackageImpl#getRunnable()
-	 * @generated
-	 */
-	int RUNNABLE = 15;
-
-	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.CallSequenceImpl <em>Call Sequence</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1049,6 +1039,16 @@ public interface SoftwarePackage extends EPackage {
 	int RUNNABLE_INSTRUCTIONS_OPERATION_COUNT = RUNNABLE_ITEM_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.RunnableImpl <em>Runnable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.RunnableImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.SoftwarePackageImpl#getRunnable()
+	 * @generated
+	 */
+	int RUNNABLE = 15;
+
+	/**
 	 * The feature id for the '<em><b>Base Class</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1266,17 +1266,6 @@ public interface SoftwarePackage extends EPackage {
 	EClass getCallGraph();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.CallGraph#getGraphentries <em>Graphentries</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Graphentries</em>'.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.CallGraph#getGraphentries()
-	 * @see #getCallGraph()
-	 * @generated
-	 */
-	EReference getCallGraph_Graphentries();
-
-	/**
 	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.CallGraph#getBase_Class <em>Base Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1286,6 +1275,17 @@ public interface SoftwarePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getCallGraph_Base_Class();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.CallGraph#getGraphentries <em>Graphentries</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Graphentries</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.CallGraph#getGraphentries()
+	 * @see #getCallGraph()
+	 * @generated
+	 */
+	EReference getCallGraph_Graphentries();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.GraphEntry <em>Graph Entry</em>}'.
@@ -1405,38 +1405,6 @@ public interface SoftwarePackage extends EPackage {
 	EAttribute getLabel_NumberBits();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable <em>Runnable</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Runnable</em>'.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable
-	 * @generated
-	 */
-	EClass getRunnable();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable#isCallback <em>Callback</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Callback</em>'.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable#isCallback()
-	 * @see #getRunnable()
-	 * @generated
-	 */
-	EAttribute getRunnable_Callback();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable#isService <em>Service</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Service</em>'.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable#isService()
-	 * @see #getRunnable()
-	 * @generated
-	 */
-	EAttribute getRunnable_Service();
-
-	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.CallSequence <em>Call Sequence</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1551,6 +1519,38 @@ public interface SoftwarePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getRunnableInstructions_Default();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable <em>Runnable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Runnable</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable
+	 * @generated
+	 */
+	EClass getRunnable();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable#isCallback <em>Callback</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Callback</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable#isCallback()
+	 * @see #getRunnable()
+	 * @generated
+	 */
+	EAttribute getRunnable_Callback();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable#isService <em>Service</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Service</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable#isService()
+	 * @see #getRunnable()
+	 * @generated
+	 */
+	EAttribute getRunnable_Service();
 
 	/**
 	 * Returns the meta object for enum '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.Preemption <em>Preemption</em>}'.
@@ -1696,20 +1696,20 @@ public interface SoftwarePackage extends EPackage {
 		EClass CALL_GRAPH = eINSTANCE.getCallGraph();
 
 		/**
-		 * The meta object literal for the '<em><b>Graphentries</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CALL_GRAPH__GRAPHENTRIES = eINSTANCE.getCallGraph_Graphentries();
-
-		/**
 		 * The meta object literal for the '<em><b>Base Class</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference CALL_GRAPH__BASE_CLASS = eINSTANCE.getCallGraph_Base_Class();
+
+		/**
+		 * The meta object literal for the '<em><b>Graphentries</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CALL_GRAPH__GRAPHENTRIES = eINSTANCE.getCallGraph_Graphentries();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.GraphEntryImpl <em>Graph Entry</em>}' class.
@@ -1808,32 +1808,6 @@ public interface SoftwarePackage extends EPackage {
 		EAttribute LABEL__NUMBER_BITS = eINSTANCE.getLabel_NumberBits();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.RunnableImpl <em>Runnable</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.RunnableImpl
-		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.SoftwarePackageImpl#getRunnable()
-		 * @generated
-		 */
-		EClass RUNNABLE = eINSTANCE.getRunnable();
-
-		/**
-		 * The meta object literal for the '<em><b>Callback</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute RUNNABLE__CALLBACK = eINSTANCE.getRunnable_Callback();
-
-		/**
-		 * The meta object literal for the '<em><b>Service</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute RUNNABLE__SERVICE = eINSTANCE.getRunnable_Service();
-
-		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.CallSequenceImpl <em>Call Sequence</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1930,6 +1904,32 @@ public interface SoftwarePackage extends EPackage {
 		 * @generated
 		 */
 		EReference RUNNABLE_INSTRUCTIONS__DEFAULT = eINSTANCE.getRunnableInstructions_Default();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.RunnableImpl <em>Runnable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.RunnableImpl
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.impl.SoftwarePackageImpl#getRunnable()
+		 * @generated
+		 */
+		EClass RUNNABLE = eINSTANCE.getRunnable();
+
+		/**
+		 * The meta object literal for the '<em><b>Callback</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RUNNABLE__CALLBACK = eINSTANCE.getRunnable_Callback();
+
+		/**
+		 * The meta object literal for the '<em><b>Service</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RUNNABLE__SERVICE = eINSTANCE.getRunnable_Service();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.software.Preemption <em>Preemption</em>}' enum.

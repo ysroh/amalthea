@@ -112,14 +112,13 @@
             propertySortChoices="true" ecoreFeature="ecore:EReference amalthea.ecore#//common/DataSize/base_DataType"/>
       </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//common/SignedTime"/>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//common/PortCustomProperty">
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference amalthea.ecore#//common/PortCustomProperty/port"/>
+      </genClasses>
     </nestedGenPackages>
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Components" basePackage="org.eclipse.papyrus.amalthea.profile.amalthea"
         disposableProviderFactory="true" ecorePackage="amalthea.ecore#//components">
-      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//components/FInterfacePort">
-        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-            propertySortChoices="true" ecoreFeature="ecore:EReference amalthea.ecore#//components/FInterfacePort/base_Port"/>
-        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//components/FInterfacePort/interfaceName"/>
-      </genClasses>
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//components/Component">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
             propertySortChoices="true" ecoreFeature="ecore:EReference amalthea.ecore#//components/Component/base_Class"/>
@@ -133,6 +132,11 @@
       <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//components/ComponentInstance">
         <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
             propertySortChoices="true" ecoreFeature="ecore:EReference amalthea.ecore#//components/ComponentInstance/base_Property"/>
+      </genClasses>
+      <genClasses xsi:type="genmodel:GenClass" ecoreClass="amalthea.ecore#//components/FInterfacePort">
+        <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+            propertySortChoices="true" ecoreFeature="ecore:EReference amalthea.ecore#//components/FInterfacePort/base_Port"/>
+        <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute amalthea.ecore#//components/FInterfacePort/interfaceName"/>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Software" basePackage="org.eclipse.papyrus.amalthea.profile.amalthea"

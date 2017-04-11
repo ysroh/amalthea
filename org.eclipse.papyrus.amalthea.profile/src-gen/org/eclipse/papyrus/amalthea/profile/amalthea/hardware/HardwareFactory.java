@@ -40,6 +40,15 @@ public interface HardwareFactory extends EFactory {
 	Quartz createQuartz();
 
 	/**
+	 * Returns a new object of class '<em>Frequency</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Frequency</em>'.
+	 * @generated
+	 */
+	Frequency createFrequency();
+
+	/**
 	 * Returns a new object of class '<em>Prescaler</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -137,15 +146,6 @@ public interface HardwareFactory extends EFactory {
 	 * @generated
 	 */
 	Bus createBus();
-
-	/**
-	 * Returns a new object of class '<em>Frequency</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Frequency</em>'.
-	 * @generated
-	 */
-	Frequency createFrequency();
 
 	/**
 	 * Returns the package supported by this factory.

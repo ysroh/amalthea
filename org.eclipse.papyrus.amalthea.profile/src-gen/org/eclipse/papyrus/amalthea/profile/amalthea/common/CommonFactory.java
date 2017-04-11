@@ -94,6 +94,15 @@ public interface CommonFactory extends EFactory {
 	SignedTime createSignedTime();
 
 	/**
+	 * Returns a new object of class '<em>Port Custom Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Port Custom Property</em>'.
+	 * @generated
+	 */
+	PortCustomProperty createPortCustomProperty();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

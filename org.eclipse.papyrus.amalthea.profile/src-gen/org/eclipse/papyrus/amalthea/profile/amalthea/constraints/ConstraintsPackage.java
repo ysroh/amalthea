@@ -86,7 +86,6 @@ public interface ConstraintsPackage extends EPackage {
 	 */
 	int CONSTRAINTS_MODEL_OPERATION_COUNT = 0;
 
-
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.constraints.impl.RequirementImpl <em>Requirement</em>}' class.
 	 * <!-- begin-user-doc -->
@@ -143,16 +142,6 @@ public interface ConstraintsPackage extends EPackage {
 	int REQUIREMENT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.constraints.impl.ProcessRequirementImpl <em>Process Requirement</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.constraints.impl.ProcessRequirementImpl
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.constraints.impl.ConstraintsPackageImpl#getProcessRequirement()
-	 * @generated
-	 */
-	int PROCESS_REQUIREMENT = 3;
-
-	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.constraints.impl.RequirementLimitImpl <em>Requirement Limit</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -197,6 +186,16 @@ public interface ConstraintsPackage extends EPackage {
 	 * @ordered
 	 */
 	int REQUIREMENT_LIMIT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.constraints.impl.ProcessRequirementImpl <em>Process Requirement</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.constraints.impl.ProcessRequirementImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.constraints.impl.ConstraintsPackageImpl#getProcessRequirement()
+	 * @generated
+	 */
+	int PROCESS_REQUIREMENT = 3;
 
 	/**
 	 * The feature id for the '<em><b>Severity</b></em>' attribute.
@@ -326,7 +325,6 @@ public interface ConstraintsPackage extends EPackage {
 	 */
 	int SEVERITY = 5;
 
-
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.constraints.LimitType <em>Limit Type</em>}' enum.
 	 * <!-- begin-user-doc -->
@@ -402,27 +400,6 @@ public interface ConstraintsPackage extends EPackage {
 	EReference getRequirement_Base_Constraint();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.constraints.ProcessRequirement <em>Process Requirement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Process Requirement</em>'.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.constraints.ProcessRequirement
-	 * @generated
-	 */
-	EClass getProcessRequirement();
-
-	/**
-	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.amalthea.constraints.ProcessRequirement#getProcess <em>Process</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Process</em>'.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.constraints.ProcessRequirement#getProcess()
-	 * @see #getProcessRequirement()
-	 * @generated
-	 */
-	EReference getProcessRequirement_Process();
-
-	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.constraints.RequirementLimit <em>Requirement Limit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -453,6 +430,27 @@ public interface ConstraintsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getRequirementLimit_Base_DataType();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.constraints.ProcessRequirement <em>Process Requirement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Process Requirement</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.constraints.ProcessRequirement
+	 * @generated
+	 */
+	EClass getProcessRequirement();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.amalthea.constraints.ProcessRequirement#getProcess <em>Process</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Process</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.constraints.ProcessRequirement#getProcess()
+	 * @see #getProcessRequirement()
+	 * @generated
+	 */
+	EReference getProcessRequirement_Process();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.constraints.TimeRequirementLimit <em>Time Requirement Limit</em>}'.
@@ -548,6 +546,7 @@ public interface ConstraintsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CONSTRAINTS_MODEL = eINSTANCE.getConstraintsModel();
+
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.constraints.impl.RequirementImpl <em>Requirement</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -557,6 +556,7 @@ public interface ConstraintsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass REQUIREMENT = eINSTANCE.getRequirement();
+
 		/**
 		 * The meta object literal for the '<em><b>Severity</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
@@ -564,6 +564,7 @@ public interface ConstraintsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute REQUIREMENT__SEVERITY = eINSTANCE.getRequirement_Severity();
+
 		/**
 		 * The meta object literal for the '<em><b>Limit</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
@@ -571,6 +572,7 @@ public interface ConstraintsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference REQUIREMENT__LIMIT = eINSTANCE.getRequirement_Limit();
+
 		/**
 		 * The meta object literal for the '<em><b>Base Constraint</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
@@ -578,22 +580,7 @@ public interface ConstraintsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference REQUIREMENT__BASE_CONSTRAINT = eINSTANCE.getRequirement_Base_Constraint();
-		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.constraints.impl.ProcessRequirementImpl <em>Process Requirement</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.constraints.impl.ProcessRequirementImpl
-		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.constraints.impl.ConstraintsPackageImpl#getProcessRequirement()
-		 * @generated
-		 */
-		EClass PROCESS_REQUIREMENT = eINSTANCE.getProcessRequirement();
-		/**
-		 * The meta object literal for the '<em><b>Process</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PROCESS_REQUIREMENT__PROCESS = eINSTANCE.getProcessRequirement_Process();
+
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.constraints.impl.RequirementLimitImpl <em>Requirement Limit</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -603,6 +590,7 @@ public interface ConstraintsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass REQUIREMENT_LIMIT = eINSTANCE.getRequirementLimit();
+
 		/**
 		 * The meta object literal for the '<em><b>Limit Type</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
@@ -610,6 +598,7 @@ public interface ConstraintsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute REQUIREMENT_LIMIT__LIMIT_TYPE = eINSTANCE.getRequirementLimit_LimitType();
+
 		/**
 		 * The meta object literal for the '<em><b>Base Data Type</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
@@ -617,6 +606,25 @@ public interface ConstraintsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference REQUIREMENT_LIMIT__BASE_DATA_TYPE = eINSTANCE.getRequirementLimit_Base_DataType();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.constraints.impl.ProcessRequirementImpl <em>Process Requirement</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.constraints.impl.ProcessRequirementImpl
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.constraints.impl.ConstraintsPackageImpl#getProcessRequirement()
+		 * @generated
+		 */
+		EClass PROCESS_REQUIREMENT = eINSTANCE.getProcessRequirement();
+
+		/**
+		 * The meta object literal for the '<em><b>Process</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROCESS_REQUIREMENT__PROCESS = eINSTANCE.getProcessRequirement_Process();
+
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.constraints.impl.TimeRequirementLimitImpl <em>Time Requirement Limit</em>}' class.
 		 * <!-- begin-user-doc -->
@@ -626,6 +634,7 @@ public interface ConstraintsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TIME_REQUIREMENT_LIMIT = eINSTANCE.getTimeRequirementLimit();
+
 		/**
 		 * The meta object literal for the '<em><b>Metric</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
@@ -633,6 +642,7 @@ public interface ConstraintsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TIME_REQUIREMENT_LIMIT__METRIC = eINSTANCE.getTimeRequirementLimit_Metric();
+
 		/**
 		 * The meta object literal for the '<em><b>Limit Value</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
@@ -640,6 +650,7 @@ public interface ConstraintsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TIME_REQUIREMENT_LIMIT__LIMIT_VALUE = eINSTANCE.getTimeRequirementLimit_LimitValue();
+
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.constraints.Severity <em>Severity</em>}' enum.
 		 * <!-- begin-user-doc -->
@@ -649,6 +660,7 @@ public interface ConstraintsPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum SEVERITY = eINSTANCE.getSeverity();
+
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.constraints.LimitType <em>Limit Type</em>}' enum.
 		 * <!-- begin-user-doc -->
@@ -658,6 +670,7 @@ public interface ConstraintsPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum LIMIT_TYPE = eINSTANCE.getLimitType();
+
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.constraints.TimeMetric <em>Time Metric</em>}' enum.
 		 * <!-- begin-user-doc -->

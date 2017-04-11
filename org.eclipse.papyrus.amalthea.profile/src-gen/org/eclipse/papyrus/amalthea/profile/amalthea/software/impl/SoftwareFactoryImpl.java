@@ -163,16 +163,6 @@ public class SoftwareFactoryImpl extends EFactoryImpl implements SoftwareFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable createRunnable() {
-		RunnableImpl runnable = new RunnableImpl();
-		return runnable;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public CallSequence createCallSequence() {
 		CallSequenceImpl callSequence = new CallSequenceImpl();
 		return callSequence;
@@ -216,6 +206,16 @@ public class SoftwareFactoryImpl extends EFactoryImpl implements SoftwareFactory
 	public RunnableInstructions createRunnableInstructions() {
 		RunnableInstructionsImpl runnableInstructions = new RunnableInstructionsImpl();
 		return runnableInstructions;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable createRunnable() {
+		RunnableImpl runnable = new RunnableImpl();
+		return runnable;
 	}
 
 	/**

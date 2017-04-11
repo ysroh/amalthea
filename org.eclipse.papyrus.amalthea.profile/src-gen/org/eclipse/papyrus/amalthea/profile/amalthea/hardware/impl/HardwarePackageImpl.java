@@ -104,6 +104,13 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass frequencyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass prescalerEClass = null;
 
 	/**
@@ -181,14 +188,14 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass frequencyEClass = null;
+	private EEnum qTypeEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum qTypeEEnum = null;
+	private EEnum frequencyUnitEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -203,13 +210,6 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 	 * @generated
 	 */
 	private EEnum busTypeEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum frequencyUnitEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -389,6 +389,33 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 	 */
 	public EReference getQuartz_Frequency() {
 		return (EReference)quartzEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFrequency() {
+		return frequencyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFrequency_Value() {
+		return (EAttribute)frequencyEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFrequency_Unit() {
+		return (EAttribute)frequencyEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -657,35 +684,17 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getFrequency() {
-		return frequencyEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getFrequency_Value() {
-		return (EAttribute)frequencyEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getFrequency_Unit() {
-		return (EAttribute)frequencyEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EEnum getQType() {
 		return qTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getFrequencyUnit() {
+		return frequencyUnitEEnum;
 	}
 
 	/**
@@ -704,15 +713,6 @@ public class HardwarePackageImpl extends EPackageImpl implements HardwarePackage
 	 */
 	public EEnum getBusType() {
 		return busTypeEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EEnum getFrequencyUnit() {
-		return frequencyUnitEEnum;
 	}
 
 	/**

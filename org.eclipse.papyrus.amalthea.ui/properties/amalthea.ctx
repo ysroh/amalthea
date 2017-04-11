@@ -392,6 +392,9 @@
     <sections xmi:id="_snhsEB38Eee65fjWHZc4GA" name="SingleSignedTime" sectionFile="ui/SingleSignedTime.xwt">
       <widget href="ui/SingleSignedTime.xwt#/"/>
     </sections>
+    <sections xmi:id="_jQs9MB7ZEee-N_wy_mgmag" name="SinglePortCustomProperty" sectionFile="ui/SinglePortCustomProperty.xwt">
+      <widget href="ui/SinglePortCustomProperty.xwt#/"/>
+    </sections>
   </tabs>
   <views xmi:id="_2VofsxiXEeeoWfBb-FGkXQ" name="Single Single" sections="_3BfgFBiXEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_2VpHphiXEeeoWfBb-FGkXQ">
     <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_2VoftBiXEeeoWfBb-FGkXQ" name="isSingleSingle">
@@ -439,6 +442,12 @@
     <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_2VofxhiXEeeoWfBb-FGkXQ" name="isSingleCustomProperty">
       <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
       <properties xsi:type="constraints:ValueProperty" xmi:id="_2VofxxiXEeeoWfBb-FGkXQ" name="stereotypeName" value="Amalthea::CommonModel::CustomProperty"/>
+    </constraints>
+  </views>
+  <views xmi:id="_hVChwB7ZEee-N_wy_mgmag" name="SinglePortCustomProperty" sections="_jQs9MB7ZEee-N_wy_mgmag">
+    <constraints xsi:type="constraints:SimpleConstraint" xmi:id="_nfCl4B7ZEee-N_wy_mgmag" name="isSinglePortCustomProperty">
+      <constraintType href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@constraintTypes.1"/>
+      <properties xsi:type="constraints:ValueProperty" xmi:id="_xd-UMB7ZEee-N_wy_mgmag" name="stereotypeName" value="Amalthea::CommonModel::PortCustomProperty"/>
     </constraints>
   </views>
   <views xmi:id="_2VofyBiXEeeoWfBb-FGkXQ" elementMultiplicity="-1" name="Multiple CustomProperty" sections="_3BgHJRiXEeeoWfBb-FGkXQ" automaticContext="true" datacontexts="_2VpH6BiXEeeoWfBb-FGkXQ">
@@ -1131,6 +1140,9 @@
       </elements>
       <elements xmi:id="_2VpH6hiXEeeoWfBb-FGkXQ" name="IAnnotatable"/>
       <elements xmi:id="_gIGW8B38Eee65fjWHZc4GA" name="SignedTime" supertypes="_2VpH2RiXEeeoWfBb-FGkXQ"/>
+      <elements xmi:id="_C4v-cB7ZEee-N_wy_mgmag" name="PortCustomProperty" supertypes="_2VpH6BiXEeeoWfBb-FGkXQ">
+        <properties xmi:id="_HCTNwB7ZEee-N_wy_mgmag" name="port" type="Reference"/>
+      </elements>
     </elements>
     <modelElementFactory href="ppe:/environment/org.eclipse.papyrus.uml.properties/Model/Environment.xmi#//@modelElementFactories.2"/>
   </dataContexts>

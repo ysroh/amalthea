@@ -20,7 +20,6 @@ package org.eclipse.papyrus.amalthea.profile.amalthea.software;
  * @generated
  */
 public interface TaskRunnableCall extends CallSequenceItem {
-
 	/**
 	 * Returns the value of the '<em><b>Runnable</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -46,4 +45,5 @@ public interface TaskRunnableCall extends CallSequenceItem {
 	 * @generated
 	 */
 	void setRunnable(org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable value);
+
 } // TaskRunnableCall

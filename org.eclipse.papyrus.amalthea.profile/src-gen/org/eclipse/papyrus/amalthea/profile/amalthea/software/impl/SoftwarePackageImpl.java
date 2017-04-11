@@ -150,13 +150,6 @@ public class SoftwarePackageImpl extends EPackageImpl implements SoftwarePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass runnableEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass callSequenceEClass = null;
 
 	/**
@@ -186,6 +179,13 @@ public class SoftwarePackageImpl extends EPackageImpl implements SoftwarePackage
 	 * @generated
 	 */
 	private EClass runnableInstructionsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass runnableEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -395,8 +395,8 @@ public class SoftwarePackageImpl extends EPackageImpl implements SoftwarePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCallGraph_Graphentries() {
-		return (EReference)callGraphEClass.getEStructuralFeatures().get(1);
+	public EReference getCallGraph_Base_Class() {
+		return (EReference)callGraphEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -404,8 +404,8 @@ public class SoftwarePackageImpl extends EPackageImpl implements SoftwarePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCallGraph_Base_Class() {
-		return (EReference)callGraphEClass.getEStructuralFeatures().get(0);
+	public EReference getCallGraph_Graphentries() {
+		return (EReference)callGraphEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -512,33 +512,6 @@ public class SoftwarePackageImpl extends EPackageImpl implements SoftwarePackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getRunnable() {
-		return runnableEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getRunnable_Callback() {
-		return (EAttribute)runnableEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getRunnable_Service() {
-		return (EAttribute)runnableEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getCallSequence() {
 		return callSequenceEClass;
 	}
@@ -631,6 +604,33 @@ public class SoftwarePackageImpl extends EPackageImpl implements SoftwarePackage
 	 */
 	public EReference getRunnableInstructions_Default() {
 		return (EReference)runnableInstructionsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRunnable() {
+		return runnableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRunnable_Callback() {
+		return (EAttribute)runnableEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRunnable_Service() {
+		return (EAttribute)runnableEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**

@@ -56,23 +56,13 @@ public class ComponentsFactoryImpl extends EFactoryImpl implements ComponentsFac
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case ComponentsPackage.FINTERFACE_PORT: return createFInterfacePort();
 			case ComponentsPackage.COMPONENT: return createComponent();
 			case ComponentsPackage.COMPOSITE: return createComposite();
 			case ComponentsPackage.COMPONENT_INSTANCE: return createComponentInstance();
+			case ComponentsPackage.FINTERFACE_PORT: return createFInterfacePort();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FInterfacePort createFInterfacePort() {
-		FInterfacePortImpl fInterfacePort = new FInterfacePortImpl();
-		return fInterfacePort;
 	}
 
 	/**
@@ -103,6 +93,16 @@ public class ComponentsFactoryImpl extends EFactoryImpl implements ComponentsFac
 	public ComponentInstance createComponentInstance() {
 		ComponentInstanceImpl componentInstance = new ComponentInstanceImpl();
 		return componentInstance;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FInterfacePort createFInterfacePort() {
+		FInterfacePortImpl fInterfacePort = new FInterfacePortImpl();
+		return fInterfacePort;
 	}
 
 	/**

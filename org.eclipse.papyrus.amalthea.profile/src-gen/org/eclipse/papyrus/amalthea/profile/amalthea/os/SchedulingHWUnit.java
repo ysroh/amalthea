@@ -4,7 +4,6 @@ package org.eclipse.papyrus.amalthea.profile.amalthea.os;
 
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.Time;
 
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Scheduling HW Unit</b></em>'.
@@ -22,7 +21,6 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.common.Time;
  * @generated
  */
 public interface SchedulingHWUnit extends SchedulingUnit {
-
 	/**
 	 * Returns the value of the '<em><b>Delay</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -48,4 +46,5 @@ public interface SchedulingHWUnit extends SchedulingUnit {
 	 * @generated
 	 */
 	void setDelay(Time value);
+
 } // SchedulingHWUnit

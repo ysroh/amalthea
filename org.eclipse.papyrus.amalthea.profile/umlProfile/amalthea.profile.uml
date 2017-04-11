@@ -83,6 +83,12 @@
         </eAnnotations>
         <ownedEnd xmi:type="uml:Property" xmi:id="_nM-lohhvEeeoWfBb-FGkXQ" name="deviation" type="_N090gBhvEeeoWfBb-FGkXQ" association="_nM9XgBhvEeeoWfBb-FGkXQ"/>
       </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_1OubQB7UEee-N_wy_mgmag" memberEnd="_1O4MQh7UEee-N_wy_mgmag _1O4MQx7UEee-N_wy_mgmag">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1O4MQB7UEee-N_wy_mgmag" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1O4MQR7UEee-N_wy_mgmag" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_1O4MQx7UEee-N_wy_mgmag" name="portcustomproperty" type="_vyjtgB7UEee-N_wy_mgmag" association="_1OubQB7UEee-N_wy_mgmag"/>
+      </packagedElement>
       <packagedElement xmi:type="uml:Extension" xmi:id="_p-K_QBiNEeeoWfBb-FGkXQ" name="E_CustomProperty_Property1" memberEnd="_p-LmUBiNEeeoWfBb-FGkXQ _p-MNYBiNEeeoWfBb-FGkXQ">
         <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_p-LmUBiNEeeoWfBb-FGkXQ" name="extension_CustomProperty" type="_oiGT8RZKEeeFzte_Mj5jqA" aggregation="composite" association="_p-K_QBiNEeeoWfBb-FGkXQ"/>
       </packagedElement>
@@ -207,6 +213,10 @@
       </packagedElement>
       <packagedElement xmi:type="uml:Stereotype" xmi:id="_mnht8B37Eee65fjWHZc4GA" name="SignedTime">
         <generalization xmi:type="uml:Generalization" xmi:id="_oMZaAB37Eee65fjWHZc4GA" general="_oiGT8xZKEeeFzte_Mj5jqA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Stereotype" xmi:id="_vyjtgB7UEee-N_wy_mgmag" name="PortCustomProperty">
+        <generalization xmi:type="uml:Generalization" xmi:id="_yP2PUB7UEee-N_wy_mgmag" general="_oiGT8RZKEeeFzte_Mj5jqA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_1O4MQh7UEee-N_wy_mgmag" name="port" type="_nt3-gBZGEeeFzte_Mj5jqA" association="_1OubQB7UEee-N_wy_mgmag"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_ijTT4BZCEeeFzte_Mj5jqA" name="ComponentsModel" URI="http://www.eclipse.org/papyrus/2017/Amalthea/Components">

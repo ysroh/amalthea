@@ -70,13 +70,6 @@ public class StimuliPackageImpl extends EPackageImpl implements StimuliPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass stimulusEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass periodicEClass = null;
 
 	/**
@@ -85,6 +78,13 @@ public class StimuliPackageImpl extends EPackageImpl implements StimuliPackage {
 	 * @generated
 	 */
 	private EClass interprocessEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass stimulusEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -199,15 +199,6 @@ public class StimuliPackageImpl extends EPackageImpl implements StimuliPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getStimulus() {
-		return stimulusEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getPeriodic() {
 		return periodicEClass;
 	}
@@ -246,6 +237,15 @@ public class StimuliPackageImpl extends EPackageImpl implements StimuliPackage {
 	 */
 	public EReference getInterprocess_Counter() {
 		return (EReference)interprocessEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStimulus() {
+		return stimulusEClass;
 	}
 
 	/**

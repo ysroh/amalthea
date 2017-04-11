@@ -66,12 +66,6 @@ public class ComponentsSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case ComponentsPackage.FINTERFACE_PORT: {
-				FInterfacePort fInterfacePort = (FInterfacePort)theEObject;
-				T result = caseFInterfacePort(fInterfacePort);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ComponentsPackage.COMPONENT: {
 				Component component = (Component)theEObject;
 				T result = caseComponent(component);
@@ -91,23 +85,14 @@ public class ComponentsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ComponentsPackage.FINTERFACE_PORT: {
+				FInterfacePort fInterfacePort = (FInterfacePort)theEObject;
+				T result = caseFInterfacePort(fInterfacePort);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>FInterface Port</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>FInterface Port</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFInterfacePort(FInterfacePort object) {
-		return null;
 	}
 
 	/**
@@ -152,6 +137,21 @@ public class ComponentsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseComponentInstance(ComponentInstance object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>FInterface Port</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>FInterface Port</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFInterfacePort(FInterfacePort object) {
 		return null;
 	}
 

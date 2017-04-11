@@ -65,6 +65,7 @@ public class CommonFactoryImpl extends EFactoryImpl implements CommonFactory {
 			case CommonPackage.COUNTER: return createCounter();
 			case CommonPackage.DATA_SIZE: return createDataSize();
 			case CommonPackage.SIGNED_TIME: return createSignedTime();
+			case CommonPackage.PORT_CUSTOM_PROPERTY: return createPortCustomProperty();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -182,6 +183,16 @@ public class CommonFactoryImpl extends EFactoryImpl implements CommonFactory {
 	public SignedTime createSignedTime() {
 		SignedTimeImpl signedTime = new SignedTimeImpl();
 		return signedTime;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PortCustomProperty createPortCustomProperty() {
+		PortCustomPropertyImpl portCustomProperty = new PortCustomPropertyImpl();
+		return portCustomProperty;
 	}
 
 	/**

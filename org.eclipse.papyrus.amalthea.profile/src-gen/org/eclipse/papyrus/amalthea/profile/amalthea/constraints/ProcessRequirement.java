@@ -4,7 +4,6 @@ package org.eclipse.papyrus.amalthea.profile.amalthea.constraints;
 
 import org.eclipse.papyrus.amalthea.profile.amalthea.software.AbstractProcess;
 
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Process Requirement</b></em>'.
@@ -22,7 +21,6 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.software.AbstractProcess;
  * @generated
  */
 public interface ProcessRequirement extends Requirement {
-
 	/**
 	 * Returns the value of the '<em><b>Process</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -48,4 +46,5 @@ public interface ProcessRequirement extends Requirement {
 	 * @generated
 	 */
 	void setProcess(AbstractProcess value);
+
 } // ProcessRequirement

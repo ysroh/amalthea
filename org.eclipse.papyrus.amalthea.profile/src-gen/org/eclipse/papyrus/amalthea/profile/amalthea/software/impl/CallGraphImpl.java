@@ -79,18 +79,6 @@ public class CallGraphImpl extends MinimalEObjectImpl.Container implements CallG
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<GraphEntry> getGraphentries() {
-		if (graphentries == null) {
-			graphentries = new EObjectResolvingEList<GraphEntry>(GraphEntry.class, this, SoftwarePackage.CALL_GRAPH__GRAPHENTRIES);
-		}
-		return graphentries;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public org.eclipse.uml2.uml.Class getBase_Class() {
 		if (base_Class != null && base_Class.eIsProxy()) {
 			InternalEObject oldBase_Class = (InternalEObject)base_Class;
@@ -122,6 +110,18 @@ public class CallGraphImpl extends MinimalEObjectImpl.Container implements CallG
 		base_Class = newBase_Class;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, SoftwarePackage.CALL_GRAPH__BASE_CLASS, oldBase_Class, base_Class));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<GraphEntry> getGraphentries() {
+		if (graphentries == null) {
+			graphentries = new EObjectResolvingEList<GraphEntry>(GraphEntry.class, this, SoftwarePackage.CALL_GRAPH__GRAPHENTRIES);
+		}
+		return graphentries;
 	}
 
 	/**

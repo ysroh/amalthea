@@ -3,9 +3,11 @@
 package org.eclipse.papyrus.amalthea.profile.amalthea.components.impl;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -13,6 +15,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
 import org.eclipse.papyrus.amalthea.profile.amalthea.components.Component;
 import org.eclipse.papyrus.amalthea.profile.amalthea.components.ComponentsPackage;
 
@@ -40,6 +43,7 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 	 * @ordered
 	 */
 	protected org.eclipse.uml2.uml.Class base_Class;
+
 	/**
 	 * The cached value of the '{@link #getRunnables() <em>Runnables</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -49,6 +53,7 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 	 * @ordered
 	 */
 	protected EList<org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable> runnables;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -397,116 +397,6 @@ public interface HardwarePackage extends EPackage {
 	int QUARTZ_OPERATION_COUNT = COMPLEX_NODE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.PrescalerImpl <em>Prescaler</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.PrescalerImpl
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.HardwarePackageImpl#getPrescaler()
-	 * @generated
-	 */
-	int PRESCALER = 4;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.NetworkImpl <em>Network</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.NetworkImpl
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.HardwarePackageImpl#getNetwork()
-	 * @generated
-	 */
-	int NETWORK = 5;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.NetworkTypeImpl <em>Network Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.NetworkTypeImpl
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.HardwarePackageImpl#getNetworkType()
-	 * @generated
-	 */
-	int NETWORK_TYPE = 6;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.ECUImpl <em>ECU</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.ECUImpl
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.HardwarePackageImpl#getECU()
-	 * @generated
-	 */
-	int ECU = 7;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.MicrocontrollerImpl <em>Microcontroller</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.MicrocontrollerImpl
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.HardwarePackageImpl#getMicrocontroller()
-	 * @generated
-	 */
-	int MICROCONTROLLER = 8;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.CoreImpl <em>Core</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.CoreImpl
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.HardwarePackageImpl#getCore()
-	 * @generated
-	 */
-	int CORE = 9;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.CoreTypeImpl <em>Core Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.CoreTypeImpl
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.HardwarePackageImpl#getCoreType()
-	 * @generated
-	 */
-	int CORE_TYPE = 10;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.MicrocontrollerTypeImpl <em>Microcontroller Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.MicrocontrollerTypeImpl
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.HardwarePackageImpl#getMicrocontrollerType()
-	 * @generated
-	 */
-	int MICROCONTROLLER_TYPE = 11;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.ECUTypeImpl <em>ECU Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.ECUTypeImpl
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.HardwarePackageImpl#getECUType()
-	 * @generated
-	 */
-	int ECU_TYPE = 12;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.SystemTypeImpl <em>System Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.SystemTypeImpl
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.HardwarePackageImpl#getSystemType()
-	 * @generated
-	 */
-	int SYSTEM_TYPE = 13;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.BusImpl <em>Bus</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.BusImpl
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.HardwarePackageImpl#getBus()
-	 * @generated
-	 */
-	int BUS = 14;
-
-	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.FrequencyImpl <em>Frequency</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -551,6 +441,16 @@ public interface HardwarePackage extends EPackage {
 	 * @ordered
 	 */
 	int FREQUENCY_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.PrescalerImpl <em>Prescaler</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.PrescalerImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.HardwarePackageImpl#getPrescaler()
+	 * @generated
+	 */
+	int PRESCALER = 4;
 
 	/**
 	 * The feature id for the '<em><b>Base Class</b></em>' reference.
@@ -623,6 +523,16 @@ public interface HardwarePackage extends EPackage {
 	 * @ordered
 	 */
 	int PRESCALER_OPERATION_COUNT = BlocksPackage.BLOCK_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.NetworkImpl <em>Network</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.NetworkImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.HardwarePackageImpl#getNetwork()
+	 * @generated
+	 */
+	int NETWORK = 5;
 
 	/**
 	 * The feature id for the '<em><b>Base Class</b></em>' reference.
@@ -724,6 +634,16 @@ public interface HardwarePackage extends EPackage {
 	int NETWORK_OPERATION_COUNT = COMPLEX_NODE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.NetworkTypeImpl <em>Network Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.NetworkTypeImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.HardwarePackageImpl#getNetworkType()
+	 * @generated
+	 */
+	int NETWORK_TYPE = 6;
+
+	/**
 	 * The feature id for the '<em><b>Sched Policy</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -767,6 +687,16 @@ public interface HardwarePackage extends EPackage {
 	 * @ordered
 	 */
 	int NETWORK_TYPE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.ECUImpl <em>ECU</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.ECUImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.HardwarePackageImpl#getECU()
+	 * @generated
+	 */
+	int ECU = 7;
 
 	/**
 	 * The feature id for the '<em><b>Base Class</b></em>' reference.
@@ -877,6 +807,16 @@ public interface HardwarePackage extends EPackage {
 	int ECU_OPERATION_COUNT = COMPLEX_NODE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.MicrocontrollerImpl <em>Microcontroller</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.MicrocontrollerImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.HardwarePackageImpl#getMicrocontroller()
+	 * @generated
+	 */
+	int MICROCONTROLLER = 8;
+
+	/**
 	 * The feature id for the '<em><b>Base Class</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -983,6 +923,16 @@ public interface HardwarePackage extends EPackage {
 	 * @ordered
 	 */
 	int MICROCONTROLLER_OPERATION_COUNT = COMPLEX_NODE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.CoreImpl <em>Core</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.CoreImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.HardwarePackageImpl#getCore()
+	 * @generated
+	 */
+	int CORE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Base Class</b></em>' reference.
@@ -1093,6 +1043,16 @@ public interface HardwarePackage extends EPackage {
 	int CORE_OPERATION_COUNT = COMPLEX_NODE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.CoreTypeImpl <em>Core Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.CoreTypeImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.HardwarePackageImpl#getCoreType()
+	 * @generated
+	 */
+	int CORE_TYPE = 10;
+
+	/**
 	 * The feature id for the '<em><b>Bit Width</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1138,6 +1098,16 @@ public interface HardwarePackage extends EPackage {
 	int CORE_TYPE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.MicrocontrollerTypeImpl <em>Microcontroller Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.MicrocontrollerTypeImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.HardwarePackageImpl#getMicrocontrollerType()
+	 * @generated
+	 */
+	int MICROCONTROLLER_TYPE = 11;
+
+	/**
 	 * The feature id for the '<em><b>Base Data Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1163,6 +1133,16 @@ public interface HardwarePackage extends EPackage {
 	 * @ordered
 	 */
 	int MICROCONTROLLER_TYPE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.ECUTypeImpl <em>ECU Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.ECUTypeImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.HardwarePackageImpl#getECUType()
+	 * @generated
+	 */
+	int ECU_TYPE = 12;
 
 	/**
 	 * The feature id for the '<em><b>Base Data Type</b></em>' reference.
@@ -1192,6 +1172,16 @@ public interface HardwarePackage extends EPackage {
 	int ECU_TYPE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.SystemTypeImpl <em>System Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.SystemTypeImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.HardwarePackageImpl#getSystemType()
+	 * @generated
+	 */
+	int SYSTEM_TYPE = 13;
+
+	/**
 	 * The feature id for the '<em><b>Base Data Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1217,6 +1207,16 @@ public interface HardwarePackage extends EPackage {
 	 * @ordered
 	 */
 	int SYSTEM_TYPE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.BusImpl <em>Bus</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.BusImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.HardwarePackageImpl#getBus()
+	 * @generated
+	 */
+	int BUS = 14;
 
 	/**
 	 * The feature id for the '<em><b>Sched Policy</b></em>' attribute.
@@ -1283,6 +1283,16 @@ public interface HardwarePackage extends EPackage {
 	int QTYPE = 15;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.FrequencyUnit <em>Frequency Unit</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.FrequencyUnit
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.HardwarePackageImpl#getFrequencyUnit()
+	 * @generated
+	 */
+	int FREQUENCY_UNIT = 16;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.SchedType <em>Sched Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1301,16 +1311,6 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 */
 	int BUS_TYPE = 18;
-
-	/**
-	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.FrequencyUnit <em>Frequency Unit</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.FrequencyUnit
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.HardwarePackageImpl#getFrequencyUnit()
-	 * @generated
-	 */
-	int FREQUENCY_UNIT = 16;
 
 
 	/**
@@ -1419,6 +1419,38 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getQuartz_Frequency();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Frequency <em>Frequency</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Frequency</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Frequency
+	 * @generated
+	 */
+	EClass getFrequency();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Frequency#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Frequency#getValue()
+	 * @see #getFrequency()
+	 * @generated
+	 */
+	EAttribute getFrequency_Value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Frequency#getUnit <em>Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Unit</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Frequency#getUnit()
+	 * @see #getFrequency()
+	 * @generated
+	 */
+	EAttribute getFrequency_Unit();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Prescaler <em>Prescaler</em>}'.
@@ -1729,38 +1761,6 @@ public interface HardwarePackage extends EPackage {
 	EAttribute getBus_BusType();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Frequency <em>Frequency</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Frequency</em>'.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Frequency
-	 * @generated
-	 */
-	EClass getFrequency();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Frequency#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Frequency#getValue()
-	 * @see #getFrequency()
-	 * @generated
-	 */
-	EAttribute getFrequency_Value();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Frequency#getUnit <em>Unit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Unit</em>'.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Frequency#getUnit()
-	 * @see #getFrequency()
-	 * @generated
-	 */
-	EAttribute getFrequency_Unit();
-
-	/**
 	 * Returns the meta object for enum '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.QType <em>QType</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1769,6 +1769,16 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getQType();
+
+	/**
+	 * Returns the meta object for enum '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.FrequencyUnit <em>Frequency Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Frequency Unit</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.FrequencyUnit
+	 * @generated
+	 */
+	EEnum getFrequencyUnit();
 
 	/**
 	 * Returns the meta object for enum '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.SchedType <em>Sched Type</em>}'.
@@ -1789,16 +1799,6 @@ public interface HardwarePackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getBusType();
-
-	/**
-	 * Returns the meta object for enum '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.FrequencyUnit <em>Frequency Unit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Frequency Unit</em>'.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.FrequencyUnit
-	 * @generated
-	 */
-	EEnum getFrequencyUnit();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1908,6 +1908,32 @@ public interface HardwarePackage extends EPackage {
 		 * @generated
 		 */
 		EReference QUARTZ__FREQUENCY = eINSTANCE.getQuartz_Frequency();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.FrequencyImpl <em>Frequency</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.FrequencyImpl
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.HardwarePackageImpl#getFrequency()
+		 * @generated
+		 */
+		EClass FREQUENCY = eINSTANCE.getFrequency();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FREQUENCY__VALUE = eINSTANCE.getFrequency_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Unit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FREQUENCY__UNIT = eINSTANCE.getFrequency_Unit();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.PrescalerImpl <em>Prescaler</em>}' class.
@@ -2164,32 +2190,6 @@ public interface HardwarePackage extends EPackage {
 		EAttribute BUS__BUS_TYPE = eINSTANCE.getBus_BusType();
 
 		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.FrequencyImpl <em>Frequency</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.FrequencyImpl
-		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.HardwarePackageImpl#getFrequency()
-		 * @generated
-		 */
-		EClass FREQUENCY = eINSTANCE.getFrequency();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FREQUENCY__VALUE = eINSTANCE.getFrequency_Value();
-
-		/**
-		 * The meta object literal for the '<em><b>Unit</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FREQUENCY__UNIT = eINSTANCE.getFrequency_Unit();
-
-		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.QType <em>QType</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2198,6 +2198,16 @@ public interface HardwarePackage extends EPackage {
 		 * @generated
 		 */
 		EEnum QTYPE = eINSTANCE.getQType();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.FrequencyUnit <em>Frequency Unit</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.FrequencyUnit
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.HardwarePackageImpl#getFrequencyUnit()
+		 * @generated
+		 */
+		EEnum FREQUENCY_UNIT = eINSTANCE.getFrequencyUnit();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.SchedType <em>Sched Type</em>}' enum.
@@ -2218,16 +2228,6 @@ public interface HardwarePackage extends EPackage {
 		 * @generated
 		 */
 		EEnum BUS_TYPE = eINSTANCE.getBusType();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.hardware.FrequencyUnit <em>Frequency Unit</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.FrequencyUnit
-		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.hardware.impl.HardwarePackageImpl#getFrequencyUnit()
-		 * @generated
-		 */
-		EEnum FREQUENCY_UNIT = eINSTANCE.getFrequencyUnit();
 
 	}
 

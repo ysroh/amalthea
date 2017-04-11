@@ -58,15 +58,6 @@ public interface SoftwareFactory extends EFactory {
 	Label createLabel();
 
 	/**
-	 * Returns a new object of class '<em>Runnable</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Runnable</em>'.
-	 * @generated
-	 */
-	Runnable createRunnable();
-
-	/**
 	 * Returns a new object of class '<em>Call Sequence</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -110,6 +101,15 @@ public interface SoftwareFactory extends EFactory {
 	 * @generated
 	 */
 	RunnableInstructions createRunnableInstructions();
+
+	/**
+	 * Returns a new object of class '<em>Runnable</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Runnable</em>'.
+	 * @generated
+	 */
+	Runnable createRunnable();
 
 	/**
 	 * Returns the package supported by this factory.

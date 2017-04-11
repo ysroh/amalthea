@@ -25,22 +25,6 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface CallGraph extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Graphentries</b></em>' reference list.
-	 * The list contents are of type {@link org.eclipse.papyrus.amalthea.profile.amalthea.software.GraphEntry}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Graphentries</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Graphentries</em>' reference list.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.SoftwarePackage#getCallGraph_Graphentries()
-	 * @model required="true" ordered="false"
-	 * @generated
-	 */
-	EList<GraphEntry> getGraphentries();
-
-	/**
 	 * Returns the value of the '<em><b>Base Class</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -65,5 +49,21 @@ public interface CallGraph extends EObject {
 	 * @generated
 	 */
 	void setBase_Class(org.eclipse.uml2.uml.Class value);
+
+	/**
+	 * Returns the value of the '<em><b>Graphentries</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.papyrus.amalthea.profile.amalthea.software.GraphEntry}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Graphentries</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Graphentries</em>' reference list.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.software.SoftwarePackage#getCallGraph_Graphentries()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	EList<GraphEntry> getGraphentries();
 
 } // CallGraph

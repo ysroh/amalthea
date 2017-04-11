@@ -143,6 +143,16 @@ public class HardwareFactoryImpl extends EFactoryImpl implements HardwareFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Frequency createFrequency() {
+		FrequencyImpl frequency = new FrequencyImpl();
+		return frequency;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Prescaler createPrescaler() {
 		PrescalerImpl prescaler = new PrescalerImpl();
 		return prescaler;
@@ -253,16 +263,6 @@ public class HardwareFactoryImpl extends EFactoryImpl implements HardwareFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Frequency createFrequency() {
-		FrequencyImpl frequency = new FrequencyImpl();
-		return frequency;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public QType createQTypeFromString(EDataType eDataType, String initialValue) {
 		QType result = QType.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -275,6 +275,26 @@ public class HardwareFactoryImpl extends EFactoryImpl implements HardwareFactory
 	 * @generated
 	 */
 	public String convertQTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FrequencyUnit createFrequencyUnitFromString(EDataType eDataType, String initialValue) {
+		FrequencyUnit result = FrequencyUnit.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertFrequencyUnitToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -315,26 +335,6 @@ public class HardwareFactoryImpl extends EFactoryImpl implements HardwareFactory
 	 * @generated
 	 */
 	public String convertBusTypeToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FrequencyUnit createFrequencyUnitFromString(EDataType eDataType, String initialValue) {
-		FrequencyUnit result = FrequencyUnit.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertFrequencyUnitToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

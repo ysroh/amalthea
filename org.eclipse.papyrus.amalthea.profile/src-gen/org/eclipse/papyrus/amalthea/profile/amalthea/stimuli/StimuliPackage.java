@@ -409,16 +409,6 @@ public interface StimuliPackage extends EPackage {
 	EReference getSingle_Activation();
 
 	/**
-	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Stimulus <em>Stimulus</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Stimulus</em>'.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Stimulus
-	 * @generated
-	 */
-	EClass getStimulus();
-
-	/**
 	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Periodic <em>Periodic</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -472,6 +462,16 @@ public interface StimuliPackage extends EPackage {
 	EReference getInterprocess_Counter();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Stimulus <em>Stimulus</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Stimulus</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Stimulus
+	 * @generated
+	 */
+	EClass getStimulus();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -511,16 +511,6 @@ public interface StimuliPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SINGLE__ACTIVATION = eINSTANCE.getSingle_Activation();
-
-		/**
-		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.impl.StimulusImpl <em>Stimulus</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.impl.StimulusImpl
-		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.impl.StimuliPackageImpl#getStimulus()
-		 * @generated
-		 */
-		EClass STIMULUS = eINSTANCE.getStimulus();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.impl.PeriodicImpl <em>Periodic</em>}' class.
@@ -565,6 +555,16 @@ public interface StimuliPackage extends EPackage {
 		 * @generated
 		 */
 		EReference INTERPROCESS__COUNTER = eINSTANCE.getInterprocess_Counter();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.impl.StimulusImpl <em>Stimulus</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.impl.StimulusImpl
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.impl.StimuliPackageImpl#getStimulus()
+		 * @generated
+		 */
+		EClass STIMULUS = eINSTANCE.getStimulus();
 
 	}
 

@@ -34,11 +34,6 @@
       <requiredProfiles>Amalthea</requiredProfiles>
     </stereotypesToApply>
   </adviceBindingsConfigurations>
-  <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.componentInstance">
-    <stereotypesToApply stereotypeQualifiedName="Amalthea::ComponentsModel::ComponentInstance">
-      <requiredProfiles>Amalthea</requiredProfiles>
-    </stereotypesToApply>
-  </adviceBindingsConfigurations>
   <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.finterfacePort" target="//@elementTypeConfigurations.2">
     <stereotypesToApply stereotypeQualifiedName="Amalthea::ComponentsModel::FInterfacePort">
       <requiredProfiles>Amalthea</requiredProfiles>

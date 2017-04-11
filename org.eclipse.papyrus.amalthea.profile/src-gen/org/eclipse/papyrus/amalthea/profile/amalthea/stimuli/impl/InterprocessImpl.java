@@ -3,11 +3,14 @@
 package org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.Counter;
+
 import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Interprocess;
 import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.StimuliPackage;
 

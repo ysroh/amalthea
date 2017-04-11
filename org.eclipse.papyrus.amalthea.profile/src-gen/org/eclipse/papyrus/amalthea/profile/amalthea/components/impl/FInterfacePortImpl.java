@@ -49,6 +49,7 @@ public class FInterfacePortImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected static final String INTERFACE_NAME_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getInterfaceName() <em>Interface Name</em>}' attribute.
 	 * <!-- begin-user-doc -->

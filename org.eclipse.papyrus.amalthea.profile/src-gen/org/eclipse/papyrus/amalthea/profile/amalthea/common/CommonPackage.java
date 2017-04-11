@@ -629,6 +629,61 @@ public interface CommonPackage extends EPackage {
 	int SIGNED_TIME_OPERATION_COUNT = ABSTRACT_TIME_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.PortCustomPropertyImpl <em>Port Custom Property</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.PortCustomPropertyImpl
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CommonPackageImpl#getPortCustomProperty()
+	 * @generated
+	 */
+	int PORT_CUSTOM_PROPERTY = 12;
+
+	/**
+	 * The feature id for the '<em><b>Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PORT_CUSTOM_PROPERTY__KEY = CUSTOM_PROPERTY__KEY;
+
+	/**
+	 * The feature id for the '<em><b>Base Property</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PORT_CUSTOM_PROPERTY__BASE_PROPERTY = CUSTOM_PROPERTY__BASE_PROPERTY;
+
+	/**
+	 * The feature id for the '<em><b>Port</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PORT_CUSTOM_PROPERTY__PORT = CUSTOM_PROPERTY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Port Custom Property</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PORT_CUSTOM_PROPERTY_FEATURE_COUNT = CUSTOM_PROPERTY_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Port Custom Property</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PORT_CUSTOM_PROPERTY_OPERATION_COUNT = CUSTOM_PROPERTY_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.TimeUnit <em>Time Unit</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -636,7 +691,7 @@ public interface CommonPackage extends EPackage {
 	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CommonPackageImpl#getTimeUnit()
 	 * @generated
 	 */
-	int TIME_UNIT = 12;
+	int TIME_UNIT = 13;
 
 	/**
 	 * The meta object id for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.DataUnit <em>Data Unit</em>}' enum.
@@ -646,7 +701,7 @@ public interface CommonPackage extends EPackage {
 	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CommonPackageImpl#getDataUnit()
 	 * @generated
 	 */
-	int DATA_UNIT = 13;
+	int DATA_UNIT = 14;
 
 
 	/**
@@ -968,6 +1023,27 @@ public interface CommonPackage extends EPackage {
 	EClass getSignedTime();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.PortCustomProperty <em>Port Custom Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Port Custom Property</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.PortCustomProperty
+	 * @generated
+	 */
+	EClass getPortCustomProperty();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.PortCustomProperty#getPort <em>Port</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Port</em>'.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.PortCustomProperty#getPort()
+	 * @see #getPortCustomProperty()
+	 * @generated
+	 */
+	EReference getPortCustomProperty_Port();
+
+	/**
 	 * Returns the meta object for enum '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.TimeUnit <em>Time Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1273,6 +1349,24 @@ public interface CommonPackage extends EPackage {
 		 * @generated
 		 */
 		EClass SIGNED_TIME = eINSTANCE.getSignedTime();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.PortCustomPropertyImpl <em>Port Custom Property</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.PortCustomPropertyImpl
+		 * @see org.eclipse.papyrus.amalthea.profile.amalthea.common.impl.CommonPackageImpl#getPortCustomProperty()
+		 * @generated
+		 */
+		EClass PORT_CUSTOM_PROPERTY = eINSTANCE.getPortCustomProperty();
+
+		/**
+		 * The meta object literal for the '<em><b>Port</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PORT_CUSTOM_PROPERTY__PORT = eINSTANCE.getPortCustomProperty_Port();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipse.papyrus.amalthea.profile.amalthea.common.TimeUnit <em>Time Unit</em>}' enum.

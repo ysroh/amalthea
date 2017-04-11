@@ -3,11 +3,14 @@
 package org.eclipse.papyrus.amalthea.profile.amalthea.os.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.Time;
+
 import org.eclipse.papyrus.amalthea.profile.amalthea.os.OsPackage;
 import org.eclipse.papyrus.amalthea.profile.amalthea.os.SchedulingHWUnit;
 
@@ -34,6 +37,7 @@ public class SchedulingHWUnitImpl extends SchedulingUnitImpl implements Scheduli
 	 * @ordered
 	 */
 	protected Time delay;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

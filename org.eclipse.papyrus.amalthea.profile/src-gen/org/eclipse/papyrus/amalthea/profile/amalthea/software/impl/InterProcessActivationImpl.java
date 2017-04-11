@@ -3,12 +3,15 @@
 package org.eclipse.papyrus.amalthea.profile.amalthea.software.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.papyrus.amalthea.profile.amalthea.software.InterProcessActivation;
 import org.eclipse.papyrus.amalthea.profile.amalthea.software.SoftwarePackage;
+
 import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Stimulus;
 
 /**

@@ -4,7 +4,6 @@ package org.eclipse.papyrus.amalthea.profile.amalthea.stimuli;
 
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.Counter;
 
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Interprocess</b></em>'.
@@ -22,7 +21,6 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.common.Counter;
  * @generated
  */
 public interface Interprocess extends Stimulus {
-
 	/**
 	 * Returns the value of the '<em><b>Counter</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -48,4 +46,5 @@ public interface Interprocess extends Stimulus {
 	 * @generated
 	 */
 	void setCounter(Counter value);
+
 } // Interprocess

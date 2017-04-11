@@ -4,7 +4,6 @@ package org.eclipse.papyrus.amalthea.profile.amalthea.software;
 
 import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Stimulus;
 
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Inter Process Activation</b></em>'.
@@ -22,7 +21,6 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Stimulus;
  * @generated
  */
 public interface InterProcessActivation extends CallSequenceItem {
-
 	/**
 	 * Returns the value of the '<em><b>Stimulus</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -48,4 +46,5 @@ public interface InterProcessActivation extends CallSequenceItem {
 	 * @generated
 	 */
 	void setStimulus(Stimulus value);
+
 } // InterProcessActivation

@@ -10,6 +10,8 @@
     <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Counter" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Counter"/>
     <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="DataSize" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.DataSize"/>
     <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="WeibullEstimators" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.WeibullEstimators"/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="CustomProperty" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.CustomProperty"/>
+    <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="PortCustomProperty" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.PortCustomProperty"/>
   </menu>
   <menu xsi:type="ElementCreationMenuModel:Folder" label="ComponentsModel">
     <menu xsi:type="ElementCreationMenuModel:CreationMenu" label="Component" elementTypeIdRef="org.eclipse.papyrus.amalthea.core.Component"/>

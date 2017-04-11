@@ -68,10 +68,6 @@ public class ComponentsAdapterFactory extends AdapterFactoryImpl {
 	protected ComponentsSwitch<Adapter> modelSwitch =
 		new ComponentsSwitch<Adapter>() {
 			@Override
-			public Adapter caseFInterfacePort(FInterfacePort object) {
-				return createFInterfacePortAdapter();
-			}
-			@Override
 			public Adapter caseComponent(Component object) {
 				return createComponentAdapter();
 			}
@@ -82,6 +78,10 @@ public class ComponentsAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseComponentInstance(ComponentInstance object) {
 				return createComponentInstanceAdapter();
+			}
+			@Override
+			public Adapter caseFInterfacePort(FInterfacePort object) {
+				return createFInterfacePortAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -102,20 +102,6 @@ public class ComponentsAdapterFactory extends AdapterFactoryImpl {
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.FInterfacePort <em>FInterface Port</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.FInterfacePort
-	 * @generated
-	 */
-	public Adapter createFInterfacePortAdapter() {
-		return null;
-	}
 
 	/**
 	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.Component <em>Component</em>}'.
@@ -156,6 +142,20 @@ public class ComponentsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createComponentInstanceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.papyrus.amalthea.profile.amalthea.components.FInterfacePort <em>FInterface Port</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.papyrus.amalthea.profile.amalthea.components.FInterfacePort
+	 * @generated
+	 */
+	public Adapter createFInterfacePortAdapter() {
 		return null;
 	}
 

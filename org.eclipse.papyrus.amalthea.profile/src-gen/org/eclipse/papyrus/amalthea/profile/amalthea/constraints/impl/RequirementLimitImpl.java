@@ -3,15 +3,17 @@
 package org.eclipse.papyrus.amalthea.profile.amalthea.constraints.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.ConstraintsPackage;
 import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.LimitType;
 import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.RequirementLimit;
+
 import org.eclipse.uml2.uml.DataType;
 
 /**
@@ -38,6 +40,7 @@ public abstract class RequirementLimitImpl extends MinimalEObjectImpl.Container 
 	 * @ordered
 	 */
 	protected static final LimitType LIMIT_TYPE_EDEFAULT = LimitType._UNDEFINED_;
+
 	/**
 	 * The cached value of the '{@link #getLimitType() <em>Limit Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -47,6 +50,7 @@ public abstract class RequirementLimitImpl extends MinimalEObjectImpl.Container 
 	 * @ordered
 	 */
 	protected LimitType limitType = LIMIT_TYPE_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getBase_DataType() <em>Base Data Type</em>}' reference.
 	 * <!-- begin-user-doc -->
