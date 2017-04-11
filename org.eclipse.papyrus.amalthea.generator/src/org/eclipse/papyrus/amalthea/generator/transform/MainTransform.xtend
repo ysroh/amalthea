@@ -238,8 +238,11 @@ class MainTransform {
 		it.distribution = instruction.distribution?.transformHelper(new Object) as Distribution
 	}
 	
-	def private dispatch create AmaltheaFactory.eINSTANCE.createWeibullEstimators transformHelper(WeibullEstimators distribution, Object owner){
-		it.PRemainPromille = distribution.PRemainPromille
+	def private dispatch create AmaltheaFactory.eINSTANCE.createWeibullEstimators transformHelper(WeibullEstimators weibull, Object owner){
+		it.PRemainPromille = weibull.PRemainPromille
+		val mean = AmaltheaFactory.eINSTANCE.createLongObject
+		mean.value = weibull.mean
+		it.mean = mean
 	}
 
 	// Labels

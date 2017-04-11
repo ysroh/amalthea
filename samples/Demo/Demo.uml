@@ -44,6 +44,11 @@
           <ownedOperation xmi:type="uml:Operation" xmi:id="_Xv63QBobEee60cQ75oPnTA" name="VotedDecelerationRate"/>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_hGPGYBobEee60cQ75oPnTA" name="RunnableInstructions"/>
         </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_1ayn4BofEeezHIvV1tGdjg" name="Weibull">
+          <packagedElement xmi:type="uml:Class" xmi:id="_DUXbQBoqEeeK7PsAypm8Bw" name="WeibullEstimators"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DVJeYBoqEeeK7PsAypm8Bw" name="Deviation"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_DVxJcBoqEeeK7PsAypm8Bw" name="InstructionsDeviation"/>
+        </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_dkL-IBoqEeeK7PsAypm8Bw" name="Labels">
         <packagedElement xmi:type="uml:Class" xmi:id="_QFWacBoqEeeK7PsAypm8Bw" name="ABSActivation"/>
@@ -59,11 +64,6 @@
           <ownedOperation xmi:type="uml:Operation" xmi:id="_2a5uIBosEeevi--Z4zF9bA" name="taskRrunnableCall"/>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_gqmXUBucEeenZcDyXh70PA" name="interProcessActivation"/>
           <nestedClassifier xmi:type="uml:DataType" xmi:id="_axNosBsFEeeSFpvWgLU3rg" name="Counter"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Package" xmi:id="_1ayn4BofEeezHIvV1tGdjg" name="Weibull">
-          <packagedElement xmi:type="uml:Class" xmi:id="_DUXbQBoqEeeK7PsAypm8Bw" name="WeibullEstimators"/>
-          <packagedElement xmi:type="uml:Class" xmi:id="_DVJeYBoqEeeK7PsAypm8Bw" name="Deviation"/>
-          <packagedElement xmi:type="uml:Class" xmi:id="_DVxJcBoqEeeK7PsAypm8Bw" name="InstructionsDeviation"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Abstraction" xmi:id="_0lbq4BuYEeeSQLqP5Np32w" name="Allocate1" client="_lAdicBoqEeeK7PsAypm8Bw" supplier="_JgeUABoxEeeeW9cngqHTXg"/>
         <packagedElement xmi:type="uml:DataType" xmi:id="_dbbWUB3xEeewM5qyb0um-g" name="TimeRequirement"/>
@@ -178,7 +178,7 @@
   <Software:Runnable xmi:id="_TthY0BobEee60cQ75oPnTA" base_Class="_TtKMcBobEee60cQ75oPnTA"/>
   <Software:LabelAccess xmi:id="_XwZYYBobEee60cQ75oPnTA" base_Operation="_Xv63QBobEee60cQ75oPnTA" access="read" data="_QFpVYBoqEeeK7PsAypm8Bw"/>
   <Software:RunnableInstructions xmi:id="_hGiBUBobEee60cQ75oPnTA" base_Operation="_hGPGYBobEee60cQ75oPnTA" default="_DWHHsBoqEeeK7PsAypm8Bw"/>
-  <Common:WeibullEstimators xmi:id="_DUqWMBoqEeeK7PsAypm8Bw" base_Class="_DUXbQBoqEeeK7PsAypm8Bw"/>
+  <Common:WeibullEstimators xmi:id="_DUqWMBoqEeeK7PsAypm8Bw" base_Class="_DUXbQBoqEeeK7PsAypm8Bw" mean="5"/>
   <Common:Deviation xmi:id="_DVUdgBoqEeeK7PsAypm8Bw" distribution="_DUqWMBoqEeeK7PsAypm8Bw" base_Class="_DVJeYBoqEeeK7PsAypm8Bw"/>
   <Common:InstructionsDeviation xmi:id="_DWHHsBoqEeeK7PsAypm8Bw" base_Class="_DVxJcBoqEeeK7PsAypm8Bw" deviation="_DVUdgBoqEeeK7PsAypm8Bw"/>
   <Software:Label xmi:id="_QFpVYBoqEeeK7PsAypm8Bw" base_Class="_QFWacBoqEeeK7PsAypm8Bw"/>

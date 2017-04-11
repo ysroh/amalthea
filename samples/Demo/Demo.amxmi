@@ -23,7 +23,9 @@
       <runnableItems xsi:type="am:RunnableInstructions">
         <default xsi:type="am:InstructionsDeviation">
           <deviation>
-            <distribution xsi:type="am:WeibullEstimators"/>
+            <distribution xsi:type="am:WeibullEstimators">
+              <mean xsi:type="am:LongObject" value="5"/>
+            </distribution>
           </deviation>
         </default>
       </runnableItems>

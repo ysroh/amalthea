@@ -29,6 +29,7 @@ import org.eclipse.app4mc.amalthea.model.InterProcess;
 import org.eclipse.app4mc.amalthea.model.InterfaceKind;
 import org.eclipse.app4mc.amalthea.model.Label;
 import org.eclipse.app4mc.amalthea.model.LabelAccessEnum;
+import org.eclipse.app4mc.amalthea.model.LongObject;
 import org.eclipse.app4mc.amalthea.model.MappingModel;
 import org.eclipse.app4mc.amalthea.model.MicrocontrollerType;
 import org.eclipse.app4mc.amalthea.model.NetworkType;
@@ -633,8 +634,8 @@ public class MainTransform {
     it.setDistribution(((org.eclipse.app4mc.amalthea.model.Distribution) _transformHelper));
   }
   
-  private EObject _transformHelper(final WeibullEstimators distribution, final Object owner) {
-    final ArrayList<?> _cacheKey = CollectionLiterals.newArrayList(distribution, owner);
+  private EObject _transformHelper(final WeibullEstimators weibull, final Object owner) {
+    final ArrayList<?> _cacheKey = CollectionLiterals.newArrayList(weibull, owner);
     final org.eclipse.app4mc.amalthea.model.WeibullEstimators<Object> _result;
     synchronized (_createCache_transformHelper_5) {
       if (_createCache_transformHelper_5.containsKey(_cacheKey)) {
@@ -644,15 +645,19 @@ public class MainTransform {
       _result = _createWeibullEstimators;
       _createCache_transformHelper_5.put(_cacheKey, _result);
     }
-    _init_transformHelper_5(_result, distribution, owner);
+    _init_transformHelper_5(_result, weibull, owner);
     return _result;
   }
   
   private final HashMap<ArrayList<?>, EObject> _createCache_transformHelper_5 = CollectionLiterals.newHashMap();
   
-  private void _init_transformHelper_5(final org.eclipse.app4mc.amalthea.model.WeibullEstimators<Object> it, final WeibullEstimators distribution, final Object owner) {
-    double _pRemainPromille = distribution.getPRemainPromille();
+  private void _init_transformHelper_5(final org.eclipse.app4mc.amalthea.model.WeibullEstimators<Object> it, final WeibullEstimators weibull, final Object owner) {
+    double _pRemainPromille = weibull.getPRemainPromille();
     it.setPRemainPromille(_pRemainPromille);
+    final LongObject mean = AmaltheaFactory.eINSTANCE.createLongObject();
+    int _mean = weibull.getMean();
+    mean.setValue(_mean);
+    it.setMean(mean);
   }
   
   private EObject _transform(final org.eclipse.papyrus.amalthea.profile.amalthea.software.Label label) {

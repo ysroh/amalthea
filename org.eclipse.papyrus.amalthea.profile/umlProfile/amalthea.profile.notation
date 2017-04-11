@@ -4068,6 +4068,10 @@
           <element xmi:type="uml:Property" href="amalthea.profile.uml#_N0-bkRhvEeeoWfBb-FGkXQ"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_jR1p0R7SEee-N_wy_mgmag"/>
         </children>
+        <children xmi:type="notation:Shape" xmi:id="_CghF0B7zEeeR8OUZh-VG0g" type="Property_ClassAttributeLabel">
+          <element xmi:type="uml:Property" href="amalthea.profile.uml#_N0-bkhhvEeeoWfBb-FGkXQ"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_CghF0R7zEeeR8OUZh-VG0g"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_ItJqNx7SEee-N_wy_mgmag"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_ItJqOB7SEee-N_wy_mgmag"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_ItJqOR7SEee-N_wy_mgmag"/>
