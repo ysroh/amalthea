@@ -61,18 +61,12 @@
     <specializedTypesID>org.eclipse.papyrus.uml.Operation</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::SWModel::LabelAccess" requiredProfile="Amalthea"/>
-      <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-        <permissions containerType="org.eclipse.papyrus.amalthea.core.Runnable" permitted="true"/>
-      </composedRules>
     </ruleConfiguration>
   </elementTypeConfigurations>
   <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.RunnableInstructions" name="RunnableInstructions">
     <specializedTypesID>org.eclipse.papyrus.uml.Operation</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::SWModel::RunnableInstructions" requiredProfile="Amalthea"/>
-      <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-        <permissions containerType="org.eclipse.papyrus.amalthea.core.Runnable" permitted="true"/>
-      </composedRules>
     </ruleConfiguration>
   </elementTypeConfigurations>
   <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.CallGraph" name="CallGraph">
@@ -107,18 +101,12 @@
     <specializedTypesID>org.eclipse.papyrus.uml.Operation</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::SWModel::InterProcessActivation" requiredProfile="Amalthea"/>
-      <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-        <permissions containerType="org.eclipse.papyrus.amalthea.core.CallSequence" permitted="true"/>
-      </composedRules>
     </ruleConfiguration>
   </elementTypeConfigurations>
   <elementTypeConfigurations xsi:type="rulebased:RuleBasedTypeConfiguration" identifier="org.eclipse.papyrus.amalthea.core.TaskRunnableCall" name="TaskRunnableCall">
     <specializedTypesID>org.eclipse.papyrus.uml.Operation</specializedTypesID>
     <ruleConfiguration xsi:type="rulebased:AndRuleConfiguration">
       <composedRules xsi:type="invariantstereotyperule:InvariantStereotypeRuleConfiguration" stereotypeQualifiedName="Amalthea::SWModel::TaskRunnableCall" requiredProfile="Amalthea"/>
-      <composedRules xsi:type="invariantcontainerrule:InvariantContainerRuleConfiguration">
-        <permissions containerType="org.eclipse.papyrus.amalthea.core.CallSequence" permitted="true"/>
-      </composedRules>
     </ruleConfiguration>
   </elementTypeConfigurations>
   <adviceBindingsConfigurations xsi:type="applystereotypeadvice:ApplyStereotypeAdviceConfiguration" identifier="org.eclipse.papyrus.amalthea.core.runnable" target="//@elementTypeConfigurations.0">

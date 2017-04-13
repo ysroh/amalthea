@@ -18,6 +18,7 @@ import org.eclipse.app4mc.amalthea.model.Frequency
 import org.eclipse.app4mc.amalthea.model.FrequencyUnit
 import org.eclipse.app4mc.amalthea.model.GraphEntryBase
 import org.eclipse.app4mc.amalthea.model.HwSystem
+import org.eclipse.app4mc.amalthea.model.IAnnotatable
 import org.eclipse.app4mc.amalthea.model.ISR
 import org.eclipse.app4mc.amalthea.model.InterfaceKind
 import org.eclipse.app4mc.amalthea.model.InterruptController
@@ -49,10 +50,14 @@ import org.eclipse.app4mc.amalthea.model.TaskSchedulingAlgorithm
 import org.eclipse.app4mc.amalthea.model.Time
 import org.eclipse.app4mc.amalthea.model.TimeMetric
 import org.eclipse.app4mc.amalthea.model.TimeUnit
+import org.eclipse.app4mc.amalthea.model.Value
+import org.eclipse.emf.common.util.EMap
 import org.eclipse.emf.ecore.resource.ResourceSet
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl
+import org.eclipse.papyrus.amalthea.profile.amalthea.common.CustomProperty
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.Deviation
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.InstructionsDeviation
+import org.eclipse.papyrus.amalthea.profile.amalthea.common.PortCustomProperty
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.WeibullEstimators
 import org.eclipse.papyrus.amalthea.profile.amalthea.components.Composite
 import org.eclipse.papyrus.amalthea.profile.amalthea.components.FInterfacePort
@@ -73,21 +78,16 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Interprocess
 import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Periodic
 import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Single
 import org.eclipse.uml2.uml.Abstraction
+import org.eclipse.uml2.uml.Class
 import org.eclipse.uml2.uml.ConnectorEnd
+import org.eclipse.uml2.uml.LiteralInteger
+import org.eclipse.uml2.uml.LiteralString
 import org.eclipse.uml2.uml.Model
 import org.eclipse.uml2.uml.Package
 import org.eclipse.uml2.uml.PackageImport
 import org.eclipse.uml2.uml.Property
 
 import static extension org.eclipse.papyrus.amalthea.generator.transform.TransformUtil.*
-import org.eclipse.papyrus.amalthea.profile.amalthea.common.CustomProperty
-import org.eclipse.emf.common.util.EMap
-import org.eclipse.app4mc.amalthea.model.Value
-import org.eclipse.emf.ecore.EDataType
-import org.eclipse.uml2.uml.LiteralString
-import org.eclipse.uml2.uml.LiteralInteger
-import org.eclipse.papyrus.amalthea.profile.amalthea.common.PortCustomProperty
-import org.eclipse.app4mc.amalthea.model.IAnnotatable
 
 class MainTransform {
 
@@ -529,7 +529,7 @@ class MainTransform {
 		component.transformComponentHelper(it)
 	}
 	
-	def private transformCustomProperties(org.eclipse.uml2.uml.Class container, IAnnotatable annotatable){
+	def private transformCustomProperties(Class container, IAnnotatable annotatable){
 		val customProperties = container.ownedAttributes.amaltheaFilteredList.filter(typeof(CustomProperty))
 		for(custom : customProperties){
 			custom.transformCustomProperty(annotatable.customProperties)

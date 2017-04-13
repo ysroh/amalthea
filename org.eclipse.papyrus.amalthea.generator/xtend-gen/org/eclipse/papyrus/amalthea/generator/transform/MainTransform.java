@@ -17,6 +17,8 @@ import org.eclipse.app4mc.amalthea.model.ComponentsModel;
 import org.eclipse.app4mc.amalthea.model.ConstraintsModel;
 import org.eclipse.app4mc.amalthea.model.CoreAllocation;
 import org.eclipse.app4mc.amalthea.model.CoreType;
+import org.eclipse.app4mc.amalthea.model.FInterfacePort;
+import org.eclipse.app4mc.amalthea.model.FrequencyUnit;
 import org.eclipse.app4mc.amalthea.model.GraphEntryBase;
 import org.eclipse.app4mc.amalthea.model.HWModel;
 import org.eclipse.app4mc.amalthea.model.HwSystem;
@@ -29,22 +31,29 @@ import org.eclipse.app4mc.amalthea.model.InterProcess;
 import org.eclipse.app4mc.amalthea.model.InterfaceKind;
 import org.eclipse.app4mc.amalthea.model.Label;
 import org.eclipse.app4mc.amalthea.model.LabelAccessEnum;
+import org.eclipse.app4mc.amalthea.model.LimitType;
 import org.eclipse.app4mc.amalthea.model.LongObject;
 import org.eclipse.app4mc.amalthea.model.MappingModel;
 import org.eclipse.app4mc.amalthea.model.MicrocontrollerType;
 import org.eclipse.app4mc.amalthea.model.NetworkType;
 import org.eclipse.app4mc.amalthea.model.OSModel;
 import org.eclipse.app4mc.amalthea.model.OperatingSystem;
+import org.eclipse.app4mc.amalthea.model.Port;
+import org.eclipse.app4mc.amalthea.model.Preemption;
 import org.eclipse.app4mc.amalthea.model.ProcessRequirement;
 import org.eclipse.app4mc.amalthea.model.QualifiedPort;
 import org.eclipse.app4mc.amalthea.model.Requirement;
 import org.eclipse.app4mc.amalthea.model.RunnableItem;
 import org.eclipse.app4mc.amalthea.model.SWModel;
+import org.eclipse.app4mc.amalthea.model.SchedType;
+import org.eclipse.app4mc.amalthea.model.Severity;
 import org.eclipse.app4mc.amalthea.model.StimuliModel;
 import org.eclipse.app4mc.amalthea.model.Stimulus;
 import org.eclipse.app4mc.amalthea.model.StringObject;
 import org.eclipse.app4mc.amalthea.model.Task;
 import org.eclipse.app4mc.amalthea.model.TaskAllocation;
+import org.eclipse.app4mc.amalthea.model.TimeMetric;
+import org.eclipse.app4mc.amalthea.model.TimeUnit;
 import org.eclipse.app4mc.amalthea.model.Value;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -62,25 +71,18 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.common.Instructions;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.PortCustomProperty;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.SignedTime;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.Time;
-import org.eclipse.papyrus.amalthea.profile.amalthea.common.TimeUnit;
 import org.eclipse.papyrus.amalthea.profile.amalthea.common.WeibullEstimators;
 import org.eclipse.papyrus.amalthea.profile.amalthea.components.Composite;
-import org.eclipse.papyrus.amalthea.profile.amalthea.components.FInterfacePort;
-import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.LimitType;
-import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.Severity;
-import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.TimeMetric;
 import org.eclipse.papyrus.amalthea.profile.amalthea.constraints.TimeRequirementLimit;
 import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Bus;
 import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Core;
 import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.ECU;
 import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.ECUType;
 import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Frequency;
-import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.FrequencyUnit;
 import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Microcontroller;
 import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Network;
 import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Prescaler;
 import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.Quartz;
-import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.SchedType;
 import org.eclipse.papyrus.amalthea.profile.amalthea.hardware.SystemType;
 import org.eclipse.papyrus.amalthea.profile.amalthea.os.InterruptController;
 import org.eclipse.papyrus.amalthea.profile.amalthea.os.InterruptSchedulingAlgorithm;
@@ -96,27 +98,18 @@ import org.eclipse.papyrus.amalthea.profile.amalthea.software.CallSequence;
 import org.eclipse.papyrus.amalthea.profile.amalthea.software.GraphEntry;
 import org.eclipse.papyrus.amalthea.profile.amalthea.software.InterProcessActivation;
 import org.eclipse.papyrus.amalthea.profile.amalthea.software.LabelAccess;
-import org.eclipse.papyrus.amalthea.profile.amalthea.software.Preemption;
 import org.eclipse.papyrus.amalthea.profile.amalthea.software.RunnableInstructions;
 import org.eclipse.papyrus.amalthea.profile.amalthea.software.TaskRunnableCall;
 import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Interprocess;
 import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Periodic;
 import org.eclipse.papyrus.amalthea.profile.amalthea.stimuli.Single;
 import org.eclipse.uml2.uml.Abstraction;
-import org.eclipse.uml2.uml.ConnectableElement;
 import org.eclipse.uml2.uml.Connector;
 import org.eclipse.uml2.uml.ConnectorEnd;
-import org.eclipse.uml2.uml.Constraint;
-import org.eclipse.uml2.uml.DataType;
-import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.LiteralInteger;
 import org.eclipse.uml2.uml.LiteralString;
 import org.eclipse.uml2.uml.Model;
-import org.eclipse.uml2.uml.NamedElement;
-import org.eclipse.uml2.uml.Operation;
 import org.eclipse.uml2.uml.PackageImport;
-import org.eclipse.uml2.uml.PackageableElement;
-import org.eclipse.uml2.uml.Port;
 import org.eclipse.uml2.uml.Property;
 import org.eclipse.uml2.uml.Type;
 import org.eclipse.uml2.uml.ValueSpecification;
@@ -137,13 +130,9 @@ public class MainTransform {
     try {
       this.root = model;
       final Amalthea transformed = this.transformModel(model);
-      Resource _eResource = model.eResource();
-      URI _uRI = _eResource.getURI();
-      URI _trimFileExtension = _uRI.trimFileExtension();
-      final URI uri = _trimFileExtension.appendFileExtension("amxmi");
+      final URI uri = model.eResource().getURI().trimFileExtension().appendFileExtension("amxmi");
       final Resource resource = this.rset.createResource(uri);
-      EList<EObject> _contents = resource.getContents();
-      _contents.add(transformed);
+      resource.getContents().add(transformed);
       resource.save(Collections.EMPTY_MAP);
       resource.unload();
     } catch (Throwable _e) {
@@ -170,20 +159,13 @@ public class MainTransform {
   
   private void _init_transformModel(final Amalthea it, final Model model) {
     this.transformPackage(model);
-    ComponentsModel _componentsModel = this.getComponentsModel(model);
-    it.setComponentsModel(_componentsModel);
-    SWModel _softwareModel = this.getSoftwareModel(model);
-    it.setSwModel(_softwareModel);
-    HWModel _hardwareModel = this.getHardwareModel(model);
-    it.setHwModel(_hardwareModel);
-    OSModel _oSModel = this.getOSModel(model);
-    it.setOsModel(_oSModel);
-    StimuliModel _stimuliModel = this.getStimuliModel(model);
-    it.setStimuliModel(_stimuliModel);
-    MappingModel _mappingModel = this.getMappingModel(model);
-    it.setMappingModel(_mappingModel);
-    ConstraintsModel _constraintsModel = this.getConstraintsModel(model);
-    it.setConstraintsModel(_constraintsModel);
+    it.setComponentsModel(this.getComponentsModel(model));
+    it.setSwModel(this.getSoftwareModel(model));
+    it.setHwModel(this.getHardwareModel(model));
+    it.setOsModel(this.getOSModel(model));
+    it.setStimuliModel(this.getStimuliModel(model));
+    it.setMappingModel(this.getMappingModel(model));
+    it.setConstraintsModel(this.getConstraintsModel(model));
   }
   
   private EObject _transform(final Object o) {
@@ -191,69 +173,42 @@ public class MainTransform {
   }
   
   private void transformPackage(final org.eclipse.uml2.uml.Package pkg) {
-    EList<PackageableElement> _packagedElements = pkg.getPackagedElements();
-    final List<EObject> list = TransformUtil.getAmaltheaList(_packagedElements);
+    final List<EObject> list = TransformUtil.getAmaltheaList(pkg.getPackagedElements());
     final Function1<EObject, EObject> _function = (EObject p) -> {
       return this.transform(p);
     };
-    List<EObject> _map = ListExtensions.<EObject, EObject>map(list, _function);
     final Function1<EObject, Boolean> _function_1 = (EObject e) -> {
       return Boolean.valueOf((!Objects.equal(e, null)));
     };
-    final Iterable<EObject> transformed = IterableExtensions.<EObject>filter(_map, _function_1);
+    final Iterable<EObject> transformed = IterableExtensions.<EObject>filter(ListExtensions.<EObject, EObject>map(list, _function), _function_1);
     EList<PackageImport> _packageImports = pkg.getPackageImports();
     for (final PackageImport pi : _packageImports) {
       this.transform(pi);
     }
     final SWModel swModel = this.getSoftwareModel(this.root);
-    EList<org.eclipse.app4mc.amalthea.model.Runnable> _runnables = swModel.getRunnables();
-    Iterable<org.eclipse.app4mc.amalthea.model.Runnable> _filter = Iterables.<org.eclipse.app4mc.amalthea.model.Runnable>filter(transformed, org.eclipse.app4mc.amalthea.model.Runnable.class);
-    Iterables.<org.eclipse.app4mc.amalthea.model.Runnable>addAll(_runnables, _filter);
-    EList<Label> _labels = swModel.getLabels();
-    Iterable<Label> _filter_1 = Iterables.<Label>filter(transformed, Label.class);
-    Iterables.<Label>addAll(_labels, _filter_1);
-    EList<Task> _tasks = swModel.getTasks();
-    Iterable<Task> _filter_2 = Iterables.<Task>filter(transformed, Task.class);
-    Iterables.<Task>addAll(_tasks, _filter_2);
-    EList<ISR> _isrs = swModel.getIsrs();
-    Iterable<ISR> _filter_3 = Iterables.<ISR>filter(transformed, ISR.class);
-    Iterables.<ISR>addAll(_isrs, _filter_3);
+    Iterables.<org.eclipse.app4mc.amalthea.model.Runnable>addAll(swModel.getRunnables(), Iterables.<org.eclipse.app4mc.amalthea.model.Runnable>filter(transformed, org.eclipse.app4mc.amalthea.model.Runnable.class));
+    Iterables.<Label>addAll(swModel.getLabels(), Iterables.<Label>filter(transformed, Label.class));
+    Iterables.<Task>addAll(swModel.getTasks(), Iterables.<Task>filter(transformed, Task.class));
+    Iterables.<ISR>addAll(swModel.getIsrs(), Iterables.<ISR>filter(transformed, ISR.class));
     final HWModel hwModel = this.getHardwareModel(this.root);
-    EList<CoreType> _coreTypes = hwModel.getCoreTypes();
-    Iterable<CoreType> _filter_4 = Iterables.<CoreType>filter(transformed, CoreType.class);
-    Iterables.<CoreType>addAll(_coreTypes, _filter_4);
-    EList<MicrocontrollerType> _mcTypes = hwModel.getMcTypes();
-    Iterable<MicrocontrollerType> _filter_5 = Iterables.<MicrocontrollerType>filter(transformed, MicrocontrollerType.class);
-    Iterables.<MicrocontrollerType>addAll(_mcTypes, _filter_5);
-    EList<NetworkType> _networkTypes = hwModel.getNetworkTypes();
-    Iterable<NetworkType> _filter_6 = Iterables.<NetworkType>filter(transformed, NetworkType.class);
-    Iterables.<NetworkType>addAll(_networkTypes, _filter_6);
+    Iterables.<CoreType>addAll(hwModel.getCoreTypes(), Iterables.<CoreType>filter(transformed, CoreType.class));
+    Iterables.<MicrocontrollerType>addAll(hwModel.getMcTypes(), Iterables.<MicrocontrollerType>filter(transformed, MicrocontrollerType.class));
+    Iterables.<NetworkType>addAll(hwModel.getNetworkTypes(), Iterables.<NetworkType>filter(transformed, NetworkType.class));
     final Iterable<HwSystem> system = Iterables.<HwSystem>filter(transformed, HwSystem.class);
     boolean _isEmpty = IterableExtensions.isEmpty(system);
     boolean _not = (!_isEmpty);
     if (_not) {
-      HwSystem _get = ((HwSystem[])Conversions.unwrapArray(system, HwSystem.class))[0];
-      hwModel.setSystem(_get);
+      hwModel.setSystem(((HwSystem[])Conversions.unwrapArray(system, HwSystem.class))[0]);
     }
     final OSModel osModel = this.getOSModel(this.root);
-    EList<OperatingSystem> _operatingSystems = osModel.getOperatingSystems();
-    Iterable<OperatingSystem> _filter_7 = Iterables.<OperatingSystem>filter(transformed, OperatingSystem.class);
-    Iterables.<OperatingSystem>addAll(_operatingSystems, _filter_7);
+    Iterables.<OperatingSystem>addAll(osModel.getOperatingSystems(), Iterables.<OperatingSystem>filter(transformed, OperatingSystem.class));
     final ComponentsModel component = this.getComponentsModel(this.root);
-    EList<Component> _components = component.getComponents();
-    Iterable<Component> _filter_8 = Iterables.<Component>filter(transformed, Component.class);
-    Iterables.<Component>addAll(_components, _filter_8);
+    Iterables.<Component>addAll(component.getComponents(), Iterables.<Component>filter(transformed, Component.class));
     final StimuliModel stimuli = this.getStimuliModel(this.root);
-    EList<Stimulus> _stimuli = stimuli.getStimuli();
-    Iterable<Stimulus> _filter_9 = Iterables.<Stimulus>filter(transformed, Stimulus.class);
-    Iterables.<Stimulus>addAll(_stimuli, _filter_9);
+    Iterables.<Stimulus>addAll(stimuli.getStimuli(), Iterables.<Stimulus>filter(transformed, Stimulus.class));
     final MappingModel mapping = this.getMappingModel(this.root);
-    EList<CoreAllocation> _coreAllocation = mapping.getCoreAllocation();
-    Iterable<CoreAllocation> _filter_10 = Iterables.<CoreAllocation>filter(transformed, CoreAllocation.class);
-    Iterables.<CoreAllocation>addAll(_coreAllocation, _filter_10);
-    EList<TaskAllocation> _taskAllocation = mapping.getTaskAllocation();
-    Iterable<TaskAllocation> _filter_11 = Iterables.<TaskAllocation>filter(transformed, TaskAllocation.class);
-    Iterables.<TaskAllocation>addAll(_taskAllocation, _filter_11);
+    Iterables.<CoreAllocation>addAll(mapping.getCoreAllocation(), Iterables.<CoreAllocation>filter(transformed, CoreAllocation.class));
+    Iterables.<TaskAllocation>addAll(mapping.getTaskAllocation(), Iterables.<TaskAllocation>filter(transformed, TaskAllocation.class));
   }
   
   private EObject _transform(final org.eclipse.uml2.uml.Package pkg) {
@@ -427,10 +382,8 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transformHelper = CollectionLiterals.newHashMap();
   
   private void _init_transformHelper(final org.eclipse.app4mc.amalthea.model.Counter it, final Counter counter, final Object owner) {
-    int _offset = counter.getOffset();
-    it.setOffset(_offset);
-    int _prescaler = counter.getPrescaler();
-    it.setPrescaler(_prescaler);
+    it.setOffset(counter.getOffset());
+    it.setPrescaler(counter.getPrescaler());
   }
   
   private EObject _transformHelper(final Time time, final Object owner) {
@@ -451,12 +404,8 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transformHelper_1 = CollectionLiterals.newHashMap();
   
   private void _init_transformHelper_1(final org.eclipse.app4mc.amalthea.model.Time it, final Time time, final Object owner) {
-    int _value = time.getValue();
-    it.setValue(_value);
-    TimeUnit _unit = time.getUnit();
-    String _literal = _unit.getLiteral();
-    org.eclipse.app4mc.amalthea.model.TimeUnit _get = org.eclipse.app4mc.amalthea.model.TimeUnit.get(_literal);
-    it.setUnit(_get);
+    it.setValue(time.getValue());
+    it.setUnit(TimeUnit.get(time.getUnit().getLiteral()));
   }
   
   private EObject _transformHelper(final SignedTime time, final Object owner) {
@@ -477,12 +426,8 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transformHelper_2 = CollectionLiterals.newHashMap();
   
   private void _init_transformHelper_2(final org.eclipse.app4mc.amalthea.model.SignedTime it, final SignedTime time, final Object owner) {
-    int _value = time.getValue();
-    it.setValue(_value);
-    TimeUnit _unit = time.getUnit();
-    String _literal = _unit.getLiteral();
-    org.eclipse.app4mc.amalthea.model.TimeUnit _get = org.eclipse.app4mc.amalthea.model.TimeUnit.get(_literal);
-    it.setUnit(_get);
+    it.setValue(time.getValue());
+    it.setUnit(TimeUnit.get(time.getUnit().getLiteral()));
   }
   
   /**
@@ -507,21 +452,14 @@ public class MainTransform {
   
   private void _init_transform(final org.eclipse.app4mc.amalthea.model.Runnable it, final org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable runnable) {
     final org.eclipse.uml2.uml.Class base = runnable.getBase_Class();
-    String _name = base.getName();
-    it.setName(_name);
-    boolean _isCallback = runnable.isCallback();
-    it.setCallback(_isCallback);
-    boolean _isService = runnable.isService();
-    it.setService(_isService);
-    EList<Element> _ownedElements = base.getOwnedElements();
-    List<EObject> _amaltheaList = TransformUtil.getAmaltheaList(_ownedElements);
+    it.setName(base.getName());
+    it.setCallback(runnable.isCallback());
+    it.setService(runnable.isService());
     final Function1<EObject, EObject> _function = (EObject o) -> {
       return this.transform(o);
     };
-    final List<EObject> mappedElements = ListExtensions.<EObject, EObject>map(_amaltheaList, _function);
-    EList<RunnableItem> _runnableItems = it.getRunnableItems();
-    Iterable<RunnableItem> _filter = Iterables.<RunnableItem>filter(mappedElements, RunnableItem.class);
-    Iterables.<RunnableItem>addAll(_runnableItems, _filter);
+    final List<EObject> mappedElements = ListExtensions.<EObject, EObject>map(TransformUtil.getAmaltheaList(base.getOwnedElements()), _function);
+    Iterables.<RunnableItem>addAll(it.getRunnableItems(), Iterables.<RunnableItem>filter(mappedElements, RunnableItem.class));
     this.transformCustomProperties(base, it);
   }
   
@@ -652,11 +590,9 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transformHelper_5 = CollectionLiterals.newHashMap();
   
   private void _init_transformHelper_5(final org.eclipse.app4mc.amalthea.model.WeibullEstimators<Object> it, final WeibullEstimators weibull, final Object owner) {
-    double _pRemainPromille = weibull.getPRemainPromille();
-    it.setPRemainPromille(_pRemainPromille);
+    it.setPRemainPromille(weibull.getPRemainPromille());
     final LongObject mean = AmaltheaFactory.eINSTANCE.createLongObject();
-    int _mean = weibull.getMean();
-    mean.setValue(_mean);
+    mean.setValue(weibull.getMean());
     it.setMean(mean);
   }
   
@@ -678,11 +614,8 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transform_3 = CollectionLiterals.newHashMap();
   
   private void _init_transform_3(final Label it, final org.eclipse.papyrus.amalthea.profile.amalthea.software.Label label) {
-    org.eclipse.uml2.uml.Class _base_Class = label.getBase_Class();
-    String _name = _base_Class.getName();
-    it.setName(_name);
-    org.eclipse.uml2.uml.Class _base_Class_1 = label.getBase_Class();
-    this.transformCustomProperties(_base_Class_1, it);
+    it.setName(label.getBase_Class().getName());
+    this.transformCustomProperties(label.getBase_Class(), it);
   }
   
   private EObject _transform(final org.eclipse.papyrus.amalthea.profile.amalthea.software.Task task) {
@@ -703,15 +636,9 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transform_4 = CollectionLiterals.newHashMap();
   
   private void _init_transform_4(final Task it, final org.eclipse.papyrus.amalthea.profile.amalthea.software.Task task) {
-    org.eclipse.uml2.uml.Class _base_Class = task.getBase_Class();
-    String _name = _base_Class.getName();
-    it.setName(_name);
-    int _multipleTaskActivationLimit = task.getMultipleTaskActivationLimit();
-    it.setMultipleTaskActivationLimit(_multipleTaskActivationLimit);
-    Preemption _preemption = task.getPreemption();
-    String _literal = _preemption.getLiteral();
-    org.eclipse.app4mc.amalthea.model.Preemption _get = org.eclipse.app4mc.amalthea.model.Preemption.get(_literal);
-    it.setPreemption(_get);
+    it.setName(task.getBase_Class().getName());
+    it.setMultipleTaskActivationLimit(task.getMultipleTaskActivationLimit());
+    it.setPreemption(Preemption.get(task.getPreemption().getLiteral()));
     this.transformProcessHelper(task, it);
   }
   
@@ -733,15 +660,12 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transform_5 = CollectionLiterals.newHashMap();
   
   private void _init_transform_5(final ISR it, final org.eclipse.papyrus.amalthea.profile.amalthea.software.ISR isr) {
-    org.eclipse.uml2.uml.Class _base_Class = isr.getBase_Class();
-    String _name = _base_Class.getName();
-    it.setName(_name);
+    it.setName(isr.getBase_Class().getName());
     this.transformProcessHelper(isr, it);
   }
   
   private void transformProcessHelper(final org.eclipse.papyrus.amalthea.profile.amalthea.software.Process source, final org.eclipse.app4mc.amalthea.model.Process target) {
-    int _priority = source.getPriority();
-    target.setPriority(_priority);
+    target.setPriority(source.getPriority());
     CallGraph _callgraph = source.getCallgraph();
     EObject _transformHelper = null;
     if (_callgraph!=null) {
@@ -750,19 +674,11 @@ public class MainTransform {
     }
     final org.eclipse.app4mc.amalthea.model.CallGraph callGraph = ((org.eclipse.app4mc.amalthea.model.CallGraph) _transformHelper);
     target.setCallGraph(callGraph);
-    ConstraintsModel _constraintsModel = this.getConstraintsModel(this.root);
-    EList<Requirement> _requirements = _constraintsModel.getRequirements();
-    org.eclipse.uml2.uml.Class _base_Class = source.getBase_Class();
-    EList<Constraint> _ownedRules = _base_Class.getOwnedRules();
-    List<EObject> _amaltheaFilteredList = TransformUtil.getAmaltheaFilteredList(_ownedRules);
     final Function1<EObject, EObject> _function = (EObject e) -> {
       return this.transform(e);
     };
-    List<EObject> _map = ListExtensions.<EObject, EObject>map(_amaltheaFilteredList, _function);
-    Iterable<ProcessRequirement> _filter = Iterables.<ProcessRequirement>filter(_map, ProcessRequirement.class);
-    Iterables.<Requirement>addAll(_requirements, _filter);
-    org.eclipse.uml2.uml.Class _base_Class_1 = source.getBase_Class();
-    this.transformCustomProperties(_base_Class_1, target);
+    Iterables.<Requirement>addAll(this.getConstraintsModel(this.root).getRequirements(), Iterables.<ProcessRequirement>filter(ListExtensions.<EObject, EObject>map(TransformUtil.getAmaltheaFilteredList(source.getBase_Class().getOwnedRules()), _function), ProcessRequirement.class));
+    this.transformCustomProperties(source.getBase_Class(), target);
   }
   
   private EObject _transformHelper(final CallGraph callGraph, final Object owner) {
@@ -783,17 +699,13 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transformHelper_6 = CollectionLiterals.newHashMap();
   
   private void _init_transformHelper_6(final org.eclipse.app4mc.amalthea.model.CallGraph it, final CallGraph callGraph, final Object owner) {
-    EList<GraphEntry> _graphentries = callGraph.getGraphentries();
     final Function1<GraphEntry, EObject> _function = (GraphEntry e) -> {
       Object _object = new Object();
       return this.transformHelper(e, _object);
     };
-    List<EObject> _map = ListExtensions.<GraphEntry, EObject>map(_graphentries, _function);
-    final Iterable<GraphEntryBase> graphEntries = Iterables.<GraphEntryBase>filter(_map, GraphEntryBase.class);
-    EList<GraphEntryBase> _graphEntries = it.getGraphEntries();
-    Iterables.<GraphEntryBase>addAll(_graphEntries, graphEntries);
-    org.eclipse.uml2.uml.Class _base_Class = callGraph.getBase_Class();
-    this.transformCustomProperties(_base_Class, it);
+    final Iterable<GraphEntryBase> graphEntries = Iterables.<GraphEntryBase>filter(ListExtensions.<GraphEntry, EObject>map(callGraph.getGraphentries(), _function), GraphEntryBase.class);
+    Iterables.<GraphEntryBase>addAll(it.getGraphEntries(), graphEntries);
+    this.transformCustomProperties(callGraph.getBase_Class(), it);
   }
   
   private EObject _transformHelper(final CallSequence callSequence, final Object owner) {
@@ -815,17 +727,12 @@ public class MainTransform {
   
   private void _init_transformHelper_7(final org.eclipse.app4mc.amalthea.model.CallSequence it, final CallSequence callSequence, final Object owner) {
     final org.eclipse.uml2.uml.Class base = callSequence.getBase_Class();
-    String _name = base.getName();
-    it.setName(_name);
-    EList<Operation> _ownedOperations = base.getOwnedOperations();
-    List<EObject> _amaltheaFilteredList = TransformUtil.getAmaltheaFilteredList(_ownedOperations);
+    it.setName(base.getName());
     final Function1<EObject, EObject> _function = (EObject e) -> {
       return this.transform(e);
     };
-    List<EObject> _map = ListExtensions.<EObject, EObject>map(_amaltheaFilteredList, _function);
-    final Iterable<CallSequenceItem> items = Iterables.<CallSequenceItem>filter(_map, CallSequenceItem.class);
-    EList<CallSequenceItem> _calls = it.getCalls();
-    Iterables.<CallSequenceItem>addAll(_calls, items);
+    final Iterable<CallSequenceItem> items = Iterables.<CallSequenceItem>filter(ListExtensions.<EObject, EObject>map(TransformUtil.getAmaltheaFilteredList(base.getOwnedOperations()), _function), CallSequenceItem.class);
+    Iterables.<CallSequenceItem>addAll(it.getCalls(), items);
     this.transformCustomProperties(base, it);
   }
   
@@ -847,8 +754,7 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transform_6 = CollectionLiterals.newHashMap();
   
   private void _init_transform_6(final org.eclipse.app4mc.amalthea.model.TaskRunnableCall it, final TaskRunnableCall call) {
-    org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable _runnable = call.getRunnable();
-    EObject _transform = this.transform(_runnable);
+    EObject _transform = this.transform(call.getRunnable());
     it.setRunnable(((org.eclipse.app4mc.amalthea.model.Runnable) _transform));
     Counter _counter = call.getCounter();
     EObject _transformHelper = null;
@@ -905,42 +811,30 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transform_8 = CollectionLiterals.newHashMap();
   
   private void _init_transform_8(final HwSystem it, final org.eclipse.papyrus.amalthea.profile.amalthea.hardware.HwSystem system) {
-    org.eclipse.uml2.uml.Class _base_Class = system.getBase_Class();
-    String _name = _base_Class.getName();
-    it.setName(_name);
-    EList<ECU> _ecus = system.getEcus();
+    it.setName(system.getBase_Class().getName());
     final Function1<ECU, EObject> _function = (ECU e) -> {
       return this.transform(e);
     };
-    List<EObject> _map = ListExtensions.<ECU, EObject>map(_ecus, _function);
-    final Iterable<org.eclipse.app4mc.amalthea.model.ECU> ecus = Iterables.<org.eclipse.app4mc.amalthea.model.ECU>filter(_map, org.eclipse.app4mc.amalthea.model.ECU.class);
-    EList<Quartz> _quartzes = system.getQuartzes();
+    final Iterable<org.eclipse.app4mc.amalthea.model.ECU> ecus = Iterables.<org.eclipse.app4mc.amalthea.model.ECU>filter(ListExtensions.<ECU, EObject>map(system.getEcus(), _function), org.eclipse.app4mc.amalthea.model.ECU.class);
     final Function1<Quartz, EObject> _function_1 = (Quartz e) -> {
       return this.transformHelper(e, system);
     };
-    List<EObject> _map_1 = ListExtensions.<Quartz, EObject>map(_quartzes, _function_1);
-    final Iterable<org.eclipse.app4mc.amalthea.model.Quartz> quartz = Iterables.<org.eclipse.app4mc.amalthea.model.Quartz>filter(_map_1, org.eclipse.app4mc.amalthea.model.Quartz.class);
+    final Iterable<org.eclipse.app4mc.amalthea.model.Quartz> quartz = Iterables.<org.eclipse.app4mc.amalthea.model.Quartz>filter(ListExtensions.<Quartz, EObject>map(system.getQuartzes(), _function_1), org.eclipse.app4mc.amalthea.model.Quartz.class);
     Prescaler _prescaler = system.getPrescaler();
     EObject _transformHelper = null;
     if (_prescaler!=null) {
       _transformHelper=this.transformHelper(_prescaler, system);
     }
     final org.eclipse.app4mc.amalthea.model.Prescaler prescaler = ((org.eclipse.app4mc.amalthea.model.Prescaler) _transformHelper);
-    EList<Network> _networks = system.getNetworks();
     final Function1<Network, EObject> _function_2 = (Network e) -> {
       return this.transformHelper(e, system);
     };
-    List<EObject> _map_2 = ListExtensions.<Network, EObject>map(_networks, _function_2);
-    final Iterable<org.eclipse.app4mc.amalthea.model.Network> networks = Iterables.<org.eclipse.app4mc.amalthea.model.Network>filter(_map_2, org.eclipse.app4mc.amalthea.model.Network.class);
-    EList<org.eclipse.app4mc.amalthea.model.ECU> _ecus_1 = it.getEcus();
-    Iterables.<org.eclipse.app4mc.amalthea.model.ECU>addAll(_ecus_1, ecus);
-    EList<org.eclipse.app4mc.amalthea.model.Quartz> _quartzes_1 = it.getQuartzes();
-    Iterables.<org.eclipse.app4mc.amalthea.model.Quartz>addAll(_quartzes_1, quartz);
+    final Iterable<org.eclipse.app4mc.amalthea.model.Network> networks = Iterables.<org.eclipse.app4mc.amalthea.model.Network>filter(ListExtensions.<Network, EObject>map(system.getNetworks(), _function_2), org.eclipse.app4mc.amalthea.model.Network.class);
+    Iterables.<org.eclipse.app4mc.amalthea.model.ECU>addAll(it.getEcus(), ecus);
+    Iterables.<org.eclipse.app4mc.amalthea.model.Quartz>addAll(it.getQuartzes(), quartz);
     it.setPrescaler(prescaler);
-    EList<org.eclipse.app4mc.amalthea.model.Network> _networks_1 = it.getNetworks();
-    Iterables.<org.eclipse.app4mc.amalthea.model.Network>addAll(_networks_1, networks);
-    org.eclipse.uml2.uml.Class _base_Class_1 = system.getBase_Class();
-    this.transformCustomProperties(_base_Class_1, it);
+    Iterables.<org.eclipse.app4mc.amalthea.model.Network>addAll(it.getNetworks(), networks);
+    this.transformCustomProperties(system.getBase_Class(), it);
   }
   
   private EObject _transform(final ECU ecu) {
@@ -961,22 +855,16 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transform_9 = CollectionLiterals.newHashMap();
   
   private void _init_transform_9(final org.eclipse.app4mc.amalthea.model.ECU it, final ECU ecu) {
-    org.eclipse.uml2.uml.Class _base_Class = ecu.getBase_Class();
-    String _name = _base_Class.getName();
-    it.setName(_name);
-    EList<Microcontroller> _microcontrollers = ecu.getMicrocontrollers();
+    it.setName(ecu.getBase_Class().getName());
     final Function1<Microcontroller, EObject> _function = (Microcontroller e) -> {
       return this.transform(e);
     };
-    List<EObject> _map = ListExtensions.<Microcontroller, EObject>map(_microcontrollers, _function);
-    final Iterable<org.eclipse.app4mc.amalthea.model.Microcontroller> processors = Iterables.<org.eclipse.app4mc.amalthea.model.Microcontroller>filter(_map, org.eclipse.app4mc.amalthea.model.Microcontroller.class);
-    EList<Quartz> _quartzes = ecu.getQuartzes();
+    final Iterable<org.eclipse.app4mc.amalthea.model.Microcontroller> processors = Iterables.<org.eclipse.app4mc.amalthea.model.Microcontroller>filter(ListExtensions.<Microcontroller, EObject>map(ecu.getMicrocontrollers(), _function), org.eclipse.app4mc.amalthea.model.Microcontroller.class);
     final Function1<Quartz, EObject> _function_1 = (Quartz e) -> {
       Object _object = new Object();
       return this.transformHelper(e, _object);
     };
-    List<EObject> _map_1 = ListExtensions.<Quartz, EObject>map(_quartzes, _function_1);
-    final Iterable<org.eclipse.app4mc.amalthea.model.Quartz> quartz = Iterables.<org.eclipse.app4mc.amalthea.model.Quartz>filter(_map_1, org.eclipse.app4mc.amalthea.model.Quartz.class);
+    final Iterable<org.eclipse.app4mc.amalthea.model.Quartz> quartz = Iterables.<org.eclipse.app4mc.amalthea.model.Quartz>filter(ListExtensions.<Quartz, EObject>map(ecu.getQuartzes(), _function_1), org.eclipse.app4mc.amalthea.model.Quartz.class);
     Prescaler _prescaler = ecu.getPrescaler();
     EObject _transformHelper = null;
     if (_prescaler!=null) {
@@ -984,22 +872,16 @@ public class MainTransform {
       _transformHelper=this.transformHelper(_prescaler, _object);
     }
     final org.eclipse.app4mc.amalthea.model.Prescaler prescaler = ((org.eclipse.app4mc.amalthea.model.Prescaler) _transformHelper);
-    EList<Network> _networks = ecu.getNetworks();
     final Function1<Network, EObject> _function_2 = (Network e) -> {
       Object _object_1 = new Object();
       return this.transformHelper(e, _object_1);
     };
-    List<EObject> _map_2 = ListExtensions.<Network, EObject>map(_networks, _function_2);
-    final Iterable<org.eclipse.app4mc.amalthea.model.Network> networks = Iterables.<org.eclipse.app4mc.amalthea.model.Network>filter(_map_2, org.eclipse.app4mc.amalthea.model.Network.class);
-    EList<org.eclipse.app4mc.amalthea.model.Microcontroller> _microcontrollers_1 = it.getMicrocontrollers();
-    Iterables.<org.eclipse.app4mc.amalthea.model.Microcontroller>addAll(_microcontrollers_1, processors);
-    EList<org.eclipse.app4mc.amalthea.model.Quartz> _quartzes_1 = it.getQuartzes();
-    Iterables.<org.eclipse.app4mc.amalthea.model.Quartz>addAll(_quartzes_1, quartz);
+    final Iterable<org.eclipse.app4mc.amalthea.model.Network> networks = Iterables.<org.eclipse.app4mc.amalthea.model.Network>filter(ListExtensions.<Network, EObject>map(ecu.getNetworks(), _function_2), org.eclipse.app4mc.amalthea.model.Network.class);
+    Iterables.<org.eclipse.app4mc.amalthea.model.Microcontroller>addAll(it.getMicrocontrollers(), processors);
+    Iterables.<org.eclipse.app4mc.amalthea.model.Quartz>addAll(it.getQuartzes(), quartz);
     it.setPrescaler(prescaler);
-    EList<org.eclipse.app4mc.amalthea.model.Network> _networks_1 = it.getNetworks();
-    Iterables.<org.eclipse.app4mc.amalthea.model.Network>addAll(_networks_1, networks);
-    org.eclipse.uml2.uml.Class _base_Class_1 = ecu.getBase_Class();
-    this.transformCustomProperties(_base_Class_1, it);
+    Iterables.<org.eclipse.app4mc.amalthea.model.Network>addAll(it.getNetworks(), networks);
+    this.transformCustomProperties(ecu.getBase_Class(), it);
   }
   
   private EObject _transform(final Microcontroller processor) {
@@ -1020,22 +902,16 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transform_10 = CollectionLiterals.newHashMap();
   
   private void _init_transform_10(final org.eclipse.app4mc.amalthea.model.Microcontroller it, final Microcontroller processor) {
-    org.eclipse.uml2.uml.Class _base_Class = processor.getBase_Class();
-    String _name = _base_Class.getName();
-    it.setName(_name);
-    EList<Core> _cores = processor.getCores();
+    it.setName(processor.getBase_Class().getName());
     final Function1<Core, EObject> _function = (Core e) -> {
       return this.transform(e);
     };
-    List<EObject> _map = ListExtensions.<Core, EObject>map(_cores, _function);
-    final Iterable<org.eclipse.app4mc.amalthea.model.Core> cores = Iterables.<org.eclipse.app4mc.amalthea.model.Core>filter(_map, org.eclipse.app4mc.amalthea.model.Core.class);
-    EList<Quartz> _quartzes = processor.getQuartzes();
+    final Iterable<org.eclipse.app4mc.amalthea.model.Core> cores = Iterables.<org.eclipse.app4mc.amalthea.model.Core>filter(ListExtensions.<Core, EObject>map(processor.getCores(), _function), org.eclipse.app4mc.amalthea.model.Core.class);
     final Function1<Quartz, EObject> _function_1 = (Quartz e) -> {
       Object _object = new Object();
       return this.transformHelper(e, _object);
     };
-    List<EObject> _map_1 = ListExtensions.<Quartz, EObject>map(_quartzes, _function_1);
-    final Iterable<org.eclipse.app4mc.amalthea.model.Quartz> quartz = Iterables.<org.eclipse.app4mc.amalthea.model.Quartz>filter(_map_1, org.eclipse.app4mc.amalthea.model.Quartz.class);
+    final Iterable<org.eclipse.app4mc.amalthea.model.Quartz> quartz = Iterables.<org.eclipse.app4mc.amalthea.model.Quartz>filter(ListExtensions.<Quartz, EObject>map(processor.getQuartzes(), _function_1), org.eclipse.app4mc.amalthea.model.Quartz.class);
     Prescaler _prescaler = processor.getPrescaler();
     EObject _transformHelper = null;
     if (_prescaler!=null) {
@@ -1043,22 +919,16 @@ public class MainTransform {
       _transformHelper=this.transformHelper(_prescaler, _object);
     }
     final org.eclipse.app4mc.amalthea.model.Prescaler prescaler = ((org.eclipse.app4mc.amalthea.model.Prescaler) _transformHelper);
-    EList<Network> _networks = processor.getNetworks();
     final Function1<Network, EObject> _function_2 = (Network e) -> {
       Object _object_1 = new Object();
       return this.transformHelper(e, _object_1);
     };
-    List<EObject> _map_2 = ListExtensions.<Network, EObject>map(_networks, _function_2);
-    final Iterable<org.eclipse.app4mc.amalthea.model.Network> networks = Iterables.<org.eclipse.app4mc.amalthea.model.Network>filter(_map_2, org.eclipse.app4mc.amalthea.model.Network.class);
-    EList<org.eclipse.app4mc.amalthea.model.Core> _cores_1 = it.getCores();
-    Iterables.<org.eclipse.app4mc.amalthea.model.Core>addAll(_cores_1, cores);
-    EList<org.eclipse.app4mc.amalthea.model.Quartz> _quartzes_1 = it.getQuartzes();
-    Iterables.<org.eclipse.app4mc.amalthea.model.Quartz>addAll(_quartzes_1, quartz);
+    final Iterable<org.eclipse.app4mc.amalthea.model.Network> networks = Iterables.<org.eclipse.app4mc.amalthea.model.Network>filter(ListExtensions.<Network, EObject>map(processor.getNetworks(), _function_2), org.eclipse.app4mc.amalthea.model.Network.class);
+    Iterables.<org.eclipse.app4mc.amalthea.model.Core>addAll(it.getCores(), cores);
+    Iterables.<org.eclipse.app4mc.amalthea.model.Quartz>addAll(it.getQuartzes(), quartz);
     it.setPrescaler(prescaler);
-    EList<org.eclipse.app4mc.amalthea.model.Network> _networks_1 = it.getNetworks();
-    Iterables.<org.eclipse.app4mc.amalthea.model.Network>addAll(_networks_1, networks);
-    org.eclipse.uml2.uml.Class _base_Class_1 = processor.getBase_Class();
-    this.transformCustomProperties(_base_Class_1, it);
+    Iterables.<org.eclipse.app4mc.amalthea.model.Network>addAll(it.getNetworks(), networks);
+    this.transformCustomProperties(processor.getBase_Class(), it);
   }
   
   private EObject _transform(final Core core) {
@@ -1079,22 +949,18 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transform_11 = CollectionLiterals.newHashMap();
   
   private void _init_transform_11(final org.eclipse.app4mc.amalthea.model.Core it, final Core core) {
-    org.eclipse.uml2.uml.Class _base_Class = core.getBase_Class();
-    String _name = _base_Class.getName();
-    it.setName(_name);
+    it.setName(core.getBase_Class().getName());
     org.eclipse.papyrus.amalthea.profile.amalthea.hardware.CoreType _coretype = core.getCoretype();
     EObject _transform = null;
     if (_coretype!=null) {
       _transform=this.transform(_coretype);
     }
     it.setCoreType(((CoreType) _transform));
-    EList<Quartz> _quartzes = core.getQuartzes();
     final Function1<Quartz, EObject> _function = (Quartz e) -> {
       Object _object = new Object();
       return this.transformHelper(e, _object);
     };
-    List<EObject> _map = ListExtensions.<Quartz, EObject>map(_quartzes, _function);
-    final Iterable<org.eclipse.app4mc.amalthea.model.Quartz> quartz = Iterables.<org.eclipse.app4mc.amalthea.model.Quartz>filter(_map, org.eclipse.app4mc.amalthea.model.Quartz.class);
+    final Iterable<org.eclipse.app4mc.amalthea.model.Quartz> quartz = Iterables.<org.eclipse.app4mc.amalthea.model.Quartz>filter(ListExtensions.<Quartz, EObject>map(core.getQuartzes(), _function), org.eclipse.app4mc.amalthea.model.Quartz.class);
     Prescaler _prescaler = core.getPrescaler();
     EObject _transformHelper = null;
     if (_prescaler!=null) {
@@ -1102,20 +968,15 @@ public class MainTransform {
       _transformHelper=this.transformHelper(_prescaler, _object);
     }
     final org.eclipse.app4mc.amalthea.model.Prescaler prescaler = ((org.eclipse.app4mc.amalthea.model.Prescaler) _transformHelper);
-    EList<Network> _networks = core.getNetworks();
     final Function1<Network, EObject> _function_1 = (Network e) -> {
       Object _object_1 = new Object();
       return this.transformHelper(e, _object_1);
     };
-    List<EObject> _map_1 = ListExtensions.<Network, EObject>map(_networks, _function_1);
-    final Iterable<org.eclipse.app4mc.amalthea.model.Network> networks = Iterables.<org.eclipse.app4mc.amalthea.model.Network>filter(_map_1, org.eclipse.app4mc.amalthea.model.Network.class);
-    EList<org.eclipse.app4mc.amalthea.model.Quartz> _quartzes_1 = it.getQuartzes();
-    Iterables.<org.eclipse.app4mc.amalthea.model.Quartz>addAll(_quartzes_1, quartz);
+    final Iterable<org.eclipse.app4mc.amalthea.model.Network> networks = Iterables.<org.eclipse.app4mc.amalthea.model.Network>filter(ListExtensions.<Network, EObject>map(core.getNetworks(), _function_1), org.eclipse.app4mc.amalthea.model.Network.class);
+    Iterables.<org.eclipse.app4mc.amalthea.model.Quartz>addAll(it.getQuartzes(), quartz);
     it.setPrescaler(prescaler);
-    EList<org.eclipse.app4mc.amalthea.model.Network> _networks_1 = it.getNetworks();
-    Iterables.<org.eclipse.app4mc.amalthea.model.Network>addAll(_networks_1, networks);
-    org.eclipse.uml2.uml.Class _base_Class_1 = core.getBase_Class();
-    this.transformCustomProperties(_base_Class_1, it);
+    Iterables.<org.eclipse.app4mc.amalthea.model.Network>addAll(it.getNetworks(), networks);
+    this.transformCustomProperties(core.getBase_Class(), it);
   }
   
   private EObject _transformHelper(final Network network, final Object owner) {
@@ -1136,9 +997,7 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transformHelper_8 = CollectionLiterals.newHashMap();
   
   private void _init_transformHelper_8(final org.eclipse.app4mc.amalthea.model.Network it, final Network network, final Object owner) {
-    org.eclipse.uml2.uml.Class _base_Class = network.getBase_Class();
-    String _name = _base_Class.getName();
-    it.setName(_name);
+    it.setName(network.getBase_Class().getName());
     org.eclipse.papyrus.amalthea.profile.amalthea.hardware.NetworkType _networktype = network.getNetworktype();
     EObject _transform = null;
     if (_networktype!=null) {
@@ -1152,8 +1011,7 @@ public class MainTransform {
       _transformHelper=this.transformHelper(_prescaler, _object);
     }
     it.setPrescaler(((org.eclipse.app4mc.amalthea.model.Prescaler) _transformHelper));
-    org.eclipse.uml2.uml.Class _base_Class_1 = network.getBase_Class();
-    this.transformCustomProperties(_base_Class_1, it);
+    this.transformCustomProperties(network.getBase_Class(), it);
   }
   
   private EObject _transform(final SystemType type) {
@@ -1174,9 +1032,7 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transform_12 = CollectionLiterals.newHashMap();
   
   private void _init_transform_12(final org.eclipse.app4mc.amalthea.model.SystemType it, final SystemType type) {
-    DataType _base_DataType = type.getBase_DataType();
-    String _name = _base_DataType.getName();
-    it.setName(_name);
+    it.setName(type.getBase_DataType().getName());
   }
   
   private EObject _transform(final ECUType type) {
@@ -1197,9 +1053,7 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transform_13 = CollectionLiterals.newHashMap();
   
   private void _init_transform_13(final org.eclipse.app4mc.amalthea.model.ECUType it, final ECUType type) {
-    DataType _base_DataType = type.getBase_DataType();
-    String _name = _base_DataType.getName();
-    it.setName(_name);
+    it.setName(type.getBase_DataType().getName());
   }
   
   private EObject _transform(final org.eclipse.papyrus.amalthea.profile.amalthea.hardware.MicrocontrollerType type) {
@@ -1220,9 +1074,7 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transform_14 = CollectionLiterals.newHashMap();
   
   private void _init_transform_14(final MicrocontrollerType it, final org.eclipse.papyrus.amalthea.profile.amalthea.hardware.MicrocontrollerType type) {
-    DataType _base_DataType = type.getBase_DataType();
-    String _name = _base_DataType.getName();
-    it.setName(_name);
+    it.setName(type.getBase_DataType().getName());
   }
   
   private EObject _transform(final Bus type) {
@@ -1243,15 +1095,9 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transform_15 = CollectionLiterals.newHashMap();
   
   private void _init_transform_15(final org.eclipse.app4mc.amalthea.model.Bus it, final Bus type) {
-    DataType _base_DataType = type.getBase_DataType();
-    String _name = _base_DataType.getName();
-    it.setName(_name);
-    int _bitWidth = type.getBitWidth();
-    it.setBitWidth(_bitWidth);
-    SchedType _schedPolicy = type.getSchedPolicy();
-    String _literal = _schedPolicy.getLiteral();
-    org.eclipse.app4mc.amalthea.model.SchedType _get = org.eclipse.app4mc.amalthea.model.SchedType.get(_literal);
-    it.setSchedPolicy(_get);
+    it.setName(type.getBase_DataType().getName());
+    it.setBitWidth(type.getBitWidth());
+    it.setSchedPolicy(SchedType.get(type.getSchedPolicy().getLiteral()));
   }
   
   private EObject _transformHelper(final Quartz quartz, final Object owner) {
@@ -1272,9 +1118,7 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transformHelper_9 = CollectionLiterals.newHashMap();
   
   private void _init_transformHelper_9(final org.eclipse.app4mc.amalthea.model.Quartz it, final Quartz quartz, final Object owner) {
-    org.eclipse.uml2.uml.Class _base_Class = quartz.getBase_Class();
-    String _name = _base_Class.getName();
-    it.setName(_name);
+    it.setName(quartz.getBase_Class().getName());
     Frequency _frequency = quartz.getFrequency();
     EObject _transformHelper = null;
     if (_frequency!=null) {
@@ -1282,8 +1126,7 @@ public class MainTransform {
       _transformHelper=this.transformHelper(_frequency, _object);
     }
     it.setFrequency(((org.eclipse.app4mc.amalthea.model.Frequency) _transformHelper));
-    org.eclipse.uml2.uml.Class _base_Class_1 = quartz.getBase_Class();
-    this.transformCustomProperties(_base_Class_1, it);
+    this.transformCustomProperties(quartz.getBase_Class(), it);
   }
   
   private EObject _transformHelper(final Frequency frequency, final Object owner) {
@@ -1304,12 +1147,8 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transformHelper_10 = CollectionLiterals.newHashMap();
   
   private void _init_transformHelper_10(final org.eclipse.app4mc.amalthea.model.Frequency it, final Frequency frequency, final Object owner) {
-    double _value = frequency.getValue();
-    it.setValue(_value);
-    FrequencyUnit _unit = frequency.getUnit();
-    String _literal = _unit.getLiteral();
-    org.eclipse.app4mc.amalthea.model.FrequencyUnit _get = org.eclipse.app4mc.amalthea.model.FrequencyUnit.get(_literal);
-    it.setUnit(_get);
+    it.setValue(frequency.getValue());
+    it.setUnit(FrequencyUnit.get(frequency.getUnit().getLiteral()));
   }
   
   private EObject _transformHelper(final Prescaler prescaler, final Object owner) {
@@ -1330,11 +1169,8 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transformHelper_11 = CollectionLiterals.newHashMap();
   
   private void _init_transformHelper_11(final org.eclipse.app4mc.amalthea.model.Prescaler it, final Prescaler prescaler, final Object owner) {
-    org.eclipse.uml2.uml.Class _base_Class = prescaler.getBase_Class();
-    String _name = _base_Class.getName();
-    it.setName(_name);
-    double _clockRatio = prescaler.getClockRatio();
-    it.setClockRatio(_clockRatio);
+    it.setName(prescaler.getBase_Class().getName());
+    it.setClockRatio(prescaler.getClockRatio());
   }
   
   private EObject _transform(final org.eclipse.papyrus.amalthea.profile.amalthea.hardware.CoreType type) {
@@ -1355,13 +1191,9 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transform_16 = CollectionLiterals.newHashMap();
   
   private void _init_transform_16(final CoreType it, final org.eclipse.papyrus.amalthea.profile.amalthea.hardware.CoreType type) {
-    DataType _base_DataType = type.getBase_DataType();
-    String _name = _base_DataType.getName();
-    it.setName(_name);
-    int _bitWidth = type.getBitWidth();
-    it.setBitWidth(_bitWidth);
-    int _instructionsPerCycle = type.getInstructionsPerCycle();
-    it.setInstructionsPerCycle(_instructionsPerCycle);
+    it.setName(type.getBase_DataType().getName());
+    it.setBitWidth(type.getBitWidth());
+    it.setInstructionsPerCycle(type.getInstructionsPerCycle());
   }
   
   /**
@@ -1385,27 +1217,18 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transform_17 = CollectionLiterals.newHashMap();
   
   private void _init_transform_17(final OperatingSystem it, final org.eclipse.papyrus.amalthea.profile.amalthea.os.OperatingSystem os) {
-    org.eclipse.uml2.uml.Class _base_Class = os.getBase_Class();
-    String _name = _base_Class.getName();
-    it.setName(_name);
-    EList<TaskScheduler> _taskscheduler = os.getTaskscheduler();
+    it.setName(os.getBase_Class().getName());
     final Function1<TaskScheduler, EObject> _function = (TaskScheduler e) -> {
       return this.transform(e);
     };
-    List<EObject> _map = ListExtensions.<TaskScheduler, EObject>map(_taskscheduler, _function);
-    final Iterable<org.eclipse.app4mc.amalthea.model.TaskScheduler> schedulers = Iterables.<org.eclipse.app4mc.amalthea.model.TaskScheduler>filter(_map, org.eclipse.app4mc.amalthea.model.TaskScheduler.class);
-    EList<InterruptController> _interruptcontroller = os.getInterruptcontroller();
+    final Iterable<org.eclipse.app4mc.amalthea.model.TaskScheduler> schedulers = Iterables.<org.eclipse.app4mc.amalthea.model.TaskScheduler>filter(ListExtensions.<TaskScheduler, EObject>map(os.getTaskscheduler(), _function), org.eclipse.app4mc.amalthea.model.TaskScheduler.class);
     final Function1<InterruptController, EObject> _function_1 = (InterruptController e) -> {
       return this.transform(e);
     };
-    List<EObject> _map_1 = ListExtensions.<InterruptController, EObject>map(_interruptcontroller, _function_1);
-    final Iterable<org.eclipse.app4mc.amalthea.model.InterruptController> controllers = Iterables.<org.eclipse.app4mc.amalthea.model.InterruptController>filter(_map_1, org.eclipse.app4mc.amalthea.model.InterruptController.class);
-    EList<org.eclipse.app4mc.amalthea.model.TaskScheduler> _taskSchedulers = it.getTaskSchedulers();
-    Iterables.<org.eclipse.app4mc.amalthea.model.TaskScheduler>addAll(_taskSchedulers, schedulers);
-    EList<org.eclipse.app4mc.amalthea.model.InterruptController> _interruptControllers = it.getInterruptControllers();
-    Iterables.<org.eclipse.app4mc.amalthea.model.InterruptController>addAll(_interruptControllers, controllers);
-    org.eclipse.uml2.uml.Class _base_Class_1 = os.getBase_Class();
-    this.transformCustomProperties(_base_Class_1, it);
+    final Iterable<org.eclipse.app4mc.amalthea.model.InterruptController> controllers = Iterables.<org.eclipse.app4mc.amalthea.model.InterruptController>filter(ListExtensions.<InterruptController, EObject>map(os.getInterruptcontroller(), _function_1), org.eclipse.app4mc.amalthea.model.InterruptController.class);
+    Iterables.<org.eclipse.app4mc.amalthea.model.TaskScheduler>addAll(it.getTaskSchedulers(), schedulers);
+    Iterables.<org.eclipse.app4mc.amalthea.model.InterruptController>addAll(it.getInterruptControllers(), controllers);
+    this.transformCustomProperties(os.getBase_Class(), it);
   }
   
   private EObject _transform(final TaskScheduler scheduler) {
@@ -1426,11 +1249,8 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transform_18 = CollectionLiterals.newHashMap();
   
   private void _init_transform_18(final org.eclipse.app4mc.amalthea.model.TaskScheduler it, final TaskScheduler scheduler) {
-    org.eclipse.uml2.uml.Class _base_Class = scheduler.getBase_Class();
-    String _name = _base_Class.getName();
-    it.setName(_name);
-    int _scheduleUnitPriority = scheduler.getScheduleUnitPriority();
-    it.setScheduleUnitPriority(_scheduleUnitPriority);
+    it.setName(scheduler.getBase_Class().getName());
+    it.setScheduleUnitPriority(scheduler.getScheduleUnitPriority());
     SchedulingUnit _schedulingunit = scheduler.getSchedulingunit();
     EObject _transformHelper = null;
     if (_schedulingunit!=null) {
@@ -1445,8 +1265,7 @@ public class MainTransform {
       _transformHelper_1=this.transformHelper(_schedulingalgorithm, _object_1);
     }
     it.setSchedulingAlgorithm(((org.eclipse.app4mc.amalthea.model.TaskSchedulingAlgorithm) _transformHelper_1));
-    org.eclipse.uml2.uml.Class _base_Class_1 = scheduler.getBase_Class();
-    this.transformCustomProperties(_base_Class_1, it);
+    this.transformCustomProperties(scheduler.getBase_Class(), it);
   }
   
   private EObject _transform(final InterruptController ic) {
@@ -1467,11 +1286,8 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transform_19 = CollectionLiterals.newHashMap();
   
   private void _init_transform_19(final org.eclipse.app4mc.amalthea.model.InterruptController it, final InterruptController ic) {
-    org.eclipse.uml2.uml.Class _base_Class = ic.getBase_Class();
-    String _name = _base_Class.getName();
-    it.setName(_name);
-    int _scheduleUnitPriority = ic.getScheduleUnitPriority();
-    it.setScheduleUnitPriority(_scheduleUnitPriority);
+    it.setName(ic.getBase_Class().getName());
+    it.setScheduleUnitPriority(ic.getScheduleUnitPriority());
     SchedulingUnit _schedulingunit = ic.getSchedulingunit();
     EObject _transformHelper = null;
     if (_schedulingunit!=null) {
@@ -1486,8 +1302,7 @@ public class MainTransform {
       _transformHelper_1=this.transformHelper(_schedulingalgorithm, _object_1);
     }
     it.setSchedulingAlgorithm(((org.eclipse.app4mc.amalthea.model.InterruptSchedulingAlgorithm) _transformHelper_1));
-    org.eclipse.uml2.uml.Class _base_Class_1 = ic.getBase_Class();
-    this.transformCustomProperties(_base_Class_1, it);
+    this.transformCustomProperties(ic.getBase_Class(), it);
   }
   
   private EObject _transformHelper(final SchedulingHWUnit schedUnit, final Object owner) {
@@ -1578,9 +1393,7 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transform_20 = CollectionLiterals.newHashMap();
   
   private void _init_transform_20(final org.eclipse.app4mc.amalthea.model.Periodic it, final Periodic stimulus) {
-    org.eclipse.uml2.uml.Class _base_Class = stimulus.getBase_Class();
-    String _name = _base_Class.getName();
-    it.setName(_name);
+    it.setName(stimulus.getBase_Class().getName());
     Time _offset = stimulus.getOffset();
     EObject _transformHelper = null;
     if (_offset!=null) {
@@ -1615,9 +1428,7 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transform_21 = CollectionLiterals.newHashMap();
   
   private void _init_transform_21(final org.eclipse.app4mc.amalthea.model.Single it, final Single stimulus) {
-    org.eclipse.uml2.uml.Class _base_Class = stimulus.getBase_Class();
-    String _name = _base_Class.getName();
-    it.setName(_name);
+    it.setName(stimulus.getBase_Class().getName());
     Time _activation = stimulus.getActivation();
     EObject _transformHelper = null;
     if (_activation!=null) {
@@ -1645,9 +1456,7 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transform_22 = CollectionLiterals.newHashMap();
   
   private void _init_transform_22(final InterProcess it, final Interprocess stimulus) {
-    org.eclipse.uml2.uml.Class _base_Class = stimulus.getBase_Class();
-    String _name = _base_Class.getName();
-    it.setName(_name);
+    it.setName(stimulus.getBase_Class().getName());
     Counter _counter = stimulus.getCounter();
     EObject _transformHelper = null;
     if (_counter!=null) {
@@ -1678,13 +1487,8 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transform_23 = CollectionLiterals.newHashMap();
   
   private void _init_transform_23(final ProcessRequirement it, final org.eclipse.papyrus.amalthea.profile.amalthea.constraints.ProcessRequirement pr) {
-    Constraint _base_Constraint = pr.getBase_Constraint();
-    String _name = _base_Constraint.getName();
-    it.setName(_name);
-    Severity _severity = pr.getSeverity();
-    String _literal = _severity.getLiteral();
-    org.eclipse.app4mc.amalthea.model.Severity _get = org.eclipse.app4mc.amalthea.model.Severity.get(_literal);
-    it.setSeverity(_get);
+    it.setName(pr.getBase_Constraint().getName());
+    it.setSeverity(Severity.get(pr.getSeverity().getLiteral()));
     AbstractProcess _process = pr.getProcess();
     EObject _transform = null;
     if (_process!=null) {
@@ -1711,14 +1515,8 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transform_24 = CollectionLiterals.newHashMap();
   
   private void _init_transform_24(final org.eclipse.app4mc.amalthea.model.TimeRequirementLimit it, final TimeRequirementLimit limit) {
-    LimitType _limitType = limit.getLimitType();
-    String _literal = _limitType.getLiteral();
-    org.eclipse.app4mc.amalthea.model.LimitType _get = org.eclipse.app4mc.amalthea.model.LimitType.get(_literal);
-    it.setLimitType(_get);
-    TimeMetric _metric = limit.getMetric();
-    String _literal_1 = _metric.getLiteral();
-    org.eclipse.app4mc.amalthea.model.TimeMetric _get_1 = org.eclipse.app4mc.amalthea.model.TimeMetric.get(_literal_1);
-    it.setMetric(_get_1);
+    it.setLimitType(LimitType.get(limit.getLimitType().getLiteral()));
+    it.setMetric(TimeMetric.get(limit.getMetric().getLiteral()));
     SignedTime _limitValue = limit.getLimitValue();
     EObject _transformHelper = null;
     if (_limitValue!=null) {
@@ -1737,15 +1535,11 @@ public class MainTransform {
   }
   
   private void transformAllocation(final Abstraction ab) {
-    EList<NamedElement> _clients = ab.getClients();
-    final List<EObject> sourceList = TransformUtil.getAmaltheaFilteredList(_clients);
-    EList<NamedElement> _suppliers = ab.getSuppliers();
-    final List<EObject> targetList = TransformUtil.getAmaltheaFilteredList(_suppliers);
+    final List<EObject> sourceList = TransformUtil.getAmaltheaFilteredList(ab.getClients());
+    final List<EObject> targetList = TransformUtil.getAmaltheaFilteredList(ab.getSuppliers());
     if (((!sourceList.isEmpty()) && (!targetList.isEmpty()))) {
-      EObject _get = sourceList.get(0);
-      final EObject source = this.transform(_get);
-      EObject _get_1 = targetList.get(0);
-      final EObject target = this.transform(_get_1);
+      final EObject source = this.transform(sourceList.get(0));
+      final EObject target = this.transform(targetList.get(0));
       this.transformAllocation(source, target);
     }
   }
@@ -1770,9 +1564,7 @@ public class MainTransform {
   private void _init_transformAllocation(final TaskAllocation it, final Task task, final org.eclipse.app4mc.amalthea.model.TaskScheduler scheduler) {
     it.setTask(task);
     it.setScheduler(scheduler);
-    MappingModel _mappingModel = this.getMappingModel(this.root);
-    EList<TaskAllocation> _taskAllocation = _mappingModel.getTaskAllocation();
-    _taskAllocation.add(it);
+    this.getMappingModel(this.root).getTaskAllocation().add(it);
   }
   
   private BaseObject _transformAllocation(final ISR isr, final org.eclipse.app4mc.amalthea.model.InterruptController controller) {
@@ -1795,9 +1587,7 @@ public class MainTransform {
   private void _init_transformAllocation_1(final ISRAllocation it, final ISR isr, final org.eclipse.app4mc.amalthea.model.InterruptController controller) {
     it.setIsr(isr);
     it.setController(controller);
-    MappingModel _mappingModel = this.getMappingModel(this.root);
-    EList<ISRAllocation> _isrAllocation = _mappingModel.getIsrAllocation();
-    _isrAllocation.add(it);
+    this.getMappingModel(this.root).getIsrAllocation().add(it);
   }
   
   private BaseObject _transformAllocation(final org.eclipse.app4mc.amalthea.model.TaskScheduler scheduler, final org.eclipse.app4mc.amalthea.model.Core core) {
@@ -1819,8 +1609,7 @@ public class MainTransform {
   
   private void _init_transformAllocation_2(final CoreAllocation it, final org.eclipse.app4mc.amalthea.model.TaskScheduler scheduler, final org.eclipse.app4mc.amalthea.model.Core core) {
     it.setScheduler(scheduler);
-    EList<org.eclipse.app4mc.amalthea.model.Core> _core = it.getCore();
-    _core.add(core);
+    it.getCore().add(core);
   }
   
   private CoreAllocation createCoreAllocation(final org.eclipse.app4mc.amalthea.model.TaskScheduler scheduler) {
@@ -1842,9 +1631,7 @@ public class MainTransform {
   
   private void _init_createCoreAllocation(final CoreAllocation it, final org.eclipse.app4mc.amalthea.model.TaskScheduler scheduler) {
     it.setScheduler(scheduler);
-    MappingModel _mappingModel = this.getMappingModel(this.root);
-    EList<CoreAllocation> _coreAllocation = _mappingModel.getCoreAllocation();
-    _coreAllocation.add(it);
+    this.getMappingModel(this.root).getCoreAllocation().add(it);
   }
   
   private BaseObject _transformAllocation(final Object task, final Object scheduler) {
@@ -1872,34 +1659,27 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transform_25 = CollectionLiterals.newHashMap();
   
   private void _init_transform_25(final Component it, final org.eclipse.papyrus.amalthea.profile.amalthea.components.Component component) {
-    org.eclipse.uml2.uml.Class _base_Class = component.getBase_Class();
-    String _name = _base_Class.getName();
-    it.setName(_name);
+    it.setName(component.getBase_Class().getName());
     this.transformComponentHelper(component, it);
   }
   
   private void transformCustomProperties(final org.eclipse.uml2.uml.Class container, final IAnnotatable annotatable) {
-    EList<Property> _ownedAttributes = container.getOwnedAttributes();
-    List<EObject> _amaltheaFilteredList = TransformUtil.getAmaltheaFilteredList(_ownedAttributes);
-    final Iterable<CustomProperty> customProperties = Iterables.<CustomProperty>filter(_amaltheaFilteredList, CustomProperty.class);
+    final Iterable<CustomProperty> customProperties = Iterables.<CustomProperty>filter(TransformUtil.getAmaltheaFilteredList(container.getOwnedAttributes()), CustomProperty.class);
     for (final CustomProperty custom : customProperties) {
-      EMap<String, Value> _customProperties = annotatable.getCustomProperties();
-      this.transformCustomProperty(custom, _customProperties);
+      this.transformCustomProperty(custom, annotatable.getCustomProperties());
     }
   }
   
   private Value _transformCustomProperty(final CustomProperty custom, final EMap<String, Value> map) {
     Value _xblockexpression = null;
     {
-      Property _base_Property = custom.getBase_Property();
-      ValueSpecification _defaultValue = _base_Property.getDefaultValue();
+      ValueSpecification _defaultValue = custom.getBase_Property().getDefaultValue();
       Value _transformValue = null;
       if (_defaultValue!=null) {
         _transformValue=this.transformValue(_defaultValue);
       }
       final Value value = ((Value) _transformValue);
-      String _key = custom.getKey();
-      _xblockexpression = map.put(_key, value);
+      _xblockexpression = map.put(custom.getKey(), value);
     }
     return _xblockexpression;
   }
@@ -1907,19 +1687,15 @@ public class MainTransform {
   private Value _transformCustomProperty(final PortCustomProperty custom, final EMap<String, Value> map) {
     Value _xblockexpression = null;
     {
-      FInterfacePort _port = custom.getPort();
-      EObject _transform = this.transform(_port);
-      final org.eclipse.app4mc.amalthea.model.FInterfacePort port = ((org.eclipse.app4mc.amalthea.model.FInterfacePort) _transform);
-      Property _base_Property = custom.getBase_Property();
-      ValueSpecification _defaultValue = _base_Property.getDefaultValue();
+      EObject _transform = this.transform(custom.getPort());
+      final FInterfacePort port = ((FInterfacePort) _transform);
+      ValueSpecification _defaultValue = custom.getBase_Property().getDefaultValue();
       Value _transformValue = null;
       if (_defaultValue!=null) {
         _transformValue=this.transformValue(_defaultValue);
       }
       final Value value = ((Value) _transformValue);
-      EMap<String, Value> _customProperties = port.getCustomProperties();
-      String _key = custom.getKey();
-      _xblockexpression = _customProperties.put(_key, value);
+      _xblockexpression = port.getCustomProperties().put(custom.getKey(), value);
     }
     return _xblockexpression;
   }
@@ -1942,8 +1718,7 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, Value> _createCache_transformValue = CollectionLiterals.newHashMap();
   
   private void _init_transformValue(final StringObject it, final LiteralString value) {
-    String _value = value.getValue();
-    it.setValue(_value);
+    it.setValue(value.getValue());
   }
   
   private Value _transformValue(final LiteralInteger value) {
@@ -1964,8 +1739,7 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, Value> _createCache_transformValue_1 = CollectionLiterals.newHashMap();
   
   private void _init_transformValue_1(final IntegerObject it, final LiteralInteger value) {
-    int _value = value.getValue();
-    it.setValue(_value);
+    it.setValue(value.getValue());
   }
   
   private Value _transformValue(final Object value) {
@@ -1973,36 +1747,26 @@ public class MainTransform {
   }
   
   private void transformComponentHelper(final org.eclipse.papyrus.amalthea.profile.amalthea.components.Component source, final Component target) {
-    EList<org.eclipse.app4mc.amalthea.model.Runnable> _runnables = target.getRunnables();
-    EList<org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable> _runnables_1 = source.getRunnables();
     final Function1<org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable, EObject> _function = (org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable c) -> {
       return this.transform(c);
     };
-    List<EObject> _map = ListExtensions.<org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable, EObject>map(_runnables_1, _function);
-    Iterable<org.eclipse.app4mc.amalthea.model.Runnable> _filter = Iterables.<org.eclipse.app4mc.amalthea.model.Runnable>filter(_map, org.eclipse.app4mc.amalthea.model.Runnable.class);
-    Iterables.<org.eclipse.app4mc.amalthea.model.Runnable>addAll(_runnables, _filter);
-    org.eclipse.uml2.uml.Class _base_Class = source.getBase_Class();
-    EList<Port> _ownedPorts = _base_Class.getOwnedPorts();
-    final List<EObject> portList = TransformUtil.getAmaltheaFilteredList(_ownedPorts);
-    EList<org.eclipse.app4mc.amalthea.model.Port> _ports = target.getPorts();
+    Iterables.<org.eclipse.app4mc.amalthea.model.Runnable>addAll(target.getRunnables(), Iterables.<org.eclipse.app4mc.amalthea.model.Runnable>filter(ListExtensions.<org.eclipse.papyrus.amalthea.profile.amalthea.software.Runnable, EObject>map(source.getRunnables(), _function), org.eclipse.app4mc.amalthea.model.Runnable.class));
+    final List<EObject> portList = TransformUtil.getAmaltheaFilteredList(source.getBase_Class().getOwnedPorts());
     final Function1<EObject, EObject> _function_1 = (EObject p) -> {
       return this.transform(p);
     };
-    List<EObject> _map_1 = ListExtensions.<EObject, EObject>map(portList, _function_1);
-    Iterable<org.eclipse.app4mc.amalthea.model.Port> _filter_1 = Iterables.<org.eclipse.app4mc.amalthea.model.Port>filter(_map_1, org.eclipse.app4mc.amalthea.model.Port.class);
-    Iterables.<org.eclipse.app4mc.amalthea.model.Port>addAll(_ports, _filter_1);
-    org.eclipse.uml2.uml.Class _base_Class_1 = source.getBase_Class();
-    this.transformCustomProperties(_base_Class_1, target);
+    Iterables.<Port>addAll(target.getPorts(), Iterables.<Port>filter(ListExtensions.<EObject, EObject>map(portList, _function_1), Port.class));
+    this.transformCustomProperties(source.getBase_Class(), target);
   }
   
-  private EObject _transform(final FInterfacePort port) {
+  private EObject _transform(final org.eclipse.papyrus.amalthea.profile.amalthea.components.FInterfacePort port) {
     final ArrayList<?> _cacheKey = CollectionLiterals.newArrayList(port);
-    final org.eclipse.app4mc.amalthea.model.FInterfacePort _result;
+    final FInterfacePort _result;
     synchronized (_createCache_transform_26) {
       if (_createCache_transform_26.containsKey(_cacheKey)) {
         return _createCache_transform_26.get(_cacheKey);
       }
-      org.eclipse.app4mc.amalthea.model.FInterfacePort _createFInterfacePort = AmaltheaFactory.eINSTANCE.createFInterfacePort();
+      FInterfacePort _createFInterfacePort = AmaltheaFactory.eINSTANCE.createFInterfacePort();
       _result = _createFInterfacePort;
       _createCache_transform_26.put(_cacheKey, _result);
     }
@@ -2012,20 +1776,15 @@ public class MainTransform {
   
   private final HashMap<ArrayList<?>, EObject> _createCache_transform_26 = CollectionLiterals.newHashMap();
   
-  private void _init_transform_26(final org.eclipse.app4mc.amalthea.model.FInterfacePort it, final FInterfacePort port) {
-    Port _base_Port = port.getBase_Port();
-    String _name = _base_Port.getName();
-    it.setName(_name);
-    String _interfaceName = port.getInterfaceName();
-    it.setInterfaceName(_interfaceName);
+  private void _init_transform_26(final FInterfacePort it, final org.eclipse.papyrus.amalthea.profile.amalthea.components.FInterfacePort port) {
+    it.setName(port.getBase_Port().getName());
+    it.setInterfaceName(port.getInterfaceName());
     String kind = "provides";
-    Port _base_Port_1 = port.getBase_Port();
-    boolean _isConjugated = _base_Port_1.isConjugated();
+    boolean _isConjugated = port.getBase_Port().isConjugated();
     if (_isConjugated) {
       kind = "requires";
     }
-    InterfaceKind _get = InterfaceKind.get(kind);
-    it.setKind(_get);
+    it.setKind(InterfaceKind.get(kind));
   }
   
   private EObject _transform(final Composite composite) {
@@ -2047,25 +1806,17 @@ public class MainTransform {
   
   private void _init_transform_27(final org.eclipse.app4mc.amalthea.model.Composite it, final Composite composite) {
     final org.eclipse.uml2.uml.Class base = composite.getBase_Class();
-    String _name = base.getName();
-    it.setName(_name);
+    it.setName(base.getName());
     this.transformComponentHelper(composite, it);
-    EList<ComponentInstance> _componentInstances = it.getComponentInstances();
-    EList<Property> _ownedAttributes = base.getOwnedAttributes();
     final Function1<Property, EObject> _function = (Property e) -> {
       return this.transform(e);
     };
-    List<EObject> _map = ListExtensions.<Property, EObject>map(_ownedAttributes, _function);
-    Iterable<ComponentInstance> _filter = Iterables.<ComponentInstance>filter(_map, ComponentInstance.class);
-    Iterables.<ComponentInstance>addAll(_componentInstances, _filter);
-    EList<Connector> _ownedConnectors = base.getOwnedConnectors();
+    Iterables.<ComponentInstance>addAll(it.getComponentInstances(), Iterables.<ComponentInstance>filter(ListExtensions.<Property, EObject>map(base.getOwnedAttributes(), _function), ComponentInstance.class));
     final Function1<Connector, EObject> _function_1 = (Connector c) -> {
       return this.transform(c);
     };
-    List<EObject> _map_1 = ListExtensions.<Connector, EObject>map(_ownedConnectors, _function_1);
-    final Iterable<org.eclipse.app4mc.amalthea.model.Connector> mappedConnectors = Iterables.<org.eclipse.app4mc.amalthea.model.Connector>filter(_map_1, org.eclipse.app4mc.amalthea.model.Connector.class);
-    EList<org.eclipse.app4mc.amalthea.model.Connector> _connectors = it.getConnectors();
-    Iterables.<org.eclipse.app4mc.amalthea.model.Connector>addAll(_connectors, mappedConnectors);
+    final Iterable<org.eclipse.app4mc.amalthea.model.Connector> mappedConnectors = Iterables.<org.eclipse.app4mc.amalthea.model.Connector>filter(ListExtensions.<Connector, EObject>map(base.getOwnedConnectors(), _function_1), org.eclipse.app4mc.amalthea.model.Connector.class);
+    Iterables.<org.eclipse.app4mc.amalthea.model.Connector>addAll(it.getConnectors(), mappedConnectors);
   }
   
   private EObject _transform(final Property instance) {
@@ -2086,8 +1837,7 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transform_28 = CollectionLiterals.newHashMap();
   
   private void _init_transform_28(final ComponentInstance it, final Property instance) {
-    String _name = instance.getName();
-    it.setName(_name);
+    it.setName(instance.getName());
     Type _type = instance.getType();
     EObject _amaltheaStereotypeApplication = null;
     if (_type!=null) {
@@ -2118,16 +1868,9 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, EObject> _createCache_transform_29 = CollectionLiterals.newHashMap();
   
   private void _init_transform_29(final org.eclipse.app4mc.amalthea.model.Connector it, final Connector connector) {
-    String _name = connector.getName();
-    it.setName(_name);
-    EList<ConnectorEnd> _ends = connector.getEnds();
-    ConnectorEnd _get = _ends.get(0);
-    QualifiedPort _transformQaulifiedPort = this.transformQaulifiedPort(_get);
-    it.setSourcePort(_transformQaulifiedPort);
-    EList<ConnectorEnd> _ends_1 = connector.getEnds();
-    ConnectorEnd _get_1 = _ends_1.get(1);
-    QualifiedPort _transformQaulifiedPort_1 = this.transformQaulifiedPort(_get_1);
-    it.setTargetPort(_transformQaulifiedPort_1);
+    it.setName(connector.getName());
+    it.setSourcePort(this.transformQaulifiedPort(connector.getEnds().get(0)));
+    it.setTargetPort(this.transformQaulifiedPort(connector.getEnds().get(1)));
   }
   
   private QualifiedPort transformQaulifiedPort(final ConnectorEnd end) {
@@ -2148,13 +1891,12 @@ public class MainTransform {
   private final HashMap<ArrayList<?>, QualifiedPort> _createCache_transformQaulifiedPort = CollectionLiterals.newHashMap();
   
   private void _init_transformQaulifiedPort(final QualifiedPort it, final ConnectorEnd end) {
-    ConnectableElement _role = end.getRole();
-    EObject _amaltheaStereotypeApplication = TransformUtil.getAmaltheaStereotypeApplication(_role);
+    EObject _amaltheaStereotypeApplication = TransformUtil.getAmaltheaStereotypeApplication(end.getRole());
     EObject _transform = null;
     if (_amaltheaStereotypeApplication!=null) {
       _transform=this.transform(_amaltheaStereotypeApplication);
     }
-    it.setPort(((org.eclipse.app4mc.amalthea.model.Port) _transform));
+    it.setPort(((Port) _transform));
     Property _partWithPort = end.getPartWithPort();
     EObject _transform_1 = null;
     if (_partWithPort!=null) {
@@ -2220,8 +1962,8 @@ public class MainTransform {
       return _transform((TaskRunnableCall)instance);
     } else if (instance instanceof org.eclipse.papyrus.amalthea.profile.amalthea.components.Component) {
       return _transform((org.eclipse.papyrus.amalthea.profile.amalthea.components.Component)instance);
-    } else if (instance instanceof FInterfacePort) {
-      return _transform((FInterfacePort)instance);
+    } else if (instance instanceof org.eclipse.papyrus.amalthea.profile.amalthea.components.FInterfacePort) {
+      return _transform((org.eclipse.papyrus.amalthea.profile.amalthea.components.FInterfacePort)instance);
     } else if (instance instanceof org.eclipse.papyrus.amalthea.profile.amalthea.hardware.CoreType) {
       return _transform((org.eclipse.papyrus.amalthea.profile.amalthea.hardware.CoreType)instance);
     } else if (instance instanceof ECUType) {
